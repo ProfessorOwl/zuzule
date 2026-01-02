@@ -35,7 +35,7 @@ export function HeaderSimple() {
   return (
     <header className={classes.header}>
       <Container size="md" className={classes.inner}>
-        <Link href="/" className={classes.mainlink}>
+        <Link href="/themen" className={classes.mainlink}>
           <Group>
             {" "}
             <Image

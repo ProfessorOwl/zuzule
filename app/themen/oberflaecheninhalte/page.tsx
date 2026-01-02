@@ -1,3 +1,5 @@
+import { CheckableHeading } from '../../components/CheckableHeading';
+
 export default function Flächeninhalte() {
-  return <h1>Flächeninhalte</h1>;
+  return <CheckableHeading title='Flächeninhalte'>Flächeninhalte</CheckableHeading>;
 }

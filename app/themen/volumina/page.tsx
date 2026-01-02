@@ -1,3 +1,5 @@
+import { CheckableHeading } from '../../components/CheckableHeading';
+
 export default function Volumina() {
-  return <h1>Volumina</h1>;
+  return <CheckableHeading title="Volumina">Volumina</CheckableHeading>;
 }
