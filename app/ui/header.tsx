@@ -35,20 +35,22 @@ export function HeaderSimple() {
   return (
     <header className={classes.header}>
       <Container size="md" className={classes.inner}>
-        <Group>
-          {" "}
-          <Image
-            component={NextImage}
-            src="/logo.jpg"
-            alt=""
-            width={640}
-            height={640}
-            fill={false}
-            h={50}
-            w={"auto"}
-          />{" "}
-          <h1>Mathema</h1>
-        </Group>
+        <Link href="/" className={classes.mainlink}>
+          <Group>
+            {" "}
+            <Image
+              component={NextImage}
+              src="/logo.jpg"
+              alt=""
+              width={640}
+              height={640}
+              fill={false}
+              h={50}
+              w={"auto"}
+            />{" "}
+            <h1>Mathema</h1>
+          </Group>
+        </Link>
 
         <Group gap={5} visibleFrom="xs">
           {items}

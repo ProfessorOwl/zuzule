@@ -35,3 +35,8 @@
     color: var(--mantine-color-white);
   }
 }
+
+.mainlink {
+  text-decoration: none;
+  color:light-dark(var(--mantine-color-gray-9), var(--mantine-color-dark-0));
+}
