@@ -10,7 +10,7 @@ import Link from "next/link";
 
 const links = [
   { link: "/themen", label: "Themenübersicht" },
-  { link: "/anleitung", label: "Anleitung" },
+  //{ link: "/anleitung", label: "Anleitung" },
   { link: "/ueber", label: "Über das Projekt" },
 ];
 

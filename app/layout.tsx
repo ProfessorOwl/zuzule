@@ -10,10 +10,17 @@ import { HeaderSimple } from "./ui/header";
 import { Lexend } from "next/font/google";
 import { LayoutGrid } from "./components/LayoutGrid";
 import "./styles/globals.css"
+import "katex/dist/katex.min.css";
 
 export const metadata = {
   title: "Mathema",
   description: "",
+};
+
+export const katexSettings = {
+  macros: {
+    "\\dx": "\\mathrm{d}x",
+  },
 };
 
 const lexend = Lexend({
@@ -22,7 +29,7 @@ const lexend = Lexend({
 
 export default function RootLayout({ children }: { children: any }) {
   return (
-    <html lang="en" {...mantineHtmlProps}>
+    <html lang="de" {...mantineHtmlProps}>
       <head>
         <ColorSchemeScript />
         <link rel="shortcut icon" href="/favicon.svg" />

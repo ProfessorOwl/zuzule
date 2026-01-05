@@ -18,9 +18,12 @@
   text-decoration: none;
   font-size: var(--mantine-font-size-sm);
   color: light-dark(var(--mantine-color-gray-7), var(--mantine-color-dark-1));
-  padding: var(--mantine-spacing-xs) var(--mantine-spacing-sm);
+  padding: var(--mantine-spacing-xs) 0;
   border-radius: var(--mantine-radius-sm);
   font-weight: 500;
+  hyphens: auto;
+  word-break: break-word;
+  overflow-wrap: break-word;
 
   @mixin hover {
     background-color: light-dark(
@@ -52,4 +55,5 @@
   margin-right: var(--mantine-spacing-sm);
   width: 20px;
   height: 20px;
+  flex-shrink: 0;
 }
