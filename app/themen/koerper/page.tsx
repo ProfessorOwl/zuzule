@@ -1,9 +1,9 @@
 import { SuspenseCheckableHeading } from '../../components/SuspenseCheckableHeading';
 
-export default function Volumina() {
+export default function Flächeninhalte() {
   return (
-    <SuspenseCheckableHeading title="Volumina">
-      Volumina
+    <SuspenseCheckableHeading title='Flächeninhalte'>
+      Flächeninhalte
     </SuspenseCheckableHeading>
   );
 }

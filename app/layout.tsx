@@ -17,12 +17,6 @@ export const metadata = {
   description: "",
 };
 
-export const katexSettings = {
-  macros: {
-    "\\dx": "\\mathrm{d}x",
-  },
-};
-
 const lexend = Lexend({
   subsets: ["latin"],
 });
