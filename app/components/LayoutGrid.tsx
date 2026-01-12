@@ -7,7 +7,7 @@ import { cacheLife } from "next/dist/server/use-cache/cache-life";
 
 export function LayoutGrid({ children }: { children: any }) {
   const pathname = usePathname();
-  const showSideview = pathname.startsWith("/themen");
+  const showSideview = pathname.startsWith("/themen") || pathname.startsWith("/klasse7+8") || pathname.startsWith("/klasse9+10");
 
   return (
     <Grid justify="space-between" gutter={0}>
