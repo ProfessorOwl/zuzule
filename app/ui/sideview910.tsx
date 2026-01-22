@@ -1,9 +1,19 @@
 "use client";
 
 import { usePathname } from "next/navigation";
-import { IconCylinder, IconGraph, IconSphere } from "@tabler/icons-react";
+import {
+  IconCone,
+  IconDiabolo,
+  IconInfoCircle,
+  IconPyramid,
+  IconSphere,
+  IconTrendingUp,
+} from "@tabler/icons-react";
 import classes from "./sideview.module.css";
 import Link from "next/link";
+import Cubed from "../../public/Cubed.svg";
+import Parabola from "../../public/Parabola.svg";
+import Exponential from "../../public/Exponential.svg";
 
 interface NavItem {
   label: string;
@@ -11,34 +21,48 @@ interface NavItem {
   link?: string;
   children?: NavItem[];
 }
-
 const data: NavItem[] = [
   {
     label: "Körper",
-    icon: IconSphere,
+    icon: IconDiabolo,
     children: [
-      { link: "/klasse910/koerper/einfuehrung", label: "Einführung" },
-      { link: "/klasse910/koerper/pyramiden", label: "Pyramiden" },
-      { link: "/klasse910/koerper/kegel", label: "Kegel" },
-      { link: "/klasse910/koerper/kugeln", label: "Kugeln" },
+      {
+        link: "/klasse910/koerper/einfuehrung",
+        label: "Einführung",
+        icon: IconInfoCircle,
+      },
+      {
+        link: "/klasse910/koerper/pyramiden",
+        label: "Pyramiden",
+        icon: IconPyramid,
+      },
+      { link: "/klasse910/koerper/kegel", label: "Kegel", icon: IconCone },
+      { link: "/klasse910/koerper/kugeln", label: "Kugeln", icon: IconSphere },
     ],
   },
   {
     label: "Wachstumsprozesse",
-    icon: IconGraph,
+    icon: IconTrendingUp,
     children: [
-      { link: "/klasse910/wachstumsprozesse/einfuehrung", label: "Einführung" },
+      {
+        link: "/klasse910/wachstumsprozesse/einfuehrung",
+        label: "Einführung",
+        icon: IconInfoCircle,
+      },
       {
         link: "/klasse910/wachstumsprozesse/quadratische_funktionen",
         label: "Quadratische Funktionen",
+        icon: Parabola,
       },
       {
         link: "/klasse910/wachstumsprozesse/potenzfunktionen",
         label: "Potenzfunktionen",
+        icon: Cubed,
       },
       {
         link: "/klasse910/wachstumsprozesse/exponentialfunktionen",
         label: "Exponentialfunktionen",
+        icon: Exponential,
       },
     ],
   },
@@ -56,7 +80,10 @@ export function Sideview910() {
             style={{ paddingLeft: `${level * 16}px` }}
           >
             {item.icon && (
-              <item.icon className={classes.linkIcon} stroke={1.5} />
+              <item.icon
+                className={classes.linkIcon}
+                style={{ stroke: "currentColor" }}
+              />
             )}
             <span>{item.label}</span>
           </div>
@@ -74,7 +101,12 @@ export function Sideview910() {
           key={item.label}
           style={{ paddingLeft: `${level * 16}px` }}
         >
-          {item.icon && <item.icon className={classes.linkIcon} stroke={1.5} />}
+          {item.icon && (
+            <item.icon
+              className={classes.linkIcon}
+              style={{ stroke: "currentColor" }}
+            />
+          )}
           <span>{item.label}</span>
         </Link>
       );

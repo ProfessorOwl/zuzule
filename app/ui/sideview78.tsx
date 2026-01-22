@@ -1,9 +1,23 @@
 "use client";
 
 import { usePathname } from "next/navigation";
-import { IconCylinder, IconGraph, IconSphere } from "@tabler/icons-react";
+import {
+  IconArrowUpRightCircle,
+  IconCircle,
+  IconCircleSquare,
+  IconCylinder,
+  IconDiabolo,
+  IconInfoCircle,
+  IconPrism,
+  IconRectangle,
+  IconSquareRoundedPercentage,
+  IconTrendingUp,
+  IconTriangle,
+} from "@tabler/icons-react";
 import classes from "./sideview.module.css";
 import Link from "next/link";
+import Proportional from "../../public/Proportional.svg";
+import Linear from "../../public/Linear.svg";
 
 interface NavItem {
   label: string;
@@ -15,14 +29,23 @@ interface NavItem {
 const data: NavItem[] = [
   {
     label: "Körper",
-    icon: IconSphere,
+    icon: IconDiabolo,
     children: [
-      { link: "/klasse78/koerper/einfuehrung", label: "Einführung" },
-      { link: "/klasse78/koerper/prismen", label: "Prismen" },
-      { link: "/klasse78/koerper/zylinder", label: "Zylinder" },
+      {
+        link: "/klasse78/koerper/einfuehrung",
+        label: "Einführung",
+        icon: IconInfoCircle,
+      },
+      { link: "/klasse78/koerper/prismen", label: "Prismen", icon: IconPrism },
+      {
+        link: "/klasse78/koerper/zylinder",
+        label: "Zylinder",
+        icon: IconCylinder,
+      },
       {
         link: "/klasse78/koerper/zusammengesetzte_koerper",
         label: "Zusammengesetzte Körper",
+        icon: IconCircleSquare,
       },
     ],
   },
@@ -30,24 +53,47 @@ const data: NavItem[] = [
     label: "Ebene Figuren",
     icon: IconCylinder,
     children: [
-      { link: "/klasse78/ebene_figuren/einfuehrung", label: "Einführung" },
-      { link: "/klasse78/ebene_figuren/dreiecke", label: "Dreiecke" },
-      { link: "/klasse78/ebene_figuren/vierecke", label: "Vierecke" },
-      { link: "/klasse78/ebene_figuren/kreise", label: "Kreise" },
+      {
+        link: "/klasse78/ebene_figuren/einfuehrung",
+        label: "Einführung",
+        icon: IconInfoCircle,
+      },
+      {
+        link: "/klasse78/ebene_figuren/dreiecke",
+        label: "Dreiecke",
+        icon: IconTriangle,
+      },
+      {
+        link: "/klasse78/ebene_figuren/vierecke",
+        label: "Vierecke",
+        icon: IconRectangle,
+      },
+      {
+        link: "/klasse78/ebene_figuren/kreise",
+        label: "Kreise",
+        icon: IconCircle,
+      },
     ],
   },
   {
     link: "/klasse78/wachstumsprozesse",
     label: "Wachstumsprozesse",
+    icon: IconTrendingUp,
     children: [
-      { link: "/klasse78/wachstumsprozesse/einfuehrung", label: "Einführung" },
+      {
+        link: "/klasse78/wachstumsprozesse/einfuehrung",
+        label: "Einführung",
+        icon: IconInfoCircle,
+      },
       {
         link: "/klasse78/wachstumsprozesse/anti-proportionale_funktionen",
         label: "(Anti-)Proportionale Funktionen",
+        icon: Proportional,
       },
       {
         link: "/klasse78/wachstumsprozesse/lineare_funktionen",
         label: "Lineare Funktionen",
+        icon: Linear,
       },
     ],
   },
@@ -65,7 +111,10 @@ export function Sideview78() {
             style={{ paddingLeft: `${level * 16}px` }}
           >
             {item.icon && (
-              <item.icon className={classes.linkIcon} stroke={1.5} />
+              <item.icon
+                className={classes.linkIcon}
+                style={{ stroke: "currentColor" }}
+              />
             )}
             <span>{item.label}</span>
           </div>
@@ -83,7 +132,12 @@ export function Sideview78() {
           key={item.label}
           style={{ paddingLeft: `${level * 16}px` }}
         >
-          {item.icon && <item.icon className={classes.linkIcon} stroke={1.5} />}
+          {item.icon && (
+            <item.icon
+              className={classes.linkIcon}
+              style={{ stroke: "currentColor" }}
+            />
+          )}
           <span>{item.label}</span>
         </Link>
       );

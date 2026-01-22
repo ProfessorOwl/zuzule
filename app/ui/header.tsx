@@ -7,6 +7,7 @@ import classes from "./header.module.css";
 import NextImage from "next/image";
 import { Image } from "@mantine/core";
 import Link from "next/link";
+import Logo from "../../public/Logo.svg";
 
 const links = [
   { link: "/klasse78", label: "Klassen 7+8" },
@@ -37,7 +38,7 @@ export function HeaderSimple() {
             {" "}
             <Image
               component={NextImage}
-              src="/logo.png"
+              src="/logo.svg"
               alt=""
               width={526}
               height={223}
@@ -45,7 +46,6 @@ export function HeaderSimple() {
               h={40}
               w={"auto"}
             />{" "}
-            <h1>zuzule</h1>
           </Group>
         </Link>
 
