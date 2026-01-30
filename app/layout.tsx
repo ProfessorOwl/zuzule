@@ -1,5 +1,5 @@
 import "@mantine/core/styles.css";
-import React from "react";
+import React, { Suspense } from "react";
 import {
     MantineProvider,
     ColorSchemeScript,
@@ -35,7 +35,9 @@ export default function RootLayout({ children }: { children: any }) {
             <body className={lexend.className}>
                 <MantineProvider theme={theme}>
                     <HeaderSimple />
+                    <Suspense>
                     <LayoutGrid>{children}</LayoutGrid>
+                    </Suspense>
                 </MantineProvider>
             </body>
         </html>
