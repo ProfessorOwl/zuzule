@@ -86,7 +86,7 @@ export default function Prismen() {
             >
                 Suche in deinem Zimmer Objekte, die ein Prisma sind und bringe
                 sie in den Unterricht mit. Was für eine Form hat die
-                Grundfläche, aus der das Prisma „gezogen" wird?
+                Grundfläche, aus der das Prisma „gezogen“ wird?
             </CheckableBlockquote>
 
             <CheckableBlockquote icon="IconInfoHexagonFilled" title="Aha! 1">
