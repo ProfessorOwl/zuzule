@@ -5,6 +5,7 @@ import {
     ColorSchemeScript,
     mantineHtmlProps,
 } from "@mantine/core";
+import Script from "next/script";
 import { theme } from "../theme";
 import { HeaderSimple } from "./ui/header";
 import { Lexend } from "next/font/google";
@@ -31,7 +32,7 @@ export default function RootLayout({ children }: { children: any }) {
                     name="viewport"
                     content="minimum-scale=1, initial-scale=1, width=device-width, user-scalable=no"
                 />
-                <script src="https://www.geogebra.org/apps/deployggb.js"></script>
+                <Script src="https://www.geogebra.org/apps/deployggb.js" strategy="beforeInteractive" />
             </head>
             <body className={lexend.className}>
                 <MantineProvider theme={theme}>

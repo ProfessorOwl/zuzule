@@ -79,42 +79,20 @@ export default function GeoGebra({
             Object.assign(params, extraParams);
         }
 
-        // Set up callback to store API and apply coord system on load
+        // Set up callback to store API on load. Coordinate handling
+        // is applied in a separate effect to avoid re-initializing the
+        // applet when coords change.
         params.appletOnLoad = (api: any) => {
             apiRef.current = api;
-            try {
-                if (coord3d) {
-                    // setCoordSystem signature for 3D: (xmin, xmax, ymin, ymax, zmin, zmax, yVertical)
-                    api.setCoordSystem(
-                        coord3d.xmin,
-                        coord3d.xmax,
-                        coord3d.ymin,
-                        coord3d.ymax,
-                        coord3d.zmin,
-                        coord3d.zmax,
-                        coord3d.yVertical ?? false,
-                    );
-                    console.log("GeoGebra: setCoordSystem 3D applied", coord3d);
-                } else if (coord) {
-                    // setCoordSystem signature for 2D: (xmin, xmax, ymin, ymax)
-                    api.setCoordSystem(
-                        coord.xmin,
-                        coord.xmax,
-                        coord.ymin,
-                        coord.ymax,
-                    );
-                    console.log("GeoGebra: setCoordSystem 2D applied", coord);
-                }
-            } catch (e) {
-                console.warn("GeoGebra: setCoordSystem failed", e);
-            }
+            console.log("GeoGebra: applet loaded");
         };
 
         const applet = new window.GGBApplet(params, true);
-        if (ggbRef.current) applet.inject(ggbRef.current);
+        const container = ggbRef.current;
+        if (container) applet.inject(container);
 
         return () => {
-            if (ggbRef.current) ggbRef.current.innerHTML = "";
+            if (container) container.innerHTML = "";
             apiRef.current = null;
         };
     }, [
@@ -127,6 +105,37 @@ export default function GeoGebra({
         extraParams,
         disableZoom,
     ]);
+
+    // Apply coordinate system when api becomes available or when coords change.
+    useEffect(() => {
+        const api = apiRef.current;
+        if (!api) return;
+
+        try {
+            if (coord3d) {
+                api.setCoordSystem(
+                    coord3d.xmin,
+                    coord3d.xmax,
+                    coord3d.ymin,
+                    coord3d.ymax,
+                    coord3d.zmin,
+                    coord3d.zmax,
+                    coord3d.yVertical ?? false,
+                );
+                console.log("GeoGebra: setCoordSystem 3D applied", coord3d);
+            } else if (coord) {
+                api.setCoordSystem(
+                    coord.xmin,
+                    coord.xmax,
+                    coord.ymin,
+                    coord.ymax,
+                );
+                console.log("GeoGebra: setCoordSystem 2D applied", coord);
+            }
+        } catch (e) {
+            console.warn("GeoGebra: setCoordSystem failed", e);
+        }
+    }, [coord, coord3d]);
 
     // Update mapValue without reloading the applet
     useEffect(() => {
@@ -165,6 +174,18 @@ export default function GeoGebra({
                 console.warn("GeoGebra: setValue failed", e);
             }
         }
+        return () => {
+            // cleanup: unregister listener for previous mapValue on unmount
+            const prev = prevMapValueRef.current;
+            if (prev && apiRef.current) {
+                try {
+                    apiRef.current.unregisterObjectUpdateListener(prev.name);
+                } catch (e) {
+                    /* ignore */
+                }
+            }
+            prevMapValueRef.current = null;
+        };
     }, [mapValue]);
 
     return (
