@@ -8,8 +8,8 @@
         "forceConsistentCasingInFileNames": true,
         "noEmit": true,
         "esModuleInterop": true,
-        "module": "esnext",
-        "moduleResolution": "node",
+        "module": "nodenext",
+        "moduleResolution": "nodenext",
         "resolveJsonModule": true,
         "isolatedModules": true,
         "jsx": "preserve",
@@ -22,7 +22,7 @@
             {
                 "name": "next"
             }
-        ]
+        ],
     },
     "include": [
         "video.d.ts",
