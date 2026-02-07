@@ -1,3 +1,4 @@
+import { withNextVideo } from "next-video/process";
 /** @type {import('next').NextConfig} */
 
 const nextConfig = {
@@ -6,6 +7,12 @@ const nextConfig = {
         optimizePackageImports: ["@mantine/core", "@mantine/hooks"],
     },
     webpack(config) {
+        // On some network/cloud filesystems (Synology Drive, iCloud, etc.)
+        // webpack's filesystem cache can fail with low-level read errors.
+        // Use in-memory cache in dev to avoid filesystem operations.
+        if (process.env.NODE_ENV === "development") {
+            config.cache = { type: "memory" };
+        }
         // Grab the existing rule that handles SVG imports
         const fileLoaderRule = config.module.rules.find((rule) =>
             rule.test?.test?.(".svg"),
@@ -36,4 +43,4 @@ const nextConfig = {
     },
 };
 
-export default nextConfig;
+export default withNextVideo(nextConfig);

@@ -100,11 +100,11 @@ export function DocumentOutline() {
     }
 
     return (
-        <Stack gap="xs" p="md">
-            <Text fw={600} size="sm">
+        <Stack gap="sm" p="md">
+            <Text fw={600} size="xs">
                 Gliederung
             </Text>
-            <List spacing={0}>
+            <List>
                 {headings.map((heading) => {
                     const isChecked = checkedItems.has(heading.id);
                     return (
@@ -131,7 +131,7 @@ export function DocumentOutline() {
                                 icon={CheckboxIcon}
                             />
                             <Text
-                                size="sm"
+                                size="xs"
                                 style={{
                                     color: isChecked
                                         ? "var(--mantine-color-gray-6)"

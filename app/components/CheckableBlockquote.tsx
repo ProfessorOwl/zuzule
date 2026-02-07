@@ -16,6 +16,7 @@ import {
     IconDotsDiagonal2,
     IconHelpHexagonFilled,
     IconInfoHexagonFilled,
+    IconArrowBearRight2,
 } from "@tabler/icons-react";
 import { useDisclosure } from "@mantine/hooks";
 
@@ -29,6 +30,7 @@ interface CheckableBlockquoteProps {
 const iconMap = {
     IconHelpHexagonFilled,
     IconInfoHexagonFilled,
+    IconArrowBearRight2,
 };
 
 export function CheckableBlockquote({

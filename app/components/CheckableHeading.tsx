@@ -66,7 +66,7 @@ export function CheckableHeading({
     };
 
     return (
-        <Stack gap="0" my={"sm"} data-checkable-id={uniqueId}>
+        <Stack gap="0" mb={"md"} mt={"xl"} data-checkable-id={uniqueId}>
             <div style={{ display: "flex", alignItems: "center", gap: "8px" }}>
                 <Checkbox
                     checked={checked}

@@ -112,7 +112,10 @@ export function Sideview78() {
                 <div key={item.label}>
                     <div
                         className={classes.link}
-                        style={{ paddingLeft: `${level * 16}px` }}
+                        style={{
+                            paddingLeft: `${level * 16}px`,
+                            fontSize: "var(--mantine-font-size-xs)",
+                        }}
                     >
                         {item.icon && (
                             <item.icon
@@ -136,7 +139,10 @@ export function Sideview78() {
                     data-active={pathname === item.link || undefined}
                     href={item.link}
                     key={item.label}
-                    style={{ paddingLeft: `${level * 16}px` }}
+                    style={{
+                        paddingLeft: `${level * 16}px`,
+                        fontSize: "var(--mantine-font-size-xs)",
+                    }}
                 >
                     {item.icon && (
                         <item.icon

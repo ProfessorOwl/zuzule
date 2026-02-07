@@ -31,12 +31,13 @@ export default function RootLayout({ children }: { children: any }) {
                     name="viewport"
                     content="minimum-scale=1, initial-scale=1, width=device-width, user-scalable=no"
                 />
+                <script src="https://www.geogebra.org/apps/deployggb.js"></script>
             </head>
             <body className={lexend.className}>
                 <MantineProvider theme={theme}>
                     <HeaderSimple />
                     <Suspense>
-                    <LayoutGrid>{children}</LayoutGrid>
+                        <LayoutGrid>{children}</LayoutGrid>
                     </Suspense>
                 </MantineProvider>
             </body>

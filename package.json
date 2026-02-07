@@ -3,7 +3,7 @@
     "version": "0.1.0",
     "private": true,
     "scripts": {
-        "dev": "next dev",
+        "dev": "next dev & npx next-video sync -w",
         "build": "next build",
         "start": "next start",
         "lint": "next lint"
@@ -15,6 +15,7 @@
         "@tailwindcss/postcss": "^4.1.18",
         "katex": "^0.16.27",
         "next": "^15.5.9",
+        "next-video": "^2.6.0",
         "react": "19.1.1",
         "react-dom": "19.1.1",
         "react-katex": "^3.1.0"
