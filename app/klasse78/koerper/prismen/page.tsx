@@ -6,22 +6,15 @@ import { Lösung } from "@/components/Lösung";
 import { SuspenseCheckableHeading } from "@/components/SuspenseCheckableHeading";
 import { ImageCaption } from "@/components/ImageCaption";
 import {
-    AspectRatio,
     Badge,
-    Blockquote,
-    Box,
     Center,
     Container,
     Divider,
-    Group,
     Image,
     List,
     ListItem,
     SimpleGrid,
     Slider,
-    Stack,
-    Text,
-    Title,
 } from "@mantine/core";
 import NextImage from "next/image";
 import { InlineMath, BlockMath } from "react-katex";
