@@ -58,16 +58,13 @@ export default function Prismen() {
                 wir <b>Prisma</b>.
             </SuspenseCheckableHeading>
 
-            <CheckableBlockquote
-                icon="IconHelpHexagonFilled"
-                title="Aufgabe: Prismen im Alltag"
-            >
+            <CheckableBlockquote icon="frage" title="Aufgabe: Prismen im Alltag">
                 Suche in deinem Zimmer Objekte, die ein Prisma sind und bringe
                 sie in den Unterricht mit. Was für eine Form hat die
                 Grundfläche, aus der das Prisma „gezogen“ wird?
             </CheckableBlockquote>
 
-            <CheckableBlockquote icon="IconInfoHexagonFilled" title="Aha! 1">
+            <CheckableBlockquote icon="aha" title="Aha! 1">
                 {" "}
                 Ein Prisma hat also nicht immer eine dreieckige Grundseite,
                 sondern kann jede eckige Form als Grundseite haben!
@@ -124,10 +121,7 @@ export default function Prismen() {
                 />
             </CheckableHeading>
 
-            <CheckableBlockquote
-                icon="IconHelpHexagonFilled"
-                title="Aufgabe: Schrägbilder"
-            >
+            <CheckableBlockquote icon="frage" title="Aufgabe: Schrägbilder">
                 Vervollständige die folgenden Schrägbilder in deinem Heft:
                 <Image
                     my={"md"}
@@ -243,10 +237,7 @@ export default function Prismen() {
                 Da die Grundfläche zweimal vorkommt, müssen wir sie auch doppelt
                 in der Rechnung berücksichtigen!
             </CheckableHeading>
-            <CheckableBlockquote
-                title="Aufgabe: Oberflächeninhalt"
-                icon="IconHelpHexagonFilled"
-            >
+            <CheckableBlockquote title="Aufgabe: Oberflächeninhalt" icon="frage">
                 Berechne den Oberflächeninhalt der Prismen:
                 <Image
                     my={"md"}
@@ -310,7 +301,7 @@ export default function Prismen() {
                     </Lösung>
                 </CheckableHeading>
             </CheckableBlockquote>
-            <CheckableBlockquote title="Aha! 2" icon="IconInfoHexagonFilled">
+            <CheckableBlockquote title="Aha! 2" icon="aha">
                 Zerlegt man das Prisma, das wir oben sehen, in ein etwas anderes
                 Netz, können wir etwas praktisches beobachten: Die Mantelfläche
                 eines Prismas bildet ein <b>Rechteck</b>! Die Seitenlängen
@@ -336,7 +327,7 @@ export default function Prismen() {
                 können.
                 <CheckableBlockquote
                     title="Exkurs: Volumenbestimmung durch Verdrängung"
-                    icon="IconArrowBearRight2"
+                    icon="exkurs"
                 >
                     <SimpleGrid cols={2} my={"md"}>
                         <ImageCaption

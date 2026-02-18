@@ -54,7 +54,7 @@ export default function Zylinder() {
             </CheckableHeading>
             <CheckableBlockquote
                 title="Aufgabe: Zylinder in der Umgebung"
-                icon="IconHelpHexagonFilled"
+                icon="frage"
             >
                 Gehe raus und suche nach beliebigen Sachen, die für dich nach
                 einem Zylinder aussehen. Fallen dir plötzlich vielleicht Dinge
@@ -105,10 +105,7 @@ export default function Zylinder() {
                     alt="Es wird gezeigt, wie das Schrägbild eines Zylinders Schritt für Schritt gezeichnet wird. Links wird mit einem Kreis angefangen. Auf dessen Außenseiten werden zwei senkrechte Striche gezeichnet, die alle die gleiche Höhe haben. Auf deren Enden wird dann ein identischer Kreis zu dem unten gezeichnet."
                 />
             </CheckableHeading>
-            <CheckableBlockquote
-                icon="IconHelpHexagonFilled"
-                title="Aufgabe: Schrägbilder"
-            >
+            <CheckableBlockquote icon="frage" title="Aufgabe: Schrägbilder">
                 Zeichne die Zylinder mit Radius <InlineMath>r</InlineMath> und
                 Höhe <InlineMath>h</InlineMath> als Schrägbilder.
                 <List type="ordered" withPadding>
@@ -230,7 +227,7 @@ export default function Zylinder() {
                     Durchmesser und Radius auf – dann kommst du selber drauf!
                     <CheckableBlockquote
                         title="Exkurs: Die Kreiszahl π"
-                        icon="IconArrowBearRight2"
+                        icon="exkurs"
                     >
                         Die Zahl{" "}
                         <InlineMath>\pi \approx 3,1415 \dots</InlineMath> ist
@@ -305,10 +302,7 @@ export default function Zylinder() {
                     Flasche bekommt. Dadurch erhalten wir nämlich ca.{" "}
                     <InlineMath>{String.raw`44\,\text{cm}^2`}</InlineMath>.
                 </CheckableHeading>
-                <CheckableBlockquote
-                    icon="IconHelpHexagonFilled"
-                    title="Aufgabe: Mantelfläche"
-                >
+                <CheckableBlockquote icon="frage" title="Aufgabe: Mantelfläche">
                     Berechne die Mantelfläche der Zylinder, welche Radius{" "}
                     <InlineMath>r</InlineMath> und Höhe{" "}
                     <InlineMath>h</InlineMath> haben.

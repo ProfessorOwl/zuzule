@@ -14,9 +14,9 @@ import {
 } from "@mantine/core";
 import {
     IconDotsDiagonal2,
+    IconArrowBearRight2,
     IconHelpHexagonFilled,
     IconInfoHexagonFilled,
-    IconArrowBearRight2,
 } from "@tabler/icons-react";
 import { useDisclosure } from "@mantine/hooks";
 
@@ -24,14 +24,16 @@ interface CheckableBlockquoteProps {
     children: React.ReactNode;
     title?: string;
     id?: string;
-    icon?: string;
+    icon?: IconMapKey;
 }
 
-const iconMap = {
-    IconHelpHexagonFilled,
-    IconInfoHexagonFilled,
-    IconArrowBearRight2,
-};
+const IconMap = {
+    frage: IconHelpHexagonFilled,
+    aha: IconInfoHexagonFilled,
+    exkurs: IconArrowBearRight2,
+} as const;
+
+type IconMapKey = keyof typeof IconMap;
 
 export function CheckableBlockquote({
     children,
@@ -79,7 +81,7 @@ export function CheckableBlockquote({
         router.replace(newUrl, { scroll: false });
     };
 
-    const Icon = icon ? iconMap[icon as keyof typeof iconMap] : null;
+    const Icon = icon ? IconMap[icon] : null;
 
     return (
         <Blockquote px={"lg"} py={"md"} my={"md"} data-checkable-id={uniqueId}>
