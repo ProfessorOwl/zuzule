@@ -24,60 +24,6 @@ import Video from "next-video";
 import VieleckInDreiecke from "/videos/Vieleck in Dreiecke.mov";
 
 export default function Prismen() {
-    const LtexSchrägbildera = `
-        \\begin{aligned}G &= 1 \\,\\text{cm} \\cdot 2 \\,\\text{cm} \\\\ 
-        &= 2 \\,\\text{cm}^2 \\\\ 
-        M &= 2 \\cdot 3 \\,\\text{cm} \\cdot 1 \\,\\text{cm} + 2 \\cdot 3 \\,\\text{cm} \\cdot 2 \\,\\text{cm} \\\\ 
-        &=  6 \\, \\text{cm}^2 + 12 \\, \\text{cm}^2 \\\\ 
-        &= 18 \\, \\text{cm}^2  \\\\ 
-        O &= 2 \\cdot G + M \\\\ 
-        &= 2 \\cdot 2 \\,\\text{cm}^2 + 18 \\, \\text{cm}^2  \\\\ 
-        &= 22\\, \\text{cm}^2 \\end{aligned}
-    `;
-    const LtexSchrägbilderb = `
-        \\begin{aligned}G &= \\frac{1}{2} 12 \\,\\text{cm} \\cdot h \\\\ 
-        &= \\frac{1}{2} 12 \\,\\text{cm}\\cdot 8 \\,\\text{cm}\\\\ 
-        &= 96 \\,\\text{cm}^2 \\\\
-        M &= 2 \\cdot 10 \\,\\text{cm} \\cdot 40 \\,\\text{cm} +  12 \\,\\text{cm} \\cdot 40 \\,\\text{cm} \\\\ 
-        &=  800 \\, \\text{cm}^2 +  480 \\, \\text{cm}^2 \\\\ 
-        &= 1280 \\, \\text{cm}^2  \\\\ 
-        O &= 2 \\cdot G + M \\\\ 
-        &= 2 \\cdot 96 \\,\\text{cm}^2 + 1280 \\, \\text{cm}^2  \\\\ 
-        &= 1472 \\, \\text{cm}^2 \\end{aligned}
-    `;
-    const LtexSchrägbilderc = `
-    \\begin{aligned} A &= 20 \\, \\text{cm}^2 \\\\
-    M &= U \\cdot 11 \\, \\text{cm} \\\\
-    &= 15 \\, \\text{cm} \\cdot 11 \\, \\text{cm} \\\\
-    &= 165 \\, \\text{cm}^2 \\\\
-    O &= 2 \\cdot A + M \\\\ 
-        &= 2 \\cdot 20 \\,\\text{cm}^2 + 165 \\, \\text{cm}^2  \\\\ 
-        &= 205 \\, \\text{cm}^2 
-    \\end{aligned}
-    `;
-    const VolumenQuader = `
-    \\begin{aligned}
-    \\textcolor{blue}{A} &= 3 \\, \\text{cm} \\cdot 2 \\, \\text{cm} \\\\
-    &= 6\\, \\text{cm}^2 \\\\
-    \\textcolor{green}{V} &=\\textcolor{blue}{A} \\cdot h \\\\
-    &= 6 \\, \\text{cm}^2 \\cdot 2\\,\\text{cm} \\\\
-    &= 12 \\, \\text{cm}^3
-    \\end{aligned}
-    `;
-    const OberflächePrisma = `
-    O = \\textcolor{red}{M} + 2\\cdot \\textcolor{blue}{G} =  \\textcolor{red}{M_1} +  \\textcolor{red}{M_2} +  \\textcolor{red}{M_3} + 2\\cdot  \\textcolor{blue}{G}
-    `;
-    const DreieckFläche = `
-    A = \\frac{1}{2} \\textcolor{blue}{g} \\cdot \\textcolor{red}{h}
-    `;
-    const VolumenDreieckigesPrisma = `
-    \\begin{aligned}
-    V_\\text{viereckiges Prisma} &= A_\\text{Viereck} \\cdot \\textcolor{green}{h_\\text{Prisma}} \\\\
-    \\frac{1}{2} V_\\text{viereckiges Prisma} &= \\frac{1}{2} A_\\text{Viereck} \\cdot \\textcolor{green}{h_\\text{Prisma}} \\\\
-    V_\\text{dreieckiges Prisma} &= A_\\text{Dreieck} \\cdot \\textcolor{green}{h_\\text{Prisma}}
-    \\end{aligned}
-    `;
-
     const [value, setValue] = useState(2);
     return (
         <div>
@@ -147,7 +93,7 @@ export default function Prismen() {
                 angedeutet, während sichtbare Kanten durchgezogen werden.
                 <Divider my={"md"} />
                 Zeichnen wir mal ein Schrägbild von dem dreieckigen Prisma oben.
-                <List type="ordered">
+                <List type="ordered" withPadding>
                     <ListItem>
                         Zuerst zeichnen wir dazu die dreieckige Grundfläche.
                         Weil sie auf dem „Boden“ liegt, wird sie etwas nach
@@ -207,7 +153,7 @@ export default function Prismen() {
                             src="/SchrägbilderVervollständigenLösung@2x.png"
                             width={3600}
                             height={1200}
-                            alt="Die Lösung, wie die Schräbilder vervollständigt werden können."
+                            alt="Die Lösung, wie die Schrägbilder vervollständigt werden können."
                         />
                     </Lösung>
                 </CheckableHeading>
@@ -272,7 +218,7 @@ export default function Prismen() {
             <CheckableHeading title="Oberflächeninhalt von Prismen">
                 Über das Netz eines Körpers lässt sich gut der Oberflächeninhalt
                 berechnen, da hier nur noch einfache Formen vorkommen. Man
-                Unterscheided hier zwischen <b>Mantelfläche</b> und{" "}
+                Unterscheidet hier zwischen <b>Mantelfläche</b> und{" "}
                 <b>Grundfläche</b>. Die Grundfläche bezeichnet die Grundform des
                 Prismas, also ob es z.B. drei- oder viereckig ist. Die
                 Mantelfläche ist dann die Fläche, die durch die Höhe des Prismas
@@ -287,11 +233,13 @@ export default function Prismen() {
                     height={2000}
                     alt="Ein Prisma mit seinem Netz."
                 />
-                Der <b>Oberflächeinhalt</b> <InlineMath>O</InlineMath> des
+                Der <b>Oberflächeninhalt</b> <InlineMath>O</InlineMath> des
                 Prismas lässt sich dann über die <b>Mantelfläche</b>{" "}
                 <InlineMath>M = M_1 + M_2 + M_3</InlineMath> und die{" "}
                 <b>Grundfläche</b> <InlineMath>G</InlineMath> berechnen:
-                <BlockMath>{OberflächePrisma}</BlockMath>
+                <BlockMath>{String.raw`
+                    O = \textcolor{red}{M} + 2\cdot \textcolor{blue}{G} =  \textcolor{red}{M_1} +  \textcolor{red}{M_2} +  \textcolor{red}{M_3} + 2\cdot  \textcolor{blue}{G}
+                `}</BlockMath>
                 Da die Grundfläche zweimal vorkommt, müssen wir sie auch doppelt
                 in der Rechnung berücksichtigen!
             </CheckableHeading>
@@ -316,19 +264,47 @@ export default function Prismen() {
                     titleOrder={2}
                 >
                     <Lösung>
-                        <List type="ordered">
+                        <List type="ordered" withPadding>
                             <ListItem>
                                 {" "}
                                 Rechteckiges Prisma
-                                <BlockMath>{LtexSchrägbildera}</BlockMath>
+                                <BlockMath>{String.raw`
+                                    \begin{aligned}G &= 1 \,\text{cm} \cdot 2 \,\text{cm} \\ 
+                                    &= 2 \,\text{cm}^2 \\ 
+                                    M &= 2 \cdot 3 \,\text{cm} \cdot 1 \,\text{cm} + 2 \cdot 3 \,\text{cm} \cdot 2 \,\text{cm} \\ 
+                                    &=  6 \, \text{cm}^2 + 12 \, \text{cm}^2 \\ 
+                                    &= 18 \, \text{cm}^2  \\ 
+                                    O &= 2 \cdot G + M \\ 
+                                    &= 2 \cdot 2 \,\text{cm}^2 + 18 \, \text{cm}^2  \\ 
+                                    &= 22\, \text{cm}^2 \end{aligned}
+                                `}</BlockMath>
                             </ListItem>
                             <ListItem>
                                 Dreieckiges Prisma
-                                <BlockMath>{LtexSchrägbilderb}</BlockMath>
+                                <BlockMath>{String.raw`
+                                    \begin{aligned}G &= \frac{1}{2} 12 \,\text{cm} \cdot h \\ 
+                                    &= \frac{1}{2} 12 \,\text{cm}\cdot 8 \,\text{cm}\\ 
+                                    &= 96 \,\text{cm}^2 \\
+                                    M &= 2 \cdot 10 \,\text{cm} \cdot 40 \,\text{cm} +  12 \,\text{cm} \cdot 40 \,\text{cm} \\ 
+                                    &=  800 \, \text{cm}^2 +  480 \, \text{cm}^2 \\ 
+                                    &= 1280 \, \text{cm}^2  \\ 
+                                    O &= 2 \cdot G + M \\ 
+                                    &= 2 \cdot 96 \,\text{cm}^2 + 1280 \, \text{cm}^2  \\ 
+                                    &= 1472 \, \text{cm}^2 \end{aligned}
+                                `}</BlockMath>
                             </ListItem>
                             <ListItem>
                                 Fünfeckiges Prisma
-                                <BlockMath>{LtexSchrägbilderc}</BlockMath>
+                                <BlockMath>{String.raw`
+                                    \begin{aligned} A &= 20 \, \text{cm}^2 \\
+                                    M &= U \cdot 11 \, \text{cm} \\
+                                    &= 15 \, \text{cm} \cdot 11 \, \text{cm} \\
+                                    &= 165 \, \text{cm}^2 \\
+                                    O &= 2 \cdot A + M \\ 
+                                        &= 2 \cdot 20 \,\text{cm}^2 + 165 \, \text{cm}^2  \\ 
+                                        &= 205 \, \text{cm}^2 
+                                    \end{aligned}
+                                `}</BlockMath>
                             </ListItem>
                         </List>
                     </Lösung>
@@ -507,11 +483,17 @@ export default function Prismen() {
                         12&thinsp;cm<sup>3</sup> sein muss. 6 Würfel sind unten,
                         weitere 6 sind oben. Das ergibt sich auch aus der
                         Berechnung von Grundfläche mal Höhe:
-                        <BlockMath>{VolumenQuader}</BlockMath>
+                        <BlockMath>{String.raw`
+                            \begin{aligned}
+                            \textcolor{blue}{A} &= 3 \, \text{cm} \cdot 2 \, \text{cm} \\
+                            &= 6\, \text{cm}^2 \\
+                            \textcolor{green}{V} &=\textcolor{blue}{A} \cdot h \\
+                            &= 6 \, \text{cm}^2 \cdot 2\,\text{cm} \\
+                            &= 12 \, \text{cm}^3
+                            \end{aligned}
+                        `}</BlockMath>
                         Können wir diese Formel eventuell immer bei Prismen
-                        anwenden? Gilt <InlineMath>
-                            V = A \cdot h
-                        </InlineMath>{" "}
+                        anwenden? Gilt <InlineMath>V = A \cdot h</InlineMath>{" "}
                         hier immer? Testen wir es mal!
                     </CheckableHeading>
                     <CheckableHeading
@@ -522,8 +504,9 @@ export default function Prismen() {
                         eckige Fläche, also ein <b>n-Eck</b>. Nehmen wir jedoch
                         hier als Beispiel ein dreieckiges Prisma. Seine
                         Grundfläche können wir mit der Formel{" "}
-                        <InlineMath>{DreieckFläche}</InlineMath> berechnen. Im
-                        Bild unten findest du dazu nochmal eine Herleitung.
+                        <InlineMath>{String.raw`A = \frac{1}{2} \textcolor{blue}{g} \cdot \textcolor{red}{h}`}</InlineMath>{" "}
+                        berechnen. Im Bild unten findest du dazu nochmal eine
+                        Herleitung.
                         <Image
                             my={"md"}
                             h={300}
@@ -546,7 +529,13 @@ export default function Prismen() {
                         Denn mit dem Verdoppeln des Flächeninhaltes verdoppeln
                         wir auch das Volumen. Das Volumen ergibt sich also mit
                         der Formel:
-                        <BlockMath>{VolumenDreieckigesPrisma}</BlockMath>
+                        <BlockMath>{String.raw`
+                            \begin{aligned}
+                            V_\text{viereckiges Prisma} &= A_\text{Viereck} \cdot \textcolor{green}{h_\text{Prisma}} \\
+                            \frac{1}{2} V_\text{viereckiges Prisma} &= \frac{1}{2} A_\text{Viereck} \cdot \textcolor{green}{h_\text{Prisma}} \\
+                            V_\text{dreieckiges Prisma} &= A_\text{Dreieck} \cdot \textcolor{green}{h_\text{Prisma}}
+                            \end{aligned}
+                        `}</BlockMath>
                         <Image
                             my={"md"}
                             h={300}

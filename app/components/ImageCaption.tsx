@@ -34,6 +34,7 @@ export function ImageCaption({
                     width={width}
                     height={height}
                     alt={alt}
+                    my={"md"}
                 ></Image>
                 <Flex align={"flex-end"} h={h}>
                     <Text
