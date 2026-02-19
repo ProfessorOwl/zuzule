@@ -1,12 +1,9 @@
-"use client";
-
 import { CheckableBlockquote } from "@/components/CheckableBlockquote";
 import { CheckableHeading } from "@/components/CheckableHeading";
 import { Lösung } from "@/components/Lösung";
 import { SuspenseCheckableHeading } from "@/components/SuspenseCheckableHeading";
 import { ImageCaption } from "@/components/ImageCaption";
 import {
-    Badge,
     Center,
     Container,
     Divider,
@@ -14,17 +11,14 @@ import {
     List,
     ListItem,
     SimpleGrid,
-    Slider,
 } from "@mantine/core";
 import NextImage from "next/image";
 import { InlineMath, BlockMath } from "react-katex";
-import GeoGebra from "@/components/GeoGebraApplet";
-import { useState } from "react";
+import GeoGebraAppletSlider from "@/components/GeoGebraAppletSlider";
 import Video from "next-video";
 import VieleckInDreiecke from "/videos/Vieleck in Dreiecke.mov";
 
 export default function Prismen() {
-    const [value, setValue] = useState(2);
     return (
         <div>
             <SuspenseCheckableHeading title="Das Prisma">
@@ -58,7 +52,10 @@ export default function Prismen() {
                 wir <b>Prisma</b>.
             </SuspenseCheckableHeading>
 
-            <CheckableBlockquote icon="frage" title="Aufgabe: Prismen im Alltag">
+            <CheckableBlockquote
+                icon="frage"
+                title="Aufgabe: Prismen im Alltag"
+            >
                 Suche in deinem Zimmer Objekte, die ein Prisma sind und bringe
                 sie in den Unterricht mit. Was für eine Form hat die
                 Grundfläche, aus der das Prisma „gezogen“ wird?
@@ -237,7 +234,10 @@ export default function Prismen() {
                 Da die Grundfläche zweimal vorkommt, müssen wir sie auch doppelt
                 in der Rechnung berücksichtigen!
             </CheckableHeading>
-            <CheckableBlockquote title="Aufgabe: Oberflächeninhalt" icon="frage">
+            <CheckableBlockquote
+                title="Aufgabe: Oberflächeninhalt"
+                icon="frage"
+            >
                 Berechne den Oberflächeninhalt der Prismen:
                 <Image
                     my={"md"}
@@ -426,34 +426,7 @@ export default function Prismen() {
                         dir mal an diesem Beispiel hier an, wo ein Quader eine
                         Grundfläche von 3 mal 2&thinsp;cm<sup>2</sup> hat und
                         eine Höhe von 2&thinsp;cm.
-                        <Center>
-                            <Slider
-                                thumbChildren={<Badge size="xl">Höhe</Badge>}
-                                styles={{
-                                    thumb: {
-                                        width: 100,
-                                        backgroundColor: "transparent",
-                                        borderColor: "transparent",
-                                    },
-                                }}
-                                label={null}
-                                mt={"md"}
-                                mb={"lg"}
-                                w={400}
-                                domain={[-0.25, 2.25]}
-                                marks={[
-                                    { value: 0, label: "0" },
-                                    { value: 1, label: "1" },
-                                    { value: 2, label: "2" },
-                                ]}
-                                step={1}
-                                min={0}
-                                max={2}
-                                value={value}
-                                onChange={setValue}
-                            ></Slider>
-                        </Center>
-                        <GeoGebra
+                        <GeoGebraAppletSlider
                             materialId="x5z6yk9z"
                             appName="3d"
                             width={800}
@@ -466,7 +439,17 @@ export default function Prismen() {
                                 zmin: -3,
                                 zmax: 4,
                             }}
-                            mapValue={{ name: "h", value: value }}
+                            sliderLabel="Höhe"
+                            sliderWidth={400}
+                            sliderMin={0}
+                            sliderMax={2}
+                            sliderStep={1}
+                            sliderInitialValue={2}
+                            sliderMarks={[
+                                { value: 0, label: "0" },
+                                { value: 1, label: "1" },
+                                { value: 2, label: "2" },
+                            ]}
                         />
                         Füllen wir den Quader mit Würfeln aus, die ein Volumen
                         von 1&thinsp;cm<sup>3</sup> haben, kann man gut

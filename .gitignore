@@ -136,3 +136,4 @@ videos/*
 !videos/*.js
 !videos/*.ts
 public/_next-video
+Masterarbeit-Website.code-workspace

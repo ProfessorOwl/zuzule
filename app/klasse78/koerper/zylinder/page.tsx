@@ -1,6 +1,7 @@
 import { ImageCaption } from "@/components/ImageCaption";
 import { CheckableHeading } from "@/components/CheckableHeading";
 import {
+    Button,
     Container,
     Divider,
     Flex,
@@ -8,6 +9,7 @@ import {
     Image,
     List,
     ListItem,
+    ThemeIcon,
 } from "@mantine/core";
 import NextImage from "next/image";
 import { CheckableBlockquote } from "@/components/CheckableBlockquote";
@@ -15,6 +17,8 @@ import { Lösung } from "@/components/Lösung";
 import { BlockMath, InlineMath } from "react-katex";
 import Video from "next-video";
 import UmfangZylinder from "/videos/UmfangZylinder.mov";
+import Link from "next/link";
+import { IconExternalLink } from "@tabler/icons-react";
 
 export default function Zylinder() {
     return (
@@ -33,6 +37,7 @@ export default function Zylinder() {
                         src="/dosen.jpg"
                         width={6000}
                         height={4000}
+                        sizes="500px"
                         alt="Verschiedene Dosen"
                     />
                     <Image
@@ -42,6 +47,7 @@ export default function Zylinder() {
                         src="/regler.jpg"
                         width={6000}
                         height={4000}
+                        sizes="500px"
                         alt="Ein Regler für die Lautstärke"
                     />
                 </Flex>
@@ -73,6 +79,7 @@ export default function Zylinder() {
                     src="/QuaderSchrägbild@2x.png"
                     width={1802}
                     height={1200}
+                    sizes="500px"
                     alt="Schrägbild eines Quaders auf kariertem Papier."
                 />
                 Verdeckte Kanten werden also mit einer gestrichelten Linie
@@ -81,9 +88,9 @@ export default function Zylinder() {
                 Versuchen wir uns mal an einem Schrägbild von einem Zylinder.
                 <List type="ordered" withPadding>
                     <ListItem>
-                        Zuerst zeichnen wir die den Kreis als Grundfläche.
-                        Dieser ist wegen der Perspektive etwas zusammengedrückt
-                        und nach hinten rechts verzerrt. Zwischen den äußersten
+                        Zuerst zeichnen wir einen Kreis als Grundfläche. Dieser
+                        ist wegen der Perspektive etwas zusammengedrückt und
+                        nach hinten rechts verzerrt. Zwischen den äußersten
                         Punkten links und rechts können wir den weiter hinten
                         liegenden Teil gestrichelt zeichnen – das spart uns
                         später Arbeit. Wenn du noch
@@ -240,8 +247,8 @@ export default function Zylinder() {
                         <BlockMath>
                             {String.raw`
                             \begin{aligned}
-                            \pi &= \frac{U}{d} \\
-                                &=  \frac{9{,}4\,\text{cm}}{3\,\text{cm}} \\
+                            \pi &= \tfrac{U}{d} \\
+                                &=  \tfrac{9{,}4\,\text{cm}}{3\,\text{cm}} \\
                                 &\approx 3,13 
                             \end{aligned}
                             `}
@@ -332,26 +339,207 @@ export default function Zylinder() {
                         titleOrder={2}
                     >
                         <Lösung>
+                            <List type="ordered" withPadding>
+                                <ListItem>
+                                    <InlineMath>{String.raw`U = 4\pi\,\text{cm}\approx 12{,}57\,\text{cm}\quad A = 4\pi\,\text{cm}^2 \approx 12{,}57\,\text{cm}^2`}</InlineMath>
+                                </ListItem>
+                                <ListItem>
+                                    <InlineMath>{String.raw`U = \tfrac{47}{5}\pi\,\text{cm}\approx 11{,}94\,\text{cm}\quad A = \tfrac{209}{50}\pi\,\text{cm}^2 \approx 13{,}13\,\text{cm}^2`}</InlineMath>
+                                </ListItem>
+                                <ListItem>
+                                    <InlineMath>{String.raw`U = \tfrac{19}{5}\pi\,\text{cm}\approx 12{,}57\,\text{cm}\quad A = 4\pi\,\text{cm}^2 \approx 12{,}57\,\text{cm}^2`}</InlineMath>
+                                </ListItem>
+                                <ListItem>
+                                    <InlineMath>{String.raw`U = 10\pi\,\text{cm}\approx 31{,}42\,\text{cm}\quad A = 32\pi\,\text{cm}^2 \approx 100{,}53\,\text{cm}^2`}</InlineMath>
+                                </ListItem>
+                                <ListItem>
+                                    <InlineMath>{String.raw`U = 14\pi\,\text{m}\approx 43{,}93\,\text{m}\quad A = \tfrac{301}{5}\pi\,\text{m}^2 \approx 189{,}12\,\text{m}^2`}</InlineMath>
+                                </ListItem>
+                                <ListItem>
+                                    <InlineMath>{String.raw`U = 3{,}8\pi\,\text{cm}\approx 11{,}94\,\text{cm}\quad A = \tfrac{247}{25}\pi\,\text{cm}^2 \approx 31{,}04\,\text{cm}^2`}</InlineMath>
+                                </ListItem>
+                            </List>
+                        </Lösung>
+                    </CheckableHeading>
+                </CheckableBlockquote>
+            </CheckableHeading>
+            <CheckableHeading title="Die Gesamtoberfläche eines Zylinders">
+                Wir haben bisher nur die Mantelfläche eines Zylinders
+                betrachtet. Ein Zylinder hat aber (meistens) noch einen Boden
+                und einen Deckel. Für die Gesamtoberfläche müssen wir diese also
+                auch betrachten!
+                <Divider my={"md"} />
+                Die Ober- und Unterseite eines Zylinders ist ein Kreis. Deswegen
+                können wir die Flächenformel eines Kreises verwenden!
+                <BlockMath>
+                    {String.raw`
+                    A_\text{Kappe} = \pi \cdot r^2
+                    `}
+                </BlockMath>
+                Um nun die Gesamtoberfläche <InlineMath>O</InlineMath> eines
+                Zylinders zu bekommen, addieren wir die Ober- und Unterseite{" "}
+                <InlineMath>{String.raw`A_\text{Kappe}`}</InlineMath> sowie die
+                Mantelfläche <InlineMath>M</InlineMath> zusammen:
+                <BlockMath>
+                    {String.raw`
+                    A = M + 2\cdot A_\text{Kappe}
+                    `}
+                </BlockMath>
+                <CheckableBlockquote icon="frage" title="Aufgabe: Oberfläche">
+                    Berechne die Gesamtoberfläche der Zylinder, welche Radius{" "}
+                    <InlineMath>r</InlineMath> und Höhe{" "}
+                    <InlineMath>h</InlineMath> haben.
                     <List type="ordered" withPadding>
                         <ListItem>
-                            <InlineMath>{String.raw`U = 4\pi\,\text{cm}\approx 12{,}57\,\text{cm}\quad A = 4\pi\text{cm}^2 \approx 12{,}57\,\text{cm}^2`}</InlineMath>
+                            <InlineMath>{String.raw`r = 3\,\text{cm} \quad h = 1{,}2\,\text{cm}`}</InlineMath>
                         </ListItem>
                         <ListItem>
-                            <InlineMath>{String.raw`U = \frac{47}{5}\pi\,\text{cm}\approx 11{,}94\,\text{cm}\quad A = \frac{209}{50}\pi\text{cm}^2 \approx 13{,}13\,\text{cm}^2`}</InlineMath>
+                            <InlineMath>{String.raw`r = 8{,}2\,\text{cm} \quad h = 5\,\text{cm}`}</InlineMath>
                         </ListItem>
                         <ListItem>
-                            <InlineMath>{String.raw`U = \frac{19}{5}\pi\,\text{cm}\approx 12{,}57\,\text{cm}\quad A = 4\pi\text{cm}^2 \approx 12{,}57\,\text{cm}^2`}</InlineMath>
+                            <InlineMath>{String.raw`r = 7{,}3\,\text{cm} \quad h = 3{,}9\,\text{cm}`}</InlineMath>
                         </ListItem>
                         <ListItem>
-                            <InlineMath>{String.raw`U = 10\pi\,\text{cm}\approx 31{,}42\,\text{cm}\quad A = 32\pi\text{cm}^2 \approx 100{,}53\,\text{cm}^2`}</InlineMath>
+                            <InlineMath>{String.raw`r = 4\,\text{cm} \quad h = 9{,}1\,\text{cm}`}</InlineMath>
                         </ListItem>
                         <ListItem>
-                            <InlineMath>{String.raw`U = 14\pi\,\text{m}\approx 43{,}93\,\text{m}\quad A = \frac{301}{5}\pi\text{m}^2 \approx 189{,}12\,\text{m}^2`}</InlineMath>
+                            <InlineMath>{String.raw`r = 6{,}7\,\text{m} \quad h = 7{,}5\,\text{m}`}</InlineMath>
                         </ListItem>
-                                                <ListItem>
-                            <InlineMath>{String.raw`U = 3{,}8\pi\,\text{cm}\approx 11{,}94\,\text{cm}\quad A = \frac{247}{25}\pi\text{cm}^2 \approx 31{,}04\,\text{cm}^2`}</InlineMath>
+                        <ListItem>
+                            <InlineMath>{String.raw`r = 1{,}95\,\text{m} \quad h = 480\,\text{cm}`}</InlineMath>
                         </ListItem>
                     </List>
+                    <CheckableHeading
+                        title="Lösung" //
+                        id="Lösung-Oberfläche"
+                        titleOrder={2}
+                    >
+                        <Lösung>
+                            <List type="ordered" withPadding>
+                                <ListItem>
+                                    <BlockMath>{String.raw`
+                                    \begin{aligned}
+                                    &&M &= \tfrac{36}{5}\pi\,\text{cm}^2 \approx 22{,}62\,\text{cm}^2 \\
+                                    &&A_\text{Kappe} &= 9\pi\,\text{cm}^2 \approx 28{,}27\,\text{cm}^2 \\
+                                    &&O &= \tfrac{126}{5}\pi\,\text{cm}^2 \approx 79{,}17\,\text{cm}^2
+                                    \end{aligned}
+                                    `}</BlockMath>
+                                </ListItem>
+                                <ListItem>
+                                    <BlockMath>{String.raw`
+                                    \begin{aligned}
+                                    &&M &= 82\pi\,\text{cm}^2 \approx 257{,}61\,\text{cm}^2 \\
+                                    &&A_\text{Kappe} &= \tfrac{1681}{25}\pi\,\text{cm}^2 \approx 211{,}24\,\text{cm}^2 \\
+                                    &&O &= \tfrac{5412}{25}\pi\,\text{cm}^2 \approx 680{,}09\,\text{cm}^2
+                                    \end{aligned}
+                                    `}</BlockMath>
+                                </ListItem>
+                                <ListItem>
+                                    <BlockMath>{String.raw`
+                                    \begin{aligned}
+                                    &&M &= \tfrac{2847}{50}\pi\,\text{cm}^2 \approx 178{,}88\,\text{cm}^2 \\
+                                    &&A_\text{Kappe} &= \tfrac{5329}{100}\pi\,\text{cm}^2 \approx 167{,}42\,\text{cm}^2 \\
+                                    &&O &= \tfrac{4088}{25}\pi\,\text{cm}^2 \approx 513{,}71\,\text{cm}^2
+                                    \end{aligned}
+                                    `}</BlockMath>
+                                </ListItem>
+                                <ListItem>
+                                    <BlockMath>{String.raw`
+                                    \begin{aligned}
+                                    &&M &= \tfrac{364}{5}\pi\,\text{cm}^2 \approx 228{,}71\,\text{cm}^2 \\
+                                    &&A_\text{Kappe} &= 16\pi\,\text{cm}^2 \approx 50{,}27\,\text{cm}^2 \\
+                                    &&O &= \tfrac{524}{5}\pi\,\text{cm}^2 \approx 329{,}24\,\text{cm}^2
+                                    \end{aligned}
+                                    `}</BlockMath>
+                                </ListItem>
+                                <ListItem>
+                                    <BlockMath>{String.raw`
+                                    \begin{aligned}
+                                    &&M &= \tfrac{201}{2}\pi\,\text{m}^2 \approx 315{,}73\,\text{m}^2 \\
+                                    &&A_\text{Kappe} &= \tfrac{4489}{100}\pi\,\text{m}^2 \approx 141{,}03\,\text{m}^2 \\
+                                    &&O &= \tfrac{4757}{25}\pi\,\text{m}^2 \approx 597{,}78\,\text{m}^2
+                                    \end{aligned}
+                                    `}</BlockMath>
+                                </ListItem>
+                                <ListItem>
+                                    <BlockMath>{String.raw`
+                                    \begin{aligned}
+                                    &&M &= \tfrac{468}{25}\pi\,\text{m}^2\approx 58{,}81\,\text{m}^2 \\ 
+                                    &&A_\text{Kappe} &= \tfrac{1521}{400}\pi\,\text{m}^2 \approx 11{,}95\,\text{m}^2 \\
+                                    &&O &= \tfrac{1053}{40}\pi\,\text{m}^2 \approx 82{,}70\,\text{m}^2
+                                    \end{aligned}
+                                    `}</BlockMath>
+                                </ListItem>
+                            </List>
+                        </Lösung>
+                    </CheckableHeading>
+                </CheckableBlockquote>
+            </CheckableHeading>
+            <CheckableHeading title="Volumen eines Zylinders">
+                Im Alltag begegnen wir Zylindern häufig im Vorratsschrank der
+                Eltern: Seien es passierte Tomaten, eine abgepackte Dose Chili
+                oder eine Portion Thunfisch. Dabei sind die meisten
+                Konservendosen Zylinder.
+                <CheckableBlockquote
+                    title="Aufgabe: Zylinder als Packmaß"
+                    icon="frage"
+                >
+                    Überlege dir, was die Vor- und Nachteile von
+                    zylinderförmigen Verpackungen sind. Wenn so viele
+                    Verpackungen zylinderförmig sind, warum verpacken wir dann
+                    nicht alles in Zylindern?
+                    <CheckableHeading
+                        title="Lösung"
+                        titleOrder={2}
+                        id="lösung-zylinder-als-packmaß"
+                    >
+                        <Lösung>
+                            <b>Vorteile:</b>
+                            <List>
+                                <ListItem>
+                                    Zylinder lassen sich gut stapeln.
+                                </ListItem>
+                                <ListItem>
+                                    Die meisten Zylinder haben viel Volumen bei
+                                    wenig Oberfläche.
+                                </ListItem>
+                                <ListItem>
+                                    Durch die runde Form lassen sich Zylinder
+                                    nicht so einfach eindrücken und sind stabil.
+                                </ListItem>
+                                <ListItem>
+                                    Leicht herzustellen, da Zylinder nur 3
+                                    Seiten haben.
+                                </ListItem>
+                            </List>
+                            <b>Nachteile:</b>
+                            <List>
+                                <ListItem>Können wegrollen.</ListItem>
+                                <ListItem>
+                                    Sind nicht so gut stapelbar wie Quader als
+                                    Packungen.
+                                </ListItem>
+                            </List>
+                            <Divider my={"md"} />
+                            Das sind einige Gründe, die man mit den Augen sehen
+                            kann. Der wichtigste Grund ist jedoch der: Der
+                            Inhalt von Konservendosen wird bei der Produktion{" "}
+                            <b>in</b> in der Dose aufgekocht – und das halten
+                            nur Zylinder (oder Kugeln) aus. Schau dir zur
+                            Erklärung mal dieses Video von der Sendung mit der
+                            Maus an:{" "}
+                            <Link
+                                target="_blank"
+                                href="https://www.wdrmaus.de/filme/sachgeschichten/konservendose.php5"
+                            >
+                                {" "}
+                                <Button
+                                    mb={"0.2em"}
+                                    rightSection={<IconExternalLink />}
+                                >
+                                    Hier klicken!
+                                </Button>
+                            </Link>
                         </Lösung>
                     </CheckableHeading>
                 </CheckableBlockquote>
