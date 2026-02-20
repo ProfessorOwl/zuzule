@@ -781,7 +781,7 @@ export default function Zylinder() {
                                     gehackten Tomaten{" "}
                                     <InlineMath>{String.raw`405{,}98\,\text{mL} - 400\,\text{mL} = 5{,}98\,\text{mL}`}</InlineMath>{" "}
                                     geschenkt werden. Ob das als Anlass genügt,
-                                    um die Kokosmilch im Supermarkt
+                                    um die Kokosmilch im Supermarkt 
                                     zurückzugeben, muss jedoch jeder selber
                                     entscheiden...
                                 </Lösung>
