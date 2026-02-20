@@ -19,6 +19,7 @@ import Video from "next-video";
 import UmfangZylinder from "/videos/UmfangZylinder.mov";
 import Link from "next/link";
 import { IconExternalLink } from "@tabler/icons-react";
+import GeoGebraAppletSlider from "@/components/GeoGebraAppletSlider";
 
 export default function Zylinder() {
     return (
@@ -29,11 +30,9 @@ export default function Zylinder() {
                 Konservendosen – überall findet man diese Form. Deswegen ist es
                 für uns interessant, diese Form mathematisch beschreiben zu
                 können!
-                <Flex my={"md"}>
+                <Flex>
                     <Image
                         h={300}
-                        fit="contain"
-                        component={NextImage}
                         src="/dosen.jpg"
                         width={6000}
                         height={4000}
@@ -42,8 +41,6 @@ export default function Zylinder() {
                     />
                     <Image
                         h={300}
-                        fit="contain"
-                        component={NextImage}
                         src="/regler.jpg"
                         width={6000}
                         height={4000}
@@ -72,10 +69,7 @@ export default function Zylinder() {
                 <b>Schrägbild</b> eines Quaders. Das sollte ungefähr so aussehen
                 wie in dem Bild.
                 <Image
-                    my={"md"}
                     h={300}
-                    fit="contain"
-                    component={NextImage}
                     src="/QuaderSchrägbild@2x.png"
                     width={1802}
                     height={1200}
@@ -84,9 +78,9 @@ export default function Zylinder() {
                 />
                 Verdeckte Kanten werden also mit einer gestrichelten Linie
                 angedeutet, während sichtbare Kanten durchgezogen werden.
-                <Divider my={"md"} />
+                <Divider />
                 Versuchen wir uns mal an einem Schrägbild von einem Zylinder.
-                <List type="ordered" withPadding>
+                <List type="ordered" >
                     <ListItem>
                         Zuerst zeichnen wir einen Kreis als Grundfläche. Dieser
                         ist wegen der Perspektive etwas zusammengedrückt und
@@ -102,10 +96,7 @@ export default function Zylinder() {
                     <ListItem>Darauf setzen wir nun die Oberseite.</ListItem>
                 </List>
                 <Image
-                    my={"md"}
                     h={300}
-                    fit="contain"
-                    component={NextImage}
                     src="/ZylinderSchrägbildEntstehung@2x.png"
                     width={2402}
                     height={1200}
@@ -115,7 +106,7 @@ export default function Zylinder() {
             <CheckableBlockquote icon="frage" title="Aufgabe: Schrägbilder">
                 Zeichne die Zylinder mit Radius <InlineMath>r</InlineMath> und
                 Höhe <InlineMath>h</InlineMath> als Schrägbilder.
-                <List type="ordered" withPadding>
+                <List type="ordered" >
                     <ListItem>
                         <InlineMath>{String.raw`r = 1\,\text{cm} \quad h = 3\,\text{cm}`}</InlineMath>
                     </ListItem>
@@ -142,10 +133,7 @@ export default function Zylinder() {
                 >
                     <Lösung>
                         <Image
-                            my={"md"}
                             h={500}
-                            fit="contain"
-                            component={NextImage}
                             src="/ZylinderLösung@2x.png"
                             width={3600}
                             height={2000}
@@ -162,7 +150,6 @@ export default function Zylinder() {
                 anschauen!
                 <ImageCaption
                     h={300}
-                    fit="contain"
                     src="/Formel1Reifen.jpg"
                     width={846}
                     height={537}
@@ -255,10 +242,7 @@ export default function Zylinder() {
                         </BlockMath>
                     </CheckableBlockquote>
                     <Image
-                        my={"md"}
                         h={300}
-                        fit="contain"
-                        component={NextImage}
                         src="/durchmesserFluid.jpg"
                         width={6000}
                         height={4000}
@@ -281,10 +265,7 @@ export default function Zylinder() {
                     Dose bekommen. Nun benötigen wir noch die Höhe unseres
                     Zylinders.
                     <Image
-                        my={"md"}
                         h={300}
-                        fit="contain"
-                        component={NextImage}
                         src="/höheFluid.jpg"
                         width={6000}
                         height={4000}
@@ -313,7 +294,7 @@ export default function Zylinder() {
                     Berechne die Mantelfläche der Zylinder, welche Radius{" "}
                     <InlineMath>r</InlineMath> und Höhe{" "}
                     <InlineMath>h</InlineMath> haben.
-                    <List type="ordered" withPadding>
+                    <List type="ordered" >
                         <ListItem>
                             <InlineMath>{String.raw`r = 2\,\text{cm} \quad h = 1\,\text{cm}`}</InlineMath>
                         </ListItem>
@@ -339,7 +320,7 @@ export default function Zylinder() {
                         titleOrder={2}
                     >
                         <Lösung>
-                            <List type="ordered" withPadding>
+                            <List type="ordered" >
                                 <ListItem>
                                     <InlineMath>{String.raw`U = 4\pi\,\text{cm}\approx 12{,}57\,\text{cm}\quad A = 4\pi\,\text{cm}^2 \approx 12{,}57\,\text{cm}^2`}</InlineMath>
                                 </ListItem>
@@ -368,7 +349,7 @@ export default function Zylinder() {
                 betrachtet. Ein Zylinder hat aber (meistens) noch einen Boden
                 und einen Deckel. Für die Gesamtoberfläche müssen wir diese also
                 auch betrachten!
-                <Divider my={"md"} />
+                <Divider/>
                 Die Ober- und Unterseite eines Zylinders ist ein Kreis. Deswegen
                 können wir die Flächenformel eines Kreises verwenden!
                 <BlockMath>
@@ -389,7 +370,7 @@ export default function Zylinder() {
                     Berechne die Gesamtoberfläche der Zylinder, welche Radius{" "}
                     <InlineMath>r</InlineMath> und Höhe{" "}
                     <InlineMath>h</InlineMath> haben.
-                    <List type="ordered" withPadding>
+                    <List type="ordered" >
                         <ListItem>
                             <InlineMath>{String.raw`r = 3\,\text{cm} \quad h = 1{,}2\,\text{cm}`}</InlineMath>
                         </ListItem>
@@ -415,7 +396,7 @@ export default function Zylinder() {
                         titleOrder={2}
                     >
                         <Lösung>
-                            <List type="ordered" withPadding>
+                            <List type="ordered" >
                                 <ListItem>
                                     <BlockMath>{String.raw`
                                     \begin{aligned}
@@ -475,7 +456,7 @@ export default function Zylinder() {
                     </CheckableHeading>
                 </CheckableBlockquote>
             </CheckableHeading>
-            <CheckableHeading title="Volumen eines Zylinders">
+            <CheckableHeading title="Volumenberechnung">
                 Im Alltag begegnen wir Zylindern häufig im Vorratsschrank der
                 Eltern: Seien es passierte Tomaten, eine abgepackte Dose Chili
                 oder eine Portion Thunfisch. Dabei sind die meisten
@@ -495,7 +476,7 @@ export default function Zylinder() {
                     >
                         <Lösung>
                             <b>Vorteile:</b>
-                            <List>
+                            <List >
                                 <ListItem>
                                     Zylinder lassen sich gut stapeln.
                                 </ListItem>
@@ -513,14 +494,14 @@ export default function Zylinder() {
                                 </ListItem>
                             </List>
                             <b>Nachteile:</b>
-                            <List>
+                            <List >
                                 <ListItem>Können wegrollen.</ListItem>
                                 <ListItem>
                                     Sind nicht so gut stapelbar wie Quader als
                                     Packungen.
                                 </ListItem>
                             </List>
-                            <Divider my={"md"} />
+                            <Divider />
                             Das sind einige Gründe, die man mit den Augen sehen
                             kann. Der wichtigste Grund ist jedoch der: Der
                             Inhalt von Konservendosen wird bei der Produktion{" "}
@@ -543,7 +524,79 @@ export default function Zylinder() {
                         </Lösung>
                     </CheckableHeading>
                 </CheckableBlockquote>
+                <CheckableHeading title="Volumen mathematisch hergeleitet" titleOrder={2}>
+                <CheckableHeading
+                        title="Volumen eines Quaders"
+                        titleOrder={3}
+                    >
+                        Ein Zylinder ist nicht so unterschiedlich von einem Quader: Zylinder haben einen Kreis als Grundfläche, Quader ein Rechteck. Ansonsten sind beides Körper, bei denen man die Grundfläche „in die Höhe gezogen“ hat. Erinnern wir uns also erstmal an das Volumen eines Quaders zurück! Das können wir mit{" "}
+                        <InlineMath>A = a \cdot b</InlineMath> berechnen, wobei{" "}
+                        <InlineMath>a</InlineMath> und{" "}
+                        <InlineMath>b</InlineMath> die beiden Grundseiten
+                        bezeichnen.
+                        <Image
+                            h={300}
+                            src="/RechteckFläche@2x.png"
+                            width={1802}
+                            height={1200}
+                            alt="Ein Rechteck mit der Fläche A und den Seiten a und b."
+                        />
+                        Das Volumen eines Quaders ergibt sich also durch das{" "}
+                        <b>„hochziehen“</b> dieser Fläche in den Raum. Schau es
+                        dir mal an diesem Beispiel hier an, wo ein Quader eine
+                        Grundfläche von 3&nbsp;mal 2&thinsp;cm und
+                        eine Höhe von 2&thinsp;cm hat.
+                        <GeoGebraAppletSlider
+                            materialId="x5z6yk9z"
+                            appName="3d"
+                            width={800}
+                            height={500}
+                            coord3d={{
+                                xmin: -4,
+                                xmax: 6,
+                                ymin: 0,
+                                ymax: 5,
+                                zmin: -3,
+                                zmax: 4,
+                            }}
+                            sliderLabel="Höhe"
+                            sliderWidth={400}
+                            sliderMin={0}
+                            sliderMax={2}
+                            sliderStep={1}
+                            sliderInitialValue={2}
+                            sliderMarks={[
+                                { value: 0, label: "0" },
+                                { value: 1, label: "1" },
+                                { value: 2, label: "2" },
+                            ]}
+                        />
+                        Füllen wir den Quader mit Würfeln aus, die ein Volumen
+                        von 1&thinsp;cm<sup>3</sup> haben, kann man gut
+                        nachvollziehen, dass das Volumen vom gesamten Quader
+                        12&thinsp;cm<sup>3</sup> sein muss. 6 Würfel sind unten,
+                        weitere 6 sind oben. Das ergibt sich auch aus der
+                        Berechnung von Grundfläche mal Höhe:
+                        <BlockMath>{String.raw`
+                            \begin{aligned}
+                            \textcolor{blue}{A} &= 3 \, \text{cm} \cdot 2 \, \text{cm} \\
+                            &= 6\, \text{cm}^2 \\
+                            \textcolor{green}{V} &=\textcolor{blue}{A} \cdot h \\
+                            &= 6 \, \text{cm}^2 \cdot 2\,\text{cm} \\
+                            &= 12 \, \text{cm}^3
+                            \end{aligned}
+                        `}</BlockMath>
+                        Können wir diese Formel eventuell auch bei Zylindern
+                        anwenden? Gilt <InlineMath>V = A \cdot h</InlineMath>{" "}
+                        hier immer? Testen wir es mal!
+                    </CheckableHeading>
+                    <CheckableHeading title="Volumen eines Zylinders" titleOrder={3}>
+                        Wir verfahren nach dem gleichen Prinzip wie bei einem Quader. Wir berechnen zuerst den Flächeninhalt der Grundfläche und „ziehen“ ihn dann in die Höhe. Wir multiplizieren dazu den Flächeninhalt mit der Höhe.
+                        
+                    </CheckableHeading>
+                </CheckableHeading>
             </CheckableHeading>
+
         </div>
     );
 }

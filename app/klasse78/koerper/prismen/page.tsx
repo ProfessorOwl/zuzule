@@ -35,10 +35,7 @@ export default function Prismen() {
                 überhaupt immer dreieckig?
             </SuspenseCheckableHeading>
             <Image
-                my={"md"}
                 h={400}
-                fit="contain"
-                component={NextImage}
                 src="/prisma1.jpg"
                 width={3499}
                 height={5249}
@@ -74,10 +71,7 @@ export default function Prismen() {
                 <b>Schrägbild</b> eines Quaders. Das sollte ungefähr so aussehen
                 wie in dem Bild.
                 <Image
-                    my={"md"}
                     h={300}
-                    fit="contain"
-                    component={NextImage}
                     src="/QuaderSchrägbild@2x.png"
                     width={1802}
                     height={1200}
@@ -85,7 +79,7 @@ export default function Prismen() {
                 />
                 Verdeckte Kanten werden also mit einer gestrichelten Linie
                 angedeutet, während sichtbare Kanten durchgezogen werden.
-                <Divider my={"md"} />
+                <Divider/>
                 Zeichnen wir mal ein Schrägbild von dem dreieckigen Prisma oben.
                 <List type="ordered" withPadding>
                     <ListItem>
@@ -107,10 +101,7 @@ export default function Prismen() {
                     </ListItem>
                 </List>
                 <Image
-                    my={"md"}
                     h={300}
-                    fit="contain"
-                    component={NextImage}
                     src="/PrismaSchrägbildEntstehung@2x.png"
                     width={2402}
                     height={1200}
@@ -121,10 +112,7 @@ export default function Prismen() {
             <CheckableBlockquote icon="frage" title="Aufgabe: Schrägbilder">
                 Vervollständige die folgenden Schrägbilder in deinem Heft:
                 <Image
-                    my={"md"}
                     h={300}
-                    fit="contain"
-                    component={NextImage}
                     src="/SchrägbilderVervollständigenAufgabe@2x.png"
                     width={3600}
                     height={1200}
@@ -137,10 +125,7 @@ export default function Prismen() {
                 >
                     <Lösung>
                         <Image
-                            my={"md"}
                             h={300}
-                            fit="contain"
-                            component={NextImage}
                             src="/SchrägbilderVervollständigenLösung@2x.png"
                             width={3600}
                             height={1200}
@@ -156,20 +141,14 @@ export default function Prismen() {
                 Spielwürfel zu basteln?
                 <SimpleGrid cols={2} my={"md"}>
                     <Image
-                        my={"md"}
                         h={300}
-                        fit="contain"
-                        component={NextImage}
                         src="/NetzWürfel.jpg"
                         width={6000}
                         height={4000}
                         alt="Ein Würfelnetz, gezeichnet auf Papier."
                     />
                     <Image
-                        my={"md"}
                         h={300}
-                        fit="contain"
-                        component={NextImage}
                         src="/WürfelPapier.jpg"
                         width={6000}
                         height={4000}
@@ -185,20 +164,14 @@ export default function Prismen() {
                 heißt es: Ausschneiden, Falten und mit Klebeband zusammenkleben!
                 <SimpleGrid cols={2} my={"md"}>
                     <Image
-                        my={"md"}
                         h={300}
-                        fit="contain"
-                        component={NextImage}
                         src="/NetzPrisma.jpg"
                         width={6000}
                         height={4000}
                         alt="Das Netz eines dreieckigen Prismas, gezeichnet auf Papier."
                     />
                     <Image
-                        my={"md"}
                         h={300}
-                        fit="contain"
-                        component={NextImage}
                         src="/PrismaPapier.jpg"
                         width={6000}
                         height={4000}
@@ -215,10 +188,7 @@ export default function Prismen() {
                 Mantelfläche ist dann die Fläche, die durch die Höhe des Prismas
                 dazukommt.
                 <Image
-                    my={"md"}
                     h={400}
-                    fit="contain"
-                    component={NextImage}
                     src="/PrismaNetzFläche@2x.png"
                     width={3200}
                     height={2000}
@@ -240,10 +210,7 @@ export default function Prismen() {
             >
                 Berechne den Oberflächeninhalt der Prismen:
                 <Image
-                    my={"md"}
                     h={300}
-                    fit="contain"
-                    component={NextImage}
                     src="/PrismaOberflächeninhalt@2x.png"
                     width={3602}
                     height={1200}
@@ -310,10 +277,7 @@ export default function Prismen() {
                 des Prismas, die anderen dem <b>Umfang</b> der Grundfläche. Das
                 macht die Berechnung des Oberflächeninhalts deutlich einfacher!
                 <Image
-                    my={"md"}
                     h={400}
-                    fit="contain"
-                    component={NextImage}
                     src="/PrismaNetzFlächeRechteck@2x.png"
                     width={3200}
                     height={2000}
@@ -412,10 +376,7 @@ export default function Prismen() {
                         <InlineMath>b</InlineMath> die beiden Grundseiten
                         bezeichnen.
                         <Image
-                            my={"md"}
                             h={300}
-                            fit="contain"
-                            component={NextImage}
                             src="/RechteckFläche@2x.png"
                             width={1802}
                             height={1200}
@@ -424,8 +385,8 @@ export default function Prismen() {
                         Das Volumen eines Quaders ergibt sich nun durch das{" "}
                         <b>„hochziehen“</b> dieser Fläche in den Raum. Schau es
                         dir mal an diesem Beispiel hier an, wo ein Quader eine
-                        Grundfläche von 3 mal 2&thinsp;cm<sup>2</sup> hat und
-                        eine Höhe von 2&thinsp;cm.
+                        Grundfläche von 3&nbsp;mal 2&thinsp;cm und
+                        eine Höhe von 2&thinsp;cm hat.
                         <GeoGebraAppletSlider
                             materialId="x5z6yk9z"
                             appName="3d"
@@ -466,7 +427,7 @@ export default function Prismen() {
                             &= 12 \, \text{cm}^3
                             \end{aligned}
                         `}</BlockMath>
-                        Können wir diese Formel eventuell immer bei Prismen
+                        Können wir diese Formel eventuell auch bei Prismen
                         anwenden? Gilt <InlineMath>V = A \cdot h</InlineMath>{" "}
                         hier immer? Testen wir es mal!
                     </CheckableHeading>
@@ -482,10 +443,7 @@ export default function Prismen() {
                         berechnen. Im Bild unten findest du dazu nochmal eine
                         Herleitung.
                         <Image
-                            my={"md"}
                             h={300}
-                            fit="contain"
-                            component={NextImage}
                             src="/DreieckFläche@2x.png"
                             width={2400}
                             height={1200}
@@ -511,10 +469,7 @@ export default function Prismen() {
                             \end{aligned}
                         `}</BlockMath>
                         <Image
-                            my={"md"}
                             h={300}
-                            fit="contain"
-                            component={NextImage}
                             src="/DreieckigesPrismaVolumen@2x.png"
                             width={2400}
                             height={1200}
