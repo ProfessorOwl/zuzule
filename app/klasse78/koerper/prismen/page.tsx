@@ -79,7 +79,7 @@ export default function Prismen() {
                 />
                 Verdeckte Kanten werden also mit einer gestrichelten Linie
                 angedeutet, während sichtbare Kanten durchgezogen werden.
-                <Divider/>
+                <Divider />
                 Zeichnen wir mal ein Schrägbild von dem dreieckigen Prisma oben.
                 <List type="ordered" withPadding>
                     <ListItem>
@@ -385,8 +385,8 @@ export default function Prismen() {
                         Das Volumen eines Quaders ergibt sich nun durch das{" "}
                         <b>„hochziehen“</b> dieser Fläche in den Raum. Schau es
                         dir mal an diesem Beispiel hier an, wo ein Quader eine
-                        Grundfläche von 3&nbsp;mal 2&thinsp;cm und
-                        eine Höhe von 2&thinsp;cm hat.
+                        Grundfläche von 3&nbsp;mal 2&thinsp;cm und eine Höhe von
+                        2&thinsp;cm hat.
                         <GeoGebraAppletSlider
                             materialId="x5z6yk9z"
                             appName="3d"

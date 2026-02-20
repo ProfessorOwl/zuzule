@@ -9,6 +9,8 @@ import {
     Image,
     List,
     ListItem,
+    Space,
+    Spoiler,
     ThemeIcon,
 } from "@mantine/core";
 import NextImage from "next/image";
@@ -80,7 +82,7 @@ export default function Zylinder() {
                 angedeutet, während sichtbare Kanten durchgezogen werden.
                 <Divider />
                 Versuchen wir uns mal an einem Schrägbild von einem Zylinder.
-                <List type="ordered" >
+                <List type="ordered">
                     <ListItem>
                         Zuerst zeichnen wir einen Kreis als Grundfläche. Dieser
                         ist wegen der Perspektive etwas zusammengedrückt und
@@ -106,7 +108,7 @@ export default function Zylinder() {
             <CheckableBlockquote icon="frage" title="Aufgabe: Schrägbilder">
                 Zeichne die Zylinder mit Radius <InlineMath>r</InlineMath> und
                 Höhe <InlineMath>h</InlineMath> als Schrägbilder.
-                <List type="ordered" >
+                <List type="ordered">
                     <ListItem>
                         <InlineMath>{String.raw`r = 1\,\text{cm} \quad h = 3\,\text{cm}`}</InlineMath>
                     </ListItem>
@@ -294,7 +296,7 @@ export default function Zylinder() {
                     Berechne die Mantelfläche der Zylinder, welche Radius{" "}
                     <InlineMath>r</InlineMath> und Höhe{" "}
                     <InlineMath>h</InlineMath> haben.
-                    <List type="ordered" >
+                    <List type="ordered">
                         <ListItem>
                             <InlineMath>{String.raw`r = 2\,\text{cm} \quad h = 1\,\text{cm}`}</InlineMath>
                         </ListItem>
@@ -320,7 +322,7 @@ export default function Zylinder() {
                         titleOrder={2}
                     >
                         <Lösung>
-                            <List type="ordered" >
+                            <List type="ordered">
                                 <ListItem>
                                     <InlineMath>{String.raw`U = 4\pi\,\text{cm}\approx 12{,}57\,\text{cm}\quad A = 4\pi\,\text{cm}^2 \approx 12{,}57\,\text{cm}^2`}</InlineMath>
                                 </ListItem>
@@ -349,7 +351,7 @@ export default function Zylinder() {
                 betrachtet. Ein Zylinder hat aber (meistens) noch einen Boden
                 und einen Deckel. Für die Gesamtoberfläche müssen wir diese also
                 auch betrachten!
-                <Divider/>
+                <Divider />
                 Die Ober- und Unterseite eines Zylinders ist ein Kreis. Deswegen
                 können wir die Flächenformel eines Kreises verwenden!
                 <BlockMath>
@@ -370,7 +372,7 @@ export default function Zylinder() {
                     Berechne die Gesamtoberfläche der Zylinder, welche Radius{" "}
                     <InlineMath>r</InlineMath> und Höhe{" "}
                     <InlineMath>h</InlineMath> haben.
-                    <List type="ordered" >
+                    <List type="ordered">
                         <ListItem>
                             <InlineMath>{String.raw`r = 3\,\text{cm} \quad h = 1{,}2\,\text{cm}`}</InlineMath>
                         </ListItem>
@@ -396,7 +398,7 @@ export default function Zylinder() {
                         titleOrder={2}
                     >
                         <Lösung>
-                            <List type="ordered" >
+                            <List type="ordered">
                                 <ListItem>
                                     <BlockMath>{String.raw`
                                     \begin{aligned}
@@ -476,7 +478,7 @@ export default function Zylinder() {
                     >
                         <Lösung>
                             <b>Vorteile:</b>
-                            <List >
+                            <List>
                                 <ListItem>
                                     Zylinder lassen sich gut stapeln.
                                 </ListItem>
@@ -494,7 +496,7 @@ export default function Zylinder() {
                                 </ListItem>
                             </List>
                             <b>Nachteile:</b>
-                            <List >
+                            <List>
                                 <ListItem>Können wegrollen.</ListItem>
                                 <ListItem>
                                     Sind nicht so gut stapelbar wie Quader als
@@ -524,12 +526,20 @@ export default function Zylinder() {
                         </Lösung>
                     </CheckableHeading>
                 </CheckableBlockquote>
-                <CheckableHeading title="Volumen mathematisch hergeleitet" titleOrder={2}>
                 <CheckableHeading
+                    title="Volumen mathematisch hergeleitet"
+                    titleOrder={2}
+                >
+                    <CheckableHeading
                         title="Volumen eines Quaders"
                         titleOrder={3}
                     >
-                        Ein Zylinder ist nicht so unterschiedlich von einem Quader: Zylinder haben einen Kreis als Grundfläche, Quader ein Rechteck. Ansonsten sind beides Körper, bei denen man die Grundfläche „in die Höhe gezogen“ hat. Erinnern wir uns also erstmal an das Volumen eines Quaders zurück! Das können wir mit{" "}
+                        Ein Zylinder ist nicht so unterschiedlich von einem
+                        Quader: Zylinder haben einen Kreis als Grundfläche,
+                        Quader ein Rechteck. Ansonsten sind beides Körper, bei
+                        denen man die Grundfläche „in die Höhe gezogen“ hat.
+                        Erinnern wir uns also erstmal an das Volumen eines
+                        Quaders zurück! Das können wir mit{" "}
                         <InlineMath>A = a \cdot b</InlineMath> berechnen, wobei{" "}
                         <InlineMath>a</InlineMath> und{" "}
                         <InlineMath>b</InlineMath> die beiden Grundseiten
@@ -544,8 +554,8 @@ export default function Zylinder() {
                         Das Volumen eines Quaders ergibt sich also durch das{" "}
                         <b>„hochziehen“</b> dieser Fläche in den Raum. Schau es
                         dir mal an diesem Beispiel hier an, wo ein Quader eine
-                        Grundfläche von 3&nbsp;mal 2&thinsp;cm und
-                        eine Höhe von 2&thinsp;cm hat.
+                        Grundfläche von 3&nbsp;mal 2&thinsp;cm und eine Höhe von
+                        2&thinsp;cm hat.
                         <GeoGebraAppletSlider
                             materialId="x5z6yk9z"
                             appName="3d"
@@ -590,13 +600,196 @@ export default function Zylinder() {
                         anwenden? Gilt <InlineMath>V = A \cdot h</InlineMath>{" "}
                         hier immer? Testen wir es mal!
                     </CheckableHeading>
-                    <CheckableHeading title="Volumen eines Zylinders" titleOrder={3}>
-                        Wir verfahren nach dem gleichen Prinzip wie bei einem Quader. Wir berechnen zuerst den Flächeninhalt der Grundfläche und „ziehen“ ihn dann in die Höhe. Wir multiplizieren dazu den Flächeninhalt mit der Höhe.
-                        
+                    <CheckableHeading
+                        title="Volumen eines Zylinders"
+                        titleOrder={3}
+                    >
+                        Wir verfahren nach dem gleichen Prinzip wie bei einem
+                        Quader. Wir berechnen zuerst den Flächeninhalt der
+                        Grundfläche und „ziehen“ ihn dann in die Höhe. Wir
+                        multiplizieren dazu den Flächeninhalt mit der Höhe. Als
+                        Objekt suchen wir uns eine beliebige Dose aus dem
+                        Vorratsschrank aus z.B. eine Dose Kokosmilch. Sie hat
+                        einen Durchmesser von 7,5&thinsp;cm und eine Höhe von
+                        11&thinsp;cm.
+                        <Flex>
+                            <Image
+                                h={300}
+                                src="/doseKokosDurchmesser.jpg"
+                                width={6000}
+                                height={4000}
+                                sizes="500px"
+                                alt="Ein Lineal liegt unter einer Konservendose. Ablesbar ist ein Durchmesser von 7,5 cm."
+                            />
+                            <Image
+                                h={300}
+                                src="/doseKokosHöhe.jpg"
+                                width={6000}
+                                height={4000}
+                                sizes="500px"
+                                alt="Ein Lineal wird neben eine Konservendose gehalten. Ablesbar ist eine Höhe von 11 cm."
+                            />
+                        </Flex>
+                        Wir berechnen zuerst den Flächeninhalt mit der
+                        Flächenformel für einen Kreis:
+                        <BlockMath>
+                            {String.raw`
+                            \begin{aligned}
+                            A &= \pi \cdot r^2 \\
+                                &= \pi \cdot \left(\frac{7{,}5\,\text{cm}}{2}\right)^2\\
+                                &\approx 44{,}18\,\text{cm}^2
+                            \end{aligned}
+                            `}
+                        </BlockMath>
+                        Das Volumen berechnen wir nun nach dem gleichen Prinzip
+                        wie beim Quader, also:
+                        <BlockMath>
+                            {String.raw`
+                            \begin{aligned}
+                            V &= A \cdot h \\
+                                &= 44{,}18\,\text{cm}^2 \cdot  11\,\text{cm} \\
+                                &\approx 485{,}97\,\text{cm}^3
+                            \end{aligned}
+                            `}
+                        </BlockMath>
+                        Das ist etwas mehr, als die 400&thinsp;mL, die
+                        eigentlich als Füllmenge auf der Dose stehen. Wir dürfen
+                        aber nicht vergessen, dass wir die Dose von außen
+                        gemessen haben und diese nie komplett ausgefüllt werden.
+                        In der Dose selbst ist also etwas weniger Platz, und es
+                        wird nur ca. 400&thinsp;mL Kokosmilch vorhanden sein.
+                        <CheckableBlockquote
+                            icon="frage"
+                            title="Aufgabe: Stimmt die Mengenangabe?"
+                        >
+                            Ein Hersteller kann viel auf die Dose schreiben – ob
+                            es aber wirklich stimmt, ist eine andere Frage.
+                            Damit wir nicht um unser Geld gebracht werden,
+                            messen wir das mal nach. Bestimme die tatsächliche
+                            Füllmenge mittels der Formel{" "}
+                            <InlineMath>V = A \cdot h</InlineMath>. Versuche die
+                            Maße möglichst genau abzulesen! Als Füllmenge ist
+                            bei beiden Dosen 400&thinsp;mL angegeben.
+                            <Space />
+                            <List type="ordered">
+                                <ListItem>
+                                    <b>Dose mit Kokosmilch</b>
+                                    <Flex>
+                                        <Image
+                                            h={275}
+                                            src="/innenKokos.jpg"
+                                            width={6000}
+                                            height={4000}
+                                            sizes="500px"
+                                            alt="Ein Lineal liegt über der Öffnung einer Konservendose mit Kokosmilch. Ablesbar ist ein Durchmesser von 7,3 cm."
+                                        />
+                                        <Image
+                                            h={275}
+                                            src="/füllstandKokos.jpg"
+                                            width={6000}
+                                            height={4000}
+                                            sizes="500px"
+                                            alt="Ein Stäbchen, das in die Kokosmilch getunkt wurde, liegt neben einem Lineal. Es wurde ca. 9,5 cm tief hineingetaucht."
+                                        />
+                                    </Flex>
+                                    <Spoiler
+                                        maxHeight={0}
+                                        showLabel="Maße einblenden"
+                                        hideLabel="Maße ausblenden"
+                                    >
+                                        Innerer Durchmesser: 7,3&thinsp;cm.
+                                        Bedeckter Bereich auf Stäbchen:
+                                        9,5&thinsp;cm{" "}
+                                    </Spoiler>
+                                </ListItem>
+                                <Space />
+                                <ListItem>
+                                    <b>Dose mit gehackten Tomaten</b>
+                                    <Flex>
+                                        <Image
+                                            h={275}
+                                            src="/innenTomate.jpg"
+                                            width={6000}
+                                            height={4000}
+                                            sizes="500px"
+                                            alt="Ein Lineal liegt über der Öffnung einer Konservendose mit gehackten Tomaten. Ablesbar ist ein Durchmesser von 7,3 cm."
+                                        />
+                                        <Image
+                                            h={275}
+                                            src="/füllstandTomate.jpg"
+                                            width={6000}
+                                            height={4000}
+                                            sizes="500px"
+                                            alt="Ein Stäbchen, das in die gehackten Tomaten getunkt wurde, liegt neben einem Lineal. Es wurde ca. 9,7 cm tief hineingetaucht."
+                                        />
+                                    </Flex>
+                                    <Spoiler
+                                        maxHeight={0}
+                                        showLabel="Maße einblenden"
+                                        hideLabel="Maße ausblenden"
+                                    >
+                                        Innerer Durchmesser: 7,3&thinsp;cm.
+                                        Bedeckter Bereich auf Stäbchen:
+                                        9,7&thinsp;cm{" "}
+                                    </Spoiler>
+                                </ListItem>
+                                <Space />
+                                <ListItem>
+                                    Suche bei dir Zuhause nach einer Dose, die
+                                    vielleicht eine andere Größe und Füllmenge
+                                    hat. Stimmt die Füllmenge mit deiner Messung
+                                    überein?
+                                </ListItem>
+                            </List>
+                            <CheckableHeading
+                                title="Lösung"
+                                titleOrder={2}
+                                id="lösung-mengenangabe"
+                            >
+                                <Lösung>
+                                    <b>Dose mit Kokosmilch</b>
+                                    <BlockMath>
+                                        {String.raw`
+                                        \begin{aligned}
+                                        A &= \pi \cdot r^2 \\
+                                            &= \pi \cdot \left(\frac{7{,}3\,\text{cm}}{2}\right)^2 \\
+                                            &\approx 41{,}85\,\text{cm}^2 \\
+                                        V &= A \cdot h \\
+                                            &= 42{,}31\,\text{cm}^2 \cdot 9,5\,\text{cm} \\
+                                            &\approx 397{,}61\,\text{cm}^3
+                                        \end{aligned}
+                                        `}
+                                    </BlockMath>
+                                    <Space />
+                                    <b>Dose mit gehackten Tomaten</b>
+                                    <BlockMath>
+                                        {String.raw`
+                                        \begin{aligned}
+                                        A &= \pi \cdot r^2 \\
+                                            &= \pi \cdot \left(\frac{7{,}3\,\text{cm}}{2}\right)^2 \\
+                                            &\approx 41{,}85\,\text{cm}^2 \\
+                                        V &= A \cdot h \\
+                                            &= 42{,}31\,\text{cm}^2 \cdot 9,7\,\text{cm} \\
+                                            &\approx 405{,}98\,\text{cm}^3
+                                        \end{aligned}
+                                        `}
+                                    </BlockMath>
+                                    Gehen wir davon aus, dass wir richtig
+                                    gemessen haben, so sind in der Kokosmilch{" "}
+                                    <InlineMath>{String.raw`400\,\text{mL} - 397{,}61\,\text{mL} = 2{,}39\,\text{mL}`}</InlineMath>{" "}
+                                    zu wenig drin, während uns einem bei den
+                                    gehackten Tomaten{" "}
+                                    <InlineMath>{String.raw`405{,}98\,\text{mL} - 400\,\text{mL} = 5{,}98\,\text{mL}`}</InlineMath>{" "}
+                                    geschenkt werden. Ob das als Anlass genügt,
+                                    um die Kokosmilch im Supermarkt
+                                    zurückzugeben, muss jedoch jeder selber
+                                    entscheiden...
+                                </Lösung>
+                            </CheckableHeading>
+                        </CheckableBlockquote>
                     </CheckableHeading>
                 </CheckableHeading>
             </CheckableHeading>
-
         </div>
     );
 }

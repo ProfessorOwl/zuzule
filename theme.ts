@@ -1,6 +1,6 @@
 "use client";
 
-import { createTheme, Divider, Image, List } from "@mantine/core";
+import { createTheme, Divider, Image, List, Space } from "@mantine/core";
 import NextImage from "next/image";
 export const theme = createTheme({
     components: {
@@ -12,15 +12,20 @@ export const theme = createTheme({
         List: List.extend({
             defaultProps: {
                 withPadding: true,
-            }
+            },
         }),
         Image: Image.extend({
             defaultProps: {
                 my: "md",
                 fit: "contain",
                 component: NextImage,
-            }
-        })
+            },
+        }),
+        Space: Space.extend({
+            defaultProps: {
+                my: "md",
+            },
+        }),
     },
     fontSizes: {
         xs: "12pt",
@@ -37,5 +42,4 @@ export const theme = createTheme({
         lg: "1.8",
         xl: "1.9",
     },
-
 });

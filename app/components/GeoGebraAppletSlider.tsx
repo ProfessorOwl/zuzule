@@ -98,14 +98,7 @@ export default function GeoGebraAppletSlider({
             if (container) container.innerHTML = "";
             apiRef.current = null;
         };
-    }, [
-        materialId,
-        width,
-        height,
-        appName,
-        extraParams,
-        disableZoom,
-    ]);
+    }, [materialId, width, height, appName, extraParams, disableZoom]);
 
     // Apply coordinate system when api becomes available or when coords change.
     useEffect(() => {
@@ -123,12 +116,7 @@ export default function GeoGebraAppletSlider({
                 coord3d.yVertical ?? false,
             );
         } else if (coord) {
-            api.setCoordSystem(
-                coord.xmin,
-                coord.xmax,
-                coord.ymin,
-                coord.ymax,
-            );
+            api.setCoordSystem(coord.xmin, coord.xmax, coord.ymin, coord.ymax);
         }
     }, [coord, coord3d]);
 
