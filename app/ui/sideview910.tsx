@@ -48,32 +48,32 @@ const data: NavItem[] = [
             },
         ],
     },
-    {
-        label: "Wachstumsprozesse",
-        icon: IconTrendingUp,
-        children: [
-            {
-                link: "/klasse910/wachstumsprozesse/einfuehrung",
-                label: "Einführung",
-                icon: IconInfoCircle,
-            },
-            {
-                link: "/klasse910/wachstumsprozesse/quadratische_funktionen",
-                label: "Quadratische Funktionen",
-                icon: Parabola,
-            },
-            {
-                link: "/klasse910/wachstumsprozesse/potenzfunktionen",
-                label: "Potenzfunktionen",
-                icon: Cubed,
-            },
-            {
-                link: "/klasse910/wachstumsprozesse/exponentialfunktionen",
-                label: "Exponentialfunktionen",
-                icon: Exponential,
-            },
-        ],
-    },
+    // {
+    //     label: "Wachstumsprozesse",
+    //     icon: IconTrendingUp,
+    //     children: [
+    //         {
+    //             link: "/klasse910/wachstumsprozesse/einfuehrung",
+    //             label: "Einführung",
+    //             icon: IconInfoCircle,
+    //         },
+    //         {
+    //             link: "/klasse910/wachstumsprozesse/quadratische_funktionen",
+    //             label: "Quadratische Funktionen",
+    //             icon: Parabola,
+    //         },
+    //         {
+    //             link: "/klasse910/wachstumsprozesse/potenzfunktionen",
+    //             label: "Potenzfunktionen",
+    //             icon: Cubed,
+    //         },
+    //         {
+    //             link: "/klasse910/wachstumsprozesse/exponentialfunktionen",
+    //             label: "Exponentialfunktionen",
+    //             icon: Exponential,
+    //         },
+    //     ],
+    // },
 ];
 
 export function Sideview910() {

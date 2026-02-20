@@ -79,28 +79,28 @@ const data: NavItem[] = [
             },
         ],
     },
-    {
-        link: "/klasse78/wachstumsprozesse",
-        label: "Wachstumsprozesse",
-        icon: IconTrendingUp,
-        children: [
-            {
-                link: "/klasse78/wachstumsprozesse/einfuehrung",
-                label: "Einführung",
-                icon: IconInfoCircle,
-            },
-            {
-                link: "/klasse78/wachstumsprozesse/anti-proportionale_funktionen",
-                label: "(Anti-)Proportionale Funktionen",
-                icon: Proportional,
-            },
-            {
-                link: "/klasse78/wachstumsprozesse/lineare_funktionen",
-                label: "Lineare Funktionen",
-                icon: Linear,
-            },
-        ],
-    },
+    // {
+    //     link: "/klasse78/wachstumsprozesse",
+    //     label: "Wachstumsprozesse",
+    //     icon: IconTrendingUp,
+    //     children: [
+    //         {
+    //             link: "/klasse78/wachstumsprozesse/einfuehrung",
+    //             label: "Einführung",
+    //             icon: IconInfoCircle,
+    //         },
+    //         {
+    //             link: "/klasse78/wachstumsprozesse/anti-proportionale_funktionen",
+    //             label: "(Anti-)Proportionale Funktionen",
+    //             icon: Proportional,
+    //         },
+    //         {
+    //             link: "/klasse78/wachstumsprozesse/lineare_funktionen",
+    //             label: "Lineare Funktionen",
+    //             icon: Linear,
+    //         },
+    //     ],
+    // },
 ];
 
 export function Sideview78() {
@@ -114,7 +114,6 @@ export function Sideview78() {
                         className={classes.link}
                         style={{
                             paddingLeft: `${level * 16}px`,
-                            fontSize: "var(--mantine-font-size-xs)",
                         }}
                     >
                         {item.icon && (
@@ -141,7 +140,6 @@ export function Sideview78() {
                     key={item.label}
                     style={{
                         paddingLeft: `${level * 16}px`,
-                        fontSize: "var(--mantine-font-size-xs)",
                     }}
                 >
                     {item.icon && (

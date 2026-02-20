@@ -1,8 +1,9 @@
 "use client";
 
 import { usePathname } from "next/navigation";
-import { Burger, Container, Group } from "@mantine/core";
+import { Burger, Container, Group, Stack } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
+import { useRef, useEffect } from "react";
 import classes from "./header.module.css";
 import NextImage from "next/image";
 import { Image } from "@mantine/core";
@@ -16,8 +17,25 @@ const links = [
 ];
 
 export function HeaderSimple() {
-    const [opened, { toggle }] = useDisclosure(false);
+    const [opened, { toggle, close }] = useDisclosure(false);
     const pathname = usePathname();
+    const headerRef = useRef<HTMLElement>(null);
+
+    useEffect(() => {
+        const handleClickOutside = (event: MouseEvent) => {
+            if (headerRef.current && !headerRef.current.contains(event.target as Node)) {
+                close();
+            }
+        };
+
+        if (opened) {
+            document.addEventListener("mousedown", handleClickOutside);
+        }
+
+        return () => {
+            document.removeEventListener("mousedown", handleClickOutside);
+        };
+    }, [opened, close]);
 
     const items = links.map((link) => (
         <Link
@@ -25,17 +43,17 @@ export function HeaderSimple() {
             href={link.link}
             className={classes.link}
             data-active={pathname.startsWith(link.link) || undefined}
+            onClick={toggle}
         >
             {link.label}
         </Link>
     ));
 
     return (
-        <header className={classes.header}>
+        <header className={classes.header} ref={headerRef}>
             <Container size="md" className={classes.inner}>
                 <Link href="/ueber" className={classes.mainlink}>
                     <Group>
-                        {" "}
                         <Image
                             component={NextImage}
                             src="/Logo.svg"
@@ -45,21 +63,30 @@ export function HeaderSimple() {
                             fill={false}
                             h={40}
                             w={"auto"}
-                        />{" "}
+                        />
                     </Group>
                 </Link>
 
-                <Group gap={5} visibleFrom="xs">
+                <Group gap={5} visibleFrom="md">
                     {items}
                 </Group>
 
                 <Burger
                     opened={opened}
                     onClick={toggle}
-                    hiddenFrom="xs"
+                    hiddenFrom="md"
                     size="sm"
                 />
             </Container>
+
+            {opened && (
+                <Container size="lg" className={classes.dropdown}>
+                    <Stack gap={5}>
+                        {items}
+                    </Stack>
+                </Container>
+            )}
+
         </header>
     );
 }

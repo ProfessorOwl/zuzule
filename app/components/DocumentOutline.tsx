@@ -135,7 +135,7 @@ export function DocumentOutline() {
                                 style={{
                                     color: isChecked
                                         ? "var(--mantine-color-gray-6)"
-                                        : "var(--mantine-color-blue-6)",
+                                        : "var(--mantine-primary-color-6)",
                                     textDecoration: isChecked
                                         ? "line-through"
                                         : "none",
@@ -149,14 +149,14 @@ export function DocumentOutline() {
                                         e.currentTarget as HTMLElement
                                     ).style.color = isChecked
                                         ? "var(--mantine-color-gray-7)"
-                                        : "var(--mantine-color-blue-8)";
+                                        : "var(--mantine-primary-color-8)";
                                 }}
                                 onMouseLeave={(e) => {
                                     (
                                         e.currentTarget as HTMLElement
                                     ).style.color = isChecked
                                         ? "var(--mantine-color-gray-6)"
-                                        : "var(--mantine-color-blue-6)";
+                                        : "var(--mantine-primary-color-6)";
                                 }}
                                 onClick={() => handleScroll(heading.id)}
                             >

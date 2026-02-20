@@ -95,7 +95,9 @@ export default function GeoGebraAppletSlider({
         if (container) applet.inject(container);
 
         return () => {
-            if (container) container.innerHTML = "";
+            if (container && container.parentNode) {
+                container.innerHTML = "";
+            }
             apiRef.current = null;
         };
     }, [materialId, width, height, appName, extraParams, disableZoom]);

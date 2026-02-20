@@ -16,8 +16,8 @@
     display: flex;
     align-items: center;
     text-decoration: none;
-    font-size: var(--mantine-font-size-sm);
-    color: light-dark(var(--mantine-color-gray-7), var(--mantine-color-dark-1));
+    font-size: var(--mantine-font-size-xs);
+    color: light-dark(var(--mantine-color-gray-7), var(--mantine-color-dark-0));
     padding: var(--mantine-spacing-xs) 0;
     border-radius: var(--mantine-radius-sm);
     font-weight: 500;
@@ -46,11 +46,11 @@
     &[data-active] {
         &,
         &:hover {
-            background-color: var(--mantine-color-blue-light);
-            color: var(--mantine-color-blue-light-color);
+            background-color: var(--mantine-primary-color-light);
+            color: var(--mantine-primary-color-light-color);
 
             .linkIcon {
-                color: var(--mantine-color-blue-light-color);
+                color: var(--mantine-primary-color-light-color);
             }
         }
     }
