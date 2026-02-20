@@ -3,21 +3,16 @@
 import { usePathname } from "next/navigation";
 import { Burger, Container, Group, Stack } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
-import { useRef, useEffect } from "react";
+import { useRef, useEffect, useState } from "react";
 import classes from "./header.module.css";
 import NextImage from "next/image";
 import { Image } from "@mantine/core";
 import Link from "next/link";
-import Logo from "../../public/Logo.svg";
-
-const links = [
-    { link: "/klasse78", label: "Klassen 7+8" },
-    { link: "/klasse910", label: "Klassen 9+10" },
-    { link: "/ueber", label: "Über das Projekt" },
-];
+import { navData78, navData910, type NavItem, renderNavItem } from "./Sideview";
 
 export function HeaderSimple() {
     const [opened, { toggle, close }] = useDisclosure(false);
+    const [expandedClass, setExpandedClass] = useState<"78" | "910" | null>(null);
     const pathname = usePathname();
     const headerRef = useRef<HTMLElement>(null);
 
@@ -36,18 +31,6 @@ export function HeaderSimple() {
             document.removeEventListener("mousedown", handleClickOutside);
         };
     }, [opened, close]);
-
-    const items = links.map((link) => (
-        <Link
-            key={link.label}
-            href={link.link}
-            className={classes.link}
-            data-active={pathname.startsWith(link.link) || undefined}
-            onClick={toggle}
-        >
-            {link.label}
-        </Link>
-    ));
 
     return (
         <header className={classes.header} ref={headerRef}>
@@ -68,7 +51,23 @@ export function HeaderSimple() {
                 </Link>
 
                 <Group gap={5} visibleFrom="md">
-                    {items}
+                    <Link
+                        href="/klasse78"
+                        className={classes.link}
+                        data-active={pathname.startsWith("/klasse78") || undefined}
+                    >
+                        Klassen 7+8
+                    </Link>
+                    <Link
+                        href="/klasse910"
+                        className={classes.link}
+                        data-active={pathname.startsWith("/klasse910") || undefined}
+                    >
+                        Klassen 9+10
+                    </Link>
+                    <Link href="/ueber" className={classes.link}>
+                        Über das Projekt
+                    </Link>
                 </Group>
 
                 <Burger
@@ -82,7 +81,49 @@ export function HeaderSimple() {
             {opened && (
                 <Container size="lg" className={classes.dropdown}>
                     <Stack gap={5}>
-                        {items}
+                        <Link
+                            href="/klasse78"
+                            className={classes.link}
+                            onClick={(e) => {
+                                if (expandedClass === "78") {
+                                    close();
+                                } else {
+                                    e.preventDefault();
+                                    setExpandedClass("78");
+                                }
+                            }}
+                        >
+                            Klassen 7+8
+                        </Link>
+                        {expandedClass === "78" && (
+                            <div style={{ paddingLeft: "16px" }}>
+                                {navData78.map((item) => renderNavItem(item, 0, pathname))}
+                            </div>
+                        )}
+
+                        <Link
+                            href="/klasse910"
+                            className={classes.link}
+                            onClick={(e) => {
+                                if (expandedClass === "910") {
+                                    close();
+                                } else {
+                                    e.preventDefault();
+                                    setExpandedClass("910");
+                                }
+                            }}
+                        >
+                            Klassen 9+10
+                        </Link>
+                        {expandedClass === "910" && (
+                            <div style={{ paddingLeft: "16px" }}>
+                                {navData910.map((item) => renderNavItem(item, 0, pathname))}
+                            </div>
+                        )}
+
+                        <Link href="/ueber" className={classes.link} onClick={close}>
+                            Über das Projekt
+                        </Link>
                     </Stack>
                 </Container>
             )}

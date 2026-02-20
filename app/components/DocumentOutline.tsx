@@ -100,7 +100,7 @@ export function DocumentOutline() {
     }
 
     return (
-        <Stack gap="sm" p="md">
+        <Stack gap="sm" p="md" visibleFrom="md">
             <Text fw={600} size="xs">
                 Gliederung
             </Text>
