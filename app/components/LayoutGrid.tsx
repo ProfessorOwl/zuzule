@@ -15,24 +15,24 @@ export function LayoutGrid({ children }: { children: any }) {
     return (
         <Grid justify="space-between" gutter={0}>
             {showSideview78 && (
-                <GridCol span={{ base: 0, md: 2.5 }}>
+                <GridCol span={{ base: 0, md: 2.5 }} visibleFrom="md">
                     <Sideview78 />
                 </GridCol>
             )}
             {showSideview910 && (
-                <GridCol span={{ base: 0, md: 2.5 }}>
+                <GridCol span={{ base: 0, md: 2.5 }} visibleFrom="md">
                     <Sideview910 />
                 </GridCol>
             )}
             <GridCol span={showOutline ? { base: 12, md: 7 } : { base: 12, md: 12 }}>
                 <ScrollAreaAutosize mah={"calc(100vh - 56px)"}>
-                    <Container size={"md"} pb={200}>
+                    <Container fluid pb={200} px={{ base: "sm", sm: "md" }}>
                         <div>{children}</div>
                     </Container>
                 </ScrollAreaAutosize>
             </GridCol>
             {showOutline && (
-                <GridCol span={{ base: 0, md: 2.5 }}>
+                <GridCol span={{ base: 0, md: 2.5 }} visibleFrom="md">
                     <DocumentOutline />
                 </GridCol>
             )}

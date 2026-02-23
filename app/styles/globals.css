@@ -1,16 +1,38 @@
 @tailwind components;
 @tailwind utilities;
 
-h1 {
-    font-size: 26pt;
+/* Macht alle Überschriften responsiv, indem hyphenation erlaubt wird */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
 }
-
 p {
     margin-top: 5px;
     font-size: 16pt;
     line-height: 1.5;
 }
-/* span.katex-html {
-    display: flex !important;
-    padding-left: 20px;
+div.next-video-container {
+    width: 100% !important;
+}
+
+@media (max-width: $mantine-breakpoint-md) {
+    .katex {
+        font-size: 1.1em !important;
+    }
+}
+/* .m_ddec01c0 {
+}
+
+.katex {
+}
+.m_9e117634 {
+}
+
+.m_8a5d1357 {
 } */

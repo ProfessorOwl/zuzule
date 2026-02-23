@@ -34,20 +34,18 @@ export default function Zylinder() {
                 können!
                 <Flex>
                     <Image
-                        h={300}
                         src="/dosen.jpg"
                         width={6000}
                         height={4000}
-                        sizes="500px"
                         alt="Verschiedene Dosen"
+                        // flex={{ base: "1 1 100%", md: 1 }}
                     />
                     <Image
-                        h={300}
                         src="/regler.jpg"
                         width={6000}
                         height={4000}
-                        sizes="500px"
                         alt="Ein Regler für die Lautstärke"
+                        // flex={{ base: "1 1 100%", md: 1 }}
                     />
                 </Flex>
             </CheckableHeading>
@@ -71,7 +69,6 @@ export default function Zylinder() {
                 <b>Schrägbild</b> eines Quaders. Das sollte ungefähr so aussehen
                 wie in dem Bild.
                 <Image
-                    h={300}
                     src="/QuaderSchrägbild@2x.png"
                     width={1802}
                     height={1200}
@@ -98,7 +95,6 @@ export default function Zylinder() {
                     <ListItem>Darauf setzen wir nun die Oberseite.</ListItem>
                 </List>
                 <Image
-                    h={300}
                     src="/ZylinderSchrägbildEntstehung@2x.png"
                     width={2402}
                     height={1200}
@@ -151,11 +147,12 @@ export default function Zylinder() {
                 insbesondere wenn wir uns die Autoreifen von Formel-1 Autos
                 anschauen!
                 <ImageCaption
+                    // @ts-ignore
                     h={300}
                     src="/Formel1Reifen.jpg"
                     width={846}
-                    height={537}
                     rotate="right"
+                    height={537}
                     alt="Ein Formel-1 Auto von hinten. Links sind zwei Reifen sichtbar."
                 >
                     rare-gallery.com
@@ -178,10 +175,10 @@ export default function Zylinder() {
                     anmalen. Der geht danach nämlich wieder gut ab und wir sehen
                     dadurch, wann wir genau eine Umdrehung haben. Schau es dir
                     in dem Video unten an.
-                    <Container my={"md"} maw={750}>
-                        <Video src={UmfangZylinder} />
+                    <Container my={"md"} maw={{ base: 300, xs: 400, sm: 500, md: 750 }}>
+                        <Video src={UmfangZylinder} style={{ width: '100%', height: 'auto', aspectRatio: '16/9' }}/>
                     </Container>
-                    Die abgerollte Mantelfläche bildet ein Rechteck mit, das in
+                    Die abgerollte Mantelfläche bildet ein Rechteck, das in
                     unserem Beispiel die Kantenlängen{" "}
                     <InlineMath>{String.raw`9{,}4\,\text{cm}`}</InlineMath> und{" "}
                     <InlineMath>{String.raw`4{,}7\,\text{cm}`}</InlineMath> hat.
@@ -244,7 +241,6 @@ export default function Zylinder() {
                         </BlockMath>
                     </CheckableBlockquote>
                     <Image
-                        h={300}
                         src="/durchmesserFluid.jpg"
                         width={6000}
                         height={4000}
@@ -267,7 +263,6 @@ export default function Zylinder() {
                     Dose bekommen. Nun benötigen wir noch die Höhe unseres
                     Zylinders.
                     <Image
-                        h={300}
                         src="/höheFluid.jpg"
                         width={6000}
                         height={4000}
@@ -398,7 +393,7 @@ export default function Zylinder() {
                         titleOrder={2}
                     >
                         <Lösung>
-                            <List type="ordered">
+                            <List type="ordered" visibleFrom="md">
                                 <ListItem>
                                     <BlockMath>{String.raw`
                                     \begin{aligned}
@@ -450,6 +445,62 @@ export default function Zylinder() {
                                     &&M &= \tfrac{468}{25}\pi\,\text{m}^2\approx 58{,}81\,\text{m}^2 \\ 
                                     &&A_\text{Kappe} &= \tfrac{1521}{400}\pi\,\text{m}^2 \approx 11{,}95\,\text{m}^2 \\
                                     &&O &= \tfrac{1053}{40}\pi\,\text{m}^2 \approx 82{,}70\,\text{m}^2
+                                    \end{aligned}
+                                    `}</BlockMath>
+                                </ListItem>
+                            </List>
+                             <List type="ordered" hiddenFrom="md">
+                                <ListItem>
+                                    <BlockMath>{String.raw`
+                                    \begin{aligned}
+                                    M &= \tfrac{36}{5}\pi\,\text{cm}^2 \\ &\approx 22{,}62\,\text{cm}^2 \\
+                                    A_\text{Kappe} &= 9\pi\,\text{cm}^2 \\ &\approx 28{,}27\,\text{cm}^2 \\
+                                    O &= \tfrac{126}{5}\pi\,\text{cm}^2 \\ &\approx 79{,}17\,\text{cm}^2
+                                    \end{aligned}
+                                    `}</BlockMath>
+                                </ListItem>
+                                <ListItem>
+                                    <BlockMath>{String.raw`
+                                    \begin{aligned}
+                                    M &= 82\pi\,\text{cm}^2 \\ &\approx 257{,}61\,\text{cm}^2 \\
+                                    A_\text{Kappe} &= \tfrac{1681}{25}\pi\,\text{cm}^2 \\ &\approx 211{,}24\,\text{cm}^2 \\
+                                    O &= \tfrac{5412}{25}\pi\,\text{cm}^2 \\ &\approx 680{,}09\,\text{cm}^2
+                                    \end{aligned}
+                                    `}</BlockMath>
+                                </ListItem>
+                                <ListItem>
+                                    <BlockMath>{String.raw`
+                                    \begin{aligned}
+                                    M &= \tfrac{2847}{50}\pi\,\text{cm}^2 \\ &\approx 178{,}88\,\text{cm}^2 \\
+                                    A_\text{Kappe} &= \tfrac{5329}{100}\pi\,\text{cm}^2 \\ &\approx 167{,}42\,\text{cm}^2 \\
+                                    O &= \tfrac{4088}{25}\pi\,\text{cm}^2 \\ &\approx 513{,}71\,\text{cm}^2
+                                    \end{aligned}
+                                    `}</BlockMath>
+                                </ListItem>
+                                <ListItem>
+                                    <BlockMath>{String.raw`
+                                    \begin{aligned}
+                                    M &= \tfrac{364}{5}\pi\,\text{cm}^2 \\ &\approx 228{,}71\,\text{cm}^2 \\
+                                    A_\text{Kappe} &= 16\pi\,\text{cm}^2 \\ &\approx 50{,}27\,\text{cm}^2 \\
+                                    O &= \tfrac{524}{5}\pi\,\text{cm}^2 \\ &\approx 329{,}24\,\text{cm}^2
+                                    \end{aligned}
+                                    `}</BlockMath>
+                                </ListItem>
+                                <ListItem>
+                                    <BlockMath>{String.raw`
+                                    \begin{aligned}
+                                    M &= \tfrac{201}{2}\pi\,\text{m}^2 \\ &\approx 315{,}73\,\text{m}^2 \\
+                                    A_\text{Kappe} &= \tfrac{4489}{100}\pi\,\text{m}^2 \\ &\approx 141{,}03\,\text{m}^2 \\
+                                    O &= \tfrac{4757}{25}\pi\,\text{m}^2 \\ &\approx 597{,}78\,\text{m}^2
+                                    \end{aligned}
+                                    `}</BlockMath>
+                                </ListItem>
+                                <ListItem>
+                                    <BlockMath>{String.raw`
+                                    \begin{aligned}
+                                    M &= \tfrac{468}{25}\pi\,\text{m}^2\\ &\approx 58{,}81\,\text{m}^2 \\ 
+                                    A_\text{Kappe} &= \tfrac{1521}{400}\pi\,\text{m}^2 \\ &\approx 11{,}95\,\text{m}^2 \\
+                                    O &= \tfrac{1053}{40}\pi\,\text{m}^2 \\ &\approx 82{,}70\,\text{m}^2
                                     \end{aligned}
                                     `}</BlockMath>
                                 </ListItem>
@@ -545,7 +596,6 @@ export default function Zylinder() {
                         <InlineMath>b</InlineMath> die beiden Grundseiten
                         bezeichnen.
                         <Image
-                            h={300}
                             src="/RechteckFläche@2x.png"
                             width={1802}
                             height={1200}
@@ -570,7 +620,8 @@ export default function Zylinder() {
                                 zmax: 4,
                             }}
                             sliderLabel="Höhe"
-                            sliderWidth={400}
+                            // @ts-ignore
+                            sliderWidth={{base: 250, md: 400}}
                             sliderMin={0}
                             sliderMax={2}
                             sliderStep={1}
@@ -614,7 +665,6 @@ export default function Zylinder() {
                         11&thinsp;cm.
                         <Flex>
                             <Image
-                                h={300}
                                 src="/doseKokosDurchmesser.jpg"
                                 width={6000}
                                 height={4000}
@@ -622,7 +672,6 @@ export default function Zylinder() {
                                 alt="Ein Lineal liegt unter einer Konservendose. Ablesbar ist ein Durchmesser von 7,5 cm."
                             />
                             <Image
-                                h={300}
                                 src="/doseKokosHöhe.jpg"
                                 width={6000}
                                 height={4000}
@@ -676,7 +725,7 @@ export default function Zylinder() {
                                     <b>Dose mit Kokosmilch</b>
                                     <Flex>
                                         <Image
-                                            h={275}
+                                            h={{base: 200, md: 275}}
                                             src="/innenKokos.jpg"
                                             width={6000}
                                             height={4000}
@@ -684,7 +733,7 @@ export default function Zylinder() {
                                             alt="Ein Lineal liegt über der Öffnung einer Konservendose mit Kokosmilch. Ablesbar ist ein Durchmesser von 7,3 cm."
                                         />
                                         <Image
-                                            h={275}
+                                            h={{base: 200, md: 275}}
                                             src="/füllstandKokos.jpg"
                                             width={6000}
                                             height={4000}
@@ -707,7 +756,7 @@ export default function Zylinder() {
                                     <b>Dose mit gehackten Tomaten</b>
                                     <Flex>
                                         <Image
-                                            h={275}
+                                            h={{base: 200, md: 275}}
                                             src="/innenTomate.jpg"
                                             width={6000}
                                             height={4000}
@@ -715,7 +764,7 @@ export default function Zylinder() {
                                             alt="Ein Lineal liegt über der Öffnung einer Konservendose mit gehackten Tomaten. Ablesbar ist ein Durchmesser von 7,3 cm."
                                         />
                                         <Image
-                                            h={275}
+                                            h={{base: 200, md: 275}}
                                             src="/füllstandTomate.jpg"
                                             width={6000}
                                             height={4000}
