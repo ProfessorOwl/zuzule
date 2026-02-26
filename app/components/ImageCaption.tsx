@@ -1,12 +1,21 @@
-"use client"
+"use client";
 
-import { Center, em, Flex, Group, Image, Stack, Text, useMatches } from "@mantine/core";
+import {
+    Center,
+    em,
+    Flex,
+    Group,
+    Image,
+    Stack,
+    Text,
+    useMatches,
+} from "@mantine/core";
 import { useMediaQuery } from "@mantine/hooks";
 import NextImage from "next/image";
 
 interface ImageCaptionProps {
     children: React.ReactNode;
-    h?: number 
+    h?: number;
     fit?: "contain" | "cover";
     src: string;
     width: number;
@@ -25,12 +34,11 @@ export function ImageCaption({
     alt,
     rotate = false,
 }: ImageCaptionProps) {
-
     if (rotate == "right") {
         return (
-            <Center >
+            <Center>
                 <Image
-                    h={{base: "auto", md: h}}
+                    h={{ base: "auto", md: h }}
                     //@ts-ignore
                     w={{ base: 300, xs: 400, sm: 500, md: "auto" }}
                     mx={0}

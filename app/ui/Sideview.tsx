@@ -91,38 +91,12 @@ export const navData910: NavItem[] = [
     },
 ];
 
-export const renderNavItem = (item: NavItem, level = 0, pathname: string ) => {
-        if (item.children) {
-            return (
-                <div key={item.label}>
-                    <div
-                        className={classes.link}
-                        style={{
-                            paddingLeft: `${level * 16}px`,
-                        }}
-                    >
-                        {item.icon && (
-                            <item.icon
-                                className={classes.linkIcon}
-                                style={{ stroke: "currentColor" }}
-                            />
-                        )}
-                        <span>{item.label}</span>
-                    </div>
-                    <div>
-                        {item.children.map((child) =>
-                            renderNavItem(child, level + 1, pathname),
-                        )}
-                    </div>
-                </div>
-            );
-        } else if (item.link) {
-            return (
-                <Link
+export const renderNavItem = (item: NavItem, level = 0, pathname: string) => {
+    if (item.children) {
+        return (
+            <div key={item.label}>
+                <div
                     className={classes.link}
-                    data-active={pathname === item.link || undefined}
-                    href={item.link}
-                    key={item.label}
                     style={{
                         paddingLeft: `${level * 16}px`,
                     }}
@@ -134,9 +108,34 @@ export const renderNavItem = (item: NavItem, level = 0, pathname: string ) => {
                         />
                     )}
                     <span>{item.label}</span>
-                </Link>
-            );
-        }
-        return null;
-    };
-
+                </div>
+                <div>
+                    {item.children.map((child) =>
+                        renderNavItem(child, level + 1, pathname),
+                    )}
+                </div>
+            </div>
+        );
+    } else if (item.link) {
+        return (
+            <Link
+                className={classes.link}
+                data-active={pathname === item.link || undefined}
+                href={item.link}
+                key={item.label}
+                style={{
+                    paddingLeft: `${level * 16}px`,
+                }}
+            >
+                {item.icon && (
+                    <item.icon
+                        className={classes.linkIcon}
+                        style={{ stroke: "currentColor" }}
+                    />
+                )}
+                <span>{item.label}</span>
+            </Link>
+        );
+    }
+    return null;
+};

@@ -1,5 +1,3 @@
 {
-    "recommendations": [
-        "vunguyentuan.vscode-postcss"
-    ]
+    "recommendations": ["vunguyentuan.vscode-postcss"]
 }

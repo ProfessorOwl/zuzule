@@ -41,7 +41,7 @@ export function CheckableBlockquote({
     title,
     id,
     icon,
-    titleOrder = 2
+    titleOrder = 2,
 }: CheckableBlockquoteProps) {
     const router = useRouter();
     const searchParams = useSearchParams();

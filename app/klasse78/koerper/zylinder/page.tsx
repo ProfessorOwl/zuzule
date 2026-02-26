@@ -175,8 +175,18 @@ export default function Zylinder() {
                     anmalen. Der geht danach nämlich wieder gut ab und wir sehen
                     dadurch, wann wir genau eine Umdrehung haben. Schau es dir
                     in dem Video unten an.
-                    <Container my={"md"} maw={{ base: 300, xs: 400, sm: 500, md: 750 }}>
-                        <Video src={UmfangZylinder} style={{ width: '100%', height: 'auto', aspectRatio: '16/9' }}/>
+                    <Container
+                        my={"md"}
+                        maw={{ base: 300, xs: 400, sm: 500, md: 750 }}
+                    >
+                        <Video
+                            src={UmfangZylinder}
+                            style={{
+                                width: "100%",
+                                height: "auto",
+                                aspectRatio: "16/9",
+                            }}
+                        />
                     </Container>
                     Die abgerollte Mantelfläche bildet ein Rechteck, das in
                     unserem Beispiel die Kantenlängen{" "}
@@ -449,7 +459,7 @@ export default function Zylinder() {
                                     `}</BlockMath>
                                 </ListItem>
                             </List>
-                             <List type="ordered" hiddenFrom="md">
+                            <List type="ordered" hiddenFrom="md">
                                 <ListItem>
                                     <BlockMath>{String.raw`
                                     \begin{aligned}
@@ -621,7 +631,7 @@ export default function Zylinder() {
                             }}
                             sliderLabel="Höhe"
                             // @ts-ignore
-                            sliderWidth={{base: 250, md: 400}}
+                            sliderWidth={{ base: 250, md: 400 }}
                             sliderMin={0}
                             sliderMax={2}
                             sliderStep={1}
@@ -725,7 +735,7 @@ export default function Zylinder() {
                                     <b>Dose mit Kokosmilch</b>
                                     <Flex>
                                         <Image
-                                            h={{base: 200, md: 275}}
+                                            h={{ base: 200, md: 275 }}
                                             src="/innenKokos.jpg"
                                             width={6000}
                                             height={4000}
@@ -733,7 +743,7 @@ export default function Zylinder() {
                                             alt="Ein Lineal liegt über der Öffnung einer Konservendose mit Kokosmilch. Ablesbar ist ein Durchmesser von 7,3 cm."
                                         />
                                         <Image
-                                            h={{base: 200, md: 275}}
+                                            h={{ base: 200, md: 275 }}
                                             src="/füllstandKokos.jpg"
                                             width={6000}
                                             height={4000}
@@ -756,7 +766,7 @@ export default function Zylinder() {
                                     <b>Dose mit gehackten Tomaten</b>
                                     <Flex>
                                         <Image
-                                            h={{base: 200, md: 275}}
+                                            h={{ base: 200, md: 275 }}
                                             src="/innenTomate.jpg"
                                             width={6000}
                                             height={4000}
@@ -764,7 +774,7 @@ export default function Zylinder() {
                                             alt="Ein Lineal liegt über der Öffnung einer Konservendose mit gehackten Tomaten. Ablesbar ist ein Durchmesser von 7,3 cm."
                                         />
                                         <Image
-                                            h={{base: 200, md: 275}}
+                                            h={{ base: 200, md: 275 }}
                                             src="/füllstandTomate.jpg"
                                             width={6000}
                                             height={4000}
@@ -830,7 +840,7 @@ export default function Zylinder() {
                                     gehackten Tomaten{" "}
                                     <InlineMath>{String.raw`405{,}98\,\text{mL} - 400\,\text{mL} = 5{,}98\,\text{mL}`}</InlineMath>{" "}
                                     geschenkt werden. Ob das als Anlass genügt,
-                                    um die Kokosmilch im Supermarkt 
+                                    um die Kokosmilch im Supermarkt
                                     zurückzugeben, muss jedoch jeder selber
                                     entscheiden...
                                 </Lösung>

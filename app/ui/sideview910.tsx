@@ -7,7 +7,7 @@ import { navData910, renderNavItem } from "./Sideview";
 const data = navData910;
 
 export function Sideview910() {
-       const pathname = usePathname();
+    const pathname = usePathname();
 
     const links = data.map((item) => renderNavItem(item, 0, pathname));
 

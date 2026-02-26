@@ -12,13 +12,18 @@ import { navData78, navData910, type NavItem, renderNavItem } from "./Sideview";
 
 export function HeaderSimple() {
     const [opened, { toggle, close }] = useDisclosure(false);
-    const [expandedClass, setExpandedClass] = useState<"78" | "910" | null>(null);
+    const [expandedClass, setExpandedClass] = useState<"78" | "910" | null>(
+        null,
+    );
     const pathname = usePathname();
     const headerRef = useRef<HTMLElement>(null);
 
     useEffect(() => {
         const handleClickOutside = (event: MouseEvent) => {
-            if (headerRef.current && !headerRef.current.contains(event.target as Node)) {
+            if (
+                headerRef.current &&
+                !headerRef.current.contains(event.target as Node)
+            ) {
                 close();
             }
         };
@@ -54,14 +59,18 @@ export function HeaderSimple() {
                     <Link
                         href="/klasse78"
                         className={classes.link}
-                        data-active={pathname.startsWith("/klasse78") || undefined}
+                        data-active={
+                            pathname.startsWith("/klasse78") || undefined
+                        }
                     >
                         Klassen 7+8
                     </Link>
                     <Link
                         href="/klasse910"
                         className={classes.link}
-                        data-active={pathname.startsWith("/klasse910") || undefined}
+                        data-active={
+                            pathname.startsWith("/klasse910") || undefined
+                        }
                     >
                         Klassen 9+10
                     </Link>
@@ -97,7 +106,9 @@ export function HeaderSimple() {
                         </Link>
                         {expandedClass === "78" && (
                             <div style={{ paddingLeft: "16px" }}>
-                                {navData78.map((item) => renderNavItem(item, 0, pathname))}
+                                {navData78.map((item) =>
+                                    renderNavItem(item, 0, pathname),
+                                )}
                             </div>
                         )}
 
@@ -117,17 +128,22 @@ export function HeaderSimple() {
                         </Link>
                         {expandedClass === "910" && (
                             <div style={{ paddingLeft: "16px" }}>
-                                {navData910.map((item) => renderNavItem(item, 0, pathname))}
+                                {navData910.map((item) =>
+                                    renderNavItem(item, 0, pathname),
+                                )}
                             </div>
                         )}
 
-                        <Link href="/ueber" className={classes.link} onClick={close}>
+                        <Link
+                            href="/ueber"
+                            className={classes.link}
+                            onClick={close}
+                        >
                             Über das Projekt
                         </Link>
                     </Stack>
                 </Container>
             )}
-
         </header>
     );
 }

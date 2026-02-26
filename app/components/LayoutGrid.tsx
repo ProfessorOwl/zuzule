@@ -24,7 +24,9 @@ export function LayoutGrid({ children }: { children: any }) {
                     <Sideview910 />
                 </GridCol>
             )}
-            <GridCol span={showOutline ? { base: 12, md: 7 } : { base: 12, md: 12 }}>
+            <GridCol
+                span={showOutline ? { base: 12, md: 7 } : { base: 12, md: 12 }}
+            >
                 <ScrollAreaAutosize mah={"calc(100vh - 56px)"}>
                     <Container fluid pb={200} px={{ base: "sm", sm: "md" }}>
                         <div>{children}</div>
