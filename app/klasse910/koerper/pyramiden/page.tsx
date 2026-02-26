@@ -63,8 +63,7 @@ export default function Pyramiden() {
                     alt="Eine Pyramide der Maya"
                     h={500}
                 />
-                <CheckableHeading title="Lösung" titleOrder={3}>
-                    <Lösung>
+                    <Lösung title="Lösung" id="Lösung-AllesPyramide" titleOrder={3}>
                         <List type="ordered">
                             <ListItem>
                                 Ja, eine sechseckige, gerade Pyramide.
@@ -89,7 +88,6 @@ export default function Pyramiden() {
                             </ListItem>
                         </List>
                     </Lösung>
-                </CheckableHeading>
             </CheckableBlockquote>
             <CheckableHeading title="Volumenberechnung">
                 Das Volumen von einer quadratischen Pyramide lässt sich sowohl
@@ -334,14 +332,14 @@ export default function Pyramiden() {
                             also bekommen wir:
                             <BlockMath>
                                 {String.raw`
-                \begin{aligned}
-                V_\text{Quader} &= 6 \cdot V_\text{Pyramide} &&\lvert \text{Einsetzen:}\; V_\text{Quader} = G \cdot h_\text{Quader} \\
-                G \cdot h_\text{Quader} &=  6 \cdot V_\text{Pyramide} &&\lvert \text{Einsetzen:}\; h_\text{Quader} = 2\cdot h_\text{Pyramide} \\
-                G \cdot 2 \cdot h_\text{Pyramide} &=  6 \cdot V_\text{Pyramide} &&\lvert :6 \\
-                G \cdot \frac{2}{6} \cdot h_\text{Pyramide} &= \cdot V_\text{Pyramide} \\
-                V_\text{Pyramide} &= \frac{1}{3} G \cdot h_\text{Pyramide}
-                \end{aligned}
-                `}
+                            \begin{aligned}
+                            V_\text{Quader} &= 6 \cdot V_\text{Pyramide} &&\lvert \text{Einsetzen:}\; V_\text{Quader} = G \cdot h_\text{Quader} \\
+                            G \cdot h_\text{Quader} &=  6 \cdot V_\text{Pyramide} &&\lvert \text{Einsetzen:}\; h_\text{Quader} = 2\cdot h_\text{Pyramide} \\
+                            G \cdot 2 \cdot h_\text{Pyramide} &=  6 \cdot V_\text{Pyramide} &&\lvert :6 \\
+                            G \cdot \frac{2}{6} \cdot h_\text{Pyramide} &= \cdot V_\text{Pyramide} \\
+                            V_\text{Pyramide} &= \frac{1}{3} G \cdot h_\text{Pyramide}
+                            \end{aligned}
+                            `}
                             </BlockMath>
                             Eine Pyramide ist also immer ein Drittel so groß wie
                             der sie umgebende Quader!
@@ -359,72 +357,72 @@ export default function Pyramiden() {
                         height={1000}
                         alt="Mehrere Pyramiden als Aufgabenstellungen."
                     />
-                    <Lösung title="Lösung" id="Lösung-Pyramidenrätsel">
+                    <Lösung title="Lösung" id="Lösung-Pyramidenrätsel" titleOrder={3}>
                         <List type="ordered">
                             <ListItem>
                                 Nach Höhe umstellen und einsetzen:
                                 <BlockMath>{String.raw`
-                    \begin{aligned}
-                    V &= \frac{1}{3}Gh &&\lvert \cdot \frac{3}{G} \\
-                    \frac{3V}{G} &= h \\
-                    \Rightarrow h &= \frac{3 \cdot 32}{4 \cdot 4} = \frac{96}{16} = 6
-                    \end{aligned}
+                                \begin{aligned}
+                                V &= \frac{1}{3}Gh &&\lvert \cdot \frac{3}{G} \\
+                                \frac{3V}{G} &= h \\
+                                \Rightarrow h &= \frac{3 \cdot 32}{4 \cdot 4} = \frac{96}{16} = 6
+                                \end{aligned}
                     `}</BlockMath>
                             </ListItem>
                             <ListItem>
                                 Nach Grundfläche umstellen und einsetzen:
                                 <BlockMath>{String.raw`
-                    \begin{aligned}
-                    V &= \frac{1}{3}Gh &&\lvert \cdot \frac{3}{h} \\
-                    \frac{3V}{h} &= G \\
-                    &\Rightarrow G = \frac{3 \cdot 18}{9} = \frac{54}{9} = 6
-                    \end{aligned}
+                                \begin{aligned}
+                                V &= \frac{1}{3}Gh &&\lvert \cdot \frac{3}{h} \\
+                                \frac{3V}{h} &= G \\
+                                &\Rightarrow G = \frac{3 \cdot 18}{9} = \frac{54}{9} = 6
+                                \end{aligned}
                     `}</BlockMath>
                             </ListItem>
                             <ListItem>
                                 Zuerst nach Grundfläche umstellen:
                                 <BlockMath>{String.raw`
-                    \begin{aligned}
-                    V &= \frac{1}{3}Gh &&\lvert \cdot \frac{3}{h} \\
-                    G &= \frac{3V}{h}\\
-                    &\Rightarrow G = \frac{3\cdot 18\sqrt{3}}{6} = 9\sqrt{3}
-                    \end{aligned}
+                                \begin{aligned}
+                                V &= \frac{1}{3}Gh &&\lvert \cdot \frac{3}{h} \\
+                                G &= \frac{3V}{h}\\
+                                &\Rightarrow G = \frac{3\cdot 18\sqrt{3}}{6} = 9\sqrt{3}
+                                \end{aligned}
                     `}</BlockMath>
                                 Formel für Dreiecksgrundfläche:{" "}
                                 <InlineMath>{String.raw`G = \frac{1}{2}xh_\triangle`}</InlineMath>
                                 . Da es ein gleichseitiges Dreieck ist, gilt mit
                                 dem Satz des Pythagoras:
                                 <BlockMath>{String.raw`
-                        \begin{aligned}
-                        x^2 &= h_\triangle^2 + \left(\frac{1}{2}x^2\right)^2 &&\lvert -\left(\frac{1}{2}x^2\right)^2\\
-                        x^2 - \left(\frac{1}{2}x^2\right)^2 &= h_\triangle^2 &&\lvert \sqrt{}\\
-                        h_\triangle &= \sqrt{x^2 - \left(\frac{1}{2}x^2\right)^2} \\
-                         &= \sqrt{x^2 - \frac{1}{4}x^2} \\
-                         &= \sqrt{\frac{3}{4}x^2} \\
-                         &= \frac{\sqrt{3}}{2}x
-                        \end{aligned}
+                                \begin{aligned}
+                                x^2 &= h_\triangle^2 + \left(\frac{1}{2}x^2\right)^2 &&\lvert -\left(\frac{1}{2}x^2\right)^2\\
+                                x^2 - \left(\frac{1}{2}x^2\right)^2 &= h_\triangle^2 &&\lvert \sqrt{}\\
+                                h_\triangle &= \sqrt{x^2 - \left(\frac{1}{2}x^2\right)^2} \\
+                                &= \sqrt{x^2 - \frac{1}{4}x^2} \\
+                                &= \sqrt{\frac{3}{4}x^2} \\
+                                &= \frac{\sqrt{3}}{2}x
+                                \end{aligned}
                     `}</BlockMath>
                                 Das können wir in die Formel für die
                                 Dreiecksfläche einsetzen und bekommen:
                                 <BlockMath>{String.raw`
-                        \begin{aligned}
-                        G &= \frac{1}{2}xh_\triangle \\
-                        &= \frac{1}{2}x\cdot \frac{\sqrt{3}}{2}x \\
-                        &= \frac{\sqrt{3}}{4}x^2 &&\lvert \cdot \frac{4}{\sqrt{3}} \\
-                        \frac{4}{\sqrt{3}}G &= x^2 &&\lvert \sqrt{} \\
-                        x &= \sqrt{\frac{4}{\sqrt{3}}G} 
-                        \end{aligned}
+                                \begin{aligned}
+                                G &= \frac{1}{2}xh_\triangle \\
+                                &= \frac{1}{2}x\cdot \frac{\sqrt{3}}{2}x \\
+                                &= \frac{\sqrt{3}}{4}x^2 &&\lvert \cdot \frac{4}{\sqrt{3}} \\
+                                \frac{4}{\sqrt{3}}G &= x^2 &&\lvert \sqrt{} \\
+                                x &= \sqrt{\frac{4}{\sqrt{3}}G} 
+                                \end{aligned}
                     `}</BlockMath>
                                 Jetzt das Ergebnis für{" "}
                                 <InlineMath>G</InlineMath> einsetzen, dann
                                 bekommen wir <InlineMath>x</InlineMath> heraus:
                                 <BlockMath>{String.raw`
-                    \begin{aligned}
-                        x &= \sqrt{\frac{4}{\sqrt{3}}G} \\
-                            &= \sqrt{\frac{4}{\sqrt{3}}\cdot9\sqrt{3}} \\
-                            &= \sqrt{4 \cdot 9} \\
-                            &= 6
-                    \end{aligned}
+                                \begin{aligned}
+                                    x &= \sqrt{\frac{4}{\sqrt{3}}G} \\
+                                        &= \sqrt{\frac{4}{\sqrt{3}}\cdot9\sqrt{3}} \\
+                                        &= \sqrt{4 \cdot 9} \\
+                                        &= 6
+                                \end{aligned}
                     `}</BlockMath>{" "}
                             </ListItem>
 
@@ -432,22 +430,22 @@ export default function Pyramiden() {
                                 Wieder erst nach Grundfläche umstellen, x als
                                 unbekannte Höhe bleibt vorhanden:
                                 <BlockMath>{String.raw`
-                    \begin{aligned}
-                    V &= \frac{1}{3}Gx
-                    \end{aligned}
-                    `}</BlockMath>
+                                    \begin{aligned}
+                                    V &= \frac{1}{3}Gx
+                                    \end{aligned}
+                                    `}</BlockMath>
                                 Die rechteckige Grundfläche berechnet sich nach{" "}
                                 <InlineMath>{String.raw`G = 6 \cdot \frac{1}{2}x = 3x`}</InlineMath>
                                 , das wir einsetzen können:
                                 <BlockMath>{String.raw`
-                    \begin{aligned}
-                    V &= \frac{1}{3}Gx \\
-                     &= \frac{1}{3}\cdot 3x \cdot x \\
-                     &= x^2 \lvert \sqrt{} \\
-                    x &= \sqrt{V} \\
-                        &\Rightarrow x = \sqrt{25} = 5
-                    \end{aligned}
-                    `}</BlockMath>
+                                \begin{aligned}
+                                V &= \frac{1}{3}Gx \\
+                                &= \frac{1}{3}\cdot 3x \cdot x \\
+                                &= x^2 \lvert \sqrt{} \\
+                                x &= \sqrt{V} \\
+                                    &\Rightarrow x = \sqrt{25} = 5
+                                \end{aligned}
+                                `}</BlockMath>
                             </ListItem>
                         </List>
                     </Lösung>

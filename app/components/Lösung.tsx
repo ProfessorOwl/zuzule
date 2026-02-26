@@ -8,7 +8,7 @@ interface LösungProps {
 }
 export function Lösung({
     children,
-    title = "Lösung",
+    title,
     id,
     titleOrder,
 }: LösungProps) {
