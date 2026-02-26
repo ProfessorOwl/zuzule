@@ -25,6 +25,7 @@ interface CheckableBlockquoteProps {
     title?: string;
     id?: string;
     icon?: IconMapKey;
+    titleOrder?: 1 | 2 | 3 | 4 | 5 | 6;
 }
 
 const IconMap = {
@@ -40,6 +41,7 @@ export function CheckableBlockquote({
     title,
     id,
     icon,
+    titleOrder = 2
 }: CheckableBlockquoteProps) {
     const router = useRouter();
     const searchParams = useSearchParams();
@@ -99,7 +101,7 @@ export function CheckableBlockquote({
                 {Icon ? <Icon size={40} /> : null}
                 {title && (
                     <Title
-                        order={2}
+                        order={titleOrder}
                         style={{
                             margin: 0,
                             filter: checked ? "opacity(30%)" : "none",

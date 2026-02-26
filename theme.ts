@@ -1,6 +1,7 @@
 "use client";
 
-import { createTheme, Divider, em, Flex, Image, List, Space } from "@mantine/core";
+import { createTheme, Divider, em, Flex, Image, List, Mark, Space } from "@mantine/core";
+import {generateColors} from "@mantine/colors-generator"
 import NextImage from "next/image";
 
 export const theme = createTheme({
@@ -37,6 +38,15 @@ export const theme = createTheme({
                 wrap: "wrap"
             }
         }),
+        Mark: Mark.extend({
+            defaultProps: {
+                color: "none"
+            }
+        })
+    },
+    colors: {
+        "desblue": generateColors("#3312B8"),
+        "desred": generateColors("#C92052")
     },
     fontSizes: {
         xs: "12pt",

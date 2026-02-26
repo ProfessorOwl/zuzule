@@ -28,11 +28,6 @@ export const navData78: NavItem[] = [
         icon: IconDiabolo,
         children: [
             {
-                link: "/klasse78/koerper/einfuehrung",
-                label: "Einführung",
-                icon: IconInfoCircle,
-            },
-            {
                 link: "/klasse78/koerper/prismen",
                 label: "Prismen",
                 icon: IconPrism,
@@ -53,11 +48,6 @@ export const navData78: NavItem[] = [
         label: "Ebene Figuren",
         icon: IconCylinder,
         children: [
-            {
-                link: "/klasse78/ebene_figuren/einfuehrung",
-                label: "Einführung",
-                icon: IconInfoCircle,
-            },
             {
                 link: "/klasse78/ebene_figuren/dreiecke",
                 label: "Dreiecke",
@@ -82,11 +72,6 @@ export const navData910: NavItem[] = [
         label: "Körper",
         icon: IconDiabolo,
         children: [
-            {
-                link: "/klasse910/koerper/einfuehrung",
-                label: "Einführung",
-                icon: IconInfoCircle,
-            },
             {
                 link: "/klasse910/koerper/pyramiden",
                 label: "Pyramiden",

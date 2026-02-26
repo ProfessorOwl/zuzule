@@ -9,33 +9,36 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@mantine/core": "8.3.10",
-    "@mantine/hooks": "8.3.10",
-    "@tabler/icons-react": "^3.36.0",
-    "@tailwindcss/postcss": "^4.2.0",
-    "katex": "^0.16.27",
+    "@mantine/colors-generator": "^8.3.15",
+    "@mantine/core": "8.3.15",
+    "@mantine/hooks": "8.3.15",
+    "@tabler/icons-react": "^3.37.1",
+    "@tailwindcss/postcss": "^4.2.1",
+    "chroma-js": "^3.2.0",
+    "katex": "^0.16.33",
     "next": "16.1.6",
     "next-video": "^2.6.0",
     "react": "19.2.4",
     "react-dom": "19.2.4",
     "react-katex": "^3.1.0",
     "sharp": "^0.34.5",
-    "tailwindcss": "^4.2.0"
+    "tailwindcss": "^4.2.1",
+    "undici": "^7.22.0"
   },
   "devDependencies": {
     "@svgr/webpack": "^8.1.0",
-    "@types/node": "24.3.3",
+    "@types/node": "25.3.1",
     "@types/react": "19.2.14",
     "@types/react-dom": "19.2.3",
     "@types/react-katex": "^3.0.4",
-    "autoprefixer": "^10.4.23",
-    "eslint": "9.35.0",
+    "autoprefixer": "^10.4.27",
+    "eslint": "10.0.2",
     "eslint-config-next": "16.1.6",
     "postcss": "^8.5.6",
     "postcss-preset-mantine": "1.18.0",
     "postcss-simple-vars": "^7.0.1",
-    "prettier": "3.7.4",
-    "typescript": "5.9.2"
+    "prettier": "3.8.1",
+    "typescript": "5.9.3"
   },
   "overrides": {
     "@types/react": "19.2.14",
