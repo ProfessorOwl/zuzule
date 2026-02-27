@@ -4,6 +4,7 @@ import { ImageCaption } from "@/components/ImageCaption";
 import { Lösung } from "@/components/Lösung";
 import { SuspenseCheckableHeading } from "@/components/SuspenseCheckableHeading";
 import {
+    Divider,
     Flex,
     Grid,
     Image,
@@ -63,31 +64,30 @@ export default function Pyramiden() {
                     alt="Eine Pyramide der Maya"
                     h={500}
                 />
-                    <Lösung title="Lösung" id="Lösung-AllesPyramide" titleOrder={3}>
-                        <List type="ordered">
-                            <ListItem>
-                                Ja, eine sechseckige, gerade Pyramide.
-                                Durchmesser = 3&thinsp;cm, Höhe = 3&thinsp;cm.
-                            </ListItem>
-                            <ListItem>
-                                Nein, es hat eine runde Grundfläche, daher ist
-                                es ein Zylinder.
-                            </ListItem>
-                            <ListItem>
-                                Ja, eine quadratische, gerade Pyramide.
-                                Kantenlänge = 2&thinsp;cm, Höhe =
-                                2,5&thinsp;cm.{" "}
-                            </ListItem>
-                            <ListItem>
-                                Nein, das ist keine normale geometrische Form.
-                            </ListItem>
-                            <ListItem>
-                                Ja, das ist eine rechteckige, schiefe Pyramide.
-                                Kantenlängen = 2 und 3&thinsp;cm, Höhe =
-                                4&thinsp;cm{" "}
-                            </ListItem>
-                        </List>
-                    </Lösung>
+                <Lösung title="Lösung" id="Lösung-AllesPyramide" titleOrder={3}>
+                    <List type="ordered">
+                        <ListItem>
+                            Ja, eine sechseckige, gerade Pyramide. Durchmesser =
+                            3&thinsp;cm, Höhe = 3&thinsp;cm.
+                        </ListItem>
+                        <ListItem>
+                            Nein, es hat eine runde Grundfläche, daher ist es
+                            ein Zylinder.
+                        </ListItem>
+                        <ListItem>
+                            Ja, eine quadratische, gerade Pyramide. Kantenlänge
+                            = 2&thinsp;cm, Höhe = 2,5&thinsp;cm.{" "}
+                        </ListItem>
+                        <ListItem>
+                            Nein, das ist keine normale geometrische Form.
+                        </ListItem>
+                        <ListItem>
+                            Ja, das ist eine rechteckige, schiefe Pyramide.
+                            Kantenlängen = 2 und 3&thinsp;cm, Höhe =
+                            4&thinsp;cm{" "}
+                        </ListItem>
+                    </List>
+                </Lösung>
             </CheckableBlockquote>
             <CheckableHeading title="Volumenberechnung">
                 Das Volumen von einer quadratischen Pyramide lässt sich sowohl
@@ -113,6 +113,7 @@ export default function Pyramiden() {
                     <CheckableBlockquote
                         title="Höhe der Dreieckswände"
                         titleOrder={3}
+                        icon="aha"
                     >
                         <Lösung>
                             Du kannst den Satz des Pythagoras verwenden, um die
@@ -198,7 +199,10 @@ export default function Pyramiden() {
                     Haushaltszucker, beträgt sie{" "}
                     <InlineMath>{String.raw`1{,}56\,\tfrac{\text{g}}{\text{mL}}`}</InlineMath>
                     . Probiere selber, daraus das Volumen zu bekommen!
-                    <Lösung id="LösungZuckerDichte" titleOrder={3}>
+                    <Lösung
+                        title="Lösung: Volumen übers Gewicht"
+                        titleOrder={3}
+                    >
                         Die Dichte hat als Einheit{" "}
                         <InlineMath>{String.raw`\frac{\text{Gewicht}}{\text{Volumen}}`}</InlineMath>
                         , bzw. mathematisch:{" "}
@@ -246,7 +250,7 @@ export default function Pyramiden() {
                         src="/VolumenPyramide/PyramideWürfel.png"
                         width={750}
                         height={900}
-                        alt="Eine Pyramide in einem Quader."
+                        alt="Eine Pyramide in einem Quader"
                     />
                     Nehmen wir die Seitenlänge der Pyramide, die wir gebastelt
                     haben, also 5&thinsp;cm. Dann hat der Würfel ein Volumen von{" "}
@@ -280,7 +284,7 @@ export default function Pyramiden() {
                         src="/VolumenPyramide/PyramideinWürfelEinzeln.png"
                         width={1050}
                         height={850}
-                        alt="Eine Pyramide in einem Quader."
+                        alt="Eine Pyramide in einem Quader"
                     />
                     In diesen Würfel können wir jedoch nicht nur eine Pyramide
                     packen, sondern tatsächlich <b>6 Stück</b>! Denn unter jede
@@ -291,7 +295,7 @@ export default function Pyramiden() {
                         src="/VolumenPyramide/PyramideinWürfel.png"
                         width={1050}
                         height={850}
-                        alt="Sechs Pyramiden in einem Quader."
+                        alt="Sechs Pyramiden in einem Quader"
                     />
                     Das ist etwas schlecht vorzustellen, deshalb ist hier einmal
                     ein Bild von den Pyramiden „herausgezogen“:
@@ -300,7 +304,7 @@ export default function Pyramiden() {
                         src="/VolumenPyramide/PyramideinWürfelExplosion.png"
                         width={1650}
                         height={1700}
-                        alt="Eine Pyramide in einem Quader."
+                        alt="Eine Pyramide in einem Quader"
                     />
                     Mathematisch können wir das so formulieren:
                     <BlockMath>
@@ -347,7 +351,10 @@ export default function Pyramiden() {
                         <Space my="xs" />
                     </CheckableBlockquote>
                 </CheckableHeading>
-                <CheckableBlockquote title="Aufgabe: Pyramidenrätsel">
+                <CheckableBlockquote
+                    title="Aufgabe: Pyramidenrätsel"
+                    icon="frage"
+                >
                     Es sind mehrere Pyramiden gegeben. Bestimme den Wert der
                     Unbekannten!
                     <Image
@@ -355,9 +362,13 @@ export default function Pyramiden() {
                         src="/Pyramidenrätsel.png"
                         width={1400}
                         height={1000}
-                        alt="Mehrere Pyramiden als Aufgabenstellungen."
+                        alt="Mehrere Pyramiden als Aufgabenstellungen"
                     />
-                    <Lösung title="Lösung" id="Lösung-Pyramidenrätsel" titleOrder={3}>
+                    <Lösung
+                        title="Lösung"
+                        id="Lösung-Pyramidenrätsel"
+                        titleOrder={3}
+                    >
                         <List type="ordered">
                             <ListItem>
                                 Nach Höhe umstellen und einsetzen:
@@ -456,6 +467,242 @@ export default function Pyramiden() {
                 z.B. um die Menge an Ziegeln für ein Dach zu berechnen. Hier
                 gibt es jedoch keine allgemeine Formel, denn die Oberfläche ist
                 abhängig von der Anzahl der Seiten.
+                <Divider />
+                Vergleichen wir mal die Netze von einer dreieckigen und einer
+                quadratischen Pyramide:
+                <Image
+                    h={500}
+                    src="/PyramideOberfläche.png"
+                    width={1400}
+                    height={1000}
+                    alt="Eine dreieckige und eine viereckige Pyramide mit den dazugehörigen Netzen"
+                />
+                Die Gesamtfläche der Dreiecke, die auf die Pyramidenspitze
+                zeigen, nennt man auch{" "}
+                <b>
+                    Mantelfläche <InlineMath>M</InlineMath>
+                </b>
+                . Übrig bleibt nur die Grundfläche <InlineMath>G</InlineMath>:
+                Hier also das Dreieck oder das Viereck. Mathematisch können wir
+                das so formulieren:
+                <BlockMath>O = G + O</BlockMath>
+                Für die dreieckige Pyramide gilt:
+                <BlockMath>
+                    {String.raw`
+                    O = G + 3 \cdot A_\text{Dreieck}
+                    `}
+                </BlockMath>
+                oder für die viereckige:
+                <BlockMath>
+                    {String.raw`
+                    O = G + 4 \cdot A_\text{Dreieck}
+                    `}
+                </BlockMath>
+                Die Höhe der Dreiecke kannst du meistens mit dem Satz des
+                Pythagoras berechnen. Schau dir den Infokasten an, wenn du hier
+                Hilfe brauchst oder gehe direkt zu den Aufgaben!
+                <CheckableBlockquote
+                    title="Wdh: Höhe der Dreieckswände"
+                    titleOrder={2}
+                    icon="aha"
+                >
+                    <Lösung>
+                        Du kannst den Satz des Pythagoras verwenden, um die
+                        Pyramidenhöhe zu bestimmen. In dem Beispiel hier ist es
+                        eine quadratische Pyramide mit Seitenlänge 3 und Höhe 3.
+                        Wenn du die <Mark c={"desblue"}>Höhe</Mark> in einer der
+                        Wände einzeichnest siehst du, dass sie zusammen mit der{" "}
+                        <Mark c={"green"}>Pyramidenhöhe</Mark> und der{" "}
+                        <Mark c={"desred"}>halben Seitenlänge</Mark> ein
+                        rechtwinkliges Dreieck bildet. Wir können also den{" "}
+                        <b>Satz des Pythagoras</b> verwenden, um die Länge von{" "}
+                        <Mark c={"desblue"}>
+                            h<sub>Dreieck</sub>
+                        </Mark>{" "}
+                        zu berechnen.
+                        <BlockMath>
+                            {String.raw`
+                            \textcolor{#3312B8}{h_\text{Dreieck}} = \sqrt{1{,}5^2 + 3^2} = \sqrt{11{,}25} \approx 3,35
+                            `}
+                        </BlockMath>
+                        Damit unsere Pyramide also eine Höhe von 3&thinsp;cm
+                        hat, muss die Höhe einer Dreieckswand ca. 3,35&thinsp;cm
+                        betragen.
+                        <Image
+                            h={300}
+                            src="/VolumenPyramide/PyramideHöhe.png"
+                            width={6000}
+                            height={4000}
+                            alt="Das Netz einer Pyramide auf einem Din A4 Blatt"
+                        />
+                    </Lösung>
+                    <Space my="xs" />
+                </CheckableBlockquote>
+                <CheckableBlockquote titleOrder={2} title="Aufgabe: Dachdecken">
+                    Die Dächer eine Burg sollen restauriert werden. Pro m
+                    <sup>2</sup> benötigt eine Dachdeckerfirma 30
+                    Schieferplatten, die in 6er-Packungen gekauft werden. Eine
+                    Packung kostet 30€, zusätzlich wird eine Dachdeckerin oder
+                    ein Dachdecker für 50€ pro m<sup>2</sup> bezahlt. Bestimme
+                    den Gesamtpreis der Restauration und zeichne eine Skizze der
+                    Dächer.
+                    <List>
+                        <ListItem>
+                            <b>Dach 1</b>
+                            <br />
+                            Grundseite: Rechteck 10&thinsp;m x 10&thinsp;m /
+                            Höhe: 16&thinsp;m
+                        </ListItem>
+                        <ListItem>
+                            <b>Dächer 2-6</b> <br />
+                            Grundfläche: Achteck mit 19,3&thinsp;m<sup>
+                                2
+                            </sup>{" "}
+                            und einer Kantenlänge von 2&thinsp;cm / Höhe:
+                            5&thinsp;m
+                        </ListItem>
+                    </List>
+                    <Image
+                        h={500}
+                        fit="contain"
+                        src="/SchlossDächer.jpg"
+                        width={6484}
+                        height={4323}
+                        alt="Ein Schloss mit vielen pyramidenförmigen Dächern"
+                    />
+                    <Lösung
+                        title="Lösung"
+                        titleOrder={3}
+                        id="Lösung-Dachdecken"
+                    >
+                        Skizze:
+                    <ImageCaption
+                        h={300}
+                        fit="contain"
+                        src="/DächerSkizze.png"
+                        width={1200}
+                        height={600}
+                        alt="Eine Skizze der beiden Dachformen"
+                    >(Nicht maßstabsgetreu)</ImageCaption>                        <List>
+                            <ListItem>
+                                <b>Dach 1</b>
+                                <br />
+                                Die Grundfläche vom Rechteck interessiert uns
+                                nicht, da wir nur die Dachfläche benötigen.
+                                Dafür brauchen wir die Höhe der Manteldreiecke.
+                                Wir benutzen dazu den Satz des Pythagoras:
+                                <BlockMath>
+                                    {String.raw`
+                                    \begin{aligned}
+                                        h_\triangle &= \sqrt{\left(\frac{10\,\text{m}}{2}\right)^2+(16\,\text{m})^2} \\
+                                            &= \sqrt{(5\,\text{m})^2 + 256\,\text{m}^2} \\
+                                            &\approx 16{,}76\,\text{m}
+                                    \end{aligned}
+                                    `}
+                                </BlockMath>
+                                Die Breite entspricht der Kantenlänge unserer
+                                Grundfläche, also 10&thinsp;m. Damit können wir
+                                die Mantelfläche berechnen:
+                                <BlockMath>
+                                    {String.raw`
+                                    \begin{aligned}
+                                        M &= 4 \cdot \frac{1}{2}gh_\triangle \\
+                                            &= 4 \cdot \frac{1}{2}\cdot 10\,\text{m} \cdot 16{,}76\,\text{m} \\
+                                            &= 335{,}2\,\text{m}^2
+                                    \end{aligned}
+                                    `}
+                                </BlockMath>
+                                Unser erstes Dach hat also eine Fläche von
+                                335,2&thinsp;m<sup>2</sup>.
+                            </ListItem>
+                            <ListItem>
+                                Auch hier interessiert uns die Grundfläche des
+                                Achtecks nicht. Um jedoch die Höhe der
+                                Manteldreiecke zu bestimmen, brauchen wir den
+                                Durchmesser des Achtecks. Schau dir das Bild
+                                unten zur Erklärung an.
+                                <Image
+                                    h={300}
+                                    fit="contain"
+                                    src="/AchteckBurg.png"
+                                    width={900}
+                                    height={600}
+                                    alt="Ein Achteck, wo ein von 45 Grad eingezeichnet ist"
+                                />
+                                Fasst man eine Seite des Achtecks als
+                                rechtwinkliges Dreieck auf, dann haben die
+                                anderen beiden Winkel im Dreieck eine Größe von
+                                45°, da nur so ein regelmäßiges Achteck
+                                konstruiert werden kann. Das Dreieck ist also
+                                gleichschenklig! Das hilft uns,{" "}
+                                <InlineMath>x</InlineMath> zu berechnen:
+                                <BlockMath>
+                                    {String.raw`
+                                    \begin{aligned}
+                                    x^2 + x^2 &= (2\,\text{m})^2 \\
+                                    2x^2 &= 4\,\text{m}^2&&\lvert :2 \\
+                                    x^2 &= 2\,\text{m}^2 &&\lvert \sqrt{} \\
+                                    x &= \sqrt{2}\,\text{m} \\
+                                    \end{aligned}
+                                    `}
+                                </BlockMath>
+                                Der Durchmesser des Achtecks ist demnach{" "}
+                                <InlineMath>{String.raw`2 \cdot \sqrt{2}\,\text{m} + 2\,\text{m} \approx 4{,}83\,\text{m}`}</InlineMath>
+                                . Jetzt können wir wie beim ersten Dach die Höhe
+                                der Manteldreiecke ausrechnen:
+                                <BlockMath>
+                                    {String.raw`
+                                    \begin{aligned}
+                                        h_\triangle &= \sqrt{\left(\frac{4,83\,\text{m}}{2}\right)^2+(5\,\text{m})^2} \\
+                                            &\approx \sqrt{30{,}82} \\
+                                            &\approx 5{,}55\,\text{m}
+                                    \end{aligned}
+                                    `}
+                                </BlockMath>
+                                Damit ergibt sich als Mantelfläche:
+                                <BlockMath>
+                                    {String.raw`
+                                    \begin{aligned}
+                                        M &= 8 \cdot \frac{1}{2}gh_\triangle \\
+                                            &= 8 \cdot \frac{1}{2}\cdot 2\,\text{m} \cdot 5{,}55\,\text{m} \\
+                                            &= 44{,}4\,\text{m}^2
+                                    \end{aligned}
+                                    `}
+                                </BlockMath>
+                                Ein Dach hat also eine Fläche von 44,4&thinsp;m
+                                <sup>2</sup>. Da wir 5 dieser Dächer haben,
+                                ergibt das eine Gesamtfläche von 222&thinsp;m
+                                <sup>2</sup>.
+                            </ListItem>
+                            <ListItem>
+                                Kommen wir zum Gesamtpreis. Zusammengenommen
+                                haben die zu restaurierenden Dächer eine Fläche
+                                von{" "}
+                                <InlineMath>{String.raw`335{,}2\,\text{m}^2 + 222\,\text{m}^2 = 557,2\,\text{m}^2`}</InlineMath>
+                                . Pro Quadratmeter werden 30 Schindeln benötigt
+                                – da in einer Packung 6 Schindeln sind,
+                                benötigen wir 5 Packungen pro Quadratmeter. Für
+                                uns heißt das also:
+                                <BlockMath>
+                                    {String.raw`
+                                    557{,}2\,\text{m}^2 \cdot 5\,\frac{\text{Packungen}}{\text{m}^2}= 2786\,\text{Packungen}
+                                    `}
+                                </BlockMath>
+                                Da jede Packung 30€ kostet, sind das insgesamt
+                                83580€. Die Dachdecker selber kosten 50€ pro
+                                Quadratmeter, das sind nochmal zusätzliche
+                                Kosten von:
+                                <BlockMath>
+                                    {String.raw`
+                                557{,}2\,\text{m}^2 \cdot 50\frac{€}{\text{m}^2} = 27860€
+                                `}
+                                </BlockMath>
+                                Heißt: Die Restauration aller Dächer kostet
+                                insgesamt 111440€.
+                            </ListItem>
+                        </List>
+                    </Lösung>
+                </CheckableBlockquote>
             </CheckableHeading>
         </div>
     );

@@ -95,6 +95,7 @@ export function ImageCaption({
                     width={width}
                     height={height}
                     alt={alt}
+                    mb={"0"}
                 ></Image>
                 <Text size="sm" ta={"center"} lh={"xs"}>
                     {children}

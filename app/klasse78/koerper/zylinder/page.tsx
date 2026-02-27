@@ -842,7 +842,7 @@ export default function Zylinder() {
                                     geschenkt werden. Ob das als Anlass genügt,
                                     um die Kokosmilch im Supermarkt
                                     zurückzugeben, muss jedoch jeder selber
-                                    entscheiden...
+                                    entscheiden…
                                 </Lösung>
                             </CheckableHeading>
                         </CheckableBlockquote>
