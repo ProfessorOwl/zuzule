@@ -539,7 +539,7 @@ export default function Pyramiden() {
                     <Space my="xs" />
                 </CheckableBlockquote>
                 <CheckableBlockquote titleOrder={2} title="Aufgabe: Dachdecken">
-                    Die Dächer eine Burg sollen restauriert werden. Pro m
+                    Die Dächer eines Schlosses sollen restauriert werden. Pro m
                     <sup>2</sup> benötigt eine Dachdeckerfirma 30
                     Schieferplatten, die in 6er-Packungen gekauft werden. Eine
                     Packung kostet 30€, zusätzlich wird eine Dachdeckerin oder
@@ -576,14 +576,17 @@ export default function Pyramiden() {
                         id="Lösung-Dachdecken"
                     >
                         Skizze:
-                    <ImageCaption
-                        h={300}
-                        fit="contain"
-                        src="/DächerSkizze.png"
-                        width={1200}
-                        height={600}
-                        alt="Eine Skizze der beiden Dachformen"
-                    >(Nicht maßstabsgetreu)</ImageCaption>                        <List>
+                        <ImageCaption
+                            h={300}
+                            fit="contain"
+                            src="/DächerSkizze.png"
+                            width={1200}
+                            height={600}
+                            alt="Eine Skizze der beiden Dachformen"
+                        >
+                            (Nicht maßstabsgetreu)
+                        </ImageCaption>{" "}
+                        <List>
                             <ListItem>
                                 <b>Dach 1</b>
                                 <br />
