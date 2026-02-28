@@ -2,7 +2,7 @@
 
 import { usePathname } from "next/navigation";
 import { Burger, Container, Group, Stack } from "@mantine/core";
-import { useDisclosure } from "@mantine/hooks";
+import { useDisclosure, useClickOutside } from "@mantine/hooks";
 import { useRef, useEffect, useState } from "react";
 import classes from "./header.module.css";
 import NextImage from "next/image";
@@ -16,29 +16,10 @@ export function HeaderSimple() {
         null,
     );
     const pathname = usePathname();
-    const headerRef = useRef<HTMLElement>(null);
-
-    useEffect(() => {
-        const handleClickOutside = (event: MouseEvent) => {
-            if (
-                headerRef.current &&
-                !headerRef.current.contains(event.target as Node)
-            ) {
-                close();
-            }
-        };
-
-        if (opened) {
-            document.addEventListener("mousedown", handleClickOutside);
-        }
-
-        return () => {
-            document.removeEventListener("mousedown", handleClickOutside);
-        };
-    }, [opened, close]);
+    const clickOutside = useClickOutside(() => close())
 
     return (
-        <header className={classes.header} ref={headerRef}>
+        <header className={classes.header} ref={clickOutside}>
             <Container size="md" className={classes.inner}>
                 <Link href="/ueber" className={classes.mainlink}>
                     <Group>
@@ -105,7 +86,7 @@ export function HeaderSimple() {
                             Klassen 7+8
                         </Link>
                         {expandedClass === "78" && (
-                            <div style={{ paddingLeft: "16px" }}>
+                            <div style={{ paddingLeft: "16px" }} onClick={close}>
                                 {navData78.map((item) =>
                                     renderNavItem(item, 0, pathname),
                                 )}
@@ -127,7 +108,7 @@ export function HeaderSimple() {
                             Klassen 9+10
                         </Link>
                         {expandedClass === "910" && (
-                            <div style={{ paddingLeft: "16px" }}>
+                            <div style={{ paddingLeft: "16px" }} onClick={close}>
                                 {navData910.map((item) =>
                                     renderNavItem(item, 0, pathname),
                                 )}

@@ -1,7 +1,6 @@
 "use client";
 
 import {
-    Box,
     Checkbox,
     CheckboxProps,
     Group,
@@ -12,17 +11,19 @@ import {
 import { useEffect, useState } from "react";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import { IconDotsDiagonal2 } from "@tabler/icons-react";
-export interface HeadingItem {
+import { useToggle } from "@mantine/hooks";
+
+interface HeadingItem {
     id: string;
-    text: string;
-    level: number;
+    title: string | null;
+    titleOrder: number;
 }
 
 export function DocumentOutline() {
     const router = useRouter();
     const pathname = usePathname();
     const [headings, setHeadings] = useState<HeadingItem[]>([]);
-    const [checkedItems, setCheckedItems] = useState<Set<string>>(new Set());
+    const [checkedHeadings, setCheckedHeadings] = useState<Set<string>>(new Set());
     const searchParams = useSearchParams();
     const CheckboxIcon: CheckboxProps["icon"] = ({
         indeterminate,
@@ -35,44 +36,43 @@ export function DocumentOutline() {
         );
 
     useEffect(() => {
-        // Get all elements with the data-checkable-id attribute
+        // Alle Elemente sammeln, die den "data-checkable-id"-typen haben
         const checkableElements = document.querySelectorAll(
             "[data-checkable-id]",
         ) as NodeListOf<HTMLElement>;
         const headingItems: HeadingItem[] = [];
-
+        // Sammle davon die ids
         checkableElements.forEach((element) => {
             const id = element.getAttribute("data-checkable-id");
             if (!id) return;
 
-            // Find the Title/heading element inside this container
+            // Irgendwo darin steckt eine Überschrift
             const titleElement = element.querySelector(
                 "h1, h2, h3, h4, h5, h6",
             );
             if (titleElement) {
-                const level = parseInt(titleElement.tagName[1]);
-                const text = titleElement.textContent || "";
+                const titleOrder = parseInt(titleElement.tagName[1]);
+                const title = titleElement.textContent || "";
 
-                if (text.trim()) {
-                    headingItems.push({ id, text, level });
-                }
+                headingItems.push({ id, title, titleOrder });
             }
         });
 
         setHeadings(headingItems);
     }, [pathname]);
 
-    // Sync checked state from URL parameters
+    // Wenn sich die searchParams ändern sollen die entsprechenden Headings zur liste gecheckter Headings zugefügt werden
     useEffect(() => {
-        const newCheckedItems = new Set<string>();
+        const checkedHeading = new Set<string>();
         headings.forEach((heading) => {
-            if (searchParams.get(heading.id) === "true") {
-                newCheckedItems.add(heading.id);
+            if (searchParams.get(heading.id) == "true") {
+                checkedHeading.add(heading.id);
             }
         });
-        setCheckedItems(newCheckedItems);
-    }, [searchParams, headings]);
+        setCheckedHeadings(checkedHeading);
+    }, [searchParams]);
 
+    // Scrolle zum Objekt mit einer bestimmten ID
     const handleScroll = (id: string) => {
         const element = document.querySelector(`[data-checkable-id="${id}"]`);
         if (element) {
@@ -80,8 +80,9 @@ export function DocumentOutline() {
         }
     };
 
+    // Wird ausgeführt, wenn eine Checkbox geklickt wird. Ändert die Searchparams zu den momentan geklickten Checkboxen
     const handleCheckboxToggle = (id: string) => {
-        const isCurrentlyChecked = checkedItems.has(id);
+        const isCurrentlyChecked = checkedHeadings.has(id);
         const newSearchParams = new URLSearchParams(searchParams.toString());
 
         if (isCurrentlyChecked) {
@@ -95,6 +96,28 @@ export function DocumentOutline() {
         router.replace(newUrl, { scroll: false });
     };
 
+    const shouldShowHeading = (index: number): boolean => {
+        const currentHeading = headings[index];
+        let searchLevel = currentHeading.titleOrder;
+        
+        // Check all headings before this one to find parent headings
+        for (let i = index - 1; i >= 0; i--) {
+            const prevHeading = headings[i];
+            
+            // If we find a heading with a lower level (parent)
+            if (prevHeading.titleOrder < searchLevel) {
+                // If this parent is checked, hide the current heading
+                if (checkedHeadings.has(prevHeading.id)) {
+                    return false;
+                }
+                // Continue looking for even higher-level parents
+                searchLevel = prevHeading.titleOrder;
+            }
+        }
+        
+        return true;
+    };
+
     if (headings.length === 0) {
         return null;
     }
@@ -105,8 +128,13 @@ export function DocumentOutline() {
                 Gliederung
             </Text>
             <List>
-                {headings.map((heading) => {
-                    const isChecked = checkedItems.has(heading.id);
+                {headings.map((heading, index) => {
+                    // Hide this heading if a parent heading is checked
+                    if (!shouldShowHeading(index)) {
+                        return null;
+                    }
+
+                    const isChecked = checkedHeadings.has(heading.id);
                     return (
                         <Group
                             key={heading.id}
@@ -114,7 +142,7 @@ export function DocumentOutline() {
                             wrap="nowrap"
                             style={{
                                 cursor: "pointer",
-                                paddingLeft: `${(heading.level - 1) * 12}px`,
+                                paddingLeft: `${(heading.titleOrder - 1) * 12}px`,
                             }}
                             className="outline-item"
                         >
@@ -160,7 +188,7 @@ export function DocumentOutline() {
                                 }}
                                 onClick={() => handleScroll(heading.id)}
                             >
-                                {heading.text}
+                                {heading.title}
                             </Text>
                         </Group>
                     );

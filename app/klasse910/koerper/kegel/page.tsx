@@ -17,21 +17,18 @@ export default function Kegel() {
                         width={2700}
                         height={3375}
                         alt="Eine Eiswaffel"
-                        h={300}
                     />
                     <Image
                         src="/Kegel/VerkehrskegelWellington.jpg"
                         width={1250}
                         height={1590}
                         alt="Sir Wellington mit einem Verkehrskegel auf dem Kopf"
-                        h={300}
                     />
                     <Image
                         src="/Kegel/Muschel.jpg"
                         width={3321}
                         height={4981}
                         alt="Eine kegelförmige Muschel"
-                        h={300}
                     />
                 </Flex>
                 Im Mathematikunterricht sind wir jedoch weniger am Vorkommen von
@@ -55,8 +52,10 @@ export default function Kegel() {
                 {/* //TODO - Video von einem Kegel und seinem korresepondieren Kreis darunter. Kegel wird darauf gelegt und abgerollt. Dann markieren, wie weit Kegel 1x rollt, Netz ausschneiden und zusammenkleben => Zweimal der Gleiche Kegel */}
                 
             </CheckableHeading>
-            <CheckableBlockquote title="Aufgabe: Netze"></CheckableBlockquote>
-            <CheckableHeading title="Oberläche">    
+            <CheckableBlockquote title="Aufgabe: Netze">
+´
+            </CheckableBlockquote>
+            <CheckableHeading title="Oberfläche">    
                 Die Grundfläche des Kegels können wir mit einem Zirkel einfach
                 ausmessen, da sie ein Kreis ist. Ihre Fläche entspricht also:
                 <BlockMath>G = \pi \cdot r_G^2</BlockMath>
@@ -79,7 +78,6 @@ export default function Kegel() {
                     width={1200}
                     height={600}
                     alt="Ein Kegel mit seiner Mantelfläche"
-                    h={300}
                 />
                 Um die Mantelfläche zu berechnen, benötigen wir neben der
                 Wandhöhe noch die Länge des Kreisbogens (im Bild schwarz). Diese
@@ -92,35 +90,30 @@ export default function Kegel() {
                         width={6000}
                         height={4000}
                         alt="Der Mantel eines Kegels"
-                        h={300}
                     />
                     <Image
                         src="/Kegel/Mantel2mod.png"
                         width={1250}
                         height={1590}
                         alt="Der Mantel eines Kegels zweimal zerteilt und nebeneinander gelegt"
-                        h={300}
                     />
                     <Image
                         src="/Kegel/Mantel4.jpg"
                         width={3321}
                         height={4981}
                         alt="Der Mantel eines Kegels viermal zerteilt und nebeneinander gelegt"
-                        h={300}
                     />
                     <Image
                         src="/Kegel/Mantel8.jpg"
                         width={3321}
                         height={4981}
                         alt="Der Mantel eines Kegels achtmal zerteilt und nebeneinander gelegt"
-                        h={300}
                     />
                     <Image
                         src="/Kegel/Mantel16mod.png"
                         width={3321}
                         height={4981}
                         alt="Der Mantel eines Kegels sechzehnmal zerteilt und nebeneinander gelegt"
-                        h={300}
                     />
                 </Flex>
                 Durch mehrfaches halbieren und aneinanderlegen der Mantelfläche
@@ -168,7 +161,7 @@ export default function Kegel() {
                             width={750}
                             height={750}
                             alt="Das Netz einer Mantelfläche als Anteil im ganzen Kreis"
-                            h={375}
+                            h={{base: "auto", md: 375}}
                         />
                         Die Fläche des kompletten Kreises ist:
                         <BlockMath>

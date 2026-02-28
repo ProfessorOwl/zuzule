@@ -2,20 +2,18 @@
 
 import {
     Center,
-    em,
+    CSSProperties,
     Flex,
-    Group,
     Image,
     Stack,
+    StyleProp,
     Text,
-    useMatches,
 } from "@mantine/core";
-import { useMediaQuery } from "@mantine/hooks";
 import NextImage from "next/image";
 
 interface ImageCaptionProps {
     children: React.ReactNode;
-    h?: number;
+    h?: StyleProp<CSSProperties["Height"]>;
     fit?: "contain" | "cover";
     src: string;
     width: number;

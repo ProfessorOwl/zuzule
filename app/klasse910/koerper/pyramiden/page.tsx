@@ -34,14 +34,12 @@ export default function Pyramiden() {
                         width={3888}
                         height={2202}
                         alt="Mehrere ägyptische Pyramiden"
-                        h={250}
                     />
                     <Image
                         src="/pyramidemaya.jpg"
                         width={6000}
                         height={3927}
                         alt="Eine Pyramide der Maya"
-                        h={250}
                     />
                 </Flex>
             </SuspenseCheckableHeading>
@@ -62,7 +60,7 @@ export default function Pyramiden() {
                     width={1000}
                     height={1000}
                     alt="Eine Pyramide der Maya"
-                    h={500}
+                    h={{base: "auto", md: 500}}
                 />
                 <Lösung title="Lösung" id="Lösung-AllesPyramide" titleOrder={3}>
                     <List type="ordered">
@@ -100,7 +98,6 @@ export default function Pyramiden() {
                     entsprechen. Dafür müssen wir zuerst das Netz aufzeichnen.
                     Als Seitenlänge wählen wir z.B. 5&thinsp;cm.
                     <Image
-                        h={300}
                         src="/VolumenPyramide/PyramideNetz.jpg"
                         width={1200}
                         height={600}
@@ -140,7 +137,6 @@ export default function Pyramiden() {
                             hat, muss die Höhe einer Dreieckswand ca.
                             3,35&thinsp;cm betragen.
                             <Image
-                                h={300}
                                 src="/VolumenPyramide/PyramideHöhe.png"
                                 width={6000}
                                 height={4000}
@@ -151,7 +147,7 @@ export default function Pyramiden() {
                     </CheckableBlockquote>
                     <SimpleGrid cols={2} my={"md"}>
                         <ImageCaption
-                            h={250}
+                            h={{base: "auto", md: 250}}
                             src="/VolumenPyramide/PyramideNetzausgeschnitten.jpg"
                             width={6000}
                             height={4000}
@@ -162,7 +158,7 @@ export default function Pyramiden() {
                             können
                         </ImageCaption>
                         <ImageCaption
-                            h={250}
+                            h={{base: "auto", md: 250}}
                             src="/VolumenPyramide/PyramidePapier.jpg"
                             width={6000}
                             height={4000}
@@ -172,7 +168,7 @@ export default function Pyramiden() {
                             zusammen, sodass alle Kanten dicht sind!
                         </ImageCaption>
                         <ImageCaption
-                            h={250}
+                            h={{base: "auto", md: 250}}
                             src="/VolumenPyramide/PyramideWaageZubehör.jpg"
                             width={6000}
                             height={4000}
@@ -184,7 +180,7 @@ export default function Pyramiden() {
                             keinen hast, kannst du dir einen aus Papier rollen.
                         </ImageCaption>
                         <ImageCaption
-                            h={250}
+                            h={{base: "auto", md: 250}}
                             src="/VolumenPyramide/PyramideWaageVoll.jpg"
                             width={6000}
                             height={4000}
@@ -246,7 +242,7 @@ export default function Pyramiden() {
                     umschließt. Seine Seitenlängen entsprechen also der Höhe der
                     Pyramide.
                     <Image
-                        h={375}
+                        h={{base: "auto", md: 375}}
                         src="/VolumenPyramide/PyramideWürfel.png"
                         width={750}
                         height={900}
@@ -280,7 +276,7 @@ export default function Pyramiden() {
                     einem Würfel. Dieser soll diesmal aber die doppelte Höhe
                     unserer Pyramide haben.
                     <Image
-                        h={525}
+                        h={{base: "auto", md: 525}}
                         src="/VolumenPyramide/PyramideinWürfelEinzeln.png"
                         width={1050}
                         height={850}
@@ -291,7 +287,7 @@ export default function Pyramiden() {
                     Grundseite passt eine weitere Pyramide, ohne, dass sie einer
                     anderen in die Quere kommt.
                     <Image
-                        h={525}
+                        h={{base: "auto", md: 525}}
                         src="/VolumenPyramide/PyramideinWürfel.png"
                         width={1050}
                         height={850}
@@ -300,7 +296,7 @@ export default function Pyramiden() {
                     Das ist etwas schlecht vorzustellen, deshalb ist hier einmal
                     ein Bild von den Pyramiden „herausgezogen“:
                     <Image
-                        h={825}
+                        h={{base: "auto", md: 825}}
                         src="/VolumenPyramide/PyramideinWürfelExplosion.png"
                         width={1650}
                         height={1700}
@@ -471,7 +467,7 @@ export default function Pyramiden() {
                 Vergleichen wir mal die Netze von einer dreieckigen und einer
                 quadratischen Pyramide:
                 <Image
-                    h={500}
+                    h={{base: "auto", md: 500}}
                     src="/PyramideOberfläche.png"
                     width={1400}
                     height={1000}
@@ -529,7 +525,6 @@ export default function Pyramiden() {
                         hat, muss die Höhe einer Dreieckswand ca. 3,35&thinsp;cm
                         betragen.
                         <Image
-                            h={300}
                             src="/VolumenPyramide/PyramideHöhe.png"
                             width={6000}
                             height={4000}
@@ -563,7 +558,7 @@ export default function Pyramiden() {
                         </ListItem>
                     </List>
                     <Image
-                        h={500}
+                        h={{base: "auto", md: 500}}
                         fit="contain"
                         src="/SchlossDächer.jpg"
                         width={6484}
@@ -577,7 +572,6 @@ export default function Pyramiden() {
                     >
                         Skizze:
                         <ImageCaption
-                            h={300}
                             fit="contain"
                             src="/DächerSkizze.png"
                             width={1200}
@@ -625,7 +619,6 @@ export default function Pyramiden() {
                                 Durchmesser des Achtecks. Schau dir das Bild
                                 unten zur Erklärung an.
                                 <Image
-                                    h={300}
                                     fit="contain"
                                     src="/AchteckBurg.png"
                                     width={900}

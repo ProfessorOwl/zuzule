@@ -21,7 +21,6 @@ export interface NavItem {
     link?: string;
     children?: NavItem[];
 }
-
 export const navData78: NavItem[] = [
     {
         label: "Körper",

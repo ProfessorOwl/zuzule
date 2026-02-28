@@ -26,13 +26,20 @@ div.next-video-container {
         font-size: 1.1em !important;
     }
 }
-/* .m_ddec01c0 {
+.mantine-List-itemWrapper {
+    width: 100%;
+}
+.mantine-List-itemLabel {
+    width: 100%;
+}
+.m_ddec01c0 {
 }
 
 .katex {
+    display: none !important;
 }
 .m_9e117634 {
 }
 
 .m_8a5d1357 {
-} */
+}
