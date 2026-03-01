@@ -5,13 +5,13 @@ import {
     CheckboxProps,
     Group,
     List,
+    ListItem,
     Stack,
     Text,
 } from "@mantine/core";
 import { useEffect, useState } from "react";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import { IconDotsDiagonal2 } from "@tabler/icons-react";
-import { useToggle } from "@mantine/hooks";
 
 interface HeadingItem {
     id: string;
@@ -127,7 +127,7 @@ export function DocumentOutline() {
             <Text fw={600} size="xs">
                 Gliederung
             </Text>
-            <List>
+            <List withPadding={false}>
                 {headings.map((heading, index) => {
                     // Hide this heading if a parent heading is checked
                     if (!shouldShowHeading(index)) {
@@ -158,9 +158,11 @@ export function DocumentOutline() {
                                 style={{ minWidth: 16, marginTop: 2 }}
                                 icon={CheckboxIcon}
                             />
-                            <Text
+                            <Text 
                                 size="xs"
                                 style={{
+                                    wordBreak: "break-word",
+                                    overflowWrap: "break-word",
                                     color: isChecked
                                         ? "var(--mantine-color-gray-6)"
                                         : "var(--mantine-primary-color-6)",

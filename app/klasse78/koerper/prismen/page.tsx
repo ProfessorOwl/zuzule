@@ -13,7 +13,8 @@ import {
     SimpleGrid,
 } from "@mantine/core";
 import NextImage from "next/image";
-import { InlineMath, BlockMath } from "react-katex";
+import { InlineMath } from "react-katex";
+import BlockMath from "@/components/BlockMath";
 import GeoGebraAppletSlider from "@/components/GeoGebraAppletSlider";
 import Video from "next-video";
 import VieleckInDreiecke from "/videos/Vieleck in Dreiecke.mov";
@@ -35,7 +36,7 @@ export default function Prismen() {
                 überhaupt immer dreieckig?
             </SuspenseCheckableHeading>
             <Image
-                h={400}
+                h={{base: "auto", md: 400}}
                 src="/prisma1.jpg"
                 width={3499}
                 height={5249}
@@ -71,7 +72,6 @@ export default function Prismen() {
                 <b>Schrägbild</b> eines Quaders. Das sollte ungefähr so aussehen
                 wie in dem Bild.
                 <Image
-                    h={300}
                     src="/QuaderSchrägbild@2x.png"
                     width={1802}
                     height={1200}
@@ -101,7 +101,6 @@ export default function Prismen() {
                     </ListItem>
                 </List>
                 <Image
-                    h={300}
                     src="/PrismaSchrägbildEntstehung@2x.png"
                     width={2402}
                     height={1200}
@@ -112,7 +111,6 @@ export default function Prismen() {
             <CheckableBlockquote icon="frage" title="Aufgabe: Schrägbilder">
                 Vervollständige die folgenden Schrägbilder in deinem Heft:
                 <Image
-                    h={300}
                     src="/SchrägbilderVervollständigenAufgabe@2x.png"
                     width={3600}
                     height={1200}
@@ -125,7 +123,6 @@ export default function Prismen() {
                 >
                     <Lösung>
                         <Image
-                            h={300}
                             src="/SchrägbilderVervollständigenLösung@2x.png"
                             width={3600}
                             height={1200}
@@ -141,14 +138,12 @@ export default function Prismen() {
                 Spielwürfel zu basteln?
                 <SimpleGrid cols={2} my={"md"}>
                     <Image
-                        h={300}
                         src="/NetzWürfel.jpg"
                         width={6000}
                         height={4000}
                         alt="Ein Würfelnetz, gezeichnet auf Papier."
                     />
                     <Image
-                        h={300}
                         src="/WürfelPapier.jpg"
                         width={6000}
                         height={4000}
@@ -164,14 +159,12 @@ export default function Prismen() {
                 heißt es: Ausschneiden, Falten und mit Klebeband zusammenkleben!
                 <SimpleGrid cols={2} my={"md"}>
                     <Image
-                        h={300}
                         src="/NetzPrisma.jpg"
                         width={6000}
                         height={4000}
                         alt="Das Netz eines dreieckigen Prismas, gezeichnet auf Papier."
                     />
                     <Image
-                        h={300}
                         src="/PrismaPapier.jpg"
                         width={6000}
                         height={4000}
@@ -188,7 +181,7 @@ export default function Prismen() {
                 Mantelfläche ist dann die Fläche, die durch die Höhe des Prismas
                 dazukommt.
                 <Image
-                    h={400}
+                    h={{base: "auto", md: 400}}
                     src="/PrismaNetzFläche@2x.png"
                     width={3200}
                     height={2000}
@@ -210,7 +203,6 @@ export default function Prismen() {
             >
                 Berechne den Oberflächeninhalt der Prismen:
                 <Image
-                    h={300}
                     src="/PrismaOberflächeninhalt@2x.png"
                     width={3602}
                     height={1200}
@@ -277,7 +269,7 @@ export default function Prismen() {
                 des Prismas, die anderen dem <b>Umfang</b> der Grundfläche. Das
                 macht die Berechnung des Oberflächeninhalts deutlich einfacher!
                 <Image
-                    h={400}
+                    h={{base: "auto", md: 400}}
                     src="/PrismaNetzFlächeRechteck@2x.png"
                     width={3200}
                     height={2000}
@@ -295,7 +287,7 @@ export default function Prismen() {
                 >
                     <SimpleGrid cols={2} my={"md"}>
                         <ImageCaption
-                            h={250}
+                            h={{base: "auto", md: 250}}
                             src="/VolumenWasser/VolumenWasser1.jpg"
                             width={6000}
                             height={4000}
@@ -306,7 +298,7 @@ export default function Prismen() {
                             testen. Testen wir das Volumen von diesem Stein.
                         </ImageCaption>
                         <ImageCaption
-                            h={250}
+                            h={{base: "auto", md: 250}}
                             src="/VolumenWasser/VolumenWasser2.jpg"
                             width={6000}
                             height={4000}
@@ -316,7 +308,7 @@ export default function Prismen() {
                             600&thinsp;mL.
                         </ImageCaption>
                         <ImageCaption
-                            h={250}
+                            h={{base: "auto", md: 250}}
                             src="/VolumenWasser/VolumenWasser3.jpg"
                             width={6000}
                             height={4000}
@@ -326,7 +318,7 @@ export default function Prismen() {
                             komplett bedeckt sein!
                         </ImageCaption>
                         <ImageCaption
-                            h={250}
+                            h={{base: "auto", md: 250}}
                             src="/VolumenWasser/VolumenWasser4.jpg"
                             width={6000}
                             height={4000}
@@ -336,7 +328,7 @@ export default function Prismen() {
                             zu Boden.
                         </ImageCaption>
                         <ImageCaption
-                            h={250}
+                            h={{base: "auto", md: 250}}
                             src="/VolumenWasser/VolumenWasser5.jpg"
                             width={6000}
                             height={4000}
@@ -376,7 +368,6 @@ export default function Prismen() {
                         <InlineMath>b</InlineMath> die beiden Grundseiten
                         bezeichnen.
                         <Image
-                            h={300}
                             src="/RechteckFläche@2x.png"
                             width={1802}
                             height={1200}
@@ -443,7 +434,6 @@ export default function Prismen() {
                         berechnen. Im Bild unten findest du dazu nochmal eine
                         Herleitung.
                         <Image
-                            h={300}
                             src="/DreieckFläche@2x.png"
                             width={2400}
                             height={1200}
@@ -469,7 +459,6 @@ export default function Prismen() {
                             \end{aligned}
                         `}</BlockMath>
                         <Image
-                            h={300}
                             src="/DreieckigesPrismaVolumen@2x.png"
                             width={2400}
                             height={1200}

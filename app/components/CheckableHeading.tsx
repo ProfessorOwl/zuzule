@@ -64,9 +64,10 @@ export function CheckableHeading({
         const newUrl = `${window.location.pathname}?${newSearchParams.toString()}`;
         router.replace(newUrl, { scroll: false });
     };
-
+    // Wenn px = 0, dann gibts keinen Overflow! Aber wenn = sm, dann verschiebt sich alles!
     return (
         <Stack gap="0" mb={"md"} mt={"xl"} data-checkable-id={uniqueId}>
+
             <div style={{ display: "flex", alignItems: "center", gap: "8px" }}>
                 <Checkbox
                     checked={checked}
@@ -89,7 +90,7 @@ export function CheckableHeading({
                 </Title>
             </div>
             <Collapse in={!checked}>
-                <Text component="div" mt={5} lh={1.7}>
+                <Text component="div">
                     {children}
                 </Text>
             </Collapse>

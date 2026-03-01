@@ -13,10 +13,10 @@ import {
     Spoiler,
     ThemeIcon,
 } from "@mantine/core";
-import NextImage from "next/image";
 import { CheckableBlockquote } from "@/components/CheckableBlockquote";
 import { Lösung } from "@/components/Lösung";
-import { BlockMath, InlineMath } from "react-katex";
+import { InlineMath } from "react-katex";
+import BlockMath from "@/components/BlockMath";
 import Video from "next-video";
 import UmfangZylinder from "/videos/UmfangZylinder.mov";
 import Link from "next/link";
@@ -38,14 +38,12 @@ export default function Zylinder() {
                         width={6000}
                         height={4000}
                         alt="Verschiedene Dosen"
-                        // flex={{ base: "1 1 100%", md: 1 }}
                     />
                     <Image
                         src="/regler.jpg"
                         width={6000}
                         height={4000}
                         alt="Ein Regler für die Lautstärke"
-                        // flex={{ base: "1 1 100%", md: 1 }}
                     />
                 </Flex>
             </CheckableHeading>
@@ -131,7 +129,7 @@ export default function Zylinder() {
                 >
                     <Lösung>
                         <Image
-                            h={500}
+                            h={{base: "auto", md: 500}}
                             src="/ZylinderLösung@2x.png"
                             width={3600}
                             height={2000}
@@ -147,8 +145,6 @@ export default function Zylinder() {
                 insbesondere wenn wir uns die Autoreifen von Formel-1 Autos
                 anschauen!
                 <ImageCaption
-                    // @ts-ignore
-                    h={300}
                     src="/Formel1Reifen.jpg"
                     width={846}
                     rotate="right"
@@ -735,7 +731,7 @@ export default function Zylinder() {
                                     <b>Dose mit Kokosmilch</b>
                                     <Flex>
                                         <Image
-                                            h={{ base: 200, md: 275 }}
+                                            h={{ base: "auto", md: 275 }}
                                             src="/innenKokos.jpg"
                                             width={6000}
                                             height={4000}
@@ -743,7 +739,7 @@ export default function Zylinder() {
                                             alt="Ein Lineal liegt über der Öffnung einer Konservendose mit Kokosmilch. Ablesbar ist ein Durchmesser von 7,3 cm."
                                         />
                                         <Image
-                                            h={{ base: 200, md: 275 }}
+                                            h={{ base: "auto", md: 275 }}
                                             src="/füllstandKokos.jpg"
                                             width={6000}
                                             height={4000}
@@ -766,7 +762,7 @@ export default function Zylinder() {
                                     <b>Dose mit gehackten Tomaten</b>
                                     <Flex>
                                         <Image
-                                            h={{ base: 200, md: 275 }}
+                                            h={{ base: "auto", md: 275 }}
                                             src="/innenTomate.jpg"
                                             width={6000}
                                             height={4000}
@@ -774,7 +770,7 @@ export default function Zylinder() {
                                             alt="Ein Lineal liegt über der Öffnung einer Konservendose mit gehackten Tomaten. Ablesbar ist ein Durchmesser von 7,3 cm."
                                         />
                                         <Image
-                                            h={{ base: 200, md: 275 }}
+                                            h={{ base: "auto", md: 275 }}
                                             src="/füllstandTomate.jpg"
                                             width={6000}
                                             height={4000}

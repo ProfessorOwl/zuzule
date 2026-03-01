@@ -3,18 +3,26 @@
 import {
     createTheme,
     Divider,
-    em,
     Flex,
     Image,
     List,
+    ListItem,
     Mark,
     Space,
+    Text
 } from "@mantine/core";
 import { generateColors } from "@mantine/colors-generator";
 import NextImage from "next/image";
 
 export const theme = createTheme({
     components: {
+        Text: Text.extend({
+            defaultProps: {
+                lh: 1.7,
+                mt: 5,
+                component: "div",
+            }
+        }),
         Divider: Divider.extend({
             defaultProps: {
                 my: "md",
@@ -25,6 +33,7 @@ export const theme = createTheme({
                 withPadding: true,
             },
         }),
+
         Image: Image.extend({
             defaultProps: {
                 my: "md",

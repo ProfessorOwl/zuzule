@@ -18,7 +18,6 @@ import {
     IconHelpHexagonFilled,
     IconInfoHexagonFilled,
 } from "@tabler/icons-react";
-import { useDisclosure } from "@mantine/hooks";
 
 interface CheckableBlockquoteProps {
     children: React.ReactNode;
@@ -86,7 +85,7 @@ export function CheckableBlockquote({
     const Icon = icon ? IconMap[icon] : null;
 
     return (
-        <Blockquote px={"lg"} py={"md"} my={"md"} data-checkable-id={uniqueId}>
+        <Blockquote px={{base: "xs", md: "lg"}} py={"md"} my={"md"} data-checkable-id={uniqueId}>
             <div style={{ display: "flex", alignItems: "center", gap: "8px" }}>
                 <Checkbox
                     checked={checked}
@@ -117,7 +116,6 @@ export function CheckableBlockquote({
                     lineClamp={checked ? 1 : 0}
                     opacity={checked ? 0.3 : 1}
                     mt={5}
-                    lh={1.7}
                 >
                     {children}
                 </Text>

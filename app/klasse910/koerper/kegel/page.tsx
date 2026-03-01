@@ -1,8 +1,10 @@
 import { CheckableBlockquote } from "@/components/CheckableBlockquote";
 import { CheckableHeading } from "@/components/CheckableHeading";
 import { Lösung } from "@/components/Lösung";
+import MBlockMath from "@/components/MBlockMath";
 import { Flex, Image, List, ListItem, Mark } from "@mantine/core";
-import { BlockMath, InlineMath } from "react-katex";
+import { InlineMath } from "react-katex";
+import BlockMath from "@/components/BlockMath";
 
 export default function Kegel() {
     return (
@@ -176,15 +178,23 @@ export default function Kegel() {
                         <InlineMath>{String.raw`\frac{1}{4}`}</InlineMath> an
                         der Fläche und dem Umfang des kompletten Kreises.
                         Allgemein ausgedrückt:
-                        <BlockMath>
-                            {String.raw`
+                        <MBlockMath
+                            mobile={String.raw`
+                    \begin{aligned}
+                    M &= \frac{U}{U_\text{Gesamt}}\cdot A \\
+                    &\Downarrow \scriptsize{\textsf{Einsetzen}} \\ 
+                        &= \frac{U}{2\cancel{\pi\textcolor{#3312B8}{h_\text{Wand}}}} \cdot \cancel{\pi} \textcolor{#3312B8}{h_\text{Wand}}^{\cancel{2}}\\ 
+                        &= \frac{U}{2} \cdot \textcolor{#3312B8}{h_\text{Wand}}
+                    \end{aligned}
+                    `}
+                            desktop={String.raw`
                     \begin{aligned}
                     M &= \frac{U}{U_\text{Gesamt}}\cdot A \quad \lvert \textsf{Einsetzen} \\ 
                         &= \frac{U}{2\cancel{\pi\textcolor{#3312B8}{h_\text{Wand}}}} \cdot \cancel{\pi} \textcolor{#3312B8}{h_\text{Wand}}^{\cancel{2}}\\ 
                         &= \frac{U}{2} \cdot \textcolor{#3312B8}{h_\text{Wand}}
                     \end{aligned}
                     `}
-                        </BlockMath>
+                        />
                         Damit haben wir die Formel hergeleitet!
                     </Lösung>
                 </CheckableBlockquote>

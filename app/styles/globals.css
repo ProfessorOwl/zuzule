@@ -12,11 +12,7 @@ h6 {
     overflow-wrap: break-word;
     hyphens: auto;
 }
-p {
-    margin-top: 5px;
-    font-size: 16pt;
-    line-height: 1.5;
-}
+
 div.next-video-container {
     width: 100% !important;
 }
@@ -32,14 +28,32 @@ div.next-video-container {
 .mantine-List-itemLabel {
     width: 100%;
 }
+
+.mantine-Text-root,
+.mantine-List-root {
+    font-size: var(--mantine-font-size-md);
+}
+
+.mantine-List-root:where([data-with-padding]) {
+    padding-inline-start: 23px;
+}
+/* Blockquotes */
 .m_ddec01c0 {
+    /* display: none !important; */
 }
 
 .katex {
-    display: none !important;
+    /* display: none !important; */
+    width: 100%;
+    /* overflow-x: auto;
+    overflow-y: visible; */
 }
+/* Bilder */
 .m_9e117634 {
+    /* display: none !important; */
 }
 
+/* Text aus Überschriften */
 .m_8a5d1357 {
+    /* display: none !important; */
 }

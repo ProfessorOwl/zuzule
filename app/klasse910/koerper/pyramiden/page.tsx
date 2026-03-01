@@ -2,11 +2,11 @@ import { CheckableBlockquote } from "@/components/CheckableBlockquote";
 import { CheckableHeading } from "@/components/CheckableHeading";
 import { ImageCaption } from "@/components/ImageCaption";
 import { Lösung } from "@/components/Lösung";
+import MBlockMath from "@/components/MBlockMath";
 import { SuspenseCheckableHeading } from "@/components/SuspenseCheckableHeading";
 import {
     Divider,
     Flex,
-    Grid,
     Image,
     List,
     ListItem,
@@ -14,10 +14,12 @@ import {
     SimpleGrid,
     Space,
 } from "@mantine/core";
-import { BlockMath, InlineMath } from "react-katex";
+import {InlineMath} from "react-katex";
+import BlockMath from "@/components/BlockMath";
 
 export default function Pyramiden() {
-    return (
+ 
+  return (
         <div>
             <SuspenseCheckableHeading title="Die Pyramide">
                 Pyramiden haben auf Menschen schon lange eine Anziehungskraft –
@@ -128,11 +130,16 @@ export default function Pyramiden() {
                                 h<sub>Dreieck</sub>
                             </Mark>{" "}
                             zu berechnen.
-                            <BlockMath>
-                                {String.raw`
+                            <MBlockMath
+                                desktop = {String.raw`
                             \textcolor{#3312B8}{h_\text{Dreieck}} = \sqrt{1{,}5^2 + 3^2} = \sqrt{11{,}25} \approx 3,35
                             `}
-                            </BlockMath>
+                                mobile = {String.raw`
+                            \textcolor{#3312B8}{h_\text{Dreieck}} &= \sqrt{1{,}5^2 + 3^2} \\ 
+                            &= \sqrt{11{,}25} \\
+                            &\approx 3,35
+                                    `}
+                            />
                             Damit unsere Pyramide also eine Höhe von 3&thinsp;cm
                             hat, muss die Höhe einer Dreieckswand ca.
                             3,35&thinsp;cm betragen.
@@ -176,7 +183,7 @@ export default function Pyramiden() {
                         >
                             Die Pyramide stellst du nun kopfüber in einem Glas
                             auf eine Waage und tarierst sie auf 0&thinsp;g. Zum
-                            Iinfüllen ist ein Trichter praktisch – wenn du
+                            Einfüllen ist ein Trichter praktisch – wenn du
                             keinen hast, kannst du dir einen aus Papier rollen.
                         </ImageCaption>
                         <ImageCaption
@@ -208,27 +215,40 @@ export default function Pyramiden() {
                         <InlineMath>V</InlineMath> das Volumen. Wir kennen
                         Dichte und Masse, also stellen wir nach{" "}
                         <InlineMath>V</InlineMath> um:
-                        <BlockMath>
-                            {String.raw`
+                        <MBlockMath
+                            mobile={String.raw`
+                        \rho &= \frac{m}{V} \\
+                        &\Downarrow \scriptsize{\cdot V} \\
+                        \rho \cdot V &= m \\
+                        &\Downarrow \scriptsize{: \rho} \\
+                        V &= \frac{m}{\rho} 
+                        `}
+                            desktop={String.raw`
                         \begin{aligned}
                         \rho &= \frac{m}{V} &&\lvert \cdot V  \\
                         \rho \cdot V &= m &&\lvert \: \rho \\
                         V &= \frac{m}{\rho} 
                         \end{aligned}
                         `}
-                        </BlockMath>
+                        />
                         Setzen wir die Dichte von{" "}
                         <InlineMath>{String.raw`1{,}56\,\tfrac{\text{g}}{\text{mL}}`}</InlineMath>{" "}
                         und die Masse von{" "}
                         <InlineMath>{String.raw`43\,\text{g}`}</InlineMath> ein,
                         so erhalten wir:
-                        <BlockMath>
-                            {String.raw`
+                        <MBlockMath
+                            desktop={String.raw`
                         \begin{aligned}
                         V = \frac{m}{\rho} = \frac{43\,\text{g}}{1{,}56\,\tfrac{\text{g}}{\text{mL}}} \approx 27,56\,\text{mL}
                         \end{aligned}
                         `}
-                        </BlockMath>
+                        mobile={String.raw`
+                                                    V &= \frac{m}{\rho} \\
+                                                    &= \frac{43\,\text{g}}{1{,}56\,\tfrac{\text{g}}{\text{mL}}} \\ 
+                                                    &\approx 27,56\,\text{mL}
+
+                            `}
+                        />
                     </Lösung>
                 </CheckableHeading>
                 <CheckableBlockquote
@@ -254,11 +274,16 @@ export default function Pyramiden() {
                     . Für unsere Pyramide bekamen wir experimentell ein Volumen
                     von 27,57&thinsp;mL. Setzen wir das ins Verhältnis mit dem
                     Würfel, so bekommen wir:
-                    <BlockMath>
-                        {String.raw`
+                    <MBlockMath
+                        desktop={String.raw`
                     \text{Anteil Pyramide} = \frac{27{,}57\,\text{cm}^3}{125\,\text{cm}^3} \approx 0,22 \approx \frac{1}{5}
                     `}
-                    </BlockMath>
+                    mobile={String.raw`
+                        \text{Anteil Pyramide} &= \frac{27{,}57\,\text{cm}^3}{125\,\text{cm}^3} \\
+                        &\approx 0,22 \\
+                        &\approx \frac{1}{5}
+                        `}
+                    />
                     Wenn wir einen Quader mit der Formel{" "}
                     <InlineMath>{String.raw`V_\text{Quader} = G \cdot h`}</InlineMath>{" "}
                     berechnen, so nimmt eine Pyramide laut unserem Experiment
@@ -324,23 +349,34 @@ export default function Pyramiden() {
                                 {String.raw`
                 V_\text{Quader} = G \cdot h_\text{Quader}
                 `}
+                            
                             </BlockMath>
                             mit der Grundfläche <InlineMath>G</InlineMath> und
                             der Höhe{" "}
                             <InlineMath>{String.raw`h_\text{Quader}`}</InlineMath>
                             . Das können wir in die vorige Gleichung einsetzen,
                             also bekommen wir:
-                            <BlockMath>
-                                {String.raw`
-                            \begin{aligned}
-                            V_\text{Quader} &= 6 \cdot V_\text{Pyramide} &&\lvert \text{Einsetzen:}\; V_\text{Quader} = G \cdot h_\text{Quader} \\
-                            G \cdot h_\text{Quader} &=  6 \cdot V_\text{Pyramide} &&\lvert \text{Einsetzen:}\; h_\text{Quader} = 2\cdot h_\text{Pyramide} \\
-                            G \cdot 2 \cdot h_\text{Pyramide} &=  6 \cdot V_\text{Pyramide} &&\lvert :6 \\
-                            G \cdot \frac{2}{6} \cdot h_\text{Pyramide} &= \cdot V_\text{Pyramide} \\
-                            V_\text{Pyramide} &= \frac{1}{3} G \cdot h_\text{Pyramide}
-                            \end{aligned}
-                            `}
-                            </BlockMath>
+                            <MBlockMath
+                                mobile={String.raw`
+                                    V_\text{Quader} &= 6 \cdot V_\text{Pyramide} \\
+                                    &\Downarrow\scriptsize{V_\text{Quader} = G \cdot h_\text{Quader}} \\
+                                    G \cdot h_\text{Quader} &=  6 \cdot V_\text{Pyramide} \\
+                                    &\Downarrow \scriptsize{h_\text{Quader} = 2\cdot h_\text{Pyramide}} \\
+                                    G \cdot 2 h_\text{Pyramide} &=  6 \cdot V_\text{Pyramide} \\
+                                    &\Downarrow \scriptsize{:6} \\
+                                    G \cdot \frac{2}{6} h_\text{Pyramide} &= V_\text{Pyramide} \\
+                                    V_\text{Pyramide} &= \frac{1}{3} G \cdot h_\text{Pyramide}
+                                    `}
+                                desktop={String.raw`
+                                \begin{aligned}
+                                V_\text{Quader} &= 6 \cdot V_\text{Pyramide} &&\lvert V_\text{Quader} = G \cdot h_\text{Quader} \\
+                                G \cdot h_\text{Quader} &=  6 \cdot V_\text{Pyramide} &&\lvert h_\text{Quader} = 2\cdot h_\text{Pyramide} \\
+                                G \cdot 2 h_\text{Pyramide} &=  6 \cdot V_\text{Pyramide} &&\lvert :6 \\
+                                G \cdot \frac{2}{6} h_\text{Pyramide} &= V_\text{Pyramide} \\
+                                V_\text{Pyramide} &= \frac{1}{3} G \cdot h_\text{Pyramide}
+                                \end{aligned}
+                                `}
+                            />
                             Eine Pyramide ist also immer ein Drittel so groß wie
                             der sie umgebende Quader!
                         </Lösung>
@@ -354,7 +390,7 @@ export default function Pyramiden() {
                     Es sind mehrere Pyramiden gegeben. Bestimme den Wert der
                     Unbekannten!
                     <Image
-                        h={500}
+                        h={{base: "auto", md:500}}
                         src="/Pyramidenrätsel.png"
                         width={1400}
                         height={1000}
@@ -368,38 +404,71 @@ export default function Pyramiden() {
                         <List type="ordered">
                             <ListItem>
                                 Nach Höhe umstellen und einsetzen:
-                                <BlockMath>{String.raw`
+                                <MBlockMath desktop={String.raw`
                                 \begin{aligned}
                                 V &= \frac{1}{3}Gh &&\lvert \cdot \frac{3}{G} \\
                                 \frac{3V}{G} &= h \\
                                 \Rightarrow h &= \frac{3 \cdot 32}{4 \cdot 4} = \frac{96}{16} = 6
                                 \end{aligned}
-                    `}</BlockMath>
+                                `}
+                                mobile={String.raw`
+                                    V &= \frac{1}{3}Gh \\
+                                    &\Downarrow \scriptsize{\cdot \frac{3}{G}} \\
+                                    \frac{3V}{G} &= h \\
+                                    \Rightarrow h &= \frac{3 \cdot 32}{4 \cdot 4} = \frac{96}{16} = 6
+                                    `}
+                    
+                    />
                             </ListItem>
                             <ListItem>
                                 Nach Grundfläche umstellen und einsetzen:
-                                <BlockMath>{String.raw`
+                                <MBlockMath desktop={String.raw`
                                 \begin{aligned}
                                 V &= \frac{1}{3}Gh &&\lvert \cdot \frac{3}{h} \\
                                 \frac{3V}{h} &= G \\
                                 &\Rightarrow G = \frac{3 \cdot 18}{9} = \frac{54}{9} = 6
                                 \end{aligned}
-                    `}</BlockMath>
+                    `}
+                                mobile = {String.raw`
+                                V &= \frac{1}{3}Gh \\
+                                &\Downarrow \scriptsize{\cdot \frac{3}{h}} \\
+                                \frac{3V}{h} &= G \\
+                                &\Rightarrow G = \frac{3 \cdot 18}{9} = \frac{54}{9} = 6`}
+                                />
                             </ListItem>
                             <ListItem>
                                 Zuerst nach Grundfläche umstellen:
-                                <BlockMath>{String.raw`
+                                <MBlockMath
+                                    mobile={String.raw`
+                                V &= \frac{1}{3}Gh \\
+                                &\Downarrow \scriptsize{\cdot \frac{3}{h}} \\
+                                G &= \frac{3V}{h}\\
+                                &\Rightarrow G = \frac{3\cdot 18\sqrt{3}}{6} = 9\sqrt{3}
+                    `}
+                                    desktop={String.raw`
                                 \begin{aligned}
                                 V &= \frac{1}{3}Gh &&\lvert \cdot \frac{3}{h} \\
                                 G &= \frac{3V}{h}\\
                                 &\Rightarrow G = \frac{3\cdot 18\sqrt{3}}{6} = 9\sqrt{3}
                                 \end{aligned}
-                    `}</BlockMath>
+                    `}
+                                />
                                 Formel für Dreiecksgrundfläche:{" "}
                                 <InlineMath>{String.raw`G = \frac{1}{2}xh_\triangle`}</InlineMath>
                                 . Da es ein gleichseitiges Dreieck ist, gilt mit
                                 dem Satz des Pythagoras:
-                                <BlockMath>{String.raw`
+                                <MBlockMath
+                                    mobile={String.raw`
+                                x^2 &= h_\triangle^2 + \left(\frac{1}{2}x^2\right)^2 \\
+                                &\Downarrow \scriptsize{-\left(\frac{1}{2}x^2\right)^2} \\
+                                x^2 - \left(\frac{1}{2}x^2\right)^2 &= h_\triangle^2 \\
+                                &\Downarrow \scriptsize{\sqrt{}} \\
+                                h_\triangle &= \sqrt{x^2 - \left(\frac{1}{2}x^2\right)^2} \\
+                                &= \sqrt{x^2 - \frac{1}{4}x^2} \\
+                                &= \sqrt{\frac{3}{4}x^2} \\
+                                &= \frac{\sqrt{3}}{2}x
+                    `}
+                                    desktop={String.raw`
                                 \begin{aligned}
                                 x^2 &= h_\triangle^2 + \left(\frac{1}{2}x^2\right)^2 &&\lvert -\left(\frac{1}{2}x^2\right)^2\\
                                 x^2 - \left(\frac{1}{2}x^2\right)^2 &= h_\triangle^2 &&\lvert \sqrt{}\\
@@ -408,10 +477,21 @@ export default function Pyramiden() {
                                 &= \sqrt{\frac{3}{4}x^2} \\
                                 &= \frac{\sqrt{3}}{2}x
                                 \end{aligned}
-                    `}</BlockMath>
+                    `}
+                                />
                                 Das können wir in die Formel für die
                                 Dreiecksfläche einsetzen und bekommen:
-                                <BlockMath>{String.raw`
+                                <MBlockMath
+                                    mobile={String.raw`
+                                G &= \frac{1}{2}xh_\triangle \\
+                                &= \frac{1}{2}x\cdot \frac{\sqrt{3}}{2}x \\
+                                &= \frac{\sqrt{3}}{4}x^2 \\
+                                &\Downarrow \scriptsize{\cdot \frac{4}{\sqrt{3}}} \\
+                                \frac{4}{\sqrt{3}}G &= x^2 \\
+                                &\Downarrow \scriptsize{\sqrt{}} \\
+                                x &= \sqrt{\frac{4}{\sqrt{3}}G} 
+                    `}
+                                    desktop={String.raw`
                                 \begin{aligned}
                                 G &= \frac{1}{2}xh_\triangle \\
                                 &= \frac{1}{2}x\cdot \frac{\sqrt{3}}{2}x \\
@@ -419,7 +499,8 @@ export default function Pyramiden() {
                                 \frac{4}{\sqrt{3}}G &= x^2 &&\lvert \sqrt{} \\
                                 x &= \sqrt{\frac{4}{\sqrt{3}}G} 
                                 \end{aligned}
-                    `}</BlockMath>
+                    `}
+                                />
                                 Jetzt das Ergebnis für{" "}
                                 <InlineMath>G</InlineMath> einsetzen, dann
                                 bekommen wir <InlineMath>x</InlineMath> heraus:
@@ -444,7 +525,16 @@ export default function Pyramiden() {
                                 Die rechteckige Grundfläche berechnet sich nach{" "}
                                 <InlineMath>{String.raw`G = 6 \cdot \frac{1}{2}x = 3x`}</InlineMath>
                                 , das wir einsetzen können:
-                                <BlockMath>{String.raw`
+                                <MBlockMath
+                                    mobile={String.raw`
+                                V &= \frac{1}{3}Gx \\
+                                &= \frac{1}{3}\cdot 3x \cdot x \\
+                                &= x^2 \\
+                                &\Downarrow \scriptsize{\sqrt{}} \\
+                                x &= \sqrt{V} \\
+                                    &\Rightarrow x = \sqrt{25} = 5
+                                `}
+                                    desktop={String.raw`
                                 \begin{aligned}
                                 V &= \frac{1}{3}Gx \\
                                 &= \frac{1}{3}\cdot 3x \cdot x \\
@@ -452,7 +542,8 @@ export default function Pyramiden() {
                                 x &= \sqrt{V} \\
                                     &\Rightarrow x = \sqrt{25} = 5
                                 \end{aligned}
-                                `}</BlockMath>
+                                `}
+                                />
                             </ListItem>
                         </List>
                     </Lösung>
@@ -516,11 +607,16 @@ export default function Pyramiden() {
                             h<sub>Dreieck</sub>
                         </Mark>{" "}
                         zu berechnen.
-                        <BlockMath>
-                            {String.raw`
+                            <MBlockMath
+                                desktop = {String.raw`
                             \textcolor{#3312B8}{h_\text{Dreieck}} = \sqrt{1{,}5^2 + 3^2} = \sqrt{11{,}25} \approx 3,35
                             `}
-                        </BlockMath>
+                                mobile = {String.raw`
+                            \textcolor{#3312B8}{h_\text{Dreieck}} &= \sqrt{1{,}5^2 + 3^2} \\ 
+                            &= \sqrt{11{,}25} \\
+                            &\approx 3,35
+                                    `}
+                        />
                         Damit unsere Pyramide also eine Höhe von 3&thinsp;cm
                         hat, muss die Höhe einer Dreieckswand ca. 3,35&thinsp;cm
                         betragen.
@@ -632,8 +728,16 @@ export default function Pyramiden() {
                                 konstruiert werden kann. Das Dreieck ist also
                                 gleichschenklig! Das hilft uns,{" "}
                                 <InlineMath>x</InlineMath> zu berechnen:
-                                <BlockMath>
-                                    {String.raw`
+                                <MBlockMath
+                                    mobile={String.raw`
+                                    x^2 + x^2 &= (2\,\text{m})^2 \\
+                                    2x^2 &= 4\,\text{m}^2 \\
+                                    &\Downarrow \scriptsize{:2} \\
+                                    x^2 &= 2\,\text{m}^2 \\
+                                    &\Downarrow \scriptsize{\sqrt{}} \\
+                                    x &= \sqrt{2}\,\text{m} \\
+                                    `}
+                                    desktop={String.raw`
                                     \begin{aligned}
                                     x^2 + x^2 &= (2\,\text{m})^2 \\
                                     2x^2 &= 4\,\text{m}^2&&\lvert :2 \\
@@ -641,7 +745,7 @@ export default function Pyramiden() {
                                     x &= \sqrt{2}\,\text{m} \\
                                     \end{aligned}
                                     `}
-                                </BlockMath>
+                                />
                                 Der Durchmesser des Achtecks ist demnach{" "}
                                 <InlineMath>{String.raw`2 \cdot \sqrt{2}\,\text{m} + 2\,\text{m} \approx 4{,}83\,\text{m}`}</InlineMath>
                                 . Jetzt können wir wie beim ersten Dach die Höhe
@@ -679,18 +783,23 @@ export default function Pyramiden() {
                                 – da in einer Packung 6 Schindeln sind,
                                 benötigen wir 5 Packungen pro Quadratmeter. Für
                                 uns heißt das also:
-                                <BlockMath>
-                                    {String.raw`
+                                <MBlockMath
+                                desktop={String.raw`
                                     557{,}2\,\text{m}^2 \cdot 5\,\frac{\text{Packungen}}{\text{m}^2}= 2786\,\text{Packungen}
                                     `}
-                                </BlockMath>
+                                mobile={String.raw`
+                                    &557{,}2\,\text{m}^2 \cdot 5\,\frac{\text{Packungen}}{\text{m}^2}  \\
+                                    &\quad = 2786\,\text{Packungen}
+                                    `}
+                                />
                                 Da jede Packung 30€ kostet, sind das insgesamt
                                 83580€. Die Dachdecker selber kosten 50€ pro
                                 Quadratmeter, das sind nochmal zusätzliche
                                 Kosten von:
                                 <BlockMath>
                                     {String.raw`
-                                557{,}2\,\text{m}^2 \cdot 50\frac{€}{\text{m}^2} = 27860€
+                                557{,}2\,\text{m}^2 \cdot 50\frac{
+                                €\vphantom{U}}{\text{m}^2} = 27860€
                                 `}
                                 </BlockMath>
                                 Heißt: Die Restauration aller Dächer kostet

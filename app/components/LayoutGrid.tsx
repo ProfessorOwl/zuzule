@@ -26,10 +26,11 @@ export function LayoutGrid({ children }: { children: any }) {
             )}
             <GridCol
                 span={showOutline ? { base: 12, md: 6.5, lg: 7 } : { base: 12, md: 12 }}
+                style={{ overflow: 'hidden' }}
             >
-                <ScrollAreaAutosize mah={"calc(100vh - 56px)"}>
-                    <Container fluid pb={200} px={{ base: "sm", sm: "md" }}>
-                        <div>{children}</div>
+                <ScrollAreaAutosize mah={"calc(100vh - 56px)"} w={"100%"}>
+                    <Container pb={200} px={{ base: "10", sm: "md" }}>
+                       {children}
                     </Container>
                 </ScrollAreaAutosize>
             </GridCol>
