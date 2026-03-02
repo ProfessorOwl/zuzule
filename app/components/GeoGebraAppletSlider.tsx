@@ -1,6 +1,7 @@
 "use client";
 
-import { Badge, Center, Slider } from "@mantine/core";
+import { Badge, Center, ScrollArea, Slider } from "@mantine/core";
+import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 
 declare global {
@@ -11,8 +12,6 @@ declare global {
 
 interface GeoGebraProps {
     materialId: string;
-    // ggbBase64?: string;
-    // ggbUrl?: string;
     width?: number;
     height?: number;
     appName?: string;
@@ -42,7 +41,6 @@ export default function GeoGebraAppletSlider({
     width = 800,
     height = 600,
     appName = "graphing",
-    params: extraParams,
     disableZoom = true,
     coord,
     coord3d,
@@ -58,9 +56,21 @@ export default function GeoGebraAppletSlider({
     const ggbRef = useRef<HTMLDivElement | null>(null);
     const apiRef = useRef<any>(null);
     const prevMapValueRef = useRef<{ name: string; value: any } | null>(null);
+    const pathname = usePathname()
 
     // Initialize the applet once
     useEffect(() => {
+        console.log("init geogebra")
+        const container = ggbRef.current;
+        if (!container) return;
+
+        // Check if applet is already initialized in this container
+        const existingApplet = container.querySelector('[id^="ggb"]');
+        if (existingApplet && apiRef.current) {
+            // Applet already exists, skip reinitializing
+            return;
+        }
+
         const params: any = {
             appName,
             width,
@@ -68,8 +78,8 @@ export default function GeoGebraAppletSlider({
             showToolBar: false,
             showAlgebraInput: false,
             showMenuBar: false,
+            material_id: materialId,
         };
-        params.material_id = materialId;
 
         // default: disable zoom/scrolling unless explicitly allowed
         if (disableZoom) {
@@ -78,29 +88,29 @@ export default function GeoGebraAppletSlider({
             params.enableWheelZoom = false;
         }
 
-        // merge any extra params (overrides defaults)
-        if (extraParams && typeof extraParams === "object") {
-            Object.assign(params, extraParams);
-        }
-
         // Set up callback to store API on load. Coordinate handling
         // is applied in a separate effect to avoid re-initializing the
         // applet when coords change.
         params.appletOnLoad = (api: any) => {
             apiRef.current = api;
+            
+            // Setze die weite des unsichtbaren divs auf 0. Es wird von GeoGebra benötigt und muss erhalten bleiben, deshalb kann es nicht gelöscht werden.
+            setTimeout(() => {                
+            const divs = document.querySelectorAll('div[style*="z-index: -32767"]');
+            divs.forEach(div => {
+                if (div.getAttribute('aria-hidden') === 'true') {
+                    (div as HTMLElement).style.width = "0px";
+                }
+                });
+            }, 100);
         };
 
+        // Clear any existing content before injecting
+        container.innerHTML = "";
         const applet = new window.GGBApplet(params, true);
-        const container = ggbRef.current;
-        if (container) applet.inject(container);
+        applet.inject(container);
 
-        return () => {
-            if (container && container.parentNode) {
-                container.innerHTML = "";
-            }
-            apiRef.current = null;
-        };
-    }, [materialId, width, height, appName, extraParams, disableZoom]);
+    },[materialId, width, height, appName, disableZoom]);
 
     // Apply coordinate system when api becomes available or when coords change.
     useEffect(() => {
@@ -138,27 +148,14 @@ export default function GeoGebraAppletSlider({
                 }
 
                 apiRef.current.setValue(mapValue.name, mapValue.value);
-                console.log(
-                    "GeoGebra: setValue applied",
-                    mapValue.name,
-                    mapValue.value,
-                );
 
                 // Register listener for continuous updates of this value
                 apiRef.current.registerObjectUpdateListener(
-                    mapValue.name,
-                    (objName: string) => {
-                        console.log(
-                            `GeoGebra: ${objName} updated to`,
-                            apiRef.current.getValue(objName),
-                        );
-                    },
+                    mapValue.name
                 );
 
                 prevMapValueRef.current = mapValue;
-            } catch (e) {
-                console.warn("GeoGebra: setValue failed", e);
-            }
+            } catch (e) {}
         }
         return () => {
             // cleanup: unregister listener for previous mapValue on unmount
@@ -166,9 +163,7 @@ export default function GeoGebraAppletSlider({
             if (prev && apiRef.current) {
                 try {
                     apiRef.current.unregisterObjectUpdateListener(prev.name);
-                } catch (e) {
-                    /* ignore */
-                }
+                } catch (e) {}
             }
             prevMapValueRef.current = null;
         };

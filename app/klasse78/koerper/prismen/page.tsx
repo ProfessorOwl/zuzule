@@ -381,8 +381,6 @@ export default function Prismen() {
                         <GeoGebraAppletSlider
                             materialId="x5z6yk9z"
                             appName="3d"
-                            width={800}
-                            height={500}
                             coord3d={{
                                 xmin: -4,
                                 xmax: 6,
@@ -391,8 +389,9 @@ export default function Prismen() {
                                 zmin: -3,
                                 zmax: 4,
                             }}
-                            sliderLabel="Höhe"
-                            sliderWidth={400}
+                            sliderLabel={"Höhe"}
+                            // @ts-ignore
+                            sliderWidth={{ base: 200, md: 400 }}
                             sliderMin={0}
                             sliderMax={2}
                             sliderStep={1}
@@ -468,7 +467,7 @@ export default function Prismen() {
                         jedes andere Prisma herleiten, da wir jedes n-Eck in
                         beliebig viele Dreiecke zerteilen können! Schau dir dazu
                         das Video unten an.
-                        <Container my={"md"} maw={750}>
+                        <Container my={"md"} maw={750}> 
                             <Video src={VieleckInDreiecke} />
                         </Container>
                         Dadurch können wir also die Formel{" "}

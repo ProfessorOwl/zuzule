@@ -24,7 +24,7 @@ const lexend = Lexend({
 
 export default function RootLayout({ children }: { children: any }) {
     return (
-        <html lang="de" {...mantineHtmlProps}>
+        <html lang="de" {...mantineHtmlProps} style={{overflow: "clip"}}>
             <head>
                 <ColorSchemeScript />
                 <link rel="shortcut icon" href="/favicon.svg" />
