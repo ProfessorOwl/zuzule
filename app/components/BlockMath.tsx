@@ -2,7 +2,7 @@ import { ScrollArea } from "@mantine/core";
 import { BlockMath } from "react-katex" ;
 
 interface MBlockMathWarnProps {
-    children: String
+    children: string
 
 }
 

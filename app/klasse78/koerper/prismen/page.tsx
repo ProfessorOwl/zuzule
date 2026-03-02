@@ -16,7 +16,7 @@ import NextImage from "next/image";
 import { InlineMath } from "react-katex";
 import BlockMath from "@/components/BlockMath";
 import GeoGebraAppletSlider from "@/components/GeoGebraAppletSlider";
-import Video from "next-video";
+import Video from "@/components/Video"
 import VieleckInDreiecke from "/videos/Vieleck in Dreiecke.mov";
 
 export default function Prismen() {
@@ -467,9 +467,7 @@ export default function Prismen() {
                         jedes andere Prisma herleiten, da wir jedes n-Eck in
                         beliebig viele Dreiecke zerteilen können! Schau dir dazu
                         das Video unten an.
-                        <Container my={"md"} maw={750}> 
                             <Video src={VieleckInDreiecke} />
-                        </Container>
                         Dadurch können wir also die Formel{" "}
                         <InlineMath>V = A \cdot h</InlineMath> festhalten für{" "}
                         <b>alle</b> Prismen. Egal, wie das Prisma aussieht, es

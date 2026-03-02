@@ -3,7 +3,6 @@ import {
     IconCircleSquare,
     IconCylinder,
     IconDiabolo,
-    IconInfoCircle,
     IconPrism,
     IconRectangle,
     IconTriangle,
@@ -11,7 +10,6 @@ import {
     IconPyramid,
     IconSphere,
 } from "@tabler/icons-react";
-import { usePathname } from "next/navigation";
 import classes from "./sideview.module.css";
 import Link from "next/link";
 

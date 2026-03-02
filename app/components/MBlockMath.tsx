@@ -1,8 +1,8 @@
 import { Container } from "@mantine/core";
 import  BlockMath from "./BlockMath";
 interface MBlockMathProps {
-    mobile: String;
-    desktop: String;
+    mobile: string;
+    desktop: string;
 
 }
 

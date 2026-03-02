@@ -17,7 +17,7 @@ import { CheckableBlockquote } from "@/components/CheckableBlockquote";
 import { Lösung } from "@/components/Lösung";
 import { InlineMath } from "react-katex";
 import BlockMath from "@/components/BlockMath";
-import Video from "next-video";
+import Video from "@/components/Video"
 import UmfangZylinder from "/videos/UmfangZylinder.mov";
 import Link from "next/link";
 import { IconExternalLink } from "@tabler/icons-react";
@@ -171,19 +171,7 @@ export default function Zylinder() {
                     anmalen. Der geht danach nämlich wieder gut ab und wir sehen
                     dadurch, wann wir genau eine Umdrehung haben. Schau es dir
                     in dem Video unten an.
-                    <Container
-                        my={"md"}
-                        maw={{ base: 300, xs: 400, sm: 500, md: 750 }}
-                    >
-                        <Video
-                            src={UmfangZylinder}
-                            style={{
-                                width: "100%",
-                                height: "auto",
-                                aspectRatio: "16/9",
-                            }}
-                        />
-                    </Container>
+                    <Video src={UmfangZylinder}/>
                     Die abgerollte Mantelfläche bildet ein Rechteck, das in
                     unserem Beispiel die Kantenlängen{" "}
                     <InlineMath>{String.raw`9{,}4\,\text{cm}`}</InlineMath> und{" "}

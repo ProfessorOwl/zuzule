@@ -123,7 +123,7 @@ export function DocumentOutline() {
     }
 
     return (
-        <Stack gap="sm" p="md" visibleFrom="md">
+        <Stack gap="sm" p="xs" mt="xl" visibleFrom="md">
             <Text fw={600} size="xs">
                 Gliederung
             </Text>
@@ -136,7 +136,7 @@ export function DocumentOutline() {
 
                     const isChecked = checkedHeadings.has(heading.id);
                     return (
-                        <Group
+                        <Group 
                             key={heading.id}
                             gap={6}
                             wrap="nowrap"

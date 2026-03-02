@@ -301,7 +301,7 @@ export default function Pyramiden() {
                     einem Würfel. Dieser soll diesmal aber die doppelte Höhe
                     unserer Pyramide haben.
                     <Image
-                        h={{base: "auto", md: 525}}
+                        h={{base: "auto", md: 425}}
                         src="/VolumenPyramide/PyramideinWürfelEinzeln.png"
                         width={1050}
                         height={850}
@@ -312,7 +312,7 @@ export default function Pyramiden() {
                     Grundseite passt eine weitere Pyramide, ohne, dass sie einer
                     anderen in die Quere kommt.
                     <Image
-                        h={{base: "auto", md: 525}}
+                        h={{base: "auto", md: 425}}
                         src="/VolumenPyramide/PyramideinWürfel.png"
                         width={1050}
                         height={850}

@@ -5,6 +5,8 @@ import MBlockMath from "@/components/MBlockMath";
 import { Flex, Image, List, ListItem, Mark } from "@mantine/core";
 import { InlineMath } from "react-katex";
 import BlockMath from "@/components/BlockMath";
+import Video from "@/components/Video"
+import KegelOberfläche from "/videos/KegelOberfläche.mov";
 
 export default function Kegel() {
     return (
@@ -48,24 +50,23 @@ export default function Kegel() {
             </CheckableHeading>
             <CheckableHeading title="Netz eines Kegels">
                 Man könnte denken, dass es sehr schwer ist, das Netz eines
-                Kegels aufzuzeichnen, weil er neben dem Kreis keine Kante hat.
+                Kegels aufzuzeichnen, weil er neben der Kreisseite keine Kante hat.
                 Genau das erleichtert uns aber die Arbeit, denn so können wir
                 den Kegel <b>abrollen</b>. Schau dir das Video dazu an! (Video)
-                {/* //TODO - Video von einem Kegel und seinem korresepondieren Kreis darunter. Kegel wird darauf gelegt und abgerollt. Dann markieren, wie weit Kegel 1x rollt, Netz ausschneiden und zusammenkleben => Zweimal der Gleiche Kegel */}
-                
+                <Video src={KegelOberfläche} />
             </CheckableHeading>
-            <CheckableBlockquote title="Aufgabe: Netze">
-´
-            </CheckableBlockquote>
+
             <CheckableHeading title="Oberfläche">    
-                Die Grundfläche des Kegels können wir mit einem Zirkel einfach
+                Die Grundfläche eines Kegels können wir mit einem Zirkel einfach
                 ausmessen, da sie ein Kreis ist. Ihre Fläche entspricht also:
-                <BlockMath>G = \pi \cdot r_G^2</BlockMath>
+                <BlockMath>
+                    G = \pi \cdot r_G^2
+                </BlockMath>
                 <Mark c={"desred"}>
                     <InlineMath>r_G</InlineMath>
                 </Mark>{" "}
                 meint dabei den Radius der Grundfläche. Durch das Abrollen des
-                Kegels haben wir aber noch einen Kreis bekommen! Wir markieren
+                Kegels haben wir aber noch einen <b>Kreisausschnitt</b> bekommen! Wir markieren
                 uns, wie weit der Kegel mit genau einer Umdrehung kommt. Genau
                 diese Fläche entspricht der <b>Mantelfläche</b> des Kegels. Der
                 Radius des „Abrollkreises“ entspricht der Höhe{" "}
@@ -81,6 +82,23 @@ export default function Kegel() {
                     height={600}
                     alt="Ein Kegel mit seiner Mantelfläche"
                 />
+                <CheckableBlockquote icon="frage" title="Aufgabe" titleOrder={2}>
+                    Mit der Info kannst du nun auch Netze zeichnen. Zeichne von den folgenden Zylindern die Netze auf:
+                    <Image
+                        src="/Kegel/KegelNetze.png"
+                        width={1400}
+                        height={600}
+                        alt="Ein Kegel mit seiner Mantelfläche"
+                    />
+                    <Lösung title="Lösung" titleOrder={3} id="LösungNetze">
+                    <Image
+                        src="/Kegel/KegelNetzeLösung.png"
+                        h={{base: "auto", md: 600}}
+                        width={1650}
+                        height={1200}
+                        alt="Ein Kegel mit seiner Mantelfläche"
+                    />                    </Lösung> 
+                </CheckableBlockquote>
                 Um die Mantelfläche zu berechnen, benötigen wir neben der
                 Wandhöhe noch die Länge des Kreisbogens (im Bild schwarz). Diese
                 entspricht aber gerade dem Umfang unserer Grundfläche, da der
@@ -138,7 +156,7 @@ export default function Kegel() {
                 berechnen!
                 <CheckableBlockquote
                     titleOrder={2}
-                    title="Kannst du es beweisen?"
+                    title="Aufgabe: Kannst du es beweisen?"
                     icon="frage"
                 >
                     Was geometrisch geht, geht auch mit Formeln. Kannst du die
@@ -182,14 +200,14 @@ export default function Kegel() {
                             mobile={String.raw`
                     \begin{aligned}
                     M &= \frac{U}{U_\text{Gesamt}}\cdot A \\
-                    &\Downarrow \scriptsize{\textsf{Einsetzen}} \\ 
+                    &\Downarrow \scriptsize{\text{Einsetzen}} \\ 
                         &= \frac{U}{2\cancel{\pi\textcolor{#3312B8}{h_\text{Wand}}}} \cdot \cancel{\pi} \textcolor{#3312B8}{h_\text{Wand}}^{\cancel{2}}\\ 
                         &= \frac{U}{2} \cdot \textcolor{#3312B8}{h_\text{Wand}}
                     \end{aligned}
                     `}
                             desktop={String.raw`
                     \begin{aligned}
-                    M &= \frac{U}{U_\text{Gesamt}}\cdot A \quad \lvert \textsf{Einsetzen} \\ 
+                    M &= \frac{U}{U_\text{Gesamt}}\cdot A \quad \lvert \text{Einsetzen} \\ 
                         &= \frac{U}{2\cancel{\pi\textcolor{#3312B8}{h_\text{Wand}}}} \cdot \cancel{\pi} \textcolor{#3312B8}{h_\text{Wand}}^{\cancel{2}}\\ 
                         &= \frac{U}{2} \cdot \textcolor{#3312B8}{h_\text{Wand}}
                     \end{aligned}

@@ -14,10 +14,8 @@ import {
 } from "@mantine/core";
 import {
     IconDotsDiagonal2,
-    IconArrowBearRight2,
-    IconHelpHexagonFilled,
-    IconInfoHexagonFilled,
 } from "@tabler/icons-react";
+import { FrageIcon, AhaIcon, ExkursIcon } from "./icons";
 
 interface CheckableBlockquoteProps {
     children: React.ReactNode;
@@ -28,9 +26,9 @@ interface CheckableBlockquoteProps {
 }
 
 const IconMap = {
-    frage: IconHelpHexagonFilled,
-    aha: IconInfoHexagonFilled,
-    exkurs: IconArrowBearRight2,
+    frage: FrageIcon,
+    aha: AhaIcon,
+    exkurs: ExkursIcon,
 } as const;
 
 type IconMapKey = keyof typeof IconMap;
