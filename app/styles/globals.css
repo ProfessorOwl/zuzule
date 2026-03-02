@@ -42,22 +42,17 @@ div.next-video-container {
 .m_ddec01c0 {
     /* display: none !important; */
 }
-.div[z-index="-32767"] {
-    width: 0px;
-}
 
 .katex {
-    display: none !important;
+    /* display: none !important; */
     width: 100%;
-    /* overflow-x: auto;
-    overflow-y: visible; */
 }
 /* Bilder */
 .m_9e117634 {
-    display: none !important;
+    /* display: none !important; */
 }
 
 /* Text aus Überschriften */
 .m_8a5d1357 {
-    display: none !important;
+    /* display: none !important; */
 }
