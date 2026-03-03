@@ -4,16 +4,15 @@ import {
     Center,
     CSSProperties,
     Flex,
-    Image,
     Stack,
     StyleProp,
     Text,
+    ImageProps,
 } from "@mantine/core";
-import NextImage from "next/image";
+import Image from "./Image";
 
-interface ImageCaptionProps {
-    children: React.ReactNode;
-    h?: StyleProp<CSSProperties["Height"]>;
+interface ImageCaptionProps extends ImageProps{
+    children: string | string[],
     fit?: "contain" | "cover";
     src: string;
     width: number;
@@ -31,6 +30,7 @@ export function ImageCaption({
     height,
     alt,
     rotate = false,
+    ...others
 }: ImageCaptionProps) {
     if (rotate == "right") {
         return (
@@ -45,6 +45,7 @@ export function ImageCaption({
                     width={width}
                     height={height}
                     alt={alt}
+                    {...others}
                 ></Image>
                 <Flex align={"flex-end"} h={h}>
                     <Text
@@ -78,6 +79,7 @@ export function ImageCaption({
                     width={width}
                     height={height}
                     alt={alt}
+                    {...others}
                 ></Image>
             </Center>
         );
@@ -92,6 +94,7 @@ export function ImageCaption({
                     height={height}
                     alt={alt}
                     mb={"0"}
+                    {...others}
                 ></Image>
                 <Text size="sm" ta={"center"} lh={"xs"}>
                     {children}

@@ -3,13 +3,14 @@
 import {
     CSSProperties,
     Image,
+    ImageProps,
     StyleProp,
 } from "@mantine/core";
 import { useElementSize } from "@mantine/hooks";
 import NextImage from "next/image";
 import { useEffect, useRef } from "react";
 
-interface BetterImageProps {
+interface BetterImageProps extends ImageProps{
     h?: StyleProp<CSSProperties["Height"]>;
     fit?: "contain" | "cover";
     src: string;
@@ -25,9 +26,9 @@ export default function BetterImage({
     width,
     height,
     alt,
+    ...others
 }: BetterImageProps) {
     const {ref, width: containerWidth} = useElementSize()
-    console.log(containerWidth)
         return (
                 <Image
                     //@ts-ignore
@@ -38,6 +39,7 @@ export default function BetterImage({
                     height={height}
                     sizes={`${containerWidth}px`}
                     alt={alt}
+                    {...others}
                 />
         )
     }
