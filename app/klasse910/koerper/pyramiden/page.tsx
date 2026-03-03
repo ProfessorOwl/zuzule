@@ -7,7 +7,6 @@ import { SuspenseCheckableHeading } from "@/components/SuspenseCheckableHeading"
 import {
     Divider,
     Flex,
-    Image,
     List,
     ListItem,
     Mark,
@@ -16,6 +15,7 @@ import {
 } from "@mantine/core";
 import {BetterInlineMath as InlineMath, BlockMathScroll as BlockMath} from "@/components/CustomMath";
 import thinsp from "@/components/thinsp";
+import Image from "@/components/Image";
 
 export default function Pyramiden() {
     return (
@@ -130,10 +130,8 @@ export default function Pyramiden() {
                             </Mark>{" "}
                             zu berechnen.
                             <MBlockMath
-                                desktop={String.raw`\textcolor{#3312B8}{h_\text{Dreieck}} = \sqrt{1{,}5^2 + 3^2} = \sqrt{11{,}25} \approx 3,35`}
-                                mobile={String.raw`\textcolor{#3312B8}{h_\text{Dreieck}} &= \sqrt{1{,}5^2 + 3^2} \\ 
-                            &= \sqrt{11{,}25} \\
-                            &\approx 3,35`}
+                                desktop="\textcolor{#3312B8}{h_\text{Dreieck}} = \sqrt{1{,}5^2 + 3^2} = \sqrt{11{,}25} \approx 3,35"
+                                mobile="\textcolor{#3312B8}{h_\text{Dreieck}} &= \sqrt{1{,}5^2 + 3^2} \\ &= \sqrt{11{,}25} \\ &\approx 3,35"
                             />
                             Damit unsere Pyramide also eine Höhe von 3{thinsp}cm
                             hat, muss die Höhe einer Dreieckswand ca.
@@ -211,18 +209,8 @@ export default function Pyramiden() {
                         Dichte und Masse, also stellen wir nach{" "}
                         <InlineMath math="V"/> um:
                         <MBlockMath
-                            mobile={String.raw`
-                        \rho &= \frac{m}{V} \\
-                        &\Downarrow \scriptsize{\cdot V} \\
-                        \rho \cdot V &= m \\
-                        &\Downarrow \scriptsize{: \rho} \\
-                        V &= \frac{m}{\rho} 
-                        `}
-                            desktop={String.raw`
-                        \rho &= \frac{m}{V} &&\lvert \cdot V  \\
-                        \rho \cdot V &= m &&\lvert \: \rho \\
-                        V &= \frac{m}{\rho}
-                        `}
+                            mobile="\rho &= \frac{m}{V} \\ &\Downarrow \scriptsize{\cdot V} \\ \rho \cdot V &= m \\ &\Downarrow \scriptsize{: \rho} \\ V &= \frac{m}{\rho}"
+                            desktop="\rho &= \frac{m}{V} &&\lvert \cdot V \\ \rho \cdot V &= m &&\lvert \: \rho \\ V &= \frac{m}{\rho}"
                         />
                         Setzen wir die Dichte von{" "}
                         <InlineMath math="1{,}56\,\tfrac{\text{g}}{\text{mL}}"/>{" "}
@@ -230,15 +218,8 @@ export default function Pyramiden() {
                         <InlineMath math="43\,\text{g}"/> ein,
                         so erhalten wir:
                         <MBlockMath
-                            desktop={String.raw`
-                        V = \frac{m}{\rho} = \frac{43\,\text{g}}{1{,}56\,\tfrac{\text{g}}{\text{mL}}} \approx 27,56\,\text{mL}
-                        `}
-                            mobile={String.raw`
-                                                    V &= \frac{m}{\rho} \\
-                                                    &= \frac{43\,\text{g}}{1{,}56\,\tfrac{\text{g}}{\text{mL}}} \\ 
-                                                    &\approx 27,56\,\text{mL}
-
-                            `}
+                            desktop="V = \frac{m}{\rho} = \frac{43\,\text{g}}{1{,}56\,\tfrac{\text{g}}{\text{mL}}} \approx 27,56\,\text{mL}"
+                            mobile="V &= \frac{m}{\rho} \\ &= \frac{43\,\text{g}}{1{,}56\,\tfrac{\text{g}}{\text{mL}}} \\ &\approx 27,56\,\text{mL}"
                         />
                     </Lösung>
                 </CheckableHeading>
@@ -266,22 +247,14 @@ export default function Pyramiden() {
                     von 27,57{thinsp}mL. Setzen wir das ins Verhältnis mit dem
                     Würfel, so bekommen wir:
                     <MBlockMath
-                        desktop={String.raw`
-                    \text{Anteil Pyramide} = \frac{27{,}57\,\text{cm}^3}{125\,\text{cm}^3} \approx 0,22 \approx \frac{1}{5}
-                    `}
-                        mobile={String.raw`
-                        \text{Anteil Pyramide} &= \frac{27{,}57\,\text{cm}^3}{125\,\text{cm}^3} \\
-                        &\approx 0,22 \\
-                        &\approx \frac{1}{5}
-                        `}
+                        desktop="\text{Anteil Pyramide} = \frac{27{,}57\,\text{cm}^3}{125\,\text{cm}^3} \approx 0,22 \approx \frac{1}{5}"
+                        mobile="\text{Anteil Pyramide} &= \frac{27{,}57\,\text{cm}^3}{125\,\text{cm}^3} \\ &\approx 0,22 \\ &\approx \frac{1}{5}"
                     />
                     Wenn wir einen Quader mit der Formel{" "}
                     <InlineMath math="V_\text{Quader} = G \cdot h"/>{" "}
                     berechnen, so nimmt eine Pyramide laut unserem Experiment
                     nur ein Fünftel des Volumens ein, also:
-                    <BlockMath math={String.raw`
-                    V_\text{Pyramide} = \frac{1}{5}G\cdot h
-                    `} />
+                    <BlockMath math="V_\text{Pyramide} = \frac{1}{5}G\cdot h" />
                     Aber stimmt das auch mit der theoretischen Herleitung
                     überein? Mit ihr bekommen wir ein eindeutiges Ergebnis!
                 </CheckableBlockquote>
@@ -317,9 +290,7 @@ export default function Pyramiden() {
                         alt="Eine Pyramide in einem Quader"
                     />
                     Mathematisch können wir das so formulieren:
-                    <BlockMath math={String.raw`
-                V_\text{Quader} = 6 \cdot V_\text{Pyramide}
-                `} />
+                    <BlockMath math="V_\text{Quader} = 6 \cdot V_\text{Pyramide}" />
                     Kannst du daraus selber eine Formel für das Pyramidenvolumen
                     herleiten? Denke dran: Der Quader ist doppelt so hoch wie
                     eine der Pyramiden!
@@ -332,32 +303,15 @@ export default function Pyramiden() {
                             Wir können also über die Volumenformel für einen
                             Quader auf das Volumen einer Pyramide schließen! Für
                             einen Quader gilt:
-                            <BlockMath math={String.raw`
-                V_\text{Quader} = G \cdot h_\text{Quader}
-                `} />
+                            <BlockMath math="V_\text{Quader} = G \cdot h_\text{Quader}" />
                             mit der Grundfläche <InlineMath math="G"/> und
                             der Höhe{" "}
                             <InlineMath math="h_\text{Quader}"/>
                             . Das können wir in die vorige Gleichung einsetzen,
                             also bekommen wir:
                             <MBlockMath
-                                mobile={String.raw`
-                                    V_\text{Quader} &= 6 \cdot V_\text{Pyramide} \\
-                                    &\Downarrow\scriptsize{V_\text{Quader} = G \cdot h_\text{Quader}} \\
-                                    G \cdot h_\text{Quader} &=  6 \cdot V_\text{Pyramide} \\
-                                    &\Downarrow \scriptsize{h_\text{Quader} = 2\cdot h_\text{Pyramide}} \\
-                                    G \cdot 2 h_\text{Pyramide} &=  6 \cdot V_\text{Pyramide} \\
-                                    &\Downarrow \scriptsize{:6} \\
-                                    G \cdot \frac{2}{6} h_\text{Pyramide} &= V_\text{Pyramide} \\
-                                    V_\text{Pyramide} &= \frac{1}{3} G \cdot h_\text{Pyramide}
-                                    `}
-                                desktop={String.raw`
-                                V_\text{Quader} &= 6 \cdot V_\text{Pyramide} &&\lvert V_\text{Quader} = G \cdot h_\text{Quader} \\
-                                G \cdot h_\text{Quader} &=  6 \cdot V_\text{Pyramide} &&\lvert h_\text{Quader} = 2\cdot h_\text{Pyramide} \\
-                                G \cdot 2 h_\text{Pyramide} &=  6 \cdot V_\text{Pyramide} &&\lvert :6 \\
-                                G \cdot \frac{2}{6} h_\text{Pyramide} &= V_\text{Pyramide} \\
-                                V_\text{Pyramide} &= \frac{1}{3} G \cdot h_\text{Pyramide}
-                                `}
+                                mobile="V_\text{Quader} &= 6 \cdot V_\text{Pyramide} \\ &\Downarrow\scriptsize{V_\text{Quader} = G \cdot h_\text{Quader}} \\ G \cdot h_\text{Quader} &= 6 \cdot V_\text{Pyramide} \\ &\Downarrow \scriptsize{h_\text{Quader} = 2\cdot h_\text{Pyramide}} \\ G \cdot 2 h_\text{Pyramide} &= 6 \cdot V_\text{Pyramide} \\ &\Downarrow \scriptsize{:6} \\ G \cdot \frac{2}{6} h_\text{Pyramide} &= V_\text{Pyramide} \\ V_\text{Pyramide} &= \frac{1}{3} G \cdot h_\text{Pyramide}"
+                                desktop="V_\text{Quader} &= 6 \cdot V_\text{Pyramide} &&\lvert V_\text{Quader} = G \cdot h_\text{Quader} \\ G \cdot h_\text{Quader} &= 6 \cdot V_\text{Pyramide} &&\lvert h_\text{Quader} = 2\cdot h_\text{Pyramide} \\ G \cdot 2 h_\text{Pyramide} &= 6 \cdot V_\text{Pyramide} &&\lvert :6 \\ G \cdot \frac{2}{6} h_\text{Pyramide} &= V_\text{Pyramide} \\ V_\text{Pyramide} &= \frac{1}{3} G \cdot h_\text{Pyramide}"
                             />
                             Eine Pyramide ist also immer ein Drittel so groß wie
                             der sie umgebende Quader!
@@ -387,129 +341,53 @@ export default function Pyramiden() {
                             <ListItem>
                                 Nach Höhe umstellen und einsetzen:
                                 <MBlockMath
-                                    desktop={String.raw`
-                                V &= \frac{1}{3}Gh &&\lvert \cdot \frac{3}{G} \\
-                                \frac{3V}{G} &= h \\
-                                \Rightarrow h &= \frac{3 \cdot 32}{4 \cdot 4} = \frac{96}{16} = 6
-                                `}
-                                    mobile={String.raw`
-                                    V &= \frac{1}{3}Gh \\
-                                    &\Downarrow \scriptsize{\cdot \frac{3}{G}} \\
-                                    \frac{3V}{G} &= h \\
-                                    \Rightarrow h &= \frac{3 \cdot 32}{4 \cdot 4} = \frac{96}{16} = 6
-                                    `}
+                                    desktop="V &= \frac{1}{3}Gh &&\lvert \cdot \frac{3}{G} \\ \frac{3V}{G} &= h \\ \Rightarrow h &= \frac{3 \cdot 32}{4 \cdot 4} = \frac{96}{16} = 6"
+                                    mobile="V &= \frac{1}{3}Gh \\ &\Downarrow \scriptsize{\cdot \frac{3}{G}} \\ \frac{3V}{G} &= h \\ \Rightarrow h &= \frac{3 \cdot 32}{4 \cdot 4} = \frac{96}{16} = 6"
                                 />
                             </ListItem>
                             <ListItem>
                                 Nach Grundfläche umstellen und einsetzen:
                                 <MBlockMath
-                                    desktop={String.raw`
-                                V &= \frac{1}{3}Gh &&\lvert \cdot \frac{3}{h} \\
-                                \frac{3V}{h} &= G \\
-                                &\Rightarrow G = \frac{3 \cdot 18}{9} = \frac{54}{9} = 6
-                    `}
-                                    mobile={String.raw`
-                                V &= \frac{1}{3}Gh \\
-                                &\Downarrow \scriptsize{\cdot \frac{3}{h}} \\
-                                \frac{3V}{h} &= G \\
-                                &\Rightarrow G = \frac{3 \cdot 18}{9} = \frac{54}{9} = 6`}
+                                    desktop="V &= \frac{1}{3}Gh &&\lvert \cdot \frac{3}{h} \\ \frac{3V}{h} &= G \\ &\Rightarrow G = \frac{3 \cdot 18}{9} = \frac{54}{9} = 6"
+                                    mobile="V &= \frac{1}{3}Gh \\ &\Downarrow \scriptsize{\cdot \frac{3}{h}} \\ \frac{3V}{h} &= G \\ &\Rightarrow G = \frac{3 \cdot 18}{9} = \frac{54}{9} = 6"
                                 />
                             </ListItem>
                             <ListItem>
                                 Zuerst nach Grundfläche umstellen:
                                 <MBlockMath
-                                    mobile={String.raw`
-                                V &= \frac{1}{3}Gh \\
-                                &\Downarrow \scriptsize{\cdot \frac{3}{h}} \\
-                                G &= \frac{3V}{h}\\
-                                &\Rightarrow G = \frac{3\cdot 18\sqrt{3}}{6} = 9\sqrt{3}
-                    `}
-                                    desktop={String.raw`
-                                V &= \frac{1}{3}Gh &&\lvert \cdot \frac{3}{h} \\
-                                G &= \frac{3V}{h}\\
-                                &\Rightarrow G = \frac{3\cdot 18\sqrt{3}}{6} = 9\sqrt{3}
-                    `}
+                                    mobile="V &= \frac{1}{3}Gh \\ &\Downarrow \scriptsize{\cdot \frac{3}{h}} \\ G &= \frac{3V}{h}\\ &\Rightarrow G = \frac{3\cdot 18\sqrt{3}}{6} = 9\sqrt{3}"
+                                    desktop="V &= \frac{1}{3}Gh &&\lvert \cdot \frac{3}{h} \\ G &= \frac{3V}{h}\\ &\Rightarrow G = \frac{3\cdot 18\sqrt{3}}{6} = 9\sqrt{3}"
                                 />
                                 Formel für Dreiecksgrundfläche:{" "}
                                 <InlineMath math="G = \frac{1}{2}xh_\triangle"/>
                                 . Da es ein gleichseitiges Dreieck ist, gilt mit
                                 dem Satz des Pythagoras:
                                 <MBlockMath
-                                    mobile={String.raw`
-                                x^2 &= h_\triangle^2 + \left(\frac{1}{2}x^2\right)^2 \\
-                                &\Downarrow \scriptsize{-\left(\frac{1}{2}x^2\right)^2} \\
-                                x^2 - \left(\frac{1}{2}x^2\right)^2 &= h_\triangle^2 \\
-                                &\Downarrow \scriptsize{\sqrt{}} \\
-                                h_\triangle &= \sqrt{x^2 - \left(\frac{1}{2}x^2\right)^2} \\
-                                &= \sqrt{x^2 - \frac{1}{4}x^2} \\
-                                &= \sqrt{\frac{3}{4}x^2} \\
-                                &= \frac{\sqrt{3}}{2}x
-                    `}
-                                    desktop={String.raw`
-                                x^2 &= h_\triangle^2 + \left(\frac{1}{2}x^2\right)^2 &&\lvert -\left(\frac{1}{2}x^2\right)^2\\
-                                x^2 - \left(\frac{1}{2}x^2\right)^2 &= h_\triangle^2 &&\lvert \sqrt{}\\
-                                h_\triangle &= \sqrt{x^2 - \left(\frac{1}{2}x^2\right)^2} \\
-                                &= \sqrt{x^2 - \frac{1}{4}x^2} \\
-                                &= \sqrt{\frac{3}{4}x^2} \\
-                                &= \frac{\sqrt{3}}{2}x
-                    `}
+                                    mobile="x^2 &= h_\triangle^2 + \left(\frac{1}{2}x^2\right)^2 \\ &\Downarrow \scriptsize{-\left(\frac{1}{2}x^2\right)^2} \\ x^2 - \left(\frac{1}{2}x^2\right)^2 &= h_\triangle^2 \\ &\Downarrow \scriptsize{\sqrt{}} \\ h_\triangle &= \sqrt{x^2 - \left(\frac{1}{2}x^2\right)^2} \\ &= \sqrt{x^2 - \frac{1}{4}x^2} \\ &= \sqrt{\frac{3}{4}x^2} \\ &= \frac{\sqrt{3}}{2}x"
+                                    desktop="x^2 &= h_\triangle^2 + \left(\frac{1}{2}x^2\right)^2 &&\lvert -\left(\frac{1}{2}x^2\right)^2\\ x^2 - \left(\frac{1}{2}x^2\right)^2 &= h_\triangle^2 &&\lvert \sqrt{}\\ h_\triangle &= \sqrt{x^2 - \left(\frac{1}{2}x^2\right)^2} \\ &= \sqrt{x^2 - \frac{1}{4}x^2} \\ &= \sqrt{\frac{3}{4}x^2} \\ &= \frac{\sqrt{3}}{2}x"
                                 />
                                 Das können wir in die Formel für die
                                 Dreiecksfläche einsetzen und bekommen:
                                 <MBlockMath
-                                    mobile={String.raw`
-                                G &= \frac{1}{2}xh_\triangle \\
-                                &= \frac{1}{2}x\cdot \frac{\sqrt{3}}{2}x \\
-                                &= \frac{\sqrt{3}}{4}x^2 \\
-                                &\Downarrow \scriptsize{\cdot \frac{4}{\sqrt{3}}} \\
-                                \frac{4}{\sqrt{3}}G &= x^2 \\
-                                &\Downarrow \scriptsize{\sqrt{}} \\
-                                x &= \sqrt{\frac{4}{\sqrt{3}}G} 
-                    `}
-                                    desktop={String.raw`
-                                G &= \frac{1}{2}xh_\triangle \\
-                                &= \frac{1}{2}x\cdot \frac{\sqrt{3}}{2}x \\
-                                &= \frac{\sqrt{3}}{4}x^2 &&\lvert \cdot \frac{4}{\sqrt{3}} \\
-                                \frac{4}{\sqrt{3}}G &= x^2 &&\lvert \sqrt{} \\
-                                x &= \sqrt{\frac{4}{\sqrt{3}}G} 
-                    `}
+                                    mobile="G &= \frac{1}{2}xh_\triangle \\ &= \frac{1}{2}x\cdot \frac{\sqrt{3}}{2}x \\ &= \frac{\sqrt{3}}{4}x^2 \\ &\Downarrow \scriptsize{\cdot \frac{4}{\sqrt{3}}} \\ \frac{4}{\sqrt{3}}G &= x^2 \\ &\Downarrow \scriptsize{\sqrt{}} \\ x &= \sqrt{\frac{4}{\sqrt{3}}G}"
+                                    desktop="G &= \frac{1}{2}xh_\triangle \\ &= \frac{1}{2}x\cdot \frac{\sqrt{3}}{2}x \\ &= \frac{\sqrt{3}}{4}x^2 &&\lvert \cdot \frac{4}{\sqrt{3}} \\ \frac{4}{\sqrt{3}}G &= x^2 &&\lvert \sqrt{} \\ x &= \sqrt{\frac{4}{\sqrt{3}}G}"
                                 />
                                 Jetzt das Ergebnis für{" "}
                                 <InlineMath math="G"/> einsetzen, dann
                                 bekommen wir <InlineMath math="x"/> heraus:
-                                <BlockMath math={String.raw`
-                                    x &= \sqrt{\frac{4}{\sqrt{3}}G} \\
-                                        &= \sqrt{\frac{4}{\sqrt{3}}\cdot9\sqrt{3}} \\
-                                        &= \sqrt{4 \cdot 9} \\
-                                        &= 6
-                    `} />{" "}
+                                <BlockMath math="x &= \sqrt{\frac{4}{\sqrt{3}}G} \\ &= \sqrt{\frac{4}{\sqrt{3}}\cdot9\sqrt{3}} \\ &= \sqrt{4 \cdot 9} \\ &= 6" />{" "}
                             </ListItem>
 
                             <ListItem>
                                 Wieder erst nach Grundfläche umstellen, x als
                                 unbekannte Höhe bleibt vorhanden:
-                                <BlockMath math={String.raw`
-                                    V &= \frac{1}{3}Gx
-                                    `} />
+                                <BlockMath math="V &= \frac{1}{3}Gx" />
                                 Die rechteckige Grundfläche berechnet sich nach{" "}
                                 <InlineMath math="G = 6 \cdot \frac{1}{2}x = 3x"/>
                                 , das wir einsetzen können:
                                 <MBlockMath
-                                    mobile={String.raw`
-                                V &= \frac{1}{3}Gx \\
-                                &= \frac{1}{3}\cdot 3x \cdot x \\
-                                &= x^2 \\
-                                &\Downarrow \scriptsize{\sqrt{}} \\
-                                x &= \sqrt{V} \\
-                                    &\Rightarrow x = \sqrt{25} = 5
-                                `}
-                                    desktop={String.raw`
-                                V &= \frac{1}{3}Gx \\
-                                &= \frac{1}{3}\cdot 3x \cdot x \\
-                                &= x^2 \lvert \sqrt{} \\
-                                x &= \sqrt{V} \\
-                                    &\Rightarrow x = \sqrt{25} = 5
-                                `}
+                                    mobile="V &= \frac{1}{3}Gx \\ &= \frac{1}{3}\cdot 3x \cdot x \\ &= x^2 \\ &\Downarrow \scriptsize{\sqrt{}} \\ x &= \sqrt{V} \\ &\Rightarrow x = \sqrt{25} = 5"
+                                    desktop="V &= \frac{1}{3}Gx \\ &= \frac{1}{3}\cdot 3x \cdot x \\ &= x^2 \lvert \sqrt{} \\ x &= \sqrt{V} \\ &\Rightarrow x = \sqrt{25} = 5"
                                 />
                             </ListItem>
                         </List>
@@ -541,13 +419,9 @@ export default function Pyramiden() {
                 das so formulieren:
                 <BlockMath math="O = G + M" />
                 Für die dreieckige Pyramide gilt:
-                <BlockMath math={String.raw`
-                    O = G + 3 \cdot A_\text{Dreieck}
-                    `} />
+                <BlockMath math="O = G + 3 \cdot A_\text{Dreieck}" />
                 oder für die viereckige:
-                <BlockMath math={String.raw`
-                    O = G + 4 \cdot A_\text{Dreieck}
-                    `} />
+                <BlockMath math="O = G + 4 \cdot A_\text{Dreieck}" />
                 Die Höhe der Dreiecke kannst du meistens mit dem Satz des
                 Pythagoras berechnen. Schau dir den Infokasten an, wenn du hier
                 Hilfe brauchst oder gehe direkt zu den Aufgaben!
@@ -571,14 +445,8 @@ export default function Pyramiden() {
                         </Mark>{" "}
                         zu berechnen.
                         <MBlockMath
-                            desktop={String.raw`
-                            \textcolor{#3312B8}{h_\text{Dreieck}} = \sqrt{1{,}5^2 + 3^2} = \sqrt{11{,}25} \approx 3,35
-                            `}
-                            mobile={String.raw`
-                            \textcolor{#3312B8}{h_\text{Dreieck}} &= \sqrt{1{,}5^2 + 3^2} \\ 
-                            &= \sqrt{11{,}25} \\
-                            &\approx 3,35
-                                    `}
+                            desktop="\textcolor{#3312B8}{h_\text{Dreieck}} = \sqrt{1{,}5^2 + 3^2} = \sqrt{11{,}25} \approx 3,35"
+                            mobile="\textcolor{#3312B8}{h_\text{Dreieck}} &= \sqrt{1{,}5^2 + 3^2} \\ &= \sqrt{11{,}25} \\ &\approx 3,35"
                         />
                         Damit unsere Pyramide also eine Höhe von 3{thinsp}cm
                         hat, muss die Höhe einer Dreieckswand ca. 3,35{thinsp}cm
@@ -652,21 +520,13 @@ export default function Pyramiden() {
                                 Dafür brauchen wir die Höhe der Manteldreiecke.
                                 Wir benutzen dazu den Satz des Pythagoras:
                                 <BlockMath
-                                    math={String.raw`
-                                    h_\triangle &= \sqrt{\left(\frac{10\,\text{m}}{2}\right)^2+(16\,\text{m})^2} \\
-                                        &= \sqrt{(5\,\text{m})^2 + 256\,\text{m}^2} \\
-                                        &\approx 16{,}76\,\text{m}
-                                    `}
+                                    math="h_\triangle &= \sqrt{\left(\frac{10\,\text{m}}{2}\right)^2+(16\,\text{m})^2} \\ &= \sqrt{(5\,\text{m})^2 + 256\,\text{m}^2} \\ &\approx 16{,}76\,\text{m}"
                                 />
                                 Die Breite entspricht der Kantenlänge unserer
                                 Grundfläche, also 10{thinsp}m. Damit können wir
                                 die Mantelfläche berechnen:
                                 <BlockMath
-                                    math={String.raw`
-                                    M &= 4 \cdot \frac{1}{2}gh_\triangle \\
-                                        &= 4 \cdot \frac{1}{2}\cdot 10\,\text{m} \cdot 16{,}76\,\text{m} \\
-                                        &= 335{,}2\,\text{m}^2
-                                    `}
+                                    math="M &= 4 \cdot \frac{1}{2}gh_\triangle \\ &= 4 \cdot \frac{1}{2}\cdot 10\,\text{m} \cdot 16{,}76\,\text{m} \\ &= 335{,}2\,\text{m}^2"
                                 />
                                 Unser erstes Dach hat also eine Fläche von
                                 335,2{thinsp}m<sup>2</sup>.
@@ -692,39 +552,19 @@ export default function Pyramiden() {
                                 gleichschenklig! Das hilft uns,{" "}
                                 <InlineMath math="x"/> zu berechnen:
                                 <MBlockMath
-                                    mobile={String.raw`
-                                    x^2 + x^2 &= (2\,\text{m})^2 \\
-                                    2x^2 &= 4\,\text{m}^2 \\
-                                    &\Downarrow \scriptsize{:2} \\
-                                    x^2 &= 2\,\text{m}^2 \\
-                                    &\Downarrow \scriptsize{\sqrt{}} \\
-                                    x &= \sqrt{2}\,\text{m} \\
-                                    `}
-                                    desktop={String.raw`
-                                    x^2 + x^2 &= (2\,\text{m})^2 \\
-                                    2x^2 &= 4\,\text{m}^2&&\lvert :2 \\
-                                    x^2 &= 2\,\text{m}^2 &&\lvert \sqrt{} \\
-                                    x &= \sqrt{2}\,\text{m} \\
-                                    `}
+                                    mobile="x^2 + x^2 &= (2\,\text{m})^2 \\ 2x^2 &= 4\,\text{m}^2 \\ &\Downarrow \scriptsize{:2} \\ x^2 &= 2\,\text{m}^2 \\ &\Downarrow \scriptsize{\sqrt{}} \\ x &= \sqrt{2}\,\text{m} \\"
+                                    desktop="x^2 + x^2 &= (2\,\text{m})^2 \\ 2x^2 &= 4\,\text{m}^2&&\lvert :2 \\ x^2 &= 2\,\text{m}^2 &&\lvert \sqrt{} \\ x &= \sqrt{2}\,\text{m} \\"
                                 />
                                 Der Durchmesser des Achtecks ist demnach{" "}
                                 <InlineMath math="2 \cdot \sqrt{2}\,\text{m} + 2\,\text{m} \approx 4{,}83\,\text{m}"/>
                                 . Jetzt können wir wie beim ersten Dach die Höhe
                                 der Manteldreiecke ausrechnen:
                                 <BlockMath
-                                    math={String.raw`
-                                    h_\triangle &= \sqrt{\left(\frac{4,83\,\text{m}}{2}\right)^2+(5\,\text{m})^2} \\
-                                        &\approx \sqrt{30{,}82} \\
-                                        &\approx 5{,}55\,\text{m}
-                                    `}
+                                    math="h_\triangle &= \sqrt{\left(\frac{4,83\,\text{m}}{2}\right)^2+(5\,\text{m})^2} \\ &\approx \sqrt{30{,}82} \\ &\approx 5{,}55\,\text{m}"
                                 />
                                 Damit ergibt sich als Mantelfläche:
                                 <BlockMath
-                                    math={String.raw`
-                                    M &= 8 \cdot \frac{1}{2}gh_\triangle \\
-                                        &= 8 \cdot \frac{1}{2}\cdot 2\,\text{m} \cdot 5{,}55\,\text{m} \\
-                                        &= 44{,}4\,\text{m}^2
-                                    `}
+                                    math="M &= 8 \cdot \frac{1}{2}gh_\triangle \\ &= 8 \cdot \frac{1}{2}\cdot 2\,\text{m} \cdot 5{,}55\,\text{m} \\ &= 44{,}4\,\text{m}^2"
                                 />
                                 Ein Dach hat also eine Fläche von 44,4{thinsp}m
                                 <sup>2</sup>. Da wir 5 dieser Dächer haben,
@@ -741,26 +581,16 @@ export default function Pyramiden() {
                                 benötigen wir 5 Packungen pro Quadratmeter. Für
                                 uns heißt das also:
                                 <MBlockMath
-                                    desktop={String.raw`
-                                    557{,}2\,\text{m}^2 \cdot 5\,\frac{\text{Packungen}}{\text{m}^2}= 2786\,\text{Packungen}
-                                    `}
-                                    mobile={String.raw`
-                                    &557{,}2\,\text{m}^2 \cdot 5\,\frac{\text{Packungen}}{\text{m}^2}  \\
-                                    &= 2786\,\text{Packungen}
-                                    `}
+                                    desktop="557{,}2\,\text{m}^2 \cdot 5\,\frac{\text{Packungen}}{\text{m}^2}= 2786\,\text{Packungen}"
+                                    mobile="&557{,}2\,\text{m}^2 \cdot 5\,\frac{\text{Packungen}}{\text{m}^2} \\ &= 2786\,\text{Packungen}"
                                 />
                                 Da jede Packung 30€ kostet, sind das insgesamt
                                 83580€. Die Dachdecker selber kosten 50€ pro
                                 Quadratmeter, das sind nochmal zusätzliche
                                 Kosten von:
                                 <MBlockMath
-                                    desktop={String.raw`
-                                    557{,}2\,\text{m}^2 \cdot 50\frac{\text{€}\vphantom{U}}{\text{m}^2} = 27860\,\text{€}
-                                    `}
-                                    mobile={String.raw`
-                                    &557{,}2\,\text{m}^2 \cdot 50\frac{\text{€}\vphantom{U}}{\text{m}^2} \\
-                                    &= 27860\,\text{€}
-                                    `}
+                                    desktop="557{,}2\,\text{m}^2 \cdot 50\frac{\text{€}\vphantom{U}}{\text{m}^2} = 27860\,\text{€}"
+                                    mobile="&557{,}2\,\text{m}^2 \cdot 50\frac{\text{€}\vphantom{U}}{\text{m}^2} \\ &= 27860\,\text{€}"
                                 />
                                 Heißt: Die Restauration aller Dächer kostet
                                 insgesamt 111440€.

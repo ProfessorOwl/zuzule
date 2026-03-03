@@ -5,7 +5,6 @@ import { SuspenseCheckableHeading } from "@/components/SuspenseCheckableHeading"
 import { ImageCaption } from "@/components/ImageCaption";
 import {
     Divider,
-    Image,
     List,
     ListItem,
     SimpleGrid,
@@ -16,6 +15,8 @@ import GeoGebraAppletSlider from "@/components/GeoGebraAppletSlider";
 import Video from "@/components/Video";
 import VieleckInDreiecke from "/videos/Vieleck in Dreiecke.mov";
 import thinsp from "@/components/thinsp";
+import Image from "@/components/Image";
+
 
 
 export default function Prismen() {
@@ -190,9 +191,7 @@ export default function Prismen() {
                 Prismas lässt sich dann über die <b>Mantelfläche</b>{" "}
                 <InlineMath math="M = M_1 + M_2 + M_3"/> und die{" "}
                 <b>Grundfläche</b> <InlineMath math="G"/> berechnen:
-                <BlockMath math={String.raw`
-                    O = \textcolor{red}{M} + 2\cdot \textcolor{blue}{G} =  \textcolor{red}{M_1} +  \textcolor{red}{M_2} +  \textcolor{red}{M_3} + 2\cdot  \textcolor{blue}{G}
-                `} />
+                <BlockMath math="O = \textcolor{red}{M} + 2\cdot \textcolor{blue}{G} = \textcolor{red}{M_1} + \textcolor{red}{M_2} + \textcolor{red}{M_3} + 2\cdot \textcolor{blue}{G}" />
                 Da die Grundfläche zweimal vorkommt, müssen wir sie auch doppelt
                 in der Rechnung berücksichtigen!
             </CheckableHeading>
@@ -217,42 +216,15 @@ export default function Prismen() {
                             <ListItem>
                                 {" "}
                                 Rechteckiges Prisma
-                                <BlockMath math={String.raw`
-                                    G &= 1 \,\text{cm} \cdot 2 \,\text{cm} \\ 
-                                    &= 2 \,\text{cm}^2 \\ 
-                                    M &= 2 \cdot 3 \,\text{cm} \cdot 1 \,\text{cm} + 2 \cdot 3 \,\text{cm} \cdot 2 \,\text{cm} \\ 
-                                    &=  6 \, \text{cm}^2 + 12 \, \text{cm}^2 \\ 
-                                    &= 18 \, \text{cm}^2  \\ 
-                                    O &= 2 \cdot G + M \\ 
-                                    &= 2 \cdot 2 \,\text{cm}^2 + 18 \, \text{cm}^2  \\ 
-                                    &= 22\, \text{cm}^2
-                                `} />
+                                <BlockMath math="G &= 1 \,\text{cm} \cdot 2 \,\text{cm} \\ &= 2 \,\text{cm}^2 \\ M &= 2 \cdot 3 \,\text{cm} \cdot 1 \,\text{cm} + 2 \cdot 3 \,\text{cm} \cdot 2 \,\text{cm} \\ &= 6 \, \text{cm}^2 + 12 \, \text{cm}^2 \\ &= 18 \, \text{cm}^2 \\ O &= 2 \cdot G + M \\ &= 2 \cdot 2 \,\text{cm}^2 + 18 \, \text{cm}^2 \\ &= 22\, \text{cm}^2" />
                             </ListItem>
                             <ListItem>
                                 Dreieckiges Prisma
-                                <BlockMath math={String.raw`
-                                    G &= \frac{1}{2} 12 \,\text{cm} \cdot h \\ 
-                                    &= \frac{1}{2} 12 \,\text{cm}\cdot 8 \,\text{cm}\\ 
-                                    &= 96 \,\text{cm}^2 \\
-                                    M &= 2 \cdot 10 \,\text{cm} \cdot 40 \,\text{cm} +  12 \,\text{cm} \cdot 40 \,\text{cm} \\ 
-                                    &=  800 \, \text{cm}^2 +  480 \, \text{cm}^2 \\ 
-                                    &= 1280 \, \text{cm}^2  \\ 
-                                    O &= 2 \cdot G + M \\ 
-                                    &= 2 \cdot 96 \,\text{cm}^2 + 1280 \, \text{cm}^2  \\ 
-                                    &= 1472 \, \text{cm}^2
-                                `} />
+                                <BlockMath math="G &= \frac{1}{2} 12 \,\text{cm} \cdot h \\ &= \frac{1}{2} 12 \,\text{cm}\cdot 8 \,\text{cm}\\ &= 96 \,\text{cm}^2 \\ M &= 2 \cdot 10 \,\text{cm} \cdot 40 \,\text{cm} + 12 \,\text{cm} \cdot 40 \,\text{cm} \\ &= 800 \, \text{cm}^2 + 480 \, \text{cm}^2 \\ &= 1280 \, \text{cm}^2 \\ O &= 2 \cdot G + M \\ &= 2 \cdot 96 \,\text{cm}^2 + 1280 \, \text{cm}^2 \\ &= 1472 \, \text{cm}^2" />
                             </ListItem>
                             <ListItem>
                                 Fünfeckiges Prisma
-                                <BlockMath math={String.raw`
-                                    A &= 20 \, \text{cm}^2 \\
-                                    M &= U \cdot 11 \, \text{cm} \\
-                                    &= 15 \, \text{cm} \cdot 11 \, \text{cm} \\
-                                    &= 165 \, \text{cm}^2 \\
-                                    O &= 2 \cdot A + M \\ 
-                                        &= 2 \cdot 20 \,\text{cm}^2 + 165 \, \text{cm}^2  \\ 
-                                        &= 205 \, \text{cm}^2
-                                `} />
+                                <BlockMath math="A &= 20 \, \text{cm}^2 \\ M &= U \cdot 11 \, \text{cm} \\ &= 15 \, \text{cm} \cdot 11 \, \text{cm} \\ &= 165 \, \text{cm}^2 \\ O &= 2 \cdot A + M \\ &= 2 \cdot 20 \,\text{cm}^2 + 165 \, \text{cm}^2 \\ &= 205 \, \text{cm}^2" />
                             </ListItem>
                         </List>
                     </Lösung>
@@ -402,13 +374,7 @@ export default function Prismen() {
                         12{thinsp}cm<sup>3</sup> sein muss. 6 Würfel sind unten,
                         weitere 6 sind oben. Das ergibt sich auch aus der
                         Berechnung von Grundfläche mal Höhe:
-                        <BlockMath math={String.raw`
-                            \textcolor{blue}{A} &= 3 \, \text{cm} \cdot 2 \, \text{cm} \\
-                            &= 6\, \text{cm}^2 \\
-                            \textcolor{green}{V} &=\textcolor{blue}{A} \cdot h \\
-                            &= 6 \, \text{cm}^2 \cdot 2\,\text{cm} \\
-                            &= 12 \, \text{cm}^3
-                        `} />
+                        <BlockMath math="\textcolor{blue}{A} &= 3 \, \text{cm} \cdot 2 \, \text{cm} \\ &= 6\, \text{cm}^2 \\ \textcolor{green}{V} &=\textcolor{blue}{A} \cdot h \\ &= 6 \, \text{cm}^2 \cdot 2\,\text{cm} \\ &= 12 \, \text{cm}^3" />
                         Können wir diese Formel eventuell auch bei Prismen
                         anwenden? Gilt <InlineMath math="V = A \cdot h"/>{" "}
                         hier immer? Testen wir es mal!
@@ -442,11 +408,7 @@ export default function Prismen() {
                         Denn mit dem Verdoppeln des Flächeninhaltes verdoppeln
                         wir auch das Volumen. Das Volumen ergibt sich also mit
                         der Formel:
-                        <BlockMath math={String.raw`
-                            V_\text{viereckiges Prisma} &= A_\text{Viereck} \cdot \textcolor{green}{h_\text{Prisma}} \\
-                            \frac{1}{2} V_\text{viereckiges Prisma} &= \frac{1}{2} A_\text{Viereck} \cdot \textcolor{green}{h_\text{Prisma}} \\
-                            V_\text{dreieckiges Prisma} &= A_\text{Dreieck} \cdot \textcolor{green}{h_\text{Prisma}}
-                        `} />
+                        <BlockMath math="V_\text{viereckiges Prisma} &= A_\text{Viereck} \cdot \textcolor{green}{h_\text{Prisma}} \\ \frac{1}{2} V_\text{viereckiges Prisma} &= \frac{1}{2} A_\text{Viereck} \cdot \textcolor{green}{h_\text{Prisma}} \\ V_\text{dreieckiges Prisma} &= A_\text{Dreieck} \cdot \textcolor{green}{h_\text{Prisma}}" />
                         <Image
                             src="/Prismen/DreieckigesPrismaVolumen@2x.png"
                             width={2400}

@@ -71,7 +71,6 @@ export function ImageCaption({
                     </Text>
                 </Flex>
                 <Image
-                    component={NextImage}
                     h={h}
                     w={"auto"}
                     fit={fit}
@@ -86,7 +85,6 @@ export function ImageCaption({
         return (
             <Stack gap={"xs"} maw="100%">
                 <Image
-                    component={NextImage}
                     h={h}
                     fit={fit}
                     src={src}

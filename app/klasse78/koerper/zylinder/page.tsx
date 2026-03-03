@@ -4,7 +4,6 @@ import {
     Button,
     Divider,
     Flex,
-    Image,
     List,
     ListItem,
     Space,
@@ -19,6 +18,8 @@ import Link from "next/link";
 import { IconExternalLink } from "@tabler/icons-react";
 import GeoGebraAppletSlider from "@/components/GeoGebraAppletSlider";
 import thinsp from "@/components/thinsp";
+import Image from "@/components/Image";
+
 
 
 export default function Zylinder() {
@@ -176,10 +177,7 @@ export default function Zylinder() {
                     <InlineMath math="4{,}7\,\text{cm}"/> hat.
                     Der Flächeninhalt <InlineMath math="A"/> ergibt sich
                     also wie folgt:
-                    <BlockMath math={String.raw`
-                        A &= 9{,}4\,\text{cm} \cdot 4{,}7\,\text{cm} \\
-                        &= 44{,}18\,\text{cm}^2
-                        `} />
+                    <BlockMath math="A &= 9{,}4\,\text{cm} \cdot 4{,}7\,\text{cm} \\ &= 44{,}18\,\text{cm}^2" />
                     Das Problem ist nun aber, dass wir nicht unbedingt jeden
                     Zylinder mit einem Filzstift anmalen wollen. Wie würden wir
                     die Mantelfläche eines Autoreifens bestimmen? Dann bräuchten
@@ -193,10 +191,7 @@ export default function Zylinder() {
                     Aus dem Unterricht sollte dir bereits bekannt sein, wie man
                     den Umfang <InlineMath math="U"/> eines Kreises
                     berechnet. Wir können dafür die Formel
-                    <BlockMath math={String.raw`
-                        U &= 2 \cdot \pi \cdot r \\
-                        &= \pi \cdot d
-                        `} />
+                    <BlockMath math="U &= 2 \cdot \pi \cdot r \\ &= \pi \cdot d" />
                     verwenden. <InlineMath math="r"/> ist hierbei der
                     Radius, <InlineMath math="d"/> der Durchmesser. Falls
                     dir nicht klar sein sollte, warum wir den Umfang auf diese
@@ -214,11 +209,7 @@ export default function Zylinder() {
                         es egal, wie groß ein Kreis ist – dieses Verhältnis ist
                         immer gleich <InlineMath math="\pi"/>. Auch in
                         unserem Beispiel:
-                        <BlockMath math={String.raw`
-                            \pi &= \tfrac{U}{d} \\
-                                &=  \tfrac{9{,}4\,\text{cm}}{3\,\text{cm}} \\
-                                &\approx 3,13 
-                            `} />
+                        <BlockMath math="\pi &= \frac{U}{d} \\ &= \frac{9{,}4\,\text{cm}}{3\,\text{cm}} \\ &\approx 3,13" />
                     </CheckableBlockquote>
                     <Image
                         src="/Zylinder/durchmesserFluid.jpg"
@@ -230,11 +221,7 @@ export default function Zylinder() {
                     <InlineMath math="1{,}5\,\text{cm}"/>. Nun
                     verwenden wir die Formel für den Umfang eines Kreises, um
                     den Umfang unseres Gefäßes zu bekommen:
-                    <BlockMath math={String.raw`
-                        U &= 2 \cdot \pi \cdot r \\
-                        &= 2 \cdot \pi \cdot 1{,}5\,\text{cm} \\
-                        &\approx 9{,}4\,\text{cm}
-                        `} />
+                    <BlockMath math="U &= 2 \cdot \pi \cdot r \\ &= 2 \cdot \pi \cdot 1{,}5\,\text{cm} \\ &\approx 9{,}4\,\text{cm}" />
                     Das ist genau die Länge, die wir auch durch das Abrollen der
                     Dose bekommen. Nun benötigen wir noch die Höhe unseres
                     Zylinders.
@@ -250,11 +237,7 @@ export default function Zylinder() {
                     Mathematisch machen wir das, indem wir den Umfang{" "}
                     <InlineMath math="U"/> mit der Höhe{" "}
                     <InlineMath math="h"/> multiplizieren:
-                    <BlockMath math={String.raw`
-                        A &= U \cdot h \\
-                        &= 9{,}4\,\text{cm} \cdot 5\,\text{cm} \\
-                        &= 47\,\text{cm}^2
-                        `} />
+                    <BlockMath math="A &= U \cdot h \\ &= 9{,}4\,\text{cm} \cdot 5\,\text{cm} \\ &= 47\,\text{cm}^2" />
                     Das passt gut zu der Fläche, die man durch das Abrollen der
                     Flasche bekommt. Dadurch erhalten wir nämlich ca.{" "}
                     <InlineMath math="44\,\text{cm}^2"/>.
@@ -321,16 +304,12 @@ export default function Zylinder() {
                 <Divider />
                 Die Ober- und Unterseite eines Zylinders ist ein Kreis. Deswegen
                 können wir die Flächenformel eines Kreises verwenden!
-                <BlockMath math={String.raw`
-                    A_\text{Kappe} = \pi \cdot r^2
-                    `} />
+                <BlockMath math="A_\text{Kappe} = \pi \cdot r^2" />
                 Um nun die Gesamtoberfläche <InlineMath math="O"/> eines
                 Zylinders zu bekommen, addieren wir die Ober- und Unterseite{" "}
                 <InlineMath math="A_\text{Kappe}"/> sowie die
                 Mantelfläche <InlineMath math="M"/> zusammen:
-                <BlockMath math={String.raw`
-                    A = M + 2\cdot A_\text{Kappe}
-                    `} />
+                <BlockMath math="A = M + 2\cdot A_\text{Kappe}" />
                 <CheckableBlockquote icon="frage" title="Aufgabe: Oberfläche">
                     Berechne die Gesamtoberfläche der Zylinder, welche Radius{" "}
                     <InlineMath math="r"/> und Höhe{" "}
@@ -363,90 +342,42 @@ export default function Zylinder() {
                         <Lösung>
                             <List type="ordered" visibleFrom="md">
                                 <ListItem>
-                                    <BlockMath math={String.raw`
-                                    &&M &= \tfrac{36}{5}\pi\,\text{cm}^2 \approx 22{,}62\,\text{cm}^2 \\
-                                    &&A_\text{Kappe} &= 9\pi\,\text{cm}^2 \approx 28{,}27\,\text{cm}^2 \\
-                                    &&O &= \tfrac{126}{5}\pi\,\text{cm}^2 \approx 79{,}17\,\text{cm}^2
-                                    `} />
+                                    <BlockMath math="&&M &= \tfrac{36}{5}\pi\,\text{cm}^2 \approx 22{,}62\,\text{cm}^2 \\ &&A_\text{Kappe} &= 9\pi\,\text{cm}^2 \approx 28{,}27\,\text{cm}^2 \\ &&O &= \tfrac{126}{5}\pi\,\text{cm}^2 \approx 79{,}17\,\text{cm}^2" />
                                 </ListItem>
                                 <ListItem>
-                                    <BlockMath math={String.raw`
-                                    &&M &= 82\pi\,\text{cm}^2 \approx 257{,}61\,\text{cm}^2 \\
-                                    &&A_\text{Kappe} &= \tfrac{1681}{25}\pi\,\text{cm}^2 \approx 211{,}24\,\text{cm}^2 \\
-                                    &&O &= \tfrac{5412}{25}\pi\,\text{cm}^2 \approx 680{,}09\,\text{cm}^2
-                                    `} />
+                                    <BlockMath math="&&M &= 82\pi\,\text{cm}^2 \approx 257{,}61\,\text{cm}^2 \\ &&A_\text{Kappe} &= \tfrac{1681}{25}\pi\,\text{cm}^2 \approx 211{,}24\,\text{cm}^2 \\ &&O &= \tfrac{5412}{25}\pi\,\text{cm}^2 \approx 680{,}09\,\text{cm}^2" />
                                 </ListItem>
                                 <ListItem>
-                                    <BlockMath math={String.raw`
-                                    &&M &= \tfrac{2847}{50}\pi\,\text{cm}^2 \approx 178{,}88\,\text{cm}^2 \\
-                                    &&A_\text{Kappe} &= \tfrac{5329}{100}\pi\,\text{cm}^2 \approx 167{,}42\,\text{cm}^2 \\
-                                    &&O &= \tfrac{4088}{25}\pi\,\text{cm}^2 \approx 513{,}71\,\text{cm}^2
-                                    `} />
+                                    <BlockMath math="&&M &= \tfrac{2847}{50}\pi\,\text{cm}^2 \approx 178{,}88\,\text{cm}^2 \\ &&A_\text{Kappe} &= \tfrac{5329}{100}\pi\,\text{cm}^2 \approx 167{,}42\,\text{cm}^2 \\ &&O &= \tfrac{4088}{25}\pi\,\text{cm}^2 \approx 513{,}71\,\text{cm}^2" />
                                 </ListItem>
                                 <ListItem>
-                                    <BlockMath math={String.raw`
-                                    &&M &= \tfrac{364}{5}\pi\,\text{cm}^2 \approx 228{,}71\,\text{cm}^2 \\
-                                    &&A_\text{Kappe} &= 16\pi\,\text{cm}^2 \approx 50{,}27\,\text{cm}^2 \\
-                                    &&O &= \tfrac{524}{5}\pi\,\text{cm}^2 \approx 329{,}24\,\text{cm}^2
-                                    `} />
+                                    <BlockMath math="&&M &= \tfrac{364}{5}\pi\,\text{cm}^2 \approx 228{,}71\,\text{cm}^2 \\ &&A_\text{Kappe} &= 16\pi\,\text{cm}^2 \approx 50{,}27\,\text{cm}^2 \\ &&O &= \tfrac{524}{5}\pi\,\text{cm}^2 \approx 329{,}24\,\text{cm}^2" />
                                 </ListItem>
                                 <ListItem>
-                                    <BlockMath math={String.raw`
-                                    &&M &= \tfrac{201}{2}\pi\,\text{m}^2 \approx 315{,}73\,\text{m}^2 \\
-                                    &&A_\text{Kappe} &= \tfrac{4489}{100}\pi\,\text{m}^2 \approx 141{,}03\,\text{m}^2 \\
-                                    &&O &= \tfrac{4757}{25}\pi\,\text{m}^2 \approx 597{,}78\,\text{m}^2
-                                    `} />
+                                    <BlockMath math="&&M &= \tfrac{201}{2}\pi\,\text{m}^2 \approx 315{,}73\,\text{m}^2 \\ &&A_\text{Kappe} &= \tfrac{4489}{100}\pi\,\text{m}^2 \approx 141{,}03\,\text{m}^2 \\ &&O &= \tfrac{4757}{25}\pi\,\text{m}^2 \approx 597{,}78\,\text{m}^2" />
                                 </ListItem>
                                 <ListItem>
-                                    <BlockMath math={String.raw`
-                                    &&M &= \tfrac{468}{25}\pi\,\text{m}^2\approx 58{,}81\,\text{m}^2 \\ 
-                                    &&A_\text{Kappe} &= \tfrac{1521}{400}\pi\,\text{m}^2 \approx 11{,}95\,\text{m}^2 \\
-                                    &&O &= \tfrac{1053}{40}\pi\,\text{m}^2 \approx 82{,}70\,\text{m}^2
-                                    `} />
+                                    <BlockMath math="&&M &= \tfrac{468}{25}\pi\,\text{m}^2\approx 58{,}81\,\text{m}^2 \\ &&A_\text{Kappe} &= \tfrac{1521}{400}\pi\,\text{m}^2 \approx 11{,}95\,\text{m}^2 \\ &&O &= \tfrac{1053}{40}\pi\,\text{m}^2 \approx 82{,}70\,\text{m}^2" />
                                 </ListItem>
                             </List>
                             <List type="ordered" hiddenFrom="md">
                                 <ListItem>
-                                    <BlockMath math={String.raw`
-                                    M &= \tfrac{36}{5}\pi\,\text{cm}^2 \\ &\approx 22{,}62\,\text{cm}^2 \\
-                                    A_\text{Kappe} &= 9\pi\,\text{cm}^2 \\ &\approx 28{,}27\,\text{cm}^2 \\
-                                    O &= \tfrac{126}{5}\pi\,\text{cm}^2 \\ &\approx 79{,}17\,\text{cm}^2
-                                    `} />
+                                    <BlockMath math="M &= \tfrac{36}{5}\pi\,\text{cm}^2 \\ &\approx 22{,}62\,\text{cm}^2 \\ A_\text{Kappe} &= 9\pi\,\text{cm}^2 \\ &\approx 28{,}27\,\text{cm}^2 \\ O &= \tfrac{126}{5}\pi\,\text{cm}^2 \\ &\approx 79{,}17\,\text{cm}^2" />
                                 </ListItem>
                                 <ListItem>
-                                    <BlockMath math={String.raw`
-                                    M &= 82\pi\,\text{cm}^2 \\ &\approx 257{,}61\,\text{cm}^2 \\
-                                    A_\text{Kappe} &= \tfrac{1681}{25}\pi\,\text{cm}^2 \\ &\approx 211{,}24\,\text{cm}^2 \\
-                                    O &= \tfrac{5412}{25}\pi\,\text{cm}^2 \\ &\approx 680{,}09\,\text{cm}^2
-                                    `} />
+                                    <BlockMath math="M &= 82\pi\,\text{cm}^2 \\ &\approx 257{,}61\,\text{cm}^2 \\ A_\text{Kappe} &= \tfrac{1681}{25}\pi\,\text{cm}^2 \\ &\approx 211{,}24\,\text{cm}^2 \\ O &= \tfrac{5412}{25}\pi\,\text{cm}^2 \\ &\approx 680{,}09\,\text{cm}^2" />
                                 </ListItem>
                                 <ListItem>
-                                    <BlockMath math={String.raw`
-                                    M &= \tfrac{2847}{50}\pi\,\text{cm}^2 \\ &\approx 178{,}88\,\text{cm}^2 \\
-                                    A_\text{Kappe} &= \tfrac{5329}{100}\pi\,\text{cm}^2 \\ &\approx 167{,}42\,\text{cm}^2 \\
-                                    O &= \tfrac{4088}{25}\pi\,\text{cm}^2 \\ &\approx 513{,}71\,\text{cm}^2
-                                    `} />
+                                    <BlockMath math="M &= \tfrac{2847}{50}\pi\,\text{cm}^2 \\ &\approx 178{,}88\,\text{cm}^2 \\ A_\text{Kappe} &= \tfrac{5329}{100}\pi\,\text{cm}^2 \\ &\approx 167{,}42\,\text{cm}^2 \\ O &= \tfrac{4088}{25}\pi\,\text{cm}^2 \\ &\approx 513{,}71\,\text{cm}^2" />
                                 </ListItem>
                                 <ListItem>
-                                    <BlockMath math={String.raw`
-                                    M &= \tfrac{364}{5}\pi\,\text{cm}^2 \\ &\approx 228{,}71\,\text{cm}^2 \\
-                                    A_\text{Kappe} &= 16\pi\,\text{cm}^2 \\ &\approx 50{,}27\,\text{cm}^2 \\
-                                    O &= \tfrac{524}{5}\pi\,\text{cm}^2 \\ &\approx 329{,}24\,\text{cm}^2
-                                    `} />
+                                    <BlockMath math="M &= \tfrac{364}{5}\pi\,\text{cm}^2 \\ &\approx 228{,}71\,\text{cm}^2 \\ A_\text{Kappe} &= 16\pi\,\text{cm}^2 \\ &\approx 50{,}27\,\text{cm}^2 \\ O &= \tfrac{524}{5}\pi\,\text{cm}^2 \\ &\approx 329{,}24\,\text{cm}^2" />
                                 </ListItem>
                                 <ListItem>
-                                    <BlockMath math={String.raw`
-                                    M &= \tfrac{201}{2}\pi\,\text{m}^2 \\ &\approx 315{,}73\,\text{m}^2 \\
-                                    A_\text{Kappe} &= \tfrac{4489}{100}\pi\,\text{m}^2 \\ &\approx 141{,}03\,\text{m}^2 \\
-                                    O &= \tfrac{4757}{25}\pi\,\text{m}^2 \\ &\approx 597{,}78\,\text{m}^2
-                                    `} />
+                                    <BlockMath math="M &= \tfrac{201}{2}\pi\,\text{m}^2 \\ &\approx 315{,}73\,\text{m}^2 \\ A_\text{Kappe} &= \tfrac{4489}{100}\pi\,\text{m}^2 \\ &\approx 141{,}03\,\text{m}^2 \\ O &= \tfrac{4757}{25}\pi\,\text{m}^2 \\ &\approx 597{,}78\,\text{m}^2" />
                                 </ListItem>
                                 <ListItem>
-                                    <BlockMath math={String.raw`
-                                    M &= \tfrac{468}{25}\pi\,\text{m}^2\\ &\approx 58{,}81\,\text{m}^2 \\ 
-                                    A_\text{Kappe} &= \tfrac{1521}{400}\pi\,\text{m}^2 \\ &\approx 11{,}95\,\text{m}^2 \\
-                                    O &= \tfrac{1053}{40}\pi\,\text{m}^2 \\ &\approx 82{,}70\,\text{m}^2
-                                    `} />
+                                    <BlockMath math="M &= \tfrac{468}{25}\pi\,\text{m}^2\\ &\approx 58{,}81\,\text{m}^2 \\ A_\text{Kappe} &= \tfrac{1521}{400}\pi\,\text{m}^2 \\ &\approx 11{,}95\,\text{m}^2 \\ O &= \tfrac{1053}{40}\pi\,\text{m}^2 \\ &\approx 82{,}70\,\text{m}^2" />
                                 </ListItem>
                             </List>
                         </Lösung>
@@ -582,13 +513,7 @@ export default function Zylinder() {
                         12{thinsp}cm<sup>3</sup> sein muss. 6 Würfel sind unten,
                         weitere 6 sind oben. Das ergibt sich auch aus der
                         Berechnung von Grundfläche mal Höhe:
-                        <BlockMath math={String.raw`
-                            \textcolor{blue}{A} &= 3 \, \text{cm} \cdot 2 \, \text{cm} \\
-                            &= 6\, \text{cm}^2 \\
-                            \textcolor{green}{V} &=\textcolor{blue}{A} \cdot h \\
-                            &= 6 \, \text{cm}^2 \cdot 2\,\text{cm} \\
-                            &= 12 \, \text{cm}^3
-                        `} />
+                        <BlockMath math="\textcolor{blue}{A} &= 3 \, \text{cm} \cdot 2 \, \text{cm} \\ &= 6\, \text{cm}^2 \\ \textcolor{green}{V} &=\textcolor{blue}{A} \cdot h \\ &= 6 \, \text{cm}^2 \cdot 2\,\text{cm} \\ &= 12 \, \text{cm}^3" />
                         Können wir diese Formel eventuell auch bei Zylindern
                         anwenden? Gilt <InlineMath math="V = A \cdot h"/>{" "}
                         hier immer? Testen wir es mal!
@@ -623,18 +548,10 @@ export default function Zylinder() {
                         </Flex>
                         Wir berechnen zuerst den Flächeninhalt mit der
                         Flächenformel für einen Kreis:
-                        <BlockMath math={String.raw`
-                            A &= \pi \cdot r^2 \\
-                                &= \pi \cdot \left(\frac{7{,}5\,\text{cm}}{2}\right)^2\\
-                                &\approx 44{,}18\,\text{cm}^2
-                            `} />
+                        <BlockMath math="A &= \pi \cdot r^2 \\ &= \pi \cdot \left(\frac{7{,}5\,\text{cm}}{2}\right)^2\\ &\approx 44{,}18\,\text{cm}^2" />
                         Das Volumen berechnen wir nun nach dem gleichen Prinzip
                         wie beim Quader, also:
-                        <BlockMath math={String.raw`
-                            V &= A \cdot h \\
-                                &= 44{,}18\,\text{cm}^2 \cdot  11\,\text{cm} \\
-                                &\approx 485{,}97\,\text{cm}^3
-                            `} />
+                        <BlockMath math="V &= A \cdot h \\ &= 44{,}18\,\text{cm}^2 \cdot 11\,\text{cm} \\ &\approx 485{,}97\,\text{cm}^3" />
                         Das ist etwas mehr, als die 400{thinsp}mL, die
                         eigentlich als Füllmenge auf der Dose stehen. Wir dürfen
                         aber nicht vergessen, dass wir die Dose von außen
@@ -731,24 +648,10 @@ export default function Zylinder() {
                             >
                                 <Lösung>
                                     <b>Dose mit Kokosmilch</b>
-                                    <BlockMath math={String.raw`
-                                        A &= \pi \cdot r^2 \\
-                                            &= \pi \cdot \left(\frac{7{,}3\,\text{cm}}{2}\right)^2 \\
-                                            &\approx 41{,}85\,\text{cm}^2 \\
-                                        V &= A \cdot h \\
-                                            &= 42{,}31\,\text{cm}^2 \cdot 9,5\,\text{cm} \\
-                                            &\approx 397{,}61\,\text{cm}^3
-                                        `} />
+                                    <BlockMath math="A &= \pi \cdot r^2 \\ &= \pi \cdot \left(\frac{7{,}3\,\text{cm}}{2}\right)^2 \\ &\approx 41{,}85\,\text{cm}^2 \\ V &= A \cdot h \\ &= 42{,}31\,\text{cm}^2 \cdot 9,5\,\text{cm} \\ &\approx 397{,}61\,\text{cm}^3" />
                                     <Space />
                                     <b>Dose mit gehackten Tomaten</b>
-                                    <BlockMath math={String.raw`
-                                        A &= \pi \cdot r^2 \\
-                                            &= \pi \cdot \left(\frac{7{,}3\,\text{cm}}{2}\right)^2 \\
-                                            &\approx 41{,}85\,\text{cm}^2 \\
-                                        V &= A \cdot h \\
-                                            &= 42{,}31\,\text{cm}^2 \cdot 9,7\,\text{cm} \\
-                                            &\approx 405{,}98\,\text{cm}^3
-                                        `} />
+                                    <BlockMath math="A &= \pi \cdot r^2 \\ &= \pi \cdot \left(\frac{7{,}3\,\text{cm}}{2}\right)^2 \\ &\approx 41{,}85\,\text{cm}^2 \\ V &= A \cdot h \\ &= 42{,}31\,\text{cm}^2 \cdot 9,7\,\text{cm} \\ &\approx 405{,}98\,\text{cm}^3" />
                                     Gehen wir davon aus, dass wir richtig
                                     gemessen haben, so sind in der Kokosmilch{" "}
                                     <InlineMath math="400\,\text{mL} - 397{,}61\,\text{mL} = 2{,}39\,\text{mL}"/>{" "}
