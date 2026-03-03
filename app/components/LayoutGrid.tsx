@@ -25,12 +25,16 @@ export function LayoutGrid({ children }: { children: any }) {
                 </GridCol>
             )}
             <GridCol
-                span={showOutline ? { base: 12, md: 6.5, lg: 7 } : { base: 12, md: 12 }}
-                style={{ overflow: 'hidden' }}
+                span={
+                    showOutline
+                        ? { base: 12, md: 6.5, lg: 7 }
+                        : { base: 12, md: 12 }
+                }
+                style={{ overflow: "hidden" }}
             >
                 <ScrollAreaAutosize mah={"calc(100vh - 56px)"} key={pathname}>
                     <Container pb={200} px={{ base: "10", sm: "md" }}>
-                       {children}
+                        {children}
                     </Container>
                 </ScrollAreaAutosize>
             </GridCol>

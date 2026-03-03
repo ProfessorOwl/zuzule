@@ -9,7 +9,7 @@ import {
     ListItem,
     Mark,
     Space,
-    Text
+    Text,
 } from "@mantine/core";
 import { generateColors } from "@mantine/colors-generator";
 import NextImage from "next/image";
@@ -21,7 +21,7 @@ export const theme = createTheme({
                 lh: 1.7,
                 mt: 5,
                 component: "div",
-            }
+            },
         }),
         Divider: Divider.extend({
             defaultProps: {

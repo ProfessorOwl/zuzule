@@ -12,9 +12,7 @@ import {
     Text,
     Title,
 } from "@mantine/core";
-import {
-    IconDotsDiagonal2,
-} from "@tabler/icons-react";
+import { IconDotsDiagonal2 } from "@tabler/icons-react";
 import { FrageIcon, AhaIcon, ExkursIcon } from "./icons";
 
 interface CheckableBlockquoteProps {
@@ -83,7 +81,12 @@ export function CheckableBlockquote({
     const Icon = icon ? IconMap[icon] : null;
 
     return (
-        <Blockquote px={{base: "xs", md: "lg"}} py={"md"} my={"md"} data-checkable-id={uniqueId}>
+        <Blockquote
+            px={{ base: "xs", md: "lg" }}
+            py={"md"}
+            my={"md"}
+            data-checkable-id={uniqueId}
+        >
             <div style={{ display: "flex", alignItems: "center", gap: "8px" }}>
                 <Checkbox
                     checked={checked}

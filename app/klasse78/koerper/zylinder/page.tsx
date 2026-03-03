@@ -17,11 +17,13 @@ import { CheckableBlockquote } from "@/components/CheckableBlockquote";
 import { Lösung } from "@/components/Lösung";
 import { InlineMath } from "react-katex";
 import BlockMath from "@/components/BlockMath";
-import Video from "@/components/Video"
+import Video from "@/components/Video";
 import UmfangZylinder from "/videos/UmfangZylinder.mov";
 import Link from "next/link";
 import { IconExternalLink } from "@tabler/icons-react";
 import GeoGebraAppletSlider from "@/components/GeoGebraAppletSlider";
+import thinsp from "@/components/thinsp";
+
 
 export default function Zylinder() {
     return (
@@ -129,7 +131,7 @@ export default function Zylinder() {
                 >
                     <Lösung>
                         <Image
-                            h={{base: "auto", md: 500}}
+                            h={{ base: "auto", md: 500 }}
                             src="/ZylinderLösung@2x.png"
                             width={3600}
                             height={2000}
@@ -171,7 +173,7 @@ export default function Zylinder() {
                     anmalen. Der geht danach nämlich wieder gut ab und wir sehen
                     dadurch, wann wir genau eine Umdrehung haben. Schau es dir
                     in dem Video unten an.
-                    <Video src={UmfangZylinder}/>
+                    <Video src={UmfangZylinder} />
                     Die abgerollte Mantelfläche bildet ein Rechteck, das in
                     unserem Beispiel die Kantenlängen{" "}
                     <InlineMath>{String.raw`9{,}4\,\text{cm}`}</InlineMath> und{" "}
@@ -598,8 +600,8 @@ export default function Zylinder() {
                         Das Volumen eines Quaders ergibt sich also durch das{" "}
                         <b>„hochziehen“</b> dieser Fläche in den Raum. Schau es
                         dir mal an diesem Beispiel hier an, wo ein Quader eine
-                        Grundfläche von 3&nbsp;mal 2&thinsp;cm und eine Höhe von
-                        2&thinsp;cm hat.
+                        Grundfläche von 3&nbsp;mal 2{thinsp}cm und eine Höhe von
+                        2{thinsp}cm hat.
                         <GeoGebraAppletSlider
                             materialId="x5z6yk9z"
                             appName="3d"
@@ -627,9 +629,9 @@ export default function Zylinder() {
                             ]}
                         />
                         Füllen wir den Quader mit Würfeln aus, die ein Volumen
-                        von 1&thinsp;cm<sup>3</sup> haben, kann man gut
+                        von 1{thinsp}cm<sup>3</sup> haben, kann man gut
                         nachvollziehen, dass das Volumen vom gesamten Quader
-                        12&thinsp;cm<sup>3</sup> sein muss. 6 Würfel sind unten,
+                        12{thinsp}cm<sup>3</sup> sein muss. 6 Würfel sind unten,
                         weitere 6 sind oben. Das ergibt sich auch aus der
                         Berechnung von Grundfläche mal Höhe:
                         <BlockMath>{String.raw`
@@ -655,8 +657,8 @@ export default function Zylinder() {
                         multiplizieren dazu den Flächeninhalt mit der Höhe. Als
                         Objekt suchen wir uns eine beliebige Dose aus dem
                         Vorratsschrank aus z.B. eine Dose Kokosmilch. Sie hat
-                        einen Durchmesser von 7,5&thinsp;cm und eine Höhe von
-                        11&thinsp;cm.
+                        einen Durchmesser von 7,5{thinsp}cm und eine Höhe von
+                        11{thinsp}cm.
                         <Flex>
                             <Image
                                 src="/doseKokosDurchmesser.jpg"
@@ -695,12 +697,12 @@ export default function Zylinder() {
                             \end{aligned}
                             `}
                         </BlockMath>
-                        Das ist etwas mehr, als die 400&thinsp;mL, die
+                        Das ist etwas mehr, als die 400{thinsp}mL, die
                         eigentlich als Füllmenge auf der Dose stehen. Wir dürfen
                         aber nicht vergessen, dass wir die Dose von außen
                         gemessen haben und diese nie komplett ausgefüllt werden.
                         In der Dose selbst ist also etwas weniger Platz, und es
-                        wird nur ca. 400&thinsp;mL Kokosmilch vorhanden sein.
+                        wird nur ca. 400{thinsp}mL Kokosmilch vorhanden sein.
                         <CheckableBlockquote
                             icon="frage"
                             title="Aufgabe: Stimmt die Mengenangabe?"
@@ -712,7 +714,7 @@ export default function Zylinder() {
                             Füllmenge mittels der Formel{" "}
                             <InlineMath>V = A \cdot h</InlineMath>. Versuche die
                             Maße möglichst genau abzulesen! Als Füllmenge ist
-                            bei beiden Dosen 400&thinsp;mL angegeben.
+                            bei beiden Dosen 400{thinsp}mL angegeben.
                             <Space />
                             <List type="ordered">
                                 <ListItem>
@@ -740,9 +742,9 @@ export default function Zylinder() {
                                         showLabel="Maße einblenden"
                                         hideLabel="Maße ausblenden"
                                     >
-                                        Innerer Durchmesser: 7,3&thinsp;cm.
+                                        Innerer Durchmesser: 7,3{thinsp}cm.
                                         Bedeckter Bereich auf Stäbchen:
-                                        9,5&thinsp;cm{" "}
+                                        9,5{thinsp}cm{" "}
                                     </Spoiler>
                                 </ListItem>
                                 <Space />
@@ -771,9 +773,9 @@ export default function Zylinder() {
                                         showLabel="Maße einblenden"
                                         hideLabel="Maße ausblenden"
                                     >
-                                        Innerer Durchmesser: 7,3&thinsp;cm.
+                                        Innerer Durchmesser: 7,3{thinsp}cm.
                                         Bedeckter Bereich auf Stäbchen:
-                                        9,7&thinsp;cm{" "}
+                                        9,7{thinsp}cm{" "}
                                     </Spoiler>
                                 </ListItem>
                                 <Space />

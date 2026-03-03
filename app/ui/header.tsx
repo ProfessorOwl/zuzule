@@ -16,7 +16,7 @@ export function HeaderSimple() {
         null,
     );
     const pathname = usePathname();
-    const clickOutside = useClickOutside(() => close())
+    const clickOutside = useClickOutside(() => close());
 
     return (
         <header className={classes.header} ref={clickOutside}>
@@ -32,6 +32,7 @@ export function HeaderSimple() {
                             fill={false}
                             h={40}
                             w={"auto"}
+                            preload={true}
                         />
                     </Group>
                 </Link>
@@ -86,7 +87,10 @@ export function HeaderSimple() {
                             Klassen 7+8
                         </Link>
                         {expandedClass === "78" && (
-                            <div style={{ paddingLeft: "16px" }} onClick={close}>
+                            <div
+                                style={{ paddingLeft: "16px" }}
+                                onClick={close}
+                            >
                                 {navData78.map((item) =>
                                     renderNavItem(item, 0, pathname),
                                 )}
@@ -108,7 +112,10 @@ export function HeaderSimple() {
                             Klassen 9+10
                         </Link>
                         {expandedClass === "910" && (
-                            <div style={{ paddingLeft: "16px" }} onClick={close}>
+                            <div
+                                style={{ paddingLeft: "16px" }}
+                                onClick={close}
+                            >
                                 {navData910.map((item) =>
                                     renderNavItem(item, 0, pathname),
                                 )}

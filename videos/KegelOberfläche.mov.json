@@ -1,1 +1,23 @@
-{"status":"ready","originalFilePath":"videos/KegelOberfläche.mov","provider":"mux","providerMetadata":{"mux":{"uploadId":"AoolRHakKIn76Li7bCYNTWd7gKNtuf88rditn4csHJA","assetId":"awZCdddN1J014uHSX01zSQdzceXn011RA78lIbilnTKwVM","playbackId":"NnxbfvZBR6tEMabxVfR6d5RvDRxv5V6TJpNLlSiNyCo"}},"createdAt":1772472543075,"updatedAt":1772472579389,"size":103180854,"sources":[{"src":"https://stream.mux.com/NnxbfvZBR6tEMabxVfR6d5RvDRxv5V6TJpNLlSiNyCo.m3u8","type":"application/x-mpegURL"}],"poster":"https://image.mux.com/NnxbfvZBR6tEMabxVfR6d5RvDRxv5V6TJpNLlSiNyCo/thumbnail.webp","blurDataURL":"data:image/webp;base64,UklGRpoAAABXRUJQVlA4II4AAAAQAgCdASoQAAkAAQAcJQBOgNOAXAupKK9YAP7YfT8yzOK3w/5W5U3a+FkMTZZdP134eRJTWFD+ot3P8AP5YcS+TSIzvf/yvFrJiBpT2hByWIg5m4nY3Z3XkXjW5/lI7CFQ/8NO3/68v9280BP9XNMFv9y2ZK1bb5LORzr/Oddj7qu8xZN1j6Uk7NHg8AAA"}
+{
+    "status": "ready",
+    "originalFilePath": "videos/KegelOberfläche.mov",
+    "provider": "mux",
+    "providerMetadata": {
+        "mux": {
+            "uploadId": "AoolRHakKIn76Li7bCYNTWd7gKNtuf88rditn4csHJA",
+            "assetId": "awZCdddN1J014uHSX01zSQdzceXn011RA78lIbilnTKwVM",
+            "playbackId": "NnxbfvZBR6tEMabxVfR6d5RvDRxv5V6TJpNLlSiNyCo"
+        }
+    },
+    "createdAt": 1772472543075,
+    "updatedAt": 1772472579389,
+    "size": 103180854,
+    "sources": [
+        {
+            "src": "https://stream.mux.com/NnxbfvZBR6tEMabxVfR6d5RvDRxv5V6TJpNLlSiNyCo.m3u8",
+            "type": "application/x-mpegURL"
+        }
+    ],
+    "poster": "https://image.mux.com/NnxbfvZBR6tEMabxVfR6d5RvDRxv5V6TJpNLlSiNyCo/thumbnail.webp",
+    "blurDataURL": "data:image/webp;base64,UklGRpoAAABXRUJQVlA4II4AAAAQAgCdASoQAAkAAQAcJQBOgNOAXAupKK9YAP7YfT8yzOK3w/5W5U3a+FkMTZZdP134eRJTWFD+ot3P8AP5YcS+TSIzvf/yvFrJiBpT2hByWIg5m4nY3Z3XkXjW5/lI7CFQ/8NO3/68v9280BP9XNMFv9y2ZK1bb5LORzr/Oddj7qu8xZN1j6Uk7NHg8AAA"
+}

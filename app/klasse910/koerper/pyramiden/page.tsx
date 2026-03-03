@@ -14,12 +14,12 @@ import {
     SimpleGrid,
     Space,
 } from "@mantine/core";
-import {InlineMath} from "react-katex";
+import { InlineMath } from "react-katex";
 import BlockMath from "@/components/BlockMath";
+import thinsp from "@/components/thinsp";
 
 export default function Pyramiden() {
- 
-  return (
+    return (
         <div>
             <SuspenseCheckableHeading title="Die Pyramide">
                 Pyramiden haben auf Menschen schon lange eine Anziehungskraft –
@@ -56,19 +56,19 @@ export default function Pyramiden() {
             <CheckableBlockquote icon="frage" title="Alles Pyramiden?">
                 Welche der folgenden Abbildungen sind Pyramiden und welche
                 nicht? Wenn ja, gib die Maße und Form der Grundfläche sowie die
-                Höhe in cm an (2 Kästchen = 1&thinsp;cm).
+                Höhe in cm an (2 Kästchen = 1{thinsp}cm).
                 <Image
                     src="/IstPyramide.png"
                     width={1000}
                     height={1000}
                     alt="Eine Pyramide der Maya"
-                    h={{base: "auto", md: 500}}
+                    h={{ base: "auto", md: 500 }}
                 />
                 <Lösung title="Lösung" id="Lösung-AllesPyramide" titleOrder={3}>
                     <List type="ordered">
                         <ListItem>
                             Ja, eine sechseckige, gerade Pyramide. Durchmesser =
-                            3&thinsp;cm, Höhe = 3&thinsp;cm.
+                            3{thinsp}cm, Höhe = 3{thinsp}cm.
                         </ListItem>
                         <ListItem>
                             Nein, es hat eine runde Grundfläche, daher ist es
@@ -76,15 +76,15 @@ export default function Pyramiden() {
                         </ListItem>
                         <ListItem>
                             Ja, eine quadratische, gerade Pyramide. Kantenlänge
-                            = 2&thinsp;cm, Höhe = 2,5&thinsp;cm.{" "}
+                            = 2{thinsp}cm, Höhe = 2,5{thinsp}cm.{" "}
                         </ListItem>
                         <ListItem>
                             Nein, das ist keine normale geometrische Form.
                         </ListItem>
                         <ListItem>
                             Ja, das ist eine rechteckige, schiefe Pyramide.
-                            Kantenlängen = 2 und 3&thinsp;cm, Höhe =
-                            4&thinsp;cm{" "}
+                            Kantenlängen = 2 und 3{thinsp}cm, Höhe =
+                            4{thinsp}cm{" "}
                         </ListItem>
                     </List>
                 </Lösung>
@@ -98,7 +98,7 @@ export default function Pyramiden() {
                     füllen sie mit Zucker. Dadurch können wir wiegen, wie viel
                     Zucker sie enthält. Ihre Höhe soll dabei ihrer Kantenlänge
                     entsprechen. Dafür müssen wir zuerst das Netz aufzeichnen.
-                    Als Seitenlänge wählen wir z.B. 5&thinsp;cm.
+                    Als Seitenlänge wählen wir z.B. 5{thinsp}cm.
                     <Image
                         src="/VolumenPyramide/PyramideNetz.jpg"
                         width={1200}
@@ -131,18 +131,18 @@ export default function Pyramiden() {
                             </Mark>{" "}
                             zu berechnen.
                             <MBlockMath
-                                desktop = {String.raw`
+                                desktop={String.raw`
                             \textcolor{#3312B8}{h_\text{Dreieck}} = \sqrt{1{,}5^2 + 3^2} = \sqrt{11{,}25} \approx 3,35
                             `}
-                                mobile = {String.raw`
+                                mobile={String.raw`
                             \textcolor{#3312B8}{h_\text{Dreieck}} &= \sqrt{1{,}5^2 + 3^2} \\ 
                             &= \sqrt{11{,}25} \\
                             &\approx 3,35
                                     `}
                             />
-                            Damit unsere Pyramide also eine Höhe von 3&thinsp;cm
+                            Damit unsere Pyramide also eine Höhe von 3{thinsp}cm
                             hat, muss die Höhe einer Dreieckswand ca.
-                            3,35&thinsp;cm betragen.
+                            3,35{thinsp}cm betragen.
                             <Image
                                 src="/VolumenPyramide/PyramideHöhe.png"
                                 width={6000}
@@ -154,7 +154,7 @@ export default function Pyramiden() {
                     </CheckableBlockquote>
                     <SimpleGrid cols={2} my={"md"}>
                         <ImageCaption
-                            h={{base: "auto", md: 250}}
+                            h={{ base: "auto", md: 250 }}
                             src="/VolumenPyramide/PyramideNetzausgeschnitten.jpg"
                             width={6000}
                             height={4000}
@@ -165,7 +165,7 @@ export default function Pyramiden() {
                             können
                         </ImageCaption>
                         <ImageCaption
-                            h={{base: "auto", md: 250}}
+                            h={{ base: "auto", md: 250 }}
                             src="/VolumenPyramide/PyramidePapier.jpg"
                             width={6000}
                             height={4000}
@@ -175,26 +175,26 @@ export default function Pyramiden() {
                             zusammen, sodass alle Kanten dicht sind!
                         </ImageCaption>
                         <ImageCaption
-                            h={{base: "auto", md: 250}}
+                            h={{ base: "auto", md: 250 }}
                             src="/VolumenPyramide/PyramideWaageZubehör.jpg"
                             width={6000}
                             height={4000}
                             alt="Die Pyramide kopfüber in einem Glas auf einer Waage. Daneben ein Papiertrichter und ein Glas mit Zucker"
                         >
                             Die Pyramide stellst du nun kopfüber in einem Glas
-                            auf eine Waage und tarierst sie auf 0&thinsp;g. Zum
+                            auf eine Waage und tarierst sie auf 0{thinsp}g. Zum
                             Einfüllen ist ein Trichter praktisch – wenn du
                             keinen hast, kannst du dir einen aus Papier rollen.
                         </ImageCaption>
                         <ImageCaption
-                            h={{base: "auto", md: 250}}
+                            h={{ base: "auto", md: 250 }}
                             src="/VolumenPyramide/PyramideWaageVoll.jpg"
                             width={6000}
                             height={4000}
                             alt="Die nun gefüllte Pyramide im Glas auf der Waage. Die Waage zeigt 43 Gram an"
                         >
                             Die Waage zeigt an, dass unsere Pyramide ca.
-                            45&thinsp;g Zucker enthält.
+                            45{thinsp}g Zucker enthält.
                         </ImageCaption>
                     </SimpleGrid>
                     Um nun von dem Gewicht auf das Volumen zu kommen, benötigen
@@ -242,7 +242,7 @@ export default function Pyramiden() {
                         V = \frac{m}{\rho} = \frac{43\,\text{g}}{1{,}56\,\tfrac{\text{g}}{\text{mL}}} \approx 27,56\,\text{mL}
                         \end{aligned}
                         `}
-                        mobile={String.raw`
+                            mobile={String.raw`
                                                     V &= \frac{m}{\rho} \\
                                                     &= \frac{43\,\text{g}}{1{,}56\,\tfrac{\text{g}}{\text{mL}}} \\ 
                                                     &\approx 27,56\,\text{mL}
@@ -262,23 +262,23 @@ export default function Pyramiden() {
                     umschließt. Seine Seitenlängen entsprechen also der Höhe der
                     Pyramide.
                     <Image
-                        h={{base: "auto", md: 375}}
+                        h={{ base: "auto", md: 375 }}
                         src="/VolumenPyramide/PyramideWürfel.png"
                         width={750}
                         height={900}
                         alt="Eine Pyramide in einem Quader"
                     />
                     Nehmen wir die Seitenlänge der Pyramide, die wir gebastelt
-                    haben, also 5&thinsp;cm. Dann hat der Würfel ein Volumen von{" "}
+                    haben, also 5{thinsp}cm. Dann hat der Würfel ein Volumen von{" "}
                     <InlineMath>{String.raw`a^3 = 5\,\text{cm}\cdot 5\,\text{cm}\cdot 5\,\text{cm} = 125\,\text{cm}^3`}</InlineMath>
                     . Für unsere Pyramide bekamen wir experimentell ein Volumen
-                    von 27,57&thinsp;mL. Setzen wir das ins Verhältnis mit dem
+                    von 27,57{thinsp}mL. Setzen wir das ins Verhältnis mit dem
                     Würfel, so bekommen wir:
                     <MBlockMath
                         desktop={String.raw`
                     \text{Anteil Pyramide} = \frac{27{,}57\,\text{cm}^3}{125\,\text{cm}^3} \approx 0,22 \approx \frac{1}{5}
                     `}
-                    mobile={String.raw`
+                        mobile={String.raw`
                         \text{Anteil Pyramide} &= \frac{27{,}57\,\text{cm}^3}{125\,\text{cm}^3} \\
                         &\approx 0,22 \\
                         &\approx \frac{1}{5}
@@ -301,7 +301,7 @@ export default function Pyramiden() {
                     einem Würfel. Dieser soll diesmal aber die doppelte Höhe
                     unserer Pyramide haben.
                     <Image
-                        h={{base: "auto", md: 425}}
+                        h={{ base: "auto", md: 425 }}
                         src="/VolumenPyramide/PyramideinWürfelEinzeln.png"
                         width={1050}
                         height={850}
@@ -312,7 +312,7 @@ export default function Pyramiden() {
                     Grundseite passt eine weitere Pyramide, ohne, dass sie einer
                     anderen in die Quere kommt.
                     <Image
-                        h={{base: "auto", md: 425}}
+                        h={{ base: "auto", md: 425 }}
                         src="/VolumenPyramide/PyramideinWürfel.png"
                         width={1050}
                         height={850}
@@ -321,7 +321,7 @@ export default function Pyramiden() {
                     Das ist etwas schlecht vorzustellen, deshalb ist hier einmal
                     ein Bild von den Pyramiden „herausgezogen“:
                     <Image
-                        h={{base: "auto", md: 825}}
+                        h={{ base: "auto", md: 825 }}
                         src="/VolumenPyramide/PyramideinWürfelExplosion.png"
                         width={1650}
                         height={1700}
@@ -349,7 +349,6 @@ export default function Pyramiden() {
                                 {String.raw`
                 V_\text{Quader} = G \cdot h_\text{Quader}
                 `}
-                            
                             </BlockMath>
                             mit der Grundfläche <InlineMath>G</InlineMath> und
                             der Höhe{" "}
@@ -390,7 +389,7 @@ export default function Pyramiden() {
                     Es sind mehrere Pyramiden gegeben. Bestimme den Wert der
                     Unbekannten!
                     <Image
-                        h={{base: "auto", md:500}}
+                        h={{ base: "auto", md: 500 }}
                         src="/Pyramidenrätsel.png"
                         width={1400}
                         height={1000}
@@ -404,32 +403,33 @@ export default function Pyramiden() {
                         <List type="ordered">
                             <ListItem>
                                 Nach Höhe umstellen und einsetzen:
-                                <MBlockMath desktop={String.raw`
+                                <MBlockMath
+                                    desktop={String.raw`
                                 \begin{aligned}
                                 V &= \frac{1}{3}Gh &&\lvert \cdot \frac{3}{G} \\
                                 \frac{3V}{G} &= h \\
                                 \Rightarrow h &= \frac{3 \cdot 32}{4 \cdot 4} = \frac{96}{16} = 6
                                 \end{aligned}
                                 `}
-                                mobile={String.raw`
+                                    mobile={String.raw`
                                     V &= \frac{1}{3}Gh \\
                                     &\Downarrow \scriptsize{\cdot \frac{3}{G}} \\
                                     \frac{3V}{G} &= h \\
                                     \Rightarrow h &= \frac{3 \cdot 32}{4 \cdot 4} = \frac{96}{16} = 6
                                     `}
-                    
-                    />
+                                />
                             </ListItem>
                             <ListItem>
                                 Nach Grundfläche umstellen und einsetzen:
-                                <MBlockMath desktop={String.raw`
+                                <MBlockMath
+                                    desktop={String.raw`
                                 \begin{aligned}
                                 V &= \frac{1}{3}Gh &&\lvert \cdot \frac{3}{h} \\
                                 \frac{3V}{h} &= G \\
                                 &\Rightarrow G = \frac{3 \cdot 18}{9} = \frac{54}{9} = 6
                                 \end{aligned}
                     `}
-                                mobile = {String.raw`
+                                    mobile={String.raw`
                                 V &= \frac{1}{3}Gh \\
                                 &\Downarrow \scriptsize{\cdot \frac{3}{h}} \\
                                 \frac{3V}{h} &= G \\
@@ -558,7 +558,7 @@ export default function Pyramiden() {
                 Vergleichen wir mal die Netze von einer dreieckigen und einer
                 quadratischen Pyramide:
                 <Image
-                    h={{base: "auto", md: 500}}
+                    h={{ base: "auto", md: 500 }}
                     src="/PyramideOberfläche.png"
                     width={1400}
                     height={1000}
@@ -607,18 +607,18 @@ export default function Pyramiden() {
                             h<sub>Dreieck</sub>
                         </Mark>{" "}
                         zu berechnen.
-                            <MBlockMath
-                                desktop = {String.raw`
+                        <MBlockMath
+                            desktop={String.raw`
                             \textcolor{#3312B8}{h_\text{Dreieck}} = \sqrt{1{,}5^2 + 3^2} = \sqrt{11{,}25} \approx 3,35
                             `}
-                                mobile = {String.raw`
+                            mobile={String.raw`
                             \textcolor{#3312B8}{h_\text{Dreieck}} &= \sqrt{1{,}5^2 + 3^2} \\ 
                             &= \sqrt{11{,}25} \\
                             &\approx 3,35
                                     `}
                         />
-                        Damit unsere Pyramide also eine Höhe von 3&thinsp;cm
-                        hat, muss die Höhe einer Dreieckswand ca. 3,35&thinsp;cm
+                        Damit unsere Pyramide also eine Höhe von 3{thinsp}cm
+                        hat, muss die Höhe einer Dreieckswand ca. 3,35{thinsp}cm
                         betragen.
                         <Image
                             src="/VolumenPyramide/PyramideHöhe.png"
@@ -629,7 +629,11 @@ export default function Pyramiden() {
                     </Lösung>
                     <Space my="xs" />
                 </CheckableBlockquote>
-                <CheckableBlockquote titleOrder={2} title="Aufgabe: Dachdecken">
+                <CheckableBlockquote
+                    titleOrder={2}
+                    title="Aufgabe: Dachdecken"
+                    icon="frage"
+                >
                     Die Dächer eines Schlosses sollen restauriert werden. Pro m
                     <sup>2</sup> benötigt eine Dachdeckerfirma 30
                     Schieferplatten, die in 6er-Packungen gekauft werden. Eine
@@ -641,20 +645,20 @@ export default function Pyramiden() {
                         <ListItem>
                             <b>Dach 1</b>
                             <br />
-                            Grundseite: Rechteck 10&thinsp;m x 10&thinsp;m /
-                            Höhe: 16&thinsp;m
+                            Grundseite: Rechteck 10{thinsp}m x 10{thinsp}m /
+                            Höhe: 16{thinsp}m
                         </ListItem>
                         <ListItem>
                             <b>Dächer 2-6</b> <br />
-                            Grundfläche: Achteck mit 19,3&thinsp;m<sup>
+                            Grundfläche: Achteck mit 19,3{thinsp}m<sup>
                                 2
                             </sup>{" "}
-                            und einer Kantenlänge von 2&thinsp;cm / Höhe:
-                            5&thinsp;m
+                            und einer Kantenlänge von 2{thinsp}cm / Höhe:
+                            5{thinsp}m
                         </ListItem>
                     </List>
                     <Image
-                        h={{base: "auto", md: 500}}
+                        h={{ base: "auto", md: 500 }}
                         fit="contain"
                         src="/SchlossDächer.jpg"
                         width={6484}
@@ -694,7 +698,7 @@ export default function Pyramiden() {
                                     `}
                                 </BlockMath>
                                 Die Breite entspricht der Kantenlänge unserer
-                                Grundfläche, also 10&thinsp;m. Damit können wir
+                                Grundfläche, also 10{thinsp}m. Damit können wir
                                 die Mantelfläche berechnen:
                                 <BlockMath>
                                     {String.raw`
@@ -706,7 +710,7 @@ export default function Pyramiden() {
                                     `}
                                 </BlockMath>
                                 Unser erstes Dach hat also eine Fläche von
-                                335,2&thinsp;m<sup>2</sup>.
+                                335,2{thinsp}m<sup>2</sup>.
                             </ListItem>
                             <ListItem>
                                 Auch hier interessiert uns die Grundfläche des
@@ -769,9 +773,9 @@ export default function Pyramiden() {
                                     \end{aligned}
                                     `}
                                 </BlockMath>
-                                Ein Dach hat also eine Fläche von 44,4&thinsp;m
+                                Ein Dach hat also eine Fläche von 44,4{thinsp}m
                                 <sup>2</sup>. Da wir 5 dieser Dächer haben,
-                                ergibt das eine Gesamtfläche von 222&thinsp;m
+                                ergibt das eine Gesamtfläche von 222{thinsp}m
                                 <sup>2</sup>.
                             </ListItem>
                             <ListItem>
@@ -784,10 +788,10 @@ export default function Pyramiden() {
                                 benötigen wir 5 Packungen pro Quadratmeter. Für
                                 uns heißt das also:
                                 <MBlockMath
-                                desktop={String.raw`
+                                    desktop={String.raw`
                                     557{,}2\,\text{m}^2 \cdot 5\,\frac{\text{Packungen}}{\text{m}^2}= 2786\,\text{Packungen}
                                     `}
-                                mobile={String.raw`
+                                    mobile={String.raw`
                                     &557{,}2\,\text{m}^2 \cdot 5\,\frac{\text{Packungen}}{\text{m}^2}  \\
                                     &\quad = 2786\,\text{Packungen}
                                     `}

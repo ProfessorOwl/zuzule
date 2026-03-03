@@ -16,8 +16,10 @@ import NextImage from "next/image";
 import { InlineMath } from "react-katex";
 import BlockMath from "@/components/BlockMath";
 import GeoGebraAppletSlider from "@/components/GeoGebraAppletSlider";
-import Video from "@/components/Video"
+import Video from "@/components/Video";
 import VieleckInDreiecke from "/videos/Vieleck in Dreiecke.mov";
+import thinsp from "@/components/thinsp";
+
 
 export default function Prismen() {
     return (
@@ -36,7 +38,7 @@ export default function Prismen() {
                 überhaupt immer dreieckig?
             </SuspenseCheckableHeading>
             <Image
-                h={{base: "auto", md: 400}}
+                h={{ base: "auto", md: 400 }}
                 src="/prisma1.jpg"
                 width={3499}
                 height={5249}
@@ -181,7 +183,7 @@ export default function Prismen() {
                 Mantelfläche ist dann die Fläche, die durch die Höhe des Prismas
                 dazukommt.
                 <Image
-                    h={{base: "auto", md: 400}}
+                    h={{ base: "auto", md: 400 }}
                     src="/PrismaNetzFläche@2x.png"
                     width={3200}
                     height={2000}
@@ -269,7 +271,7 @@ export default function Prismen() {
                 des Prismas, die anderen dem <b>Umfang</b> der Grundfläche. Das
                 macht die Berechnung des Oberflächeninhalts deutlich einfacher!
                 <Image
-                    h={{base: "auto", md: 400}}
+                    h={{ base: "auto", md: 400 }}
                     src="/PrismaNetzFlächeRechteck@2x.png"
                     width={3200}
                     height={2000}
@@ -287,7 +289,7 @@ export default function Prismen() {
                 >
                     <SimpleGrid cols={2} my={"md"}>
                         <ImageCaption
-                            h={{base: "auto", md: 250}}
+                            h={{ base: "auto", md: 250 }}
                             src="/VolumenWasser/VolumenWasser1.jpg"
                             width={6000}
                             height={4000}
@@ -298,17 +300,17 @@ export default function Prismen() {
                             testen. Testen wir das Volumen von diesem Stein.
                         </ImageCaption>
                         <ImageCaption
-                            h={{base: "auto", md: 250}}
+                            h={{ base: "auto", md: 250 }}
                             src="/VolumenWasser/VolumenWasser2.jpg"
                             width={6000}
                             height={4000}
                             alt="Der Füllstand des Messbechers ist sichtbar: 600 mL"
                         >
                             Wir messen eine genaue Menge Wasser ab, z.B.
-                            600&thinsp;mL.
+                            600{thinsp}mL.
                         </ImageCaption>
                         <ImageCaption
-                            h={{base: "auto", md: 250}}
+                            h={{ base: "auto", md: 250 }}
                             src="/VolumenWasser/VolumenWasser3.jpg"
                             width={6000}
                             height={4000}
@@ -318,7 +320,7 @@ export default function Prismen() {
                             komplett bedeckt sein!
                         </ImageCaption>
                         <ImageCaption
-                            h={{base: "auto", md: 250}}
+                            h={{ base: "auto", md: 250 }}
                             src="/VolumenWasser/VolumenWasser4.jpg"
                             width={6000}
                             height={4000}
@@ -328,7 +330,7 @@ export default function Prismen() {
                             zu Boden.
                         </ImageCaption>
                         <ImageCaption
-                            h={{base: "auto", md: 250}}
+                            h={{ base: "auto", md: 250 }}
                             src="/VolumenWasser/VolumenWasser5.jpg"
                             width={6000}
                             height={4000}
@@ -336,7 +338,7 @@ export default function Prismen() {
                         >
                             Der vom Stein eingenommene Raum steigert die
                             Füllhöhe in unserem Gefäß. Jetzt können wir das neue
-                            Volumen ablesen: Ca. 720&thinsp;mL.
+                            Volumen ablesen: Ca. 720{thinsp}mL.
                         </ImageCaption>
                     </SimpleGrid>
                     Das Volumen des Steins entspricht der Differenz der beiden
@@ -376,8 +378,8 @@ export default function Prismen() {
                         Das Volumen eines Quaders ergibt sich nun durch das{" "}
                         <b>„hochziehen“</b> dieser Fläche in den Raum. Schau es
                         dir mal an diesem Beispiel hier an, wo ein Quader eine
-                        Grundfläche von 3&nbsp;mal 2&thinsp;cm und eine Höhe von
-                        2&thinsp;cm hat.
+                        Grundfläche von 3&nbsp;mal 2{thinsp}cm und eine Höhe von
+                        2{thinsp}cm hat.
                         <GeoGebraAppletSlider
                             materialId="x5z6yk9z"
                             appName="3d"
@@ -403,9 +405,9 @@ export default function Prismen() {
                             ]}
                         />
                         Füllen wir den Quader mit Würfeln aus, die ein Volumen
-                        von 1&thinsp;cm<sup>3</sup> haben, kann man gut
+                        von 1{thinsp}cm<sup>3</sup> haben, kann man gut
                         nachvollziehen, dass das Volumen vom gesamten Quader
-                        12&thinsp;cm<sup>3</sup> sein muss. 6 Würfel sind unten,
+                        12{thinsp}cm<sup>3</sup> sein muss. 6 Würfel sind unten,
                         weitere 6 sind oben. Das ergibt sich auch aus der
                         Berechnung von Grundfläche mal Höhe:
                         <BlockMath>{String.raw`
@@ -467,7 +469,7 @@ export default function Prismen() {
                         jedes andere Prisma herleiten, da wir jedes n-Eck in
                         beliebig viele Dreiecke zerteilen können! Schau dir dazu
                         das Video unten an.
-                            <Video src={VieleckInDreiecke} />
+                        <Video src={VieleckInDreiecke} />
                         Dadurch können wir also die Formel{" "}
                         <InlineMath>V = A \cdot h</InlineMath> festhalten für{" "}
                         <b>alle</b> Prismen. Egal, wie das Prisma aussieht, es

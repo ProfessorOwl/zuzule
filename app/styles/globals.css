@@ -33,15 +33,21 @@ div.next-video-container {
     padding-inline-start: 23px;
 }
 
+.katex {
+    /* display: none !important; */
+    width: 100%;
+}
+
+.katex *,
+.katex .mathnormal {
+    font-family: var(--font-pennstander), KaTeX_Main;
+}
+
 /* Blockquotes */
 .m_ddec01c0 {
     /* display: none !important; */
 }
 
-.katex {
-    /* display: none !important; */
-    width: 100%;
-}
 /* Bilder */
 .m_9e117634 {
     /* display: none !important; */

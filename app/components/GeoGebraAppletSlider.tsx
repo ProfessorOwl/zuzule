@@ -56,11 +56,11 @@ export default function GeoGebraAppletSlider({
     const ggbRef = useRef<HTMLDivElement | null>(null);
     const apiRef = useRef<any>(null);
     const prevMapValueRef = useRef<{ name: string; value: any } | null>(null);
-    const pathname = usePathname()
+    const pathname = usePathname();
 
     // Initialize the applet once
     useEffect(() => {
-        console.log("init geogebra")
+        console.log("init geogebra");
         const container = ggbRef.current;
         if (!container) return;
 
@@ -93,14 +93,16 @@ export default function GeoGebraAppletSlider({
         // applet when coords change.
         params.appletOnLoad = (api: any) => {
             apiRef.current = api;
-            
+
             // Setze die weite des unsichtbaren divs auf 0. Es wird von GeoGebra benötigt und muss erhalten bleiben, deshalb kann es nicht gelöscht werden.
-            setTimeout(() => {                
-            const divs = document.querySelectorAll('div[style*="z-index: -32767"]');
-            divs.forEach(div => {
-                if (div.getAttribute('aria-hidden') === 'true') {
-                    (div as HTMLElement).style.width = "0px";
-                }
+            setTimeout(() => {
+                const divs = document.querySelectorAll(
+                    'div[style*="z-index: -32767"]',
+                );
+                divs.forEach((div) => {
+                    if (div.getAttribute("aria-hidden") === "true") {
+                        (div as HTMLElement).style.width = "0px";
+                    }
                 });
             }, 100);
         };
@@ -109,8 +111,7 @@ export default function GeoGebraAppletSlider({
         container.innerHTML = "";
         const applet = new window.GGBApplet(params, true);
         applet.inject(container);
-
-    },[materialId, width, height, appName, disableZoom]);
+    }, [materialId, width, height, appName, disableZoom]);
 
     // Apply coordinate system when api becomes available or when coords change.
     useEffect(() => {
@@ -150,9 +151,7 @@ export default function GeoGebraAppletSlider({
                 apiRef.current.setValue(mapValue.name, mapValue.value);
 
                 // Register listener for continuous updates of this value
-                apiRef.current.registerObjectUpdateListener(
-                    mapValue.name
-                );
+                apiRef.current.registerObjectUpdateListener(mapValue.name);
 
                 prevMapValueRef.current = mapValue;
             } catch (e) {}

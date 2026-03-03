@@ -23,7 +23,9 @@ export function DocumentOutline() {
     const router = useRouter();
     const pathname = usePathname();
     const [headings, setHeadings] = useState<HeadingItem[]>([]);
-    const [checkedHeadings, setCheckedHeadings] = useState<Set<string>>(new Set());
+    const [checkedHeadings, setCheckedHeadings] = useState<Set<string>>(
+        new Set(),
+    );
     const searchParams = useSearchParams();
     const CheckboxIcon: CheckboxProps["icon"] = ({
         indeterminate,
@@ -99,11 +101,11 @@ export function DocumentOutline() {
     const shouldShowHeading = (index: number): boolean => {
         const currentHeading = headings[index];
         let searchLevel = currentHeading.titleOrder;
-        
+
         // Check all headings before this one to find parent headings
         for (let i = index - 1; i >= 0; i--) {
             const prevHeading = headings[i];
-            
+
             // If we find a heading with a lower level (parent)
             if (prevHeading.titleOrder < searchLevel) {
                 // If this parent is checked, hide the current heading
@@ -114,7 +116,7 @@ export function DocumentOutline() {
                 searchLevel = prevHeading.titleOrder;
             }
         }
-        
+
         return true;
     };
 
@@ -136,7 +138,7 @@ export function DocumentOutline() {
 
                     const isChecked = checkedHeadings.has(heading.id);
                     return (
-                        <Group 
+                        <Group
                             key={heading.id}
                             gap={6}
                             wrap="nowrap"
@@ -158,7 +160,7 @@ export function DocumentOutline() {
                                 style={{ minWidth: 16, marginTop: 2 }}
                                 icon={CheckboxIcon}
                             />
-                            <Text 
+                            <Text
                                 size="xs"
                                 style={{
                                     wordBreak: "break-word",

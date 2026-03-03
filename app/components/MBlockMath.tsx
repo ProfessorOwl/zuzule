@@ -1,25 +1,24 @@
 import { Container } from "@mantine/core";
-import  BlockMath from "./BlockMath";
+import BlockMath from "./BlockMath";
 interface MBlockMathProps {
     mobile: string;
     desktop: string;
-
 }
 
-export default function MBlockMath({mobile, desktop}: MBlockMathProps) {
+export default function MBlockMath({ mobile, desktop }: MBlockMathProps) {
     return (
         <div>
-        <Container visibleFrom="md" p={0}>
-            <BlockMath>
-                {desktop}
-            </BlockMath>
-        </Container>
-        <Container hiddenFrom="md" p={0}>
-            <BlockMath>
-                {String.raw`\begin{aligned}`.concat(String(mobile),String.raw`\end{aligned}`)}
-            </BlockMath>
-        </Container>
-
+            <Container visibleFrom="md" p={0}>
+                <BlockMath>{desktop}</BlockMath>
+            </Container>
+            <Container hiddenFrom="md" p={0}>
+                <BlockMath>
+                    {String.raw`\begin{aligned}`.concat(
+                        String(mobile),
+                        String.raw`\end{aligned}`,
+                    )}
+                </BlockMath>
+            </Container>
         </div>
-    )
+    );
 }
