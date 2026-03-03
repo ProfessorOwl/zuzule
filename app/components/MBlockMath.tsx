@@ -1,5 +1,5 @@
 import { Container } from "@mantine/core";
-import BlockMath from "./BlockMath";
+import {BlockMathScroll as BlockMath} from "./CustomMath";
 interface MBlockMathProps {
     mobile: string;
     desktop: string;
@@ -9,15 +9,10 @@ export default function MBlockMath({ mobile, desktop }: MBlockMathProps) {
     return (
         <div>
             <Container visibleFrom="md" p={0}>
-                <BlockMath>{desktop}</BlockMath>
+                <BlockMath math={desktop}/>
             </Container>
             <Container hiddenFrom="md" p={0}>
-                <BlockMath>
-                    {String.raw`\begin{aligned}`.concat(
-                        String(mobile),
-                        String.raw`\end{aligned}`,
-                    )}
-                </BlockMath>
+                <BlockMath math={mobile}/>
             </Container>
         </div>
     );

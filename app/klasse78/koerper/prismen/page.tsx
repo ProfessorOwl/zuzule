@@ -4,8 +4,6 @@ import { Lösung } from "@/components/Lösung";
 import { SuspenseCheckableHeading } from "@/components/SuspenseCheckableHeading";
 import { ImageCaption } from "@/components/ImageCaption";
 import {
-    Center,
-    Container,
     Divider,
     Image,
     List,
@@ -13,8 +11,7 @@ import {
     SimpleGrid,
 } from "@mantine/core";
 import NextImage from "next/image";
-import { InlineMath } from "react-katex";
-import BlockMath from "@/components/BlockMath";
+import {BetterInlineMath as InlineMath, BlockMathScroll as BlockMath} from "@/components/CustomMath";
 import GeoGebraAppletSlider from "@/components/GeoGebraAppletSlider";
 import Video from "@/components/Video";
 import VieleckInDreiecke from "/videos/Vieleck in Dreiecke.mov";
@@ -39,7 +36,7 @@ export default function Prismen() {
             </SuspenseCheckableHeading>
             <Image
                 h={{ base: "auto", md: 400 }}
-                src="/prisma1.jpg"
+                src="/Prismen/prisma1.jpg"
                 width={3499}
                 height={5249}
                 alt="Ein Prisma, an dem weißes Licht in einem Regenbogen gebrochen wird."
@@ -74,7 +71,7 @@ export default function Prismen() {
                 <b>Schrägbild</b> eines Quaders. Das sollte ungefähr so aussehen
                 wie in dem Bild.
                 <Image
-                    src="/QuaderSchrägbild@2x.png"
+                    src="/Prismen/QuaderSchrägbild@2x.png"
                     width={1802}
                     height={1200}
                     alt="Schrägbild eines Quaders auf kariertem Papier."
@@ -103,7 +100,7 @@ export default function Prismen() {
                     </ListItem>
                 </List>
                 <Image
-                    src="/PrismaSchrägbildEntstehung@2x.png"
+                    src="/Prismen/PrismaSchrägbildEntstehung@2x.png"
                     width={2402}
                     height={1200}
                     alt="Es wird gezeigt, wie das Schrägbild eines Prismas Schritt für Schritt gezeichnet wird. Links wird mit einem Dreieck angefangen. Auf dessen Ecken werden senkrechte Striche gezeichnet, die alle die gleiche Höhe haben. Deren Enden werden dann verbunden, wodurch sich ein Dreieck identisch zu dem unteren ergibt."
@@ -113,7 +110,7 @@ export default function Prismen() {
             <CheckableBlockquote icon="frage" title="Aufgabe: Schrägbilder">
                 Vervollständige die folgenden Schrägbilder in deinem Heft:
                 <Image
-                    src="/SchrägbilderVervollständigenAufgabe@2x.png"
+                    src="/Prismen/SchrägbilderVervollständigenAufgabe@2x.png"
                     width={3600}
                     height={1200}
                     alt="4 Schrägbilder, welche vervollständigt werden sollen."
@@ -125,7 +122,7 @@ export default function Prismen() {
                 >
                     <Lösung>
                         <Image
-                            src="/SchrägbilderVervollständigenLösung@2x.png"
+                            src="/Prismen/SchrägbilderVervollständigenLösung@2x.png"
                             width={3600}
                             height={1200}
                             alt="Die Lösung, wie die Schrägbilder vervollständigt werden können."
@@ -140,13 +137,13 @@ export default function Prismen() {
                 Spielwürfel zu basteln?
                 <SimpleGrid cols={2} my={"md"}>
                     <Image
-                        src="/NetzWürfel.jpg"
+                        src="/Prismen/NetzWürfel.jpg"
                         width={6000}
                         height={4000}
                         alt="Ein Würfelnetz, gezeichnet auf Papier."
                     />
                     <Image
-                        src="/WürfelPapier.jpg"
+                        src="/Prismen/WürfelPapier.jpg"
                         width={6000}
                         height={4000}
                         alt="Das Würfelnetz gefaltet und verklebt, sodass es einen 3D-Würfel ergibt."
@@ -161,13 +158,13 @@ export default function Prismen() {
                 heißt es: Ausschneiden, Falten und mit Klebeband zusammenkleben!
                 <SimpleGrid cols={2} my={"md"}>
                     <Image
-                        src="/NetzPrisma.jpg"
+                        src="/Prismen/NetzPrisma.jpg"
                         width={6000}
                         height={4000}
                         alt="Das Netz eines dreieckigen Prismas, gezeichnet auf Papier."
                     />
                     <Image
-                        src="/PrismaPapier.jpg"
+                        src="/Prismen/PrismaPapier.jpg"
                         width={6000}
                         height={4000}
                         alt="Das Netz des Prismas gefaltet und verklebt, sodass ein 3D-Prisma ergibt."
@@ -184,18 +181,18 @@ export default function Prismen() {
                 dazukommt.
                 <Image
                     h={{ base: "auto", md: 400 }}
-                    src="/PrismaNetzFläche@2x.png"
+                    src="/Prismen/PrismaNetzFläche@2x.png"
                     width={3200}
                     height={2000}
                     alt="Ein Prisma mit seinem Netz."
                 />
-                Der <b>Oberflächeninhalt</b> <InlineMath>O</InlineMath> des
+                Der <b>Oberflächeninhalt</b> <InlineMath math="O"/> des
                 Prismas lässt sich dann über die <b>Mantelfläche</b>{" "}
-                <InlineMath>M = M_1 + M_2 + M_3</InlineMath> und die{" "}
-                <b>Grundfläche</b> <InlineMath>G</InlineMath> berechnen:
-                <BlockMath>{String.raw`
+                <InlineMath math="M = M_1 + M_2 + M_3"/> und die{" "}
+                <b>Grundfläche</b> <InlineMath math="G"/> berechnen:
+                <BlockMath math={String.raw`
                     O = \textcolor{red}{M} + 2\cdot \textcolor{blue}{G} =  \textcolor{red}{M_1} +  \textcolor{red}{M_2} +  \textcolor{red}{M_3} + 2\cdot  \textcolor{blue}{G}
-                `}</BlockMath>
+                `} />
                 Da die Grundfläche zweimal vorkommt, müssen wir sie auch doppelt
                 in der Rechnung berücksichtigen!
             </CheckableHeading>
@@ -205,7 +202,7 @@ export default function Prismen() {
             >
                 Berechne den Oberflächeninhalt der Prismen:
                 <Image
-                    src="/PrismaOberflächeninhalt@2x.png"
+                    src="/Prismen/PrismaOberflächeninhalt@2x.png"
                     width={3602}
                     height={1200}
                     alt="Ein Prisma mit seinem Netz. Die Mantelfläche ergibt nun ein großes Rechteck."
@@ -220,21 +217,21 @@ export default function Prismen() {
                             <ListItem>
                                 {" "}
                                 Rechteckiges Prisma
-                                <BlockMath>{String.raw`
-                                    \begin{aligned}G &= 1 \,\text{cm} \cdot 2 \,\text{cm} \\ 
+                                <BlockMath math={String.raw`
+                                    G &= 1 \,\text{cm} \cdot 2 \,\text{cm} \\ 
                                     &= 2 \,\text{cm}^2 \\ 
                                     M &= 2 \cdot 3 \,\text{cm} \cdot 1 \,\text{cm} + 2 \cdot 3 \,\text{cm} \cdot 2 \,\text{cm} \\ 
                                     &=  6 \, \text{cm}^2 + 12 \, \text{cm}^2 \\ 
                                     &= 18 \, \text{cm}^2  \\ 
                                     O &= 2 \cdot G + M \\ 
                                     &= 2 \cdot 2 \,\text{cm}^2 + 18 \, \text{cm}^2  \\ 
-                                    &= 22\, \text{cm}^2 \end{aligned}
-                                `}</BlockMath>
+                                    &= 22\, \text{cm}^2
+                                `} />
                             </ListItem>
                             <ListItem>
                                 Dreieckiges Prisma
-                                <BlockMath>{String.raw`
-                                    \begin{aligned}G &= \frac{1}{2} 12 \,\text{cm} \cdot h \\ 
+                                <BlockMath math={String.raw`
+                                    G &= \frac{1}{2} 12 \,\text{cm} \cdot h \\ 
                                     &= \frac{1}{2} 12 \,\text{cm}\cdot 8 \,\text{cm}\\ 
                                     &= 96 \,\text{cm}^2 \\
                                     M &= 2 \cdot 10 \,\text{cm} \cdot 40 \,\text{cm} +  12 \,\text{cm} \cdot 40 \,\text{cm} \\ 
@@ -242,21 +239,20 @@ export default function Prismen() {
                                     &= 1280 \, \text{cm}^2  \\ 
                                     O &= 2 \cdot G + M \\ 
                                     &= 2 \cdot 96 \,\text{cm}^2 + 1280 \, \text{cm}^2  \\ 
-                                    &= 1472 \, \text{cm}^2 \end{aligned}
-                                `}</BlockMath>
+                                    &= 1472 \, \text{cm}^2
+                                `} />
                             </ListItem>
                             <ListItem>
                                 Fünfeckiges Prisma
-                                <BlockMath>{String.raw`
-                                    \begin{aligned} A &= 20 \, \text{cm}^2 \\
+                                <BlockMath math={String.raw`
+                                    A &= 20 \, \text{cm}^2 \\
                                     M &= U \cdot 11 \, \text{cm} \\
                                     &= 15 \, \text{cm} \cdot 11 \, \text{cm} \\
                                     &= 165 \, \text{cm}^2 \\
                                     O &= 2 \cdot A + M \\ 
                                         &= 2 \cdot 20 \,\text{cm}^2 + 165 \, \text{cm}^2  \\ 
-                                        &= 205 \, \text{cm}^2 
-                                    \end{aligned}
-                                `}</BlockMath>
+                                        &= 205 \, \text{cm}^2
+                                `} />
                             </ListItem>
                         </List>
                     </Lösung>
@@ -272,7 +268,7 @@ export default function Prismen() {
                 macht die Berechnung des Oberflächeninhalts deutlich einfacher!
                 <Image
                     h={{ base: "auto", md: 400 }}
-                    src="/PrismaNetzFlächeRechteck@2x.png"
+                    src="/Prismen/PrismaNetzFlächeRechteck@2x.png"
                     width={3200}
                     height={2000}
                     alt="Ein Prisma mit seinem Netz. Die Mantelfläche ergibt nun ein großes Rechteck."
@@ -290,7 +286,7 @@ export default function Prismen() {
                     <SimpleGrid cols={2} my={"md"}>
                         <ImageCaption
                             h={{ base: "auto", md: 250 }}
-                            src="/VolumenWasser/VolumenWasser1.jpg"
+                            src="/Prismen/VolumenWasser/VolumenWasser1.jpg"
                             width={6000}
                             height={4000}
                             alt="Ein Stein neben einem leeren Messbecher"
@@ -301,7 +297,7 @@ export default function Prismen() {
                         </ImageCaption>
                         <ImageCaption
                             h={{ base: "auto", md: 250 }}
-                            src="/VolumenWasser/VolumenWasser2.jpg"
+                            src="/Prismen/VolumenWasser/VolumenWasser2.jpg"
                             width={6000}
                             height={4000}
                             alt="Der Füllstand des Messbechers ist sichtbar: 600 mL"
@@ -311,7 +307,7 @@ export default function Prismen() {
                         </ImageCaption>
                         <ImageCaption
                             h={{ base: "auto", md: 250 }}
-                            src="/VolumenWasser/VolumenWasser3.jpg"
+                            src="/Prismen/VolumenWasser/VolumenWasser3.jpg"
                             width={6000}
                             height={4000}
                             alt="Der Stein wird in den Messbecher gegeben."
@@ -321,7 +317,7 @@ export default function Prismen() {
                         </ImageCaption>
                         <ImageCaption
                             h={{ base: "auto", md: 250 }}
-                            src="/VolumenWasser/VolumenWasser4.jpg"
+                            src="/Prismen/VolumenWasser/VolumenWasser4.jpg"
                             width={6000}
                             height={4000}
                             alt="Der Stein ist am Boden des Messbechers."
@@ -331,7 +327,7 @@ export default function Prismen() {
                         </ImageCaption>
                         <ImageCaption
                             h={{ base: "auto", md: 250 }}
-                            src="/VolumenWasser/VolumenWasser5.jpg"
+                            src="/Prismen/VolumenWasser/VolumenWasser5.jpg"
                             width={6000}
                             height={4000}
                             alt="Das neue Volumen entspricht 720 mL."
@@ -343,11 +339,7 @@ export default function Prismen() {
                     </SimpleGrid>
                     Das Volumen des Steins entspricht der Differenz der beiden
                     abgelesenen Wassermengen:{" "}
-                    <InlineMath>
-                        {
-                            "720\\,\\text{mL} - 600\\,\\text{mL} = 120\\,\\text{mL}"
-                        }
-                    </InlineMath>
+                    <InlineMath math="720\,\text{mL} - 600\,\text{mL} = 120\,\text{mL}"/>
                     . Mit der Methode lässt sich natürlich nicht nur das Volumen
                     von Steinen bestimmen, sondern von allen möglichen Körpern
                     und Formen. Voraussetzung ist nur, dass du ein Gefäß hast,
@@ -365,12 +357,12 @@ export default function Prismen() {
                         wir uns daran herleiten, wie wir das Volumen eines
                         allgemeinen Prismas berechnen. Ein Quader hat eine
                         rechteckige Grundfläche. Deren Inhalt können wir mit{" "}
-                        <InlineMath>A = a \cdot b</InlineMath> berechnen, wobei{" "}
-                        <InlineMath>a</InlineMath> und{" "}
-                        <InlineMath>b</InlineMath> die beiden Grundseiten
+                        <InlineMath math="A = a \cdot b"/> berechnen, wobei{" "}
+                        <InlineMath math="a"/> und{" "}
+                        <InlineMath math="b"/> die beiden Grundseiten
                         bezeichnen.
                         <Image
-                            src="/RechteckFläche@2x.png"
+                            src="/Prismen/RechteckFläche@2x.png"
                             width={1802}
                             height={1200}
                             alt="Ein Rechteck mit der Fläche A und den Seiten a und b."
@@ -410,17 +402,15 @@ export default function Prismen() {
                         12{thinsp}cm<sup>3</sup> sein muss. 6 Würfel sind unten,
                         weitere 6 sind oben. Das ergibt sich auch aus der
                         Berechnung von Grundfläche mal Höhe:
-                        <BlockMath>{String.raw`
-                            \begin{aligned}
+                        <BlockMath math={String.raw`
                             \textcolor{blue}{A} &= 3 \, \text{cm} \cdot 2 \, \text{cm} \\
                             &= 6\, \text{cm}^2 \\
                             \textcolor{green}{V} &=\textcolor{blue}{A} \cdot h \\
                             &= 6 \, \text{cm}^2 \cdot 2\,\text{cm} \\
                             &= 12 \, \text{cm}^3
-                            \end{aligned}
-                        `}</BlockMath>
+                        `} />
                         Können wir diese Formel eventuell auch bei Prismen
-                        anwenden? Gilt <InlineMath>V = A \cdot h</InlineMath>{" "}
+                        anwenden? Gilt <InlineMath math="V = A \cdot h"/>{" "}
                         hier immer? Testen wir es mal!
                     </CheckableHeading>
                     <CheckableHeading
@@ -431,11 +421,11 @@ export default function Prismen() {
                         eckige Fläche, also ein <b>n-Eck</b>. Nehmen wir jedoch
                         hier als Beispiel ein dreieckiges Prisma. Seine
                         Grundfläche können wir mit der Formel{" "}
-                        <InlineMath>{String.raw`A = \frac{1}{2} \textcolor{blue}{g} \cdot \textcolor{red}{h}`}</InlineMath>{" "}
+                        <InlineMath math="A = \frac{1}{2} \textcolor{blue}{g} \cdot \textcolor{red}{h}"/>{" "}
                         berechnen. Im Bild unten findest du dazu nochmal eine
                         Herleitung.
                         <Image
-                            src="/DreieckFläche@2x.png"
+                            src="/Prismen/DreieckFläche@2x.png"
                             width={2400}
                             height={1200}
                             alt="Ein Dreieck mit der Höhe h und der Grundseite g. Die Höhe zerteilt es in zwei weitere Dreiecke mit den Flächen A1 und A2."
@@ -444,23 +434,21 @@ export default function Prismen() {
                         doppelter Fläche machen. Das können wir auch für die
                         Volumenberechnung ausnutzen, denn von einem Quader
                         wissen wir, dass die Volumenformel{" "}
-                        <InlineMath>V = A \cdot h</InlineMath> ist, also
+                        <InlineMath math="V = A \cdot h"/> ist, also
                         Grundfläche mal Höhe. Daraus können wir uns nun
                         herleiten, dass auch das Volumen eines dreieckigen
                         Prismas mit der Formel{" "}
-                        <InlineMath> V = A \cdot h</InlineMath> berechenbar ist.
+                        <InlineMath math="V = A \cdot h"/> berechenbar ist.
                         Denn mit dem Verdoppeln des Flächeninhaltes verdoppeln
                         wir auch das Volumen. Das Volumen ergibt sich also mit
                         der Formel:
-                        <BlockMath>{String.raw`
-                            \begin{aligned}
+                        <BlockMath math={String.raw`
                             V_\text{viereckiges Prisma} &= A_\text{Viereck} \cdot \textcolor{green}{h_\text{Prisma}} \\
                             \frac{1}{2} V_\text{viereckiges Prisma} &= \frac{1}{2} A_\text{Viereck} \cdot \textcolor{green}{h_\text{Prisma}} \\
                             V_\text{dreieckiges Prisma} &= A_\text{Dreieck} \cdot \textcolor{green}{h_\text{Prisma}}
-                            \end{aligned}
-                        `}</BlockMath>
+                        `} />
                         <Image
-                            src="/DreieckigesPrismaVolumen@2x.png"
+                            src="/Prismen/DreieckigesPrismaVolumen@2x.png"
                             width={2400}
                             height={1200}
                             alt="Die Grundfläche eines dreieckigen Prismas wird verdoppelt, wodurch ein quadratisches Prisma entsteht."
@@ -471,7 +459,7 @@ export default function Prismen() {
                         das Video unten an.
                         <Video src={VieleckInDreiecke} />
                         Dadurch können wir also die Formel{" "}
-                        <InlineMath>V = A \cdot h</InlineMath> festhalten für{" "}
+                        <InlineMath math="V = A \cdot h"/> festhalten für{" "}
                         <b>alle</b> Prismen. Egal, wie das Prisma aussieht, es
                         das Volumen entspricht immer der Grundfläche mal der
                         Höhe.

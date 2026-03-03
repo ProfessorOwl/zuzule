@@ -2,21 +2,17 @@ import { ImageCaption } from "@/components/ImageCaption";
 import { CheckableHeading } from "@/components/CheckableHeading";
 import {
     Button,
-    Container,
     Divider,
     Flex,
-    Group,
     Image,
     List,
     ListItem,
     Space,
     Spoiler,
-    ThemeIcon,
 } from "@mantine/core";
 import { CheckableBlockquote } from "@/components/CheckableBlockquote";
 import { Lösung } from "@/components/Lösung";
-import { InlineMath } from "react-katex";
-import BlockMath from "@/components/BlockMath";
+import {BetterInlineMath as InlineMath, BlockMathScroll as BlockMath} from "@/components/CustomMath";
 import Video from "@/components/Video";
 import UmfangZylinder from "/videos/UmfangZylinder.mov";
 import Link from "next/link";
@@ -36,13 +32,13 @@ export default function Zylinder() {
                 können!
                 <Flex>
                     <Image
-                        src="/dosen.jpg"
+                        src="/Zylinder/dosen.jpg"
                         width={6000}
                         height={4000}
                         alt="Verschiedene Dosen"
                     />
                     <Image
-                        src="/regler.jpg"
+                        src="/Zylinder/regler.jpg"
                         width={6000}
                         height={4000}
                         alt="Ein Regler für die Lautstärke"
@@ -69,7 +65,7 @@ export default function Zylinder() {
                 <b>Schrägbild</b> eines Quaders. Das sollte ungefähr so aussehen
                 wie in dem Bild.
                 <Image
-                    src="/QuaderSchrägbild@2x.png"
+                    src="/Prismen/QuaderSchrägbild@2x.png"
                     width={1802}
                     height={1200}
                     sizes="500px"
@@ -95,33 +91,33 @@ export default function Zylinder() {
                     <ListItem>Darauf setzen wir nun die Oberseite.</ListItem>
                 </List>
                 <Image
-                    src="/ZylinderSchrägbildEntstehung@2x.png"
+                    src="/Zylinder/ZylinderSchrägbildEntstehung@2x.png"
                     width={2402}
                     height={1200}
                     alt="Es wird gezeigt, wie das Schrägbild eines Zylinders Schritt für Schritt gezeichnet wird. Links wird mit einem Kreis angefangen. Auf dessen Außenseiten werden zwei senkrechte Striche gezeichnet, die alle die gleiche Höhe haben. Auf deren Enden wird dann ein identischer Kreis zu dem unten gezeichnet."
                 />
             </CheckableHeading>
             <CheckableBlockquote icon="frage" title="Aufgabe: Schrägbilder">
-                Zeichne die Zylinder mit Radius <InlineMath>r</InlineMath> und
-                Höhe <InlineMath>h</InlineMath> als Schrägbilder.
+                Zeichne die Zylinder mit Radius <InlineMath math="r"/> und
+                Höhe <InlineMath math="h"/> als Schrägbilder.
                 <List type="ordered">
                     <ListItem>
-                        <InlineMath>{String.raw`r = 1\,\text{cm} \quad h = 3\,\text{cm}`}</InlineMath>
+                        <InlineMath math="r = 1\,\text{cm} \quad h = 3\,\text{cm}"/>
                     </ListItem>
                     <ListItem>
-                        <InlineMath>{String.raw`r = 1{,}5\,\text{cm} \quad h = 4\,\text{cm}`}</InlineMath>
+                        <InlineMath math="r = 1{,}5\,\text{cm} \quad h = 4\,\text{cm}"/>
                     </ListItem>
                     <ListItem>
-                        <InlineMath>{String.raw`r = 1\,\text{cm} \quad h = 5\,\text{cm}`}</InlineMath>
+                        <InlineMath math="r = 1\,\text{cm} \quad h = 5\,\text{cm}"/>
                     </ListItem>
                     <ListItem>
-                        <InlineMath>{String.raw`r = 2\,\text{cm} \quad h = 6{,}5\,\text{cm}`}</InlineMath>
+                        <InlineMath math="r = 2\,\text{cm} \quad h = 6{,}5\,\text{cm}"/>
                     </ListItem>
                     <ListItem>
-                        <InlineMath>{String.raw`r = 0{,}5\,\text{cm} \quad h = 2\,\text{cm}`}</InlineMath>
+                        <InlineMath math="r = 0{,}5\,\text{cm} \quad h = 2\,\text{cm}"/>
                     </ListItem>
                     <ListItem>
-                        <InlineMath>{String.raw`r = 3\,\text{cm} \quad h = 1{,}5\,\text{cm}`}</InlineMath>
+                        <InlineMath math="r = 3\,\text{cm} \quad h = 1{,}5\,\text{cm}"/>
                     </ListItem>
                 </List>
                 <CheckableHeading
@@ -132,7 +128,7 @@ export default function Zylinder() {
                     <Lösung>
                         <Image
                             h={{ base: "auto", md: 500 }}
-                            src="/ZylinderLösung@2x.png"
+                            src="/Zylinder/ZylinderLösung@2x.png"
                             width={3600}
                             height={2000}
                             alt="Zylinder aus den Teilaufgaben 1 bis 6."
@@ -147,7 +143,7 @@ export default function Zylinder() {
                 insbesondere wenn wir uns die Autoreifen von Formel-1 Autos
                 anschauen!
                 <ImageCaption
-                    src="/Formel1Reifen.jpg"
+                    src="/Zylinder/formel1reifen.jpg"
                     width={846}
                     rotate="right"
                     height={537}
@@ -176,18 +172,14 @@ export default function Zylinder() {
                     <Video src={UmfangZylinder} />
                     Die abgerollte Mantelfläche bildet ein Rechteck, das in
                     unserem Beispiel die Kantenlängen{" "}
-                    <InlineMath>{String.raw`9{,}4\,\text{cm}`}</InlineMath> und{" "}
-                    <InlineMath>{String.raw`4{,}7\,\text{cm}`}</InlineMath> hat.
-                    Der Flächeninhalt <InlineMath>A</InlineMath> ergibt sich
+                    <InlineMath math="9{,}4\,\text{cm}"/> und{" "}
+                    <InlineMath math="4{,}7\,\text{cm}"/> hat.
+                    Der Flächeninhalt <InlineMath math="A"/> ergibt sich
                     also wie folgt:
-                    <BlockMath>
-                        {String.raw`
-                        \begin{aligned}
+                    <BlockMath math={String.raw`
                         A &= 9{,}4\,\text{cm} \cdot 4{,}7\,\text{cm} \\
                         &= 44{,}18\,\text{cm}^2
-                        \end{aligned}
-                        `}
-                    </BlockMath>
+                        `} />
                     Das Problem ist nun aber, dass wir nicht unbedingt jeden
                     Zylinder mit einem Filzstift anmalen wollen. Wie würden wir
                     die Mantelfläche eines Autoreifens bestimmen? Dann bräuchten
@@ -199,18 +191,14 @@ export default function Zylinder() {
                     titleOrder={2}
                 >
                     Aus dem Unterricht sollte dir bereits bekannt sein, wie man
-                    den Umfang <InlineMath>U</InlineMath> eines Kreises
+                    den Umfang <InlineMath math="U"/> eines Kreises
                     berechnet. Wir können dafür die Formel
-                    <BlockMath>
-                        {String.raw`
-                        \begin{aligned}
+                    <BlockMath math={String.raw`
                         U &= 2 \cdot \pi \cdot r \\
                         &= \pi \cdot d
-                        \end{aligned}
-                        `}
-                    </BlockMath>
-                    verwenden. <InlineMath>r</InlineMath> ist hierbei der
-                    Radius, <InlineMath>d</InlineMath> der Durchmesser. Falls
+                        `} />
+                    verwenden. <InlineMath math="r"/> ist hierbei der
+                    Radius, <InlineMath math="d"/> der Durchmesser. Falls
                     dir nicht klar sein sollte, warum wir den Umfang auf diese
                     zwei Arten berechnen können, zeichne dir einen Kreis mit
                     Durchmesser und Radius auf – dann kommst du selber drauf!
@@ -219,92 +207,80 @@ export default function Zylinder() {
                         icon="exkurs"
                     >
                         Die Zahl{" "}
-                        <InlineMath>\pi \approx 3,1415 \dots</InlineMath> ist
+                        <InlineMath math="\pi \approx 3,1415 \dots"/> ist
                         das Verhältnis zwischen dem Umfang{" "}
-                        <InlineMath>U</InlineMath> eines Kreises und seinem
-                        Durchmesser <InlineMath>d</InlineMath>. Tatsächlich ist
+                        <InlineMath math="U"/> eines Kreises und seinem
+                        Durchmesser <InlineMath math="d"/>. Tatsächlich ist
                         es egal, wie groß ein Kreis ist – dieses Verhältnis ist
-                        immer gleich <InlineMath>\pi</InlineMath>. Auch in
+                        immer gleich <InlineMath math="\pi"/>. Auch in
                         unserem Beispiel:
-                        <BlockMath>
-                            {String.raw`
-                            \begin{aligned}
+                        <BlockMath math={String.raw`
                             \pi &= \tfrac{U}{d} \\
                                 &=  \tfrac{9{,}4\,\text{cm}}{3\,\text{cm}} \\
                                 &\approx 3,13 
-                            \end{aligned}
-                            `}
-                        </BlockMath>
+                            `} />
                     </CheckableBlockquote>
                     <Image
-                        src="/durchmesserFluid.jpg"
+                        src="/Zylinder/durchmesserFluid.jpg"
                         width={6000}
                         height={4000}
                         alt="Ein Geodreieck wird an eine Flasche mit Korrekturfluid gehalten. Der Durchmesser beträgt 3 cm"
                     />
                     Der Radius beträgt in unserem Fall{" "}
-                    <InlineMath>{String.raw`1{,}5\,\text{cm}`}</InlineMath>. Nun
+                    <InlineMath math="1{,}5\,\text{cm}"/>. Nun
                     verwenden wir die Formel für den Umfang eines Kreises, um
                     den Umfang unseres Gefäßes zu bekommen:
-                    <BlockMath>
-                        {String.raw`
-                        \begin{aligned}
+                    <BlockMath math={String.raw`
                         U &= 2 \cdot \pi \cdot r \\
                         &= 2 \cdot \pi \cdot 1{,}5\,\text{cm} \\
                         &\approx 9{,}4\,\text{cm}
-                        \end{aligned}
-                        `}
-                    </BlockMath>
+                        `} />
                     Das ist genau die Länge, die wir auch durch das Abrollen der
                     Dose bekommen. Nun benötigen wir noch die Höhe unseres
                     Zylinders.
                     <Image
-                        src="/höheFluid.jpg"
+                        src="/Zylinder/höheFluid.jpg"
                         width={6000}
                         height={4000}
                         alt="Ein Geodreieck wird an eine Flasche mit Korrekturfluid gehalten. Die Höhe beträgt 5 cm"
                     />
                     Die Höhe beträgt in unserem Fall also{" "}
-                    <InlineMath>{String.raw`5\,\text{cm}`}</InlineMath>. Um die
-                    Mantelfläche zu erstellen, „ziehen“ wir diese nach oben.
+                    <InlineMath math="5\,\text{cm}"/>. Um die
+                    Mantelfläche zu erstellen, „ziehen" wir diese nach oben.
                     Mathematisch machen wir das, indem wir den Umfang{" "}
-                    <InlineMath>U</InlineMath> mit der Höhe{" "}
-                    <InlineMath>h</InlineMath> multiplizieren:
-                    <BlockMath>
-                        {String.raw`
-                        \begin{aligned}
+                    <InlineMath math="U"/> mit der Höhe{" "}
+                    <InlineMath math="h"/> multiplizieren:
+                    <BlockMath math={String.raw`
                         A &= U \cdot h \\
                         &= 9{,}4\,\text{cm} \cdot 5\,\text{cm} \\
                         &= 47\,\text{cm}^2
-                        \end{aligned}
-                        `}
-                    </BlockMath>
+                        `} />
                     Das passt gut zu der Fläche, die man durch das Abrollen der
                     Flasche bekommt. Dadurch erhalten wir nämlich ca.{" "}
-                    <InlineMath>{String.raw`44\,\text{cm}^2`}</InlineMath>.
+                    <InlineMath math="44\,\text{cm}^2"/>.
                 </CheckableHeading>
                 <CheckableBlockquote icon="frage" title="Aufgabe: Mantelfläche">
                     Berechne die Mantelfläche der Zylinder, welche Radius{" "}
-                    <InlineMath>r</InlineMath> und Höhe{" "}
-                    <InlineMath>h</InlineMath> haben.
+                    <InlineMath math="r"/> und Höhe{" "}
+                    <InlineMath math="h"/> haben.
                     <List type="ordered">
                         <ListItem>
-                            <InlineMath>{String.raw`r = 2\,\text{cm} \quad h = 1\,\text{cm}`}</InlineMath>
+                            <InlineMath math="r = 2\,\text{cm} \quad h = 1\,\text{cm}"/>
                         </ListItem>
                         <ListItem>
-                            <InlineMath>{String.raw`r = 4{,}7\,\text{cm} \quad h = 10\,\text{cm}`}</InlineMath>
+                            <InlineMath math="r = 4{,}7\,\text{cm} \quad h = 10\,\text{cm}"/>
                         </ListItem>
                         <ListItem>
-                            <InlineMath>{String.raw`r = 1{,}9\,\text{cm} \quad h = 1{,}1\,\text{cm}`}</InlineMath>
+                            <InlineMath math="r = 1{,}9\,\text{cm} \quad h = 1{,}1\,\text{cm}"/>
                         </ListItem>
                         <ListItem>
-                            <InlineMath>{String.raw`r = 5\,\text{cm} \quad h = 3{,}2\,\text{cm}`}</InlineMath>
+                            <InlineMath math="r = 5\,\text{cm} \quad h = 3{,}2\,\text{cm}"/>
                         </ListItem>
                         <ListItem>
-                            <InlineMath>{String.raw`r = 7\,\text{m} \quad h = 4{,}3\,\text{m}`}</InlineMath>
+                            <InlineMath math="r = 7\,\text{m} \quad h = 4{,}3\,\text{m}"/>
                         </ListItem>
                         <ListItem>
-                            <InlineMath>{String.raw`r = 19\,\text{mm} \quad h = 2{,}6\,\text{cm}`}</InlineMath>
+                            <InlineMath math="r = 19\,\text{mm} \quad h = 2{,}6\,\text{cm}"/>
                         </ListItem>
                     </List>
                     <CheckableHeading
@@ -315,22 +291,22 @@ export default function Zylinder() {
                         <Lösung>
                             <List type="ordered">
                                 <ListItem>
-                                    <InlineMath>{String.raw`U = 4\pi\,\text{cm}\approx 12{,}57\,\text{cm}\quad A = 4\pi\,\text{cm}^2 \approx 12{,}57\,\text{cm}^2`}</InlineMath>
+                                    <InlineMath math="U = 4\pi\,\text{cm}\approx 12{,}57\,\text{cm}\quad A = 4\pi\,\text{cm}^2 \approx 12{,}57\,\text{cm}^2"/>
                                 </ListItem>
                                 <ListItem>
-                                    <InlineMath>{String.raw`U = \tfrac{47}{5}\pi\,\text{cm}\approx 11{,}94\,\text{cm}\quad A = \tfrac{209}{50}\pi\,\text{cm}^2 \approx 13{,}13\,\text{cm}^2`}</InlineMath>
+                                    <InlineMath math="U = \tfrac{47}{5}\pi\,\text{cm}\approx 11{,}94\,\text{cm}\quad A = \tfrac{209}{50}\pi\,\text{cm}^2 \approx 13{,}13\,\text{cm}^2"/>
                                 </ListItem>
                                 <ListItem>
-                                    <InlineMath>{String.raw`U = \tfrac{19}{5}\pi\,\text{cm}\approx 12{,}57\,\text{cm}\quad A = 4\pi\,\text{cm}^2 \approx 12{,}57\,\text{cm}^2`}</InlineMath>
+                                    <InlineMath math="U = \tfrac{19}{5}\pi\,\text{cm}\approx 12{,}57\,\text{cm}\quad A = 4\pi\,\text{cm}^2 \approx 12{,}57\,\text{cm}^2"/>
                                 </ListItem>
                                 <ListItem>
-                                    <InlineMath>{String.raw`U = 10\pi\,\text{cm}\approx 31{,}42\,\text{cm}\quad A = 32\pi\,\text{cm}^2 \approx 100{,}53\,\text{cm}^2`}</InlineMath>
+                                    <InlineMath math="U = 10\pi\,\text{cm}\approx 31{,}42\,\text{cm}\quad A = 32\pi\,\text{cm}^2 \approx 100{,}53\,\text{cm}^2"/>
                                 </ListItem>
                                 <ListItem>
-                                    <InlineMath>{String.raw`U = 14\pi\,\text{m}\approx 43{,}93\,\text{m}\quad A = \tfrac{301}{5}\pi\,\text{m}^2 \approx 189{,}12\,\text{m}^2`}</InlineMath>
+                                    <InlineMath math="U = 14\pi\,\text{m}\approx 43{,}93\,\text{m}\quad A = \tfrac{301}{5}\pi\,\text{m}^2 \approx 189{,}12\,\text{m}^2"/>
                                 </ListItem>
                                 <ListItem>
-                                    <InlineMath>{String.raw`U = 3{,}8\pi\,\text{cm}\approx 11{,}94\,\text{cm}\quad A = \tfrac{247}{25}\pi\,\text{cm}^2 \approx 31{,}04\,\text{cm}^2`}</InlineMath>
+                                    <InlineMath math="U = 3{,}8\pi\,\text{cm}\approx 11{,}94\,\text{cm}\quad A = \tfrac{247}{25}\pi\,\text{cm}^2 \approx 31{,}04\,\text{cm}^2"/>
                                 </ListItem>
                             </List>
                         </Lösung>
@@ -345,42 +321,38 @@ export default function Zylinder() {
                 <Divider />
                 Die Ober- und Unterseite eines Zylinders ist ein Kreis. Deswegen
                 können wir die Flächenformel eines Kreises verwenden!
-                <BlockMath>
-                    {String.raw`
+                <BlockMath math={String.raw`
                     A_\text{Kappe} = \pi \cdot r^2
-                    `}
-                </BlockMath>
-                Um nun die Gesamtoberfläche <InlineMath>O</InlineMath> eines
+                    `} />
+                Um nun die Gesamtoberfläche <InlineMath math="O"/> eines
                 Zylinders zu bekommen, addieren wir die Ober- und Unterseite{" "}
-                <InlineMath>{String.raw`A_\text{Kappe}`}</InlineMath> sowie die
-                Mantelfläche <InlineMath>M</InlineMath> zusammen:
-                <BlockMath>
-                    {String.raw`
+                <InlineMath math="A_\text{Kappe}"/> sowie die
+                Mantelfläche <InlineMath math="M"/> zusammen:
+                <BlockMath math={String.raw`
                     A = M + 2\cdot A_\text{Kappe}
-                    `}
-                </BlockMath>
+                    `} />
                 <CheckableBlockquote icon="frage" title="Aufgabe: Oberfläche">
                     Berechne die Gesamtoberfläche der Zylinder, welche Radius{" "}
-                    <InlineMath>r</InlineMath> und Höhe{" "}
-                    <InlineMath>h</InlineMath> haben.
+                    <InlineMath math="r"/> und Höhe{" "}
+                    <InlineMath math="h"/> haben.
                     <List type="ordered">
                         <ListItem>
-                            <InlineMath>{String.raw`r = 3\,\text{cm} \quad h = 1{,}2\,\text{cm}`}</InlineMath>
+                            <InlineMath math="r = 3\,\text{cm} \quad h = 1{,}2\,\text{cm}"/>
                         </ListItem>
                         <ListItem>
-                            <InlineMath>{String.raw`r = 8{,}2\,\text{cm} \quad h = 5\,\text{cm}`}</InlineMath>
+                            <InlineMath math="r = 8{,}2\,\text{cm} \quad h = 5\,\text{cm}"/>
                         </ListItem>
                         <ListItem>
-                            <InlineMath>{String.raw`r = 7{,}3\,\text{cm} \quad h = 3{,}9\,\text{cm}`}</InlineMath>
+                            <InlineMath math="r = 7{,}3\,\text{cm} \quad h = 3{,}9\,\text{cm}"/>
                         </ListItem>
                         <ListItem>
-                            <InlineMath>{String.raw`r = 4\,\text{cm} \quad h = 9{,}1\,\text{cm}`}</InlineMath>
+                            <InlineMath math="r = 4\,\text{cm} \quad h = 9{,}1\,\text{cm}"/>
                         </ListItem>
                         <ListItem>
-                            <InlineMath>{String.raw`r = 6{,}7\,\text{m} \quad h = 7{,}5\,\text{m}`}</InlineMath>
+                            <InlineMath math="r = 6{,}7\,\text{m} \quad h = 7{,}5\,\text{m}"/>
                         </ListItem>
                         <ListItem>
-                            <InlineMath>{String.raw`r = 1{,}95\,\text{m} \quad h = 480\,\text{cm}`}</InlineMath>
+                            <InlineMath math="r = 1{,}95\,\text{m} \quad h = 480\,\text{cm}"/>
                         </ListItem>
                     </List>
                     <CheckableHeading
@@ -391,114 +363,90 @@ export default function Zylinder() {
                         <Lösung>
                             <List type="ordered" visibleFrom="md">
                                 <ListItem>
-                                    <BlockMath>{String.raw`
-                                    \begin{aligned}
+                                    <BlockMath math={String.raw`
                                     &&M &= \tfrac{36}{5}\pi\,\text{cm}^2 \approx 22{,}62\,\text{cm}^2 \\
                                     &&A_\text{Kappe} &= 9\pi\,\text{cm}^2 \approx 28{,}27\,\text{cm}^2 \\
                                     &&O &= \tfrac{126}{5}\pi\,\text{cm}^2 \approx 79{,}17\,\text{cm}^2
-                                    \end{aligned}
-                                    `}</BlockMath>
+                                    `} />
                                 </ListItem>
                                 <ListItem>
-                                    <BlockMath>{String.raw`
-                                    \begin{aligned}
+                                    <BlockMath math={String.raw`
                                     &&M &= 82\pi\,\text{cm}^2 \approx 257{,}61\,\text{cm}^2 \\
                                     &&A_\text{Kappe} &= \tfrac{1681}{25}\pi\,\text{cm}^2 \approx 211{,}24\,\text{cm}^2 \\
                                     &&O &= \tfrac{5412}{25}\pi\,\text{cm}^2 \approx 680{,}09\,\text{cm}^2
-                                    \end{aligned}
-                                    `}</BlockMath>
+                                    `} />
                                 </ListItem>
                                 <ListItem>
-                                    <BlockMath>{String.raw`
-                                    \begin{aligned}
+                                    <BlockMath math={String.raw`
                                     &&M &= \tfrac{2847}{50}\pi\,\text{cm}^2 \approx 178{,}88\,\text{cm}^2 \\
                                     &&A_\text{Kappe} &= \tfrac{5329}{100}\pi\,\text{cm}^2 \approx 167{,}42\,\text{cm}^2 \\
                                     &&O &= \tfrac{4088}{25}\pi\,\text{cm}^2 \approx 513{,}71\,\text{cm}^2
-                                    \end{aligned}
-                                    `}</BlockMath>
+                                    `} />
                                 </ListItem>
                                 <ListItem>
-                                    <BlockMath>{String.raw`
-                                    \begin{aligned}
+                                    <BlockMath math={String.raw`
                                     &&M &= \tfrac{364}{5}\pi\,\text{cm}^2 \approx 228{,}71\,\text{cm}^2 \\
                                     &&A_\text{Kappe} &= 16\pi\,\text{cm}^2 \approx 50{,}27\,\text{cm}^2 \\
                                     &&O &= \tfrac{524}{5}\pi\,\text{cm}^2 \approx 329{,}24\,\text{cm}^2
-                                    \end{aligned}
-                                    `}</BlockMath>
+                                    `} />
                                 </ListItem>
                                 <ListItem>
-                                    <BlockMath>{String.raw`
-                                    \begin{aligned}
+                                    <BlockMath math={String.raw`
                                     &&M &= \tfrac{201}{2}\pi\,\text{m}^2 \approx 315{,}73\,\text{m}^2 \\
                                     &&A_\text{Kappe} &= \tfrac{4489}{100}\pi\,\text{m}^2 \approx 141{,}03\,\text{m}^2 \\
                                     &&O &= \tfrac{4757}{25}\pi\,\text{m}^2 \approx 597{,}78\,\text{m}^2
-                                    \end{aligned}
-                                    `}</BlockMath>
+                                    `} />
                                 </ListItem>
                                 <ListItem>
-                                    <BlockMath>{String.raw`
-                                    \begin{aligned}
+                                    <BlockMath math={String.raw`
                                     &&M &= \tfrac{468}{25}\pi\,\text{m}^2\approx 58{,}81\,\text{m}^2 \\ 
                                     &&A_\text{Kappe} &= \tfrac{1521}{400}\pi\,\text{m}^2 \approx 11{,}95\,\text{m}^2 \\
                                     &&O &= \tfrac{1053}{40}\pi\,\text{m}^2 \approx 82{,}70\,\text{m}^2
-                                    \end{aligned}
-                                    `}</BlockMath>
+                                    `} />
                                 </ListItem>
                             </List>
                             <List type="ordered" hiddenFrom="md">
                                 <ListItem>
-                                    <BlockMath>{String.raw`
-                                    \begin{aligned}
+                                    <BlockMath math={String.raw`
                                     M &= \tfrac{36}{5}\pi\,\text{cm}^2 \\ &\approx 22{,}62\,\text{cm}^2 \\
                                     A_\text{Kappe} &= 9\pi\,\text{cm}^2 \\ &\approx 28{,}27\,\text{cm}^2 \\
                                     O &= \tfrac{126}{5}\pi\,\text{cm}^2 \\ &\approx 79{,}17\,\text{cm}^2
-                                    \end{aligned}
-                                    `}</BlockMath>
+                                    `} />
                                 </ListItem>
                                 <ListItem>
-                                    <BlockMath>{String.raw`
-                                    \begin{aligned}
+                                    <BlockMath math={String.raw`
                                     M &= 82\pi\,\text{cm}^2 \\ &\approx 257{,}61\,\text{cm}^2 \\
                                     A_\text{Kappe} &= \tfrac{1681}{25}\pi\,\text{cm}^2 \\ &\approx 211{,}24\,\text{cm}^2 \\
                                     O &= \tfrac{5412}{25}\pi\,\text{cm}^2 \\ &\approx 680{,}09\,\text{cm}^2
-                                    \end{aligned}
-                                    `}</BlockMath>
+                                    `} />
                                 </ListItem>
                                 <ListItem>
-                                    <BlockMath>{String.raw`
-                                    \begin{aligned}
+                                    <BlockMath math={String.raw`
                                     M &= \tfrac{2847}{50}\pi\,\text{cm}^2 \\ &\approx 178{,}88\,\text{cm}^2 \\
                                     A_\text{Kappe} &= \tfrac{5329}{100}\pi\,\text{cm}^2 \\ &\approx 167{,}42\,\text{cm}^2 \\
                                     O &= \tfrac{4088}{25}\pi\,\text{cm}^2 \\ &\approx 513{,}71\,\text{cm}^2
-                                    \end{aligned}
-                                    `}</BlockMath>
+                                    `} />
                                 </ListItem>
                                 <ListItem>
-                                    <BlockMath>{String.raw`
-                                    \begin{aligned}
+                                    <BlockMath math={String.raw`
                                     M &= \tfrac{364}{5}\pi\,\text{cm}^2 \\ &\approx 228{,}71\,\text{cm}^2 \\
                                     A_\text{Kappe} &= 16\pi\,\text{cm}^2 \\ &\approx 50{,}27\,\text{cm}^2 \\
                                     O &= \tfrac{524}{5}\pi\,\text{cm}^2 \\ &\approx 329{,}24\,\text{cm}^2
-                                    \end{aligned}
-                                    `}</BlockMath>
+                                    `} />
                                 </ListItem>
                                 <ListItem>
-                                    <BlockMath>{String.raw`
-                                    \begin{aligned}
+                                    <BlockMath math={String.raw`
                                     M &= \tfrac{201}{2}\pi\,\text{m}^2 \\ &\approx 315{,}73\,\text{m}^2 \\
                                     A_\text{Kappe} &= \tfrac{4489}{100}\pi\,\text{m}^2 \\ &\approx 141{,}03\,\text{m}^2 \\
                                     O &= \tfrac{4757}{25}\pi\,\text{m}^2 \\ &\approx 597{,}78\,\text{m}^2
-                                    \end{aligned}
-                                    `}</BlockMath>
+                                    `} />
                                 </ListItem>
                                 <ListItem>
-                                    <BlockMath>{String.raw`
-                                    \begin{aligned}
+                                    <BlockMath math={String.raw`
                                     M &= \tfrac{468}{25}\pi\,\text{m}^2\\ &\approx 58{,}81\,\text{m}^2 \\ 
                                     A_\text{Kappe} &= \tfrac{1521}{400}\pi\,\text{m}^2 \\ &\approx 11{,}95\,\text{m}^2 \\
                                     O &= \tfrac{1053}{40}\pi\,\text{m}^2 \\ &\approx 82{,}70\,\text{m}^2
-                                    \end{aligned}
-                                    `}</BlockMath>
+                                    `} />
                                 </ListItem>
                             </List>
                         </Lösung>
@@ -587,12 +535,12 @@ export default function Zylinder() {
                         denen man die Grundfläche „in die Höhe gezogen“ hat.
                         Erinnern wir uns also erstmal an das Volumen eines
                         Quaders zurück! Das können wir mit{" "}
-                        <InlineMath>A = a \cdot b</InlineMath> berechnen, wobei{" "}
-                        <InlineMath>a</InlineMath> und{" "}
-                        <InlineMath>b</InlineMath> die beiden Grundseiten
+                        <InlineMath math="A = a \cdot b"/> berechnen, wobei{" "}
+                        <InlineMath math="a"/> und{" "}
+                        <InlineMath math="b"/> die beiden Grundseiten
                         bezeichnen.
                         <Image
-                            src="/RechteckFläche@2x.png"
+                            src="/Prismen/RechteckFläche@2x.png"
                             width={1802}
                             height={1200}
                             alt="Ein Rechteck mit der Fläche A und den Seiten a und b."
@@ -634,17 +582,15 @@ export default function Zylinder() {
                         12{thinsp}cm<sup>3</sup> sein muss. 6 Würfel sind unten,
                         weitere 6 sind oben. Das ergibt sich auch aus der
                         Berechnung von Grundfläche mal Höhe:
-                        <BlockMath>{String.raw`
-                            \begin{aligned}
+                        <BlockMath math={String.raw`
                             \textcolor{blue}{A} &= 3 \, \text{cm} \cdot 2 \, \text{cm} \\
                             &= 6\, \text{cm}^2 \\
                             \textcolor{green}{V} &=\textcolor{blue}{A} \cdot h \\
                             &= 6 \, \text{cm}^2 \cdot 2\,\text{cm} \\
                             &= 12 \, \text{cm}^3
-                            \end{aligned}
-                        `}</BlockMath>
+                        `} />
                         Können wir diese Formel eventuell auch bei Zylindern
-                        anwenden? Gilt <InlineMath>V = A \cdot h</InlineMath>{" "}
+                        anwenden? Gilt <InlineMath math="V = A \cdot h"/>{" "}
                         hier immer? Testen wir es mal!
                     </CheckableHeading>
                     <CheckableHeading
@@ -661,14 +607,14 @@ export default function Zylinder() {
                         11{thinsp}cm.
                         <Flex>
                             <Image
-                                src="/doseKokosDurchmesser.jpg"
+                                src="/Zylinder/doseKokosDurchmesser.jpg"
                                 width={6000}
                                 height={4000}
                                 sizes="500px"
                                 alt="Ein Lineal liegt unter einer Konservendose. Ablesbar ist ein Durchmesser von 7,5 cm."
                             />
                             <Image
-                                src="/doseKokosHöhe.jpg"
+                                src="/Zylinder/doseKokosHöhe.JPG"
                                 width={6000}
                                 height={4000}
                                 sizes="500px"
@@ -677,26 +623,18 @@ export default function Zylinder() {
                         </Flex>
                         Wir berechnen zuerst den Flächeninhalt mit der
                         Flächenformel für einen Kreis:
-                        <BlockMath>
-                            {String.raw`
-                            \begin{aligned}
+                        <BlockMath math={String.raw`
                             A &= \pi \cdot r^2 \\
                                 &= \pi \cdot \left(\frac{7{,}5\,\text{cm}}{2}\right)^2\\
                                 &\approx 44{,}18\,\text{cm}^2
-                            \end{aligned}
-                            `}
-                        </BlockMath>
+                            `} />
                         Das Volumen berechnen wir nun nach dem gleichen Prinzip
                         wie beim Quader, also:
-                        <BlockMath>
-                            {String.raw`
-                            \begin{aligned}
+                        <BlockMath math={String.raw`
                             V &= A \cdot h \\
                                 &= 44{,}18\,\text{cm}^2 \cdot  11\,\text{cm} \\
                                 &\approx 485{,}97\,\text{cm}^3
-                            \end{aligned}
-                            `}
-                        </BlockMath>
+                            `} />
                         Das ist etwas mehr, als die 400{thinsp}mL, die
                         eigentlich als Füllmenge auf der Dose stehen. Wir dürfen
                         aber nicht vergessen, dass wir die Dose von außen
@@ -712,7 +650,7 @@ export default function Zylinder() {
                             Damit wir nicht um unser Geld gebracht werden,
                             messen wir das mal nach. Bestimme die tatsächliche
                             Füllmenge mittels der Formel{" "}
-                            <InlineMath>V = A \cdot h</InlineMath>. Versuche die
+                            <InlineMath math="V = A \cdot h"/>. Versuche die
                             Maße möglichst genau abzulesen! Als Füllmenge ist
                             bei beiden Dosen 400{thinsp}mL angegeben.
                             <Space />
@@ -722,7 +660,7 @@ export default function Zylinder() {
                                     <Flex>
                                         <Image
                                             h={{ base: "auto", md: 275 }}
-                                            src="/innenKokos.jpg"
+                                            src="/Zylinder/innenKokos.jpg"
                                             width={6000}
                                             height={4000}
                                             sizes="500px"
@@ -730,7 +668,7 @@ export default function Zylinder() {
                                         />
                                         <Image
                                             h={{ base: "auto", md: 275 }}
-                                            src="/füllstandKokos.jpg"
+                                            src="/Zylinder/füllstandKokos.jpg"
                                             width={6000}
                                             height={4000}
                                             sizes="500px"
@@ -753,7 +691,7 @@ export default function Zylinder() {
                                     <Flex>
                                         <Image
                                             h={{ base: "auto", md: 275 }}
-                                            src="/innenTomate.jpg"
+                                            src="/Zylinder/innenTomate.jpg"
                                             width={6000}
                                             height={4000}
                                             sizes="500px"
@@ -761,7 +699,7 @@ export default function Zylinder() {
                                         />
                                         <Image
                                             h={{ base: "auto", md: 275 }}
-                                            src="/füllstandTomate.jpg"
+                                            src="/Zylinder/füllstandTomate.jpg"
                                             width={6000}
                                             height={4000}
                                             sizes="500px"
@@ -793,38 +731,30 @@ export default function Zylinder() {
                             >
                                 <Lösung>
                                     <b>Dose mit Kokosmilch</b>
-                                    <BlockMath>
-                                        {String.raw`
-                                        \begin{aligned}
+                                    <BlockMath math={String.raw`
                                         A &= \pi \cdot r^2 \\
                                             &= \pi \cdot \left(\frac{7{,}3\,\text{cm}}{2}\right)^2 \\
                                             &\approx 41{,}85\,\text{cm}^2 \\
                                         V &= A \cdot h \\
                                             &= 42{,}31\,\text{cm}^2 \cdot 9,5\,\text{cm} \\
                                             &\approx 397{,}61\,\text{cm}^3
-                                        \end{aligned}
-                                        `}
-                                    </BlockMath>
+                                        `} />
                                     <Space />
                                     <b>Dose mit gehackten Tomaten</b>
-                                    <BlockMath>
-                                        {String.raw`
-                                        \begin{aligned}
+                                    <BlockMath math={String.raw`
                                         A &= \pi \cdot r^2 \\
                                             &= \pi \cdot \left(\frac{7{,}3\,\text{cm}}{2}\right)^2 \\
                                             &\approx 41{,}85\,\text{cm}^2 \\
                                         V &= A \cdot h \\
                                             &= 42{,}31\,\text{cm}^2 \cdot 9,7\,\text{cm} \\
                                             &\approx 405{,}98\,\text{cm}^3
-                                        \end{aligned}
-                                        `}
-                                    </BlockMath>
+                                        `} />
                                     Gehen wir davon aus, dass wir richtig
                                     gemessen haben, so sind in der Kokosmilch{" "}
-                                    <InlineMath>{String.raw`400\,\text{mL} - 397{,}61\,\text{mL} = 2{,}39\,\text{mL}`}</InlineMath>{" "}
+                                    <InlineMath math="400\,\text{mL} - 397{,}61\,\text{mL} = 2{,}39\,\text{mL}"/>{" "}
                                     zu wenig drin, während uns einem bei den
                                     gehackten Tomaten{" "}
-                                    <InlineMath>{String.raw`405{,}98\,\text{mL} - 400\,\text{mL} = 5{,}98\,\text{mL}`}</InlineMath>{" "}
+                                    <InlineMath math="405{,}98\,\text{mL} - 400\,\text{mL} = 5{,}98\,\text{mL}"/>{" "}
                                     geschenkt werden. Ob das als Anlass genügt,
                                     um die Kokosmilch im Supermarkt
                                     zurückzugeben, muss jedoch jeder selber

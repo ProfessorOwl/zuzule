@@ -3,8 +3,7 @@ import { CheckableHeading } from "@/components/CheckableHeading";
 import { Lösung } from "@/components/Lösung";
 import MBlockMath from "@/components/MBlockMath";
 import { Flex, Image, List, ListItem, Mark, Space } from "@mantine/core";
-import { InlineMath } from "react-katex";
-import BlockMath from "@/components/BlockMath";
+import {BetterInlineMath as InlineMath, BlockMathScroll as BlockMath} from "@/components/CustomMath";
 import Video from "@/components/Video";
 import KegelOberfläche from "/videos/KegelOberfläche.mov";
 import thinsp from "@/components/thinsp";
@@ -61,9 +60,9 @@ export default function Kegel() {
             <CheckableHeading title="Oberfläche">
                 Die Grundfläche eines Kegels können wir mit einem Zirkel einfach
                 ausmessen, da sie ein Kreis ist. Ihre Fläche entspricht also:
-                <BlockMath>G = \pi \cdot r_G^2</BlockMath>
+                <BlockMath math="G = \pi \cdot r_G^2" />
                 <Mark c={"desred"}>
-                    <InlineMath>r_G</InlineMath>
+                    <InlineMath math="r_G"/>
                 </Mark>{" "}
                 meint dabei den Radius der Grundfläche. Durch das Abrollen des
                 Kegels haben wir aber noch einen <b>Kreisausschnitt</b>{" "}
@@ -72,10 +71,10 @@ export default function Kegel() {
                 <b>Mantelfläche</b> des Kegels. Der Radius des „Abrollkreises“
                 entspricht der Höhe{" "}
                 <Mark c={"desblue"}>
-                    <InlineMath>{String.raw`h_\text{Wand}`}</InlineMath>{" "}
+                    <InlineMath math="h_\text{Wand}"/>{" "}
                 </Mark>
                 unserer Kegelwand (aufpassen:{" "}
-                <InlineMath>{String.raw`\textcolor{#3312B8}{h_\text{Wand}} \neq \textcolor{#12B886}{h}`}</InlineMath>
+                <InlineMath math="\textcolor{#3312B8}{h_\text{Wand}} \neq \textcolor{#12B886}{h}"/>
                 ). Hier nochmal ein Bild zur Illustration:
                 <Image
                     src="/Kegel/Kegel.png"
@@ -149,17 +148,15 @@ export default function Kegel() {
                 es nochmal, nochmal, nochmal… zerteilen. Irgendwann ist die
                 Strecke{" "}
                 <Mark c="desblue">
-                    <InlineMath>{String.raw`h_\text{Wand}`}</InlineMath>
+                    <InlineMath math="h_\text{Wand}"/>
                 </Mark>{" "}
                 dann senkrecht zur Strecke{" "}
-                <InlineMath>{String.raw`\frac{U}{2}`}</InlineMath>. Die
-                Mantelfläche <InlineMath>M</InlineMath> lässt sich also mit der
+                <InlineMath math="\frac{U}{2}"/>. Die
+                Mantelfläche <InlineMath math="M"/> lässt sich also mit der
                 Formel
-                <BlockMath>
-                    {String.raw`
+                <BlockMath math={String.raw`
                 M = \frac{U}{2}\cdot \textcolor{#3312B8}{h_\text{Wand}}
-                `}
-                </BlockMath>
+                `} />
                 berechnen!
                 <CheckableBlockquote
                     titleOrder={2}
@@ -168,17 +165,15 @@ export default function Kegel() {
                 >
                     Was geometrisch geht, geht auch mit Formeln. Kannst du die
                     Formel{" "}
-                    <InlineMath>{String.raw`M = \frac{U}{2}\cdot \textcolor{#3312B8}{h_\text{Wand}}`}</InlineMath>{" "}
+                    <InlineMath math="M = \frac{U}{2}\cdot \textcolor{#3312B8}{h_\text{Wand}}"/>{" "}
                     herleiten? Benutze dafür den Umfang der Grundfläche und das
                     „Tortenstück“, das der Mantel darstellt.
                     <Lösung titleOrder={3} title="Lösung" id="Lösung-Beweis">
                         Wir schreiben erstmal die Formeln für den Umfang der
                         Grundfläche auf.
-                        <BlockMath>
-                            {String.raw`
+                        <BlockMath math={String.raw`
                     U = 2\pi r_G 
-                    `}
-                        </BlockMath>
+                    `} />
                         Der Mantel bildet ein Kreissegment (das „Tortenstück“),
                         wenn man ihn abrollt. Dieses Segment hat einen
                         bestimmten Anteil an der Gesamtfläche des Kreises. Schau
@@ -191,33 +186,27 @@ export default function Kegel() {
                             h={{ base: "auto", md: 375 }}
                         />
                         Die Fläche des kompletten Kreises ist:
-                        <BlockMath>
-                            {String.raw`
+                        <BlockMath math={String.raw`
                     A = \pi \cdot \textcolor{#3312B8}{h_\text{Wand}}^2 
-                    `}
-                        </BlockMath>
+                    `} />
                         Den Anteil der Mantelfläche daran können wir aus den
                         Umfängen ableiten. Angenommen, das Netz des Mantels
                         entspricht exakt einem Viertelkreis. Dann hat es einen
                         Anteil von{" "}
-                        <InlineMath>{String.raw`\frac{1}{4}`}</InlineMath> an
+                        <InlineMath math="\frac{1}{4}"/> an
                         der Fläche und dem Umfang des kompletten Kreises.
                         Allgemein ausgedrückt:
                         <MBlockMath
                             mobile={String.raw`
-                    \begin{aligned}
                     M &= \frac{U}{U_\text{Gesamt}}\cdot A \\
                     &\Downarrow \scriptsize{\text{Einsetzen}} \\ 
                         &= \frac{U}{2\cancel{\pi\textcolor{#3312B8}{h_\text{Wand}}}} \cdot \cancel{\pi} \textcolor{#3312B8}{h_\text{Wand}}^{\cancel{2}}\\ 
                         &= \frac{U}{2} \cdot \textcolor{#3312B8}{h_\text{Wand}}
-                    \end{aligned}
                     `}
                             desktop={String.raw`
-                    \begin{aligned}
                     M &= \frac{U}{U_\text{Gesamt}}\cdot A \quad \lvert \text{Einsetzen} \\ 
                         &= \frac{U}{2\cancel{\pi\textcolor{#3312B8}{h_\text{Wand}}}} \cdot \cancel{\pi} \textcolor{#3312B8}{h_\text{Wand}}^{\cancel{2}}\\ 
                         &= \frac{U}{2} \cdot \textcolor{#3312B8}{h_\text{Wand}}
-                    \end{aligned}
                     `}
                         />
                         Damit haben wir die Formel hergeleitet!
@@ -250,145 +239,91 @@ export default function Kegel() {
                         <List type="ordered">
                             <ListItem>
                                 Grundfläche:
-                                <BlockMath>
-                                    {String.raw`
-                                \begin{aligned}
+                                <BlockMath math={String.raw`
                                 G &= \pi r_G^2 \\
                                     &= \pi \cdot (3\,\text{cm})^2 \\
                                     &\Rightarrow G \approx 28{,}27\,\text{cm}^2
-                                \end{aligned}
-                                `}
-                                </BlockMath>
+                                `} />
                                 Für die Mantelfläche benötigen wir den Umfang
                                 der Grundfläche und die Höhe{" "}
-                                <InlineMath>{String.raw`h_\text{Wand}`}</InlineMath>
-                                <BlockMath>
-                                    {String.raw`
-                                \begin{aligned}
+                                <InlineMath math="h_\text{Wand}"/>
+                                <BlockMath math={String.raw`
                                 U &= 2\pi r_G  \\
                                     &= 2\pi \cdot  3\,\text{cm} \\
                                     &\Rightarrow U \approx 18{,}85\,\text{cm}
-                                \end{aligned}
-                                `}
-                                </BlockMath>
-                                <BlockMath>
-                                    {String.raw`
-                                \begin{aligned}
+                                `} />
+                                <BlockMath math={String.raw`
                                 h_\text{Wand} &= \sqrt{r_G^2 + h^2}  \\
                                     &= \sqrt{(3\,\text{cm})^2 + (4\,\text{cm})^2} \\
                                     &\Rightarrow h_\text{Wand} = 5\,\text{cm}
-                                \end{aligned}
-                                `}
-                                </BlockMath>
+                                `} />
                                 Damit können wir die Mantelfläche{" "}
-                                <InlineMath>M</InlineMath> berechnen:
-                                <BlockMath>
-                                    {String.raw`
-                                \begin{aligned}
+                                <InlineMath math="M"/> berechnen:
+                                <BlockMath math={String.raw`
                                 M &= \frac{U}{2} \cdot h_\text{Wand}  \\
                                     &= \frac{18{,}25\,\text{cm}}{2} \cdot 5\,\text{cm} \\
                                     &\Rightarrow M = 45{,}63\,\text{cm}^2
-                                \end{aligned}
-                                `}
-                                </BlockMath>
+                                `} />
                                 Insgesamt ergibt das eine Oberfläche von
-                                <BlockMath>
-                                    {String.raw`
+                                <BlockMath math={String.raw`
                                 O = G + M = 28{,}27\,\text{cm}^2+ 45{,}63\,\text{cm}^2 = 73{,}9\,\text{cm}^2
-                                `}
-                                </BlockMath>
+                                `} />
                             </ListItem>
                             <ListItem>
                                 Grundfläche:
-                                <BlockMath>
-                                    {String.raw`
-                                \begin{aligned}
+                                <BlockMath math={String.raw`
                                 G &= \pi \cdot (1{,}5\,\text{cm})^2 \\
                                     &\Rightarrow G \approx 7{,}07\,\text{cm}^2
-                                \end{aligned}
-                                `}
-                                </BlockMath>
+                                `} />
                                 Berechnen von Umfang und{" "}
-                                <InlineMath>{String.raw`h_\text{Wand}`}</InlineMath>{" "}
+                                <InlineMath math="h_\text{Wand}"/>{" "}
                                 für die Mantelfläche:
-                                <BlockMath>
-                                    {String.raw`
-                                \begin{aligned}
+                                <BlockMath math={String.raw`
                                 U &= 2\pi \cdot  1{,}5\,\text{cm} \\
                                     &\Rightarrow U \approx 9{,}42\,\text{cm}
-                                \end{aligned}
-                                `}
-                                </BlockMath>
-                                <BlockMath>
-                                    {String.raw`
-                                \begin{aligned}
+                                `} />
+                                <BlockMath math={String.raw`
                                 h_\text{Wand} &= \sqrt{(1{,}5\,\text{cm})^2 + (3\,\text{cm})^2} \\
                                     &\Rightarrow h_\text{Wand} \approx 3{,}35\,\text{cm}
-                                \end{aligned}
-                                `}
-                                </BlockMath>
+                                `} />
                                 Berechnen der Mantelfläche{" "}
-                                <InlineMath>M</InlineMath>:
-                                <BlockMath>
-                                    {String.raw`
-                                \begin{aligned}
+                                <InlineMath math="M"/>:
+                                <BlockMath math={String.raw`
                                 M &= \frac{9{,}42\,\text{cm}}{2} \cdot 3{,}35\,\text{cm} \\
                                     &\Rightarrow M = 15{,}78\,\text{cm}^2
-                                \end{aligned}
-                                `}
-                                </BlockMath>
+                                `} />
                                 Insgesamt ergibt das eine Oberfläche von
-                                <BlockMath>
-                                    {String.raw`
+                                <BlockMath math={String.raw`
                                 O = 7{,}07\,\text{cm}^2+ 15{,}78\,\text{cm}^2 = 22{,}85\,\text{cm}^2
-                                `}
-                                </BlockMath>
+                                `} />
                             </ListItem>
                             <ListItem>
                                 Grundfläche:
-                                <BlockMath>
-                                    {String.raw`
-                                \begin{aligned}
+                                <BlockMath math={String.raw`
                                 G &= \pi \cdot (1\,\text{cm})^2 \\
                                     &\Rightarrow G \approx 3{,}14\,\text{cm}^2
-                                \end{aligned}
-                                `}
-                                </BlockMath>
+                                `} />
                                 Berechnen von Umfang und{" "}
-                                <InlineMath>{String.raw`h_\text{Wand}`}</InlineMath>{" "}
+                                <InlineMath math="h_\text{Wand}"/>{" "}
                                 für die Mantelfläche:
-                                <BlockMath>
-                                    {String.raw`
-                                \begin{aligned}
-                                U &= 2\pi \cdot  1\,\text{cm} \\
-                                    &\Rightarrow U \approx 6{,}28\,\text{cm}
-                                \end{aligned}
-                                `}
-                                </BlockMath>
-                                <BlockMath>
-                                    {String.raw`
-                                \begin{aligned}
+                    <BlockMath math={String.raw`
+                U &= 2\pi \cdot  1\,\text{cm} \\
+                    &\Rightarrow U \approx 6{,}28\,\text{cm}
+                `} />
+                                <BlockMath math={String.raw`
                                 h_\text{Wand} &= \sqrt{(1\,\text{cm})^2 + (3{,}7\,\text{cm})^2} \\
                                     &\Rightarrow h_\text{Wand} \approx 3{,}83\,\text{cm}
-                                \end{aligned}
-                                `}
-                                </BlockMath>
+                                `} />
                                 Berechnen der Mantelfläche{" "}
-                                <InlineMath>M</InlineMath>:
-                                <BlockMath>
-                                    {String.raw`
-                                \begin{aligned}
+                                <InlineMath math="M"/>:
+                                <BlockMath math={String.raw`
                                 M &= \frac{6{,}28\,\text{cm}}{2} \cdot 3{,}83\,\text{cm} \\
                                     &\Rightarrow M = 12{,}03\,\text{cm}^2
-                                \end{aligned}
-                                `}
-                                </BlockMath>
+                                `} />
                                 Insgesamt ergibt das eine Oberfläche von
-                                <BlockMath>
-                                    {String.raw`
+                                <BlockMath math={String.raw`
                                 O = 3{,}14\,\text{cm}^2+ 12{,}03\,\text{cm}^2 = 15{,}17\,\text{cm}^2
-                                `}
-                                </BlockMath>
+                                `} />
                             </ListItem>
                         </List>
                     </Lösung>
@@ -430,11 +365,9 @@ export default function Kegel() {
                         alt="Eine Pyramide in einem Quader"
                     />
                     Mathematisch können wir das so formulieren:
-                    <BlockMath>
-                        {String.raw`
+                    <BlockMath math={String.raw`
                 V_\text{Quader} = 6 \cdot V_\text{Pyramide}
-                `}
-                    </BlockMath>
+                `} />
                     Kannst du daraus selber eine Formel für das Pyramidenvolumen
                     herleiten? Denke dran: Der Quader ist doppelt so hoch wie
                     eine der Pyramiden!
@@ -447,14 +380,12 @@ export default function Kegel() {
                             Wir können also über die Volumenformel für einen
                             Quader auf das Volumen einer Pyramide schließen! Für
                             einen Quader gilt:
-                            <BlockMath>
-                                {String.raw`
+                            <BlockMath math={String.raw`
                 V_\text{Quader} = G \cdot h_\text{Quader}
-                `}
-                            </BlockMath>
-                            mit der Grundfläche <InlineMath>G</InlineMath> und
+                `} />
+                            mit der Grundfläche <InlineMath math="G"/> und
                             der Höhe{" "}
-                            <InlineMath>{String.raw`h_\text{Quader}`}</InlineMath>
+                            <InlineMath math="h_\text{Quader}"/>
                             . Das können wir in die vorige Gleichung einsetzen,
                             also bekommen wir:
                             <MBlockMath
@@ -469,13 +400,11 @@ export default function Kegel() {
                                     V_\text{Pyramide} &= \frac{1}{3} G \cdot h_\text{Pyramide}
                                     `}
                                 desktop={String.raw`
-                                \begin{aligned}
                                 V_\text{Quader} &= 6 \cdot V_\text{Pyramide} &&\lvert V_\text{Quader} = G \cdot h_\text{Quader} \\
                                 G \cdot h_\text{Quader} &=  6 \cdot V_\text{Pyramide} &&\lvert h_\text{Quader} = 2\cdot h_\text{Pyramide} \\
                                 G \cdot 2 h_\text{Pyramide} &=  6 \cdot V_\text{Pyramide} &&\lvert :6 \\
                                 G \cdot \frac{2}{6} h_\text{Pyramide} &= V_\text{Pyramide} \\
                                 V_\text{Pyramide} &= \frac{1}{3} G \cdot h_\text{Pyramide}
-                                \end{aligned}
                                 `}
                             />
                             Eine Pyramide ist also immer ein Drittel so groß wie
@@ -486,16 +415,14 @@ export default function Kegel() {
                 </CheckableHeading>
                 <CheckableHeading title="Volumen eines Kegels" titleOrder={2}>
                     Für eine Pyramide gilt also:
-                    <BlockMath>
-                        {String.raw`
+                    <BlockMath math={String.raw`
                         V = \frac{1}{3}Gh_\text{Pyramide}
-                        `}
-                    </BlockMath>
+                        `} />
                     Die Formel ist dabei <b>unabhängig</b> von der Anzahl der
                     Ecken, die die Grundfläche hat. Das bedeutet: Egal, ob wir
                     ein Dreieck, Viereck, Sechseck, ... haben, das Volumen{" "}
-                    <InlineMath>V</InlineMath> berechnet sich immer nach{" "}
-                    <InlineMath>{String.raw`V = \frac{1}{3}Gh_\text{Pyramide}`}</InlineMath>
+                    <InlineMath math="V"/> berechnet sich immer nach{" "}
+                    <InlineMath math="V = \frac{1}{3}Gh_\text{Pyramide}"/>
                     .
                     <CheckableBlockquote
                         icon="frage"
@@ -567,12 +494,10 @@ export default function Kegel() {
                                 <ListItem>
                                     Grundfläche des Dachstuhls berechnen:
                                     <MBlockMath
-                                        desktop="\begin{aligned}
-                                        G &= \pi r^2 &&\lvert r = \frac{d}{2} \\
+                                        desktop="G &= \pi r^2 &&\lvert r = \frac{d}{2} \\
                                             &= \pi \left(\frac{d}{2}\right)^2 &&\lvert d = 6\,\text{m}\\
                                             &= \pi \left(\frac{6\,\text{m}}{2}\right)^2 \\
-                                            &\Rightarrow G \approx 28{,}27\,\text{m}^2
-                                    \end{aligned}"
+                                            &\Rightarrow G \approx 28{,}27\,\text{m}^2"
                                         mobile="G &= \pi r^2 \\
                                             &\Downarrow \scriptsize{r = \frac{d}{2}} \\
                                             &= \pi \left(\frac{d}{2}\right)^2 \\
@@ -582,11 +507,9 @@ export default function Kegel() {
                                     />
                                     Volumen des Dachstuhls berechnen:
                                     <MBlockMath
-                                        desktop="\begin{aligned}
-                                        V &= \frac{1}{3}Gh &&\lvert G = 28{,}27\,\text{m}^2, h = 5{,}5\,\text{m} \\
+                                        desktop="V &= \frac{1}{3}Gh &&\lvert G = 28{,}27\,\text{m}^2, h = 5{,}5\,\text{m} \\
                                         &= \frac{1}{3}\cdot 28{,}27\,\text{m}^2 \cdot 5{,}5\,\text{m} \\
-                                        &\Rightarrow V = 51{,}84\,\text{m}^3
-                                    \end{aligned}"
+                                        &\Rightarrow V = 51{,}84\,\text{m}^3"
                                         mobile="V &= \frac{1}{3}Gh \\
                                     &\Downarrow \scriptsize{G = 28{,}27\,\text{m}^2, h = 5{,}5\,\text{m}} \\
                                         &= \frac{1}{3}\cdot 28{,}27\,\text{m}^2 \cdot 5{,}5\,\text{m} \\
@@ -595,9 +518,9 @@ export default function Kegel() {
                                     Zum Vergleich: Ein Zimmer mit einer
                                     Grundfläche von 3 mal 4{thinsp}m und einer
                                     Höhe von 2,5{thinsp}m hat eine Fläche von{" "}
-                                    <InlineMath>{String.raw`3\,\text{m}\cdot 4\,\text{m} = 12\,\text{m}^2`}</InlineMath>
+                                    <InlineMath math="3\,\text{m}\cdot 4\,\text{m} = 12\,\text{m}^2"/>
                                     und ein Volumen von{" "}
-                                    <InlineMath>{String.raw`12\,\text{m}^2 \cdot 2{,}5\,\text{m} = 30\,\text{m}^3`}</InlineMath>
+                                    <InlineMath math="12\,\text{m}^2 \cdot 2{,}5\,\text{m} = 30\,\text{m}^3"/>
                                     . Der Dachstuhl kann also sicherlich noch
                                     als Zimmer verwendet werden, auch wenn die
                                     Dachschräge viel vom Stehplatz wegnimmt.
@@ -605,11 +528,9 @@ export default function Kegel() {
                                 <ListItem>
                                     Höhe des Mantels berechnen:
                                     <MBlockMath
-                                        desktop="\begin{aligned}
-                                        h_\text{Mantel} &= \sqrt{r^2 + h^2} &&\lvert r = 3\,\text{m},\; h = 5{,}5\,\text{m} \\
+                                        desktop="h_\text{Mantel} &= \sqrt{r^2 + h^2} &&\lvert r = 3\,\text{m},\; h = 5{,}5\,\text{m} \\
                                         &= \sqrt{(3\,\text{m})^2 + (5{,}5\,\text{m})^2}  \\
-                                        &\Rightarrow h_\text{Mantel} \approx 6{,}26\,\text{m} \\
-                                    \end{aligned}"
+                                        &\Rightarrow h_\text{Mantel} \approx 6{,}26\,\text{m} \\"
                                         mobile="h_\text{Mantel} &= \sqrt{r^2 + h^2} \\
                                     &\Downarrow \scriptsize{r = 3\,\text{m},\; h = 5{,}5\,\text{m}} \\
                                         &= \sqrt{(3\,\text{m})^2 + (5{,}5\,\text{m})^2}  \\
@@ -617,16 +538,14 @@ export default function Kegel() {
                                     />
                                     Nun kann die Mantelfläche bestimmt werden:
                                     <MBlockMath
-                                        desktop="\begin{aligned}
-                                        M &= \frac{U}{2} \cdot h_\text{Mantel} &&\lvert U = 2\pi r ,\; h_\text{Mantel} = 6{,}26\,\text{m} \\
-                                        &= \frac{\cancel{2}\pi r}{\cancel{2}} \cdot h_\text{Mantel} &&\lvert r = 3, \; h_\text{Mantel} = 6{,}26\,\text{m} \\
-                                        &= \pi \cdot 3\,\text{m} \cdot 6{,}26\,\text{m} \\
-                                        &\Rightarrow M \approx 59{,}00\,\text{m}^2
-                                    \end{aligned}"
                                         mobile="M &= \frac{U}{2} \cdot h_\text{Mantel} \\
                                     &\Downarrow \scriptsize{U = 2\pi r ,\; h_\text{Mantel} = 6{,}26\,\text{m}} \\
                                         &= \frac{\cancel{2}\pi r}{\cancel{2}} \cdot h_\text{Mantel} \\
                                         &\Downarrow \scriptsize{r = 3, \; h_\text{Mantel} = 6{,}26\,\text{m}} \\
+                                        &= \pi \cdot 3\,\text{m} \cdot 6{,}26\,\text{m} \\
+                                        &\Rightarrow M \approx 59{,}00\,\text{m}^2"
+                                        desktop="M &= \frac{U}{2} \cdot h_\text{Mantel} &&\lvert U = 2\pi r ,\; h_\text{Mantel} = 6{,}26\,\text{m} \\
+                                        &= \frac{\cancel{2}\pi r}{\cancel{2}} \cdot h_\text{Mantel} &&\lvert r = 3, \; h_\text{Mantel} = 6{,}26\,\text{m} \\
                                         &= \pi \cdot 3\,\text{m} \cdot 6{,}26\,\text{m} \\
                                         &\Rightarrow M \approx 59{,}00\,\text{m}^2"
                                     />
@@ -634,11 +553,9 @@ export default function Kegel() {
                                     <sup>2</sup>. Pro Quadratmeter muss 65€ für
                                     das Zinkblech und weitere 40€ für die Arbeit
                                     ausgegeben werden. Insgesamt also{" "}
-                                    <InlineMath>65€ + 40€= 105€</InlineMath>.
+                                    <InlineMath math="65€ + 40€= 105€"/>.
                                     Das bedeutet in unserem Fall:
-                                    <BlockMath>
-                                        {String.raw`59\,\text{m}^2 \cdot 105\frac{€}{\text{m}^2} = 6195€`}
-                                    </BlockMath>
+                                    <BlockMath math={String.raw`59\,\text{m}^2 \cdot 105\frac{€}{\text{m}^2} = 6195€`} />
                                     Es kostet also 6195€ um das Dach
                                     neuzudecken.
                                 </ListItem>
