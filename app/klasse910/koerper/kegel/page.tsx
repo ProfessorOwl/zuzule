@@ -194,7 +194,7 @@ export default function Kegel() {
                         Allgemein ausgedrückt:
                         <MBlockMath
                             mobile="M &= \frac{U}{U_\text{Gesamt}}\cdot A \\ &\Downarrow \scriptsize{\text{Einsetzen}} \\ &= \frac{U}{2\cancel{\pi\textcolor{#3312B8}{h_\text{Wand}}}} \cdot \cancel{\pi} \textcolor{#3312B8}{h_\text{Wand}}^{\cancel{2}}\\ &= \frac{U}{2} \cdot \textcolor{#3312B8}{h_\text{Wand}}"
-                            desktop="M &= \frac{U}{U_\text{Gesamt}}\cdot A \quad \lvert \text{Einsetzen} \\ &= \frac{U}{2\cancel{\pi\textcolor{#3312B8}{h_\text{Wand}}}} \cdot \cancel{\pi} \textcolor{#3312B8}{h_\text{Wand}}^{\cancel{2}}\\ &= \frac{U}{2} \cdot \textcolor{#3312B8}{h_\text{Wand}}"
+                            desktop="M &= \frac{U}{U_\text{Gesamt}}\cdot A &&\lvert \text{Einsetzen} \\ &= \frac{U}{2\cancel{\pi\textcolor{#3312B8}{h_\text{Wand}}}} \cdot \cancel{\pi} \textcolor{#3312B8}{h_\text{Wand}}^{\cancel{2}}\\ &= \frac{U}{2} \cdot \textcolor{#3312B8}{h_\text{Wand}}"
                         />
                         Damit haben wir die Formel hergeleitet!
                     </Lösung>

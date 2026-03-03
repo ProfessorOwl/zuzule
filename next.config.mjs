@@ -5,6 +5,7 @@ const nextConfig = {
     reactStrictMode: true,
     experimental: {
         optimizePackageImports: ["@mantine/core", "@mantine/hooks"],
+        optimizeCss: true,
     },
     webpack(config) {
         // On some network/cloud filesystems (Synology Drive, iCloud, etc.)

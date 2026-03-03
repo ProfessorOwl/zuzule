@@ -387,7 +387,7 @@ export default function Pyramiden() {
                                 , das wir einsetzen können:
                                 <MBlockMath
                                     mobile="V &= \frac{1}{3}Gx \\ &= \frac{1}{3}\cdot 3x \cdot x \\ &= x^2 \\ &\Downarrow \scriptsize{\sqrt{}} \\ x &= \sqrt{V} \\ &\Rightarrow x = \sqrt{25} = 5"
-                                    desktop="V &= \frac{1}{3}Gx \\ &= \frac{1}{3}\cdot 3x \cdot x \\ &= x^2 \lvert \sqrt{} \\ x &= \sqrt{V} \\ &\Rightarrow x = \sqrt{25} = 5"
+                                    desktop="V &= \frac{1}{3}Gx \\ &= \frac{1}{3}\cdot 3x \cdot x \\ &= x^2 &&\lvert \sqrt{} \\ x &= \sqrt{V} \\ &\Rightarrow x = \sqrt{25} = 5"
                                 />
                             </ListItem>
                         </List>
