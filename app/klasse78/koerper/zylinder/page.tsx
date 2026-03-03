@@ -69,7 +69,6 @@ export default function Zylinder() {
                     src="/Prismen/QuaderSchrägbild@2x.png"
                     width={1802}
                     height={1200}
-                    sizes="500px"
                     alt="Schrägbild eines Quaders auf kariertem Papier."
                 />
                 Verdeckte Kanten werden also mit einer gestrichelten Linie
@@ -535,14 +534,12 @@ export default function Zylinder() {
                                 src="/Zylinder/doseKokosDurchmesser.jpg"
                                 width={6000}
                                 height={4000}
-                                sizes="500px"
                                 alt="Ein Lineal liegt unter einer Konservendose. Ablesbar ist ein Durchmesser von 7,5 cm."
                             />
                             <Image
                                 src="/Zylinder/doseKokosHöhe.JPG"
                                 width={6000}
                                 height={4000}
-                                sizes="500px"
                                 alt="Ein Lineal wird neben eine Konservendose gehalten. Ablesbar ist eine Höhe von 11 cm."
                             />
                         </Flex>
@@ -580,7 +577,6 @@ export default function Zylinder() {
                                             src="/Zylinder/innenKokos.jpg"
                                             width={6000}
                                             height={4000}
-                                            sizes="500px"
                                             alt="Ein Lineal liegt über der Öffnung einer Konservendose mit Kokosmilch. Ablesbar ist ein Durchmesser von 7,3 cm."
                                         />
                                         <Image
@@ -588,7 +584,6 @@ export default function Zylinder() {
                                             src="/Zylinder/füllstandKokos.jpg"
                                             width={6000}
                                             height={4000}
-                                            sizes="500px"
                                             alt="Ein Stäbchen, das in die Kokosmilch getunkt wurde, liegt neben einem Lineal. Es wurde ca. 9,5 cm tief hineingetaucht."
                                         />
                                     </Flex>
@@ -611,7 +606,6 @@ export default function Zylinder() {
                                             src="/Zylinder/innenTomate.jpg"
                                             width={6000}
                                             height={4000}
-                                            sizes="500px"
                                             alt="Ein Lineal liegt über der Öffnung einer Konservendose mit gehackten Tomaten. Ablesbar ist ein Durchmesser von 7,3 cm."
                                         />
                                         <Image
@@ -619,7 +613,6 @@ export default function Zylinder() {
                                             src="/Zylinder/füllstandTomate.jpg"
                                             width={6000}
                                             height={4000}
-                                            sizes="500px"
                                             alt="Ein Stäbchen, das in die gehackten Tomaten getunkt wurde, liegt neben einem Lineal. Es wurde ca. 9,7 cm tief hineingetaucht."
                                         />
                                     </Flex>
