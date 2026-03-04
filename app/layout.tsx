@@ -52,6 +52,8 @@ export default function RootLayout({ children }: { children: any }) {
                         <LayoutGrid>{children}</LayoutGrid>
                     </Suspense>
                 </MantineProvider>
+                <Analytics />
+                <SpeedInsights />
             </body>
         </html>
     );
