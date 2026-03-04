@@ -1,3 +1,5 @@
+import { Fragment } from "react/jsx-runtime";
+
 export default function ThemenLayout({ children }: { children: any }) {
-    return <div>{children}</div>;
+    return <Fragment>{children}</Fragment>;
 }

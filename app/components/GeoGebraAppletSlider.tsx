@@ -2,7 +2,7 @@
 
 import { Badge, Center, ScrollArea, Slider } from "@mantine/core";
 import { usePathname } from "next/navigation";
-import { useEffect, useRef, useState } from "react";
+import { Fragment, useEffect, useRef, useState } from "react";
 
 declare global {
     interface Window {
@@ -169,7 +169,7 @@ export default function GeoGebraAppletSlider({
     }, [value]);
 
     return (
-        <div>
+        <Fragment>
             <Center my={"md"}>
                 <Slider
                     thumbChildren={<Badge size="xl">{sliderLabel}</Badge>}
@@ -195,6 +195,6 @@ export default function GeoGebraAppletSlider({
             <Center my={"md"}>
                 <div ref={ggbRef}></div>
             </Center>
-        </div>
+        </Fragment>
     );
 }

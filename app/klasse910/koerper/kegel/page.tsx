@@ -8,12 +8,13 @@ import Video from "@/components/Video";
 import KegelOberfläche from "/videos/KegelOberfläche.mov";
 import thinsp from "@/components/thinsp";
 import Image from "@/components/Image";
+import { Fragment } from "react/jsx-runtime";
 
 
 
 export default function Kegel() {
     return (
-        <div>
+        <Fragment>
             <CheckableHeading title="Der Kegel">
                 Kegel begegnen uns besonders im Sommer in Form von Eiswaffeln,
                 ansonsten sieht man sie oft am Straßenrand in Form von
@@ -490,6 +491,6 @@ export default function Kegel() {
                     </CheckableBlockquote>
                 </CheckableHeading>
             </CheckableHeading>
-        </div>
+        </Fragment>
     );
 }

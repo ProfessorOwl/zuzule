@@ -16,12 +16,13 @@ import Video from "@/components/Video";
 import VieleckInDreiecke from "/videos/Vieleck in Dreiecke.mov";
 import thinsp from "@/components/thinsp";
 import Image from "@/components/Image";
+import { Fragment } from "react/jsx-runtime";
 
 
 
 export default function Prismen() {
     return (
-        <div>
+        <Fragment>
             <SuspenseCheckableHeading title="Das Prisma">
                 Prismen kennst du vielleicht schon aus dem Physikunterricht. Mit
                 ihnen kann man zeigen, dass weißes Licht tatsächlich aus allen
@@ -428,6 +429,6 @@ export default function Prismen() {
                     </CheckableHeading>
                 </CheckableHeading>
             </CheckableHeading>
-        </div>
+        </Fragment>
     );
 }

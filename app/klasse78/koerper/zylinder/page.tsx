@@ -19,12 +19,13 @@ import { IconExternalLink } from "@tabler/icons-react";
 import GeoGebraAppletSlider from "@/components/GeoGebraAppletSlider";
 import thinsp from "@/components/thinsp";
 import Image from "@/components/Image";
+import { Fragment } from "react/jsx-runtime";
 
 
 
 export default function Zylinder() {
     return (
-        <div>
+        <Fragment>
             <CheckableHeading title="Der Zylinder">
                 Zylinder sind beliebte Formen in unserem Alltag. Seien es
                 Lampenschirme, die Stangen von Straßenlaternen oder
@@ -661,6 +662,6 @@ export default function Zylinder() {
                     </CheckableHeading>
                 </CheckableHeading>
             </CheckableHeading>
-        </div>
+        </Fragment>
     );
 }

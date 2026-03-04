@@ -16,10 +16,11 @@ import {
 import {BetterInlineMath as InlineMath, BlockMathScroll as BlockMath} from "@/components/CustomMath";
 import thinsp from "@/components/thinsp";
 import Image from "@/components/Image";
+import { Fragment } from "react/jsx-runtime";
 
 export default function Pyramiden() {
     return (
-        <div>
+        <Fragment>
             <SuspenseCheckableHeading title="Die Pyramide">
                 Pyramiden haben auf Menschen schon lange eine Anziehungskraft –
                 so haben schon die Maya und Ägypter Pyramiden gebaut, die
@@ -599,6 +600,6 @@ export default function Pyramiden() {
                     </Lösung>
                 </CheckableBlockquote>
             </CheckableHeading>
-        </div>
+        </Fragment>
     );
 }

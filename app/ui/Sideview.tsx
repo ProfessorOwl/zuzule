@@ -12,6 +12,7 @@ import {
 } from "@tabler/icons-react";
 import classes from "./sideview.module.css";
 import Link from "next/link";
+import { Fragment } from "react/jsx-runtime";
 
 export interface NavItem {
     label: string;
@@ -91,7 +92,7 @@ export const navData910: NavItem[] = [
 export const renderNavItem = (item: NavItem, level = 0, pathname: string) => {
     if (item.children) {
         return (
-            <div key={item.label}>
+            <Fragment key={item.label}>
                 <div
                     className={classes.link}
                     style={{
@@ -111,7 +112,7 @@ export const renderNavItem = (item: NavItem, level = 0, pathname: string) => {
                         renderNavItem(child, level + 1, pathname),
                     )}
                 </div>
-            </div>
+            </Fragment>
         );
     } else if (item.link) {
         return (

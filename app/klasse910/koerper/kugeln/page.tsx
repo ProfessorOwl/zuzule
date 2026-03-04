@@ -6,11 +6,12 @@ import Video from "@/components/Video"
 import Lichtkugel from "/videos/Lichtkugel.mov";
 import { CheckableBlockquote } from "@/components/CheckableBlockquote";
 import Image from "@/components/Image";
+import { Fragment } from "react/jsx-runtime";
 
 
 export default function Kugeln() {
     return (
-        <div>
+        <Fragment>
         <SuspenseCheckableHeading title="Die Kugel">
             Fragt man mehrere Mathematikerinnen und Mathematiker nach ihrer Lieblingsform, so werden viele von ihnen vermutlich antworten, dass die <b>Kugel</b> die beste Form ist. Kugeln haben nämlich einige interessante Eigenschaften: Sie hat keinerlei Kanten oder Ecken, kann frei rollen, sieht immer gleich aus, egal von welchem Winkel man sie betrachtet… Die Liste könnte jetzt noch lange weitergehen! Einige weitere Eigenschaften werden wir auf dieser Seite erkunden.
             <Flex>
@@ -18,14 +19,14 @@ export default function Kugeln() {
                     h={{base: "auto", md: 400}}
                     width={3375}
                     height={5062}
-                    src={"/Kugel/basketball.jpg"}
+                    src={"/Kugeln/basketball.jpg"}
                     alt="Ein Basketball, der ins Netz fällt"
                 />
                 <Image
                     h={{base: "auto", md: 400}}
                     width={3375}
                     height={5062}
-                    src={"/Kugel/LasVegasSphere.jpg"}
+                    src={"/Kugeln/LasVegasSphere.jpg"}
                     alt="Ein Basketball, der ins Netz fällt"
                 />
             </Flex>
@@ -39,14 +40,14 @@ export default function Kugeln() {
                     h={{base: "auto", md: 400}}
                     width={1920}
                     height={1080}
-                    src={"/Kugel/LichtKugel.jpg"}
+                    src={"/Kugeln/LichtKugel.jpg"}
                     alt="Eine Kugel, die aus Licht gezeichnet ist"
                 />
-            Durch das Fixieren des Mittelpunktes auf dem Stativ und einem festen Radius haben wir damit also eine Kugel mit einem Radius von 0,6{thinsp}m geschaffen.
+            Durch das Fixieren des Mittelpunktes auf dem Stativ und einem festen Radius haben wir damit eine Kugel mit einem Radius von 0,6{thinsp}m geschaffen.
             <CheckableBlockquote icon="aha" title="Probier es selbst aus!">
                 Viele Handys können solche Langzeitbelichtungen machen. Schau mal in den Einstellungen deiner Handykamera und gucke nach der Einstellung. Stell dich dann in einen dunklen Raum und nimm eine schwache Lichtquelle, wie ein Feuerzeug, eine Wunderkerze oder ähnliches. Schau, was dabei rauskommt!
             </CheckableBlockquote>
         </CheckableHeading>
-        </div>
+        </Fragment>
     );
 }
