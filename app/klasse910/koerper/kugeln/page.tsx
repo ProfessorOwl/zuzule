@@ -219,7 +219,7 @@ export default function Kugeln() {
                     4\pi \textcolor{#12B886}{r}^2 &= G_1 + G_2 + \ldots + G_n"
                     />
             Die Gleichung haben wir vereinfacht, indem wir mit 3 multipliziert und durch <Mark c="teal"> <InlineMath math="r"/></Mark> geteilt haben. Auf der rechten Seite stehen nun nur noch die Grundflächen der Pyramiden. Genau hier wollten wir ankommen! Denn die Summe aller Grundfläche entspricht dem Oberflächeninhalt der Kugel!
-            <BlockMath math="4\pi \textcolor{#12B886}{r}^2 &= O"/>
+            <BlockMath math=" O = 4\pi \textcolor{#12B886}{r}^2"/>
             Damit haben wir die Oberflächenformel für die Kugel hergeleitet!
         </CheckableHeading>
         </Fragment>

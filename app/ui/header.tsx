@@ -56,8 +56,8 @@ export function HeaderSimple() {
                     >
                         Klassen 9+10
                     </Link>
-                    <Link href="/ueber" className={classes.link}>
-                        Über das Projekt
+                    <Link href="/ueber" className={classes.link} data-active={pathname.startsWith("/ueber") || undefined}>
+                    Über das Projekt
                     </Link>
                 </Group>
 
