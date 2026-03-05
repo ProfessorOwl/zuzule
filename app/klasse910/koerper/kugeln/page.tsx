@@ -161,7 +161,7 @@ export default function Kugeln() {
                         <BlockMath math="d &= 2 r \\&= 6\,\text{cm} \\ V &= \frac{4}{3}\pi r^3\\ &= \frac{4}{3}\pi \cdot(3\,\text{cm})^3 \\&\approx 113{,}10\,\text{cm}^3 "/>
                     </ListItem>
                     <ListItem>
-                        Gegegen: <InlineMath math="r=1.5\,\text{m}"/>
+                        Gegeben: <InlineMath math="r=1.5\,\text{m}"/>
                         <BlockMath math="d &= 2 r \\&= 3\,\text{m} \\ V &= \frac{4}{3}\pi r^3 \\ &= \frac{4}{3}\pi \cdot(1{,}5\,\text{m})^3 \\ &\approx 14{,}14\,\text{m}^3 "/>
                     </ListItem>
                     <ListItem>

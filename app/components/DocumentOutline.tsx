@@ -6,6 +6,7 @@ import {
     Group,
     List,
     ListItem,
+    ScrollAreaAutosize,
     Stack,
     Text,
 } from "@mantine/core";
@@ -59,7 +60,6 @@ export function DocumentOutline() {
         if (!activeData) {
             return null;
         }
-
         return activeData
             .getNode()
             .closest("[data-checkable-id]")
@@ -151,12 +151,14 @@ export function DocumentOutline() {
     if (headings.length === 0) {
         return null;
     }
+    
     return (
         <Stack gap="sm" p="xs" mt="xl" visibleFrom="md">
             <Text fw={600} size="xs">
                 Gliederung
             </Text>
-            <List withPadding={false}>
+
+            <ScrollAreaAutosize mah={"calc(100vh - 145px)"}>
                 {headings.map((heading, index) => {
                     // Hide this heading if a parent heading is checked
                     if (!shouldShowHeading(index)) {
@@ -194,7 +196,7 @@ export function DocumentOutline() {
                                 miw={0}
                                 flex={1}
                                 td={isChecked ? "line-through" : "none"}
-                                fw={heading.id === activeHeadingId ? 700 : 400}
+                                bg={heading.id === activeHeadingId ? "var(--mantine-primary-color-light)" : undefined}
                                 c={
                                     isChecked
                                         ? "var(--mantine-color-gray-6)"
@@ -228,7 +230,7 @@ export function DocumentOutline() {
                         </Group>
                     );
                 })}
-            </List>
+            </ScrollAreaAutosize>
         </Stack>
     );
 }
