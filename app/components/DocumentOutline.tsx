@@ -9,9 +9,10 @@ import {
     Stack,
     Text,
 } from "@mantine/core";
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import { IconDotsDiagonal2 } from "@tabler/icons-react";
+import { useScrollSpy } from "@mantine/hooks";
 
 interface HeadingItem {
     id: string;
@@ -23,10 +24,26 @@ export function DocumentOutline() {
     const router = useRouter();
     const pathname = usePathname();
     const [headings, setHeadings] = useState<HeadingItem[]>([]);
+    const [scrollHost, setScrollHost] = useState<HTMLElement | null>(null);
     const [checkedHeadings, setCheckedHeadings] = useState<Set<string>>(
         new Set(),
     );
     const searchParams = useSearchParams();
+
+    useEffect(() => {
+        const viewport = document.querySelector(
+            ".mantine-ScrollArea-viewport",
+        ) as HTMLElement | null;
+        setScrollHost(viewport);
+    }, [pathname]);
+
+    const spy = useScrollSpy({
+        selector: "[data-checkable-id] :is(h1, h2, h3, h4, h5, h6)",
+        getDepth: (element) => parseInt(element.tagName[1], 10),
+        getValue: (element) => element.textContent || "",
+        scrollHost: scrollHost ?? undefined,
+        offset: 80,
+    });
     const CheckboxIcon: CheckboxProps["icon"] = ({
         indeterminate,
         ...others
@@ -37,11 +54,21 @@ export function DocumentOutline() {
             <IconDotsDiagonal2 {...others} />
         );
 
+    const activeHeadingId = useMemo(() => {
+        const activeData = spy.data[spy.active];
+        if (!activeData) {
+            return null;
+        }
+
+        return activeData
+            .getNode()
+            .closest("[data-checkable-id]")
+            ?.getAttribute("data-checkable-id");
+    }, [spy.active, spy.data]);
+
     useEffect(() => {
         // Alle Elemente sammeln, die den "data-checkable-id"-typen haben
-        const checkableElements = document.querySelectorAll(
-            "[data-checkable-id]",
-        ) as NodeListOf<HTMLElement>;
+        const checkableElements = document.querySelectorAll("[data-checkable-id]") as NodeListOf<HTMLElement>;
         const headingItems: HeadingItem[] = [];
         // Sammle davon die ids
         checkableElements.forEach((element) => {
@@ -63,6 +90,7 @@ export function DocumentOutline() {
         setHeadings(headingItems);
     }, [pathname]);
 
+    
     // Wenn sich die searchParams ändern sollen die entsprechenden Headings zur liste gecheckter Headings zugefügt werden
     useEffect(() => {
         const checkedHeading = new Set<string>();
@@ -123,7 +151,6 @@ export function DocumentOutline() {
     if (headings.length === 0) {
         return null;
     }
-
     return (
         <Stack gap="sm" p="xs" mt="xl" visibleFrom="md">
             <Text fw={600} size="xs">
@@ -167,25 +194,31 @@ export function DocumentOutline() {
                                 miw={0}
                                 flex={1}
                                 td={isChecked ? "line-through" : "none"}
-                                c={isChecked ? "var(--mantine-color-gray-6)" : "var(--mantine-primary-color-6)"}
+                                fw={heading.id === activeHeadingId ? 700 : 400}
+                                c={
+                                    isChecked
+                                        ? "var(--mantine-color-gray-6)"
+                                        : heading.id === activeHeadingId
+                                          ? "var(--mantine-primary-color-7)"
+                                          : "var(--mantine-primary-color-6)"
+                                }
                                 style={{
                                     wordBreak: "break-word",
                                     overflowWrap: "break-word",
                                     transition: "all 0.2s ease",
                                 }}
                                 className="outline-link"
-                                // onMouseEnter={(e) => {
-                                //     (
-                                //         e.currentTarget as HTMLElement
-                                //     ).style.color = isChecked
-                                //         ? "var(--mantine-color-gray-7)"
-                                //         : "var(--mantine-primary-color-8)";
-                                // }}
+                                onMouseEnter={(e) => {
+                                    (
+                                        e.currentTarget as HTMLElement
+                                    ).style.color = isChecked ? "var(--mantine-color-gray-7)" :"var(--mantine-primary-color-8)"}}
                                 onMouseLeave={(e) => {
                                     (
                                         e.currentTarget as HTMLElement
                                     ).style.color = isChecked
                                         ? "var(--mantine-color-gray-6)"
+                                        : heading.id === activeHeadingId
+                                          ? "var(--mantine-primary-color-7)"
                                         : "var(--mantine-primary-color-6)";
                                 }}
                                 onClick={() => handleScroll(heading.id)}
