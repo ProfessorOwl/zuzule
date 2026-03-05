@@ -64,6 +64,7 @@ export const theme = createTheme({
     colors: {
         desblue: generateColors("#3312B8"),
         desred: generateColors("#C92052"),
+        desyellow: generateColors("#D1BC1B")
     },
     fontSizes: {
         xs: "12pt",

@@ -34,11 +34,9 @@ export function ImageCaption({
 }: ImageCaptionProps) {
     if (rotate == "right") {
         return (
-            <Center>
+            <Center mx={"auto"}>
                 <Image
-                    h={{ base: "auto", md: h }}
-                    //@ts-ignore
-                    w={{ base: 300, xs: 400, sm: 500, md: "auto" }}
+                    h={h}
                     mx={0}
                     fit={fit}
                     src={src}
@@ -61,7 +59,7 @@ export function ImageCaption({
     }
     if (rotate == "left") {
         return (
-            <Center>
+            <Center mx={"auto"}>
                 <Flex align={"flex-end"} h={h}>
                     <Text
                         size="sm"
@@ -73,7 +71,7 @@ export function ImageCaption({
                 </Flex>
                 <Image
                     h={h}
-                    w={"auto"}
+                    mx={0}
                     fit={fit}
                     src={src}
                     width={width}
@@ -85,7 +83,7 @@ export function ImageCaption({
         );
     } else {
         return (
-            <Stack gap={"xs"} maw="100%">
+            <Stack gap={"xs"} maw="100%" mx={"auto"}>
                 <Image
                     h={h}
                     fit={fit}

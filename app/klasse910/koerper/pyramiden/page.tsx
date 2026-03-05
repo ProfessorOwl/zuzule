@@ -17,7 +17,11 @@ import {BetterInlineMath as InlineMath, BlockMathScroll as BlockMath} from "@/co
 import thinsp from "@/components/thinsp";
 import Image from "@/components/Image";
 import { Fragment } from "react/jsx-runtime";
+import { Metadata } from "next";
 
+export const metadata: Metadata = {
+  title: "Pyramiden – zuzule",
+};
 export default function Pyramiden() {
     return (
         <Fragment>
@@ -45,7 +49,7 @@ export default function Pyramiden() {
                     />
                 </Flex>
             </SuspenseCheckableHeading>
-            <CheckableHeading title="Definition">
+            <CheckableHeading title="Definition" titleOrder={2}>
                 Eine Pyramide hat eine eckige Grundfläche, z.B. ein Dreieck oder
                 ein Quadrat. Allgemein nennt man eckige Flächen auch{" "}
                 <b>n-Ecke</b>. Den Mittelpunkt dieser Fläche ziehen wir nach
@@ -121,7 +125,7 @@ export default function Pyramiden() {
                             Höhe 3. Wenn du die <Mark c={"desblue"}>Höhe</Mark>{" "}
                             in einer der Wände einzeichnest siehst du, dass sie
                             zusammen mit der{" "}
-                            <Mark c={"green"}>Pyramidenhöhe</Mark> und der{" "}
+                            <Mark c={"teal"}>Pyramidenhöhe</Mark> und der{" "}
                             <Mark c={"desred"}>halben Seitenlänge</Mark> ein
                             rechtwinkliges Dreieck bildet. Wir können also den{" "}
                             <b>Satz des Pythagoras</b> verwenden, um die Länge

@@ -32,6 +32,7 @@ export default function BetterImage({
         return (
                 <Image
                     //@ts-ignore
+                    h = {h}
                     ref={ref}
                     fit={fit}
                     src={src}

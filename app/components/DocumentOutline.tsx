@@ -141,10 +141,11 @@ export function DocumentOutline() {
                         <Group
                             key={heading.id}
                             gap={6}
+                            align="flex-start"
                             wrap="nowrap"
+                            pl={(heading.titleOrder - 1) * 12}
                             style={{
                                 cursor: "pointer",
-                                paddingLeft: `${(heading.titleOrder - 1) * 12}px`,
                             }}
                             className="outline-item"
                         >
@@ -154,35 +155,32 @@ export function DocumentOutline() {
                                     handleCheckboxToggle(heading.id)
                                 }
                                 size="xs"
+                                mt={11}
                                 color="red"
                                 variant="outline"
                                 onClick={(e) => e.stopPropagation()}
-                                style={{ minWidth: 16, marginTop: 2 }}
+                                miw={16}
                                 icon={CheckboxIcon}
                             />
                             <Text
                                 size="xs"
+                                miw={0}
+                                flex={1}
+                                td={isChecked ? "line-through" : "none"}
+                                c={isChecked ? "var(--mantine-color-gray-6)" : "var(--mantine-primary-color-6)"}
                                 style={{
                                     wordBreak: "break-word",
                                     overflowWrap: "break-word",
-                                    color: isChecked
-                                        ? "var(--mantine-color-gray-6)"
-                                        : "var(--mantine-primary-color-6)",
-                                    textDecoration: isChecked
-                                        ? "line-through"
-                                        : "none",
                                     transition: "all 0.2s ease",
-                                    flex: 1,
-                                    minWidth: 0,
                                 }}
                                 className="outline-link"
-                                onMouseEnter={(e) => {
-                                    (
-                                        e.currentTarget as HTMLElement
-                                    ).style.color = isChecked
-                                        ? "var(--mantine-color-gray-7)"
-                                        : "var(--mantine-primary-color-8)";
-                                }}
+                                // onMouseEnter={(e) => {
+                                //     (
+                                //         e.currentTarget as HTMLElement
+                                //     ).style.color = isChecked
+                                //         ? "var(--mantine-color-gray-7)"
+                                //         : "var(--mantine-primary-color-8)";
+                                // }}
                                 onMouseLeave={(e) => {
                                     (
                                         e.currentTarget as HTMLElement

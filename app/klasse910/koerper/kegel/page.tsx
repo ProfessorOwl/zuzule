@@ -9,7 +9,11 @@ import KegelOberfläche from "/videos/KegelOberfläche.mov";
 import thinsp from "@/components/thinsp";
 import Image from "@/components/Image";
 import { Fragment } from "react/jsx-runtime";
+import { Metadata } from "next";
 
+export const metadata: Metadata = {
+  title: "Kegel – zuzule",
+};
 
 
 export default function Kegel() {
@@ -45,7 +49,7 @@ export default function Kegel() {
                 können wir das Volumen oder den Oberflächeninhalt von ihnen
                 berechnen?
             </CheckableHeading>
-            <CheckableHeading title="Definition">
+            <CheckableHeading title="Definition" titleOrder={2}>
                 Ein Kegel hat einen Kreis als Grundfläche. Ziehen wir seinen
                 Mittelpunkt senkrecht in die Höhe, so bekommen wir die
                 Kegelspitze. Die verbinden wir nun mit jedem Punkt aus dem

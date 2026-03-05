@@ -20,8 +20,11 @@ import GeoGebraAppletSlider from "@/components/GeoGebraAppletSlider";
 import thinsp from "@/components/thinsp";
 import Image from "@/components/Image";
 import { Fragment } from "react/jsx-runtime";
+import type { Metadata } from "next";
 
-
+export const metadata: Metadata = {
+  title: "Zylinder – zuzule",
+};
 
 export default function Zylinder() {
     return (
@@ -48,7 +51,7 @@ export default function Zylinder() {
                 </Flex>
             </CheckableHeading>
 
-            <CheckableHeading title="Definition eines Zylinders">
+            <CheckableHeading title="Definition" titleOrder={2}>
                 Die Grundfläche eines Zylinders ist immer ein <b>Kreis</b>. Wenn
                 wir diesen nehmen und in den Raum hineinziehen, so bekommen wir
                 einen Körper, den wir <b>Zylinder</b> nennen.
@@ -56,6 +59,7 @@ export default function Zylinder() {
             <CheckableBlockquote
                 title="Aufgabe: Zylinder in der Umgebung"
                 icon="frage"
+                titleOrder={3}
             >
                 Gehe raus und suche nach beliebigen Sachen, die für dich nach
                 einem Zylinder aussehen. Fallen dir plötzlich vielleicht Dinge
@@ -121,12 +125,7 @@ export default function Zylinder() {
                         <InlineMath math="r = 3\,\text{cm} \quad h = 1{,}5\,\text{cm}"/>
                     </ListItem>
                 </List>
-                <CheckableHeading
-                    title="Lösung"
-                    id="Lösung-Schrägbilder"
-                    titleOrder={2}
-                >
-                    <Lösung>
+                    <Lösung title="Lösung" id="Lösung-Schrägbilder" titleOrder={3}>
                         <Image
                             h={{ base: "auto", md: 500 }}
                             src="/Zylinder/ZylinderLösung@2x.png"
@@ -135,7 +134,6 @@ export default function Zylinder() {
                             alt="Zylinder aus den Teilaufgaben 1 bis 6."
                         />
                     </Lösung>
-                </CheckableHeading>
             </CheckableBlockquote>
             <CheckableHeading title="Der Mantel eines Zylinders">
                 Eine praktische Eigenschaft von Zylindern ist, dass man sie{" "}
@@ -200,6 +198,7 @@ export default function Zylinder() {
                     <CheckableBlockquote
                         title="Exkurs: Die Kreiszahl π"
                         icon="exkurs"
+                        titleOrder={3}
                     >
                         Die Zahl{" "}
                         <InlineMath math="\pi \approx 3,1415 \dots"/> ist
@@ -266,12 +265,11 @@ export default function Zylinder() {
                             <InlineMath math="r = 19\,\text{mm} \quad h = 2{,}6\,\text{cm}"/>
                         </ListItem>
                     </List>
-                    <CheckableHeading
-                        title="Lösung"
+
+                        <Lösung title="Lösung"
                         id="Lösung-Mantelfläche"
-                        titleOrder={2}
+                        titleOrder={3}
                     >
-                        <Lösung>
                             <List type="ordered">
                                 <ListItem>
                                     <InlineMath math="U = 4\pi\,\text{cm}\approx 12{,}57\,\text{cm}\quad A = 4\pi\,\text{cm}^2 \approx 12{,}57\,\text{cm}^2"/>
@@ -293,7 +291,6 @@ export default function Zylinder() {
                                 </ListItem>
                             </List>
                         </Lösung>
-                    </CheckableHeading>
                 </CheckableBlockquote>
             </CheckableHeading>
             <CheckableHeading title="Die Gesamtoberfläche eines Zylinders">
@@ -334,12 +331,11 @@ export default function Zylinder() {
                             <InlineMath math="r = 1{,}95\,\text{m} \quad h = 480\,\text{cm}"/>
                         </ListItem>
                     </List>
-                    <CheckableHeading
-                        title="Lösung" //
+
+                        <Lösung                        title="Lösung" //
                         id="Lösung-Oberfläche"
-                        titleOrder={2}
+                        titleOrder={3}
                     >
-                        <Lösung>
                             <List type="ordered" visibleFrom="md">
                                 <ListItem>
                                     <BlockMath math="&&M &= \tfrac{36}{5}\pi\,\text{cm}^2 \approx 22{,}62\,\text{cm}^2 \\ &&A_\text{Kappe} &= 9\pi\,\text{cm}^2 \approx 28{,}27\,\text{cm}^2 \\ &&O &= \tfrac{126}{5}\pi\,\text{cm}^2 \approx 79{,}17\,\text{cm}^2" />
@@ -381,7 +377,6 @@ export default function Zylinder() {
                                 </ListItem>
                             </List>
                         </Lösung>
-                    </CheckableHeading>
                 </CheckableBlockquote>
             </CheckableHeading>
             <CheckableHeading title="Volumenberechnung">
@@ -397,12 +392,8 @@ export default function Zylinder() {
                     zylinderförmigen Verpackungen sind. Wenn so viele
                     Verpackungen zylinderförmig sind, warum verpacken wir dann
                     nicht alles in Zylindern?
-                    <CheckableHeading
-                        title="Lösung"
-                        titleOrder={2}
-                        id="lösung-zylinder-als-packmaß"
-                    >
-                        <Lösung>
+
+                        <Lösung title="Lösung" titleOrder={3} id="lösung-zylinder-als-packmaß">
                             <b>Vorteile:</b>
                             <List>
                                 <ListItem>
@@ -450,7 +441,6 @@ export default function Zylinder() {
                                 </Button>
                             </Link>
                         </Lösung>
-                    </CheckableHeading>
                 </CheckableBlockquote>
                 <CheckableHeading
                     title="Volumen mathematisch hergeleitet"
@@ -635,12 +625,11 @@ export default function Zylinder() {
                                     überein?
                                 </ListItem>
                             </List>
-                            <CheckableHeading
-                                title="Lösung"
-                                titleOrder={2}
+                                
+                                <Lösung title="Lösung"
+                                titleOrder={3}
                                 id="lösung-mengenangabe"
                             >
-                                <Lösung>
                                     <b>Dose mit Kokosmilch</b>
                                     <BlockMath math="A &= \pi \cdot r^2 \\ &= \pi \cdot \left(\frac{7{,}3\,\text{cm}}{2}\right)^2 \\ &\approx 41{,}85\,\text{cm}^2 \\ V &= A \cdot h \\ &= 42{,}31\,\text{cm}^2 \cdot 9,5\,\text{cm} \\ &\approx 397{,}61\,\text{cm}^3" />
                                     <Space />
@@ -657,7 +646,6 @@ export default function Zylinder() {
                                     zurückzugeben, muss jedoch jeder selber
                                     entscheiden…
                                 </Lösung>
-                            </CheckableHeading>
                         </CheckableBlockquote>
                     </CheckableHeading>
                 </CheckableHeading>

@@ -40,7 +40,7 @@ div.next-video-container {
 
 .katex *,
 .katex .mathnormal {
-    font-family: var(--font-pennstander), KaTeX_Main;
+    font-family: var(--font-pennstander) !important;
 }
 
 /* Blockquotes */

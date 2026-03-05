@@ -17,8 +17,11 @@ import VieleckInDreiecke from "/videos/Vieleck in Dreiecke.mov";
 import thinsp from "@/components/thinsp";
 import Image from "@/components/Image";
 import { Fragment } from "react/jsx-runtime";
+import { Metadata } from "next";
 
-
+export const metadata: Metadata = {
+  title: "Prismen – zuzule",
+};
 
 export default function Prismen() {
     return (
@@ -44,12 +47,12 @@ export default function Prismen() {
                 alt="Ein Prisma, an dem weißes Licht in einem Regenbogen gebrochen wird."
             />
 
-            <SuspenseCheckableHeading title="Definition eines Prismas">
+            <CheckableHeading title="Definition" titleOrder={2}>
                 Wir nehmen eine Grundfläche mit beliebiger, aber eckiger Form:
                 Ein sogenanntes <b>n-Eck</b>. Nehmen wir seine Fläche und ziehen
                 sie in den Raum hinein, so entsteht ein Körper. Diesen nennen
                 wir <b>Prisma</b>.
-            </SuspenseCheckableHeading>
+            </CheckableHeading>
 
             <CheckableBlockquote
                 icon="frage"

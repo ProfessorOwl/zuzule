@@ -23,11 +23,13 @@ export const metadata = {
 
 const lexend = Lexend({
     subsets: ["latin"],
+    preload: true,
 });
 
 const pennstander = localFont({
     src: "./fonts/PennstanderMath-Light.otf",
     variable: "--font-pennstander",
+    preload: false
 });
 
 export default function RootLayout({ children }: { children: any }) {
