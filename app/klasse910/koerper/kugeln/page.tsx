@@ -30,7 +30,7 @@ export default function Kugeln() {
                         }}
                         width={3375}
                         height={5062}
-                        src={"/Kugeln/basketball.jpg"}
+                        src={"/Kugeln/basketball.webp"}
                         alt="Ein Basketball, der ins Netz fällt"
                     />
                     <Image
@@ -40,7 +40,7 @@ export default function Kugeln() {
                         }}
                         width={3375}
                         height={5062}
-                        src={"/Kugeln/LasVegasSphere.jpg"}
+                        src={"/Kugeln/LasVegasSphere.webp"}
                         alt="Ein Basketball, der ins Netz fällt"
                     />
                 </Flex>
@@ -56,7 +56,7 @@ export default function Kugeln() {
                     }}
                     width={1920}
                     height={1080}
-                    src={"/Kugeln/LichtKugel.jpg"}
+                    src={"/Kugeln/LichtKugel.webp"}
                     alt="Eine Kugel, die aus Licht gezeichnet ist"
                 />
                 Durch das Fixieren des Mittelpunktes auf dem Stativ und einem festen Radius haben wir damit eine Kugel mit einem Radius von 0,6
@@ -69,7 +69,7 @@ export default function Kugeln() {
                 Das Volumen einer Kugel ist schwieriger zu bestimmen als bei den anderen Körpern wie Pyramiden, Prismen oder Kegel. Wir müssen dafür etwas kreativ werden und müssen das <b>Prinzip des Cavalieri</b> benutzen!
                 <CheckableBlockquote title="Das Prinzip des Cavalieri" titleOrder={2} icon="exkurs">
                     Das Prinzip besagt, dass zwei Körper das gleiche Volumen besitzen, wenn sie in jeder Höhe die gleiche Schnittfläche besitzen. Vergleichen wir z.B. einen geraden mit einem Schiefen Quader, die beide die gleiche Grundflächen wie Höhen haben.
-                    <Image width={6000} height={4000} src={"/SchiefeKoerper/Schachteile.jpg"} alt="Ein gerader und ein schiefer Stapel aus quadratischen Teilen" />
+                    <Image width={6000} height={4000} src={"/SchiefeKoerper/Schachteile.webp"} alt="Ein gerader und ein schiefer Stapel aus quadratischen Teilen" />
                     Beide Stapel bestehen aus 10 gleichgroßen Teilstücken. In dem Beispiel sind sie relativ groß, kann man die Scheiben noch gut voneinander unterscheiden. Aber stell dir vor, wir machen sie dünner:
                     <Flex>
                         <ImageCaption
@@ -77,7 +77,7 @@ export default function Kugeln() {
                                 base: "auto",
                                 md: 250,
                             }}
-                            src="/SchiefeKoerper/PapierstapelGerade.jpg"
+                            src="/SchiefeKoerper/PapierstapelGerade.webp"
                             width={6000}
                             height={4000}
                             alt="Ein gerader Stapel Papier"
@@ -91,7 +91,7 @@ export default function Kugeln() {
                             }}
                             width={6000}
                             height={4000}
-                            src={"/SchiefeKoerper/PapierstapelSchief.jpg"}
+                            src={"/SchiefeKoerper/PapierstapelSchief.webp"}
                             alt="Ein schiefer Stapel Papier"
                         >
                             Der Papierstapel ist schief.
@@ -109,7 +109,7 @@ export default function Kugeln() {
                         }}
                         width={1550}
                         height={1000}
-                        src={"/Kugeln/KugelKegelHerleitung.png"}
+                        src={"/Kugeln/KugelKegelHerleitung.webp"}
                         alt="Links ein Zylinder, der einen Kegel enthält, rechts eine Halbkugel. Beide haben gleiche Höhe und Radius."
                     />
                     Um das Prinzip des Cavalieri anwenden zu können, müssen wir zeigen, dass auf gleiche Höhe gleich große Flächen existieren.
@@ -215,7 +215,7 @@ export default function Kugeln() {
                     }}
                     width={2100}
                     height={800}
-                    src={"/Kugeln/KugelUnterteilungDesktop.png"}
+                    src={"/Kugeln/KugelUnterteilungDesktop.webp"}
                     alt="Eine Kugel, deren Oberfläche in viele Rechtecke unterteilt ist. Ein Rechteck ist hervorgehoben, die Ecken sind mit Linien bis zum Mittelpunkt der Kugel verbunden, sodass eine quadratische Pyramide entsteht. "
                 />
                 <Image
@@ -226,7 +226,7 @@ export default function Kugeln() {
                     }}
                     width={2100}
                     height={800}
-                    src={"/Kugeln/KugelUnterteilungMobil.png"}
+                    src={"/Kugeln/KugelUnterteilungMobil.webp"}
                     alt="Eine Kugel, deren Oberfläche in viele Rechtecke unterteilt ist. Ein Rechteck ist hervorgehoben, die Ecken sind mit Linien bis zum Mittelpunkt der Kugel verbunden, sodass eine quadratische Pyramide entsteht"
                 />
                 Der Trick ist nun – da wir die Seiten frei wählen können – dass wir die Pyramiden unendlich klein wählen. Dadurch bekommen wir nämlich wieder eine Kugel! Außerdem können wir dann annehmen, dass unsere Pyramiden eine Höhe von{" "}
@@ -326,7 +326,7 @@ export default function Kugeln() {
                         }}
                         width={3804}
                         height={2160}
-                        src={"/Kugeln/Sonnensystem.jpg"}
+                        src={"/Kugeln/Sonnensystem.webp"}
                         alt="Ein Basketball, der ins Netz fällt"
                     />
                 Das sieht zwar schön aus, aber die Größenverhältnisse sind (hier) falsch. Deshalb macht es Sinn, sich mathematisch die Unterschiede bewusst zu machen. Vergleiche die Erde und den Mond mit dem größten Planeten, Jupiter.

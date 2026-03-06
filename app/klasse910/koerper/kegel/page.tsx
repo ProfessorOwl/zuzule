@@ -21,9 +21,9 @@ export default function Kegel() {
             <CheckableHeading title="Der Kegel">
                 Kegel begegnen uns besonders im Sommer in Form von Eiswaffeln, ansonsten sieht man sie oft am Straßenrand in Form von Verkehrskegeln stehen oder im Meer als gewundene Muscheln.
                 <Flex>
-                    <Image src="/Kegel/Eiswaffel.jpg" width={2700} height={3375} alt="Eine Eiswaffel" />
-                    <Image src="/Kegel/VerkehrskegelWellington.jpg" width={1250} height={1590} alt="Sir Wellington mit einem Verkehrskegel auf dem Kopf" />
-                    <Image src="/Kegel/Muschel.jpg" width={3321} height={4981} alt="Eine kegelförmige Muschel" />
+                    <Image src="/Kegel/Eiswaffel.webp" width={2700} height={3375} alt="Eine Eiswaffel" />
+                    <Image src="/Kegel/VerkehrskegelWellington.webp" width={1250} height={1590} alt="Sir Wellington mit einem Verkehrskegel auf dem Kopf" />
+                    <Image src="/Kegel/Muschel.webp" width={3321} height={4981} alt="Eine kegelförmige Muschel" />
                 </Flex>
                 Im Mathematikunterricht sind wir jedoch weniger am Vorkommen von Kegeln in unserer Umwelt interessiert, als vielmehr an der mathematischen Beschreibung: Was ist überhaupt ein Kegel und wie können wir das Volumen oder den Oberflächeninhalt von ihnen berechnen?
             </CheckableHeading>
@@ -48,13 +48,13 @@ export default function Kegel() {
                 </Mark>
                 unserer Kegelwand (aufpassen: <InlineMath math="\textcolor{#3312B8}{h_\text{Wand}} \neq \textcolor{#12B886}{h}" />
                 ). Hier nochmal ein Bild zur Illustration:
-                <Image src="/Kegel/Kegel.png" width={1200} height={600} alt="Ein Kegel mit seiner Mantelfläche" />
+                <Image src="/Kegel/Kegel.webp" width={1200} height={600} alt="Ein Kegel mit seiner Mantelfläche" />
                 <CheckableBlockquote icon="frage" title="Aufgabe" titleOrder={2}>
                     Mit der Info kannst du nun auch Netze zeichnen. Zeichne von den folgenden Zylindern die Netze auf:
-                    <Image src="/Kegel/KegelNetze.png" width={1400} height={600} alt="Ein Kegel mit seiner Mantelfläche" />
+                    <Image src="/Kegel/KegelNetze.webp" width={1400} height={600} alt="Ein Kegel mit seiner Mantelfläche" />
                     <Lösung title="Lösung" titleOrder={3} id="LösungNetze">
                         <Image
-                            src="/Kegel/KegelNetzeLösung.png"
+                            src="/Kegel/KegelNetzeLösung.webp"
                             h={{
                                 base: "auto",
                                 md: 600,
@@ -67,11 +67,11 @@ export default function Kegel() {
                 </CheckableBlockquote>
                 Um die Mantelfläche zu berechnen, benötigen wir neben der Wandhöhe noch die Länge des Kreisbogens (im Bild schwarz). Diese entspricht aber gerade dem Umfang unserer Grundfläche, da der Mantel mit ihr bündig schließen muss. Deshalb können wir uns jetzt einen Trick zu nutze machen:
                 <Flex>
-                    <Image src="/Kegel/Mantel1mod.png" width={6000} height={4000} alt="Der Mantel eines Kegels" />
-                    <Image src="/Kegel/Mantel2mod.png" width={1250} height={1590} alt="Der Mantel eines Kegels zweimal zerteilt und nebeneinander gelegt" />
-                    <Image src="/Kegel/Mantel4.jpg" width={3321} height={4981} alt="Der Mantel eines Kegels viermal zerteilt und nebeneinander gelegt" />
-                    <Image src="/Kegel/Mantel8.jpg" width={3321} height={4981} alt="Der Mantel eines Kegels achtmal zerteilt und nebeneinander gelegt" />
-                    <Image src="/Kegel/Mantel16mod.png" width={3321} height={4981} alt="Der Mantel eines Kegels sechzehnmal zerteilt und nebeneinander gelegt" />
+                    <Image src="/Kegel/Mantel1mod.webp" width={6000} height={4000} alt="Der Mantel eines Kegels" />
+                    <Image src="/Kegel/Mantel2mod.webp" width={1250} height={1590} alt="Der Mantel eines Kegels zweimal zerteilt und nebeneinander gelegt" />
+                    <Image src="/Kegel/Mantel4.webp" width={3321} height={4981} alt="Der Mantel eines Kegels viermal zerteilt und nebeneinander gelegt" />
+                    <Image src="/Kegel/Mantel8.webp" width={3321} height={4981} alt="Der Mantel eines Kegels achtmal zerteilt und nebeneinander gelegt" />
+                    <Image src="/Kegel/Mantel16mod.webp" width={3321} height={4981} alt="Der Mantel eines Kegels sechzehnmal zerteilt und nebeneinander gelegt" />
                 </Flex>
                 Durch mehrfaches halbieren und aneinanderlegen der Mantelfläche entsteht ein <b>Rechteck</b>! Im letzten Bild sieht es zwar aus, als wäre es ein Parallelogramm, aber stell dir vor, wir würden es nochmal, nochmal, nochmal… zerteilen. Irgendwann ist die Strecke{" "}
                 <Mark c="desblue">
@@ -87,7 +87,7 @@ export default function Kegel() {
                         <BlockMath math="U = 2\pi r_G" />
                         Der Mantel bildet ein Kreissegment (das „Tortenstück“), wenn man ihn abrollt. Dieses Segment hat einen bestimmten Anteil an der Gesamtfläche des Kreises. Schau dir das untere Bild dafür an!
                         <Image
-                            src="/Kegel/MantelflächeGanz.png"
+                            src="/Kegel/MantelflächeGanz.webp"
                             width={750}
                             height={750}
                             alt="Das Netz einer Mantelfläche als Anteil im ganzen Kreis"
@@ -117,7 +117,7 @@ export default function Kegel() {
                         </ListItem>
                     </List>
                     <Lösung titleOrder={3} title="Lösung" id="Lösung-Oberfläche">
-                        <Image src="/Kegel/KegelOberflächen.png" width={1400} height={1000} alt="Das Netz einer Mantelfläche als Anteil im ganzen Kreis" h={500} />
+                        <Image src="/Kegel/KegelOberflächen.webp" width={1400} height={1000} alt="Das Netz einer Mantelfläche als Anteil im ganzen Kreis" h={500} />
                         <List type="ordered">
                             <ListItem>
                                 Grundfläche:
@@ -167,7 +167,7 @@ export default function Kegel() {
                             base: "auto",
                             md: 425,
                         }}
-                        src="/Pyramiden/VolumenPyramide/PyramideinWürfelEinzeln.png"
+                        src="/Pyramiden/VolumenPyramide/PyramideinWürfelEinzeln.webp"
                         width={1050}
                         height={850}
                         alt="Eine Pyramide in einem Quader"
@@ -179,7 +179,7 @@ export default function Kegel() {
                             base: "auto",
                             md: 425,
                         }}
-                        src="/Pyramiden/VolumenPyramide/PyramideinWürfel.png"
+                        src="/Pyramiden/VolumenPyramide/PyramideinWürfel.webp"
                         width={1050}
                         height={850}
                         alt="Sechs Pyramiden in einem Quader"
@@ -190,7 +190,7 @@ export default function Kegel() {
                             base: "auto",
                             md: 825,
                         }}
-                        src="/Pyramiden/VolumenPyramide/PyramideinWürfelExplosion.png"
+                        src="/Pyramiden/VolumenPyramide/PyramideinWürfelExplosion.webp"
                         width={1650}
                         height={1700}
                         alt="Eine Pyramide in einem Quader"
@@ -222,7 +222,7 @@ export default function Kegel() {
                                     base: "auto",
                                     md: 325,
                                 }}
-                                src="/Kegel/PyramidezuKegel.png"
+                                src="/Kegel/PyramidezuKegel.webp"
                                 width={1650}
                                 height={650}
                                 alt="Es sind vier Pyramiden nebeneinander dargestellt. Zuerst mit einer dreieckigen Grundfläche, dann mit einer sechseckigen, zwölfeckigen und vierundzwanzigeckigen. Die letzte Pyramide sieht fast aus wie ein Kegel"
@@ -235,7 +235,7 @@ export default function Kegel() {
                         m, das Dach hat eine Höhe 5,5
                         {thinsp}
                         m.
-                        <Image src="/Kegel/DachKegel.jpg" width={6000} height={4000} alt="Ein Bild von einem kegelförmigen Dach." />
+                        <Image src="/Kegel/DachKegel.webp" width={6000} height={4000} alt="Ein Bild von einem kegelförmigen Dach." />
                         <List type="ordered">
                             <ListItem>Beurteile anhand der Grundfläche und des Volumens, ob der Dachboden als Zimmer genutzt werden kann. Wenn ja, welches Zimmer kannst du dir dort vorstellen? Vergiss dabei nicht, dass das Dach auch gedämmt werden muss!</ListItem>
                             <ListItem>

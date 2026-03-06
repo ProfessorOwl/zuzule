@@ -1,4 +1,5 @@
 from PIL import Image
+from pathlib import Path
 import os
 import shutil
 
@@ -19,36 +20,36 @@ def get_size_format(b, factor=1024, suffix="B"):
 
 def compress_img(
     image_name: str,
-    target: str,
     quality: int = 90,
     width: int | None = None,
-    height: int | None = None,
     to_webp: bool = True,
 ):
     img = Image.open(image_name)
     print("[*] Image shape:", img.size)
 
+    aspect_ratio = img.size[1] / img.size[0]
     image_size = os.path.getsize(image_name)
     print("[*] Size before compression:", get_size_format(image_size))
 
-    if width and height and width < img.size[0]:
+    if width and width < img.size[0]:
         # if width and height are set, resize with them
-        img = img.resize((width, height), Image.Resampling.LANCZOS)
+        img = img.resize((width, int(width * aspect_ratio)), Image.Resampling.LANCZOS)
         print("[+] New Image shape:", img.size)
 
     # split the filename and extension
     filename, ext = os.path.splitext(image_name)
-
+    filename = filename.replace("orig_", "")
     if to_webp:
-        new_filename = f"{filename}_compressed.webp"
+        new_filename = f"{filename}.webp"
     else:
-        new_filename = f"{filename}_compressed{ext}"
+        new_filename = f"{filename}{ext}"
+
     try:
-        img.save(os.path.join(target, new_filename), quality=quality, optimize=True)
+        img.save(new_filename, quality=quality, optimize=True)
     except OSError:
         # convert the image to RGB mode first
         img = img.convert("RGB")
-        img.save(os.path.join(target, new_filename), quality=quality, optimize=True)
+        img.save(new_filename, quality=quality, optimize=True)
     print("[+] New file saved:", new_filename)
 
     new_image_size = os.path.getsize(new_filename)
@@ -61,11 +62,8 @@ def compress_img(
     )
 
 
-# compress_img("public/Zylinder/doseKokosDurchmesser.jpg", quality=65, to_webp=True)
-
-
-def get_photos(
-    path: str, include: tuple[str, ...] = (".png", ".png", ".jpeg", ".webp")
+def get_uncompressed_photos(
+    path: str, include: tuple[str, ...] = (".png", ".jpg", ".JPG", ".jpeg", ".webp")
 ):
     """
     Gibt den relativen Pfad aller Fotos zurück, die im Ordner und allen Subordnern unter path enthalten sind und der Dateityp in include vorgegeben ist.
@@ -73,7 +71,9 @@ def get_photos(
     photos = [
         os.path.join(path, f)
         for f in os.listdir(path)
-        if os.path.isfile(os.path.join(path, f)) and f.endswith(include)
+        if os.path.isfile(os.path.join(path, f))
+        and f.endswith(include)
+        and f.startswith("orig_")
     ]
     subdirs = [
         os.path.join(path, f)
@@ -85,7 +85,9 @@ def get_photos(
             photos += [
                 os.path.join(dir, f)
                 for f in os.listdir(dir)
-                if os.path.isfile(os.path.join(dir, f)) and f.endswith(include)
+                if os.path.isfile(os.path.join(dir, f))
+                and f.endswith(include)
+                and f.startswith("orig_")
             ]
             subdirs += [
                 os.path.join(dir, f)
@@ -96,5 +98,5 @@ def get_photos(
     return photos
 
 
-for f in get_photos("public/Original"):
-    compress_img(f, "public/Komprimiert", quality=65, to_webp=True)
+for f in get_uncompressed_photos("public"):
+    compress_img(f, width=1400)

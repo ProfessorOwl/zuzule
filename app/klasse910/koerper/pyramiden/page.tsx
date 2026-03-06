@@ -20,8 +20,8 @@ export default function Pyramiden() {
             <SuspenseCheckableHeading title="Die Pyramide">
                 Pyramiden haben auf Menschen schon lange eine Anziehungskraft – so haben schon die Maya und Ägypter Pyramiden gebaut, die teilweise noch bis heute stehen. Deswegen ist es nicht verwunderlich, dass sich auch Mathematiker für Pyramiden interessieren. Wir schauen uns hier die Grundlagen an und gehen auf die Eigenschaften von Pyramiden ein: Wie „baut“ man Pyramiden aus Papier? Wie bestimmt man deren Oberflächeninhalt oder Volumen?
                 <Flex>
-                    <Image src="/Pyramiden/pyramideägypten.jpg" width={3888} height={2202} alt="Mehrere ägyptische Pyramiden" />
-                    <Image src="/Pyramiden/pyramidemaya.jpg" width={6000} height={3927} alt="Eine Pyramide der Maya" />
+                    <Image src="/Pyramiden/pyramideägypten.webp" width={3888} height={2202} alt="Mehrere ägyptische Pyramiden" />
+                    <Image src="/Pyramiden/pyramidemaya.webp" width={6000} height={3927} alt="Eine Pyramide der Maya" />
                 </Flex>
             </SuspenseCheckableHeading>
             <CheckableHeading title="Definition" titleOrder={2}>
@@ -31,7 +31,7 @@ export default function Pyramiden() {
                 Welche der folgenden Abbildungen sind Pyramiden und welche nicht? Wenn ja, gib die Maße und Form der Grundfläche sowie die Höhe in cm an (2 Kästchen = 1{thinsp}
                 cm).
                 <Image
-                    src="/Pyramiden/IstPyramide.png"
+                    src="/Pyramiden/IstPyramide.webp"
                     width={1000}
                     height={1000}
                     alt="Eine Pyramide der Maya"
@@ -68,7 +68,7 @@ export default function Pyramiden() {
                 <CheckableHeading titleOrder={2} title="Experimentell">
                     Für das Experiment falten wir eine quadratische Pyramide und füllen sie mit Zucker. Dadurch können wir wiegen, wie viel Zucker sie enthält. Ihre Höhe soll dabei ihrer Kantenlänge entsprechen. Dafür müssen wir zuerst das Netz aufzeichnen. Als Seitenlänge wählen wir z.B. 5{thinsp}
                     cm.
-                    <Image src="/Pyramiden/VolumenPyramide/PyramideNetz.jpg" width={1200} height={600} alt="Das Netz einer Pyramide auf einem Din A4 Blatt" />
+                    <Image src="/Pyramiden/VolumenPyramide/PyramideNetz.webp" width={1200} height={600} alt="Das Netz einer Pyramide auf einem Din A4 Blatt" />
                     Das Netz einer quadratischen Pyramide sieht aus wie ein Quadrat mit einem Dreieck auf jeder Seite. Die Höhe der Dreiecke ist nicht gleich der Höhe der Pyramide! Überlege dir, wie man sie berechnen kann!
                     <CheckableBlockquote title="Höhe der Dreieckswände" titleOrder={3} icon="aha">
                         <Lösung>
@@ -82,7 +82,7 @@ export default function Pyramiden() {
                             cm hat, muss die Höhe einer Dreieckswand ca. 3,35
                             {thinsp}
                             cm betragen.
-                            <Image src="/Pyramiden/VolumenPyramide/PyramideHöhe.png" width={6000} height={4000} alt="Das Netz einer Pyramide auf einem Din A4 Blatt" />
+                            <Image src="/Pyramiden/VolumenPyramide/PyramideHöhe.webp" width={6000} height={4000} alt="Das Netz einer Pyramide auf einem Din A4 Blatt" />
                         </Lösung>
                         <Space my="xs" />
                     </CheckableBlockquote>
@@ -92,7 +92,7 @@ export default function Pyramiden() {
                                 base: "auto",
                                 md: 250,
                             }}
-                            src="/Pyramiden/VolumenPyramide/PyramideNetzausgeschnitten.jpg"
+                            src="/Pyramiden/VolumenPyramide/PyramideNetzausgeschnitten.webp"
                             width={6000}
                             height={4000}
                             alt="Das ausgeschnittene Netz mit einem Loch in der Mitte"
@@ -104,7 +104,7 @@ export default function Pyramiden() {
                                 base: "auto",
                                 md: 250,
                             }}
-                            src="/Pyramiden/VolumenPyramide/PyramidePapier.jpg"
+                            src="/Pyramiden/VolumenPyramide/PyramidePapier.webp"
                             width={6000}
                             height={4000}
                             alt="Die zusammengeklebte Pyramide"
@@ -116,7 +116,7 @@ export default function Pyramiden() {
                                 base: "auto",
                                 md: 250,
                             }}
-                            src="/Pyramiden/VolumenPyramide/PyramideWaageZubehör.jpg"
+                            src="/Pyramiden/VolumenPyramide/PyramideWaageZubehör.webp"
                             width={6000}
                             height={4000}
                             alt="Die Pyramide kopfüber in einem Glas auf einer Waage. Daneben ein Papiertrichter und ein Glas mit Zucker"
@@ -129,7 +129,7 @@ export default function Pyramiden() {
                                 base: "auto",
                                 md: 250,
                             }}
-                            src="/Pyramiden/VolumenPyramide/PyramideWaageVoll.jpg"
+                            src="/Pyramiden/VolumenPyramide/PyramideWaageVoll.webp"
                             width={6000}
                             height={4000}
                             alt="Die nun gefüllte Pyramide im Glas auf der Waage. Die Waage zeigt 43 Gram an"
@@ -153,7 +153,7 @@ export default function Pyramiden() {
                             base: "auto",
                             md: 375,
                         }}
-                        src="/Pyramiden/VolumenPyramide/PyramideWürfel.png"
+                        src="/Pyramiden/VolumenPyramide/PyramideWürfel.webp"
                         width={750}
                         height={900}
                         alt="Eine Pyramide in einem Quader"
@@ -174,7 +174,7 @@ export default function Pyramiden() {
                             base: "auto",
                             md: 425,
                         }}
-                        src="/Pyramiden/VolumenPyramide/PyramideinWürfelEinzeln.png"
+                        src="/Pyramiden/VolumenPyramide/PyramideinWürfelEinzeln.webp"
                         width={1050}
                         height={850}
                         alt="Eine Pyramide in einem Quader"
@@ -186,7 +186,7 @@ export default function Pyramiden() {
                             base: "auto",
                             md: 425,
                         }}
-                        src="/Pyramiden/VolumenPyramide/PyramideinWürfel.png"
+                        src="/Pyramiden/VolumenPyramide/PyramideinWürfel.webp"
                         width={1050}
                         height={850}
                         alt="Sechs Pyramiden in einem Quader"
@@ -197,7 +197,7 @@ export default function Pyramiden() {
                             base: "auto",
                             md: 825,
                         }}
-                        src="/Pyramiden/VolumenPyramide/PyramideinWürfelExplosion.png"
+                        src="/Pyramiden/VolumenPyramide/PyramideinWürfelExplosion.webp"
                         width={1650}
                         height={1700}
                         alt="Eine Pyramide in einem Quader"
@@ -224,7 +224,7 @@ export default function Pyramiden() {
                             base: "auto",
                             md: 500,
                         }}
-                        src="/Pyramiden/Pyramidenrätsel.png"
+                        src="/Pyramiden/Pyramidenrätsel.webp"
                         width={1400}
                         height={1000}
                         alt="Mehrere Pyramiden als Aufgabenstellungen"
@@ -271,7 +271,7 @@ export default function Pyramiden() {
                         base: "auto",
                         md: 500,
                     }}
-                    src="/Pyramiden/PyramideOberfläche.png"
+                    src="/Pyramiden/PyramideOberfläche.webp"
                     width={1400}
                     height={1000}
                     alt="Eine dreieckige und eine viereckige Pyramide mit den dazugehörigen Netzen"
@@ -300,7 +300,7 @@ export default function Pyramiden() {
                         cm hat, muss die Höhe einer Dreieckswand ca. 3,35
                         {thinsp}
                         cm betragen.
-                        <Image src="/Pyramiden/VolumenPyramide/PyramideHöhe.png" width={6000} height={4000} alt="Das Netz einer Pyramide auf einem Din A4 Blatt" />
+                        <Image src="/Pyramiden/VolumenPyramide/PyramideHöhe.webp" width={6000} height={4000} alt="Das Netz einer Pyramide auf einem Din A4 Blatt" />
                     </Lösung>
                     <Space my="xs" />
                 </CheckableBlockquote>
@@ -328,14 +328,14 @@ export default function Pyramiden() {
                             md: 500,
                         }}
                         fit="contain"
-                        src="/Pyramiden/SchlossDächer.jpg"
+                        src="/Pyramiden/SchlossDächer.webp"
                         width={6484}
                         height={4323}
                         alt="Ein Schloss mit vielen pyramidenförmigen Dächern"
                     />
                     <Lösung title="Lösung" titleOrder={3} id="Lösung-Dachdecken">
                         Skizze:
-                        <ImageCaption fit="contain" src="/Pyramiden/DächerSkizze.png" width={1200} height={600} alt="Eine Skizze der beiden Dachformen">
+                        <ImageCaption fit="contain" src="/Pyramiden/DächerSkizze.webp" width={1200} height={600} alt="Eine Skizze der beiden Dachformen">
                             (Nicht maßstabsgetreu)
                         </ImageCaption>{" "}
                         <List>
@@ -353,7 +353,7 @@ export default function Pyramiden() {
                             </ListItem>
                             <ListItem>
                                 Auch hier interessiert uns die Grundfläche des Achtecks nicht. Um jedoch die Höhe der Manteldreiecke zu bestimmen, brauchen wir den Durchmesser des Achtecks. Schau dir das Bild unten zur Erklärung an.
-                                <Image fit="contain" src="/Pyramiden/AchteckBurg.png" width={900} height={600} alt="Ein Achteck, wo ein von 45 Grad eingezeichnet ist" />
+                                <Image fit="contain" src="/Pyramiden/AchteckBurg.webp" width={900} height={600} alt="Ein Achteck, wo ein von 45 Grad eingezeichnet ist" />
                                 Fasst man eine Seite des Achtecks als rechtwinkliges Dreieck auf, dann haben die anderen beiden Winkel im Dreieck eine Größe von 45°, da nur so ein regelmäßiges Achteck konstruiert werden kann. Das Dreieck ist also gleichschenklig! Das hilft uns, <InlineMath math="x" /> zu berechnen:
                                 <MBlockMath mobile="x^2 + x^2 &= (2\,\text{m})^2 \\ 2x^2 &= 4\,\text{m}^2 \\ &\Downarrow \scriptsize{:2} \\ x^2 &= 2\,\text{m}^2 \\ &\Downarrow \scriptsize{\sqrt{}} \\ x &= \sqrt{2}\,\text{m} \\" desktop="x^2 + x^2 &= (2\,\text{m})^2 \\ 2x^2 &= 4\,\text{m}^2&&\lvert :2 \\ x^2 &= 2\,\text{m}^2 &&\lvert \sqrt{} \\ x &= \sqrt{2}\,\text{m} \\" />
                                 Der Durchmesser des Achtecks ist demnach <InlineMath math="2 \cdot \sqrt{2}\,\text{m} + 2\,\text{m} \approx 4{,}83\,\text{m}" />

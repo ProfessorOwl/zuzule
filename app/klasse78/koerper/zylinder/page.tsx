@@ -24,8 +24,8 @@ export default function Zylinder() {
             <CheckableHeading title="Der Zylinder">
                 Zylinder sind beliebte Formen in unserem Alltag. Seien es Lampenschirme, die Stangen von Straßenlaternen oder Konservendosen – überall findet man diese Form. Deswegen ist es für uns interessant, diese Form mathematisch beschreiben zu können!
                 <Flex>
-                    <Image src="/Zylinder/dosen.jpg" width={6000} height={4000} alt="Verschiedene Dosen" />
-                    <Image src="/Zylinder/regler.jpg" width={6000} height={4000} alt="Ein Regler für die Lautstärke" />
+                    <Image src="/Zylinder/dosen.webp" width={6000} height={4000} alt="Verschiedene Dosen" />
+                    <Image src="/Zylinder/regler.webp" width={6000} height={4000} alt="Ein Regler für die Lautstärke" />
                 </Flex>
             </CheckableHeading>
 
@@ -37,7 +37,7 @@ export default function Zylinder() {
             </CheckableBlockquote>
             <CheckableHeading title="Schrägbilder">
                 Aus der Orientierungsstufe kennst du bereits das <b>Schrägbild</b> eines Quaders. Das sollte ungefähr so aussehen wie in dem Bild.
-                <Image src="/Prismen/QuaderSchrägbild@2x.png" width={1802} height={1200} alt="Schrägbild eines Quaders auf kariertem Papier." />
+                <Image src="/Prismen/QuaderSchrägbild@2x.webp" width={1802} height={1200} alt="Schrägbild eines Quaders auf kariertem Papier." />
                 Verdeckte Kanten werden also mit einer gestrichelten Linie angedeutet, während sichtbare Kanten durchgezogen werden.
                 <Divider />
                 Versuchen wir uns mal an einem Schrägbild von einem Zylinder.
@@ -46,7 +46,7 @@ export default function Zylinder() {
                     <ListItem>Dann ziehen wir die äußersten Kanten nach oben, bis wir die gewünschte Höhe erreichen.</ListItem>
                     <ListItem>Darauf setzen wir nun die Oberseite.</ListItem>
                 </List>
-                <Image src="/Zylinder/ZylinderSchrägbildEntstehung@2x.png" width={2402} height={1200} alt="Es wird gezeigt, wie das Schrägbild eines Zylinders Schritt für Schritt gezeichnet wird. Links wird mit einem Kreis angefangen. Auf dessen Außenseiten werden zwei senkrechte Striche gezeichnet, die alle die gleiche Höhe haben. Auf deren Enden wird dann ein identischer Kreis zu dem unten gezeichnet." />
+                <Image src="/Zylinder/ZylinderSchrägbildEntstehung@2x.webp" width={2402} height={1200} alt="Es wird gezeigt, wie das Schrägbild eines Zylinders Schritt für Schritt gezeichnet wird. Links wird mit einem Kreis angefangen. Auf dessen Außenseiten werden zwei senkrechte Striche gezeichnet, die alle die gleiche Höhe haben. Auf deren Enden wird dann ein identischer Kreis zu dem unten gezeichnet." />
             </CheckableHeading>
             <CheckableBlockquote icon="frage" title="Aufgabe: Schrägbilder">
                 Zeichne die Zylinder mit Radius <InlineMath math="r" /> und Höhe <InlineMath math="h" /> als Schrägbilder.
@@ -76,7 +76,7 @@ export default function Zylinder() {
                             base: "auto",
                             md: 500,
                         }}
-                        src="/Zylinder/ZylinderLösung@2x.png"
+                        src="/Zylinder/ZylinderLösung@2x.webp"
                         width={3600}
                         height={2000}
                         alt="Zylinder aus den Teilaufgaben 1 bis 6."
@@ -85,7 +85,7 @@ export default function Zylinder() {
             </CheckableBlockquote>
             <CheckableHeading title="Der Mantel eines Zylinders">
                 Eine praktische Eigenschaft von Zylindern ist, dass man sie <b>rollen</b> kann. Denk mal an einen Autoreifen – er ist praktisch nichts anderes als ein rollender Zylinder – insbesondere wenn wir uns die Autoreifen von Formel-1 Autos anschauen!
-                <ImageCaption src="/Zylinder/formel1reifen.jpg" width={846} rotate="right" height={537} alt="Ein Formel-1 Auto von hinten. Links sind zwei Reifen sichtbar.">
+                <ImageCaption src="/Zylinder/formel1reifen.webp" width={846} rotate="right" height={537} alt="Ein Formel-1 Auto von hinten. Links sind zwei Reifen sichtbar.">
                     rare-gallery.com
                 </ImageCaption>
                 Die Fläche, über die man einen Zylinder rollen kann, nennt man auch <b>Mantelfläche</b>. Die Ober- und Unterseite des Zylinders wird <b>Grundfläche</b> genannt. Das kannst du dir merken, wenn du an einen Regenmantel denkst: Den trägst du schließlich um dich herum und nicht unter dir 🧥.
@@ -105,12 +105,12 @@ export default function Zylinder() {
                         . Auch in unserem Beispiel:
                         <BlockMath math="\pi &= \frac{U}{d} \\ &= \frac{9{,}4\,\text{cm}}{3\,\text{cm}} \\ &\approx 3,13" />
                     </CheckableBlockquote>
-                    <Image src="/Zylinder/durchmesserFluid.jpg" width={6000} height={4000} alt="Ein Geodreieck wird an eine Flasche mit Korrekturfluid gehalten. Der Durchmesser beträgt 3 cm" />
+                    <Image src="/Zylinder/durchmesserFluid.webp" width={6000} height={4000} alt="Ein Geodreieck wird an eine Flasche mit Korrekturfluid gehalten. Der Durchmesser beträgt 3 cm" />
                     Der Radius beträgt in unserem Fall <InlineMath math="1{,}5\,\text{cm}" />
                     . Nun verwenden wir die Formel für den Umfang eines Kreises, um den Umfang unseres Gefäßes zu bekommen:
                     <BlockMath math="U &= 2 \cdot \pi \cdot r \\ &= 2 \cdot \pi \cdot 1{,}5\,\text{cm} \\ &\approx 9{,}4\,\text{cm}" />
                     Das ist genau die Länge, die wir auch durch das Abrollen der Dose bekommen. Nun benötigen wir noch die Höhe unseres Zylinders.
-                    <Image src="/Zylinder/höheFluid.jpg" width={6000} height={4000} alt="Ein Geodreieck wird an eine Flasche mit Korrekturfluid gehalten. Die Höhe beträgt 5 cm" />
+                    <Image src="/Zylinder/höheFluid.webp" width={6000} height={4000} alt="Ein Geodreieck wird an eine Flasche mit Korrekturfluid gehalten. Die Höhe beträgt 5 cm" />
                     Die Höhe beträgt in unserem Fall also <InlineMath math="5\,\text{cm}" />. Um die Mantelfläche zu erstellen, „ziehen" wir diese nach oben. Mathematisch machen wir das, indem wir den Umfang <InlineMath math="U" /> mit der Höhe <InlineMath math="h" /> multiplizieren:
                     <BlockMath math="A &= U \cdot h \\ &= 9{,}4\,\text{cm} \cdot 5\,\text{cm} \\ &= 47\,\text{cm}^2" />
                     Das passt gut zu der Fläche, die man durch das Abrollen der Flasche bekommt. Dadurch erhalten wir nämlich ca. <InlineMath math="44\,\text{cm}^2" />.
@@ -268,7 +268,7 @@ export default function Zylinder() {
                 <CheckableHeading title="Volumen mathematisch hergeleitet" titleOrder={2}>
                     <CheckableHeading title="Volumen eines Quaders" titleOrder={3}>
                         Ein Zylinder ist nicht so unterschiedlich von einem Quader: Zylinder haben einen Kreis als Grundfläche, Quader ein Rechteck. Ansonsten sind beides Körper, bei denen man die Grundfläche „in die Höhe gezogen“ hat. Erinnern wir uns also erstmal an das Volumen eines Quaders zurück! Das können wir mit <InlineMath math="A = a \cdot b" /> berechnen, wobei <InlineMath math="a" /> und <InlineMath math="b" /> die beiden Grundseiten bezeichnen.
-                        <Image src="/Prismen/RechteckFläche@2x.png" width={1802} height={1200} alt="Ein Rechteck mit der Fläche A und den Seiten a und b." />
+                        <Image src="/Prismen/RechteckFläche@2x.webp" width={1802} height={1200} alt="Ein Rechteck mit der Fläche A und den Seiten a und b." />
                         Das Volumen eines Quaders ergibt sich also durch das <b>„hochziehen“</b> dieser Fläche in den Raum. Schau es dir mal an diesem Beispiel hier an, wo ein Quader eine Grundfläche von 3&nbsp;mal 2{thinsp}
                         cm und eine Höhe von 2{thinsp}
                         cm hat.
@@ -326,8 +326,8 @@ export default function Zylinder() {
                         {thinsp}
                         cm.
                         <Flex>
-                            <Image src="/Zylinder/doseKokosDurchmesser.jpg" width={6000} height={4000} alt="Ein Lineal liegt unter einer Konservendose. Ablesbar ist ein Durchmesser von 7,5 cm." />
-                            <Image src="/Zylinder/doseKokosHöhe.JPG" width={6000} height={4000} alt="Ein Lineal wird neben eine Konservendose gehalten. Ablesbar ist eine Höhe von 11 cm." />
+                            <Image src="/Zylinder/doseKokosDurchmesser.webp" width={6000} height={4000} alt="Ein Lineal liegt unter einer Konservendose. Ablesbar ist ein Durchmesser von 7,5 cm." />
+                            <Image src="/Zylinder/doseKokosHöhe.webp" width={6000} height={4000} alt="Ein Lineal wird neben eine Konservendose gehalten. Ablesbar ist eine Höhe von 11 cm." />
                         </Flex>
                         Wir berechnen zuerst den Flächeninhalt mit der Flächenformel für einen Kreis:
                         <BlockMath math="A &= \pi \cdot r^2 \\ &= \pi \cdot \left(\frac{7{,}5\,\text{cm}}{2}\right)^2\\ &\approx 44{,}18\,\text{cm}^2" />
@@ -352,7 +352,7 @@ export default function Zylinder() {
                                                 base: "auto",
                                                 md: 275,
                                             }}
-                                            src="/Zylinder/innenKokos.jpg"
+                                            src="/Zylinder/innenKokos.webp"
                                             width={6000}
                                             height={4000}
                                             alt="Ein Lineal liegt über der Öffnung einer Konservendose mit Kokosmilch. Ablesbar ist ein Durchmesser von 7,3 cm."
@@ -362,7 +362,7 @@ export default function Zylinder() {
                                                 base: "auto",
                                                 md: 275,
                                             }}
-                                            src="/Zylinder/füllstandKokos.jpg"
+                                            src="/Zylinder/füllstandKokos.webp"
                                             width={6000}
                                             height={4000}
                                             alt="Ein Stäbchen, das in die Kokosmilch getunkt wurde, liegt neben einem Lineal. Es wurde ca. 9,5 cm tief hineingetaucht."
@@ -385,7 +385,7 @@ export default function Zylinder() {
                                                 base: "auto",
                                                 md: 275,
                                             }}
-                                            src="/Zylinder/innenTomate.jpg"
+                                            src="/Zylinder/innenTomate.webp"
                                             width={6000}
                                             height={4000}
                                             alt="Ein Lineal liegt über der Öffnung einer Konservendose mit gehackten Tomaten. Ablesbar ist ein Durchmesser von 7,3 cm."
@@ -395,7 +395,7 @@ export default function Zylinder() {
                                                 base: "auto",
                                                 md: 275,
                                             }}
-                                            src="/Zylinder/füllstandTomate.jpg"
+                                            src="/Zylinder/füllstandTomate.webp"
                                             width={6000}
                                             height={4000}
                                             alt="Ein Stäbchen, das in die gehackten Tomaten getunkt wurde, liegt neben einem Lineal. Es wurde ca. 9,7 cm tief hineingetaucht."
