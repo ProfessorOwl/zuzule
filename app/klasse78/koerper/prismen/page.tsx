@@ -33,7 +33,7 @@ export default function Prismen() {
                 }}
                 src="/Prismen/prisma1.jpg"
                 width={3499}
-                height={5249}
+                height={3377}
                 alt="Ein Prisma, an dem weißes Licht in einem Regenbogen gebrochen wird."
             />
 
@@ -67,11 +67,9 @@ export default function Prismen() {
             <CheckableBlockquote icon="frage" title="Aufgabe: Schrägbilder">
                 Vervollständige die folgenden Schrägbilder in deinem Heft:
                 <Image src="/Prismen/SchrägbilderVervollständigenAufgabe@2x.png" width={3600} height={1200} alt="4 Schrägbilder, welche vervollständigt werden sollen." />
-                <CheckableHeading title="Lösung" id="Lösung-Schrägbilder" titleOrder={2}>
-                    <Lösung>
+                    <Lösung title="Lösung" id="Lösung-Schrägbilder" titleOrder={3}>
                         <Image src="/Prismen/SchrägbilderVervollständigenLösung@2x.png" width={3600} height={1200} alt="Die Lösung, wie die Schrägbilder vervollständigt werden können." />
                     </Lösung>
-                </CheckableHeading>
             </CheckableBlockquote>
 
             <CheckableHeading title="Netze von Prismen">
@@ -86,8 +84,8 @@ export default function Prismen() {
                     <Image src="/Prismen/PrismaPapier.jpg" width={6000} height={4000} alt="Das Netz des Prismas gefaltet und verklebt, sodass ein 3D-Prisma ergibt." />
                 </SimpleGrid>
             </CheckableHeading>
-            <CheckableHeading title="Oberflächeninhalt von Prismen">
-                Über das Netz eines Körpers lässt sich gut der Oberflächeninhalt berechnen, da hier nur noch einfache Formen vorkommen. Man Unterscheidet hier zwischen <b>Mantelfläche</b> und <b>Grundfläche</b>
+            <CheckableHeading title="Oberflächeninhalt">
+                Über das Netz eines Körpers lässt sich gut der Oberflächeninhalt berechnen, da hier nur noch einfache Formen vorkommen. Man unterscheidet hier zwischen <b>Mantelfläche</b> und <b>Grundfläche</b>
                 . Die Grundfläche bezeichnet die Grundform des Prismas, also ob es z.B. drei- oder viereckig ist. Die Mantelfläche ist dann die Fläche, die durch die Höhe des Prismas dazukommt.
                 <Image
                     h={{
@@ -106,8 +104,7 @@ export default function Prismen() {
             <CheckableBlockquote title="Aufgabe: Oberflächeninhalt" icon="frage">
                 Berechne den Oberflächeninhalt der Prismen:
                 <Image src="/Prismen/PrismaOberflächeninhalt@2x.png" width={3602} height={1200} alt="Ein Prisma mit seinem Netz. Die Mantelfläche ergibt nun ein großes Rechteck." />
-                <CheckableHeading title="Lösung" id="Lösung-Oberflächeninhalt" titleOrder={2}>
-                    <Lösung>
+                    <Lösung title="Lösung" id="Lösung-Oberflächeninhalt" titleOrder={3}>
                         <List type="ordered" withPadding>
                             <ListItem>
                                 {" "}
@@ -124,7 +121,6 @@ export default function Prismen() {
                             </ListItem>
                         </List>
                     </Lösung>
-                </CheckableHeading>
             </CheckableBlockquote>
             <CheckableBlockquote title="Aha! 2" icon="aha">
                 Zerlegt man das Prisma, das wir oben sehen, in ein etwas anderes Netz, können wir etwas praktisches beobachten: Die Mantelfläche eines Prismas bildet ein <b>Rechteck</b>! Die Seitenlängen dieses Rechtecks können wir uns leicht herleiten, wenn wir die Grundfläche kennen. Die einen Seiten entsprechen der <b>Höhe</b> des Prismas, die anderen dem <b>Umfang</b> der Grundfläche. Das macht die Berechnung des Oberflächeninhalts deutlich einfacher!

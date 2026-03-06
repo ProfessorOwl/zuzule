@@ -27,7 +27,7 @@ export default function Pyramiden() {
             <CheckableHeading title="Definition" titleOrder={2}>
                 Eine Pyramide hat eine eckige Grundfläche, z.B. ein Dreieck oder ein Quadrat. Allgemein nennt man eckige Flächen auch <b>n-Ecke</b>. Den Mittelpunkt dieser Fläche ziehen wir nach oben, sodass wir die Pyramidenspitze bekommen. Verbinden wir nun alle Eckpunkte unserer Grundfläche mit der Spitze, so erhalten wir eine <b>gerade Pyramide</b>!
             </CheckableHeading>
-            <CheckableBlockquote icon="frage" title="Alles Pyramiden?">
+            <CheckableBlockquote icon="frage" title="Aufgabe: Alles Pyramiden?">
                 Welche der folgenden Abbildungen sind Pyramiden und welche nicht? Wenn ja, gib die Maße und Form der Grundfläche sowie die Höhe in cm an (2 Kästchen = 1{thinsp}
                 cm).
                 <Image
@@ -262,7 +262,7 @@ export default function Pyramiden() {
                     </Lösung>
                 </CheckableBlockquote>
             </CheckableHeading>
-            <CheckableHeading title="Oberfläche">
+            <CheckableHeading title="Oberflächeninhalt">
                 Neben dem Volumen ist auch die Oberfläche von Pyramiden wichtig, z.B. um die Menge an Ziegeln für ein Dach zu berechnen. Hier gibt es jedoch keine allgemeine Formel, denn die Oberfläche ist abhängig von der Anzahl der Seiten.
                 <Divider />
                 Vergleichen wir mal die Netze von einer dreieckigen und einer quadratischen Pyramide:

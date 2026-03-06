@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import { Blockquote, Checkbox, CheckboxProps, Collapse, getPrimaryShade, Stack, Text, Title } from "@mantine/core";
 import { IconDotsDiagonal2 } from "@tabler/icons-react";
-import { FrageIcon, AhaIcon, ExkursIcon } from "./icons";
+import { FrageIcon, AhaIcon, ExkursIcon } from "./CustomIcons";
 
 interface CheckableBlockquoteProps {
     children: React.ReactNode;
