@@ -1,7 +1,7 @@
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Über das Projekt – zuzule",
+    title: "Über das Projekt – zuzule",
 };
 
 export default function Ueber() {

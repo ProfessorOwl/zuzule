@@ -1,5 +1,5 @@
 import { Container } from "@mantine/core";
-import {BlockMathScroll as BlockMath} from "./CustomMath";
+import { BlockMathScroll as BlockMath } from "./CustomMath";
 import { Fragment } from "react/jsx-runtime";
 interface MBlockMathProps {
     mobile: string;
@@ -10,10 +10,10 @@ export default function MBlockMath({ mobile, desktop }: MBlockMathProps) {
     return (
         <Fragment>
             <Container visibleFrom="md" p={0}>
-                <BlockMath math={desktop}/>
+                <BlockMath math={desktop} />
             </Container>
             <Container hiddenFrom="md" p={0}>
-                <BlockMath math={mobile}/>
+                <BlockMath math={mobile} />
             </Container>
         </Fragment>
     );

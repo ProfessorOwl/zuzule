@@ -2,16 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
-import {
-    Blockquote,
-    Checkbox,
-    CheckboxProps,
-    Collapse,
-    getPrimaryShade,
-    Stack,
-    Text,
-    Title,
-} from "@mantine/core";
+import { Blockquote, Checkbox, CheckboxProps, Collapse, getPrimaryShade, Stack, Text, Title } from "@mantine/core";
 import { IconDotsDiagonal2 } from "@tabler/icons-react";
 import { FrageIcon, AhaIcon, ExkursIcon } from "./icons";
 
@@ -31,28 +22,13 @@ const IconMap = {
 
 type IconMapKey = keyof typeof IconMap;
 
-export function CheckableBlockquote({
-    children,
-    title,
-    id,
-    icon,
-    titleOrder = 2,
-}: CheckableBlockquoteProps) {
+export function CheckableBlockquote({ children, title, id, icon, titleOrder = 2 }: CheckableBlockquoteProps) {
     const router = useRouter();
     const searchParams = useSearchParams();
-    const CheckboxIcon: CheckboxProps["icon"] = ({
-        indeterminate,
-        ...others
-    }) =>
-        indeterminate ? (
-            <IconDotsDiagonal2 {...others} />
-        ) : (
-            <IconDotsDiagonal2 {...others} />
-        );
+    const CheckboxIcon: CheckboxProps["icon"] = ({ indeterminate, ...others }) => (indeterminate ? <IconDotsDiagonal2 {...others} /> : <IconDotsDiagonal2 {...others} />);
 
     // Die Überschrift wird zum Link hinzugefügt
-    const uniqueId =
-        id || `${title?.toString().replace(/\s+/g, "-").toLowerCase()}`;
+    const uniqueId = id || `${title?.toString().replace(/\s+/g, "-").toLowerCase()}`;
 
     const [checked, setChecked] = useState(false);
     // Load checkbox state from URL query parameters on mount
@@ -75,29 +51,31 @@ export function CheckableBlockquote({
 
         // Update the URL without causing a page reload
         const newUrl = `${window.location.pathname}?${newSearchParams.toString()}`;
-        router.replace(newUrl, { scroll: false });
+        router.replace(newUrl, {
+            scroll: false,
+        });
     };
 
     const Icon = icon ? IconMap[icon] : null;
 
     return (
         <Blockquote
-            px={{ base: "xs", md: "lg" }}
+            px={{
+                base: "xs",
+                md: "lg",
+            }}
             py={"md"}
             my={"md"}
             data-checkable-id={uniqueId}
         >
-            <div style={{ display: "flex", alignItems: "center", gap: "8px" }}>
-                <Checkbox
-                    checked={checked}
-                    onChange={(event) =>
-                        handleChange(event.currentTarget.checked)
-                    }
-                    size="md"
-                    color="red"
-                    variant="outline"
-                    icon={CheckboxIcon}
-                />
+            <div
+                style={{
+                    display: "flex",
+                    alignItems: "center",
+                    gap: "8px",
+                }}
+            >
+                <Checkbox checked={checked} onChange={(event) => handleChange(event.currentTarget.checked)} size="md" color="red" variant="outline" icon={CheckboxIcon} />
                 {Icon ? <Icon size={40} /> : null}
                 {title && (
                     <Title
@@ -112,12 +90,7 @@ export function CheckableBlockquote({
                 )}
             </div>
             <Collapse in={!checked}>
-                <Text
-                    component="div"
-                    lineClamp={checked ? 1 : 0}
-                    opacity={checked ? 0.3 : 1}
-                    mt={5}
-                >
+                <Text component="div" lineClamp={checked ? 1 : 0} opacity={checked ? 0.3 : 1} mt={5}>
                     {children}
                 </Text>
             </Collapse>

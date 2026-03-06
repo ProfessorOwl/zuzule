@@ -1,15 +1,4 @@
-import {
-    IconCircle,
-    IconCircleSquare,
-    IconCylinder,
-    IconDiabolo,
-    IconPrism,
-    IconRectangle,
-    IconTriangle,
-    IconCone,
-    IconPyramid,
-    IconSphere,
-} from "@tabler/icons-react";
+import { IconCircle, IconCircleSquare, IconCylinder, IconDiabolo, IconPrism, IconRectangle, IconTriangle, IconCone, IconPyramid, IconSphere } from "@tabler/icons-react";
 import classes from "./sideview.module.css";
 import Link from "next/link";
 import { Fragment } from "react/jsx-runtime";
@@ -102,16 +91,14 @@ export const renderNavItem = (item: NavItem, level = 0, pathname: string) => {
                     {item.icon && (
                         <item.icon
                             className={classes.linkIcon}
-                            style={{ stroke: "currentColor" }}
+                            style={{
+                                stroke: "currentColor",
+                            }}
                         />
                     )}
                     <span>{item.label}</span>
                 </div>
-                <div>
-                    {item.children.map((child) =>
-                        renderNavItem(child, level + 1, pathname),
-                    )}
-                </div>
+                <div>{item.children.map((child) => renderNavItem(child, level + 1, pathname))}</div>
             </Fragment>
         );
     } else if (item.link) {
@@ -128,7 +115,9 @@ export const renderNavItem = (item: NavItem, level = 0, pathname: string) => {
                 {item.icon && (
                     <item.icon
                         className={classes.linkIcon}
-                        style={{ stroke: "currentColor" }}
+                        style={{
+                            stroke: "currentColor",
+                        }}
                     />
                 )}
                 <span>{item.label}</span>

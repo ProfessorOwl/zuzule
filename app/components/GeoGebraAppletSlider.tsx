@@ -17,7 +17,12 @@ interface GeoGebraProps {
     appName?: string;
     params?: Record<string, any>;
     disableZoom?: boolean;
-    coord?: { xmin: number; ymin: number; xmax: number; ymax: number };
+    coord?: {
+        xmin: number;
+        ymin: number;
+        xmax: number;
+        ymax: number;
+    };
     coord3d?: {
         xmin: number;
         xmax: number;
@@ -33,29 +38,20 @@ interface GeoGebraProps {
     sliderMax?: number;
     sliderStep?: number;
     sliderInitialValue?: number;
-    sliderMarks?: Array<{ value: number; label: string }>;
+    sliderMarks?: Array<{
+        value: number;
+        label: string;
+    }>;
 }
 
-export default function GeoGebraAppletSlider({
-    materialId,
-    width = 800,
-    height = 600,
-    appName = "graphing",
-    disableZoom = true,
-    coord,
-    coord3d,
-    sliderLabel,
-    sliderWidth,
-    sliderMin,
-    sliderMax,
-    sliderStep = 1,
-    sliderInitialValue,
-    sliderMarks,
-}: GeoGebraProps) {
+export default function GeoGebraAppletSlider({ materialId, width = 800, height = 600, appName = "graphing", disableZoom = true, coord, coord3d, sliderLabel, sliderWidth, sliderMin, sliderMax, sliderStep = 1, sliderInitialValue, sliderMarks }: GeoGebraProps) {
     const [value, setValue] = useState(sliderInitialValue ?? sliderMin);
     const ggbRef = useRef<HTMLDivElement | null>(null);
     const apiRef = useRef<any>(null);
-    const prevMapValueRef = useRef<{ name: string; value: any } | null>(null);
+    const prevMapValueRef = useRef<{
+        name: string;
+        value: any;
+    } | null>(null);
     const pathname = usePathname();
 
     // Initialize the applet once
@@ -96,9 +92,7 @@ export default function GeoGebraAppletSlider({
 
             // Setze die weite des unsichtbaren divs auf 0. Es wird von GeoGebra benötigt und muss erhalten bleiben, deshalb kann es nicht gelöscht werden.
             setTimeout(() => {
-                const divs = document.querySelectorAll(
-                    'div[style*="z-index: -32767"]',
-                );
+                const divs = document.querySelectorAll('div[style*="z-index: -32767"]');
                 divs.forEach((div) => {
                     if (div.getAttribute("aria-hidden") === "true") {
                         (div as HTMLElement).style.width = "0px";
@@ -119,15 +113,7 @@ export default function GeoGebraAppletSlider({
         if (!api) return;
 
         if (coord3d) {
-            api.setCoordSystem(
-                coord3d.xmin,
-                coord3d.xmax,
-                coord3d.ymin,
-                coord3d.ymax,
-                coord3d.zmin,
-                coord3d.zmax,
-                coord3d.yVertical ?? false,
-            );
+            api.setCoordSystem(coord3d.xmin, coord3d.xmax, coord3d.ymin, coord3d.ymax, coord3d.zmin, coord3d.zmax, coord3d.yVertical ?? false);
         } else if (coord) {
             api.setCoordSystem(coord.xmin, coord.xmax, coord.ymin, coord.ymax);
         }
@@ -135,17 +121,15 @@ export default function GeoGebraAppletSlider({
 
     // Update slider value in GeoGebra applet
     useEffect(() => {
-        const mapValue = { name: "h", value };
+        const mapValue = {
+            name: "h",
+            value,
+        };
         if (mapValue && apiRef.current) {
             try {
                 // Unregister previous listener if it exists
-                if (
-                    prevMapValueRef.current &&
-                    prevMapValueRef.current.name !== mapValue.name
-                ) {
-                    apiRef.current.unregisterObjectUpdateListener(
-                        prevMapValueRef.current.name,
-                    );
+                if (prevMapValueRef.current && prevMapValueRef.current.name !== mapValue.name) {
+                    apiRef.current.unregisterObjectUpdateListener(prevMapValueRef.current.name);
                 }
 
                 apiRef.current.setValue(mapValue.name, mapValue.value);

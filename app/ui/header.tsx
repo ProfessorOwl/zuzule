@@ -12,9 +12,7 @@ import { navData78, navData910, type NavItem, renderNavItem } from "./Sideview";
 
 export function HeaderSimple() {
     const [opened, { toggle, close }] = useDisclosure(false);
-    const [expandedClass, setExpandedClass] = useState<"78" | "910" | null>(
-        null,
-    );
+    const [expandedClass, setExpandedClass] = useState<"78" | "910" | null>(null);
     const pathname = usePathname();
     const clickOutside = useClickOutside(() => close());
 
@@ -23,50 +21,23 @@ export function HeaderSimple() {
             <Container size="md" className={classes.inner}>
                 <Link href="/ueber" className={classes.mainlink}>
                     <Group>
-                        <Image
-                            component={NextImage}
-                            src="/Logo.svg"
-                            alt=""
-                            width={526}
-                            height={223}
-                            fill={false}
-                            h={40}
-                            w={"auto"}
-                            preload={true}
-                        />
+                        <Image component={NextImage} src="/Logo.svg" alt="" width={526} height={223} fill={false} h={40} w={"auto"} preload={true} />
                     </Group>
                 </Link>
 
                 <Group gap={5} visibleFrom="md">
-                    <Link
-                        href="/klasse78"
-                        className={classes.link}
-                        data-active={
-                            pathname.startsWith("/klasse78") || undefined
-                        }
-                    >
+                    <Link href="/klasse78" className={classes.link} data-active={pathname.startsWith("/klasse78") || undefined}>
                         Klassen 7+8
                     </Link>
-                    <Link
-                        href="/klasse910"
-                        className={classes.link}
-                        data-active={
-                            pathname.startsWith("/klasse910") || undefined
-                        }
-                    >
+                    <Link href="/klasse910" className={classes.link} data-active={pathname.startsWith("/klasse910") || undefined}>
                         Klassen 9+10
                     </Link>
                     <Link href="/ueber" className={classes.link} data-active={pathname.startsWith("/ueber") || undefined}>
-                    Über das Projekt
+                        Über das Projekt
                     </Link>
                 </Group>
 
-                <Burger
-                    opened={opened}
-                    onClick={toggle}
-                    hiddenFrom="md"
-                    size="sm"
-                />
+                <Burger opened={opened} onClick={toggle} hiddenFrom="md" size="sm" />
             </Container>
 
             {opened && (
@@ -88,12 +59,12 @@ export function HeaderSimple() {
                         </Link>
                         {expandedClass === "78" && (
                             <div
-                                style={{ paddingLeft: "16px" }}
+                                style={{
+                                    paddingLeft: "16px",
+                                }}
                                 onClick={close}
                             >
-                                {navData78.map((item) =>
-                                    renderNavItem(item, 0, pathname),
-                                )}
+                                {navData78.map((item) => renderNavItem(item, 0, pathname))}
                             </div>
                         )}
 
@@ -113,20 +84,16 @@ export function HeaderSimple() {
                         </Link>
                         {expandedClass === "910" && (
                             <div
-                                style={{ paddingLeft: "16px" }}
+                                style={{
+                                    paddingLeft: "16px",
+                                }}
                                 onClick={close}
                             >
-                                {navData910.map((item) =>
-                                    renderNavItem(item, 0, pathname),
-                                )}
+                                {navData910.map((item) => renderNavItem(item, 0, pathname))}
                             </div>
                         )}
 
-                        <Link
-                            href="/ueber"
-                            className={classes.link}
-                            onClick={close}
-                        >
+                        <Link href="/ueber" className={classes.link} onClick={close}>
                             Über das Projekt
                         </Link>
                     </Stack>

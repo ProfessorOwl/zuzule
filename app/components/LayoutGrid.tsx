@@ -15,31 +15,65 @@ export function LayoutGrid({ children }: { children: any }) {
     return (
         <Grid justify="space-between" gutter={0}>
             {showSideview78 && (
-                <GridCol span={{ base: 0, md: 2.5 }} visibleFrom="md">
+                <GridCol
+                    span={{
+                        base: 0,
+                        md: 2.5,
+                    }}
+                    visibleFrom="md"
+                >
                     <Sideview78 />
                 </GridCol>
             )}
             {showSideview910 && (
-                <GridCol span={{ base: 0, md: 2.5 }} visibleFrom="md">
+                <GridCol
+                    span={{
+                        base: 0,
+                        md: 2.5,
+                    }}
+                    visibleFrom="md"
+                >
                     <Sideview910 />
                 </GridCol>
             )}
             <GridCol
                 span={
                     showOutline
-                        ? { base: 12, md: 6.5, lg: 7 }
-                        : { base: 12, md: 12 }
+                        ? {
+                              base: 12,
+                              md: 6.5,
+                              lg: 7,
+                          }
+                        : {
+                              base: 12,
+                              md: 12,
+                          }
                 }
-                style={{ overflow: "hidden" }}
+                style={{
+                    overflow: "hidden",
+                }}
             >
                 <ScrollAreaAutosize mah={"calc(100vh - 56px)"} key={pathname}>
-                    <Container pb={200} px={{ base: "10", sm: "md" }}>
+                    <Container
+                        pb={200}
+                        px={{
+                            base: "10",
+                            sm: "md",
+                        }}
+                    >
                         {children}
                     </Container>
                 </ScrollAreaAutosize>
             </GridCol>
             {showOutline && (
-                <GridCol span={{ base: 0, md: 3, lg: 2.5 }} visibleFrom="md">
+                <GridCol
+                    span={{
+                        base: 0,
+                        md: 3,
+                        lg: 2.5,
+                    }}
+                    visibleFrom="md"
+                >
                     <DocumentOutline />
                 </GridCol>
             )}

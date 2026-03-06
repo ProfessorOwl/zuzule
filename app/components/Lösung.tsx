@@ -8,11 +8,7 @@ interface LösungProps {
 }
 export function Lösung({ children, title, id, titleOrder }: LösungProps) {
     const spoiler = (
-        <Spoiler
-            maxHeight={0}
-            showLabel="Lösung anzeigen"
-            hideLabel="Lösung verbergen"
-        >
+        <Spoiler maxHeight={0} showLabel="Lösung anzeigen" hideLabel="Lösung verbergen">
             {children}
         </Spoiler>
     );

@@ -1,15 +1,6 @@
 "use client";
 
-import {
-    Checkbox,
-    CheckboxProps,
-    Group,
-    List,
-    ListItem,
-    ScrollAreaAutosize,
-    Stack,
-    Text,
-} from "@mantine/core";
+import { Checkbox, CheckboxProps, Group, List, ListItem, ScrollAreaAutosize, Stack, Text } from "@mantine/core";
 import { useEffect, useMemo, useState } from "react";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import { IconDotsDiagonal2 } from "@tabler/icons-react";
@@ -26,15 +17,11 @@ export function DocumentOutline() {
     const pathname = usePathname();
     const [headings, setHeadings] = useState<HeadingItem[]>([]);
     const [scrollHost, setScrollHost] = useState<HTMLElement | null>(null);
-    const [checkedHeadings, setCheckedHeadings] = useState<Set<string>>(
-        new Set(),
-    );
+    const [checkedHeadings, setCheckedHeadings] = useState<Set<string>>(new Set());
     const searchParams = useSearchParams();
 
     useEffect(() => {
-        const viewport = document.querySelector(
-            ".mantine-ScrollArea-viewport",
-        ) as HTMLElement | null;
+        const viewport = document.querySelector(".mantine-ScrollArea-viewport") as HTMLElement | null;
         setScrollHost(viewport);
     }, [pathname]);
 
@@ -45,25 +32,14 @@ export function DocumentOutline() {
         scrollHost: scrollHost ?? undefined,
         offset: 80,
     });
-    const CheckboxIcon: CheckboxProps["icon"] = ({
-        indeterminate,
-        ...others
-    }) =>
-        indeterminate ? (
-            <IconDotsDiagonal2 {...others} />
-        ) : (
-            <IconDotsDiagonal2 {...others} />
-        );
+    const CheckboxIcon: CheckboxProps["icon"] = ({ indeterminate, ...others }) => (indeterminate ? <IconDotsDiagonal2 {...others} /> : <IconDotsDiagonal2 {...others} />);
 
     const activeHeadingId = useMemo(() => {
         const activeData = spy.data[spy.active];
         if (!activeData) {
             return null;
         }
-        return activeData
-            .getNode()
-            .closest("[data-checkable-id]")
-            ?.getAttribute("data-checkable-id");
+        return activeData.getNode().closest("[data-checkable-id]")?.getAttribute("data-checkable-id");
     }, [spy.active, spy.data]);
 
     useEffect(() => {
@@ -76,21 +52,22 @@ export function DocumentOutline() {
             if (!id) return;
 
             // Irgendwo darin steckt eine Überschrift
-            const titleElement = element.querySelector(
-                "h1, h2, h3, h4, h5, h6",
-            );
+            const titleElement = element.querySelector("h1, h2, h3, h4, h5, h6");
             if (titleElement) {
                 const titleOrder = parseInt(titleElement.tagName[1]);
                 const title = titleElement.textContent || "";
 
-                headingItems.push({ id, title, titleOrder });
+                headingItems.push({
+                    id,
+                    title,
+                    titleOrder,
+                });
             }
         });
 
         setHeadings(headingItems);
     }, [pathname]);
 
-    
     // Wenn sich die searchParams ändern sollen die entsprechenden Headings zur liste gecheckter Headings zugefügt werden
     useEffect(() => {
         const checkedHeading = new Set<string>();
@@ -106,7 +83,9 @@ export function DocumentOutline() {
     const handleScroll = (id: string) => {
         const element = document.querySelector(`[data-checkable-id="${id}"]`);
         if (element) {
-            element.scrollIntoView({ behavior: "smooth" });
+            element.scrollIntoView({
+                behavior: "smooth",
+            });
         }
     };
 
@@ -123,7 +102,9 @@ export function DocumentOutline() {
 
         // Update the URL without causing a page reload
         const newUrl = `${window.location.pathname}?${newSearchParams.toString()}`;
-        router.replace(newUrl, { scroll: false });
+        router.replace(newUrl, {
+            scroll: false,
+        });
     };
 
     const shouldShowHeading = (index: number): boolean => {
@@ -151,7 +132,7 @@ export function DocumentOutline() {
     if (headings.length === 0) {
         return null;
     }
-    
+
     return (
         <Stack gap="sm" p="xs" mt="xl" visibleFrom="md">
             <Text fw={600} size="xs">
@@ -178,32 +159,14 @@ export function DocumentOutline() {
                             }}
                             className="outline-item"
                         >
-                            <Checkbox
-                                checked={isChecked}
-                                onChange={() =>
-                                    handleCheckboxToggle(heading.id)
-                                }
-                                size="xs"
-                                mt={11}
-                                color="red"
-                                variant="outline"
-                                onClick={(e) => e.stopPropagation()}
-                                miw={16}
-                                icon={CheckboxIcon}
-                            />
+                            <Checkbox checked={isChecked} onChange={() => handleCheckboxToggle(heading.id)} size="xs" mt={11} color="red" variant="outline" onClick={(e) => e.stopPropagation()} miw={16} icon={CheckboxIcon} />
                             <Text
                                 size="xs"
                                 miw={0}
                                 flex={1}
                                 td={isChecked ? "line-through" : "none"}
                                 bg={heading.id === activeHeadingId ? "var(--mantine-primary-color-light)" : undefined}
-                                c={
-                                    isChecked
-                                        ? "var(--mantine-color-gray-6)"
-                                        : heading.id === activeHeadingId
-                                          ? "var(--mantine-primary-color-7)"
-                                          : "var(--mantine-primary-color-6)"
-                                }
+                                c={isChecked ? "var(--mantine-color-gray-6)" : heading.id === activeHeadingId ? "var(--mantine-primary-color-7)" : "var(--mantine-primary-color-6)"}
                                 style={{
                                     wordBreak: "break-word",
                                     overflowWrap: "break-word",
@@ -211,17 +174,10 @@ export function DocumentOutline() {
                                 }}
                                 className="outline-link"
                                 onMouseEnter={(e) => {
-                                    (
-                                        e.currentTarget as HTMLElement
-                                    ).style.color = isChecked ? "var(--mantine-color-gray-7)" :"var(--mantine-primary-color-8)"}}
+                                    (e.currentTarget as HTMLElement).style.color = isChecked ? "var(--mantine-color-gray-7)" : "var(--mantine-primary-color-8)";
+                                }}
                                 onMouseLeave={(e) => {
-                                    (
-                                        e.currentTarget as HTMLElement
-                                    ).style.color = isChecked
-                                        ? "var(--mantine-color-gray-6)"
-                                        : heading.id === activeHeadingId
-                                          ? "var(--mantine-primary-color-7)"
-                                        : "var(--mantine-primary-color-6)";
+                                    (e.currentTarget as HTMLElement).style.color = isChecked ? "var(--mantine-color-gray-6)" : heading.id === activeHeadingId ? "var(--mantine-primary-color-7)" : "var(--mantine-primary-color-6)";
                                 }}
                                 onClick={() => handleScroll(heading.id)}
                             >

@@ -7,11 +7,7 @@ interface SuspenseCheckableHeadingProps {
     id?: string;
 }
 
-export function SuspenseCheckableHeading({
-    title,
-    children,
-    id,
-}: SuspenseCheckableHeadingProps) {
+export function SuspenseCheckableHeading({ title, children, id }: SuspenseCheckableHeadingProps) {
     return (
         <Suspense>
             <CheckableHeading title={title} id={id}>

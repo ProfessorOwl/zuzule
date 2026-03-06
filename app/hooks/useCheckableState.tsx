@@ -13,8 +13,7 @@ export function useCheckableState({ id, title }: UseCheckableStateOptions) {
     const searchParams = useSearchParams();
 
     // Die Überschrift wird zum Link hinzugefügt
-    const uniqueId =
-        id || `${title?.toString().replace(/\s+/g, "-").toLowerCase()}`;
+    const uniqueId = id || `${title?.toString().replace(/\s+/g, "-").toLowerCase()}`;
 
     const [checked, setChecked] = useState(false);
 
@@ -38,7 +37,9 @@ export function useCheckableState({ id, title }: UseCheckableStateOptions) {
 
         // Update the URL without causing a page reload
         const newUrl = `${window.location.pathname}?${newSearchParams.toString()}`;
-        router.replace(newUrl, { scroll: false });
+        router.replace(newUrl, {
+            scroll: false,
+        });
     };
 
     return {

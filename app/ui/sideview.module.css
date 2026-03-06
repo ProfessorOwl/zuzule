@@ -7,8 +7,7 @@
         display: none;
     }
     flex-direction: column;
-    border-right: 1px solid
-        light-dark(var(--mantine-color-gray-3), var(--mantine-color-dark-4));
+    border-right: 1px solid light-dark(var(--mantine-color-gray-3), var(--mantine-color-dark-4));
 }
 
 .navbarMain {
@@ -29,20 +28,11 @@
     overflow-wrap: break-word;
 
     @mixin hover {
-        background-color: light-dark(
-            var(--mantine-color-gray-0),
-            var(--mantine-color-dark-6)
-        );
-        color: light-dark(
-            var(--mantine-color-black),
-            var(--mantine-color-white)
-        );
+        background-color: light-dark(var(--mantine-color-gray-0), var(--mantine-color-dark-6));
+        color: light-dark(var(--mantine-color-black), var(--mantine-color-white));
 
         .linkIcon {
-            color: light-dark(
-                var(--mantine-color-black),
-                var(--mantine-color-white)
-            );
+            color: light-dark(var(--mantine-color-black), var(--mantine-color-white));
         }
     }
 
