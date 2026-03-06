@@ -149,23 +149,37 @@ export function DocumentOutline() {
                     const isChecked = checkedHeadings.has(heading.id);
                     return (
                         <Group
+                            bg={heading.id === activeHeadingId ? "var(--mantine-primary-color-light)" : undefined}
+                            bdrs={5}
+                            mt={heading.titleOrder == 1 ? 1.5 : 0}
                             key={heading.id}
                             gap={6}
                             align="flex-start"
                             wrap="nowrap"
-                            pl={(heading.titleOrder - 1) * 12}
+                            pl={5+ (heading.titleOrder - 1) * 16}
                             style={{
                                 cursor: "pointer",
+                                borderBottom: heading.titleOrder == 1 ? "1px solid var(--mantine-primary-color-light-color)" : "0px solid var(--mantine-primary-color)"
                             }}
                             className="outline-item"
                         >
-                            <Checkbox checked={isChecked} onChange={() => handleCheckboxToggle(heading.id)} size="xs" mt={11} color="red" variant="outline" onClick={(e) => e.stopPropagation()} miw={16} icon={CheckboxIcon} />
+                            <Checkbox 
+                                checked={isChecked}
+                                onChange={() => handleCheckboxToggle(heading.id)}
+                                size="xs"
+                                mt={6}
+                                color="red"
+                                variant="outline"
+                                onClick={(e) => e.stopPropagation()}
+                                miw={16}
+                                icon={CheckboxIcon}
+                            />
                             <Text
+                                mt={0}
                                 size="xs"
                                 miw={0}
                                 flex={1}
                                 td={isChecked ? "line-through" : "none"}
-                                bg={heading.id === activeHeadingId ? "var(--mantine-primary-color-light)" : undefined}
                                 c={isChecked ? "var(--mantine-color-gray-6)" : heading.id === activeHeadingId ? "var(--mantine-primary-color-7)" : "var(--mantine-primary-color-6)"}
                                 style={{
                                     wordBreak: "break-word",
