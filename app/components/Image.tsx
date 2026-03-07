@@ -1,9 +1,6 @@
 "use client";
 
 import { CSSProperties, Image, ImageProps, StyleProp } from "@mantine/core";
-import { useElementSize } from "@mantine/hooks";
-import NextImage from "next/image";
-import { useEffect, useRef } from "react";
 
 interface BetterImageProps extends ImageProps {
     h?: StyleProp<CSSProperties["Height"]>;
@@ -15,17 +12,15 @@ interface BetterImageProps extends ImageProps {
 }
 
 export default function BetterImage({ h, fit = "contain", src, width, height, alt, ...others }: BetterImageProps) {
-    const { ref, width: containerWidth } = useElementSize();
+    const aspectRatio = width/height
     return (
         <Image
-            //@ts-ignore
             h={h}
-            ref={ref}
             fit={fit}
             src={src}
-            width={width}
-            height={height}
-            sizes={`${containerWidth}px`}
+            width={width > 1400 ? 1400 : width}
+            height={width > 1400 ? width/aspectRatio : height}
+            sizes={"(max-width: var(--mantine-breakpoint-md)) 80vw, 40vw"}
             alt={alt}
             {...others}
         />
