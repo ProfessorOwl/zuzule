@@ -2,7 +2,7 @@
 
 import { Badge, Center, Slider } from "@mantine/core";
 import { usePathname } from "next/navigation";
-import { Fragment, useEffect, useRef, useState } from "react";
+import { Fragment, Suspense, useEffect, useRef, useState } from "react";
 
 declare global {
     interface Window {
@@ -44,7 +44,7 @@ export interface GeoGebraProps {
     }>;
 }
 
-export default function GeoGebraAppletSlider({ materialId, width = 800, height = 600, appName = "graphing", disableZoom = true, coord, coord3d, sliderLabel, sliderWidth, sliderMin, sliderMax, sliderStep = 1, sliderInitialValue, sliderMarks }: GeoGebraProps) {
+function GeoGebraAppletSliderinner({ materialId, width = 800, height = 600, appName = "graphing", disableZoom = true, coord, coord3d, sliderLabel, sliderWidth, sliderMin, sliderMax, sliderStep = 1, sliderInitialValue, sliderMarks }: GeoGebraProps) {
     const [value, setValue] = useState(sliderInitialValue ?? sliderMin);
     const ggbRef = useRef<HTMLDivElement | null>(null);
     const apiRef = useRef<any>(null);
@@ -180,5 +180,13 @@ export default function GeoGebraAppletSlider({ materialId, width = 800, height =
                 <div ref={ggbRef}></div>
             </Center>
         </Fragment>
+    );
+}
+
+export function GeoGebraAppletSlider(props: GeoGebraProps) {
+    return (
+        <Suspense>
+            <GeoGebraAppletSliderinner {...props} />
+        </Suspense>
     );
 }

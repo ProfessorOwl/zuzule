@@ -45,7 +45,7 @@ def compress_img(
         new_filename = f"{filename}{ext}"
 
     try:
-        img.save(new_filename, quality=quality, optimize=True)
+        img.save(new_filename, format="webp", quality=quality, optimize=True)
     except OSError:
         # convert the image to RGB mode first
         img = img.convert("RGB")
