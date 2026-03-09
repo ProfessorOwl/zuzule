@@ -3,6 +3,7 @@
 import { Badge, Center, Slider } from "@mantine/core";
 import Script from "next/script";
 import { Fragment, Suspense, useEffect, useRef, useState } from "react";
+import { ErrorBoundary } from "./ErrorBoundary";
 
 declare global {
     interface Window {
@@ -46,7 +47,7 @@ export interface GeoGebraProps {
 
 function GeoGebraAppletSliderinner({ materialId, width = 800, height = 600, appName = "graphing", disableZoom = true, coord, coord3d, sliderLabel, sliderWidth, sliderMin, sliderMax, sliderStep = 1, sliderInitialValue, sliderMarks }: GeoGebraProps) {
     const [value, setValue] = useState(sliderInitialValue ?? sliderMin);
-    const [scriptisLoaded, setScriptisLoaded] = useState(false)
+    const [scriptisLoaded, setScriptisLoaded] = useState(false);
     const ggbRef = useRef<HTMLDivElement | null>(null);
     const apiRef = useRef<any>(null);
 
@@ -56,55 +57,31 @@ function GeoGebraAppletSliderinner({ materialId, width = 800, height = 600, appN
         if (!container) return;
         if (!scriptisLoaded) return;
 
-        // // Check if applet is already initialized in this container
-        // const existingApplet = container.querySelector('[id^="ggb"]');
-        // if (existingApplet && apiRef.current) {
-        //     // Applet already exists, skip reinitializing
-        //     return;
-        // }
+        const params: any = {
+            appName,
+            width,
+            height,
+            showToolBar: false,
+            showAlgebraInput: false,
+            showMenuBar: false,
+            material_id: materialId,
+        };
 
-            const params: any = {
-                appName,
-                width,
-                height,
-                showToolBar: false,
-                showAlgebraInput: false,
-                showMenuBar: false,
-                material_id: materialId,
-            };
+        // default: disable zoom/scrolling unless explicitly allowed
+        if (disableZoom) {
+            params.showZoomButtons = false;
+            params.enableShiftDragZoom = false;
+            params.enableWheelZoom = false;
+        }
 
-            // default: disable zoom/scrolling unless explicitly allowed
-            if (disableZoom) {
-                params.showZoomButtons = false;
-                params.enableShiftDragZoom = false;
-                params.enableWheelZoom = false;
-            }
+        params.appletOnLoad = (api: any) => {
+            apiRef.current = api;
+        };
 
-            // Set up callback to store API on load. Coordinate handling
-            // is applied in a separate effect to avoid re-initializing the
-            // applet when coords change.
-
-
-
-            // params.appletOnLoad = (api: any) => {
-            //     apiRef.current = api;
-
-            //     // Setze die weite des unsichtbaren divs auf 0. Es wird von GeoGebra benötigt und muss erhalten bleiben, deshalb kann es nicht gelöscht werden.
-            //     setTimeout(() => {
-            //         const divs = document.querySelectorAll('div[style*="z-index: -32767"]');
-            //         divs.forEach((div) => {
-            //             if (div.getAttribute("aria-hidden") === "true") {
-            //                 (div as HTMLElement).style.width = "0px";
-            //             }
-            //         });
-            //     }, 100);
-            // };
-
-            // Clear any existing content before injecting
-            container.innerHTML = "";
-            const applet = new window.GGBApplet(params, true);
-            applet.inject(container);
-    }, [materialId, width, height, appName, disableZoom, scriptisLoaded]);
+        // Clear any existing content before injecting
+        const applet = new window.GGBApplet(params, true);
+        applet.inject(container);
+    }, [scriptisLoaded]);
 
     // Apply coordinate system when api becomes available or when coords change.
     useEffect(() => {
@@ -125,10 +102,7 @@ function GeoGebraAppletSliderinner({ materialId, width = 800, height = 600, appN
 
     return (
         <Fragment>
-            <Script
-                src="https://www.geogebra.org/apps/deployggb.js" 
-                strategy="lazyOnload"
-                onReady={() => setScriptisLoaded(true)} />
+            <Script src="https://www.geogebra.org/apps/deployggb.js" strategy="lazyOnload" onReady={() => setScriptisLoaded(true)} />
             <Center my={"md"}>
                 <Slider
                     thumbChildren={<Badge size="xl">{sliderLabel}</Badge>}
@@ -161,7 +135,9 @@ function GeoGebraAppletSliderinner({ materialId, width = 800, height = 600, appN
 export default function GeoGebraAppletSlider(props: GeoGebraProps) {
     return (
         <Suspense>
-            <GeoGebraAppletSliderinner {...props} />
+            <ErrorBoundary errorMessage="Die GeoGebra-Komponente konnte nicht geladen werden. Bitte aktualisieren Sie die Seite.">
+                <GeoGebraAppletSliderinner {...props} />
+            </ErrorBoundary>
         </Suspense>
     );
 }
