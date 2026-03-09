@@ -30,12 +30,12 @@ export const theme = createTheme({
                 mx: "auto",
                 fit: "contain",
                 component: NextImage,
-                maw: "100%",
+                // maw: "100%",
                 h: {
                     base: "auto",
                     md: 300,
                 },
-                w: {
+                maw: {
                     base: 300,
                     xs: 400,
                     sm: 500,

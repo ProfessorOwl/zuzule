@@ -66,7 +66,7 @@ export function DocumentOutline() {
         });
 
         setHeadings(headingItems);
-    }, [pathname]);
+    }, [pathname, searchParams]);
 
     // Wenn sich die searchParams ändern sollen die entsprechenden Headings zur liste gecheckter Headings zugefügt werden
     useEffect(() => {
@@ -163,7 +163,7 @@ export function DocumentOutline() {
                             }}
                             className="outline-item"
                         >
-                            <Checkbox 
+                            {!(searchParams.get("students") === "true") && <Checkbox 
                                 checked={isChecked}
                                 onChange={() => handleCheckboxToggle(heading.id)}
                                 size="xs"
@@ -173,7 +173,7 @@ export function DocumentOutline() {
                                 onClick={(e) => e.stopPropagation()}
                                 miw={16}
                                 icon={CheckboxIcon}
-                            />
+                            />}
                             <Text
                                 mt={0}
                                 size="xs"

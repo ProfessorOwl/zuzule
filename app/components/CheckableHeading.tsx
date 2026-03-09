@@ -16,17 +16,25 @@ export function CheckableHeading({ children, title, id, titleOrder = 1 }: Checka
     const router = useRouter();
     const searchParams = useSearchParams();
     const CheckboxIcon: CheckboxProps["icon"] = ({ indeterminate, ...others }) => (indeterminate ? <IconDotsDiagonal2 {...others} /> : <IconDotsDiagonal2 {...others} />);
+    
     // Die Überschrift wird zum Link hinzugefügt
     const uniqueId = id || `${title?.toString().replace(/\s+/g, "-").toLowerCase()}`;
 
-    const [checked, setChecked] = useState(false);
+    // Initialize checked state from searchParams
+    const [checked, setChecked] = useState(() => searchParams.get(uniqueId) === "true");
 
     // Load checkbox state from URL query parameters on mount
     useEffect(() => {
         const urlValue = searchParams.get(uniqueId);
         setChecked(urlValue === "true");
     }, [uniqueId, searchParams]);
+    
+    const isStudent = searchParams.get("students") === "true"
 
+    // Hide component if students=true and this item is checked
+    if (isStudent && checked) {
+        return null;
+    }
     // Update URL when checkbox state changes
     const handleChange = (value: boolean) => {
         setChecked(value);
@@ -55,7 +63,7 @@ export function CheckableHeading({ children, title, id, titleOrder = 1 }: Checka
                     gap: "8px",
                 }}
             >
-                <Checkbox checked={checked} onChange={(event) => handleChange(event.currentTarget.checked)} size="md" color="red" variant="outline" icon={CheckboxIcon} />
+                {!isStudent && <Checkbox checked={checked} onChange={(event) => handleChange(event.currentTarget.checked)} size="md" color="red" variant="outline" icon={CheckboxIcon}/>}
                 <Title
                     order={titleOrder}
                     style={{

@@ -4,7 +4,6 @@ import { Lösung } from "@/components/Lösung";
 import { SuspenseCheckableHeading } from "@/components/SuspenseCheckableHeading";
 import { ImageCaption } from "@/components/ImageCaption";
 import { Divider, List, ListItem, SimpleGrid } from "@mantine/core";
-import NextImage from "next/image";
 import { BetterInlineMath as InlineMath, BlockMathScroll as BlockMath } from "@/components/CustomMath";
 import GeoGebraAppletSlider from "@/components/GeoGebraAppletSlider";
 import Video from "@/components/Video";

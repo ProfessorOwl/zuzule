@@ -1,5 +1,3 @@
-"use client";
-
 import { CSSProperties, Image, ImageProps, StyleProp } from "@mantine/core";
 
 interface BetterImageProps extends ImageProps {

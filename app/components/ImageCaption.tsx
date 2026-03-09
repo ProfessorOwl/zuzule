@@ -1,7 +1,5 @@
-"use client";
-
-import { Center, CSSProperties, Flex, Stack, StyleProp, Text, ImageProps } from "@mantine/core";
-import Image from "./Image";
+import { Center, Flex, Stack, Text, ImageProps } from "@mantine/core";
+import Image from "./Image"; 
 
 interface ImageCaptionProps extends ImageProps {
     children: string | string[];
@@ -53,7 +51,7 @@ export function ImageCaption({ children, h, fit = "contain", src, width, height,
         return (
             <Stack gap={"xs"} maw="100%" mx={"auto"}>
                 <Image h={h} fit={fit} src={src} width={width} height={height} alt={alt} mb={"0"} {...others}></Image>
-                <Text size="sm" ta={"center"} lh={"xs"}>
+                <Text size="sm" mt="0" ta={"center"} lh={"xs"} maw={{base: 300, xs: 400, sm: 500, md: 375}}> 
                     {children}
                 </Text>
             </Stack>

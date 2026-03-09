@@ -17,13 +17,12 @@ export const metadata: Metadata = {
 export default function Pyramiden() {
     return (
         <Fragment>
-            <SuspenseCheckableHeading title="Die Pyramide">
+            <CheckableHeading title="Die Pyramide">
                 Pyramiden haben auf Menschen schon lange eine Anziehungskraft – so haben schon die Maya und Ägypter Pyramiden gebaut, die teilweise noch bis heute stehen. Deswegen ist es nicht verwunderlich, dass sich auch Mathematiker für Pyramiden interessieren. Wir schauen uns hier die Grundlagen an und gehen auf die Eigenschaften von Pyramiden ein: Wie „baut“ man Pyramiden aus Papier? Wie bestimmt man deren Oberflächeninhalt oder Volumen?
                 <Flex>
                     <Image src="/Pyramiden/pyramideägypten.webp" width={3888} height={2202} alt="Mehrere ägyptische Pyramiden" />
                     <Image src="/Pyramiden/pyramidemaya.webp" width={6000} height={3927} alt="Eine Pyramide der Maya" />
                 </Flex>
-            </SuspenseCheckableHeading>
             <CheckableHeading title="Definition" titleOrder={2}>
                 Eine Pyramide hat eine eckige Grundfläche, z.B. ein Dreieck oder ein Quadrat. Allgemein nennt man eckige Flächen auch <b>n-Ecke</b>. Den Mittelpunkt dieser Fläche ziehen wir nach oben, sodass wir die Pyramidenspitze bekommen. Verbinden wir nun alle Eckpunkte unserer Grundfläche mit der Spitze, so erhalten wir eine <b>gerade Pyramide</b>!
             </CheckableHeading>
@@ -63,6 +62,7 @@ export default function Pyramiden() {
                     </List>
                 </Lösung>
             </CheckableBlockquote>
+            </CheckableHeading>
             <CheckableHeading title="Volumenberechnung">
                 Das Volumen von einer quadratischen Pyramide lässt sich sowohl experimentell als auch mathematisch gut herleiten. Fangen wir erstmal experimentell an!
                 <CheckableHeading titleOrder={2} title="Experimentell">
@@ -86,7 +86,7 @@ export default function Pyramiden() {
                         </Lösung>
                         <Space my="xs" />
                     </CheckableBlockquote>
-                    <SimpleGrid cols={2} my={"md"}>
+                    <Flex>
                         <ImageCaption
                             h={{
                                 base: "auto",
@@ -137,7 +137,7 @@ export default function Pyramiden() {
                             Die Waage zeigt an, dass unsere Pyramide ca. 45
                             {thinsp}g Zucker enthält.
                         </ImageCaption>
-                    </SimpleGrid>
+                    </Flex>
                     Um nun von dem Gewicht auf das Volumen zu kommen, benötigen wir die Dichte des Zuckers. Für Glukose, also Haushaltszucker, beträgt sie <InlineMath math="1{,}56\,\tfrac{\text{g}}{\text{mL}}" />. Probiere selber, daraus das Volumen zu bekommen!
                     <Lösung title="Lösung: Volumen übers Gewicht" titleOrder={3}>
                         Die Dichte hat als Einheit <InlineMath math="\frac{\text{Gewicht}}{\text{Volumen}}" />, bzw. mathematisch: <InlineMath math="\rho = \frac{m}{V}" />, wobei <InlineMath math="\rho" /> die Dichte ist, <InlineMath math="m" /> die Masse und <InlineMath math="V" /> das Volumen. Wir kennen Dichte und Masse, also stellen wir nach <InlineMath math="V" /> um:

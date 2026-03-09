@@ -1,6 +1,6 @@
 "use client";
 
-import { Badge, Center, ScrollArea, Slider } from "@mantine/core";
+import { Badge, Center, Slider } from "@mantine/core";
 import { usePathname } from "next/navigation";
 import { Fragment, useEffect, useRef, useState } from "react";
 
@@ -10,7 +10,7 @@ declare global {
     }
 }
 
-interface GeoGebraProps {
+export interface GeoGebraProps {
     materialId: string;
     width?: number;
     height?: number;
@@ -33,7 +33,7 @@ interface GeoGebraProps {
         yVertical?: boolean;
     };
     sliderLabel: string;
-    sliderWidth: number;
+    sliderWidth: number | { base?: number; xs?: number; sm?: number; md?: number; lg?: number; xl?: number };
     sliderMin?: number;
     sliderMax?: number;
     sliderStep?: number;

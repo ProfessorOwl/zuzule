@@ -1,44 +1,60 @@
 "use client";
 
-import { usePathname } from "next/navigation";
-import { Burger, Container, Group, Stack } from "@mantine/core";
+import { usePathname, useSearchParams } from "next/navigation";
+import { Burger, Button, Container, Group, Stack } from "@mantine/core";
 import { useDisclosure, useClickOutside } from "@mantine/hooks";
-import { useRef, useEffect, useState } from "react";
+import {useState } from "react";
 import classes from "./header.module.css";
 import NextImage from "next/image";
 import { Image } from "@mantine/core";
 import Link from "next/link";
-import { navData78, navData910, type NavItem, renderNavItem } from "./Sideview";
+import { navData78, navData910, renderNavItem } from "./Sideview";
+
 
 export function HeaderSimple() {
     const [opened, { toggle, close }] = useDisclosure(false);
     const [expandedClass, setExpandedClass] = useState<"78" | "910" | null>(null);
     const pathname = usePathname();
     const clickOutside = useClickOutside(() => close());
-
+    const searchParams = useSearchParams()
+    
+    const isStudent = searchParams.get("students") === "true"
+    
     return (
-        <header className={classes.header} ref={clickOutside}>
-            <Container size="md" className={classes.inner}>
-                <Link href="/ueber" className={classes.mainlink}>
-                    <Group>
-                        <Image component={NextImage} src="/Logo.svg" alt="" width={526} height={223} fill={false} h={40} w={"auto"} preload={true} />
+        <header className={classes.header} ref={clickOutside}> 
+                {isStudent ? <div className={classes.innerStudent}><Image component={NextImage} src="/Logo.svg" alt="Logo" width={526} height={223} fill={false} h={40} w={"auto"} preload={true} /></div> : 
+                <Container size="sm" className={classes.inner}>
+                    <Link href="/ueber" className={classes.mainlink}>
+                            <Image component={NextImage} src="/Logo.svg" alt="Logo" width={526} height={223} fill={false} h={40} w={"auto"} preload={true} />
+                    </Link>
+
+                    <Group gap={5} visibleFrom="md">
+                        <Link href="/klasse78" className={classes.link} data-active={pathname.startsWith("/klasse78") || undefined}>
+                            Klassen 7+8
+                        </Link>
+                        <Link href="/klasse910" className={classes.link} data-active={pathname.startsWith("/klasse910") || undefined}>
+                            Klassen 9+10
+                        </Link>
+                        <Link href="/ueber" className={classes.link} data-active={pathname.startsWith("/ueber") || undefined}>
+                            Über das Projekt
+                        </Link>
                     </Group>
-                </Link>
 
-                <Group gap={5} visibleFrom="md">
-                    <Link href="/klasse78" className={classes.link} data-active={pathname.startsWith("/klasse78") || undefined}>
-                        Klassen 7+8
-                    </Link>
-                    <Link href="/klasse910" className={classes.link} data-active={pathname.startsWith("/klasse910") || undefined}>
-                        Klassen 9+10
-                    </Link>
-                    <Link href="/ueber" className={classes.link} data-active={pathname.startsWith("/ueber") || undefined}>
-                        Über das Projekt
-                    </Link>
-                </Group>
-
-                <Burger opened={opened} onClick={toggle} hiddenFrom="md" size="sm" />
-            </Container>
+                    <Burger opened={opened} onClick={toggle} hiddenFrom="md" size="sm" />
+                <Button 
+                    className={classes.releaseButton} 
+                    pos={"absolute"} 
+                    right={"var(--mantine-spacing-md)"} 
+                    visibleFrom="md" 
+                    onClick={() => {
+                        const params = new URLSearchParams(searchParams.toString());
+                        params.set('students', 'true');
+                        window.open(`${pathname}?${params.toString()}`, '_blank');
+                    }}
+                >
+                    Inhalt freigeben
+                </Button>
+                </Container>}
 
             {opened && (
                 <Container size="lg" className={classes.dropdown}>

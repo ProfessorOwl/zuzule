@@ -30,13 +30,19 @@ export function CheckableBlockquote({ children, title, id, icon, titleOrder = 2 
     // Die Überschrift wird zum Link hinzugefügt
     const uniqueId = id || `${title?.toString().replace(/\s+/g, "-").toLowerCase()}`;
 
-    const [checked, setChecked] = useState(false);
+    // Initialize checked state from searchParams
+    const [checked, setChecked] = useState(() => searchParams.get(uniqueId) === "true");
+    
     // Load checkbox state from URL query parameters on mount
     useEffect(() => {
         const urlValue = searchParams.get(uniqueId);
         setChecked(urlValue === "true");
     }, [uniqueId, searchParams]);
-
+    const isStudent = searchParams.get("students") === "true"
+    // Hide component if students=true and this item is checked
+    if (isStudent && checked) {
+        return null;
+    }
     // Update URL when checkbox state changes
     const handleChange = (value: boolean) => {
         setChecked(value);
@@ -75,7 +81,7 @@ export function CheckableBlockquote({ children, title, id, icon, titleOrder = 2 
                     gap: "8px",
                 }}
             >
-                <Checkbox checked={checked} onChange={(event) => handleChange(event.currentTarget.checked)} size="md" color="red" variant="outline" icon={CheckboxIcon} />
+                {!isStudent && <Checkbox checked={checked} onChange={(event) => handleChange(event.currentTarget.checked)} size="md" color="red" variant="outline" icon={CheckboxIcon}/>}
                 {Icon ? <Icon size={40} /> : null}
                 {title && (
                     <Title

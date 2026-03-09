@@ -5,14 +5,14 @@ import { CheckableBlockquote } from "@/components/CheckableBlockquote";
 import { Lösung } from "@/components/Lösung";
 import { BetterInlineMath as InlineMath, BlockMathScroll as BlockMath } from "@/components/CustomMath";
 import Video from "@/components/Video";
-import UmfangZylinder from "/videos/UmfangZylinder.mov";
-import Link from "next/link";
 import { IconExternalLink } from "@tabler/icons-react";
-import GeoGebraAppletSlider from "@/components/GeoGebraAppletSlider";
 import thinsp from "@/components/thinsp";
 import Image from "@/components/Image";
+import GeoGebraAppletSlider from "@/components/GeoGebraAppletSlider";
 import { Fragment } from "react/jsx-runtime";
+import UmfangZylinder from "/videos/UmfangZylinder.mov";
 import type { Metadata } from "next";
+
 
 export const metadata: Metadata = {
     title: "Zylinder – zuzule",
@@ -27,14 +27,14 @@ export default function Zylinder() {
                     <Image src="/Zylinder/dosen.webp" width={6000} height={4000} alt="Verschiedene Dosen" />
                     <Image src="/Zylinder/regler.webp" width={6000} height={4000} alt="Ein Regler für die Lautstärke" />
                 </Flex>
-            </CheckableHeading>
-
             <CheckableHeading title="Definition" titleOrder={2}>
                 Die Grundfläche eines Zylinders ist immer ein <b>Kreis</b>. Wenn wir diesen nehmen und in den Raum hineinziehen, so bekommen wir einen Körper, den wir <b>Zylinder</b> nennen.
             </CheckableHeading>
             <CheckableBlockquote title="Aufgabe: Zylinder in der Umgebung" icon="frage" titleOrder={3}>
                 Gehe raus und suche nach beliebigen Sachen, die für dich nach einem Zylinder aussehen. Fallen dir plötzlich vielleicht Dinge auf, die du vorher so noch nie bemerkt hast? Mache von deiner Expedition Fotos und bringe sie mit in den Unterricht!
             </CheckableBlockquote>
+            </CheckableHeading>
+
             <CheckableHeading title="Schrägbilder">
                 Aus der Orientierungsstufe kennst du bereits das <b>Schrägbild</b> eines Quaders. Das sollte ungefähr so aussehen wie in dem Bild.
                 <Image src="/Prismen/QuaderSchrägbild@2x.webp" width={1802} height={1200} alt="Schrägbild eines Quaders auf kariertem Papier." />
@@ -257,12 +257,12 @@ export default function Zylinder() {
                         </List>
                         <Divider />
                         Das sind einige Gründe, die man mit den Augen sehen kann. Der wichtigste Grund ist jedoch der: Der Inhalt von Konservendosen wird bei der Produktion <b>in</b> in der Dose aufgekocht – und das halten nur Zylinder (oder Kugeln) aus. Schau dir zur Erklärung mal dieses Video von der Sendung mit der Maus an:{" "}
-                        <Link target="_blank" href="https://www.wdrmaus.de/filme/sachgeschichten/konservendose.php5">
+                        <a target="_blank" href="https://www.wdrmaus.de/filme/sachgeschichten/konservendose.php5">
                             {" "}
                             <Button mb={"0.2em"} rightSection={<IconExternalLink />}>
                                 Hier klicken!
                             </Button>
-                        </Link>
+                        </a>
                     </Lösung>
                 </CheckableBlockquote>
                 <CheckableHeading title="Volumen mathematisch hergeleitet" titleOrder={2}>
@@ -286,7 +286,6 @@ export default function Zylinder() {
                                 zmax: 4,
                             }}
                             sliderLabel="Höhe"
-                            // @ts-ignore
                             sliderWidth={{
                                 base: 250,
                                 md: 400,
