@@ -15,6 +15,8 @@ export function HeaderSimple() {
     const [opened, { toggle, close }] = useDisclosure(false);
     const [expandedClass, setExpandedClass] = useState<"78" | "910" | null>(null);
     const pathname = usePathname();
+    const isKlasse78 = pathname.startsWith("/klasse78");
+    const isKlasse910 = pathname.startsWith("/klasse910");
     const clickOutside = useClickOutside(() => close());
     const searchParams = useSearchParams()
     
@@ -41,7 +43,7 @@ export function HeaderSimple() {
                     </Group>
 
                     <Burger opened={opened} onClick={toggle} hiddenFrom="md" size="sm" />
-                <Button 
+                {(isKlasse78 || isKlasse910) && <Button 
                     className={classes.releaseButton} 
                     pos={"absolute"} 
                     right={"var(--mantine-spacing-md)"} 
@@ -53,7 +55,7 @@ export function HeaderSimple() {
                     }}
                 >
                     Inhalt freigeben
-                </Button>
+                </Button>}
                 </Container>}
 
             {opened && (
