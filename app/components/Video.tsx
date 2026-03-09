@@ -1,11 +1,12 @@
 import { Container } from "@mantine/core";
-import Video from "next-video";
+import dynamic from "next/dynamic";
 
-interface MBlockMathWarnProps {
+const Video = dynamic(() => import("next-video"))
+interface VideoProps {
     src: string;
 }
 
-export default function BlockMathScroll({ src }: MBlockMathWarnProps) {
+export default function BlockMathScroll({ src }: VideoProps) {
     return (
         <Container my={"md"} maw={750}>
             <Video src={src} />
