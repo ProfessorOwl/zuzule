@@ -47,7 +47,6 @@ export default function Zylinder() {
                     <ListItem>Darauf setzen wir nun die Oberseite.</ListItem>
                 </List>
                 <Image src="/Zylinder/ZylinderSchrägbildEntstehung@2x.webp" width={2402} height={1200} alt="Es wird gezeigt, wie das Schrägbild eines Zylinders Schritt für Schritt gezeichnet wird. Links wird mit einem Kreis angefangen. Auf dessen Außenseiten werden zwei senkrechte Striche gezeichnet, die alle die gleiche Höhe haben. Auf deren Enden wird dann ein identischer Kreis zu dem unten gezeichnet." />
-            </CheckableHeading>
             <CheckableBlockquote icon="frage" title="Aufgabe: Schrägbilder">
                 Zeichne die Zylinder mit Radius <InlineMath math="r" /> und Höhe <InlineMath math="h" /> als Schrägbilder.
                 <List type="ordered">
@@ -83,6 +82,7 @@ export default function Zylinder() {
                     />
                 </Lösung>
             </CheckableBlockquote>
+            </CheckableHeading>
             <CheckableHeading title="Der Mantel eines Zylinders">
                 Eine praktische Eigenschaft von Zylindern ist, dass man sie <b>rollen</b> kann. Denk mal an einen Autoreifen – er ist praktisch nichts anderes als ein rollender Zylinder – insbesondere wenn wir uns die Autoreifen von Formel-1 Autos anschauen!
                 <ImageCaption src="/Zylinder/formel1reifen.webp" width={846} rotate="right" height={537} alt="Ein Formel-1 Auto von hinten. Links sind zwei Reifen sichtbar.">

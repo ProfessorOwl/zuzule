@@ -26,10 +26,11 @@ export default function Kegel() {
                     <Image src="/Kegel/Muschel.webp" width={3321} height={4981} alt="Eine kegelförmige Muschel" />
                 </Flex>
                 Im Mathematikunterricht sind wir jedoch weniger am Vorkommen von Kegeln in unserer Umwelt interessiert, als vielmehr an der mathematischen Beschreibung: Was ist überhaupt ein Kegel und wie können wir das Volumen oder den Oberflächeninhalt von ihnen berechnen?
-            </CheckableHeading>
             <CheckableHeading title="Definition" titleOrder={2}>
                 Ein Kegel hat einen Kreis als Grundfläche. Ziehen wir seinen Mittelpunkt senkrecht in die Höhe, so bekommen wir die Kegelspitze. Die verbinden wir nun mit jedem Punkt aus dem Kreis, sodass sich die Oberfläche bildet. Et voilà: Ein <b>gerader Kegel</b>!
             </CheckableHeading>
+            </CheckableHeading>
+            
             <CheckableHeading title="Netz eines Kegels">
                 Man könnte denken, dass es sehr schwer ist, das Netz eines Kegels aufzuzeichnen, weil er neben der Kreisseite keine Kante hat. Genau das erleichtert uns aber die Arbeit, denn so können wir den Kegel <b>abrollen</b>
                 . Schau dir das Video dazu an!

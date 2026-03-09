@@ -20,11 +20,10 @@ export const metadata: Metadata = {
 export default function Prismen() {
     return (
         <Fragment>
-            <SuspenseCheckableHeading title="Das Prisma">
+            <CheckableHeading title="Das Prisma">
                 Prismen kennst du vielleicht schon aus dem Physikunterricht. Mit ihnen kann man zeigen, dass weißes Licht tatsächlich aus allen Farben des Regenbogens besteht – schau dir das Beispiel in dem Bild an! Solche Prismen sind aus Glas und meistens dreieckig.
                 <Divider my={"md"} />
                 Das Wort „Prisma“ bezeichnet aber nicht nur solche Glasgeräte, sondern im allgemeinen alle Körper mit dieser Form. Mathematisch interessiert uns daher weniger die Lichtbrechung, sondern viel mehr, was die Form so besonders macht! Wie könnte man es aus Papier falten? Welches Volumen hat ein Prisma? Und sind Prismen überhaupt immer dreieckig?
-            </SuspenseCheckableHeading>
             <Image
                 h={{
                     base: "auto",
@@ -35,19 +34,20 @@ export default function Prismen() {
                 height={3377}
                 alt="Ein Prisma, an dem weißes Licht in einem Regenbogen gebrochen wird."
             />
-
             <CheckableHeading title="Definition" titleOrder={2}>
                 Wir nehmen eine Grundfläche mit beliebiger, aber eckiger Form: Ein sogenanntes <b>n-Eck</b>. Nehmen wir seine Fläche und ziehen sie in den Raum hinein, so entsteht ein Körper. Diesen nennen wir <b>Prisma</b>.
             </CheckableHeading>
-
             <CheckableBlockquote icon="frage" title="Aufgabe: Prismen im Alltag">
                 Suche in deinem Zimmer Objekte, die ein Prisma sind und bringe sie in den Unterricht mit. Was für eine Form hat die Grundfläche, aus der das Prisma „gezogen“ wird?
             </CheckableBlockquote>
-
             <CheckableBlockquote icon="aha" title="Aha! 1">
                 {" "}
                 Ein Prisma hat also nicht immer eine dreieckige Grundseite, sondern kann jede eckige Form als Grundseite haben! Dementsprechend ist also auch ein <b>Würfel</b> oder ein <b>Quader</b> ein Prisma.{" "}
             </CheckableBlockquote>
+            </CheckableHeading>
+
+
+
 
             <CheckableHeading title="Schrägbilder">
                 Aus der Orientierungsstufe kennst du bereits das <b>Schrägbild</b> eines Quaders. Das sollte ungefähr so aussehen wie in dem Bild.
@@ -61,8 +61,6 @@ export default function Prismen() {
                     <ListItem>Im letzten Schritt verbinden wir die Eckpunkte der oberen Fläche. Sie sollte genau die gleiche Form wie die untere Fläche haben! </ListItem>
                 </List>
                 <Image src="/Prismen/PrismaSchrägbildEntstehung@2x.webp" width={2402} height={1200} alt="Es wird gezeigt, wie das Schrägbild eines Prismas Schritt für Schritt gezeichnet wird. Links wird mit einem Dreieck angefangen. Auf dessen Ecken werden senkrechte Striche gezeichnet, die alle die gleiche Höhe haben. Deren Enden werden dann verbunden, wodurch sich ein Dreieck identisch zu dem unteren ergibt." />
-            </CheckableHeading>
-
             <CheckableBlockquote icon="frage" title="Aufgabe: Schrägbilder">
                 Vervollständige die folgenden Schrägbilder in deinem Heft:
                 <Image src="/Prismen/SchrägbilderVervollständigenAufgabe@2x.webp" width={3600} height={1200} alt="4 Schrägbilder, welche vervollständigt werden sollen." />
@@ -70,6 +68,8 @@ export default function Prismen() {
                         <Image src="/Prismen/SchrägbilderVervollständigenLösung@2x.webp" width={3600} height={1200} alt="Die Lösung, wie die Schrägbilder vervollständigt werden können." />
                     </Lösung>
             </CheckableBlockquote>
+            </CheckableHeading>
+
 
             <CheckableHeading title="Netze von Prismen">
                 Geometrische Körper kann man in Netze zerlegen. Vielleicht hast du schonmal ein Würfelnetz aufgemalt, um daraus einen Spielwürfel zu basteln?
@@ -83,6 +83,7 @@ export default function Prismen() {
                     <Image src="/Prismen/PrismaPapier.webp" width={6000} height={4000} alt="Das Netz des Prismas gefaltet und verklebt, sodass ein 3D-Prisma ergibt." />
                 </SimpleGrid>
             </CheckableHeading>
+
             <CheckableHeading title="Oberflächeninhalt">
                 Über das Netz eines Körpers lässt sich gut der Oberflächeninhalt berechnen, da hier nur noch einfache Formen vorkommen. Man unterscheidet hier zwischen <b>Mantelfläche</b> und <b>Grundfläche</b>
                 . Die Grundfläche bezeichnet die Grundform des Prismas, also ob es z.B. drei- oder viereckig ist. Die Mantelfläche ist dann die Fläche, die durch die Höhe des Prismas dazukommt.
@@ -99,7 +100,6 @@ export default function Prismen() {
                 Der <b>Oberflächeninhalt</b> <InlineMath math="O" /> des Prismas lässt sich dann über die <b>Mantelfläche</b> <InlineMath math="M = M_1 + M_2 + M_3" /> und die <b>Grundfläche</b> <InlineMath math="G" /> berechnen:
                 <BlockMath math="O = \textcolor{red}{M} + 2\cdot \textcolor{blue}{G} = \textcolor{red}{M_1} + \textcolor{red}{M_2} + \textcolor{red}{M_3} + 2\cdot \textcolor{blue}{G}" />
                 Da die Grundfläche zweimal vorkommt, müssen wir sie auch doppelt in der Rechnung berücksichtigen!
-            </CheckableHeading>
             <CheckableBlockquote title="Aufgabe: Oberflächeninhalt" icon="frage">
                 Berechne den Oberflächeninhalt der Prismen:
                 <Image src="/Prismen/PrismaOberflächeninhalt@2x.webp" width={3602} height={1200} alt="Ein Prisma mit seinem Netz. Die Mantelfläche ergibt nun ein großes Rechteck." />
@@ -134,6 +134,7 @@ export default function Prismen() {
                     alt="Ein Prisma mit seinem Netz. Die Mantelfläche ergibt nun ein großes Rechteck."
                 />
             </CheckableBlockquote>
+            </CheckableHeading>
             <CheckableHeading title="Volumenberechnung">
                 Neben dem Oberflächeninhalt ist oft auch das Volumen eines Körpers interessant. Das ist bei einem Prisma zum Glück nicht allzu kompliziert, da wir es mathematisch gut beschreiben können.
                 <CheckableBlockquote title="Exkurs: Volumenbestimmung durch Verdrängung" icon="exkurs">
