@@ -42,6 +42,10 @@ div.next-video-container {
     font-family: var(--font-pennstander) !important;
 }
 
+body > div[aria-hidden="true"] {
+    width: 0px !important;
+}
+
 /* Blockquotes */
 .m_ddec01c0 {
     /* display: none !important; */
