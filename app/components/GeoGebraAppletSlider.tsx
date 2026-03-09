@@ -67,44 +67,60 @@ function GeoGebraAppletSliderinner({ materialId, width = 800, height = 600, appN
             return;
         }
 
-        const params: any = {
-            appName,
-            width,
-            height,
-            showToolBar: false,
-            showAlgebraInput: false,
-            showMenuBar: false,
-            material_id: materialId,
+        const initApplet = () => {
+            const params: any = {
+                appName,
+                width,
+                height,
+                showToolBar: false,
+                showAlgebraInput: false,
+                showMenuBar: false,
+                material_id: materialId,
+            };
+
+            // default: disable zoom/scrolling unless explicitly allowed
+            if (disableZoom) {
+                params.showZoomButtons = false;
+                params.enableShiftDragZoom = false;
+                params.enableWheelZoom = false;
+            }
+
+            // Set up callback to store API on load. Coordinate handling
+            // is applied in a separate effect to avoid re-initializing the
+            // applet when coords change.
+            params.appletOnLoad = (api: any) => {
+                apiRef.current = api;
+
+                // Setze die weite des unsichtbaren divs auf 0. Es wird von GeoGebra benötigt und muss erhalten bleiben, deshalb kann es nicht gelöscht werden.
+                setTimeout(() => {
+                    const divs = document.querySelectorAll('div[style*="z-index: -32767"]');
+                    divs.forEach((div) => {
+                        if (div.getAttribute("aria-hidden") === "true") {
+                            (div as HTMLElement).style.width = "0px";
+                        }
+                    });
+                }, 100);
+            };
+
+            // Clear any existing content before injecting
+            container.innerHTML = "";
+            const applet = new window.GGBApplet(params, true);
+            applet.inject(container);
         };
 
-        // default: disable zoom/scrolling unless explicitly allowed
-        if (disableZoom) {
-            params.showZoomButtons = false;
-            params.enableShiftDragZoom = false;
-            params.enableWheelZoom = false;
-        }
-
-        // Set up callback to store API on load. Coordinate handling
-        // is applied in a separate effect to avoid re-initializing the
-        // applet when coords change.
-        params.appletOnLoad = (api: any) => {
-            apiRef.current = api;
-
-            // Setze die weite des unsichtbaren divs auf 0. Es wird von GeoGebra benötigt und muss erhalten bleiben, deshalb kann es nicht gelöscht werden.
-            setTimeout(() => {
-                const divs = document.querySelectorAll('div[style*="z-index: -32767"]');
-                divs.forEach((div) => {
-                    if (div.getAttribute("aria-hidden") === "true") {
-                        (div as HTMLElement).style.width = "0px";
-                    }
-                });
+        // deployggb.js may not have finished loading yet on a hard reload,
+        // so poll until window.GGBApplet is available before constructing.
+        if (typeof window.GGBApplet === "function") {
+            initApplet();
+        } else {
+            const interval = setInterval(() => {
+                if (typeof window.GGBApplet === "function") {
+                    clearInterval(interval);
+                    initApplet();
+                }
             }, 100);
-        };
-
-        // Clear any existing content before injecting
-        container.innerHTML = "";
-        const applet = new window.GGBApplet(params, true);
-        applet.inject(container);
+            return () => clearInterval(interval);
+        }
     }, [materialId, width, height, appName, disableZoom]);
 
     // Apply coordinate system when api becomes available or when coords change.
