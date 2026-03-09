@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, Suspense } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import { Checkbox, CheckboxProps, Collapse, Stack, Text, Title } from "@mantine/core";
 import { IconDotsDiagonal2 } from "@tabler/icons-react";
@@ -12,7 +12,7 @@ interface CheckableHeadingProps {
     titleOrder?: 1 | 2 | 3 | 4 | 5 | 6;
 }
 
-export function CheckableHeading({ children, title, id, titleOrder = 1 }: CheckableHeadingProps) {
+function CheckableHeadingInner({ children, title, id, titleOrder = 1 }: CheckableHeadingProps) {
     const router = useRouter();
     const searchParams = useSearchParams();
     const CheckboxIcon: CheckboxProps["icon"] = ({ indeterminate, ...others }) => (indeterminate ? <IconDotsDiagonal2 {...others} /> : <IconDotsDiagonal2 {...others} />);
@@ -78,5 +78,13 @@ export function CheckableHeading({ children, title, id, titleOrder = 1 }: Checka
                 <Text component="div">{children}</Text>
             </Collapse>
         </Stack>
+    );
+}
+
+export function CheckableHeading(props: CheckableHeadingProps) {
+    return (
+        <Suspense>
+            <CheckableHeadingInner {...props} />
+        </Suspense>
     );
 }

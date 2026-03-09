@@ -5,8 +5,9 @@ import { Sideview78 } from "../ui/sideview78";
 import { Sideview910 } from "../ui/sideview910";
 import { DocumentOutline } from "./DocumentOutline";
 import { usePathname, useSearchParams } from "next/navigation";
+import { Suspense } from "react";
 
-export function LayoutGrid({ children }: { children: any }) {
+function LayoutGridInner({ children }: { children: any }) {
     const pathname = usePathname();
     const isStudent = useSearchParams().get("students") == "true";
     const showSideview78 = pathname.startsWith("/klasse78");
@@ -83,5 +84,13 @@ export function LayoutGrid({ children }: { children: any }) {
                 </GridCol>
             )}
         </Grid>
+    );
+}
+
+export function LayoutGrid({ children }: { children: any }) {
+    return (
+        <Suspense>
+            <LayoutGridInner>{children}</LayoutGridInner>
+        </Suspense>
     );
 }

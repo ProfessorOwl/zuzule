@@ -31,27 +31,6 @@ export const navData78: NavItem[] = [
             },
         ],
     },
-    {
-        label: "Ebene Figuren",
-        icon: IconCylinder,
-        children: [
-            {
-                link: "/klasse78/ebene_figuren/dreiecke",
-                label: "Dreiecke",
-                icon: IconTriangle,
-            },
-            {
-                link: "/klasse78/ebene_figuren/vierecke",
-                label: "Vierecke",
-                icon: IconRectangle,
-            },
-            {
-                link: "/klasse78/ebene_figuren/kreise",
-                label: "Kreise",
-                icon: IconCircle,
-            },
-        ],
-    },
 ];
 
 export const navData910: NavItem[] = [

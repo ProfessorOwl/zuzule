@@ -3,15 +3,14 @@
 import { usePathname, useSearchParams } from "next/navigation";
 import { Burger, Button, Container, Group, Stack } from "@mantine/core";
 import { useDisclosure, useClickOutside } from "@mantine/hooks";
-import {useState } from "react";
+import {Suspense, useState } from "react";
 import classes from "./header.module.css";
 import NextImage from "next/image";
 import { Image } from "@mantine/core";
 import Link from "next/link";
 import { navData78, navData910, renderNavItem } from "./Sideview";
 
-
-export function HeaderSimple() {
+function HeaderSimpleInner() {
     const [opened, { toggle, close }] = useDisclosure(false);
     const [expandedClass, setExpandedClass] = useState<"78" | "910" | null>(null);
     const pathname = usePathname();
@@ -118,5 +117,13 @@ export function HeaderSimple() {
                 </Container>
             )}
         </header>
+    );
+}
+
+export function HeaderSimple() {
+    return (
+        <Suspense>
+            <HeaderSimpleInner />
+        </Suspense>
     );
 }

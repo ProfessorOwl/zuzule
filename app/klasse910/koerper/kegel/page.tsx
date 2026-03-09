@@ -47,7 +47,7 @@ export default function Kegel() {
                 <Mark c={"desblue"}>
                     <InlineMath math="h_\text{Wand}" />{" "}
                 </Mark>
-                unserer Kegelwand (aufpassen: <InlineMath math="\textcolor{#3312B8}{h_\text{Wand}} \neq \textcolor{#12B886}{h}" />
+                unserer Kegelwand (aufpassen: <InlineMath math="\textcolor{#3312B8}{h_\text{Wand}} \mathrlap{/}{=} \textcolor{#12B886}{h}" />
                 ). Hier nochmal ein Bild zur Illustration:
                 <Image src="/Kegel/Kegel.webp" width={1200} height={600} alt="Ein Kegel mit seiner Mantelfläche" />
                 <CheckableBlockquote icon="frage" title="Aufgabe" titleOrder={2}>

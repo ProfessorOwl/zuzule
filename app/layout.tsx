@@ -48,9 +48,7 @@ export default function RootLayout({ children }: { children: any }) {
             <body className={`${lexend.className} ${pennstander.variable}`}>
                 <MantineProvider theme={theme}>
                     <HeaderSimple />
-                    <Suspense>
                         <LayoutGrid>{children}</LayoutGrid>
-                    </Suspense>
                 </MantineProvider>
                 <Analytics />
                 <SpeedInsights />

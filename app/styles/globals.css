@@ -38,8 +38,7 @@ div.next-video-container {
     width: 100%;
 }
 
-.katex *,
-.katex .mathnormal {
+.katex * {
     font-family: var(--font-pennstander) !important;
 }
 

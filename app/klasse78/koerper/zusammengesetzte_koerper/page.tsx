@@ -1,5 +1,5 @@
-import { SuspenseCheckableHeading } from "@/components/SuspenseCheckableHeading";
+import { CheckableHeading } from "@/components/CheckableHeading";
 
 export default function Quader() {
-    return <SuspenseCheckableHeading title="Zusammengesetzte Körper">Zusammengesetzte Körper</SuspenseCheckableHeading>;
+    return <CheckableHeading title="Zusammengesetzte Körper">Zusammengesetzte Körper</CheckableHeading>;
 }

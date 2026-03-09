@@ -1,7 +1,6 @@
 import { CheckableBlockquote } from "@/components/CheckableBlockquote";
 import { CheckableHeading } from "@/components/CheckableHeading";
 import { Lösung } from "@/components/Lösung";
-import { SuspenseCheckableHeading } from "@/components/SuspenseCheckableHeading";
 import { ImageCaption } from "@/components/ImageCaption";
 import { Divider, List, ListItem, SimpleGrid } from "@mantine/core";
 import { BetterInlineMath as InlineMath, BlockMathScroll as BlockMath } from "@/components/CustomMath";

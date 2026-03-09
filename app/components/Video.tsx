@@ -1,7 +1,7 @@
 import { Container } from "@mantine/core";
 import dynamic from "next/dynamic";
 
-const Video = dynamic(() => import("next-video"))
+const Video = dynamic(() => import("next-video"), {ssr: true})
 interface VideoProps {
     src: string;
 }

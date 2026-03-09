@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, Suspense } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import { Blockquote, Checkbox, CheckboxProps, Collapse, getPrimaryShade, Stack, Text, Title } from "@mantine/core";
 import { IconDotsDiagonal2 } from "@tabler/icons-react";
@@ -22,7 +22,7 @@ const IconMap = {
 
 type IconMapKey = keyof typeof IconMap;
 
-export function CheckableBlockquote({ children, title, id, icon, titleOrder = 2 }: CheckableBlockquoteProps) {
+function CheckableBlockquoteInner({ children, title, id, icon, titleOrder = 2 }: CheckableBlockquoteProps) {
     const router = useRouter();
     const searchParams = useSearchParams();
     const CheckboxIcon: CheckboxProps["icon"] = ({ indeterminate, ...others }) => (indeterminate ? <IconDotsDiagonal2 {...others} /> : <IconDotsDiagonal2 {...others} />);
@@ -101,5 +101,13 @@ export function CheckableBlockquote({ children, title, id, icon, titleOrder = 2 
                 </Text>
             </Collapse>
         </Blockquote>
+    );
+}
+
+export function CheckableBlockquote(props: CheckableBlockquoteProps) {
+    return (
+        <Suspense>
+            <CheckableBlockquoteInner {...props} />
+        </Suspense>
     );
 }

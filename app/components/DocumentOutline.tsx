@@ -1,7 +1,7 @@
 "use client";
 
 import { Checkbox, CheckboxProps, Group, List, ListItem, ScrollAreaAutosize, Stack, Text } from "@mantine/core";
-import { useEffect, useMemo, useState } from "react";
+import { Suspense, useEffect, useMemo, useState } from "react";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import { IconDotsDiagonal2 } from "@tabler/icons-react";
 import { useScrollSpy } from "@mantine/hooks";
@@ -12,7 +12,7 @@ interface HeadingItem {
     titleOrder: number;
 }
 
-export function DocumentOutline() {
+function DocumentOutlineInner() {
     const router = useRouter();
     const pathname = usePathname();
     const [headings, setHeadings] = useState<HeadingItem[]>([]);
@@ -138,7 +138,6 @@ export function DocumentOutline() {
             <Text fw={600} size="xs">
                 Gliederung
             </Text>
-
             <ScrollAreaAutosize mah={"calc(100vh - 145px)"}>
                 {headings.map((heading, index) => {
                     // Hide this heading if a parent heading is checked
@@ -202,5 +201,13 @@ export function DocumentOutline() {
                 })}
             </ScrollAreaAutosize>
         </Stack>
+    );
+}
+
+export function DocumentOutline() {
+    return (
+        <Suspense>
+            <DocumentOutlineInner />
+        </Suspense>
     );
 }
