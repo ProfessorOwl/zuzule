@@ -183,7 +183,7 @@ function GeoGebraAppletSliderinner({ materialId, width = 800, height = 600, appN
     );
 }
 
-export function GeoGebraAppletSlider(props: GeoGebraProps) {
+export default function GeoGebraAppletSlider(props: GeoGebraProps) {
     return (
         <Suspense>
             <GeoGebraAppletSliderinner {...props} />
