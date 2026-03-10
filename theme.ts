@@ -1,8 +1,7 @@
 "use client";
 
-import { createTheme, Divider, Flex, Image, List, ListItem, Mark, Space, Text } from "@mantine/core";
+import { createTheme, Divider, Flex, List, Mark, Space, Text } from "@mantine/core";
 import { generateColors } from "@mantine/colors-generator";
-import NextImage from "next/image";
 
 export const theme = createTheme({
     components: {
@@ -23,26 +22,6 @@ export const theme = createTheme({
                 withPadding: true,
             },
         }),
-
-        Image: Image.extend({
-            defaultProps: {
-                my: "md",
-                mx: "auto",
-                fit: "contain",
-                component: NextImage,
-                // maw: "100%",
-                h: {
-                    base: "auto",
-                    md: 300,
-                },
-                maw: {
-                    base: 300,
-                    xs: 400,
-                    sm: 500,
-                    md: "auto",
-                },
-            },
-        }),
         Space: Space.extend({
             defaultProps: {
                 my: "md",
@@ -51,6 +30,7 @@ export const theme = createTheme({
         Flex: Flex.extend({
             defaultProps: {
                 wrap: "wrap",
+                my: "md",
             },
         }),
         Mark: Mark.extend({

@@ -21,9 +21,9 @@ export default function Kegel() {
             <CheckableHeading title="Der Kegel">
                 Kegel begegnen uns besonders im Sommer in Form von Eiswaffeln, ansonsten sieht man sie oft am Straßenrand in Form von Verkehrskegeln stehen oder im Meer als gewundene Muscheln.
                 <Flex>
-                    <Image src="/Kegel/Eiswaffel.webp" width={2700} height={3375} alt="Eine Eiswaffel" />
-                    <Image src="/Kegel/VerkehrskegelWellington.webp" width={1250} height={1590} alt="Sir Wellington mit einem Verkehrskegel auf dem Kopf" />
-                    <Image src="/Kegel/Muschel.webp" width={3321} height={4981} alt="Eine kegelförmige Muschel" />
+                    <Image src="/Kegel/Eiswaffel.webp" fit="cover" h={350} width={2700} height={3375} alt="Eine Eiswaffel" flex={"0 0 300px"}/>
+                    <Image src="/Kegel/VerkehrskegelWellington.webp" fit="cover" h={350} width={1250} height={1590} alt="Sir Wellington mit einem Verkehrskegel auf dem Kopf" flex={"0 0 300px"}/>
+                    <Image src="/Kegel/Muschel.webp" fit="cover" h={350} width={3321} height={4981} alt="Eine kegelförmige Muschel" flex={"0 0 300px"}/>
                 </Flex>
                 Im Mathematikunterricht sind wir jedoch weniger am Vorkommen von Kegeln in unserer Umwelt interessiert, als vielmehr an der mathematischen Beschreibung: Was ist überhaupt ein Kegel und wie können wir das Volumen oder den Oberflächeninhalt von ihnen berechnen?
             <CheckableHeading title="Definition" titleOrder={2}>
@@ -56,10 +56,7 @@ export default function Kegel() {
                     <Lösung title="Lösung" titleOrder={3} id="LösungNetze">
                         <Image
                             src="/Kegel/KegelNetzeLösung.webp"
-                            h={{
-                                base: "auto",
-                                md: 600,
-                            }}
+                            h={600}
                             width={1650}
                             height={1200}
                             alt="Ein Kegel mit seiner Mantelfläche"
@@ -68,11 +65,11 @@ export default function Kegel() {
                 </CheckableBlockquote>
                 Um die Mantelfläche zu berechnen, benötigen wir neben der Wandhöhe noch die Länge des Kreisbogens (im Bild schwarz). Diese entspricht aber gerade dem Umfang unserer Grundfläche, da der Mantel mit ihr bündig schließen muss. Deshalb können wir uns jetzt einen Trick zu nutze machen:
                 <Flex>
-                    <Image src="/Kegel/Mantel1mod.webp" width={6000} height={4000} alt="Der Mantel eines Kegels" />
-                    <Image src="/Kegel/Mantel2mod.webp" width={1250} height={1590} alt="Der Mantel eines Kegels zweimal zerteilt und nebeneinander gelegt" />
-                    <Image src="/Kegel/Mantel4.webp" width={3321} height={4981} alt="Der Mantel eines Kegels viermal zerteilt und nebeneinander gelegt" />
-                    <Image src="/Kegel/Mantel8.webp" width={3321} height={4981} alt="Der Mantel eines Kegels achtmal zerteilt und nebeneinander gelegt" />
-                    <Image src="/Kegel/Mantel16mod.webp" width={3321} height={4981} alt="Der Mantel eines Kegels sechzehnmal zerteilt und nebeneinander gelegt" />
+                    <Image src="/Kegel/Mantel1mod.webp" width={6000} height={4000} alt="Der Mantel eines Kegels" flex={"1 1 400px"}/>
+                    <Image src="/Kegel/Mantel2mod.webp" width={1250} height={1590} alt="Der Mantel eines Kegels zweimal zerteilt und nebeneinander gelegt" flex={"1 1 400px"}/>
+                    <Image src="/Kegel/Mantel4.webp" width={3321} height={4981} alt="Der Mantel eines Kegels viermal zerteilt und nebeneinander gelegt" flex={"1 1 400px"}/>
+                    <Image src="/Kegel/Mantel8.webp" width={3321} height={4981} alt="Der Mantel eines Kegels achtmal zerteilt und nebeneinander gelegt" flex={"1 1 400px"}/>
+                    <Image src="/Kegel/Mantel16mod.webp" width={3321} height={4981} alt="Der Mantel eines Kegels sechzehnmal zerteilt und nebeneinander gelegt" flex={"1 1 400px"}/>
                 </Flex>
                 Durch mehrfaches halbieren und aneinanderlegen der Mantelfläche entsteht ein <b>Rechteck</b>! Im letzten Bild sieht es zwar aus, als wäre es ein Parallelogramm, aber stell dir vor, wir würden es nochmal, nochmal, nochmal… zerteilen. Irgendwann ist die Strecke{" "}
                 <Mark c="desblue">
@@ -92,10 +89,7 @@ export default function Kegel() {
                             width={750}
                             height={750}
                             alt="Das Netz einer Mantelfläche als Anteil im ganzen Kreis"
-                            h={{
-                                base: "auto",
-                                md: 375,
-                            }}
+                            h={375}
                         />
                         Die Fläche des kompletten Kreises ist:
                         <BlockMath math="A = \pi \cdot \textcolor{#3312B8}{h_\text{Wand}}^2" />
@@ -164,10 +158,7 @@ export default function Kegel() {
                 <CheckableHeading title="Volumen einer Pyramide" titleOrder={2}>
                     Wir konstruieren uns eine quadratische Pyramide in einem Würfel. Dieser hat die doppelte Höhe unserer Pyramide.
                     <Image
-                        h={{
-                            base: "auto",
-                            md: 425,
-                        }}
+                        h={425}
                         src="/Pyramiden/VolumenPyramide/PyramideinWürfelEinzeln.webp"
                         width={1050}
                         height={850}
@@ -176,10 +167,7 @@ export default function Kegel() {
                     In diesen Würfel können wir jedoch nicht nur eine Pyramide packen, sondern tatsächlich <b>6 Stück</b>
                     ! Denn unter jede Grundseite passt eine weitere Pyramide, ohne, dass sie einer anderen in die Quere kommt.
                     <Image
-                        h={{
-                            base: "auto",
-                            md: 425,
-                        }}
+                        h={425}
                         src="/Pyramiden/VolumenPyramide/PyramideinWürfel.webp"
                         width={1050}
                         height={850}
@@ -187,10 +175,7 @@ export default function Kegel() {
                     />
                     Das ist etwas schlecht vorzustellen, deshalb ist hier einmal ein Bild von den Pyramiden „herausgezogen“:
                     <Image
-                        h={{
-                            base: "auto",
-                            md: 825,
-                        }}
+                        h={825}
                         src="/Pyramiden/VolumenPyramide/PyramideinWürfelExplosion.webp"
                         width={1650}
                         height={1700}
@@ -219,10 +204,7 @@ export default function Kegel() {
                         Damit hast du alle Informationen, um dir herzuleiten, wie sich das Volumen eines Kegels berechnen lässt. Halte deine Überlegungen in Form von Skizzen und einem Erklärtext fest!
                         <Lösung title="Lösung" titleOrder={3} id="Lösung-Kegelvolumen">
                             <Image
-                                h={{
-                                    base: "auto",
-                                    md: 325,
-                                }}
+                                h={325}
                                 src="/Kegel/PyramidezuKegel.webp"
                                 width={1650}
                                 height={650}

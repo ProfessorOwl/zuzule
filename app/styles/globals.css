@@ -34,29 +34,27 @@ div.next-video-container {
 }
 
 .katex {
-    /* display: none !important; */
     width: 100%;
 }
 
 .katex * {
+    /* display: none; */
     font-family: var(--font-pennstander) !important;
 }
 
 body > div[aria-hidden="true"] {
     width: 0px !important;
 }
-
-/* Blockquotes */
-.m_ddec01c0 {
-    /* display: none !important; */
+.mantine-Flex-root > .mantine-Image-root {
+    margin-inline: 0px;
+    flex: 1;
 }
-
-/* Bilder */
-.m_9e117634 {
-    /* display: none !important; */
+/* .mantine-Image-root {
+    display: none !important;
 }
-
-/* Text aus Überschriften */
-.m_8a5d1357 {
-    /* display: none !important; */
+.mantine-Title-root {
+    display: none !important;
 }
+.mantine-Blockquote-root {
+    display: none;
+} */

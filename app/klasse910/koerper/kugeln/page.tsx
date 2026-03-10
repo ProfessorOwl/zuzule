@@ -24,20 +24,16 @@ export default function Kugeln() {
                 Fragt man mehrere Mathematikerinnen und Mathematiker nach ihrem Lieblingskörper, so werden viele von ihnen vermutlich antworten, dass die <b>Kugel</b> der beste Körper ist. Kugeln haben nämlich einige interessante Eigenschaften: Sie hat keinerlei Kanten oder Ecken, kann frei rollen, sieht immer gleich aus, egal von welchem Winkel man sie betrachtet… Die Liste könnte jetzt noch lange weitergehen! Einige weitere Eigenschaften werden wir auf dieser Seite erkunden.
                 <Flex>
                     <Image
-                        h={{
-                            base: "auto",
-                            md: 350,
-                        }}
+                        flex={"0 0 300px"}
+                        h={350}
                         width={3375}
                         height={5062}
                         src={"/Kugeln/basketball.webp"}
                         alt="Ein Basketball, der ins Netz fällt"
                     />
                     <Image
-                        h={{
-                            base: "auto",
-                            md: 350,
-                        }}
+                        flex={"0 0 300px"}
+                        h={350}
                         width={3375}
                         height={5062}
                         src={"/Kugeln/LasVegasSphere.webp"}
@@ -50,10 +46,7 @@ export default function Kugeln() {
                 <Video src={Lichtkugel} />
                 Zeichnet man die Lichtbahnen nach, so entsteht dabei dieses Bild:
                 <Image
-                    h={{
-                        base: "auto",
-                        md: 400,
-                    }}
+                    h={400}
                     width={1920}
                     height={1080}
                     src={"/Kugeln/LichtKugel.webp"}
@@ -73,10 +66,7 @@ export default function Kugeln() {
                     Beide Stapel bestehen aus 10 gleichgroßen Teilstücken. In dem Beispiel sind sie relativ groß, kann man die Scheiben noch gut voneinander unterscheiden. Aber stell dir vor, wir machen sie dünner:
                     <Flex>
                         <ImageCaption
-                            h={{
-                                base: "auto",
-                                md: 250,
-                            }}
+                            h={250}
                             src="/SchiefeKoerper/PapierstapelGerade.webp"
                             width={6000}
                             height={4000}
@@ -85,10 +75,7 @@ export default function Kugeln() {
                             Der Papierstapel ist gerade.
                         </ImageCaption>
                         <ImageCaption
-                            h={{
-                                base: "auto",
-                                md: 250,
-                            }}
+                            h={250}
                             width={6000}
                             height={4000}
                             src={"/SchiefeKoerper/PapierstapelSchief.webp"}
@@ -103,10 +90,7 @@ export default function Kugeln() {
                     Oft hat man das Prinzip des Cavalieri dann im Kopf, wenn zwei Körper sich schon relativ ähnlich sehen: gerade vs. schiefe Pyramide, gerade vs. schiefes Prisma, … Tatsächlich ist es aber egal, welche Form unser Körper und die Schnittfläche haben, solange der <b>Flächeninhalt gleich ist</b>. Das nutzen wir nun aus. Wir konstruieren eine Halbkugel mit Radius <InlineMath math="r" />. Daneben stellen wir einen Zylinder mit gleichem Radius <InlineMath math="r" />, der so hoch ist wie die Kugel, also <InlineMath math="r" />
                     -hoch.
                     <Image
-                        h={{
-                            base: "auto",
-                            md: 400,
-                        }}
+                        h={400}
                         width={1550}
                         height={1000}
                         src={"/Kugeln/KugelKegelHerleitung.webp"}
@@ -209,10 +193,7 @@ export default function Kugeln() {
                 Dafür füllen wir die Oberfläche einer Kugel mit ganz vielen <b>Vierecken</b> oder <b>Dreiecken</b> aus. Die Form spielt keine Rolle, solange man aus den Flächen eine Pyramide bilden kann, deren Spitze der Mittelpunkt der Kugel ist. Die linke Seite des Bildes unten erklärt, wie so eine „Kugel“ aussehen würde.
                 <Image
                     visibleFrom="md"
-                    h={{
-                        base: "auto",
-                        md: 400,
-                    }}
+                    h={400}
                     width={2100}
                     height={800}
                     src={"/Kugeln/KugelUnterteilungDesktop.webp"}
@@ -220,10 +201,7 @@ export default function Kugeln() {
                 />
                 <Image
                     hiddenFrom="md"
-                    h={{
-                        base: "auto",
-                        md: 400,
-                    }}
+                    h={400}
                     width={2100}
                     height={800}
                     src={"/Kugeln/KugelUnterteilungMobil.webp"}
@@ -242,7 +220,7 @@ export default function Kugeln() {
                 <BlockMath math="V = V_\text{Pyramide, 1} + V_\text{Pyramide, 2} + \ldots + V_{\text{Pyramide}, n}" />
                 Beide Gleichungen können wir gleichsetzen, da beide dem Kugelvolumen entsprechen:
                 <BlockMath math="\frac{4}{3}\pi \textcolor{#12B886}{r}^3 = V_\text{Pyramide, 1} + V_\text{Pyramide, 2} + \ldots + V_{\text{Pyramide}, n}" />
-                Jetzt setzen wir die Formel für das Pyramidenvolumen <InlineMath math="V_\text{Pyramide} = \frac{1}{3}Gh" />
+                Jetzt setzen wir die Formel für das Pyramidenvolumen <InlineMath math="V_\text{Pyramide} = \frac{1}{3}Gh" /> {" "}
                 ein, wobei die Höhe <InlineMath math="h" /> in unserem Fall dem Radius{" "}
                 <Mark c="teal">
                     <InlineMath math="r" />
@@ -320,10 +298,7 @@ export default function Kugeln() {
             <CheckableBlockquote icon="frage" title="Aufgabe: Planetenvergleich" titleOrder={2}>
                 Sucht man nach Bildern unseres Sonnensystems, so stößt man oft auf solche Darstellungen:
                     <Image
-                        h={{
-                            base: "auto",
-                            md: 350,
-                        }}
+                        h={350}
                         width={3804}
                         height={2160}
                         src={"/Kugeln/Sonnensystem.webp"}

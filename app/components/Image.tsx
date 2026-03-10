@@ -1,25 +1,34 @@
-import { CSSProperties, Image, ImageProps, StyleProp } from "@mantine/core";
+import { Image, ImageProps } from "@mantine/core";
+import NextImage from "next/image"
 
-interface BetterImageProps extends ImageProps {
-    h?: StyleProp<CSSProperties["Height"]>;
+export interface BetterImageProps extends ImageProps {
+    h?: number;
     fit?: "contain" | "cover";
-    src: string;
     width: number;
     height: number;
     alt: string;
 }
 
-export default function BetterImage({ h, fit = "contain", src, width, height, alt, ...others }: BetterImageProps) {
+export default function BetterImage({h, fit = "contain", alt, width, height, ...others }: BetterImageProps) {
     const aspectRatio = width/height
     return (
         <Image
-            h={h}
             fit={fit}
-            src={src}
+            alt={alt}
             width={width > 1400 ? 1400 : width}
             height={width > 1400 ? width/aspectRatio : height}
             sizes={"(max-width: var(--mantine-breakpoint-md)) 80vw, 40vw"}
-            alt={alt}
+            my= "md"
+            mx= "auto"
+            component={NextImage}
+            // w="100%"
+            h={ h ? {base: "auto", md: h} : {base: "auto", md: 300}}
+            maw= {{
+                base: 300,
+                xs: 400,
+                sm: 500,
+                md: "100%",
+            }}
             {...others}
         />
     );
