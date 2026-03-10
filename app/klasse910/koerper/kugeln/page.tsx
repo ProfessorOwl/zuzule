@@ -1,5 +1,4 @@
 import { CheckableHeading } from "@/components/CheckableHeading";
-import { SuspenseCheckableHeading } from "@/components/SuspenseCheckableHeading";
 import thinsp from "@/components/thinsp";
 import { Divider, Flex, List, ListItem, Mark, Space, Table, Text } from "@mantine/core";
 import Video from "@/components/Video";
@@ -20,7 +19,7 @@ export const metadata: Metadata = {
 export default function Kugeln() {
     return (
         <Fragment>
-            <SuspenseCheckableHeading title="Die Kugel">
+            <CheckableHeading title="Die Kugel">
                 Fragt man mehrere Mathematikerinnen und Mathematiker nach ihrem Lieblingskörper, so werden viele von ihnen vermutlich antworten, dass die <b>Kugel</b> der beste Körper ist. Kugeln haben nämlich einige interessante Eigenschaften: Sie hat keinerlei Kanten oder Ecken, kann frei rollen, sieht immer gleich aus, egal von welchem Winkel man sie betrachtet… Die Liste könnte jetzt noch lange weitergehen! Einige weitere Eigenschaften werden wir auf dieser Seite erkunden.
                 <Flex>
                     <Image
@@ -40,7 +39,7 @@ export default function Kugeln() {
                         alt="Ein Basketball, der ins Netz fällt"
                     />
                 </Flex>
-            </SuspenseCheckableHeading>
+            </CheckableHeading>
             <CheckableHeading title="Definition" titleOrder={2}>
                 Eine Kugel ist eine Form, bei der alle Punkte auf der Oberfläche den <b>gleichen Abstand zu einem gemeinsamen Mittelpunkt</b> haben. Anders gesprochen: Nimmt man sich ein Seil mit fixer Länge und fixiert es an einem Stativ im Raum, dann sind all die Punkte Teil der Kugel, die man mit der Spitze erreichen kann. Das Video unten zeigt die zweite Definition in Aktion:
                 <Video src={Lichtkugel} />

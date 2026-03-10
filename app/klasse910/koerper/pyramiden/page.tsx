@@ -3,7 +3,6 @@ import { CheckableHeading } from "@/components/CheckableHeading";
 import { ImageCaption } from "@/components/ImageCaption";
 import { Lösung } from "@/components/Lösung";
 import MBlockMath from "@/components/MBlockMath";
-import { SuspenseCheckableHeading } from "@/components/SuspenseCheckableHeading";
 import { Divider, Flex, List, ListItem, Mark, SimpleGrid, Space } from "@mantine/core";
 import { BetterInlineMath as InlineMath, BlockMathScroll as BlockMath } from "@/components/CustomMath";
 import thinsp from "@/components/thinsp";
