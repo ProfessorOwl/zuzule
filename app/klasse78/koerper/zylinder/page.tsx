@@ -251,7 +251,7 @@ export default function Zylinder() {
                             <ListItem>Sind nicht so gut stapelbar wie Quader als Packungen.</ListItem>
                         </List>
                         <Divider />
-                        Das sind einige Gründe, die man mit den Augen sehen kann. Der wichtigste Grund ist jedoch der: Der Inhalt von Konservendosen wird bei der Produktion <b>in</b> in der Dose aufgekocht – und das halten nur Zylinder (oder Kugeln) aus. Schau dir zur Erklärung mal dieses Video von der Sendung mit der Maus an:{" "}
+                        Das sind einige Gründe, die man mit den Augen sehen kann. Der wichtigste Grund ist jedoch der: Der Inhalt von Konservendosen wird bei der Produktion <b>in</b> der Dose aufgekocht – und das halten nur Zylinder (oder Kugeln) aus. Schau dir zur Erklärung mal dieses Video von der Sendung mit der Maus an:{" "}
                         <a target="_blank" href="https://www.wdrmaus.de/filme/sachgeschichten/konservendose.php5">
                             {" "}
                             <Button mb={"0.2em"} rightSection={<IconExternalLink />}>
@@ -400,7 +400,7 @@ export default function Zylinder() {
                                 <Space />
                                 <b>Dose mit gehackten Tomaten</b>
                                 <BlockMath math="A &= \pi \cdot r^2 \\ &= \pi \cdot \left(\frac{7{,}3\,\text{cm}}{2}\right)^2 \\ &\approx 41{,}85\,\text{cm}^2 \\ V &= A \cdot h \\ &= 42{,}31\,\text{cm}^2 \cdot 9,7\,\text{cm} \\ &\approx 405{,}98\,\text{cm}^3" />
-                                Gehen wir davon aus, dass wir richtig gemessen haben, so sind in der Kokosmilch <InlineMath math="400\,\text{mL} - 397{,}61\,\text{mL} = 2{,}39\,\text{mL}" /> zu wenig drin, während uns einem bei den gehackten Tomaten <InlineMath math="405{,}98\,\text{mL} - 400\,\text{mL} = 5{,}98\,\text{mL}" /> geschenkt werden. Ob das als Anlass genügt, um die Kokosmilch im Supermarkt zurückzugeben, muss jedoch jeder selber entscheiden…
+                                Gehen wir davon aus, dass wir richtig gemessen haben, so sind in der Kokosmilch <InlineMath math="400\,\text{mL} - 397{,}61\,\text{mL} = 2{,}39\,\text{mL}" /> zu wenig drin, während uns bei den gehackten Tomaten <InlineMath math="405{,}98\,\text{mL} - 400\,\text{mL} = 5{,}98\,\text{mL}" /> geschenkt werden. Ob das als Anlass genügt, um die Kokosmilch im Supermarkt zurückzugeben, muss jedoch jeder selber entscheiden…
                             </Lösung>
                         </CheckableBlockquote>
                     </CheckableHeading>

@@ -51,7 +51,7 @@ export default function Kegel() {
                 ). Hier nochmal ein Bild zur Illustration:
                 <Image src="/Kegel/Kegel.webp" width={1200} height={600} alt="Ein Kegel mit seiner Mantelfläche" />
                 <CheckableBlockquote icon="frage" title="Aufgabe" titleOrder={2}>
-                    Mit der Info kannst du nun auch Netze zeichnen. Zeichne von den folgenden Zylindern die Netze auf:
+                    Mit der Info kannst du nun auch Netze zeichnen. Zeichne von den folgenden Kegeln die Netze auf:
                     <Image src="/Kegel/KegelNetze.webp" width={1400} height={600} alt="Ein Kegel mit seiner Mantelfläche" />
                     <Lösung title="Lösung" titleOrder={3} id="LösungNetze">
                         <Image
@@ -63,7 +63,7 @@ export default function Kegel() {
                         />{" "}
                     </Lösung>
                 </CheckableBlockquote>
-                Um die Mantelfläche zu berechnen, benötigen wir neben der Wandhöhe noch die Länge des Kreisbogens (im Bild schwarz). Diese entspricht aber gerade dem Umfang unserer Grundfläche, da der Mantel mit ihr bündig schließen muss. Deshalb können wir uns jetzt einen Trick zu nutze machen:
+                Um die Mantelfläche zu berechnen, benötigen wir neben der Wandhöhe noch die Länge des Kreisbogens (im Bild schwarz). Diese entspricht aber gerade dem Umfang unserer Grundfläche, da der Mantel mit ihr bündig schließen muss. Deshalb können wir uns jetzt einen Trick zunutze machen:
                 <Flex>
                     <Image src="/Kegel/Mantel1mod.webp" width={6000} height={4000} alt="Der Mantel eines Kegels" flex={"1 1 400px"}/>
                     <Image src="/Kegel/Mantel2mod.webp" width={1250} height={1590} alt="Der Mantel eines Kegels zweimal zerteilt und nebeneinander gelegt" flex={"1 1 400px"}/>
@@ -279,7 +279,7 @@ export default function Kegel() {
                                         &= \pi \cdot 3\,\text{m} \cdot 6{,}26\,\text{m} \\
                                         &\Rightarrow M \approx 59{,}00\,\text{m}^2"
                                     />
-                                    Die Dachfläche beträgt also 18,78m
+                                    Die Dachfläche beträgt also 59,00m
                                     <sup>2</sup>. Pro Quadratmeter muss 65€ für das Zinkblech und weitere 40€ für die Arbeit ausgegeben werden. Insgesamt also <InlineMath math="65€ + 40€= 105€" />
                                     . Das bedeutet in unserem Fall:
                                     <BlockMath math="59\,\text{m}^2 \cdot 105\frac{€}{\text{m}^2} = 6195€" />

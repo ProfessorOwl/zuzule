@@ -241,7 +241,7 @@ export default function Prismen() {
                         <Image src="/Prismen/DreieckigesPrismaVolumen@2x.webp" width={2400} height={1200} alt="Die Grundfläche eines dreieckigen Prismas wird verdoppelt, wodurch ein quadratisches Prisma entsteht." />
                         Von dem Volumen eines dreieckigen Prismas können wir uns jedes andere Prisma herleiten, da wir jedes n-Eck in beliebig viele Dreiecke zerteilen können! Schau dir dazu das Video unten an.
                         <Video src={VieleckInDreiecke} />
-                        Dadurch können wir also die Formel <InlineMath math="V = A \cdot h" /> festhalten für <b>alle</b> Prismen. Egal, wie das Prisma aussieht, es das Volumen entspricht immer der Grundfläche mal der Höhe.
+                        Dadurch können wir also die Formel <InlineMath math="V = A \cdot h" /> festhalten für <b>alle</b> Prismen. Egal, wie das Prisma aussieht, das Volumen entspricht immer der Grundfläche mal der Höhe.
                     </CheckableHeading>
                 </CheckableHeading>
             </CheckableHeading>

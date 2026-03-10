@@ -68,7 +68,7 @@ export default function Pyramiden() {
                     Das Netz einer quadratischen Pyramide sieht aus wie ein Quadrat mit einem Dreieck auf jeder Seite. Die Höhe der Dreiecke ist nicht gleich der Höhe der Pyramide! Überlege dir, wie man sie berechnen kann!
                     <CheckableBlockquote title="Höhe der Dreieckswände" titleOrder={3} icon="aha">
                         <Lösung>
-                            Du kannst den Satz des Pythagoras verwenden, um die Pyramidenhöhe zu bestimmen. In dem Beispiel hier ist es eine quadratische Pyramide mit Seitenlänge 3 und Höhe 3. Wenn du die <Mark c={"desblue"}>Höhe</Mark> in einer der Wände einzeichnest siehst du, dass sie zusammen mit der <Mark c={"teal"}>Pyramidenhöhe</Mark> und der <Mark c={"desred"}>halben Seitenlänge</Mark> ein rechtwinkliges Dreieck bildet. Wir können also den <b>Satz des Pythagoras</b> verwenden, um die Länge von{" "}
+                            Du kannst den Satz des Pythagoras verwenden, um die Pyramidenhöhe zu bestimmen. In dem Beispiel hier ist es eine quadratische Pyramide mit Seitenlänge 3 und Höhe 3. Wenn du die <Mark c={"desblue"}>Höhe</Mark> in einer der Wände einzeichnest, siehst du, dass sie zusammen mit der <Mark c={"teal"}>Pyramidenhöhe</Mark> und der <Mark c={"desred"}>halben Seitenlänge</Mark> ein rechtwinkliges Dreieck bildet. Wir können also den <b>Satz des Pythagoras</b> verwenden, um die Länge von{" "}
                             <Mark c={"desblue"}>
                                 h<sub>Dreieck</sub>
                             </Mark>{" "}
@@ -91,7 +91,7 @@ export default function Pyramiden() {
                             alt="Das ausgeschnittene Netz mit einem Loch in der Mitte"
                             flex={1}
                         >
-                            Das Netz schneidest du nun aus und schneidest ein Loch in Mitte, sodass wir später Zucker hineingießen können
+                            Das Netz schneidest du nun aus und schneidest ein Loch in die Mitte, sodass wir später Zucker hineingießen können
                         </ImageCaption>
                         <ImageCaption
                             h={250}
@@ -263,7 +263,7 @@ export default function Pyramiden() {
                 Die Höhe der Dreiecke kannst du meistens mit dem Satz des Pythagoras berechnen. Schau dir den Infokasten an, wenn du hier Hilfe brauchst oder gehe direkt zu den Aufgaben!
                 <CheckableBlockquote title="Wdh: Höhe der Dreieckswände" titleOrder={2} icon="aha">
                     <Lösung>
-                        Du kannst den Satz des Pythagoras verwenden, um die Pyramidenhöhe zu bestimmen. In dem Beispiel hier ist es eine quadratische Pyramide mit Seitenlänge 3 und Höhe 3. Wenn du die <Mark c={"desblue"}>Höhe</Mark> in einer der Wände einzeichnest siehst du, dass sie zusammen mit der <Mark c={"green"}>Pyramidenhöhe</Mark> und der <Mark c={"desred"}>halben Seitenlänge</Mark> ein rechtwinkliges Dreieck bildet. Wir können also den <b>Satz des Pythagoras</b> verwenden, um die Länge von{" "}
+                        Du kannst den Satz des Pythagoras verwenden, um die Pyramidenhöhe zu bestimmen. In dem Beispiel hier ist es eine quadratische Pyramide mit Seitenlänge 3 und Höhe 3. Wenn du die <Mark c={"desblue"}>Höhe</Mark> in einer der Wände einzeichnest, siehst du, dass sie zusammen mit der <Mark c={"green"}>Pyramidenhöhe</Mark> und der <Mark c={"desred"}>halben Seitenlänge</Mark> ein rechtwinkliges Dreieck bildet. Wir können also den <b>Satz des Pythagoras</b> verwenden, um die Länge von{" "}
                         <Mark c={"desblue"}>
                             h<sub>Dreieck</sub>
                         </Mark>{" "}
@@ -292,7 +292,7 @@ export default function Pyramiden() {
                             <b>Dächer 2-6</b> <br />
                             Grundfläche: Achteck mit 19,3
                             {thinsp}m<sup>2</sup> und einer Kantenlänge von 2{thinsp}
-                            cm / Höhe: 5{thinsp}m
+                            m / Höhe: 5{thinsp}m
                         </ListItem>
                     </List>
                     <Image

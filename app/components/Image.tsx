@@ -1,4 +1,4 @@
-import { Image, ImageProps } from "@mantine/core";
+import { Image as MantineImage, ImageProps } from "@mantine/core";
 import NextImage from "next/image"
 
 export interface BetterImageProps extends ImageProps {
@@ -9,10 +9,10 @@ export interface BetterImageProps extends ImageProps {
     alt: string;
 }
 
-export default function BetterImage({h, fit = "contain", alt, width, height, ...others }: BetterImageProps) {
+export default function Image({h, fit = "contain", alt, width, height, ...others }: BetterImageProps) {
     const aspectRatio = width/height
     return (
-        <Image
+        <MantineImage
             fit={fit}
             alt={alt}
             width={width > 1400 ? 1400 : width}

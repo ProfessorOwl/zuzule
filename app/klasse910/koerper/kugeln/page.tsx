@@ -60,7 +60,7 @@ export default function Kugeln() {
             <CheckableHeading title="Volumen">
                 Das Volumen einer Kugel ist schwieriger zu bestimmen als bei den anderen Körpern wie Pyramiden, Prismen oder Kegel. Wir müssen dafür etwas kreativ werden und müssen das <b>Prinzip des Cavalieri</b> benutzen!
                 <CheckableBlockquote title="Das Prinzip des Cavalieri" titleOrder={2} icon="exkurs">
-                    Das Prinzip besagt, dass zwei Körper das gleiche Volumen besitzen, wenn sie in jeder Höhe die gleiche Schnittfläche besitzen. Vergleichen wir z.B. einen geraden mit einem Schiefen Quader, die beide die gleiche Grundflächen wie Höhen haben.
+                    Das Prinzip besagt, dass zwei Körper das gleiche Volumen besitzen, wenn sie in jeder Höhe die gleiche Schnittfläche besitzen. Vergleichen wir z.B. einen geraden mit einem schiefen Quader, die beide die gleiche Grundflächen wie Höhen haben.
                     <Image width={6000} height={4000} src={"/SchiefeKoerper/Schachteile.webp"} alt="Ein gerader und ein schiefer Stapel aus quadratischen Teilen" />
                     Beide Stapel bestehen aus 10 gleichgroßen Teilstücken. In dem Beispiel sind sie relativ groß, kann man die Scheiben noch gut voneinander unterscheiden. Aber stell dir vor, wir machen sie dünner:
                     <Flex>
@@ -104,7 +104,7 @@ export default function Kugeln() {
                             <BlockMath math="A_\text{voll} = \pi \textcolor{#12B886}{r}^2" />
                             Der Radius des Innenkreises im Kegel entspricht gerade unserer Höhe <InlineMath math="\textcolor{#3312B8}{x}" />, da der Kegel eine Neigung von 45° hat. Heißt: Für jedes <InlineMath math="\textcolor{#3312B8}{x}" /> das wir hoch gehen, müssen wir auch <InlineMath math="\textcolor{#3312B8}{x}" /> zur Seite gehen. Hier ergibt sich:
                             <BlockMath math="A_\text{innen} = \pi \textcolor{#3312B8}{x}^2" />
-                            Damit könne wir die Fläche vom Kreisring <InlineMath math="A_\text{Z}" /> berechnen.
+                            Damit können wir die Fläche vom Kreisring <InlineMath math="A_\text{Z}" /> berechnen.
                             <BlockMath math="A_\text{Z} &= A_\text{voll} - A_\text{innen} \\ &= \pi \textcolor{#12B886}{r}^2 - \pi \textcolor{#3312B8}{x}^2" />
                             Weiter können wir das erstmal nicht vereinfachen. Gehen wir also zum Halbkreis
                         </ListItem>
@@ -117,7 +117,7 @@ export default function Kugeln() {
                             Das ist exakt das gleiche Ergebnis wie vorhin!
                         </ListItem>
                     </List>
-                    Damit haben wir hergeleitet, dass die Halbkugel in jeder Höhe die gleiche Höhe hat wie der Kreisring zwischen Kegel und Zylinder, denn es gilt: <InlineMath math="A_\text{Z} = A_\text{K}" />
+                    Damit haben wir hergeleitet, dass die Halbkugel in jeder Höhe die gleiche Schnittfläche hat wie der Kreisring zwischen Kegel und Zylinder, denn es gilt: <InlineMath math="A_\text{Z} = A_\text{K}" />
                     . Wir können also die Regel von Cavalieri anwenden. Die Halbkugel hat damit das gleiche Volumen wie der Körper zwischen dem Kegel und dem Zylinder. Genau dieses Volumen müssen wir jetzt berechnen!
                     <Divider />
                     Das Volumen bekommen wir raus, indem wir das Volumen des Kegels vom Volumen des Zylinders abziehen.
@@ -304,7 +304,7 @@ export default function Kugeln() {
                         alt="Ein Basketball, der ins Netz fällt"
                     />
                 Das sieht zwar schön aus, aber die Größenverhältnisse sind (hier) falsch. Deshalb macht es Sinn, sich mathematisch die Unterschiede bewusst zu machen. Vergleiche die Erde und den Mond mit dem größten Planeten, Jupiter.
-                Die Himmelsköper haben folgende Radii <InlineMath math="r"/>:
+                Die Himmelskörper haben folgende Radii <InlineMath math="r"/>:
                 <BlockMath math="r_\text{Erde}&=6371\,\text{km} \\ r_\text{Mond}&=1738\,\text{km} \\ r_\text{Jupiter}& =71492\,\text{km}"/>
                 <List type="ordered">
                     <ListItem>Berechne die Oberflächeninhalte der Himmelskörper und bestimme die Verhältnisse Erde/Mond und Jupiter/Erde.</ListItem>
@@ -377,7 +377,7 @@ export default function Kugeln() {
                             <BlockMath math="\frac{m_\text{Jupiter}}{m_\text{Erde}} = \frac{2{,}00 \cdot 10^{24}\,\text{t}}{5{,}96 \cdot 10^{21}\,\text{t}} \approx 335{,}57"/>
                         Die Erde ist also ca. 80 mal so schwer wie der Mond, und ca. 336 mal leichter als Jupiter.
                         Die Zahlen unterscheiden sich stark von den Volumenverhältnisses! Denn die Erde ist fast doppelt so dicht wie der Mond und mehr als viermal so dicht wie Jupiter!
-                        Eine Erklärung für die Gewichtsunterschiede ist, dass die Erde einen großen Anteil Metall in ihrer Kuste hat, während der Mond vorallem aus Gestein besteht. Jupiter auf der anderen Seite besteht vornehmlich aus Gas, auch wenn er einen festen Kern hat.
+                        Eine Erklärung für die Gewichtsunterschiede ist, dass die Erde einen großen Anteil Metall in ihrer Kruste hat, während der Mond vor allem aus Gestein besteht. Jupiter auf der anderen Seite besteht vornehmlich aus Gas, auch wenn er einen festen Kern hat.
                     </ListItem>
                 </List>  
                 </Lösung>
