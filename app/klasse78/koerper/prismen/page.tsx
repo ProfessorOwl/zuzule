@@ -2,7 +2,7 @@ import { CheckableBlockquote } from "@/components/CheckableBlockquote";
 import { CheckableHeading } from "@/components/CheckableHeading";
 import { Lösung } from "@/components/Lösung";
 import { ImageCaption } from "@/components/ImageCaption";
-import { Divider, List, ListItem, SimpleGrid } from "@mantine/core";
+import { Divider, Flex, List, ListItem, SimpleGrid } from "@mantine/core";
 import { BetterInlineMath as InlineMath, BlockMathScroll as BlockMath } from "@/components/CustomMath";
 import GeoGebraAppletSlider from "@/components/GeoGebraAppletSlider";
 import Video from "@/components/Video";
@@ -24,10 +24,7 @@ export default function Prismen() {
                 <Divider my={"md"} />
                 Das Wort „Prisma“ bezeichnet aber nicht nur solche Glasgeräte, sondern im allgemeinen alle Körper mit dieser Form. Mathematisch interessiert uns daher weniger die Lichtbrechung, sondern viel mehr, was die Form so besonders macht! Wie könnte man es aus Papier falten? Welches Volumen hat ein Prisma? Und sind Prismen überhaupt immer dreieckig?
             <Image
-                h={{
-                    base: "auto",
-                    md: 400,
-                }}
+                h={400}
                 src="/Prismen/prisma1.webp"
                 width={3499}
                 height={3377}
@@ -72,25 +69,22 @@ export default function Prismen() {
 
             <CheckableHeading title="Netze von Prismen">
                 Geometrische Körper kann man in Netze zerlegen. Vielleicht hast du schonmal ein Würfelnetz aufgemalt, um daraus einen Spielwürfel zu basteln?
-                <SimpleGrid cols={2} my={"md"}>
-                    <Image src="/Prismen/NetzWürfel.webp" width={6000} height={4000} alt="Ein Würfelnetz, gezeichnet auf Papier." />
+                <Flex>
+                    <Image src="/Prismen/NetzWürfel.webp" width={6000} height={4000} alt="Ein Würfelnetz, gezeichnet auf Papier."/>
                     <Image src="/Prismen/WürfelPapier.webp" width={6000} height={4000} alt="Das Würfelnetz gefaltet und verklebt, sodass es einen 3D-Würfel ergibt." />
-                </SimpleGrid>
+                </Flex>
                 Auch Prismen kannst du in ein Netz zerlegen! Zeichne dafür zuerst die Grundfläche des Prismas auf, in dem Beispiel hier wäre das ein Dreieck. Dann ziehst du senkrecht von jeder Ecke Linien hoch. Diese bestimmen, wie hoch dein Körper am Ende wird. Auf eine dieser Seiten musst du dann die Seite zeichnen, die der Grundseite gegenüberliegt – hier also erneut ein Dreieck. Dann heißt es: Ausschneiden, Falten und mit Klebeband zusammenkleben!
-                <SimpleGrid cols={2} my={"md"}>
+                <Flex>
                     <Image src="/Prismen/NetzPrisma.webp" width={6000} height={4000} alt="Das Netz eines dreieckigen Prismas, gezeichnet auf Papier." />
                     <Image src="/Prismen/PrismaPapier.webp" width={6000} height={4000} alt="Das Netz des Prismas gefaltet und verklebt, sodass ein 3D-Prisma ergibt." />
-                </SimpleGrid>
+                </Flex>
             </CheckableHeading>
 
             <CheckableHeading title="Oberflächeninhalt">
                 Über das Netz eines Körpers lässt sich gut der Oberflächeninhalt berechnen, da hier nur noch einfache Formen vorkommen. Man unterscheidet hier zwischen <b>Mantelfläche</b> und <b>Grundfläche</b>
                 . Die Grundfläche bezeichnet die Grundform des Prismas, also ob es z.B. drei- oder viereckig ist. Die Mantelfläche ist dann die Fläche, die durch die Höhe des Prismas dazukommt.
                 <Image
-                    h={{
-                        base: "auto",
-                        md: 400,
-                    }}
+                    h={400}
                     src="/Prismen/PrismaNetzFläche@2x.webp"
                     width={3200}
                     height={2000}
@@ -123,10 +117,7 @@ export default function Prismen() {
             <CheckableBlockquote title="Aha! 2" icon="aha">
                 Zerlegt man das Prisma, das wir oben sehen, in ein etwas anderes Netz, können wir etwas praktisches beobachten: Die Mantelfläche eines Prismas bildet ein <b>Rechteck</b>! Die Seitenlängen dieses Rechtecks können wir uns leicht herleiten, wenn wir die Grundfläche kennen. Die einen Seiten entsprechen der <b>Höhe</b> des Prismas, die anderen dem <b>Umfang</b> der Grundfläche. Das macht die Berechnung des Oberflächeninhalts deutlich einfacher!
                 <Image
-                    h={{
-                        base: "auto",
-                        md: 400,
-                    }}
+                    h={400}
                     src="/Prismen/PrismaNetzFlächeRechteck@2x.webp"
                     width={3200}
                     height={2000}
@@ -137,12 +128,9 @@ export default function Prismen() {
             <CheckableHeading title="Volumenberechnung">
                 Neben dem Oberflächeninhalt ist oft auch das Volumen eines Körpers interessant. Das ist bei einem Prisma zum Glück nicht allzu kompliziert, da wir es mathematisch gut beschreiben können.
                 <CheckableBlockquote title="Exkurs: Volumenbestimmung durch Verdrängung" icon="exkurs">
-                    <SimpleGrid cols={2} my={"md"}>
+                    <Flex>
                         <ImageCaption
-                            h={{
-                                base: "auto",
-                                md: 250,
-                            }}
+                            h={250}
                             src="/Prismen/VolumenWasser/VolumenWasser1.webp"
                             width={6000}
                             height={4000}
@@ -151,10 +139,7 @@ export default function Prismen() {
                             Experimentell lässt sich das Volumen beliebiger Körper gut mit etwas Wasser und einem Messbecher testen. Testen wir das Volumen von diesem Stein.
                         </ImageCaption>
                         <ImageCaption
-                            h={{
-                                base: "auto",
-                                md: 250,
-                            }}
+                            h={250}
                             src="/Prismen/VolumenWasser/VolumenWasser2.webp"
                             width={6000}
                             height={4000}
@@ -165,10 +150,7 @@ export default function Prismen() {
                             mL.
                         </ImageCaption>
                         <ImageCaption
-                            h={{
-                                base: "auto",
-                                md: 250,
-                            }}
+                            h={250}
                             src="/Prismen/VolumenWasser/VolumenWasser3.webp"
                             width={6000}
                             height={4000}
@@ -177,10 +159,7 @@ export default function Prismen() {
                             Dann geben wir den Stein in den Messbecher – er muss komplett bedeckt sein!
                         </ImageCaption>
                         <ImageCaption
-                            h={{
-                                base: "auto",
-                                md: 250,
-                            }}
+                            h={250}
                             src="/Prismen/VolumenWasser/VolumenWasser4.webp"
                             width={6000}
                             height={4000}
@@ -189,10 +168,7 @@ export default function Prismen() {
                             Der Stein ist dichter als Wasser und sinkt deshalb zu Boden.
                         </ImageCaption>
                         <ImageCaption
-                            h={{
-                                base: "auto",
-                                md: 250,
-                            }}
+                            h={250}
                             src="/Prismen/VolumenWasser/VolumenWasser5.webp"
                             width={6000}
                             height={4000}
@@ -202,7 +178,7 @@ export default function Prismen() {
                             {thinsp}
                             mL.
                         </ImageCaption>
-                    </SimpleGrid>
+                    </Flex>
                     Das Volumen des Steins entspricht der Differenz der beiden abgelesenen Wassermengen: <InlineMath math="720\,\text{mL} - 600\,\text{mL} = 120\,\text{mL}" />. Mit der Methode lässt sich natürlich nicht nur das Volumen von Steinen bestimmen, sondern von allen möglichen Körpern und Formen. Voraussetzung ist nur, dass du ein Gefäß hast, bei dem du die Füllmenge ablesen kannst.
                 </CheckableBlockquote>
                 <CheckableHeading title="Volumen mathematisch hergeleitet" titleOrder={2}>
@@ -265,7 +241,7 @@ export default function Prismen() {
                         <Image src="/Prismen/DreieckigesPrismaVolumen@2x.webp" width={2400} height={1200} alt="Die Grundfläche eines dreieckigen Prismas wird verdoppelt, wodurch ein quadratisches Prisma entsteht." />
                         Von dem Volumen eines dreieckigen Prismas können wir uns jedes andere Prisma herleiten, da wir jedes n-Eck in beliebig viele Dreiecke zerteilen können! Schau dir dazu das Video unten an.
                         <Video src={VieleckInDreiecke} />
-                        Dadurch können wir also die Formel <InlineMath math="V = A \cdot h" /> festhalten für <b>alle</b> Prismen. Egal, wie das Prisma aussieht, es das Volumen entspricht immer der Grundfläche mal der Höhe.
+                        Dadurch können wir also die Formel <InlineMath math="V = A \cdot h" /> festhalten für <b>alle</b> Prismen. Egal, wie das Prisma aussieht, das Volumen entspricht immer der Grundfläche mal der Höhe.
                     </CheckableHeading>
                 </CheckableHeading>
             </CheckableHeading>

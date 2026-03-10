@@ -24,7 +24,7 @@ function HeaderSimpleInner() {
     return (
         <header className={classes.header} ref={clickOutside}> 
                 {isStudent ? <div className={classes.innerStudent}><Image component={NextImage} src="/Logo.svg" alt="Logo" width={526} height={223} fill={false} h={40} w={"auto"} preload={true} /></div> : 
-                <Container size="sm" className={classes.inner}>
+                <Container size={"xl"} maw={"100%"} className={classes.inner}>
                     <Link href="/ueber" className={classes.mainlink}>
                             <Image component={NextImage} src="/Logo.svg" alt="Logo" width={526} height={223} fill={false} h={40} w={"auto"} preload={true} />
                     </Link>
@@ -39,13 +39,9 @@ function HeaderSimpleInner() {
                         <Link href="/ueber" className={classes.link} data-active={pathname.startsWith("/ueber") || undefined}>
                             Über das Projekt
                         </Link>
-                    </Group>
-
-                    <Burger opened={opened} onClick={toggle} hiddenFrom="md" size="sm" />
-                {(isKlasse78 || isKlasse910) && <Button 
+                         {(isKlasse78 || isKlasse910) ? <Button
+                         color={"desblue"} 
                     className={classes.releaseButton} 
-                    pos={"absolute"} 
-                    right={"var(--mantine-spacing-md)"} 
                     visibleFrom="md" 
                     onClick={() => {
                         const params = new URLSearchParams(searchParams.toString());
@@ -54,7 +50,11 @@ function HeaderSimpleInner() {
                     }}
                 >
                     Inhalt freigeben
-                </Button>}
+                </Button> : <Container  w={192}></Container>}
+                    </Group>
+
+                    <Burger opened={opened} onClick={toggle} hiddenFrom="md" size="sm" />
+               
                 </Container>}
 
             {opened && (

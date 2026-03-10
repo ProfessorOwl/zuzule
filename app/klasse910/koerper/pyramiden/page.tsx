@@ -3,7 +3,6 @@ import { CheckableHeading } from "@/components/CheckableHeading";
 import { ImageCaption } from "@/components/ImageCaption";
 import { Lösung } from "@/components/Lösung";
 import MBlockMath from "@/components/MBlockMath";
-import { SuspenseCheckableHeading } from "@/components/SuspenseCheckableHeading";
 import { Divider, Flex, List, ListItem, Mark, SimpleGrid, Space } from "@mantine/core";
 import { BetterInlineMath as InlineMath, BlockMathScroll as BlockMath } from "@/components/CustomMath";
 import thinsp from "@/components/thinsp";
@@ -19,9 +18,9 @@ export default function Pyramiden() {
         <Fragment>
             <CheckableHeading title="Die Pyramide">
                 Pyramiden haben auf Menschen schon lange eine Anziehungskraft – so haben schon die Maya und Ägypter Pyramiden gebaut, die teilweise noch bis heute stehen. Deswegen ist es nicht verwunderlich, dass sich auch Mathematiker für Pyramiden interessieren. Wir schauen uns hier die Grundlagen an und gehen auf die Eigenschaften von Pyramiden ein: Wie „baut“ man Pyramiden aus Papier? Wie bestimmt man deren Oberflächeninhalt oder Volumen?
-                <Flex>
-                    <Image src="/Pyramiden/pyramideägypten.webp" width={3888} height={2202} alt="Mehrere ägyptische Pyramiden" />
-                    <Image src="/Pyramiden/pyramidemaya.webp" width={6000} height={3927} alt="Eine Pyramide der Maya" />
+                <Flex flex={"1 1 auto"}>
+                    <Image src="/Pyramiden/pyramideägypten.webp" h={250} width={3888} height={2202} alt="Mehrere ägyptische Pyramiden" flex={1} mx={0}/>
+                    <Image src="/Pyramiden/pyramidemaya.webp" h={250} width={6000} height={3927} alt="Eine Pyramide der Maya" flex={1} mx={0}/>
                 </Flex>
             <CheckableHeading title="Definition" titleOrder={2}>
                 Eine Pyramide hat eine eckige Grundfläche, z.B. ein Dreieck oder ein Quadrat. Allgemein nennt man eckige Flächen auch <b>n-Ecke</b>. Den Mittelpunkt dieser Fläche ziehen wir nach oben, sodass wir die Pyramidenspitze bekommen. Verbinden wir nun alle Eckpunkte unserer Grundfläche mit der Spitze, so erhalten wir eine <b>gerade Pyramide</b>!
@@ -34,10 +33,7 @@ export default function Pyramiden() {
                     width={1000}
                     height={1000}
                     alt="Eine Pyramide der Maya"
-                    h={{
-                        base: "auto",
-                        md: 500,
-                    }}
+                    h={500}
                 />
                 <Lösung title="Lösung" id="Lösung-AllesPyramide" titleOrder={3}>
                     <List type="ordered">
@@ -72,7 +68,7 @@ export default function Pyramiden() {
                     Das Netz einer quadratischen Pyramide sieht aus wie ein Quadrat mit einem Dreieck auf jeder Seite. Die Höhe der Dreiecke ist nicht gleich der Höhe der Pyramide! Überlege dir, wie man sie berechnen kann!
                     <CheckableBlockquote title="Höhe der Dreieckswände" titleOrder={3} icon="aha">
                         <Lösung>
-                            Du kannst den Satz des Pythagoras verwenden, um die Pyramidenhöhe zu bestimmen. In dem Beispiel hier ist es eine quadratische Pyramide mit Seitenlänge 3 und Höhe 3. Wenn du die <Mark c={"desblue"}>Höhe</Mark> in einer der Wände einzeichnest siehst du, dass sie zusammen mit der <Mark c={"teal"}>Pyramidenhöhe</Mark> und der <Mark c={"desred"}>halben Seitenlänge</Mark> ein rechtwinkliges Dreieck bildet. Wir können also den <b>Satz des Pythagoras</b> verwenden, um die Länge von{" "}
+                            Du kannst den Satz des Pythagoras verwenden, um die Pyramidenhöhe zu bestimmen. In dem Beispiel hier ist es eine quadratische Pyramide mit Seitenlänge 3 und Höhe 3. Wenn du die <Mark c={"desblue"}>Höhe</Mark> in einer der Wände einzeichnest, siehst du, dass sie zusammen mit der <Mark c={"teal"}>Pyramidenhöhe</Mark> und der <Mark c={"desred"}>halben Seitenlänge</Mark> ein rechtwinkliges Dreieck bildet. Wir können also den <b>Satz des Pythagoras</b> verwenden, um die Länge von{" "}
                             <Mark c={"desblue"}>
                                 h<sub>Dreieck</sub>
                             </Mark>{" "}
@@ -86,53 +82,48 @@ export default function Pyramiden() {
                         </Lösung>
                         <Space my="xs" />
                     </CheckableBlockquote>
-                    <Flex>
+                    <Flex flex={"1 1 auto"} align={"baseline"}>
                         <ImageCaption
-                            h={{
-                                base: "auto",
-                                md: 250,
-                            }}
+                            h={250}
                             src="/Pyramiden/VolumenPyramide/PyramideNetzausgeschnitten.webp"
                             width={6000}
                             height={4000}
                             alt="Das ausgeschnittene Netz mit einem Loch in der Mitte"
+                            flex={1}
                         >
-                            Das Netz schneidest du nun aus und schneidest ein Loch in Mitte, sodass wir später Zucker hineingießen können
+                            Das Netz schneidest du nun aus und schneidest ein Loch in die Mitte, sodass wir später Zucker hineingießen können
                         </ImageCaption>
                         <ImageCaption
-                            h={{
-                                base: "auto",
-                                md: 250,
-                            }}
+                            h={250}
                             src="/Pyramiden/VolumenPyramide/PyramidePapier.webp"
                             width={6000}
                             height={4000}
                             alt="Die zusammengeklebte Pyramide"
+                                                        flex={1}
+
                         >
                             Die Pyramide klebst du vorsichtig mit Klebeband zusammen, sodass alle Kanten dicht sind!
                         </ImageCaption>
                         <ImageCaption
-                            h={{
-                                base: "auto",
-                                md: 250,
-                            }}
+                            h={250}
                             src="/Pyramiden/VolumenPyramide/PyramideWaageZubehör.webp"
                             width={6000}
                             height={4000}
                             alt="Die Pyramide kopfüber in einem Glas auf einer Waage. Daneben ein Papiertrichter und ein Glas mit Zucker"
+                                                        flex={1}
+
                         >
                             Die Pyramide stellst du nun kopfüber in einem Glas auf eine Waage und tarierst sie auf 0{thinsp}
                             g. Zum Einfüllen ist ein Trichter praktisch – wenn du keinen hast, kannst du dir einen aus Papier rollen.
                         </ImageCaption>
                         <ImageCaption
-                            h={{
-                                base: "auto",
-                                md: 250,
-                            }}
+                            h={250}
                             src="/Pyramiden/VolumenPyramide/PyramideWaageVoll.webp"
                             width={6000}
                             height={4000}
                             alt="Die nun gefüllte Pyramide im Glas auf der Waage. Die Waage zeigt 43 Gram an"
+                                                        flex={1}
+
                         >
                             Die Waage zeigt an, dass unsere Pyramide ca. 45
                             {thinsp}g Zucker enthält.
@@ -149,10 +140,7 @@ export default function Pyramiden() {
                 <CheckableBlockquote icon="aha" title="Volumenformel experimentell">
                     Mit dem experimentell berechneten Volumen können wir eine Formel für Pyramiden aufstellen, sodass wir ohne Zuckerfüllung das Volumen berechnen können. Vergleichen wir sie dazu mit einem Würfel, der die Pyramide genau umschließt. Seine Seitenlängen entsprechen also der Höhe der Pyramide.
                     <Image
-                        h={{
-                            base: "auto",
-                            md: 375,
-                        }}
+                        h={375}
                         src="/Pyramiden/VolumenPyramide/PyramideWürfel.webp"
                         width={750}
                         height={900}
@@ -170,10 +158,7 @@ export default function Pyramiden() {
                 <CheckableHeading title="Theoretisch" titleOrder={2}>
                     Wir konstruieren uns erneut eine quadratische Pyramide in einem Würfel. Dieser soll diesmal aber die doppelte Höhe unserer Pyramide haben.
                     <Image
-                        h={{
-                            base: "auto",
-                            md: 425,
-                        }}
+                        h={425}
                         src="/Pyramiden/VolumenPyramide/PyramideinWürfelEinzeln.webp"
                         width={1050}
                         height={850}
@@ -182,10 +167,7 @@ export default function Pyramiden() {
                     In diesen Würfel können wir jedoch nicht nur eine Pyramide packen, sondern tatsächlich <b>6 Stück</b>
                     ! Denn unter jede Grundseite passt eine weitere Pyramide, ohne, dass sie einer anderen in die Quere kommt.
                     <Image
-                        h={{
-                            base: "auto",
-                            md: 425,
-                        }}
+                        h={425}
                         src="/Pyramiden/VolumenPyramide/PyramideinWürfel.webp"
                         width={1050}
                         height={850}
@@ -193,10 +175,7 @@ export default function Pyramiden() {
                     />
                     Das ist etwas schlecht vorzustellen, deshalb ist hier einmal ein Bild von den Pyramiden „herausgezogen“:
                     <Image
-                        h={{
-                            base: "auto",
-                            md: 825,
-                        }}
+                        h={825}
                         src="/Pyramiden/VolumenPyramide/PyramideinWürfelExplosion.webp"
                         width={1650}
                         height={1700}
@@ -220,10 +199,7 @@ export default function Pyramiden() {
                 <CheckableBlockquote title="Aufgabe: Pyramidenrätsel" icon="frage">
                     Es sind mehrere Pyramiden gegeben. Bestimme den Wert der Unbekannten!
                     <Image
-                        h={{
-                            base: "auto",
-                            md: 500,
-                        }}
+                        h={500}
                         src="/Pyramiden/Pyramidenrätsel.webp"
                         width={1400}
                         height={1000}
@@ -267,10 +243,7 @@ export default function Pyramiden() {
                 <Divider />
                 Vergleichen wir mal die Netze von einer dreieckigen und einer quadratischen Pyramide:
                 <Image
-                    h={{
-                        base: "auto",
-                        md: 500,
-                    }}
+                    h={500}
                     src="/Pyramiden/PyramideOberfläche.webp"
                     width={1400}
                     height={1000}
@@ -290,7 +263,7 @@ export default function Pyramiden() {
                 Die Höhe der Dreiecke kannst du meistens mit dem Satz des Pythagoras berechnen. Schau dir den Infokasten an, wenn du hier Hilfe brauchst oder gehe direkt zu den Aufgaben!
                 <CheckableBlockquote title="Wdh: Höhe der Dreieckswände" titleOrder={2} icon="aha">
                     <Lösung>
-                        Du kannst den Satz des Pythagoras verwenden, um die Pyramidenhöhe zu bestimmen. In dem Beispiel hier ist es eine quadratische Pyramide mit Seitenlänge 3 und Höhe 3. Wenn du die <Mark c={"desblue"}>Höhe</Mark> in einer der Wände einzeichnest siehst du, dass sie zusammen mit der <Mark c={"green"}>Pyramidenhöhe</Mark> und der <Mark c={"desred"}>halben Seitenlänge</Mark> ein rechtwinkliges Dreieck bildet. Wir können also den <b>Satz des Pythagoras</b> verwenden, um die Länge von{" "}
+                        Du kannst den Satz des Pythagoras verwenden, um die Pyramidenhöhe zu bestimmen. In dem Beispiel hier ist es eine quadratische Pyramide mit Seitenlänge 3 und Höhe 3. Wenn du die <Mark c={"desblue"}>Höhe</Mark> in einer der Wände einzeichnest, siehst du, dass sie zusammen mit der <Mark c={"green"}>Pyramidenhöhe</Mark> und der <Mark c={"desred"}>halben Seitenlänge</Mark> ein rechtwinkliges Dreieck bildet. Wir können also den <b>Satz des Pythagoras</b> verwenden, um die Länge von{" "}
                         <Mark c={"desblue"}>
                             h<sub>Dreieck</sub>
                         </Mark>{" "}
@@ -319,14 +292,11 @@ export default function Pyramiden() {
                             <b>Dächer 2-6</b> <br />
                             Grundfläche: Achteck mit 19,3
                             {thinsp}m<sup>2</sup> und einer Kantenlänge von 2{thinsp}
-                            cm / Höhe: 5{thinsp}m
+                            m / Höhe: 5{thinsp}m
                         </ListItem>
                     </List>
                     <Image
-                        h={{
-                            base: "auto",
-                            md: 500,
-                        }}
+                        h={500}
                         fit="contain"
                         src="/Pyramiden/SchlossDächer.webp"
                         width={6484}

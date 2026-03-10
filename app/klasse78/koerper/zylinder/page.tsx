@@ -71,10 +71,7 @@ export default function Zylinder() {
                 </List>
                 <Lösung title="Lösung" id="Lösung-Schrägbilder" titleOrder={3}>
                     <Image
-                        h={{
-                            base: "auto",
-                            md: 500,
-                        }}
+                        h={500}
                         src="/Zylinder/ZylinderLösung@2x.webp"
                         width={3600}
                         height={2000}
@@ -85,9 +82,7 @@ export default function Zylinder() {
             </CheckableHeading>
             <CheckableHeading title="Der Mantel eines Zylinders">
                 Eine praktische Eigenschaft von Zylindern ist, dass man sie <b>rollen</b> kann. Denk mal an einen Autoreifen – er ist praktisch nichts anderes als ein rollender Zylinder – insbesondere wenn wir uns die Autoreifen von Formel-1 Autos anschauen!
-                <ImageCaption src="/Zylinder/formel1reifen.webp" width={846} rotate="right" height={537} alt="Ein Formel-1 Auto von hinten. Links sind zwei Reifen sichtbar.">
-                    rare-gallery.com
-                </ImageCaption>
+                <Image src="/Zylinder/formel1reifen.webp" width={846} height={537} alt="Ein Formel-1 Auto von hinten. Links sind zwei Reifen sichtbar."/>
                 Die Fläche, über die man einen Zylinder rollen kann, nennt man auch <b>Mantelfläche</b>. Die Ober- und Unterseite des Zylinders wird <b>Grundfläche</b> genannt. Das kannst du dir merken, wenn du an einen Regenmantel denkst: Den trägst du schließlich um dich herum und nicht unter dir 🧥.
                 <CheckableHeading title="Bestimmen der Fläche eines Zylinders durch Abrollen" titleOrder={2}>
                     Da wir Zylinder abrollen können, lässt sich die Fläche eines Zylinders relativ einfach bestimmen. Wir legen ihn dazu auf eine Seite und schauen, wie weit wir ihn rollen müssen, bis wir wieder am Startpunkt angekommen sind! Bei Objekten, die aus Plastik sind, geht das ganz gut mit einem Blatt Papier als Unterlage und einem Filzstift oder Textmarker zum anmalen. Der geht danach nämlich wieder gut ab und wir sehen dadurch, wann wir genau eine Umdrehung haben. Schau es dir in dem Video unten an.
@@ -256,7 +251,7 @@ export default function Zylinder() {
                             <ListItem>Sind nicht so gut stapelbar wie Quader als Packungen.</ListItem>
                         </List>
                         <Divider />
-                        Das sind einige Gründe, die man mit den Augen sehen kann. Der wichtigste Grund ist jedoch der: Der Inhalt von Konservendosen wird bei der Produktion <b>in</b> in der Dose aufgekocht – und das halten nur Zylinder (oder Kugeln) aus. Schau dir zur Erklärung mal dieses Video von der Sendung mit der Maus an:{" "}
+                        Das sind einige Gründe, die man mit den Augen sehen kann. Der wichtigste Grund ist jedoch der: Der Inhalt von Konservendosen wird bei der Produktion <b>in</b> der Dose aufgekocht – und das halten nur Zylinder (oder Kugeln) aus. Schau dir zur Erklärung mal dieses Video von der Sendung mit der Maus an:{" "}
                         <a target="_blank" href="https://www.wdrmaus.de/filme/sachgeschichten/konservendose.php5">
                             {" "}
                             <Button mb={"0.2em"} rightSection={<IconExternalLink />}>
@@ -347,20 +342,14 @@ export default function Zylinder() {
                                     <b>Dose mit Kokosmilch</b>
                                     <Flex>
                                         <Image
-                                            h={{
-                                                base: "auto",
-                                                md: 275,
-                                            }}
+                                            h={275}
                                             src="/Zylinder/innenKokos.webp"
                                             width={6000}
                                             height={4000}
                                             alt="Ein Lineal liegt über der Öffnung einer Konservendose mit Kokosmilch. Ablesbar ist ein Durchmesser von 7,3 cm."
                                         />
                                         <Image
-                                            h={{
-                                                base: "auto",
-                                                md: 275,
-                                            }}
+                                            h={275}
                                             src="/Zylinder/füllstandKokos.webp"
                                             width={6000}
                                             height={4000}
@@ -380,20 +369,14 @@ export default function Zylinder() {
                                     <b>Dose mit gehackten Tomaten</b>
                                     <Flex>
                                         <Image
-                                            h={{
-                                                base: "auto",
-                                                md: 275,
-                                            }}
+                                            h={275}
                                             src="/Zylinder/innenTomate.webp"
                                             width={6000}
                                             height={4000}
                                             alt="Ein Lineal liegt über der Öffnung einer Konservendose mit gehackten Tomaten. Ablesbar ist ein Durchmesser von 7,3 cm."
                                         />
                                         <Image
-                                            h={{
-                                                base: "auto",
-                                                md: 275,
-                                            }}
+                                            h={275}
                                             src="/Zylinder/füllstandTomate.webp"
                                             width={6000}
                                             height={4000}
@@ -417,7 +400,7 @@ export default function Zylinder() {
                                 <Space />
                                 <b>Dose mit gehackten Tomaten</b>
                                 <BlockMath math="A &= \pi \cdot r^2 \\ &= \pi \cdot \left(\frac{7{,}3\,\text{cm}}{2}\right)^2 \\ &\approx 41{,}85\,\text{cm}^2 \\ V &= A \cdot h \\ &= 42{,}31\,\text{cm}^2 \cdot 9,7\,\text{cm} \\ &\approx 405{,}98\,\text{cm}^3" />
-                                Gehen wir davon aus, dass wir richtig gemessen haben, so sind in der Kokosmilch <InlineMath math="400\,\text{mL} - 397{,}61\,\text{mL} = 2{,}39\,\text{mL}" /> zu wenig drin, während uns einem bei den gehackten Tomaten <InlineMath math="405{,}98\,\text{mL} - 400\,\text{mL} = 5{,}98\,\text{mL}" /> geschenkt werden. Ob das als Anlass genügt, um die Kokosmilch im Supermarkt zurückzugeben, muss jedoch jeder selber entscheiden…
+                                Gehen wir davon aus, dass wir richtig gemessen haben, so sind in der Kokosmilch <InlineMath math="400\,\text{mL} - 397{,}61\,\text{mL} = 2{,}39\,\text{mL}" /> zu wenig drin, während uns bei den gehackten Tomaten <InlineMath math="405{,}98\,\text{mL} - 400\,\text{mL} = 5{,}98\,\text{mL}" /> geschenkt werden. Ob das als Anlass genügt, um die Kokosmilch im Supermarkt zurückzugeben, muss jedoch jeder selber entscheiden…
                             </Lösung>
                         </CheckableBlockquote>
                     </CheckableHeading>

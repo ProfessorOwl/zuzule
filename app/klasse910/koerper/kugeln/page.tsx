@@ -1,5 +1,4 @@
 import { CheckableHeading } from "@/components/CheckableHeading";
-import { SuspenseCheckableHeading } from "@/components/SuspenseCheckableHeading";
 import thinsp from "@/components/thinsp";
 import { Divider, Flex, List, ListItem, Mark, Space, Table, Text } from "@mantine/core";
 import Video from "@/components/Video";
@@ -20,40 +19,33 @@ export const metadata: Metadata = {
 export default function Kugeln() {
     return (
         <Fragment>
-            <SuspenseCheckableHeading title="Die Kugel">
+            <CheckableHeading title="Die Kugel">
                 Fragt man mehrere Mathematikerinnen und Mathematiker nach ihrem Lieblingskörper, so werden viele von ihnen vermutlich antworten, dass die <b>Kugel</b> der beste Körper ist. Kugeln haben nämlich einige interessante Eigenschaften: Sie hat keinerlei Kanten oder Ecken, kann frei rollen, sieht immer gleich aus, egal von welchem Winkel man sie betrachtet… Die Liste könnte jetzt noch lange weitergehen! Einige weitere Eigenschaften werden wir auf dieser Seite erkunden.
                 <Flex>
                     <Image
-                        h={{
-                            base: "auto",
-                            md: 350,
-                        }}
+                        flex={"0 0 300px"}
+                        h={350}
                         width={3375}
                         height={5062}
                         src={"/Kugeln/basketball.webp"}
                         alt="Ein Basketball, der ins Netz fällt"
                     />
                     <Image
-                        h={{
-                            base: "auto",
-                            md: 350,
-                        }}
+                        flex={"0 0 300px"}
+                        h={350}
                         width={3375}
                         height={5062}
                         src={"/Kugeln/LasVegasSphere.webp"}
                         alt="Ein Basketball, der ins Netz fällt"
                     />
                 </Flex>
-            </SuspenseCheckableHeading>
+            </CheckableHeading>
             <CheckableHeading title="Definition" titleOrder={2}>
                 Eine Kugel ist eine Form, bei der alle Punkte auf der Oberfläche den <b>gleichen Abstand zu einem gemeinsamen Mittelpunkt</b> haben. Anders gesprochen: Nimmt man sich ein Seil mit fixer Länge und fixiert es an einem Stativ im Raum, dann sind all die Punkte Teil der Kugel, die man mit der Spitze erreichen kann. Das Video unten zeigt die zweite Definition in Aktion:
                 <Video src={Lichtkugel} />
                 Zeichnet man die Lichtbahnen nach, so entsteht dabei dieses Bild:
                 <Image
-                    h={{
-                        base: "auto",
-                        md: 400,
-                    }}
+                    h={400}
                     width={1920}
                     height={1080}
                     src={"/Kugeln/LichtKugel.webp"}
@@ -68,15 +60,12 @@ export default function Kugeln() {
             <CheckableHeading title="Volumen">
                 Das Volumen einer Kugel ist schwieriger zu bestimmen als bei den anderen Körpern wie Pyramiden, Prismen oder Kegel. Wir müssen dafür etwas kreativ werden und müssen das <b>Prinzip des Cavalieri</b> benutzen!
                 <CheckableBlockquote title="Das Prinzip des Cavalieri" titleOrder={2} icon="exkurs">
-                    Das Prinzip besagt, dass zwei Körper das gleiche Volumen besitzen, wenn sie in jeder Höhe die gleiche Schnittfläche besitzen. Vergleichen wir z.B. einen geraden mit einem Schiefen Quader, die beide die gleiche Grundflächen wie Höhen haben.
+                    Das Prinzip besagt, dass zwei Körper das gleiche Volumen besitzen, wenn sie in jeder Höhe die gleiche Schnittfläche besitzen. Vergleichen wir z.B. einen geraden mit einem schiefen Quader, die beide die gleiche Grundflächen wie Höhen haben.
                     <Image width={6000} height={4000} src={"/SchiefeKoerper/Schachteile.webp"} alt="Ein gerader und ein schiefer Stapel aus quadratischen Teilen" />
                     Beide Stapel bestehen aus 10 gleichgroßen Teilstücken. In dem Beispiel sind sie relativ groß, kann man die Scheiben noch gut voneinander unterscheiden. Aber stell dir vor, wir machen sie dünner:
                     <Flex>
                         <ImageCaption
-                            h={{
-                                base: "auto",
-                                md: 250,
-                            }}
+                            h={250}
                             src="/SchiefeKoerper/PapierstapelGerade.webp"
                             width={6000}
                             height={4000}
@@ -85,10 +74,7 @@ export default function Kugeln() {
                             Der Papierstapel ist gerade.
                         </ImageCaption>
                         <ImageCaption
-                            h={{
-                                base: "auto",
-                                md: 250,
-                            }}
+                            h={250}
                             width={6000}
                             height={4000}
                             src={"/SchiefeKoerper/PapierstapelSchief.webp"}
@@ -103,10 +89,7 @@ export default function Kugeln() {
                     Oft hat man das Prinzip des Cavalieri dann im Kopf, wenn zwei Körper sich schon relativ ähnlich sehen: gerade vs. schiefe Pyramide, gerade vs. schiefes Prisma, … Tatsächlich ist es aber egal, welche Form unser Körper und die Schnittfläche haben, solange der <b>Flächeninhalt gleich ist</b>. Das nutzen wir nun aus. Wir konstruieren eine Halbkugel mit Radius <InlineMath math="r" />. Daneben stellen wir einen Zylinder mit gleichem Radius <InlineMath math="r" />, der so hoch ist wie die Kugel, also <InlineMath math="r" />
                     -hoch.
                     <Image
-                        h={{
-                            base: "auto",
-                            md: 400,
-                        }}
+                        h={400}
                         width={1550}
                         height={1000}
                         src={"/Kugeln/KugelKegelHerleitung.webp"}
@@ -121,7 +104,7 @@ export default function Kugeln() {
                             <BlockMath math="A_\text{voll} = \pi \textcolor{#12B886}{r}^2" />
                             Der Radius des Innenkreises im Kegel entspricht gerade unserer Höhe <InlineMath math="\textcolor{#3312B8}{x}" />, da der Kegel eine Neigung von 45° hat. Heißt: Für jedes <InlineMath math="\textcolor{#3312B8}{x}" /> das wir hoch gehen, müssen wir auch <InlineMath math="\textcolor{#3312B8}{x}" /> zur Seite gehen. Hier ergibt sich:
                             <BlockMath math="A_\text{innen} = \pi \textcolor{#3312B8}{x}^2" />
-                            Damit könne wir die Fläche vom Kreisring <InlineMath math="A_\text{Z}" /> berechnen.
+                            Damit können wir die Fläche vom Kreisring <InlineMath math="A_\text{Z}" /> berechnen.
                             <BlockMath math="A_\text{Z} &= A_\text{voll} - A_\text{innen} \\ &= \pi \textcolor{#12B886}{r}^2 - \pi \textcolor{#3312B8}{x}^2" />
                             Weiter können wir das erstmal nicht vereinfachen. Gehen wir also zum Halbkreis
                         </ListItem>
@@ -134,7 +117,7 @@ export default function Kugeln() {
                             Das ist exakt das gleiche Ergebnis wie vorhin!
                         </ListItem>
                     </List>
-                    Damit haben wir hergeleitet, dass die Halbkugel in jeder Höhe die gleiche Höhe hat wie der Kreisring zwischen Kegel und Zylinder, denn es gilt: <InlineMath math="A_\text{Z} = A_\text{K}" />
+                    Damit haben wir hergeleitet, dass die Halbkugel in jeder Höhe die gleiche Schnittfläche hat wie der Kreisring zwischen Kegel und Zylinder, denn es gilt: <InlineMath math="A_\text{Z} = A_\text{K}" />
                     . Wir können also die Regel von Cavalieri anwenden. Die Halbkugel hat damit das gleiche Volumen wie der Körper zwischen dem Kegel und dem Zylinder. Genau dieses Volumen müssen wir jetzt berechnen!
                     <Divider />
                     Das Volumen bekommen wir raus, indem wir das Volumen des Kegels vom Volumen des Zylinders abziehen.
@@ -209,10 +192,7 @@ export default function Kugeln() {
                 Dafür füllen wir die Oberfläche einer Kugel mit ganz vielen <b>Vierecken</b> oder <b>Dreiecken</b> aus. Die Form spielt keine Rolle, solange man aus den Flächen eine Pyramide bilden kann, deren Spitze der Mittelpunkt der Kugel ist. Die linke Seite des Bildes unten erklärt, wie so eine „Kugel“ aussehen würde.
                 <Image
                     visibleFrom="md"
-                    h={{
-                        base: "auto",
-                        md: 400,
-                    }}
+                    h={400}
                     width={2100}
                     height={800}
                     src={"/Kugeln/KugelUnterteilungDesktop.webp"}
@@ -220,10 +200,7 @@ export default function Kugeln() {
                 />
                 <Image
                     hiddenFrom="md"
-                    h={{
-                        base: "auto",
-                        md: 400,
-                    }}
+                    h={400}
                     width={2100}
                     height={800}
                     src={"/Kugeln/KugelUnterteilungMobil.webp"}
@@ -242,7 +219,7 @@ export default function Kugeln() {
                 <BlockMath math="V = V_\text{Pyramide, 1} + V_\text{Pyramide, 2} + \ldots + V_{\text{Pyramide}, n}" />
                 Beide Gleichungen können wir gleichsetzen, da beide dem Kugelvolumen entsprechen:
                 <BlockMath math="\frac{4}{3}\pi \textcolor{#12B886}{r}^3 = V_\text{Pyramide, 1} + V_\text{Pyramide, 2} + \ldots + V_{\text{Pyramide}, n}" />
-                Jetzt setzen wir die Formel für das Pyramidenvolumen <InlineMath math="V_\text{Pyramide} = \frac{1}{3}Gh" />
+                Jetzt setzen wir die Formel für das Pyramidenvolumen <InlineMath math="V_\text{Pyramide} = \frac{1}{3}Gh" /> {" "}
                 ein, wobei die Höhe <InlineMath math="h" /> in unserem Fall dem Radius{" "}
                 <Mark c="teal">
                     <InlineMath math="r" />
@@ -320,17 +297,14 @@ export default function Kugeln() {
             <CheckableBlockquote icon="frage" title="Aufgabe: Planetenvergleich" titleOrder={2}>
                 Sucht man nach Bildern unseres Sonnensystems, so stößt man oft auf solche Darstellungen:
                     <Image
-                        h={{
-                            base: "auto",
-                            md: 350,
-                        }}
+                        h={350}
                         width={3804}
                         height={2160}
                         src={"/Kugeln/Sonnensystem.webp"}
                         alt="Ein Basketball, der ins Netz fällt"
                     />
                 Das sieht zwar schön aus, aber die Größenverhältnisse sind (hier) falsch. Deshalb macht es Sinn, sich mathematisch die Unterschiede bewusst zu machen. Vergleiche die Erde und den Mond mit dem größten Planeten, Jupiter.
-                Die Himmelsköper haben folgende Radii <InlineMath math="r"/>:
+                Die Himmelskörper haben folgende Radii <InlineMath math="r"/>:
                 <BlockMath math="r_\text{Erde}&=6371\,\text{km} \\ r_\text{Mond}&=1738\,\text{km} \\ r_\text{Jupiter}& =71492\,\text{km}"/>
                 <List type="ordered">
                     <ListItem>Berechne die Oberflächeninhalte der Himmelskörper und bestimme die Verhältnisse Erde/Mond und Jupiter/Erde.</ListItem>
@@ -403,7 +377,7 @@ export default function Kugeln() {
                             <BlockMath math="\frac{m_\text{Jupiter}}{m_\text{Erde}} = \frac{2{,}00 \cdot 10^{24}\,\text{t}}{5{,}96 \cdot 10^{21}\,\text{t}} \approx 335{,}57"/>
                         Die Erde ist also ca. 80 mal so schwer wie der Mond, und ca. 336 mal leichter als Jupiter.
                         Die Zahlen unterscheiden sich stark von den Volumenverhältnisses! Denn die Erde ist fast doppelt so dicht wie der Mond und mehr als viermal so dicht wie Jupiter!
-                        Eine Erklärung für die Gewichtsunterschiede ist, dass die Erde einen großen Anteil Metall in ihrer Kuste hat, während der Mond vorallem aus Gestein besteht. Jupiter auf der anderen Seite besteht vornehmlich aus Gas, auch wenn er einen festen Kern hat.
+                        Eine Erklärung für die Gewichtsunterschiede ist, dass die Erde einen großen Anteil Metall in ihrer Kruste hat, während der Mond vor allem aus Gestein besteht. Jupiter auf der anderen Seite besteht vornehmlich aus Gas, auch wenn er einen festen Kern hat.
                     </ListItem>
                 </List>  
                 </Lösung>

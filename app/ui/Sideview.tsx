@@ -1,4 +1,4 @@
-import { IconCircle, IconCircleSquare, IconCylinder, IconDiabolo, IconPrism, IconRectangle, IconTriangle, IconCone, IconPyramid, IconSphere } from "@tabler/icons-react";
+import { IconCircle, IconCircleSquare, IconCylinder, IconDiabolo, IconPrism, IconRectangle, IconTriangle, IconCone, IconPyramid, IconSphere, IconSkewY } from "@tabler/icons-react";
 import classes from "./sideview.module.css";
 import Link from "next/link";
 import { Fragment } from "react/jsx-runtime";
@@ -52,6 +52,16 @@ export const navData910: NavItem[] = [
                 link: "/klasse910/koerper/kugeln",
                 label: "Kugeln",
                 icon: IconSphere,
+            },
+            {
+                link: "/klasse910/koerper/schiefe_koerper",
+                label: "Schiefe Körper",
+                icon: IconSkewY,
+            },
+            {
+                link: "/klasse910/koerper/zusammengesetzte_koerper",
+                label: "Zusammengesetzte Körper",
+                icon: IconCircleSquare,
             },
         ],
     },
