@@ -1,9 +1,9 @@
-import { ImageCaption } from "@/components/ImageCaption";
 import { CheckableHeading } from "@/components/CheckableHeading";
 import { Button, Divider, Flex, List, ListItem, Space, Spoiler } from "@mantine/core";
 import { CheckableBlockquote } from "@/components/CheckableBlockquote";
 import { Lösung } from "@/components/Lösung";
-import { BetterInlineMath as InlineMath, BlockMathScroll as BlockMath } from "@/components/CustomMath";
+import {  BlockMath } from "@/components/CustomMath";
+import { InlineMath } from "react-katex";
 import Video from "@/components/Video";
 import { IconExternalLink } from "@tabler/icons-react";
 import thinsp from "@/components/thinsp";

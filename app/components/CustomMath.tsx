@@ -1,5 +1,5 @@
 import { ScrollArea } from "@mantine/core";
-import { BlockMath, InlineMath } from "react-katex";
+import { BlockMath as BlockMathKatex, InlineMath as InlineMathKatex } from "react-katex";
 
 interface MathProps {
     math: string;
@@ -7,14 +7,10 @@ interface MathProps {
 
 
 
-export function BlockMathScroll({ math }: MathProps) {
+export function BlockMath({ math }: MathProps) {
     return (
         <ScrollArea maw="calc(100vw - 80px)" type="auto" mx={"auto"} w={"100%"}>
-            <BlockMath>{String.raw`\begin{aligned}`.concat(String(math), String.raw`\end{aligned}`)}</BlockMath>
+            <BlockMathKatex>{String.raw`\begin{aligned}`.concat(String(math), String.raw`\end{aligned}`)}</BlockMathKatex>
         </ScrollArea>
     );
-}
-
-export function BetterInlineMath({ math }: MathProps) {
-    return <InlineMath>{math}</InlineMath>;
 }

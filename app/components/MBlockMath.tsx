@@ -1,5 +1,5 @@
 import { Box } from "@mantine/core";
-import { BlockMathScroll as BlockMath } from "./CustomMath";
+import { BlockMath } from "./CustomMath";
 import { Fragment } from "react/jsx-runtime";
 interface MBlockMathProps {
     mobile: string;
