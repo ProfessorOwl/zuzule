@@ -44,10 +44,9 @@ def compress_img(
         # convert the image to RGB mode first
         img = img.convert("RGB")
         img.save(new_filename, quality=quality, optimize=True)
-    print("[+] New file saved:", new_filename)
+    print("Converted to:", new_filename)
 
     # calculate the saving bytes
-    print()
 
 
 def get_uncompressed_photos(
