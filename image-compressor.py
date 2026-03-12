@@ -1,7 +1,5 @@
 from PIL import Image
-from pathlib import Path
 import os
-import shutil
 
 
 def get_size_format(b, factor=1024, suffix="B"):
@@ -25,16 +23,12 @@ def compress_img(
     to_webp: bool = True,
 ):
     img = Image.open(image_name)
-    print("[*] Image shape:", img.size)
 
     aspect_ratio = img.size[1] / img.size[0]
-    image_size = os.path.getsize(image_name)
-    print("[*] Size before compression:", get_size_format(image_size))
 
     if width and width < img.size[0]:
         # if width and height are set, resize with them
         img = img.resize((width, int(width * aspect_ratio)), Image.Resampling.LANCZOS)
-        print("[+] New Image shape:", img.size)
 
     # split the filename and extension
     filename, ext = os.path.splitext(image_name)
@@ -52,14 +46,8 @@ def compress_img(
         img.save(new_filename, quality=quality, optimize=True)
     print("[+] New file saved:", new_filename)
 
-    new_image_size = os.path.getsize(new_filename)
-    print("[+] Size after compression:", get_size_format(new_image_size))
-
     # calculate the saving bytes
-    saving_diff = new_image_size - image_size
-    print(
-        f"[+] Image size change: {saving_diff/image_size*100:.2f}% of the original image size."
-    )
+    print()
 
 
 def get_uncompressed_photos(

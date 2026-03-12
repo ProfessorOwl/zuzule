@@ -2,7 +2,7 @@ import { Image as MantineImage, ImageProps } from "@mantine/core";
 import NextImage from "next/image"
 
 export interface BetterImageProps extends ImageProps {
-    h?: number;
+    h?: number | "auto";
     fit?: "contain" | "cover";
     width: number;
     height: number;
