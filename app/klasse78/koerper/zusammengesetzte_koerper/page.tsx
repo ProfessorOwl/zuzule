@@ -85,8 +85,7 @@ export default function ZusammengesetzteKoerper() {
                     Seit 2024 müssen Deckel bei Plastikflaschen mit der Flasche verbunden sein. Wie viel Prozent Plastik wird seitdem mehr recycelt, wenn man davon ausgeht, dass tatsächlich jede Flasche recycelt wird?
                 </ListItem>
             </List>
-            <Image src="/ZusammengesetzteKoerper/Flaschendeckel.webp" h={575/2} width={550} height={575} alt="Verschiedene zusammengesetzte Körper" /> 
-            {/* //TODO - Hier ein richtiges Foto einfügen! */}
+            <Image src="/ZusammengesetzteKoerper/Flaschendeckel.webp" h={300} width={6000} height={4000} alt="Ein Flaschendeckel" /> 
             <Lösung title="Lösung" titleOrder={2} id="Lösung-Flasche">
                 <List type="ordered">
                     <ListItem>
@@ -116,9 +115,9 @@ export default function ZusammengesetzteKoerper() {
                         <BlockMath math="30\,\text{g} \cdot 100.000 &= 3.000.000\,\text{g} \\
                             &= 3.000\,\text{kg}"/>
                         Somit sind wir insgesamt bei <InlineMath math="520\,\text{kg} + 3.000\,\text{kg} = 3.520\,\text{kg}"/>.
+                    </ListItem>
                     <ListItem>
                         Wenn vorher 3.000{thinsp}kg Plastik recycled wurden, so sind es jetzt 3.520{thinsp}kg. Das ist eine Erhöhung um den Faktor <InlineMath math="\frac{3.520\,\text{kg}}{3.000\,\text{kg}} = 1{,}17"/>. Werden also wirklich alle Flaschendeckel recycled, so entspricht das einer Zunahme von 17%.
-                    </ListItem>
                     </ListItem>
                 </List>
             </Lösung>

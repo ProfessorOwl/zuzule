@@ -95,7 +95,7 @@ export default function Prismen() {
                 <BlockMath math="O = \textcolor{red}{M} + 2\cdot \textcolor{blue}{G} = \textcolor{red}{M_1} + \textcolor{red}{M_2} + \textcolor{red}{M_3} + 2\cdot \textcolor{blue}{G}" />
                 Da die Grundfläche zweimal vorkommt, müssen wir sie auch doppelt in der Rechnung berücksichtigen!
             <CheckableBlockquote title="Aufgabe: Oberflächeninhalt" icon="frage">
-                Berechne den Oberflächeninhalt der Prismen:
+                Berechne den Oberflächeninhalt der Prismen.
                 <Image src="/Prismen/PrismaOberflächeninhalt@2x.webp" width={3602} height={1200} alt="Ein Prisma mit seinem Netz. Die Mantelfläche ergibt nun ein großes Rechteck." />
                     <Lösung title="Lösung" id="Lösung-Oberflächeninhalt" titleOrder={3}>
                         <List type="ordered" withPadding>
@@ -245,6 +245,34 @@ export default function Prismen() {
                         Dadurch können wir also die Formel <InlineMath math="V = A \cdot h" /> festhalten für <b>alle</b> Prismen. Egal, wie das Prisma aussieht, das Volumen entspricht immer der Grundfläche mal der Höhe.
                     </CheckableHeading>
                 </CheckableHeading>
+            <CheckableBlockquote title="Aufgabe: Volumenübung" titleOrder={2}>
+                Berechne das Volumen der Prismen.
+                <Image src="/Prismen/PrismaVolumen.webp" h={1350/2} width={1500} height={1350} alt="Drei verschiedene Prismen." />
+                <Lösung title="Lösung" titleOrder={3} id="Lösung-Volumen">
+                <List type="ordered">
+                    <ListItem>
+                        Bei dem Prisma handelt es sich um einen Quader, daher können wir einfach alle Kantenlängen miteinander multiplizieren, um das Volumen zu bekommen.
+                        <BlockMath math="V &= 4\,\text{cm} \cdot 3\,\text{cm} \cdot 5\,\text{cm} \\
+                            &=60\,\text{cm}^3"/>
+                    </ListItem>
+                    <ListItem>
+                        Hier ist die Grundfläche etwas komplizierte und besteht aus einem Dreieck und einem Rechteck. 
+                        <BlockMath math="G_\text{Rechteck} &= 6\,\text{cm} \cdot 2\,\text{cm} \\ 
+                            &= 12\,\text{cm}^2"/>
+                        <BlockMath math="G_\text{Dreieck} &= \frac{1}{2} \cdot 6\,\text{cm} \cdot 1{,}5\,\text{cm} \\
+                            &= 4{,}5\,\text{cm}^2"/>
+                        Insgesamt hat das Prisma also eine Grundfläche von <InlineMath math="12\,\text{cm}^2 + 4{,}5\,\text{cm}^2 = 16{,}5\,\text{cm}^2"/>. Diese müssen wir im letzten Schritt noch mit der Höhe multiplizieren, um das Volumen zu bekommen:
+                        <BlockMath math="V &= 16{,}5\,\text{cm}^2 \cdot 2{,}5\,\text{cm} \\
+                            &= 42{,}25\,\text{cm}^3"/>
+                    </ListItem>
+                    <ListItem>
+                        Diese Form ist komplett unbeständig. Da aber der Flächeninhalt mit der Höhe gegeben ist, lässt sich das Volumen dennoch einfach berechnen:
+                        <BlockMath math="V &= 14{,}9\,\text{cm}^2 \cdot 7\,\text{cm} \\
+                            &= 104{,}3\,\text{cm}^3"/>
+                    </ListItem>
+                </List>    
+                </Lösung>
+            </CheckableBlockquote>
             </CheckableHeading>
         </Fragment>
     );

@@ -294,15 +294,54 @@ export default function Kugeln() {
                         </List>
                     </Lösung>
                 </CheckableBlockquote>
+                <CheckableBlockquote title="Aufgabe: Lunge" titleOrder={2}>
+                    Damit unser Körper genug Sauerstoff bekommt ist unsere Lunge mit extrem vielen, kleinen Lungenbläschen versehen. Im Schnitt hat jeder Mensch 400 Millionen dieser Bläschen, die ca. einen Durchmesser von 0,2{thinsp}mm haben.
+                    <List>
+                        <ListItem>
+                            Berechne die Gesamtoberfläche der Lunge.
+                        </ListItem>
+                        <ListItem>
+                            Wie vielen Quadratmetern entspricht das? Berechne die Seitenlänge eines Quadrats mit identischem Flächeninhalt.
+                        </ListItem>
+                        <Lösung title="Lösung" titleOrder={3} id="Lösung-Lunge">
+                            <List>
+                                <ListItem>
+                                    Die Oberfläche eines Lungenbläschen berechnet sich mit der Formel <InlineMath math="O = 4\pi r^2"/>. Da in der Aufgabe nur der Durchmesser gegeben ist, müssen wir den Radius daraus durch Halbieren herleiten.
+                                    <BlockMath math="O_\text{Bläschen} &= 4 \pi \cdot (\frac{0{,}2}{2}\,\text{mm})^2 \\
+                                        &= 0{,}123\,\text{mm}^2"/>
+                                    Für das Gesamtvolumen der Lunge müssen wir diesen Wert mit 400.000.000 multiplizieren:
+                                    <BlockMath math="O_\text{Lunge} &= 400.000.000 \cdot O_\text{Bläschen} \\
+                                        &= 400.000.000 \cdot 0{,}123\,\text{mm}^2 \\
+                                        &=50.400.000\,\text{mm}^2 "/>
+                                </ListItem>
+                                <ListItem>
+                                    Wir müssen zuerst den Wert von mm<sup>2</sup> in m<sup>2</sup> umrechnen:
+                                    <BlockMath math="50.400.000\,\text{mm}^2 &= 50.400.000 \cdot \,(0{,}001\text{m})^2 \\
+                                        &= 50{,}4\,\text{m}^2"/>
+                                    Das ist die Gesamtfläche der Lunge in m<sup>2</sup>.
+                                    Um zu der Fläche eines Quadrates zu kommen, verwenden wir dessen Flächeformel und stellen nach der Seitenlänge um:
+                                    <MBlockMath desktop="A &= a^2 &&\lvert \sqrt{} \\
+                                    &\Rightarrow a = \sqrt{A}"
+                                    mobile="A &= a^2 \\ &\Downarrow \scriptsize{\sqrt{}} \\
+                                    &\Rightarrow a = \sqrt{A}"/>
+                                Einsetzen der Lungenoberfläche gibt uns:
+                                <BlockMath  math="A &= \sqrt{50{,}4\,\text{m}^2} \\
+                                    &\approx 7,10\,\text{m}"/>
+                                Die Gesamtoberfläche der Lunge ist demnach identisch mit dem Flächeninhalt eines quadratischen Zimmers, das eine Seitenlänge von ca. 7{thinsp}m hat! Ist dein Zimmer so groß?
+                                </ListItem> 
+                            </List>    
+                        </Lösung>
+                    </List> 
+                </CheckableBlockquote>
             </CheckableHeading>
-            <CheckableBlockquote icon="frage" title="Aufgabe: Planetenvergleich" titleOrder={2}>
+            <CheckableBlockquote icon="frage" title="Aufgabe: Planetenvergleich" titleOrder={1}>
                 Sucht man nach Bildern unseres Sonnensystems, so stößt man oft auf solche Darstellungen:
                     <Image
                         h={350}
                         width={3804}
                         height={2160}
                         src={"/Kugeln/Sonnensystem.webp"}
-                        alt="Ein Basketball, der ins Netz fällt"
+                        alt="Eine Darstellung unseres Sonnensystems von der Seite. Die Größenverhältnisse und Abstände sind nicht korrekt."
                     />
                 Das sieht zwar schön aus, aber die Größenverhältnisse sind (hier) falsch. Deshalb macht es Sinn, sich mathematisch die Unterschiede bewusst zu machen. Vergleiche die Erde und den Mond mit dem größten Planeten, Jupiter.
                 Die Himmelskörper haben folgende Radii <InlineMath math="r"/>:
@@ -319,7 +358,7 @@ export default function Kugeln() {
                 </List>
                 <Divider/>
                 <b>Hinweis:</b> Die Zahlen werden hier ziemlich groß. Verwende die wissenschaftliche Notation, um nicht alle Stellen ausschreiben zu müssen, z.B. <InlineMath math="150.000 = 150 \cdot 10^3"/>, <InlineMath math="13.400.000.000.000 = 13,4 \cdot 10^{12}"/>. Das fasst die vielen Nullen als Zehnerpotenz hinter der Zahl zusammen.
-                <Lösung title="Lösung" id="Lösung-Planetenvergleich" titleOrder={3}>
+                <Lösung title="Lösung" id="Lösung-Planetenvergleich" titleOrder={2}>
                 <List type="ordered">
                     <ListItem>
                         Formel für Oberflächeninhalt: <InlineMath math="O =4\pi r^2"/>
