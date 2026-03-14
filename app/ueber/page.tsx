@@ -20,6 +20,8 @@ export default function Ueber() {
             <Box>Jedes Kapitel lässt sich mit dem Kästchen neben dem Titel ein- und ausklappen. Diese Änderung wird auch in der Kapitelübersicht rechts reflektiert. </Box>
             <video width={"100%"} autoPlay loop>
                 <source src="/Anleitung1.webm" type="video/webm" />
+                <source src="/Anleitung1comp.mp4" type="video/mp4" />
+                Dieses Video wird von deinem Browser leider nicht unterstützt.
             </video>
 
         </SimpleGrid>
@@ -31,6 +33,8 @@ export default function Ueber() {
         </Box>
             <video width={"100%"} autoPlay loop>
                 <source src="/Anleitung2.webm" type="video/webm" />
+                <source src="/Anleitung2comp.mp4" type="video/mp4" />
+                Dieses Video wird von deinem Browser leider nicht unterstützt.
             </video>
         </SimpleGrid>
 

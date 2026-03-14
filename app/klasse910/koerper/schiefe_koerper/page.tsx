@@ -67,19 +67,7 @@ export default function SchiefeKoerper() {
         />
         </Flex>
     Damit haben wir einen (visuellen) Beweis, dass der Satz des Cavalieri auch bei Pyramiden funktioniert.
-    <CheckableHeading title="Schiefe Kegel">
-        Den Beweis für den Satz des Cavalieri können wir uns hier sparen – wir können uns nämlich zu Nutze machen, dass Kegel sehr nah mit den Pyramiden verwandt sind. Im Bild wird gezeigt, wie man durch Erhöhen der Eckenzahl von einer Pyramide zu einem Kegel kommt.
-        <Image
-            h={325}
-            src="/Kegel/PyramidezuKegel.webp"
-            width={1650}
-            height={650}
-            alt="Es sind vier Pyramiden nebeneinander dargestellt. Zuerst mit einer dreieckigen Grundfläche, dann mit einer sechseckigen, zwölfeckigen und vierundzwanzigeckigen. Die letzte Pyramide sieht fast aus wie ein Kegel"
-        />
-        Ein Kegel ist nichts anderes als eine regelmäßige Pyramide mit unendlich vielen Ecken!
-    </CheckableHeading>
-    </CheckableHeading>
-    <CheckableBlockquote title="Aufgabe: Hält der Überhang?" titleOrder={1}>
+        <CheckableBlockquote title="Aufgabe: Hält der Überhang?" titleOrder={2}>
         Der <b>Preikestolen</b> ist eine Klippe in Norwegen, von der man eine spektakuläre Aussicht hat. Aus Sicherheitsgründen muss das Gewicht eines überhängenden Felsens berechnet werden.
         <Image
             h={400}
@@ -105,7 +93,7 @@ export default function SchiefeKoerper() {
                 Ab einem Gewicht von <InlineMath math="13\,\text{t}"/> sollte der Felsen nicht mehr betreten werden, da er sonst Risse bekommen kann. Ist der Felsen sicher? Wie viele Personen können sicher darauf stehen, wenn eine Person im Schnitt <InlineMath math="80\,\text{kg}"/> wiegt?
             </ListItem>
         </List>
-            <Lösung title="Lösung" titleOrder={2} id="Lösung-Preikestolen">
+            <Lösung title="Lösung" titleOrder={3} id="Lösung-Preikestolen">
                 <List type="ordered">
                     <ListItem>
                         Um das Volumen zu berechnen, benötigen wir neben der <Mark c={"teal.6"}>Höhe</Mark> von 12,6{thinsp}m noch die Länge und Breite der Pyramide. In der Draufsicht ist das obere Dreieck gegeben, dessen <Mark c={"desred"}>Grundseite</Mark> wir mit dem Satz des Pythagoras berechnen können.
@@ -160,7 +148,20 @@ export default function SchiefeKoerper() {
                     </ListItem>
                 </List>    
             </Lösung>
-    </CheckableBlockquote>
+        </CheckableBlockquote>
+     </CheckableHeading>
+
+    <CheckableHeading title="Schiefe Kegel">
+        Den Beweis für den Satz des Cavalieri können wir uns hier sparen – wir können uns nämlich zu Nutze machen, dass Kegel sehr nah mit den Pyramiden verwandt sind. Im Bild wird gezeigt, wie man durch Erhöhen der Eckenzahl von einer Pyramide zu einem Kegel kommt.
+        <Image
+            h={325}
+            src="/Kegel/PyramidezuKegel.webp"
+            width={1650}
+            height={650}
+            alt="Es sind vier Pyramiden nebeneinander dargestellt. Zuerst mit einer dreieckigen Grundfläche, dann mit einer sechseckigen, zwölfeckigen und vierundzwanzigeckigen. Die letzte Pyramide sieht fast aus wie ein Kegel"
+        />
+        Ein Kegel ist nichts anderes als eine regelmäßige Pyramide mit unendlich vielen Ecken!
+    </CheckableHeading>
     <CheckableBlockquote title="Aufgabe: Fehlendes Maß bestimmen" titleOrder={1}>
         Bestimme von den drei Körpern jeweils das fehlende Maß.
             <Image
