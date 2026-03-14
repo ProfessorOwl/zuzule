@@ -160,7 +160,7 @@ export default function ZusammengesetzteKoerper() {
                             <BlockMath
                                 math="V_\text{Zylinder} &= \pi r_2^2 h \\
                                 &= \pi \cdot 0{,}5^2 \cdot 4 \\
-                                &\approx 3{,}14 \"
+                                &\approx 3{,}14"
                             />
                             Das Gesamtvolumen bekommen wir dann durch addieren beider Teilvolumina:
                             <BlockMath
