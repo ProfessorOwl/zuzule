@@ -38,7 +38,7 @@ div.next-video-container {
 }
 
 .katex * {
-    /* display: none; */
+    display: none;
     font-family: var(--font-pennstander) !important;
 }
 
