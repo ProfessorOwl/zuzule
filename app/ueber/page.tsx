@@ -1,4 +1,4 @@
-import { Box, Divider, Flex, SimpleGrid, Space, Title } from "@mantine/core";
+import { Box, Center, Divider, Flex, SimpleGrid, Space, Title } from "@mantine/core";
 import { Metadata } from "next";
 import { Fragment } from "react/jsx-runtime";
 
@@ -22,27 +22,35 @@ export default function Ueber() {
             <Title order={2} mb={"md"} mt={"xl"}>
                 Funktionsweise
             </Title>
-            <SimpleGrid cols={{ base: 1, md: 2 }}>
-                <Box>Jedes Kapitel lässt sich mit dem Kästchen neben dem Titel ein- und ausklappen. Diese Änderung wird auch in der Kapitelübersicht rechts reflektiert. </Box>
-                <Box visibleFrom="md">
+            <Box visibleFrom="md">
+                <SimpleGrid cols={2}>
+                    <Box>Jedes Kapitel lässt sich mit dem Kästchen neben dem Titel ein- und ausklappen. Diese Änderung wird auch in der Kapitelübersicht rechts reflektiert. </Box>
                     <video width={"100%"} autoPlay loop>
                         <source src="/Anleitung1.webm" type="video/webm" />
                         <source src="/Anleitung1comp.mp4" type="video/mp4" />
                         Dieses Video wird von deinem Browser leider nicht unterstützt.
                     </video>
-                </Box>
-            </SimpleGrid>
-            <Divider />
-            <SimpleGrid cols={{ base: 1, md: 2 }}>
-                <Box>Durch Klicken auf den Button „Inhalt freigeben“ oben rechts werden die gemachten Änderungen festgehalten und eingeklappte Kapitel vollständig ausgeblendet. Der Link dieser Seite kann nun an die Lerngruppe weitergegeben werden, sodass eine personalisierte Websiteerfahrung gewährleistet werden kann.</Box>
-                <Box visibleFrom="md">
+                </SimpleGrid>
+                <Divider />
+                <SimpleGrid cols={2}>
+                    <Box>Durch Klicken auf den Button „Inhalt freigeben“ oben rechts werden die gemachten Änderungen festgehalten und eingeklappte Kapitel vollständig ausgeblendet. Der Link dieser Seite kann nun an die Lerngruppe weitergegeben werden, sodass eine personalisierte Websiteerfahrung gewährleistet werden kann.</Box>
                     <video width={"100%"} autoPlay loop>
                         <source src="/Anleitung2.webm" type="video/webm" />
                         <source src="/Anleitung2comp.mp4" type="video/mp4" />
                         Dieses Video wird von deinem Browser leider nicht unterstützt.
                     </video>
-                </Box>
-            </SimpleGrid>
+                </SimpleGrid>
+            </Box>
+            <Box hiddenFrom="md">
+                <SimpleGrid cols={1}>
+                    <Box>Jedes Kapitel lässt sich mit dem Kästchen neben dem Titel ein- und ausklappen. Durch Klicken auf den Button „Inhalt freigeben“ im Menü werden die gemachten Änderungen festgehalten und eingeklappte Kapitel vollständig ausgeblendet. Der Link dieser Seite kann nun an die Lerngruppe weitergegeben werden, sodass eine personalisierte Websiteerfahrung gewährleistet werden kann. </Box>
+                    <video width={"100%"} controls poster="/poster.webp" style={{ maxWidth: 450, marginInline: "auto" }}>
+                        <source src="/Anleitung mobil Export comp.webm" type="video/webm" />
+                        <source src="/Anleitung mobil Export comp.mp4" type="video/mp4" />
+                        Dieses Video wird von deinem Browser leider nicht unterstützt.
+                    </video>
+                </SimpleGrid>
+            </Box>
         </Fragment>
     );
 }
