@@ -38,7 +38,7 @@ div.next-video-container {
 }
 
 .katex * {
-    /* display: none; */
+    display: none;
     font-family: var(--font-pennstander) !important;
 }
 
@@ -46,7 +46,7 @@ body > div[aria-hidden="true"] {
     width: 0px !important;
 }
 .mantine-Flex-root > .mantine-Image-root {
-    margin-inline: 0px;
+    margin-block: 0px !important;
     flex: 1;
 }
 /* .mantine-Image-root {

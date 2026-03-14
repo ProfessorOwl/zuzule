@@ -3,7 +3,7 @@ import { CheckableHeading } from "@/components/CheckableHeading";
 import { Lösung } from "@/components/Lösung";
 import { ImageCaption } from "@/components/ImageCaption";
 import { Divider, Flex, List, ListItem } from "@mantine/core";
-import {  BlockMath } from "@/components/CustomMath";
+import { BlockMath } from "@/components/CustomMath";
 import { InlineMath } from "react-katex";
 import GeoGebraAppletSlider from "@/components/GeoGebraAppletSlider";
 import Video from "@/components/Video";
@@ -24,27 +24,18 @@ export default function Prismen() {
                 Prismen kennst du vielleicht schon aus dem Physikunterricht. Mit ihnen kann man zeigen, dass weißes Licht tatsächlich aus allen Farben des Regenbogens besteht – schau dir das Beispiel in dem Bild an! Solche Prismen sind aus Glas und meistens dreieckig.
                 <Divider my={"md"} />
                 Das Wort „Prisma“ bezeichnet aber nicht nur solche Glasgeräte, sondern im allgemeinen alle Körper mit dieser Form. Mathematisch interessiert uns daher weniger die Lichtbrechung, sondern viel mehr, was die Form so besonders macht! Wie könnte man es aus Papier falten? Welches Volumen hat ein Prisma? Und sind Prismen überhaupt immer dreieckig?
-            <Image
-                h={400}
-                src="/Prismen/prisma1.webp"
-                width={3499}
-                height={3377}
-                alt="Ein Prisma, an dem weißes Licht in einem Regenbogen gebrochen wird."
-            />
-            <CheckableHeading title="Definition" titleOrder={2}>
-                Wir nehmen eine Grundfläche mit beliebiger, aber eckiger Form: Ein sogenanntes <b>n-Eck</b>. Nehmen wir seine Fläche und ziehen sie in den Raum hinein, so entsteht ein Körper. Diesen nennen wir <b>Prisma</b>.
+                <Image h={400} src="/Prismen/prisma1.webp" width={3499} height={3377} alt="Ein Prisma, an dem weißes Licht in einem Regenbogen gebrochen wird." />
+                <CheckableHeading title="Definition" titleOrder={2}>
+                    Wir nehmen eine Grundfläche mit beliebiger, aber eckiger Form: Ein sogenanntes <b>n-Eck</b>. Nehmen wir seine Fläche und ziehen sie in den Raum hinein, so entsteht ein Körper. Diesen nennen wir <b>Prisma</b>.
+                </CheckableHeading>
+                <CheckableBlockquote icon="frage" title="Aufgabe: Prismen im Alltag">
+                    Suche in deinem Zimmer Objekte, die ein Prisma sind und bringe sie in den Unterricht mit. Was für eine Form hat die Grundfläche, aus der das Prisma „gezogen“ wird?
+                </CheckableBlockquote>
+                <CheckableBlockquote icon="aha" title="Aha! 1">
+                    {" "}
+                    Ein Prisma hat also nicht immer eine dreieckige Grundseite, sondern kann jede eckige Form als Grundseite haben! Dementsprechend ist also auch ein <b>Würfel</b> oder ein <b>Quader</b> ein Prisma.{" "}
+                </CheckableBlockquote>
             </CheckableHeading>
-            <CheckableBlockquote icon="frage" title="Aufgabe: Prismen im Alltag">
-                Suche in deinem Zimmer Objekte, die ein Prisma sind und bringe sie in den Unterricht mit. Was für eine Form hat die Grundfläche, aus der das Prisma „gezogen“ wird?
-            </CheckableBlockquote>
-            <CheckableBlockquote icon="aha" title="Aha! 1">
-                {" "}
-                Ein Prisma hat also nicht immer eine dreieckige Grundseite, sondern kann jede eckige Form als Grundseite haben! Dementsprechend ist also auch ein <b>Würfel</b> oder ein <b>Quader</b> ein Prisma.{" "}
-            </CheckableBlockquote>
-            </CheckableHeading>
-
-
-
 
             <CheckableHeading title="Schrägbilder">
                 Aus der Orientierungsstufe kennst du bereits das <b>Schrägbild</b> eines Quaders. Das sollte ungefähr so aussehen wie in dem Bild.
@@ -58,45 +49,38 @@ export default function Prismen() {
                     <ListItem>Im letzten Schritt verbinden wir die Eckpunkte der oberen Fläche. Sie sollte genau die gleiche Form wie die untere Fläche haben! </ListItem>
                 </List>
                 <Image src="/Prismen/PrismaSchrägbildEntstehung@2x.webp" width={2402} height={1200} alt="Es wird gezeigt, wie das Schrägbild eines Prismas Schritt für Schritt gezeichnet wird. Links wird mit einem Dreieck angefangen. Auf dessen Ecken werden senkrechte Striche gezeichnet, die alle die gleiche Höhe haben. Deren Enden werden dann verbunden, wodurch sich ein Dreieck identisch zu dem unteren ergibt." />
-            <CheckableBlockquote icon="frage" title="Aufgabe: Schrägbilder">
-                Vervollständige die folgenden Schrägbilder in deinem Heft:
-                <Image src="/Prismen/SchrägbilderVervollständigenAufgabe@2x.webp" width={3600} height={1200} alt="4 Schrägbilder, welche vervollständigt werden sollen." />
+                <CheckableBlockquote icon="frage" title="Aufgabe: Schrägbilder">
+                    Vervollständige die folgenden Schrägbilder in deinem Heft:
+                    <Image src="/Prismen/SchrägbilderVervollständigenAufgabe@2x.webp" width={3600} height={1200} alt="4 Schrägbilder, welche vervollständigt werden sollen." />
                     <Lösung title="Lösung" id="Lösung-Schrägbilder" titleOrder={3}>
                         <Image src="/Prismen/SchrägbilderVervollständigenLösung@2x.webp" width={3600} height={1200} alt="Die Lösung, wie die Schrägbilder vervollständigt werden können." />
                     </Lösung>
-            </CheckableBlockquote>
+                </CheckableBlockquote>
             </CheckableHeading>
-
 
             <CheckableHeading title="Netze von Prismen">
                 Geometrische Körper kann man in Netze zerlegen. Vielleicht hast du schonmal ein Würfelnetz aufgemalt, um daraus einen Spielwürfel zu basteln?
                 <Flex>
-                    <Image src="/Prismen/NetzWürfel.webp" width={6000} height={4000} alt="Ein Würfelnetz, gezeichnet auf Papier."/>
-                    <Image src="/Prismen/WürfelPapier.webp" width={6000} height={4000} alt="Das Würfelnetz gefaltet und verklebt, sodass es einen 3D-Würfel ergibt." />
+                    <Image src="/Prismen/NetzWürfel.webp" width={6000} height={4000} alt="Ein Würfelnetz, gezeichnet auf Papier." flex={"1 1 300px"} />
+                    <Image src="/Prismen/WürfelPapier.webp" width={6000} height={4000} alt="Das Würfelnetz gefaltet und verklebt, sodass es einen 3D-Würfel ergibt." flex={"1 1 300px"} />
                 </Flex>
                 Auch Prismen kannst du in ein Netz zerlegen! Zeichne dafür zuerst die Grundfläche des Prismas auf, in dem Beispiel hier wäre das ein Dreieck. Dann ziehst du senkrecht von jeder Ecke Linien hoch. Diese bestimmen, wie hoch dein Körper am Ende wird. Auf eine dieser Seiten musst du dann die Seite zeichnen, die der Grundseite gegenüberliegt – hier also erneut ein Dreieck. Dann heißt es: Ausschneiden, Falten und mit Klebeband zusammenkleben!
                 <Flex>
-                    <Image src="/Prismen/NetzPrisma.webp" width={6000} height={4000} alt="Das Netz eines dreieckigen Prismas, gezeichnet auf Papier." />
-                    <Image src="/Prismen/PrismaPapier.webp" width={6000} height={4000} alt="Das Netz des Prismas gefaltet und verklebt, sodass ein 3D-Prisma ergibt." />
+                    <Image src="/Prismen/NetzPrisma.webp" width={6000} height={4000} alt="Das Netz eines dreieckigen Prismas, gezeichnet auf Papier." flex={"1 1 300px"} />
+                    <Image src="/Prismen/PrismaPapier.webp" width={6000} height={4000} alt="Das Netz des Prismas gefaltet und verklebt, sodass ein 3D-Prisma ergibt." flex={"1 1 300px"} />
                 </Flex>
             </CheckableHeading>
 
             <CheckableHeading title="Oberflächeninhalt">
                 Über das Netz eines Körpers lässt sich gut der Oberflächeninhalt berechnen, da hier nur noch einfache Formen vorkommen. Man unterscheidet hier zwischen <b>Mantelfläche</b> und <b>Grundfläche</b>
                 . Die Grundfläche bezeichnet die Grundform des Prismas, also ob es z.B. drei- oder viereckig ist. Die Mantelfläche ist dann die Fläche, die durch die Höhe des Prismas dazukommt.
-                <Image
-                    h={400}
-                    src="/Prismen/PrismaNetzFläche@2x.webp"
-                    width={3200}
-                    height={2000}
-                    alt="Ein Prisma mit seinem Netz."
-                />
+                <Image h={400} src="/Prismen/PrismaNetzFläche@2x.webp" width={3200} height={2000} alt="Ein Prisma mit seinem Netz." />
                 Der <b>Oberflächeninhalt</b> <InlineMath math="O" /> des Prismas lässt sich dann über die <b>Mantelfläche</b> <InlineMath math="M = M_1 + M_2 + M_3" /> und die <b>Grundfläche</b> <InlineMath math="G" /> berechnen:
                 <BlockMath math="O = \textcolor{red}{M} + 2\cdot \textcolor{blue}{G} = \textcolor{red}{M_1} + \textcolor{red}{M_2} + \textcolor{red}{M_3} + 2\cdot \textcolor{blue}{G}" />
                 Da die Grundfläche zweimal vorkommt, müssen wir sie auch doppelt in der Rechnung berücksichtigen!
-            <CheckableBlockquote title="Aufgabe: Oberflächeninhalt" icon="frage">
-                Berechne den Oberflächeninhalt der Prismen.
-                <Image src="/Prismen/PrismaOberflächeninhalt@2x.webp" width={3602} height={1200} alt="Ein Prisma mit seinem Netz. Die Mantelfläche ergibt nun ein großes Rechteck." />
+                <CheckableBlockquote title="Aufgabe: Oberflächeninhalt" icon="frage">
+                    Berechne den Oberflächeninhalt der Prismen.
+                    <Image src="/Prismen/PrismaOberflächeninhalt@2x.webp" width={3602} height={1200} alt="Ein Prisma mit seinem Netz. Die Mantelfläche ergibt nun ein großes Rechteck." />
                     <Lösung title="Lösung" id="Lösung-Oberflächeninhalt" titleOrder={3}>
                         <List type="ordered" withPadding>
                             <ListItem>
@@ -114,67 +98,31 @@ export default function Prismen() {
                             </ListItem>
                         </List>
                     </Lösung>
-            </CheckableBlockquote>
-            <CheckableBlockquote title="Aha! 2" icon="aha">
-                Zerlegt man das Prisma, das wir oben sehen, in ein etwas anderes Netz, können wir etwas praktisches beobachten: Die Mantelfläche eines Prismas bildet ein <b>Rechteck</b>! Die Seitenlängen dieses Rechtecks können wir uns leicht herleiten, wenn wir die Grundfläche kennen. Die einen Seiten entsprechen der <b>Höhe</b> des Prismas, die anderen dem <b>Umfang</b> der Grundfläche. Das macht die Berechnung des Oberflächeninhalts deutlich einfacher!
-                <Image
-                    h={400}
-                    src="/Prismen/PrismaNetzFlächeRechteck@2x.webp"
-                    width={3200}
-                    height={2000}
-                    alt="Ein Prisma mit seinem Netz. Die Mantelfläche ergibt nun ein großes Rechteck."
-                />
-            </CheckableBlockquote>
+                </CheckableBlockquote>
+                <CheckableBlockquote title="Aha! 2" icon="aha">
+                    Zerlegt man das Prisma, das wir oben sehen, in ein etwas anderes Netz, können wir etwas praktisches beobachten: Die Mantelfläche eines Prismas bildet ein <b>Rechteck</b>! Die Seitenlängen dieses Rechtecks können wir uns leicht herleiten, wenn wir die Grundfläche kennen. Die einen Seiten entsprechen der <b>Höhe</b> des Prismas, die anderen dem <b>Umfang</b> der Grundfläche. Das macht die Berechnung des Oberflächeninhalts deutlich einfacher!
+                    <Image h={400} src="/Prismen/PrismaNetzFlächeRechteck@2x.webp" width={3200} height={2000} alt="Ein Prisma mit seinem Netz. Die Mantelfläche ergibt nun ein großes Rechteck." />
+                </CheckableBlockquote>
             </CheckableHeading>
             <CheckableHeading title="Volumenberechnung">
                 Neben dem Oberflächeninhalt ist oft auch das Volumen eines Körpers interessant. Das ist bei einem Prisma zum Glück nicht allzu kompliziert, da wir es mathematisch gut beschreiben können.
                 <CheckableBlockquote title="Exkurs: Volumenbestimmung durch Verdrängung" icon="exkurs">
                     <Flex>
-                        <ImageCaption
-                            h={250}
-                            src="/Prismen/VolumenWasser/VolumenWasser1.webp"
-                            width={6000}
-                            height={4000}
-                            alt="Ein Stein neben einem leeren Messbecher"
-                        >
+                        <ImageCaption h={250} src="/Prismen/VolumenWasser/VolumenWasser1.webp" width={6000} height={4000} alt="Ein Stein neben einem leeren Messbecher">
                             Experimentell lässt sich das Volumen beliebiger Körper gut mit etwas Wasser und einem Messbecher testen. Testen wir das Volumen von diesem Stein.
                         </ImageCaption>
-                        <ImageCaption
-                            h={250}
-                            src="/Prismen/VolumenWasser/VolumenWasser2.webp"
-                            width={6000}
-                            height={4000}
-                            alt="Der Füllstand des Messbechers ist sichtbar: 600 mL"
-                        >
+                        <ImageCaption h={250} src="/Prismen/VolumenWasser/VolumenWasser2.webp" width={6000} height={4000} alt="Der Füllstand des Messbechers ist sichtbar: 600 mL">
                             Wir messen eine genaue Menge Wasser ab, z.B. 600
                             {thinsp}
                             mL.
                         </ImageCaption>
-                        <ImageCaption
-                            h={250}
-                            src="/Prismen/VolumenWasser/VolumenWasser3.webp"
-                            width={6000}
-                            height={4000}
-                            alt="Der Stein wird in den Messbecher gegeben."
-                        >
+                        <ImageCaption h={250} src="/Prismen/VolumenWasser/VolumenWasser3.webp" width={6000} height={4000} alt="Der Stein wird in den Messbecher gegeben.">
                             Dann geben wir den Stein in den Messbecher – er muss komplett bedeckt sein!
                         </ImageCaption>
-                        <ImageCaption
-                            h={250}
-                            src="/Prismen/VolumenWasser/VolumenWasser4.webp"
-                            width={6000}
-                            height={4000}
-                            alt="Der Stein ist am Boden des Messbechers."
-                        >
+                        <ImageCaption h={250} src="/Prismen/VolumenWasser/VolumenWasser4.webp" width={6000} height={4000} alt="Der Stein ist am Boden des Messbechers.">
                             Der Stein ist dichter als Wasser und sinkt deshalb zu Boden.
                         </ImageCaption>
-                        <ImageCaption
-                            h={250}
-                            src="/Prismen/VolumenWasser/VolumenWasser5.webp"
-                            width={6000}
-                            height={4000}
-                            alt="Das neue Volumen entspricht 720 mL."
-                        >
+                        <ImageCaption h={250} src="/Prismen/VolumenWasser/VolumenWasser5.webp" width={6000} height={4000} alt="Das neue Volumen entspricht 720 mL.">
                             Der vom Stein eingenommene Raum steigert die Füllhöhe in unserem Gefäß. Jetzt können wir das neue Volumen ablesen: Ca. 720
                             {thinsp}
                             mL.
@@ -245,34 +193,44 @@ export default function Prismen() {
                         Dadurch können wir also die Formel <InlineMath math="V = A \cdot h" /> festhalten für <b>alle</b> Prismen. Egal, wie das Prisma aussieht, das Volumen entspricht immer der Grundfläche mal der Höhe.
                     </CheckableHeading>
                 </CheckableHeading>
-            <CheckableBlockquote title="Aufgabe: Volumenübung" titleOrder={2}>
-                Berechne das Volumen der Prismen.
-                <Image src="/Prismen/PrismaVolumen.webp" h={1350/2} width={1500} height={1350} alt="Drei verschiedene Prismen." />
-                <Lösung title="Lösung" titleOrder={3} id="Lösung-Volumen">
-                <List type="ordered">
-                    <ListItem>
-                        Bei dem Prisma handelt es sich um einen Quader, daher können wir einfach alle Kantenlängen miteinander multiplizieren, um das Volumen zu bekommen.
-                        <BlockMath math="V &= 4\,\text{cm} \cdot 3\,\text{cm} \cdot 5\,\text{cm} \\
-                            &=60\,\text{cm}^3"/>
-                    </ListItem>
-                    <ListItem>
-                        Hier ist die Grundfläche etwas komplizierte und besteht aus einem Dreieck und einem Rechteck. 
-                        <BlockMath math="G_\text{Rechteck} &= 6\,\text{cm} \cdot 2\,\text{cm} \\ 
-                            &= 12\,\text{cm}^2"/>
-                        <BlockMath math="G_\text{Dreieck} &= \frac{1}{2} \cdot 6\,\text{cm} \cdot 1{,}5\,\text{cm} \\
-                            &= 4{,}5\,\text{cm}^2"/>
-                        Insgesamt hat das Prisma also eine Grundfläche von <InlineMath math="12\,\text{cm}^2 + 4{,}5\,\text{cm}^2 = 16{,}5\,\text{cm}^2"/>. Diese müssen wir im letzten Schritt noch mit der Höhe multiplizieren, um das Volumen zu bekommen:
-                        <BlockMath math="V &= 16{,}5\,\text{cm}^2 \cdot 2{,}5\,\text{cm} \\
-                            &= 42{,}25\,\text{cm}^3"/>
-                    </ListItem>
-                    <ListItem>
-                        Diese Form ist komplett unbeständig. Da aber der Flächeninhalt mit der Höhe gegeben ist, lässt sich das Volumen dennoch einfach berechnen:
-                        <BlockMath math="V &= 14{,}9\,\text{cm}^2 \cdot 7\,\text{cm} \\
-                            &= 104{,}3\,\text{cm}^3"/>
-                    </ListItem>
-                </List>    
-                </Lösung>
-            </CheckableBlockquote>
+                <CheckableBlockquote title="Aufgabe: Volumenübung" titleOrder={2}>
+                    Berechne das Volumen der Prismen.
+                    <Image src="/Prismen/PrismaVolumen.webp" h={1350 / 2} width={1500} height={1350} alt="Drei verschiedene Prismen." />
+                    <Lösung title="Lösung" titleOrder={3} id="Lösung-Volumen">
+                        <List type="ordered">
+                            <ListItem>
+                                Bei dem Prisma handelt es sich um einen Quader, daher können wir einfach alle Kantenlängen miteinander multiplizieren, um das Volumen zu bekommen.
+                                <BlockMath
+                                    math="V &= 4\,\text{cm} \cdot 3\,\text{cm} \cdot 5\,\text{cm} \\
+                            &=60\,\text{cm}^3"
+                                />
+                            </ListItem>
+                            <ListItem>
+                                Hier ist die Grundfläche etwas komplizierte und besteht aus einem Dreieck und einem Rechteck.
+                                <BlockMath
+                                    math="G_\text{Rechteck} &= 6\,\text{cm} \cdot 2\,\text{cm} \\ 
+                            &= 12\,\text{cm}^2"
+                                />
+                                <BlockMath
+                                    math="G_\text{Dreieck} &= \frac{1}{2} \cdot 6\,\text{cm} \cdot 1{,}5\,\text{cm} \\
+                            &= 4{,}5\,\text{cm}^2"
+                                />
+                                Insgesamt hat das Prisma also eine Grundfläche von <InlineMath math="12\,\text{cm}^2 + 4{,}5\,\text{cm}^2 = 16{,}5\,\text{cm}^2" />. Diese müssen wir im letzten Schritt noch mit der Höhe multiplizieren, um das Volumen zu bekommen:
+                                <BlockMath
+                                    math="V &= 16{,}5\,\text{cm}^2 \cdot 2{,}5\,\text{cm} \\
+                            &= 42{,}25\,\text{cm}^3"
+                                />
+                            </ListItem>
+                            <ListItem>
+                                Diese Form ist komplett unbeständig. Da aber der Flächeninhalt mit der Höhe gegeben ist, lässt sich das Volumen dennoch einfach berechnen:
+                                <BlockMath
+                                    math="V &= 14{,}9\,\text{cm}^2 \cdot 7\,\text{cm} \\
+                            &= 104{,}3\,\text{cm}^3"
+                                />
+                            </ListItem>
+                        </List>
+                    </Lösung>
+                </CheckableBlockquote>
             </CheckableHeading>
         </Fragment>
     );

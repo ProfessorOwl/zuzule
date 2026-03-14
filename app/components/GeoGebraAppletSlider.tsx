@@ -4,6 +4,7 @@ import { Badge, Center, Slider } from "@mantine/core";
 import Script from "next/script";
 import { Fragment, Suspense, useEffect, useRef, useState } from "react";
 import { ErrorBoundary } from "./ErrorBoundary";
+import { useViewportSize } from "@mantine/hooks";
 
 declare global {
     interface Window {
@@ -50,7 +51,15 @@ function GeoGebraAppletSliderinner({ materialId, width = 800, height = 600, appN
     const [scriptisLoaded, setScriptisLoaded] = useState(false);
     const ggbRef = useRef<HTMLDivElement | null>(null);
     const apiRef = useRef<any>(null);
+    const { height: viewHeight, width: viewWidth } = useViewportSize();
+    const aspectRatio = width / height;
 
+    if (viewWidth < 1200) {
+        width = 500;
+    } else if (viewWidth < 1408) {
+        width = 660;
+    }
+    height = width / aspectRatio;
     // Initialize the applet once
     useEffect(() => {
         const container = ggbRef.current;

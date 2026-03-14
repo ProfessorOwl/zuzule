@@ -31,6 +31,7 @@ export const theme = createTheme({
             defaultProps: {
                 wrap: "wrap",
                 my: "md",
+                gap: "md"
             },
         }),
         Mark: Mark.extend({

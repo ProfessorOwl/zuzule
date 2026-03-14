@@ -4,7 +4,7 @@ import { ImageCaption } from "@/components/ImageCaption";
 import { Lösung } from "@/components/Lösung";
 import MBlockMath from "@/components/MBlockMath";
 import { Divider, Flex, List, ListItem, Mark, SimpleGrid, Space } from "@mantine/core";
-import {  BlockMath } from "@/components/CustomMath";
+import { BlockMath } from "@/components/CustomMath";
 import { InlineMath } from "react-katex";
 import thinsp from "@/components/thinsp";
 import Image from "@/components/Image";
@@ -20,45 +20,39 @@ export default function Pyramiden() {
             <CheckableHeading title="Die Pyramide">
                 Pyramiden haben auf Menschen schon lange eine Anziehungskraft – so haben schon die Maya und Ägypter Pyramiden gebaut, die teilweise noch bis heute stehen. Deswegen ist es nicht verwunderlich, dass sich auch Mathematiker für Pyramiden interessieren. Wir schauen uns hier die Grundlagen an und gehen auf die Eigenschaften von Pyramiden ein: Wie „baut“ man Pyramiden aus Papier? Wie bestimmt man deren Oberflächeninhalt oder Volumen?
                 <Flex flex={"1 1 auto"}>
-                    <Image src="/Pyramiden/pyramideägypten.webp" h={250} width={3888} height={2202} alt="Mehrere ägyptische Pyramiden" flex={1} mx={0}/>
-                    <Image src="/Pyramiden/pyramidemaya.webp" h={250} width={6000} height={3927} alt="Eine Pyramide der Maya" flex={1} mx={0}/>
+                    <Image src="/Pyramiden/pyramideägypten.webp" h={250} width={3888} height={2202} alt="Mehrere ägyptische Pyramiden" flex={"1 1 300px"} />
+                    <Image src="/Pyramiden/pyramidemaya.webp" h={250} width={6000} height={3927} alt="Eine Pyramide der Maya" flex={"1 1 300px"} />
                 </Flex>
-            <CheckableHeading title="Definition" titleOrder={2}>
-                Eine Pyramide hat eine eckige Grundfläche, z.B. ein Dreieck oder ein Quadrat. Allgemein nennt man eckige Flächen auch <b>n-Ecke</b>. Den Mittelpunkt dieser Fläche ziehen wir nach oben, sodass wir die Pyramidenspitze bekommen. Verbinden wir nun alle Eckpunkte unserer Grundfläche mit der Spitze, so erhalten wir eine <b>gerade Pyramide</b>!
-            </CheckableHeading>
-            <CheckableBlockquote icon="frage" title="Aufgabe: Alles Pyramiden?">
-                Welche der folgenden Abbildungen sind Pyramiden und welche nicht? Wenn ja, gib die Maße und Form der Grundfläche sowie die Höhe in cm an (2 Kästchen = 1{thinsp}
-                cm).
-                <Image
-                    src="/Pyramiden/IstPyramide.webp"
-                    width={1000}
-                    height={1000}
-                    alt="Eine Pyramide der Maya"
-                    h={500}
-                />
-                <Lösung title="Lösung" id="Lösung-AllesPyramide" titleOrder={3}>
-                    <List type="ordered">
-                        <ListItem>
-                            Ja, eine sechseckige, gerade Pyramide. Durchmesser = 3{thinsp}
-                            cm, Höhe = 3{thinsp}
-                            cm.
-                        </ListItem>
-                        <ListItem>Nein, es hat eine runde Grundfläche, daher ist es ein Zylinder.</ListItem>
-                        <ListItem>
-                            Ja, eine quadratische, gerade Pyramide. Kantenlänge = 2{thinsp}
-                            cm, Höhe = 2,5
-                            {thinsp}
-                            cm.{" "}
-                        </ListItem>
-                        <ListItem>Nein, das ist keine normale geometrische Form.</ListItem>
-                        <ListItem>
-                            Ja, das ist eine rechteckige, schiefe Pyramide. Kantenlängen = 2 und 3{thinsp}
-                            cm, Höhe = 4{thinsp}
-                            cm{" "}
-                        </ListItem>
-                    </List>
-                </Lösung>
-            </CheckableBlockquote>
+                <CheckableHeading title="Definition" titleOrder={2}>
+                    Eine Pyramide hat eine eckige Grundfläche, z.B. ein Dreieck oder ein Quadrat. Allgemein nennt man eckige Flächen auch <b>n-Ecke</b>. Den Mittelpunkt dieser Fläche ziehen wir nach oben, sodass wir die Pyramidenspitze bekommen. Verbinden wir nun alle Eckpunkte unserer Grundfläche mit der Spitze, so erhalten wir eine <b>gerade Pyramide</b>!
+                </CheckableHeading>
+                <CheckableBlockquote icon="frage" title="Aufgabe: Alles Pyramiden?">
+                    Welche der folgenden Abbildungen sind Pyramiden und welche nicht? Wenn ja, gib die Maße und Form der Grundfläche sowie die Höhe in cm an (2 Kästchen = 1{thinsp}
+                    cm).
+                    <Image src="/Pyramiden/IstPyramide.webp" width={1000} height={1000} alt="Eine Pyramide der Maya" h={500} />
+                    <Lösung title="Lösung" id="Lösung-AllesPyramide" titleOrder={3}>
+                        <List type="ordered">
+                            <ListItem>
+                                Ja, eine sechseckige, gerade Pyramide. Durchmesser = 3{thinsp}
+                                cm, Höhe = 3{thinsp}
+                                cm.
+                            </ListItem>
+                            <ListItem>Nein, es hat eine runde Grundfläche, daher ist es ein Zylinder.</ListItem>
+                            <ListItem>
+                                Ja, eine quadratische, gerade Pyramide. Kantenlänge = 2{thinsp}
+                                cm, Höhe = 2,5
+                                {thinsp}
+                                cm.{" "}
+                            </ListItem>
+                            <ListItem>Nein, das ist keine normale geometrische Form.</ListItem>
+                            <ListItem>
+                                Ja, das ist eine rechteckige, schiefe Pyramide. Kantenlängen = 2 und 3{thinsp}
+                                cm, Höhe = 4{thinsp}
+                                cm{" "}
+                            </ListItem>
+                        </List>
+                    </Lösung>
+                </CheckableBlockquote>
             </CheckableHeading>
             <CheckableHeading title="Volumenberechnung">
                 Das Volumen von einer quadratischen Pyramide lässt sich sowohl experimentell als auch mathematisch gut herleiten. Fangen wir erstmal experimentell an!
@@ -84,48 +78,17 @@ export default function Pyramiden() {
                         <Space my="xs" />
                     </CheckableBlockquote>
                     <Flex flex={"1 1 auto"} align={"baseline"}>
-                        <ImageCaption
-                            h={250}
-                            src="/Pyramiden/VolumenPyramide/PyramideNetzausgeschnitten.webp"
-                            width={6000}
-                            height={4000}
-                            alt="Das ausgeschnittene Netz mit einem Loch in der Mitte"
-                            flex={1}
-                        >
+                        <ImageCaption h={250} src="/Pyramiden/VolumenPyramide/PyramideNetzausgeschnitten.webp" width={6000} height={4000} alt="Das ausgeschnittene Netz mit einem Loch in der Mitte" flex={1}>
                             Das Netz schneidest du nun aus und schneidest ein Loch in die Mitte, sodass wir später Zucker hineingießen können
                         </ImageCaption>
-                        <ImageCaption
-                            h={250}
-                            src="/Pyramiden/VolumenPyramide/PyramidePapier.webp"
-                            width={6000}
-                            height={4000}
-                            alt="Die zusammengeklebte Pyramide"
-                                                        flex={1}
-
-                        >
+                        <ImageCaption h={250} src="/Pyramiden/VolumenPyramide/PyramidePapier.webp" width={6000} height={4000} alt="Die zusammengeklebte Pyramide" flex={1}>
                             Die Pyramide klebst du vorsichtig mit Klebeband zusammen, sodass alle Kanten dicht sind!
                         </ImageCaption>
-                        <ImageCaption
-                            h={250}
-                            src="/Pyramiden/VolumenPyramide/PyramideWaageZubehör.webp"
-                            width={6000}
-                            height={4000}
-                            alt="Die Pyramide kopfüber in einem Glas auf einer Waage. Daneben ein Papiertrichter und ein Glas mit Zucker"
-                                                        flex={1}
-
-                        >
+                        <ImageCaption h={250} src="/Pyramiden/VolumenPyramide/PyramideWaageZubehör.webp" width={6000} height={4000} alt="Die Pyramide kopfüber in einem Glas auf einer Waage. Daneben ein Papiertrichter und ein Glas mit Zucker" flex={1}>
                             Die Pyramide stellst du nun kopfüber in einem Glas auf eine Waage und tarierst sie auf 0{thinsp}
                             g. Zum Einfüllen ist ein Trichter praktisch – wenn du keinen hast, kannst du dir einen aus Papier rollen.
                         </ImageCaption>
-                        <ImageCaption
-                            h={250}
-                            src="/Pyramiden/VolumenPyramide/PyramideWaageVoll.webp"
-                            width={6000}
-                            height={4000}
-                            alt="Die nun gefüllte Pyramide im Glas auf der Waage. Die Waage zeigt 43 Gram an"
-                                                        flex={1}
-
-                        >
+                        <ImageCaption h={250} src="/Pyramiden/VolumenPyramide/PyramideWaageVoll.webp" width={6000} height={4000} alt="Die nun gefüllte Pyramide im Glas auf der Waage. Die Waage zeigt 43 Gram an" flex={1}>
                             Die Waage zeigt an, dass unsere Pyramide ca. 45
                             {thinsp}g Zucker enthält.
                         </ImageCaption>
@@ -140,13 +103,7 @@ export default function Pyramiden() {
                 </CheckableHeading>
                 <CheckableBlockquote icon="aha" title="Volumenformel experimentell">
                     Mit dem experimentell berechneten Volumen können wir eine Formel für Pyramiden aufstellen, sodass wir ohne Zuckerfüllung das Volumen berechnen können. Vergleichen wir sie dazu mit einem Würfel, der die Pyramide genau umschließt. Seine Seitenlängen entsprechen also der Höhe der Pyramide.
-                    <Image
-                        h={375}
-                        src="/Pyramiden/VolumenPyramide/PyramideWürfel.webp"
-                        width={750}
-                        height={900}
-                        alt="Eine Pyramide in einem Quader"
-                    />
+                    <Image h={375} src="/Pyramiden/VolumenPyramide/PyramideWürfel.webp" width={750} height={900} alt="Eine Pyramide in einem Quader" />
                     Nehmen wir die Seitenlänge der Pyramide, die wir gebastelt haben, also 5{thinsp}
                     cm. Dann hat der Würfel ein Volumen von <InlineMath math="a^3 = 5\,\text{cm}\cdot 5\,\text{cm}\cdot 5\,\text{cm} = 125\,\text{cm}^3" />. Für unsere Pyramide bekamen wir experimentell ein Volumen von 27,57
                     {thinsp}
@@ -158,30 +115,12 @@ export default function Pyramiden() {
                 </CheckableBlockquote>
                 <CheckableHeading title="Theoretisch" titleOrder={2}>
                     Wir konstruieren uns erneut eine quadratische Pyramide in einem Würfel. Dieser soll diesmal aber die doppelte Höhe unserer Pyramide haben.
-                    <Image
-                        h={425}
-                        src="/Pyramiden/VolumenPyramide/PyramideinWürfelEinzeln.webp"
-                        width={1050}
-                        height={850}
-                        alt="Eine Pyramide in einem Quader"
-                    />
+                    <Image h={425} src="/Pyramiden/VolumenPyramide/PyramideinWürfelEinzeln.webp" width={1050} height={850} alt="Eine Pyramide in einem Quader" />
                     In diesen Würfel können wir jedoch nicht nur eine Pyramide packen, sondern tatsächlich <b>6 Stück</b>
                     ! Denn unter jede Grundseite passt eine weitere Pyramide, ohne, dass sie einer anderen in die Quere kommt.
-                    <Image
-                        h={425}
-                        src="/Pyramiden/VolumenPyramide/PyramideinWürfel.webp"
-                        width={1050}
-                        height={850}
-                        alt="Sechs Pyramiden in einem Quader"
-                    />
+                    <Image h={425} src="/Pyramiden/VolumenPyramide/PyramideinWürfel.webp" width={1050} height={850} alt="Sechs Pyramiden in einem Quader" />
                     Das ist etwas schlecht vorzustellen, deshalb ist hier einmal ein Bild von den Pyramiden „herausgezogen“:
-                    <Image
-                        h={825}
-                        src="/Pyramiden/VolumenPyramide/PyramideinWürfelExplosion.webp"
-                        width={1650}
-                        height={1700}
-                        alt="Eine Pyramide in einem Quader"
-                    />
+                    <Image h={825} src="/Pyramiden/VolumenPyramide/PyramideinWürfelExplosion.webp" width={1650} height={1700} alt="Eine Pyramide in einem Quader" />
                     Mathematisch können wir das so formulieren:
                     <BlockMath math="V_\text{Quader} = 6 \cdot V_\text{Pyramide}" />
                     Kannst du daraus selber eine Formel für das Pyramidenvolumen herleiten? Denke dran: Der Quader ist doppelt so hoch wie eine der Pyramiden!
@@ -199,13 +138,7 @@ export default function Pyramiden() {
                 </CheckableHeading>
                 <CheckableBlockquote title="Aufgabe: Pyramidenrätsel" icon="frage">
                     Es sind mehrere Pyramiden gegeben. Bestimme den Wert der Unbekannten!
-                    <Image
-                        h={500}
-                        src="/Pyramiden/Pyramidenrätsel.webp"
-                        width={1400}
-                        height={1000}
-                        alt="Mehrere Pyramiden als Aufgabenstellungen"
-                    />
+                    <Image h={500} src="/Pyramiden/Pyramidenrätsel.webp" width={1400} height={1000} alt="Mehrere Pyramiden als Aufgabenstellungen" />
                     <Lösung title="Lösung" id="Lösung-Pyramidenrätsel" titleOrder={3}>
                         <List type="ordered">
                             <ListItem>
@@ -243,13 +176,7 @@ export default function Pyramiden() {
                 Neben dem Volumen ist auch die Oberfläche von Pyramiden wichtig, z.B. um die Menge an Ziegeln für ein Dach zu berechnen. Hier gibt es jedoch keine allgemeine Formel, denn die Oberfläche ist abhängig von der Anzahl der Seiten.
                 <Divider />
                 Vergleichen wir mal die Netze von einer dreieckigen und einer quadratischen Pyramide:
-                <Image
-                    h={500}
-                    src="/Pyramiden/PyramideOberfläche.webp"
-                    width={1400}
-                    height={1000}
-                    alt="Eine dreieckige und eine viereckige Pyramide mit den dazugehörigen Netzen"
-                />
+                <Image h={500} src="/Pyramiden/PyramideOberfläche.webp" width={1400} height={1000} alt="Eine dreieckige und eine viereckige Pyramide mit den dazugehörigen Netzen" />
                 Die Gesamtfläche der Dreiecke, die auf die Pyramidenspitze zeigen, nennt man auch{" "}
                 <b>
                     Mantelfläche <InlineMath math="M" />
@@ -292,18 +219,10 @@ export default function Pyramiden() {
                         <ListItem>
                             <b>Dächer 2-6</b> <br />
                             Grundfläche: Achteck mit 19,3
-                            {thinsp}m<sup>2</sup> und einer Kantenlänge von 2{thinsp}
-                            m / Höhe: 5{thinsp}m
+                            {thinsp}m<sup>2</sup> und einer Kantenlänge von 2{thinsp}m / Höhe: 5{thinsp}m
                         </ListItem>
                     </List>
-                    <Image
-                        h={500}
-                        fit="contain"
-                        src="/Pyramiden/SchlossDächer.webp"
-                        width={6484}
-                        height={4323}
-                        alt="Ein Schloss mit vielen pyramidenförmigen Dächern"
-                    />
+                    <Image h={500} fit="contain" src="/Pyramiden/SchlossDächer.webp" width={6484} height={4323} alt="Ein Schloss mit vielen pyramidenförmigen Dächern" />
                     <Lösung title="Lösung" titleOrder={3} id="Lösung-Dachdecken">
                         Skizze:
                         <ImageCaption fit="contain" src="/Pyramiden/DächerSkizze.webp" width={1200} height={600} alt="Eine Skizze der beiden Dachformen">
