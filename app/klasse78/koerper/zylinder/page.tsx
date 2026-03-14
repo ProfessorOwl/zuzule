@@ -2,7 +2,7 @@ import { CheckableHeading } from "@/components/CheckableHeading";
 import { Button, Divider, Flex, List, ListItem, Space, Spoiler } from "@mantine/core";
 import { CheckableBlockquote } from "@/components/CheckableBlockquote";
 import { Lösung } from "@/components/Lösung";
-import {  BlockMath } from "@/components/CustomMath";
+import { BlockMath } from "@/components/CustomMath";
 import { InlineMath } from "react-katex";
 import Video from "@/components/Video";
 import { IconExternalLink } from "@tabler/icons-react";
@@ -12,7 +12,6 @@ import GeoGebraAppletSlider from "@/components/GeoGebraAppletSlider";
 import { Fragment } from "react/jsx-runtime";
 import UmfangZylinder from "/videos/UmfangZylinder.mov";
 import type { Metadata } from "next";
-
 
 export const metadata: Metadata = {
     title: "Zylinder – zuzule",
@@ -24,15 +23,15 @@ export default function Zylinder() {
             <CheckableHeading title="Der Zylinder">
                 Zylinder sind beliebte Formen in unserem Alltag. Seien es Lampenschirme, die Stangen von Straßenlaternen oder Konservendosen – überall findet man diese Form. Deswegen ist es für uns interessant, diese Form mathematisch beschreiben zu können!
                 <Flex>
-                    <Image src="/Zylinder/dosen.webp" width={6000} height={4000} alt="Verschiedene Dosen" />
-                    <Image src="/Zylinder/regler.webp" width={6000} height={4000} alt="Ein Regler für die Lautstärke" />
+                    <Image src="/Zylinder/dosen.webp" width={6000} height={4000} alt="Verschiedene Dosen" flex={"1 1 300px"} />
+                    <Image src="/Zylinder/regler.webp" width={6000} height={4000} alt="Ein Regler für die Lautstärke" flex={"1 1 300px"} />
                 </Flex>
-            <CheckableHeading title="Definition" titleOrder={2}>
-                Die Grundfläche eines Zylinders ist immer ein <b>Kreis</b>. Wenn wir diesen nehmen und in den Raum hineinziehen, so bekommen wir einen Körper, den wir <b>Zylinder</b> nennen.
-            </CheckableHeading>
-            <CheckableBlockquote title="Aufgabe: Zylinder in der Umgebung" icon="frage" titleOrder={3}>
-                Gehe raus und suche nach beliebigen Sachen, die für dich nach einem Zylinder aussehen. Fallen dir plötzlich vielleicht Dinge auf, die du vorher so noch nie bemerkt hast? Mache von deiner Expedition Fotos und bringe sie mit in den Unterricht!
-            </CheckableBlockquote>
+                <CheckableHeading title="Definition" titleOrder={2}>
+                    Die Grundfläche eines Zylinders ist immer ein <b>Kreis</b>. Wenn wir diesen nehmen und in den Raum hineinziehen, so bekommen wir einen Körper, den wir <b>Zylinder</b> nennen.
+                </CheckableHeading>
+                <CheckableBlockquote title="Aufgabe: Zylinder in der Umgebung" icon="frage" titleOrder={3}>
+                    Gehe raus und suche nach beliebigen Sachen, die für dich nach einem Zylinder aussehen. Fallen dir plötzlich vielleicht Dinge auf, die du vorher so noch nie bemerkt hast? Mache von deiner Expedition Fotos und bringe sie mit in den Unterricht!
+                </CheckableBlockquote>
             </CheckableHeading>
 
             <CheckableHeading title="Schrägbilder">
@@ -47,42 +46,36 @@ export default function Zylinder() {
                     <ListItem>Darauf setzen wir nun die Oberseite.</ListItem>
                 </List>
                 <Image src="/Zylinder/ZylinderSchrägbildEntstehung@2x.webp" width={2402} height={1200} alt="Es wird gezeigt, wie das Schrägbild eines Zylinders Schritt für Schritt gezeichnet wird. Links wird mit einem Kreis angefangen. Auf dessen Außenseiten werden zwei senkrechte Striche gezeichnet, die alle die gleiche Höhe haben. Auf deren Enden wird dann ein identischer Kreis zu dem unten gezeichnet." />
-            <CheckableBlockquote icon="frage" title="Aufgabe: Schrägbilder">
-                Zeichne die Zylinder mit Radius <InlineMath math="r" /> und Höhe <InlineMath math="h" /> als Schrägbilder.
-                <List type="ordered">
-                    <ListItem>
-                        <InlineMath math="r = 1\,\text{cm} \quad h = 3\,\text{cm}" />
-                    </ListItem>
-                    <ListItem>
-                        <InlineMath math="r = 1{,}5\,\text{cm} \quad h = 4\,\text{cm}" />
-                    </ListItem>
-                    <ListItem>
-                        <InlineMath math="r = 1\,\text{cm} \quad h = 5\,\text{cm}" />
-                    </ListItem>
-                    <ListItem>
-                        <InlineMath math="r = 2\,\text{cm} \quad h = 6{,}5\,\text{cm}" />
-                    </ListItem>
-                    <ListItem>
-                        <InlineMath math="r = 0{,}5\,\text{cm} \quad h = 2\,\text{cm}" />
-                    </ListItem>
-                    <ListItem>
-                        <InlineMath math="r = 3\,\text{cm} \quad h = 1{,}5\,\text{cm}" />
-                    </ListItem>
-                </List>
-                <Lösung title="Lösung" id="Lösung-Schrägbilder" titleOrder={3}>
-                    <Image
-                        h={500}
-                        src="/Zylinder/ZylinderLösung@2x.webp"
-                        width={3600}
-                        height={2000}
-                        alt="Zylinder aus den Teilaufgaben 1 bis 6."
-                    />
-                </Lösung>
-            </CheckableBlockquote>
+                <CheckableBlockquote icon="frage" title="Aufgabe: Schrägbilder">
+                    Zeichne die Zylinder mit Radius <InlineMath math="r" /> und Höhe <InlineMath math="h" /> als Schrägbilder.
+                    <List type="ordered">
+                        <ListItem>
+                            <InlineMath math="r = 1\,\text{cm} \quad h = 3\,\text{cm}" />
+                        </ListItem>
+                        <ListItem>
+                            <InlineMath math="r = 1{,}5\,\text{cm} \quad h = 4\,\text{cm}" />
+                        </ListItem>
+                        <ListItem>
+                            <InlineMath math="r = 1\,\text{cm} \quad h = 5\,\text{cm}" />
+                        </ListItem>
+                        <ListItem>
+                            <InlineMath math="r = 2\,\text{cm} \quad h = 6{,}5\,\text{cm}" />
+                        </ListItem>
+                        <ListItem>
+                            <InlineMath math="r = 0{,}5\,\text{cm} \quad h = 2\,\text{cm}" />
+                        </ListItem>
+                        <ListItem>
+                            <InlineMath math="r = 3\,\text{cm} \quad h = 1{,}5\,\text{cm}" />
+                        </ListItem>
+                    </List>
+                    <Lösung title="Lösung" id="Lösung-Schrägbilder" titleOrder={3}>
+                        <Image h={500} src="/Zylinder/ZylinderLösung@2x.webp" width={3600} height={2000} alt="Zylinder aus den Teilaufgaben 1 bis 6." />
+                    </Lösung>
+                </CheckableBlockquote>
             </CheckableHeading>
             <CheckableHeading title="Der Mantel eines Zylinders">
                 Eine praktische Eigenschaft von Zylindern ist, dass man sie <b>rollen</b> kann. Denk mal an einen Autoreifen – er ist praktisch nichts anderes als ein rollender Zylinder – insbesondere wenn wir uns die Autoreifen von Formel-1 Autos anschauen!
-                <Image src="/Zylinder/formel1reifen.webp" width={846} height={537} alt="Ein Formel-1 Auto von hinten. Links sind zwei Reifen sichtbar."/>
+                <Image src="/Zylinder/formel1reifen.webp" width={846} height={537} alt="Ein Formel-1 Auto von hinten. Links sind zwei Reifen sichtbar." />
                 Die Fläche, über die man einen Zylinder rollen kann, nennt man auch <b>Mantelfläche</b>. Die Ober- und Unterseite des Zylinders wird <b>Grundfläche</b> genannt. Das kannst du dir merken, wenn du an einen Regenmantel denkst: Den trägst du schließlich um dich herum und nicht unter dir 🧥.
                 <CheckableHeading title="Bestimmen der Fläche eines Zylinders durch Abrollen" titleOrder={2}>
                     Da wir Zylinder abrollen können, lässt sich die Fläche eines Zylinders relativ einfach bestimmen. Wir legen ihn dazu auf eine Seite und schauen, wie weit wir ihn rollen müssen, bis wir wieder am Startpunkt angekommen sind! Bei Objekten, die aus Plastik sind, geht das ganz gut mit einem Blatt Papier als Unterlage und einem Filzstift oder Textmarker zum anmalen. Der geht danach nämlich wieder gut ab und wir sehen dadurch, wann wir genau eine Umdrehung haben. Schau es dir in dem Video unten an.
@@ -320,8 +313,8 @@ export default function Zylinder() {
                         {thinsp}
                         cm.
                         <Flex>
-                            <Image src="/Zylinder/doseKokosDurchmesser.webp" width={6000} height={4000} alt="Ein Lineal liegt unter einer Konservendose. Ablesbar ist ein Durchmesser von 7,5 cm." />
-                            <Image src="/Zylinder/doseKokosHöhe.webp" width={6000} height={4000} alt="Ein Lineal wird neben eine Konservendose gehalten. Ablesbar ist eine Höhe von 11 cm." />
+                            <Image src="/Zylinder/doseKokosDurchmesser.webp" width={6000} height={4000} alt="Ein Lineal liegt unter einer Konservendose. Ablesbar ist ein Durchmesser von 7,5 cm." flex={"1 1 300px"} />
+                            <Image src="/Zylinder/doseKokosHöhe.webp" width={6000} height={4000} alt="Ein Lineal wird neben eine Konservendose gehalten. Ablesbar ist eine Höhe von 11 cm." flex={"1 1 300px"} />
                         </Flex>
                         Wir berechnen zuerst den Flächeninhalt mit der Flächenformel für einen Kreis:
                         <BlockMath math="A &= \pi \cdot r^2 \\ &= \pi \cdot \left(\frac{7{,}5\,\text{cm}}{2}\right)^2\\ &\approx 44{,}18\,\text{cm}^2" />
@@ -341,20 +334,8 @@ export default function Zylinder() {
                                 <ListItem>
                                     <b>Dose mit Kokosmilch</b>
                                     <Flex>
-                                        <Image
-                                            h={275}
-                                            src="/Zylinder/innenKokos.webp"
-                                            width={6000}
-                                            height={4000}
-                                            alt="Ein Lineal liegt über der Öffnung einer Konservendose mit Kokosmilch. Ablesbar ist ein Durchmesser von 7,3 cm."
-                                        />
-                                        <Image
-                                            h={275}
-                                            src="/Zylinder/füllstandKokos.webp"
-                                            width={6000}
-                                            height={4000}
-                                            alt="Ein Stäbchen, das in die Kokosmilch getunkt wurde, liegt neben einem Lineal. Es wurde ca. 9,5 cm tief hineingetaucht."
-                                        />
+                                        <Image h={275} src="/Zylinder/innenKokos.webp" width={6000} height={4000} alt="Ein Lineal liegt über der Öffnung einer Konservendose mit Kokosmilch. Ablesbar ist ein Durchmesser von 7,3 cm." flex={"1 1 300px"} />
+                                        <Image h={275} src="/Zylinder/füllstandKokos.webp" width={6000} height={4000} alt="Ein Stäbchen, das in die Kokosmilch getunkt wurde, liegt neben einem Lineal. Es wurde ca. 9,5 cm tief hineingetaucht." flex={"1 1 300px"} />
                                     </Flex>
                                     <Spoiler maxHeight={0} showLabel="Maße einblenden" hideLabel="Maße ausblenden">
                                         Innerer Durchmesser: 7,3
@@ -368,20 +349,8 @@ export default function Zylinder() {
                                 <ListItem>
                                     <b>Dose mit gehackten Tomaten</b>
                                     <Flex>
-                                        <Image
-                                            h={275}
-                                            src="/Zylinder/innenTomate.webp"
-                                            width={6000}
-                                            height={4000}
-                                            alt="Ein Lineal liegt über der Öffnung einer Konservendose mit gehackten Tomaten. Ablesbar ist ein Durchmesser von 7,3 cm."
-                                        />
-                                        <Image
-                                            h={275}
-                                            src="/Zylinder/füllstandTomate.webp"
-                                            width={6000}
-                                            height={4000}
-                                            alt="Ein Stäbchen, das in die gehackten Tomaten getunkt wurde, liegt neben einem Lineal. Es wurde ca. 9,7 cm tief hineingetaucht."
-                                        />
+                                        <Image h={275} src="/Zylinder/innenTomate.webp" width={6000} height={4000} alt="Ein Lineal liegt über der Öffnung einer Konservendose mit gehackten Tomaten. Ablesbar ist ein Durchmesser von 7,3 cm." flex={"1 1 300px"} />
+                                        <Image h={275} src="/Zylinder/füllstandTomate.webp" width={6000} height={4000} alt="Ein Stäbchen, das in die gehackten Tomaten getunkt wurde, liegt neben einem Lineal. Es wurde ca. 9,7 cm tief hineingetaucht." flex={"1 1 300px"} />
                                     </Flex>
                                     <Spoiler maxHeight={0} showLabel="Maße einblenden" hideLabel="Maße ausblenden">
                                         Innerer Durchmesser: 7,3
