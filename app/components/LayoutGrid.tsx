@@ -14,7 +14,6 @@ function LayoutGridInner({ children }: { children: any }) {
     const showSideview910 = pathname.startsWith("/klasse910");
     const showOutline = showSideview78 || showSideview910;
 
-
     return (
         <Grid justify="space-between" gutter={0}>
             {showSideview78 && !isStudent && (
@@ -37,19 +36,22 @@ function LayoutGridInner({ children }: { children: any }) {
                     visibleFrom="md"
                 >
                     <Sideview910 />
-                </GridCol>)}
+                </GridCol>
+            )}
             <GridCol
                 span={
                     showOutline
-                        ? isStudent ? {
-                              base: 12,
-                              md: 9,
-                              lg: 9.5,
-                          } : {
-                              base: 12,
-                              md: 6.5,
-                              lg: 7,
-                          } 
+                        ? isStudent
+                            ? {
+                                  base: 12,
+                                  md: 9,
+                                  lg: 9.5,
+                              }
+                            : {
+                                  base: 12,
+                                  md: 6.5,
+                                  lg: 7,
+                              }
                         : {
                               base: 12,
                               md: 12,
