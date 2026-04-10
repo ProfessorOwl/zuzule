@@ -11,8 +11,9 @@ import "./styles/globals.css";
 import "katex/dist/katex.min.css";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import { Metadata } from "next";
 
-export const metadata = {
+export const metadata: Metadata = {
     title: "zuzule",
     description: "Zurück zum Lehrer – vor zum Lerner.",
 };
@@ -45,7 +46,7 @@ export default function RootLayout({ children }: { children: any }) {
             <body className={`${lexend.className} ${pennstander.variable}`}>
                 <MantineProvider theme={theme}>
                     <HeaderSimple />
-                        <LayoutGrid>{children}</LayoutGrid>
+                    <LayoutGrid>{children}</LayoutGrid>
                 </MantineProvider>
                 <Analytics />
                 <SpeedInsights />
