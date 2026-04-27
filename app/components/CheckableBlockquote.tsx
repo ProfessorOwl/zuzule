@@ -32,13 +32,13 @@ function CheckableBlockquoteInner({ children, title, id, icon, titleOrder = 2 }:
 
     // Initialize checked state from searchParams
     const [checked, setChecked] = useState(() => searchParams.get(uniqueId) === "true");
-    
+
     // Load checkbox state from URL query parameters on mount
     useEffect(() => {
         const urlValue = searchParams.get(uniqueId);
         setChecked(urlValue === "true");
     }, [uniqueId, searchParams]);
-    const isStudent = searchParams.get("students") === "true"
+    const isStudent = searchParams.get("students") === "true";
     // Hide component if students=true and this item is checked
     if (isStudent && checked) {
         return null;
@@ -81,7 +81,7 @@ function CheckableBlockquoteInner({ children, title, id, icon, titleOrder = 2 }:
                     gap: "8px",
                 }}
             >
-                {!isStudent && <Checkbox checked={checked} onChange={(event) => handleChange(event.currentTarget.checked)} size="md" color="red" variant="outline" icon={CheckboxIcon}/>}
+                {!isStudent && <Checkbox checked={checked} onChange={(event) => handleChange(event.currentTarget.checked)} size="md" color="red" variant="outline" icon={CheckboxIcon} />}
                 {Icon ? <Icon size={40} /> : null}
                 {title && (
                     <Title
@@ -95,7 +95,7 @@ function CheckableBlockquoteInner({ children, title, id, icon, titleOrder = 2 }:
                     </Title>
                 )}
             </div>
-            <Collapse in={!checked}>
+            <Collapse expanded={!checked}>
                 <Text component="div" lineClamp={checked ? 1 : 0} opacity={checked ? 0.3 : 1} mt={5}>
                     {children}
                 </Text>

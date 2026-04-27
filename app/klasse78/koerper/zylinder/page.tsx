@@ -99,7 +99,7 @@ export default function Zylinder() {
                     <BlockMath math="U &= 2 \cdot \pi \cdot r \\ &= 2 \cdot \pi \cdot 1{,}5\,\text{cm} \\ &\approx 9{,}4\,\text{cm}" />
                     Das ist genau die Länge, die wir auch durch das Abrollen der Dose bekommen. Nun benötigen wir noch die Höhe unseres Zylinders.
                     <Image src="/Zylinder/höheFluid.webp" width={6000} height={4000} alt="Ein Geodreieck wird an eine Flasche mit Korrekturfluid gehalten. Die Höhe beträgt 5 cm" />
-                    Die Höhe beträgt in unserem Fall also <InlineMath math="5\,\text{cm}" />. Um die Mantelfläche zu erstellen, „ziehen" wir diese nach oben. Mathematisch machen wir das, indem wir den Umfang <InlineMath math="U" /> mit der Höhe <InlineMath math="h" /> multiplizieren:
+                    Die Höhe beträgt in unserem Fall also <InlineMath math="5\,\text{cm}" />. Um die Mantelfläche zu erstellen, „ziehen“ wir diese nach oben. Mathematisch machen wir das, indem wir den Umfang <InlineMath math="U" /> mit der Höhe <InlineMath math="h" /> multiplizieren:
                     <BlockMath math="A &= U \cdot h \\ &= 9{,}4\,\text{cm} \cdot 5\,\text{cm} \\ &= 47\,\text{cm}^2" />
                     Das passt gut zu der Fläche, die man durch das Abrollen der Flasche bekommt. Dadurch erhalten wir nämlich ca. <InlineMath math="44\,\text{cm}^2" />.
                 </CheckableHeading>

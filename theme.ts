@@ -53,6 +53,7 @@ export const theme = createTheme({
         xl: "20pt",
     },
     primaryColor: "teal",
+    defaultRadius: "sm",
     lineHeights: {
         xs: "1.5",
         sm: "1.6",
