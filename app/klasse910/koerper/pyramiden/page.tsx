@@ -24,7 +24,7 @@ export default function Pyramiden() {
                     <Image src="/Pyramiden/pyramidemaya.webp" h={250} width={6000} height={3927} alt="Eine Pyramide der Maya" flex={"1 1 300px"} />
                 </Flex>
                 <CheckableHeading title="Definition" titleOrder={2}>
-                    Eine Pyramide hat eine eckige Grundfläche, z.B. ein Dreieck oder ein Quadrat. Allgemein nennt man eckige Flächen auch <b>n-Ecke</b>. Den Mittelpunkt dieser Fläche ziehen wir nach oben, sodass wir die Pyramidenspitze bekommen. Verbinden wir nun alle Eckpunkte unserer Grundfläche mit der Spitze, so erhalten wir eine <b>gerade Pyramide</b>!
+                    Eine Pyramide hat eine eckige Grundfläche, z.{thinsp}B. ein Dreieck oder ein Quadrat. Allgemein nennt man eckige Flächen auch <b>n-Ecke</b>. Den Mittelpunkt dieser Fläche ziehen wir nach oben, sodass wir die Pyramidenspitze bekommen. Verbinden wir nun alle Eckpunkte unserer Grundfläche mit der Spitze, so erhalten wir eine <b>gerade Pyramide</b>!
                 </CheckableHeading>
                 <CheckableBlockquote icon="frage" title="Aufgabe: Alles Pyramiden?">
                     Welche der folgenden Abbildungen sind Pyramiden und welche nicht? Wenn ja, gib die Maße und Form der Grundfläche sowie die Höhe in cm an (2 Kästchen = 1{thinsp}
@@ -42,13 +42,13 @@ export default function Pyramiden() {
                                 Ja, eine quadratische, gerade Pyramide. Kantenlänge = 2{thinsp}
                                 cm, Höhe = 2,5
                                 {thinsp}
-                                cm.{" "}
+                                cm.
                             </ListItem>
                             <ListItem>Nein, das ist keine normale geometrische Form.</ListItem>
                             <ListItem>
                                 Ja, das ist eine rechteckige, schiefe Pyramide. Kantenlängen = 2 und 3{thinsp}
                                 cm, Höhe = 4{thinsp}
-                                cm{" "}
+                                cm
                             </ListItem>
                         </List>
                     </Lösung>
@@ -57,18 +57,18 @@ export default function Pyramiden() {
             <CheckableHeading title="Volumenberechnung">
                 Das Volumen von einer quadratischen Pyramide lässt sich sowohl experimentell als auch mathematisch gut herleiten. Fangen wir erstmal experimentell an!
                 <CheckableHeading titleOrder={2} title="Experimentell">
-                    Für das Experiment falten wir eine quadratische Pyramide und füllen sie mit Zucker. Dadurch können wir wiegen, wie viel Zucker sie enthält. Ihre Höhe soll dabei ihrer Kantenlänge entsprechen. Dafür müssen wir zuerst das Netz aufzeichnen. Als Seitenlänge wählen wir z.B. 5{thinsp}
+                    Für das Experiment falten wir eine quadratische Pyramide und füllen sie mit Zucker. Dadurch können wir wiegen, wie viel Zucker sie enthält. Ihre Höhe soll dabei ihrer Kantenlänge entsprechen. Dafür müssen wir zuerst das Netz aufzeichnen. Als Seitenlänge wählen wir z.{thinsp}B. 5{thinsp}
                     cm.
                     <Image src="/Pyramiden/VolumenPyramide/PyramideNetz.webp" width={1200} height={600} alt="Das Netz einer Pyramide auf einem Din A4 Blatt" />
                     Das Netz einer quadratischen Pyramide sieht aus wie ein Quadrat mit einem Dreieck auf jeder Seite. Die Höhe der Dreiecke ist nicht gleich der Höhe der Pyramide! Überlege dir, wie man sie berechnen kann!
                     <CheckableBlockquote title="Höhe der Dreieckswände" titleOrder={3} icon="aha">
-                        <Lösung>
-                            Du kannst den Satz des Pythagoras verwenden, um die Pyramidenhöhe zu bestimmen. In dem Beispiel hier ist es eine quadratische Pyramide mit Seitenlänge 3 und Höhe 3. Wenn du die <Mark c={"desblue"}>Höhe</Mark> in einer der Wände einzeichnest, siehst du, dass sie zusammen mit der <Mark c={"teal"}>Pyramidenhöhe</Mark> und der <Mark c={"desred"}>halben Seitenlänge</Mark> ein rechtwinkliges Dreieck bildet. Wir können also den <b>Satz des Pythagoras</b> verwenden, um die Länge von{" "}
-                            <Mark c={"desblue"}>
+                        <Lösung titleOrder={4} id="lösung-höhedreieckswände">
+                            Du kannst den Satz des Pythagoras verwenden, um die Pyramidenhöhe zu bestimmen. In dem Beispiel hier ist es eine quadratische Pyramide mit Seitenlänge 3 und Höhe 3. Wenn du die <Mark c={"desblue.9"}>Höhe</Mark> in einer der Wände einzeichnest, siehst du, dass sie zusammen mit der <Mark c={"teal.9"}>Pyramidenhöhe</Mark> und der <Mark c={"desred.9"}>halben Seitenlänge</Mark> ein rechtwinkliges Dreieck bildet. Wir können also den <b>Satz des Pythagoras</b> verwenden, um die Länge von{" "}
+                            <Mark c={"desblue.9"}>
                                 h<sub>Dreieck</sub>
                             </Mark>{" "}
                             zu berechnen.
-                            <MBlockMath desktop="\textcolor{#3312B8}{h_\text{Dreieck}} = \sqrt{1{,}5^2 + 3^2} = \sqrt{11{,}25} \approx 3,35" mobile="\textcolor{#3312B8}{h_\text{Dreieck}} &= \sqrt{1{,}5^2 + 3^2} \\ &= \sqrt{11{,}25} \\ &\approx 3,35" />
+                            <MBlockMath desktop="\textcolor{#3012B8}{h_\text{Dreieck}} = \sqrt{1{,}5^2 + 3^2} = \sqrt{11{,}25} \approx 3,35" mobile="\textcolor{#3012B8}{h_\text{Dreieck}} &= \sqrt{1{,}5^2 + 3^2} \\ &= \sqrt{11{,}25} \\ &\approx 3,35" />
                             Damit unsere Pyramide also eine Höhe von 3{thinsp}
                             cm hat, muss die Höhe einer Dreieckswand ca. 3,35
                             {thinsp}
@@ -94,14 +94,14 @@ export default function Pyramiden() {
                         </ImageCaption>
                     </Flex>
                     Um nun von dem Gewicht auf das Volumen zu kommen, benötigen wir die Dichte des Zuckers. Für Glukose, also Haushaltszucker, beträgt sie <InlineMath math="1{,}56\,\tfrac{\text{g}}{\text{mL}}" />. Probiere selber, daraus das Volumen zu bekommen!
-                    <Lösung title="Lösung: Volumen übers Gewicht" titleOrder={3}>
+                    <Lösung title="Lösung: Volumen übers Gewicht" titleOrder={3} id="">
                         Die Dichte hat als Einheit <InlineMath math="\frac{\text{Gewicht}}{\text{Volumen}}" />, bzw. mathematisch: <InlineMath math="\rho = \frac{m}{V}" />, wobei <InlineMath math="\rho" /> die Dichte ist, <InlineMath math="m" /> die Masse und <InlineMath math="V" /> das Volumen. Wir kennen Dichte und Masse, also stellen wir nach <InlineMath math="V" /> um:
                         <MBlockMath mobile="\rho &= \frac{m}{V} \\ &\Downarrow \scriptsize{\cdot V} \\ \rho \cdot V &= m \\ &\Downarrow \scriptsize{: \rho} \\ V &= \frac{m}{\rho}" desktop="\rho &= \frac{m}{V} &&\lvert \cdot V \\ \rho \cdot V &= m &&\lvert \: \rho \\ V &= \frac{m}{\rho}" />
                         Setzen wir die Dichte von <InlineMath math="1{,}56\,\tfrac{\text{g}}{\text{mL}}" /> und die Masse von <InlineMath math="43\,\text{g}" /> ein, so erhalten wir:
                         <MBlockMath desktop="V = \frac{m}{\rho} = \frac{43\,\text{g}}{1{,}56\,\tfrac{\text{g}}{\text{mL}}} \approx 27,56\,\text{mL}" mobile="V &= \frac{m}{\rho} \\ &= \frac{43\,\text{g}}{1{,}56\,\tfrac{\text{g}}{\text{mL}}} \\ &\approx 27,56\,\text{mL}" />
                     </Lösung>
                 </CheckableHeading>
-                <CheckableBlockquote icon="aha" title="Volumenformel experimentell">
+                <CheckableBlockquote icon="aha" title="Volumenformel experimentell" titleOrder={3}>
                     Mit dem experimentell berechneten Volumen können wir eine Formel für Pyramiden aufstellen, sodass wir ohne Zuckerfüllung das Volumen berechnen können. Vergleichen wir sie dazu mit einem Würfel, der die Pyramide genau umschließt. Seine Seitenlängen entsprechen also der Höhe der Pyramide.
                     <Image h={375} src="/Pyramiden/VolumenPyramide/PyramideWürfel.webp" width={750} height={900} alt="Eine Pyramide in einem Quader" />
                     Nehmen wir die Seitenlänge der Pyramide, die wir gebastelt haben, also 5{thinsp}
@@ -125,7 +125,7 @@ export default function Pyramiden() {
                     <BlockMath math="V_\text{Quader} = 6 \cdot V_\text{Pyramide}" />
                     Kannst du daraus selber eine Formel für das Pyramidenvolumen herleiten? Denke dran: Der Quader ist doppelt so hoch wie eine der Pyramiden!
                     <CheckableBlockquote title="Herleitung" titleOrder={3} icon="frage">
-                        <Lösung>
+                        <Lösung titleOrder={3} id="lösung-theoretisch">
                             Wir können also über die Volumenformel für einen Quader auf das Volumen einer Pyramide schließen! Für einen Quader gilt:
                             <BlockMath math="V_\text{Quader} = G \cdot h_\text{Quader}" />
                             mit der Grundfläche <InlineMath math="G" /> und der Höhe <InlineMath math="h_\text{Quader}" />
@@ -158,7 +158,7 @@ export default function Pyramiden() {
                                 Das können wir in die Formel für die Dreiecksfläche einsetzen und bekommen:
                                 <MBlockMath mobile="G &= \frac{1}{2}xh_\triangle \\ &= \frac{1}{2}x\cdot \frac{\sqrt{3}}{2}x \\ &= \frac{\sqrt{3}}{4}x^2 \\ &\Downarrow \scriptsize{\cdot \frac{4}{\sqrt{3}}} \\ \frac{4}{\sqrt{3}}G &= x^2 \\ &\Downarrow \scriptsize{\sqrt{}} \\ x &= \sqrt{\frac{4}{\sqrt{3}}G}" desktop="G &= \frac{1}{2}xh_\triangle \\ &= \frac{1}{2}x\cdot \frac{\sqrt{3}}{2}x \\ &= \frac{\sqrt{3}}{4}x^2 &&\lvert \cdot \frac{4}{\sqrt{3}} \\ \frac{4}{\sqrt{3}}G &= x^2 &&\lvert \sqrt{} \\ x &= \sqrt{\frac{4}{\sqrt{3}}G}" />
                                 Jetzt das Ergebnis für <InlineMath math="G" /> einsetzen, dann bekommen wir <InlineMath math="x" /> heraus:
-                                <BlockMath math="x &= \sqrt{\frac{4}{\sqrt{3}}G} \\ &= \sqrt{\frac{4}{\sqrt{3}}\cdot9\sqrt{3}} \\ &= \sqrt{4 \cdot 9} \\ &= 6" />{" "}
+                                <BlockMath math="x &= \sqrt{\frac{4}{\sqrt{3}}G} \\ &= \sqrt{\frac{4}{\sqrt{3}}\cdot9\sqrt{3}} \\ &= \sqrt{4 \cdot 9} \\ &= 6" />
                             </ListItem>
 
                             <ListItem>
@@ -173,7 +173,7 @@ export default function Pyramiden() {
                 </CheckableBlockquote>
             </CheckableHeading>
             <CheckableHeading title="Oberflächeninhalt">
-                Neben dem Volumen ist auch die Oberfläche von Pyramiden wichtig, z.B. um die Menge an Ziegeln für ein Dach zu berechnen. Hier gibt es jedoch keine allgemeine Formel, denn die Oberfläche ist abhängig von der Anzahl der Seiten.
+                Neben dem Volumen ist auch die Oberfläche von Pyramiden wichtig, z.{thinsp}B. um die Menge an Ziegeln für ein Dach zu berechnen. Hier gibt es jedoch keine allgemeine Formel, denn die Oberfläche ist abhängig von der Anzahl der Seiten.
                 <Divider />
                 Vergleichen wir mal die Netze von einer dreieckigen und einer quadratischen Pyramide:
                 <Image h={500} src="/Pyramiden/PyramideOberfläche.webp" width={1400} height={1000} alt="Eine dreieckige und eine viereckige Pyramide mit den dazugehörigen Netzen" />
@@ -191,12 +191,12 @@ export default function Pyramiden() {
                 Die Höhe der Dreiecke kannst du meistens mit dem Satz des Pythagoras berechnen. Schau dir den Infokasten an, wenn du hier Hilfe brauchst oder gehe direkt zu den Aufgaben!
                 <CheckableBlockquote title="Wdh: Höhe der Dreieckswände" titleOrder={2} icon="aha">
                     <Lösung>
-                        Du kannst den Satz des Pythagoras verwenden, um die Pyramidenhöhe zu bestimmen. In dem Beispiel hier ist es eine quadratische Pyramide mit Seitenlänge 3 und Höhe 3. Wenn du die <Mark c={"desblue"}>Höhe</Mark> in einer der Wände einzeichnest, siehst du, dass sie zusammen mit der <Mark c={"green"}>Pyramidenhöhe</Mark> und der <Mark c={"desred"}>halben Seitenlänge</Mark> ein rechtwinkliges Dreieck bildet. Wir können also den <b>Satz des Pythagoras</b> verwenden, um die Länge von{" "}
-                        <Mark c={"desblue"}>
+                        Du kannst den Satz des Pythagoras verwenden, um die Pyramidenhöhe zu bestimmen. In dem Beispiel hier ist es eine quadratische Pyramide mit Seitenlänge 3 und Höhe 3. Wenn du die <Mark c={"desblue.9"}>Höhe</Mark> in einer der Wände einzeichnest, siehst du, dass sie zusammen mit der <Mark c={"green"}>Pyramidenhöhe</Mark> und der <Mark c={"desred.9"}>halben Seitenlänge</Mark> ein rechtwinkliges Dreieck bildet. Wir können also den <b>Satz des Pythagoras</b> verwenden, um die Länge von{" "}
+                        <Mark c={"desblue.9"}>
                             h<sub>Dreieck</sub>
                         </Mark>{" "}
                         zu berechnen.
-                        <MBlockMath desktop="\textcolor{#3312B8}{h_\text{Dreieck}} = \sqrt{1{,}5^2 + 3^2} = \sqrt{11{,}25} \approx 3,35" mobile="\textcolor{#3312B8}{h_\text{Dreieck}} &= \sqrt{1{,}5^2 + 3^2} \\ &= \sqrt{11{,}25} \\ &\approx 3,35" />
+                        <MBlockMath desktop="\textcolor{#3012B8}{h_\text{Dreieck}} = \sqrt{1{,}5^2 + 3^2} = \sqrt{11{,}25} \approx 3,35" mobile="\textcolor{#3012B8}{h_\text{Dreieck}} &= \sqrt{1{,}5^2 + 3^2} \\ &= \sqrt{11{,}25} \\ &\approx 3,35" />
                         Damit unsere Pyramide also eine Höhe von 3{thinsp}
                         cm hat, muss die Höhe einer Dreieckswand ca. 3,35
                         {thinsp}
@@ -227,7 +227,7 @@ export default function Pyramiden() {
                         Skizze:
                         <ImageCaption fit="contain" src="/Pyramiden/DächerSkizze.webp" width={1200} height={600} alt="Eine Skizze der beiden Dachformen">
                             (Nicht maßstabsgetreu)
-                        </ImageCaption>{" "}
+                        </ImageCaption>
                         <List>
                             <ListItem>
                                 <b>Dach 1</b>

@@ -1,6 +1,6 @@
 "use client";
 
-import { createTheme, Divider, Flex, List, Mark, Space, Text } from "@mantine/core";
+import { Anchor, createTheme, Divider, Flex, List, Mark, Space, Spoiler, Text } from "@mantine/core";
 import { generateColors } from "@mantine/colors-generator";
 
 export const theme = createTheme({
@@ -39,11 +39,17 @@ export const theme = createTheme({
                 color: "none",
             },
         }),
+        Anchor: Anchor.extend({
+            defaultProps: {
+                c: "teal.9"
+            }
+        })
     },
     colors: {
-        desblue: generateColors("#3312B8"),
-        desred: generateColors("#C92052"),
-        desyellow: generateColors("#D1BC1B"),
+        teal: generateColors("#0D8762"),
+        desblue: generateColors("#3012B8"),
+        desred: generateColors("#B81E46"),
+        desyellow: generateColors("#A39215"),
     },
     fontSizes: {
         xs: "12pt",
@@ -54,6 +60,7 @@ export const theme = createTheme({
     },
     primaryColor: "teal",
     defaultRadius: "sm",
+    
     lineHeights: {
         xs: "1.5",
         sm: "1.6",

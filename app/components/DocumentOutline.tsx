@@ -18,6 +18,7 @@ function DocumentOutlineInner() {
     const [headings, setHeadings] = useState<HeadingItem[]>([]);
     const [scrollHost, setScrollHost] = useState<HTMLElement | null>(null);
     const [checkedHeadings, setCheckedHeadings] = useState<Set<string>>(new Set());
+    const [hoveredId, setHoveredId] = useState<string | null>(null);
     const searchParams = useSearchParams();
 
     useEffect(() => {
@@ -146,53 +147,44 @@ function DocumentOutlineInner() {
                     }
 
                     const isChecked = checkedHeadings.has(heading.id);
+                    const isActive = heading.id === activeHeadingId;
+                    const isHovered = hoveredId === heading.id;
+
+                    const bgColor = isChecked ? "transparent" : isActive ? "var(--mantine-primary-color-light)" : isHovered ? "var(--mantine-color-gray-0)" : "transparent";
+
                     return (
                         <Group
-                            bg={heading.id === activeHeadingId ? "var(--mantine-primary-color-light)" : undefined}
+                            bg={bgColor}
                             bdrs={5}
                             mt={heading.titleOrder == 1 ? 1.5 : 0}
                             key={heading.id}
                             gap={6}
                             align="flex-start"
                             wrap="nowrap"
-                            pl={5+ (heading.titleOrder - 1) * 16}
+                            pl={5 + (heading.titleOrder - 1) * 16}
                             style={{
                                 cursor: "pointer",
-                                borderBottom: heading.titleOrder == 1 ? "1px solid var(--mantine-primary-color-light-color)" : "0px solid var(--mantine-primary-color)"
+                                borderBottom: heading.titleOrder == 1 ? "1px solid var(--mantine-primary-color-light-color)" : "0px solid var(--mantine-primary-color-ligght-color)",
                             }}
                             className="outline-item"
+                            onMouseEnter={() => setHoveredId(heading.id)}
+                            onMouseLeave={() => setHoveredId(null)}
+                            onClick={() => handleScroll(heading.id)}
                         >
-                            {!(searchParams.get("students") === "true") && <Checkbox 
-                                checked={isChecked}
-                                onChange={() => handleCheckboxToggle(heading.id)}
-                                size="xs"
-                                mt={6}
-                                color="red"
-                                variant="outline"
-                                onClick={(e) => e.stopPropagation()}
-                                miw={16}
-                                icon={CheckboxIcon}
-                            />}
+                            {!(searchParams.get("students") === "true") && <Checkbox checked={isChecked} onChange={() => handleCheckboxToggle(heading.id)} size="xs" mt={6} color="red" variant="outline" onClick={(e) => e.stopPropagation()} miw={16} icon={CheckboxIcon} />}
                             <Text
                                 mt={0}
                                 size="xs"
                                 miw={0}
                                 flex={1}
                                 td={isChecked ? "line-through" : "none"}
-                                c={isChecked ? "var(--mantine-color-gray-6)" : heading.id === activeHeadingId ? "var(--mantine-primary-color-7)" : "var(--mantine-primary-color-6)"}
+                                c={isChecked ? "var(--mantine-color-gray-6)" : isActive ? "var(--mantine-color-teal-9)" : "var(--mantine-color-gray-7)"}
                                 style={{
                                     wordBreak: "break-word",
                                     overflowWrap: "break-word",
                                     transition: "all 0.2s ease",
                                 }}
                                 className="outline-link"
-                                onMouseEnter={(e) => {
-                                    (e.currentTarget as HTMLElement).style.color = isChecked ? "var(--mantine-color-gray-7)" : "var(--mantine-primary-color-8)";
-                                }}
-                                onMouseLeave={(e) => {
-                                    (e.currentTarget as HTMLElement).style.color = isChecked ? "var(--mantine-color-gray-6)" : heading.id === activeHeadingId ? "var(--mantine-primary-color-7)" : "var(--mantine-primary-color-6)";
-                                }}
-                                onClick={() => handleScroll(heading.id)}
                             >
                                 {heading.title}
                             </Text>

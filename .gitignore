@@ -130,6 +130,7 @@ dist
 .pnp.*
 
 .DS_Store
+.venv
 # next-video
 videos/*
 !videos/*.json
@@ -137,3 +138,5 @@ videos/*
 !videos/*.ts
 public/_next-video
 Masterarbeit-Website.code-workspace
+.image-compressor-mtimes.json
+.VSCodeCounter

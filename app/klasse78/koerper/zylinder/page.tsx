@@ -246,7 +246,6 @@ export default function Zylinder() {
                         <Divider />
                         Das sind einige Gründe, die man mit den Augen sehen kann. Der wichtigste Grund ist jedoch der: Der Inhalt von Konservendosen wird bei der Produktion <b>in</b> der Dose aufgekocht – und das halten nur Zylinder (oder Kugeln) aus. Schau dir zur Erklärung mal dieses Video von der Sendung mit der Maus an:{" "}
                         <a target="_blank" href="https://www.wdrmaus.de/filme/sachgeschichten/konservendose.php5">
-                            {" "}
                             <Button mb={"0.2em"} rightSection={<IconExternalLink />}>
                                 Hier klicken!
                             </Button>
@@ -256,7 +255,7 @@ export default function Zylinder() {
                 <CheckableHeading title="Volumen mathematisch hergeleitet" titleOrder={2}>
                     <CheckableHeading title="Volumen eines Quaders" titleOrder={3}>
                         Ein Zylinder ist nicht so unterschiedlich von einem Quader: Zylinder haben einen Kreis als Grundfläche, Quader ein Rechteck. Ansonsten sind beides Körper, bei denen man die Grundfläche „in die Höhe gezogen“ hat. Erinnern wir uns also erstmal an das Volumen eines Quaders zurück! Das können wir mit <InlineMath math="A = a \cdot b" /> berechnen, wobei <InlineMath math="a" /> und <InlineMath math="b" /> die beiden Grundseiten bezeichnen.
-                        <Image src="/Prismen/RechteckFläche@2x.webp" width={1802} height={1200} alt="Ein Rechteck mit der Fläche A und den Seiten a und b." />
+                        <Image src="/Prismen/RechteckFläche.webp" width={698} height={450} alt="Ein Rechteck mit der Fläche A und den Seiten a und b." />
                         Das Volumen eines Quaders ergibt sich also durch das <b>„hochziehen“</b> dieser Fläche in den Raum. Schau es dir mal an diesem Beispiel hier an, wo ein Quader eine Grundfläche von 3&nbsp;mal 2{thinsp}
                         cm und eine Höhe von 2{thinsp}
                         cm hat.
@@ -307,7 +306,7 @@ export default function Zylinder() {
                         Können wir diese Formel eventuell auch bei Zylindern anwenden? Gilt <InlineMath math="V = A \cdot h" /> hier immer? Testen wir es mal!
                     </CheckableHeading>
                     <CheckableHeading title="Volumen eines Zylinders" titleOrder={3}>
-                        Wir verfahren nach dem gleichen Prinzip wie bei einem Quader. Wir berechnen zuerst den Flächeninhalt der Grundfläche und „ziehen“ ihn dann in die Höhe. Wir multiplizieren dazu den Flächeninhalt mit der Höhe. Als Objekt suchen wir uns eine beliebige Dose aus dem Vorratsschrank aus z.B. eine Dose Kokosmilch. Sie hat einen Durchmesser von 7,5
+                        Wir verfahren nach dem gleichen Prinzip wie bei einem Quader. Wir berechnen zuerst den Flächeninhalt der Grundfläche und „ziehen“ ihn dann in die Höhe. Wir multiplizieren dazu den Flächeninhalt mit der Höhe. Als Objekt suchen wir uns eine beliebige Dose aus dem Vorratsschrank aus z.{thinsp}B. eine Dose Kokosmilch. Sie hat einen Durchmesser von 7,5
                         {thinsp}
                         cm und eine Höhe von 11
                         {thinsp}
@@ -342,7 +341,7 @@ export default function Zylinder() {
                                         {thinsp}
                                         cm. Bedeckter Bereich auf Stäbchen: 9,5
                                         {thinsp}
-                                        cm{" "}
+                                        cm
                                     </Spoiler>
                                 </ListItem>
                                 <Space />
@@ -357,7 +356,7 @@ export default function Zylinder() {
                                         {thinsp}
                                         cm. Bedeckter Bereich auf Stäbchen: 9,7
                                         {thinsp}
-                                        cm{" "}
+                                        cm
                                     </Spoiler>
                                 </ListItem>
                                 <Space />

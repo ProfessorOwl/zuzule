@@ -32,8 +32,7 @@ export default function Prismen() {
                     Suche in deinem Zimmer Objekte, die ein Prisma sind und bringe sie in den Unterricht mit. Was für eine Form hat die Grundfläche, aus der das Prisma „gezogen“ wird?
                 </CheckableBlockquote>
                 <CheckableBlockquote icon="aha" title="Aha! 1">
-                    {" "}
-                    Ein Prisma hat also nicht immer eine dreieckige Grundseite, sondern kann jede eckige Form als Grundseite haben! Dementsprechend ist also auch ein <b>Würfel</b> oder ein <b>Quader</b> ein Prisma.{" "}
+                    Ein Prisma hat also nicht immer eine dreieckige Grundseite, sondern kann jede eckige Form als Grundseite haben! Dementsprechend ist also auch ein <b>Würfel</b> oder ein <b>Quader</b> ein Prisma.
                 </CheckableBlockquote>
             </CheckableHeading>
 
@@ -72,8 +71,7 @@ export default function Prismen() {
             </CheckableHeading>
 
             <CheckableHeading title="Oberflächeninhalt">
-                Über das Netz eines Körpers lässt sich gut der Oberflächeninhalt berechnen, da hier nur noch einfache Formen vorkommen. Man unterscheidet hier zwischen <b>Mantelfläche</b> und <b>Grundfläche</b>
-                . Die Grundfläche bezeichnet die Grundform des Prismas, also ob es z.B. drei- oder viereckig ist. Die Mantelfläche ist dann die Fläche, die durch die Höhe des Prismas dazukommt.
+                Über das Netz eines Körpers lässt sich gut der Oberflächeninhalt berechnen, da hier nur noch einfache Formen vorkommen. Man unterscheidet hier zwischen <b>Mantelfläche</b> und <b>Grundfläche</b>. Die Grundfläche bezeichnet die Grundform des Prismas, also ob es z.{thinsp}B. drei- oder viereckig ist. Die Mantelfläche ist dann die Fläche, die durch die Höhe des Prismas dazukommt.
                 <Image h={400} src="/Prismen/PrismaNetzFläche@2x.webp" width={3200} height={2000} alt="Ein Prisma mit seinem Netz." />
                 Der <b>Oberflächeninhalt</b> <InlineMath math="O" /> des Prismas lässt sich dann über die <b>Mantelfläche</b> <InlineMath math="M = M_1 + M_2 + M_3" /> und die <b>Grundfläche</b> <InlineMath math="G" /> berechnen:
                 <BlockMath math="O = \textcolor{red}{M} + 2\cdot \textcolor{blue}{G} = \textcolor{red}{M_1} + \textcolor{red}{M_2} + \textcolor{red}{M_3} + 2\cdot \textcolor{blue}{G}" />
@@ -84,7 +82,6 @@ export default function Prismen() {
                     <Lösung title="Lösung" id="Lösung-Oberflächeninhalt" titleOrder={3}>
                         <List type="ordered" withPadding>
                             <ListItem>
-                                {" "}
                                 Rechteckiges Prisma
                                 <BlockMath math="G &= 1 \,\text{cm} \cdot 2 \,\text{cm} \\ &= 2 \,\text{cm}^2 \\ M &= 2 \cdot 3 \,\text{cm} \cdot 1 \,\text{cm} + 2 \cdot 3 \,\text{cm} \cdot 2 \,\text{cm} \\ &= 6 \, \text{cm}^2 + 12 \, \text{cm}^2 \\ &= 18 \, \text{cm}^2 \\ O &= 2 \cdot G + M \\ &= 2 \cdot 2 \,\text{cm}^2 + 18 \, \text{cm}^2 \\ &= 22\, \text{cm}^2" />
                             </ListItem>
@@ -112,7 +109,7 @@ export default function Prismen() {
                             Experimentell lässt sich das Volumen beliebiger Körper gut mit etwas Wasser und einem Messbecher testen. Testen wir das Volumen von diesem Stein.
                         </ImageCaption>
                         <ImageCaption h={250} src="/Prismen/VolumenWasser/VolumenWasser2.webp" width={6000} height={4000} alt="Der Füllstand des Messbechers ist sichtbar: 600 mL">
-                            Wir messen eine genaue Menge Wasser ab, z.B. 600
+                            Wir messen eine genaue Menge Wasser ab, z.{thinsp}B. 600
                             {thinsp}
                             mL.
                         </ImageCaption>
@@ -133,7 +130,7 @@ export default function Prismen() {
                 <CheckableHeading title="Volumen mathematisch hergeleitet" titleOrder={2}>
                     <CheckableHeading title="Volumen eines Quaders" titleOrder={3}>
                         Da ein Quader ein Spezialfall eines Prismas ist, können wir uns daran herleiten, wie wir das Volumen eines allgemeinen Prismas berechnen. Ein Quader hat eine rechteckige Grundfläche. Deren Inhalt können wir mit <InlineMath math="A = a \cdot b" /> berechnen, wobei <InlineMath math="a" /> und <InlineMath math="b" /> die beiden Grundseiten bezeichnen.
-                        <Image src="/Prismen/RechteckFläche@2x.webp" width={1802} height={1200} alt="Ein Rechteck mit der Fläche A und den Seiten a und b." />
+                        <Image src="/Prismen/RechteckFläche.webp" width={698} height={450} alt="Ein Rechteck mit der Fläche A und den Seiten a und b." />
                         Das Volumen eines Quaders ergibt sich nun durch das <b>„hochziehen“</b> dieser Fläche in den Raum. Schau es dir mal an diesem Beispiel hier an, wo ein Quader eine Grundfläche von 3&nbsp;mal 2{thinsp}
                         cm und eine Höhe von 2{thinsp}
                         cm hat.

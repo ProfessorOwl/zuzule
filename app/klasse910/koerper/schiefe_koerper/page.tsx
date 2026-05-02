@@ -14,9 +14,9 @@ export default function SchiefeKoerper() {
     return (
         <Fragment>
             <CheckableHeading title="Schiefe Körper">
-                Vielleicht weißt du schon, dass das Volumen von geraden und schiefen Prismen identisch ist – solange sie die gleiche Grundfläche und Höhe haben. Das folgt aus dem <b>Prinzip des Cavalieri</b>. Das Prinzip können wir auch auf weitere Körper erweitern, wie z.B. Pyramiden oder Kegel. Aber wie lässt sich dieses „intuitive“ Prinzip beweisen?
+                Vielleicht weißt du schon, dass das Volumen von geraden und schiefen Prismen identisch ist – solange sie die gleiche Grundfläche und Höhe haben. Das folgt aus dem <b>Prinzip des Cavalieri</b>. Das Prinzip können wir auch auf weitere Körper erweitern, wie z.{thinsp}B. Pyramiden oder Kegel. Aber wie lässt sich dieses „intuitive“ Prinzip beweisen?
                 <CheckableBlockquote title="Das Prinzip des Cavalieri" titleOrder={2} icon="exkurs">
-                    Das Prinzip besagt, dass zwei Körper das gleiche Volumen besitzen, wenn sie in jeder Höhe die gleiche Schnittfläche besitzen. Vergleichen wir z.B. einen geraden mit einem schiefen Quader, die beide die gleiche Grundflächen wie Höhen haben.
+                    Das Prinzip besagt, dass zwei Körper das gleiche Volumen besitzen, wenn sie in jeder Höhe die gleiche Schnittfläche besitzen. Vergleichen wir z.{thinsp}B. einen geraden mit einem schiefen Quader, die beide die gleiche Grundflächen wie Höhen haben.
                     <Image width={6000} height={4000} src={"/SchiefeKoerper/Schachteile.webp"} alt="Ein gerader und ein schiefer Stapel aus quadratischen Teilen" />
                     Beide Stapel bestehen aus 10 gleichgroßen Teilstücken. In dem Beispiel sind sie relativ groß, kann man die Scheiben noch gut voneinander unterscheiden. Aber stell dir vor, wir machen sie dünner:
                     <Flex>
@@ -31,7 +31,7 @@ export default function SchiefeKoerper() {
                 </CheckableBlockquote>
             </CheckableHeading>
             <CheckableHeading title="Schiefe Pyramiden">
-                Wie bei einem Prisma kann man auch eine Pyramide in ganz viele Scheiben zerteilen. Das könnte dann z.B. so aussehen:
+                Wie bei einem Prisma kann man auch eine Pyramide in ganz viele Scheiben zerteilen. Das könnte dann z.{thinsp}B. so aussehen:
                 <Image width={6000} height={4000} src={"/SchiefeKoerper/GeradePyramide.webp"} alt="Eine gerade Pyramide aus vielen Schichten Pappe" />
                 Verschiebt man nun jede Schicht, so bekommt man eine schiefe Pyramide. Es ist dabei egal, ob die Pyramide danach noch nach einer Pyramide aussieht oder nicht – solange man keine Scheibe herausnimmt, bleibt das Volumen gleich. Denn das Volumen jeder einzelnen Scheibe ändert sich nicht!
                 <Flex>
@@ -57,7 +57,7 @@ export default function SchiefeKoerper() {
                     <Lösung title="Lösung" titleOrder={3} id="Lösung-Preikestolen">
                         <List type="ordered">
                             <ListItem>
-                                Um das Volumen zu berechnen, benötigen wir neben der <Mark c={"teal.6"}>Höhe</Mark> von 12,6{thinsp}m noch die Länge und Breite der Pyramide. In der Draufsicht ist das obere Dreieck gegeben, dessen <Mark c={"desred"}>Grundseite</Mark> wir mit dem Satz des Pythagoras berechnen können.
+                                Um das Volumen zu berechnen, benötigen wir neben der <Mark c={"teal.9"}>Höhe</Mark> von 12,6{thinsp}m noch die Länge und Breite der Pyramide. In der Draufsicht ist das obere Dreieck gegeben, dessen <Mark c={"desred.9"}>Grundseite</Mark> wir mit dem Satz des Pythagoras berechnen können.
                                 <MBlockMath
                                     desktop="g^2 &= (2{,}8\,\text{m})^2 + (4{,}7\,\text{m})^2 &&\lvert \sqrt{} \\
                             &= \sqrt{(2{,}8\,\text{m})^2 + (4{,}7\,\text{m})^2} \\
@@ -67,9 +67,9 @@ export default function SchiefeKoerper() {
                             &= \sqrt{(2{,}8\,\text{m})^2 + (4{,}7\,\text{m})^2} \\
                             &\Rightarrow g \approx 5{,}5\,\text{m}"
                                 />
-                                Die rechteckige Grundfläche der Pyramide hat damit die Maße <Mark c={"teal.6"}>12,6{thinsp}m</Mark> mal <Mark c={"desred"}>5,5{thinsp}m</Mark>. Um die <Mark c={"desblue"}>Höhe</Mark> zu berechnen, die auf diesem Rechteck steht, müssen wir erneut die Draufsicht verwenden.
+                                Die rechteckige Grundfläche der Pyramide hat damit die Maße <Mark c={"teal.9"}>12,6{thinsp}m</Mark> mal <Mark c={"desred.9"}>5,5{thinsp}m</Mark>. Um die <Mark c={"desblue.9"}>Höhe</Mark> zu berechnen, die auf diesem Rechteck steht, müssen wir erneut die Draufsicht verwenden.
                                 <Space />
-                                Die Grundseite nimmt bis zur <Mark c={"desblue"}>Höhe</Mark> 77% Platz ein. Die Länge bekommen wir so:
+                                Die Grundseite nimmt bis zur <Mark c={"desblue.9"}>Höhe</Mark> 77% Platz ein. Die Länge bekommen wir so:
                                 <BlockMath math="0{,}77 \cdot 5{,}5\,\text{m} = 4,3\,\text{m}" />
                                 Wir verwenden erneut den Satz des Pythagoras:
                                 <MBlockMath
