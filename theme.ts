@@ -1,6 +1,6 @@
 "use client";
 
-import { Anchor, createTheme, Divider, Flex, List, Mark, Space, Spoiler, Text } from "@mantine/core";
+import { Anchor, Button, createTheme, Divider, Flex, List, Mark, Space, Spoiler, Text } from "@mantine/core";
 import { generateColors } from "@mantine/colors-generator";
 
 export const theme = createTheme({
@@ -42,6 +42,11 @@ export const theme = createTheme({
         Anchor: Anchor.extend({
             defaultProps: {
                 c: "teal.9"
+            }
+        }),
+        Button: Button.extend({
+            defaultProps: {
+                bg: "teal.9"
             }
         })
     },

@@ -36,7 +36,7 @@ export default function Zylinder() {
 
             <CheckableHeading title="Schrägbilder">
                 Aus der Orientierungsstufe kennst du bereits das <b>Schrägbild</b> eines Quaders. Das sollte ungefähr so aussehen wie in dem Bild.
-                <Image src="/Prismen/QuaderSchrägbild.webp" width={901} height={600} alt="Schrägbild eines Quaders auf kariertem Papier." />
+                <Image src="/Prismen/Quader.webp" width={901} height={600} alt="Schrägbild eines Quaders auf kariertem Papier." />
                 Verdeckte Kanten werden also mit einer gestrichelten Linie angedeutet, während sichtbare Kanten durchgezogen werden.
                 <Divider />
                 Versuchen wir uns mal an einem Schrägbild von einem Zylinder.
@@ -69,6 +69,7 @@ export default function Zylinder() {
                         </ListItem>
                     </List>
                     <Lösung title="Lösung" id="Lösung-Schrägbilder" titleOrder={3}>
+                        Deine gezeichneten Zylinder sollten ungefähr so aussehen:
                         <Image h={500} src="/Zylinder/ZylinderLösung.webp" width={1800} height={1000} alt="Zylinder aus den Teilaufgaben 1 bis 6." />
                     </Lösung>
                 </CheckableBlockquote>
@@ -80,8 +81,8 @@ export default function Zylinder() {
                 <CheckableHeading title="Bestimmen der Fläche eines Zylinders durch Abrollen" titleOrder={2}>
                     Da wir Zylinder abrollen können, lässt sich die Fläche eines Zylinders relativ einfach bestimmen. Wir legen ihn dazu auf eine Seite und schauen, wie weit wir ihn rollen müssen, bis wir wieder am Startpunkt angekommen sind! Bei Objekten, die aus Plastik sind, geht das ganz gut mit einem Blatt Papier als Unterlage und einem Filzstift oder Textmarker zum anmalen. Der geht danach nämlich wieder gut ab und wir sehen dadurch, wann wir genau eine Umdrehung haben. Schau es dir in dem Video unten an.
                     <Video src={UmfangZylinder} />
-                    Die abgerollte Mantelfläche bildet ein Rechteck, das in unserem Beispiel die Kantenlängen <InlineMath math="9{,}4\,\text{cm}" /> und <InlineMath math="4{,}7\,\text{cm}" /> hat. Der Flächeninhalt <InlineMath math="A" /> ergibt sich also wie folgt:
-                    <BlockMath math="A &= 9{,}4\,\text{cm} \cdot 4{,}7\,\text{cm} \\ &= 44{,}18\,\text{cm}^2" />
+                    Die abgerollte Mantelfläche bildet ein Rechteck, das in unserem Beispiel die Kantenlängen <InlineMath math="9{,}4\,\text{cm}" /> und <InlineMath math="4{,}7\,\text{cm}" /> hat. Der Flächeninhalt <InlineMath math="M" /> ergibt sich also wie folgt:
+                    <BlockMath math="M &= 9{,}4\,\text{cm} \cdot 4{,}7\,\text{cm} \\ &= 44{,}18\,\text{cm}^2" />
                     Das Problem ist nun aber, dass wir nicht unbedingt jeden Zylinder mit einem Filzstift anmalen wollen. Wie würden wir die Mantelfläche eines Autoreifens bestimmen? Dann bräuchten wir bereits einen Eimer Farbe – diese Kleckerei können wir uns mit etwas Mathematik sparen.
                 </CheckableHeading>
                 <CheckableHeading title="Bestimmen der Fläche eines Zylinders mit Formeln" titleOrder={2}>
@@ -100,7 +101,7 @@ export default function Zylinder() {
                     Das ist genau die Länge, die wir auch durch das Abrollen der Dose bekommen. Nun benötigen wir noch die Höhe unseres Zylinders.
                     <Image src="/Zylinder/höheFluid.webp" width={6000} height={4000} alt="Ein Geodreieck wird an eine Flasche mit Korrekturfluid gehalten. Die Höhe beträgt 5 cm" />
                     Die Höhe beträgt in unserem Fall also <InlineMath math="5\,\text{cm}" />. Um die Mantelfläche zu erstellen, „ziehen“ wir diese nach oben. Mathematisch machen wir das, indem wir den Umfang <InlineMath math="U" /> mit der Höhe <InlineMath math="h" /> multiplizieren:
-                    <BlockMath math="A &= U \cdot h \\ &= 9{,}4\,\text{cm} \cdot 5\,\text{cm} \\ &= 47\,\text{cm}^2" />
+                    <BlockMath math="M &= U \cdot h \\ &= 9{,}4\,\text{cm} \cdot 5\,\text{cm} \\ &= 47\,\text{cm}^2" />
                     Das passt gut zu der Fläche, die man durch das Abrollen der Flasche bekommt. Dadurch erhalten wir nämlich ca. <InlineMath math="44\,\text{cm}^2" />.
                 </CheckableHeading>
                 <CheckableBlockquote icon="frage" title="Aufgabe: Mantelfläche">
@@ -126,6 +127,7 @@ export default function Zylinder() {
                         </ListItem>
                     </List>
                     <Lösung title="Lösung" id="Lösung-Mantelfläche" titleOrder={3}>
+                        Benutze die Formel von oben, also <InlineMath math="M = U \cdot h" /> und berechne den Umfang mit der Formel <InlineMath math="U = 2\pi r" />
                         <List type="ordered">
                             <ListItem>
                                 <InlineMath math="U = 4\pi\,\text{cm}\approx 12{,}57\,\text{cm}\quad A = 4\pi\,\text{cm}^2 \approx 12{,}57\,\text{cm}^2" />
@@ -155,7 +157,7 @@ export default function Zylinder() {
                 Die Ober- und Unterseite eines Zylinders ist ein Kreis. Deswegen können wir die Flächenformel eines Kreises verwenden!
                 <BlockMath math="A_\text{Kappe} = \pi \cdot r^2" />
                 Um nun die Gesamtoberfläche <InlineMath math="O" /> eines Zylinders zu bekommen, addieren wir die Ober- und Unterseite <InlineMath math="A_\text{Kappe}" /> sowie die Mantelfläche <InlineMath math="M" /> zusammen:
-                <BlockMath math="A = M + 2\cdot A_\text{Kappe}" />
+                <BlockMath math="O = M + 2\cdot A_\text{Kappe}" />
                 <CheckableBlockquote icon="frage" title="Aufgabe: Oberfläche">
                     Berechne die Gesamtoberfläche der Zylinder, welche Radius <InlineMath math="r" /> und Höhe <InlineMath math="h" /> haben.
                     <List type="ordered">
@@ -178,11 +180,8 @@ export default function Zylinder() {
                             <InlineMath math="r = 1{,}95\,\text{m} \quad h = 480\,\text{cm}" />
                         </ListItem>
                     </List>
-                    <Lösung
-                        title="Lösung" //
-                        id="Lösung-Oberfläche"
-                        titleOrder={3}
-                    >
+                    <Lösung title="Lösung" id="Lösung-Oberfläche" titleOrder={3}>
+                        Benutze dafür die Formel von oben, also <InlineMath math="M = U \cdot h" /> und die Formel für <InlineMath math="A_\text{Kappe}" />. Setze die Werte dann in die Formel <InlineMath math="O = M + 2\cdot A_\text{Kappe}" /> ein, um zum Ergebnis zu kommen.
                         <List type="ordered" visibleFrom="md">
                             <ListItem>
                                 <BlockMath math="&&M &= \tfrac{36}{5}\pi\,\text{cm}^2 \approx 22{,}62\,\text{cm}^2 \\ &&A_\text{Kappe} &= 9\pi\,\text{cm}^2 \approx 28{,}27\,\text{cm}^2 \\ &&O &= \tfrac{126}{5}\pi\,\text{cm}^2 \approx 79{,}17\,\text{cm}^2" />
@@ -368,7 +367,8 @@ export default function Zylinder() {
                                 <Space />
                                 <b>Dose mit gehackten Tomaten</b>
                                 <BlockMath math="A &= \pi \cdot r^2 \\ &= \pi \cdot \left(\frac{7{,}3\,\text{cm}}{2}\right)^2 \\ &\approx 41{,}85\,\text{cm}^2 \\ V &= A \cdot h \\ &= 42{,}31\,\text{cm}^2 \cdot 9,7\,\text{cm} \\ &\approx 405{,}98\,\text{cm}^3" />
-                                Gehen wir davon aus, dass wir richtig gemessen haben, so sind in der Kokosmilch <InlineMath math="400\,\text{mL} - 397{,}61\,\text{mL} = 2{,}39\,\text{mL}" /> zu wenig drin, während uns bei den gehackten Tomaten <InlineMath math="405{,}98\,\text{mL} - 400\,\text{mL} = 5{,}98\,\text{mL}" /> geschenkt werden. Ob das als Anlass genügt, um die Kokosmilch im Supermarkt zurückzugeben, muss jedoch jeder selber entscheiden…
+                                Gehen wir davon aus, dass wir richtig gemessen haben, so sind in der Kokosmilch <InlineMath math="400\,\text{mL} - 397{,}61\,\text{mL} = 2{,}39\,\text{mL}" /> zu wenig drin, während uns bei den gehackten Tomaten <InlineMath math="405{,}98\,\text{mL} - 400\,\text{mL} = 5{,}98\,\text{mL}" /> geschenkt werden. <br />
+                                Ob du die Kokosmilch mit der minimal geringeren Menge aus diesem Grund im Supermarkt zurückgeben würdest, musst du selbst entscheiden…
                             </Lösung>
                         </CheckableBlockquote>
                     </CheckableHeading>

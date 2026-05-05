@@ -192,8 +192,8 @@ export default function Dreiecke() {
                 Die Formel für ein Rechteck können wir nun nutzen, um den Flächeninhalt von Dreiecken zu berechnen. <br />
                 Schau dir dazu das Bild unten an. Du nimmst ein beliebiges Dreieck mit und zerteilst es in der Mitte, indem du die Höhe <InlineMath>h</InlineMath> zu einer der Spitzen einzeichnest. <b>Wichtig:</b> Die Höhe steht immer senkrecht, also im 90°-Winkel, auf einer der Seiten. Wenn du das Dreieck verdoppelst und entlang der Höhe zerschneidest, dann bekommst du ein Rechteck heraus!
                 <Image src="/Prismen/DreieckFläche.webp" width={1200} height={600} alt="Ein Dreieck mit der Höhe h und der Grundseite g. Die Höhe zerteilt es in zwei weitere Dreiecke mit den Flächen A1 und A2." />
-                Den Flächeninhalt davon kannst du nun mit der Formel <InlineMath math="A_\text{Rechteck} = g \cdot h" /> berechnen. Da wir, um zum Rechteck zu gelangen, das Dreieck verdoppeln mussten, müssen wir den Flächeninhalt nun wieder halbieren, um zum Flächeninhalt vom Dreieck zu kommen, also:
-                <BlockMath math="A_\text{Dreieck} = \frac{1}{2}g\cdot h" />
+                Den Flächeninhalt davon kannst du nun mit der Formel <InlineMath math="A_\text{Rechteck} = \textcolor{#3012B8}{g} \cdot \textcolor{#B81E46}{h}" /> berechnen. Da wir, um zum Rechteck zu gelangen, das Dreieck verdoppeln mussten, müssen wir den Flächeninhalt nun wieder halbieren, um zum Flächeninhalt vom Dreieck zu kommen, also:
+                <BlockMath math="A_\text{Dreieck} = \frac{1}{2} \textcolor{#3012B8}{g}\cdot \textcolor{#B81E46}{h}" />
                 <CheckableBlockquote title="Aufgabe: Flächeninhalt" icon="frage" titleOrder={2}>
                     Zeichne die folgenden Dreiecke ab und messe sie aus. Bestimme den Flächeninhalt.
                     <Image src="/Dreiecke/flächeninhaltDreieck.webp" width={950} height={600} alt="Drei Dreiecke mit verschiedenen Flächeninhalten." />
@@ -203,27 +203,27 @@ export default function Dreiecke() {
                         <Image src="/Dreiecke/flächeninhaltDreieckLösung.webp" width={1500} height={600} alt="Die Drei Dreiecke mit einer gemessenen Grundfläche und der entsprechenden Höhe." />
                         <List type="ordered">
                             <ListItem>
-                                Die Grundseite ist <InlineMath math="4,5\,\text{cm}" /> lang, die Höhe <InlineMath math="3,5\,\text{cm}" />. Daher beträgt die Fläche:
+                                Die Grundseite ist <InlineMath math="4{,}5\,\text{cm}" /> lang, die Höhe <InlineMath math="\textcolor{#B81E46}{3{,}5\,\text{cm}}" />. Daher beträgt die Fläche:
                                 <BlockMath
                                     math="
-                                    A &= 4,5\,\text{cm} \cdot 3,5\,\text{cm} \\
-                                        &= 15,75\,\text{cm}^2"
+                                    A &= 4{,}5\,\text{cm} \cdot \textcolor{#B81E46}{3{,}5\,\text{cm}} \\
+                                        &= 15{,}75\,\text{cm}^2"
                                 />
                             </ListItem>
                             <ListItem>
-                                Die Grundseite ist <InlineMath math="4,5\,\text{cm}" /> lang, die Höhe <InlineMath math="2,5\,\text{cm}" />. Daher beträgt die Fläche:
+                                Die Grundseite ist <InlineMath math="4{,}5\,\text{cm}" /> lang, die Höhe <InlineMath math="\textcolor{#B81E46}{2{,}5\,\text{cm}}" />. Daher beträgt die Fläche:
                                 <BlockMath
                                     math="
-                                    A &= 4,5\,\text{cm} \cdot 2,5\,\text{cm} \\
-                                        &= 11,75\,\text{cm}^2"
+                                    A &= 4{,}5\,\text{cm} \cdot \textcolor{#B81E46}{2{,}5\,\text{cm}} \\
+                                        &= 11{,}75\,\text{cm}^2"
                                 />
                             </ListItem>
                             <ListItem>
-                                Die Grundseite ist <InlineMath math="4,5\,\text{cm}" /> lang, die Höhe <InlineMath math="3,5\,\text{cm}" />. Daher beträgt die Fläche:
+                                Die Grundseite ist <InlineMath math="4{,}5\,\text{cm}" /> lang, die Höhe <InlineMath math="\textcolor{#B81E46}{3\,\text{cm}}" />. Daher beträgt die Fläche:
                                 <BlockMath
                                     math="
-                                    A &= 2,5\,\text{cm} \cdot 3\,\text{cm} \\
-                                        &= 7,5\,\text{cm}^2"
+                                    A &= 2{,}5\,\text{cm} \cdot \textcolor{#B81E46}{3\,\text{cm}} \\
+                                        &= 7{,}5\,\text{cm}^2"
                                 />
                             </ListItem>
                         </List>
