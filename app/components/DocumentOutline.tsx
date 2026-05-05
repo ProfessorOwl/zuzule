@@ -1,7 +1,7 @@
 "use client";
 
 import { Checkbox, CheckboxProps, Group, List, ListItem, ScrollAreaAutosize, Stack, Text } from "@mantine/core";
-import { Suspense, useEffect, useMemo, useState } from "react";
+import { Suspense, useEffect, useMemo, useRef, useState } from "react";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import { IconDotsDiagonal2 } from "@tabler/icons-react";
 import { useScrollSpy } from "@mantine/hooks";
@@ -19,6 +19,7 @@ function DocumentOutlineInner() {
     const [scrollHost, setScrollHost] = useState<HTMLElement | null>(null);
     const [checkedHeadings, setCheckedHeadings] = useState<Set<string>>(new Set());
     const [hoveredId, setHoveredId] = useState<string | null>(null);
+    const outlineViewportRef = useRef<HTMLDivElement>(null);
     const searchParams = useSearchParams();
 
     useEffect(() => {
@@ -80,6 +81,18 @@ function DocumentOutlineInner() {
         setCheckedHeadings(checkedHeading);
     }, [searchParams]);
 
+    // Scrollt den Outline-Container, sodass das aktive Element im oberen Drittel bleibt
+    useEffect(() => {
+        if (!activeHeadingId || !outlineViewportRef.current) return;
+        const viewport = outlineViewportRef.current;
+        const activeItem = viewport.querySelector(`[data-outline-id="${activeHeadingId}"]`) as HTMLElement | null;
+        if (!activeItem) return;
+
+        const viewportHeight = viewport.clientHeight;
+        const targetScrollTop = activeItem.offsetTop - viewportHeight / 3;
+        viewport.scrollTo({ top: Math.max(0, targetScrollTop), behavior: "smooth" });
+    }, [activeHeadingId]);
+
     // Scrolle zum Objekt mit einer bestimmten ID
     const handleScroll = (id: string) => {
         const element = document.querySelector(`[data-checkable-id="${id}"]`);
@@ -139,7 +152,7 @@ function DocumentOutlineInner() {
             <Text fw={600} size="xs">
                 Gliederung
             </Text>
-            <ScrollAreaAutosize mah={"calc(100vh - 145px)"}>
+            <ScrollAreaAutosize mah={"calc(100vh - 145px)"} viewportRef={outlineViewportRef}>
                 {headings.map((heading, index) => {
                     // Hide this heading if a parent heading is checked
                     if (!shouldShowHeading(index)) {
@@ -154,6 +167,7 @@ function DocumentOutlineInner() {
 
                     return (
                         <Group
+                            data-outline-id={heading.id}
                             bg={bgColor}
                             bdrs={5}
                             mt={heading.titleOrder == 1 ? 1.5 : 0}
