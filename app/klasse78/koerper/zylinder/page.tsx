@@ -36,7 +36,7 @@ export default function Zylinder() {
 
             <CheckableHeading title="Schrägbilder">
                 Aus der Orientierungsstufe kennst du bereits das <b>Schrägbild</b> eines Quaders. Das sollte ungefähr so aussehen wie in dem Bild.
-                <Image src="/Prismen/QuaderSchrägbild@2x.webp" width={1802} height={1200} alt="Schrägbild eines Quaders auf kariertem Papier." />
+                <Image src="/Prismen/QuaderSchrägbild.webp" width={901} height={600} alt="Schrägbild eines Quaders auf kariertem Papier." />
                 Verdeckte Kanten werden also mit einer gestrichelten Linie angedeutet, während sichtbare Kanten durchgezogen werden.
                 <Divider />
                 Versuchen wir uns mal an einem Schrägbild von einem Zylinder.
@@ -45,7 +45,7 @@ export default function Zylinder() {
                     <ListItem>Dann ziehen wir die äußersten Kanten nach oben, bis wir die gewünschte Höhe erreichen.</ListItem>
                     <ListItem>Darauf setzen wir nun die Oberseite.</ListItem>
                 </List>
-                <Image src="/Zylinder/ZylinderSchrägbildEntstehung@2x.webp" width={2402} height={1200} alt="Es wird gezeigt, wie das Schrägbild eines Zylinders Schritt für Schritt gezeichnet wird. Links wird mit einem Kreis angefangen. Auf dessen Außenseiten werden zwei senkrechte Striche gezeichnet, die alle die gleiche Höhe haben. Auf deren Enden wird dann ein identischer Kreis zu dem unten gezeichnet." />
+                <Image src="/Zylinder/ZylinderSchrägbildEntstehung.webp" width={1201} height={600} alt="Es wird gezeigt, wie das Schrägbild eines Zylinders Schritt für Schritt gezeichnet wird. Links wird mit einem Kreis angefangen. Auf dessen Außenseiten werden zwei senkrechte Striche gezeichnet, die alle die gleiche Höhe haben. Auf deren Enden wird dann ein identischer Kreis zu dem unten gezeichnet." />
                 <CheckableBlockquote icon="frage" title="Aufgabe: Schrägbilder">
                     Zeichne die Zylinder mit Radius <InlineMath math="r" /> und Höhe <InlineMath math="h" /> als Schrägbilder.
                     <List type="ordered">
@@ -69,7 +69,7 @@ export default function Zylinder() {
                         </ListItem>
                     </List>
                     <Lösung title="Lösung" id="Lösung-Schrägbilder" titleOrder={3}>
-                        <Image h={500} src="/Zylinder/ZylinderLösung@2x.webp" width={3600} height={2000} alt="Zylinder aus den Teilaufgaben 1 bis 6." />
+                        <Image h={500} src="/Zylinder/ZylinderLösung.webp" width={1800} height={1000} alt="Zylinder aus den Teilaufgaben 1 bis 6." />
                     </Lösung>
                 </CheckableBlockquote>
             </CheckableHeading>

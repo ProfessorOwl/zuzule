@@ -191,7 +191,7 @@ export default function Dreiecke() {
                 <Divider />
                 Die Formel für ein Rechteck können wir nun nutzen, um den Flächeninhalt von Dreiecken zu berechnen. <br />
                 Schau dir dazu das Bild unten an. Du nimmst ein beliebiges Dreieck mit und zerteilst es in der Mitte, indem du die Höhe <InlineMath>h</InlineMath> zu einer der Spitzen einzeichnest. <b>Wichtig:</b> Die Höhe steht immer senkrecht, also im 90°-Winkel, auf einer der Seiten. Wenn du das Dreieck verdoppelst und entlang der Höhe zerschneidest, dann bekommst du ein Rechteck heraus!
-                <Image src="/Prismen/DreieckFläche@2x.webp" width={2400} height={1200} alt="Ein Dreieck mit der Höhe h und der Grundseite g. Die Höhe zerteilt es in zwei weitere Dreiecke mit den Flächen A1 und A2." />
+                <Image src="/Prismen/DreieckFläche.webp" width={1200} height={600} alt="Ein Dreieck mit der Höhe h und der Grundseite g. Die Höhe zerteilt es in zwei weitere Dreiecke mit den Flächen A1 und A2." />
                 Den Flächeninhalt davon kannst du nun mit der Formel <InlineMath math="A_\text{Rechteck} = g \cdot h" /> berechnen. Da wir, um zum Rechteck zu gelangen, das Dreieck verdoppeln mussten, müssen wir den Flächeninhalt nun wieder halbieren, um zum Flächeninhalt vom Dreieck zu kommen, also:
                 <BlockMath math="A_\text{Dreieck} = \frac{1}{2}g\cdot h" />
                 <CheckableBlockquote title="Aufgabe: Flächeninhalt" icon="frage" titleOrder={2}>

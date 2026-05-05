@@ -38,7 +38,7 @@ export default function Prismen() {
 
             <CheckableHeading title="Schrägbilder">
                 Aus der Orientierungsstufe kennst du bereits das <b>Schrägbild</b> eines Quaders. Das sollte ungefähr so aussehen wie in dem Bild.
-                <Image src="/Prismen/QuaderSchrägbild@2x.webp" width={1802} height={1200} alt="Schrägbild eines Quaders auf kariertem Papier." />
+                <Image src="/Prismen/QuaderSchrägbild.webp" width={901} height={600} alt="Schrägbild eines Quaders auf kariertem Papier." />
                 Verdeckte Kanten werden also mit einer gestrichelten Linie angedeutet, während sichtbare Kanten durchgezogen werden.
                 <Divider />
                 Zeichnen wir mal ein Schrägbild von dem dreieckigen Prisma oben.
@@ -47,12 +47,12 @@ export default function Prismen() {
                     <ListItem>Als nächstes ziehen wir die drei Kanten von den Ecken aus nach oben. Auch hier gilt: Die hinterste Kante ist verdeckt und wird deshalb gestrichelt gezeichnet. </ListItem>
                     <ListItem>Im letzten Schritt verbinden wir die Eckpunkte der oberen Fläche. Sie sollte genau die gleiche Form wie die untere Fläche haben! </ListItem>
                 </List>
-                <Image src="/Prismen/PrismaSchrägbildEntstehung@2x.webp" width={2402} height={1200} alt="Es wird gezeigt, wie das Schrägbild eines Prismas Schritt für Schritt gezeichnet wird. Links wird mit einem Dreieck angefangen. Auf dessen Ecken werden senkrechte Striche gezeichnet, die alle die gleiche Höhe haben. Deren Enden werden dann verbunden, wodurch sich ein Dreieck identisch zu dem unteren ergibt." />
+                <Image src="/Prismen/PrismaSchrägbildEntstehung.webp" width={1201} height={600} alt="Es wird gezeigt, wie das Schrägbild eines Prismas Schritt für Schritt gezeichnet wird. Links wird mit einem Dreieck angefangen. Auf dessen Ecken werden senkrechte Striche gezeichnet, die alle die gleiche Höhe haben. Deren Enden werden dann verbunden, wodurch sich ein Dreieck identisch zu dem unteren ergibt." />
                 <CheckableBlockquote icon="frage" title="Aufgabe: Schrägbilder">
                     Vervollständige die folgenden Schrägbilder in deinem Heft:
-                    <Image src="/Prismen/SchrägbilderVervollständigenAufgabe@2x.webp" width={3600} height={1200} alt="4 Schrägbilder, welche vervollständigt werden sollen." />
+                    <Image src="/Prismen/SchrägbilderVervollständigenAufgabe.webp" width={1800} height={600} alt="4 Schrägbilder, welche vervollständigt werden sollen." />
                     <Lösung title="Lösung" id="Lösung-Schrägbilder" titleOrder={3}>
-                        <Image src="/Prismen/SchrägbilderVervollständigenLösung@2x.webp" width={3600} height={1200} alt="Die Lösung, wie die Schrägbilder vervollständigt werden können." />
+                        <Image src="/Prismen/SchrägbilderVervollständigenLösung.webp" width={1800} height={600} alt="Die Lösung, wie die Schrägbilder vervollständigt werden können." />
                     </Lösung>
                 </CheckableBlockquote>
             </CheckableHeading>
@@ -72,13 +72,13 @@ export default function Prismen() {
 
             <CheckableHeading title="Oberflächeninhalt">
                 Über das Netz eines Körpers lässt sich gut der Oberflächeninhalt berechnen, da hier nur noch einfache Formen vorkommen. Man unterscheidet hier zwischen <b>Mantelfläche</b> und <b>Grundfläche</b>. Die Grundfläche bezeichnet die Grundform des Prismas, also ob es z.{thinsp}B. drei- oder viereckig ist. Die Mantelfläche ist dann die Fläche, die durch die Höhe des Prismas dazukommt.
-                <Image h={400} src="/Prismen/PrismaNetzFläche@2x.webp" width={3200} height={2000} alt="Ein Prisma mit seinem Netz." />
+                <Image h={500} src="/Prismen/PrismaNetzFläche.webp" width={1800} height={1000} alt="Ein Prisma mit seinem Netz." />
                 Der <b>Oberflächeninhalt</b> <InlineMath math="O" /> des Prismas lässt sich dann über die <b>Mantelfläche</b> <InlineMath math="M = M_1 + M_2 + M_3" /> und die <b>Grundfläche</b> <InlineMath math="G" /> berechnen:
                 <BlockMath math="O = \textcolor{red}{M} + 2\cdot \textcolor{blue}{G} = \textcolor{red}{M_1} + \textcolor{red}{M_2} + \textcolor{red}{M_3} + 2\cdot \textcolor{blue}{G}" />
                 Da die Grundfläche zweimal vorkommt, müssen wir sie auch doppelt in der Rechnung berücksichtigen!
                 <CheckableBlockquote title="Aufgabe: Oberflächeninhalt" icon="frage">
                     Berechne den Oberflächeninhalt der Prismen.
-                    <Image src="/Prismen/PrismaOberflächeninhalt@2x.webp" width={3602} height={1200} alt="Ein Prisma mit seinem Netz. Die Mantelfläche ergibt nun ein großes Rechteck." />
+                    <Image src="/Prismen/PrismaOberflächeninhalt.webp" width={1800} height={600} alt="Ein Prisma mit seinem Netz. Die Mantelfläche ergibt nun ein großes Rechteck." />
                     <Lösung title="Lösung" id="Lösung-Oberflächeninhalt" titleOrder={3}>
                         <List type="ordered" withPadding>
                             <ListItem>
@@ -98,7 +98,7 @@ export default function Prismen() {
                 </CheckableBlockquote>
                 <CheckableBlockquote title="Aha! 2" icon="aha">
                     Zerlegt man das Prisma, das wir oben sehen, in ein etwas anderes Netz, können wir etwas praktisches beobachten: Die Mantelfläche eines Prismas bildet ein <b>Rechteck</b>! Die Seitenlängen dieses Rechtecks können wir uns leicht herleiten, wenn wir die Grundfläche kennen. Die einen Seiten entsprechen der <b>Höhe</b> des Prismas, die anderen dem <b>Umfang</b> der Grundfläche. Das macht die Berechnung des Oberflächeninhalts deutlich einfacher!
-                    <Image h={400} src="/Prismen/PrismaNetzFlächeRechteck@2x.webp" width={3200} height={2000} alt="Ein Prisma mit seinem Netz. Die Mantelfläche ergibt nun ein großes Rechteck." />
+                    <Image h={500} src="/Prismen/PrismaNetzFlächeRechteck.webp" width={1600} height={1000} alt="Ein Prisma mit seinem Netz. Die Mantelfläche ergibt nun ein großes Rechteck." />
                 </CheckableBlockquote>
             </CheckableHeading>
             <CheckableHeading title="Volumenberechnung">
@@ -181,10 +181,10 @@ export default function Prismen() {
                     </CheckableHeading>
                     <CheckableHeading title="Volumen eines Prismas" titleOrder={3}>
                         Die Grundfläche eines Prismas ist immer eine beliebige, eckige Fläche, also ein <b>n-Eck</b>. Nehmen wir jedoch hier als Beispiel ein dreieckiges Prisma. Seine Grundfläche können wir mit der Formel <InlineMath math="A = \frac{1}{2} \textcolor{blue}{g} \cdot \textcolor{red}{h}" /> berechnen. Im Bild unten findest du dazu nochmal eine Herleitung.
-                        <Image src="/Prismen/DreieckFläche@2x.webp" width={2400} height={1200} alt="Ein Dreieck mit der Höhe h und der Grundseite g. Die Höhe zerteilt es in zwei weitere Dreiecke mit den Flächen A1 und A2." />
+                        <Image src="/Prismen/DreieckFläche.webp" width={1200} height={600} alt="Ein Dreieck mit der Höhe h und der Grundseite g. Die Höhe zerteilt es in zwei weitere Dreiecke mit den Flächen A1 und A2." />
                         Wir können aus jedem Dreieck also ein Rechteck mit doppelter Fläche machen. Das können wir auch für die Volumenberechnung ausnutzen, denn von einem Quader wissen wir, dass die Volumenformel <InlineMath math="V = A \cdot h" /> ist, also Grundfläche mal Höhe. Daraus können wir uns nun herleiten, dass auch das Volumen eines dreieckigen Prismas mit der Formel <InlineMath math="V = A \cdot h" /> berechenbar ist. Denn mit dem Verdoppeln des Flächeninhaltes verdoppeln wir auch das Volumen. Das Volumen ergibt sich also mit der Formel:
                         <BlockMath math="V_\text{viereckiges Prisma} &= A_\text{Viereck} \cdot \textcolor{green}{h_\text{Prisma}} \\ \frac{1}{2} V_\text{viereckiges Prisma} &= \frac{1}{2} A_\text{Viereck} \cdot \textcolor{green}{h_\text{Prisma}} \\ V_\text{dreieckiges Prisma} &= A_\text{Dreieck} \cdot \textcolor{green}{h_\text{Prisma}}" />
-                        <Image src="/Prismen/DreieckigesPrismaVolumen@2x.webp" width={2400} height={1200} alt="Die Grundfläche eines dreieckigen Prismas wird verdoppelt, wodurch ein quadratisches Prisma entsteht." />
+                        <Image src="/Prismen/DreieckigesPrismaVolumen.webp" width={1200} height={600} alt="Die Grundfläche eines dreieckigen Prismas wird verdoppelt, wodurch ein quadratisches Prisma entsteht." />
                         Von dem Volumen eines dreieckigen Prismas können wir uns jedes andere Prisma herleiten, da wir jedes n-Eck in beliebig viele Dreiecke zerteilen können! Schau dir dazu das Video unten an.
                         <Video src={VieleckInDreiecke} />
                         Dadurch können wir also die Formel <InlineMath math="V = A \cdot h" /> festhalten für <b>alle</b> Prismen. Egal, wie das Prisma aussieht, das Volumen entspricht immer der Grundfläche mal der Höhe.
