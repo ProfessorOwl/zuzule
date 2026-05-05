@@ -51,6 +51,18 @@ export const theme = createTheme({
         desred: generateColors("#B81E46"),
         desyellow: generateColors("#A39215"),
     },
+    headings: {
+         sizes: {
+            h1: {fontSize: "2.125rem"},
+            h2: {fontSize: "1.625rem"},
+            h3: {fontSize: "1.625rem"},
+            h4: {fontSize: "1.625rem"},
+            h5: {fontSize: "1.625rem"},
+            h6: {fontSize: "1.625rem"},
+
+         }
+
+    },
     fontSizes: {
         xs: "12pt",
         sm: "14pt",

@@ -114,7 +114,11 @@ function GeoGebraAppletSliderinner({ materialId, width = 800, height = 600, appN
             <Script src="https://www.geogebra.org/apps/deployggb.js" strategy="lazyOnload" onReady={() => setScriptisLoaded(true)} />
             <Center my={"md"}>
                 <Slider
-                    thumbChildren={<Badge size="xl">{sliderLabel}</Badge>}
+                    thumbChildren={
+                        <Badge size="xl" color="teal.9">
+                            {sliderLabel}
+                        </Badge>
+                    }
                     styles={{
                         thumb: {
                             width: 100,
@@ -131,6 +135,7 @@ function GeoGebraAppletSliderinner({ materialId, width = 800, height = 600, appN
                     min={sliderMin}
                     max={sliderMax}
                     value={value}
+                    color="teal.9"
                     onChange={setValue}
                 />
             </Center>

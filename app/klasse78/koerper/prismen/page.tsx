@@ -130,7 +130,7 @@ export default function Prismen() {
                 <CheckableHeading title="Volumen mathematisch hergeleitet" titleOrder={2}>
                     <CheckableHeading title="Volumen eines Quaders" titleOrder={3}>
                         Da ein Quader ein Spezialfall eines Prismas ist, können wir uns daran herleiten, wie wir das Volumen eines allgemeinen Prismas berechnen. Ein Quader hat eine rechteckige Grundfläche. Deren Inhalt können wir mit <InlineMath math="A = a \cdot b" /> berechnen, wobei <InlineMath math="a" /> und <InlineMath math="b" /> die beiden Grundseiten bezeichnen.
-                        <Image src="/Prismen/RechteckFläche.webp" width={698} height={450} alt="Ein Rechteck mit der Fläche A und den Seiten a und b." />
+                        <Image src="/Prismen/RechteckFläche.webp" width={698} height={450} h={225} alt="Ein Rechteck mit der Fläche A und den Seiten a und b." />
                         Das Volumen eines Quaders ergibt sich nun durch das <b>„hochziehen“</b> dieser Fläche in den Raum. Schau es dir mal an diesem Beispiel hier an, wo ein Quader eine Grundfläche von 3&nbsp;mal 2{thinsp}
                         cm und eine Höhe von 2{thinsp}
                         cm hat.

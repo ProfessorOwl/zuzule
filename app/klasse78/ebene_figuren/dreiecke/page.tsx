@@ -22,24 +22,24 @@ export default function Dreiecke() {
                 Dreiecke sind die einfachsten Figuren, die du in der Ebene zeichnen kannst. Eine Figur mit zwei Punkten gibt es nicht mehr, da dann nur noch eine Linie übrig bleibt.
                 <CheckableHeading title="Definition" titleOrder={2}>
                     Ein Dreieck ist eine Figur, die 3 Eckpunkte hat. Du kannst also ein beliebiges Dreieck zeichnen, wenn du zuerst drei Punkte aufzeichnest und diese dann mit Linien verbindest.
-                    <Image src="/Dreiecke/DreieckKonstruktion.webp" width={1350} height={750} alt="Links sind zweimal drei Punkte zu sehen, die die Eckpunkte von zwei Dreiecken bilden. Rechts sind sie dann mit Linien zu vollständigen Dreiecken verbunden." />
+                    <Image src="/Dreiecke/DreieckKonstruktion.webp" width={1350} height={750} h={450} alt="Links sind zweimal drei Punkte zu sehen, die die Eckpunkte von zwei Dreiecken bilden. Rechts sind sie dann mit Linien zu vollständigen Dreiecken verbunden." />
                 </CheckableHeading>
                 Die zwei Seiten, die bei einem Dreieck einen Winkel einschließen, haben einen besonderen Namen: <b>Schenkel</b>. Der Name erinnert nicht umsonst an Ober- und Unterschenkel. Wenn du dich mit gespreizten Beinen auf den Boden setzt, dann schließen deine Oberschenkel genau so einen Winkel ein, wie es die Schenkel bei einem Dreieck tun.
-                <Image src="/Dreiecke/WinkelSchenkel.webp" width={1350} height={750} alt="Zwei Kinder, die hochspringen. In dem Schatten des linken Kindes ist ein Dreieck angedeutet, in dem ein Winkel zwischen zwei Schenkeln eingeschlossen ist." />
+                <Image src="/Dreiecke/WinkelSchenkel.webp" width={1350} height={750} h={375} alt="Zwei Kinder, die hochspringen. In dem Schatten des linken Kindes ist ein Dreieck angedeutet, in dem ein Winkel zwischen zwei Schenkeln eingeschlossen ist." />
                 Welche Seiten du in einem Dreieck als <Mark c={"teal.9"}>Schenkel</Mark> bezeichnest, hängt dabei immer von deiner Perspektive ab, also über welchen Winkel du sprichst.
-                <Image src="/Dreiecke/Schenkel2.webp" width={1350} height={750} alt="Dreimal das gleiche Dreieck. In jedem ist ein anderer Winkel und seine beiden Schenkel hervorgehoben." />
+                <Image src="/Dreiecke/Schenkel2.webp" width={1350} height={750} h={375} alt="Dreimal das gleiche Dreieck. In jedem ist ein anderer Winkel und seine beiden Schenkel hervorgehoben." />
                 Die dritte Seite wird dann immer <b>Basis</b> genannt.
             </CheckableHeading>
             <CheckableBlockquote icon="frage" title="Aufgabe: Dreiecke finden" titleOrder={2}>
                 Finde möglichst viele Dreiecke in der Konstruktion unten. Jede Möglichkeit ist erlaubt!
-                <Image src="/Dreiecke/DreieckeFinden.webp" width={800} height={800} alt="Ein Quadrat vor einem karierten Hintergrund. Die Diagonalen sind eingezeichnet sowie die horizontale Mittellinie." />
+                <Image src="/Dreiecke/DreieckeFinden.webp" width={800} height={800} h={400} alt="Ein Quadrat vor einem karierten Hintergrund. Die Diagonalen sind eingezeichnet sowie die horizontale Mittellinie." />
                 <Lösung title="Lösung" id="lösungdreieckefinden" titleOrder={3}>
                     Unten sind bereits einige – aber nicht alle! – Dreiecke angegeben. Findest du noch mehr?
                     <Flex>
-                        <Image src="/Dreiecke/DreieckeFinden_Lösung1.webp" width={800} height={800} alt="Ein Lösungsvorschlag" flex={"1 1 300px"} />
-                        <Image src="/Dreiecke/DreieckeFinden_Lösung2.webp" width={800} height={800} alt="Ein Lösungsvorschlag" flex={"1 1 300px"} />
-                        <Image src="/Dreiecke/DreieckeFinden_Lösung3.webp" width={800} height={800} alt="Ein Lösungsvorschlag" flex={"1 1 300px"} />
-                        <Image src="/Dreiecke/DreieckeFinden_Lösung4.webp" width={800} height={800} alt="Ein Lösungsvorschlag" flex={"1 1 300px"} />
+                        <Image src="/Dreiecke/DreieckeFinden_Lösung1.webp" width={800} height={800} h={400} alt="Ein Lösungsvorschlag" flex={"1 1 300px"} />
+                        <Image src="/Dreiecke/DreieckeFinden_Lösung2.webp" width={800} height={800} h={400} alt="Ein Lösungsvorschlag" flex={"1 1 300px"} />
+                        <Image src="/Dreiecke/DreieckeFinden_Lösung3.webp" width={800} height={800} h={400} alt="Ein Lösungsvorschlag" flex={"1 1 300px"} />
+                        <Image src="/Dreiecke/DreieckeFinden_Lösung4.webp" width={800} height={800} h={400} alt="Ein Lösungsvorschlag" flex={"1 1 300px"} />
                     </Flex>
                 </Lösung>
             </CheckableBlockquote>
@@ -126,13 +126,13 @@ export default function Dreiecke() {
                 </CheckableHeading>
                 <CheckableHeading title="Rechtwinkliges Dreieck" titleOrder={2}>
                     Vieleicht erinnerst du dich noch an den rechten Winkel, also einen Winkel mit 90°. Dreiecke, die einen rechten Winkel enthalten, haben einige besondere Eigenschaften, die du insbesondere in der 9. und 10. Klasse kennenlernen wirst (Satz des Pythagoras). Die Länge der Seiten ist dabei egal, entscheidend ist nur, dass ein rechter Winkel vorkommt.
-                    <Image src="/Dreiecke/rechtwinklig.webp" width={900} height={400} alt="Ein gleichseitiges Dreieck, an dem linken Winkel ist ein Geodreieck angelegt und zeigt." />
+                    <Image src="/Dreiecke/rechtwinklig.webp" width={900} height={400} h={200} alt="Ein gleichseitiges Dreieck, an dem linken Winkel ist ein Geodreieck angelegt und zeigt." />
                 </CheckableHeading>
                 Du kennst nun also vier Arten von Dreiecken: Das allgemeine Dreieck, das gleichseitige, das gleichwinklige und das rechtwinklige. Ein Dreieck kann jedoch auch mehreren dieser Dreiecke entsprechen, also z.{thinsp}B. ein rechtwinkliges, gleichschenkliges Dreieck sein. Die Grafik unten zeigt, wie die Dreiecke zusammenhängen können.
-                <Image src="/Dreiecke/Teilmengen.webp" width={1600} height={1000} alt="Ein Diagramm, welches zeigt, wie die verschiedenen Dreiecke zusammenhängen." />
+                <Image src="/Dreiecke/Teilmengen.webp" width={1600} height={1000} h={500} alt="Ein Diagramm, welches zeigt, wie die verschiedenen Dreiecke zusammenhängen." />
                 <CheckableBlockquote icon="frage" title="Aufgabe: Was ist es?" titleOrder={2}>
                     Um was für eine Art von Dreieck handelt es sich? Schätze nach Augenmaß oder benutze ein Geodreieck am Bildschirm.
-                    <Image src="/Dreiecke/zuordnen.webp" width={1450} height={550} alt="Verschiedene Arten von Dreiecken." />
+                    <Image src="/Dreiecke/zuordnen.webp" width={1450} height={550} h={275} alt="Verschiedene Arten von Dreiecken." />
                     <Lösung id="lösung-zuordnen" titleOrder={3}>
                         <List type="ordered">
                             <ListItem>Das Dreieck hat unten links einen rechten Winkel, die Schenkel sind jedoch unterschiedlich lang. Daher ist es rechtwinklig.</ListItem>
@@ -182,16 +182,15 @@ export default function Dreiecke() {
                 <CheckableBlockquote title="Aha! Vieleck in Dreiecke zerteilen" icon="aha" titleOrder={2}>
                     Dreiecke sind so besonders, da sie die eine der einfachsten Formen sin. Ein Anwendungsgebiet von Dreiecken ist beim Modellieren an Computern: Hier werden beliebige Flächen oft in unzählige Dreiecke zerteilt. Der englische Begriff dazu ist <b>triangulate</b>.
                     <Flex>
-                        <Image src="/Dreiecke/vieleckzudreieck.webp" width={1250} height={500} alt="Ein Vieleck wird in viele Dreiecke unterteilt" flex={"1 1 500px"} />
-                        <Image src="/Dreiecke/triangulate.webp" width={1587} height={525} alt="Eine Kugel wird in viele Dreiecke unterteilt." flex={"1 1 500px"} />
+                        <Image src="/Dreiecke/vieleckzudreieck.webp" width={1250} height={500} h={250} alt="Ein Vieleck wird in viele Dreiecke unterteilt" flex={"1 1 500px"} />
+                        <Image src="/Dreiecke/triangulate.webp" width={1587} height={525} h={262} alt="Eine Kugel wird in viele Dreiecke unterteilt." flex={"1 1 500px"} />
                     </Flex>
                 </CheckableBlockquote>
-                Eine Form, die du vermutlich schon kennst, ist das Quadrat bzw. das Rechteck. Deren Flächen sind sehr einfach zu berechnen: Ein Quadrat mit der Seitenlänge <InlineMath>a</InlineMath> hat einen Flächeninhalt <InlineMath>A</InlineMath> von <InlineMath>A = a\cdot a</InlineMath>
-                Der Flächeninhalt eines Rechtecks ist kaum anders: Er ist <InlineMath>A = a \cdot b</InlineMath>.
-                <Image src="/Prismen/RechteckFläche.webp" width={698} height={450} alt="Ein Rechteck mit der Fläche A und den Seiten a und b." />
+                Eine Form, die du vermutlich schon kennst, ist das Quadrat bzw. das Rechteck. Deren Flächen sind sehr einfach zu berechnen: Ein Quadrat mit der Seitenlänge <InlineMath>a</InlineMath> hat einen Flächeninhalt <InlineMath>A</InlineMath> von <InlineMath>A = a\cdot a</InlineMath>. Der Flächeninhalt eines Rechtecks ist kaum anders: Er ist <InlineMath>A = a \cdot b</InlineMath>.
+                <Image src="/Prismen/RechteckFläche.webp" width={698} height={450} h={225} alt="Ein Rechteck mit der Fläche A und den Seiten a und b." />
                 <Divider />
                 Die Formel für ein Rechteck können wir nun nutzen, um den Flächeninhalt von Dreiecken zu berechnen. <br />
-                Schau dir dazu das Bild unten an. Du nimmst ein beliebiges Dreieck mit und zerteilst es in der Mitte, indem du die Höhe <InlineMath>h</InlineMath> zu einer der Spitzen einzeichnest. <b>Wichtig:</b> Die Höhe steht immer senkrecht, also im 90°-Winkel, auf einer der Seiten. Wenn du das Dreieck verdoppelst und entlang der Höhe zerschneidest, dann bekommst du ein Rechteckt heraus!
+                Schau dir dazu das Bild unten an. Du nimmst ein beliebiges Dreieck mit und zerteilst es in der Mitte, indem du die Höhe <InlineMath>h</InlineMath> zu einer der Spitzen einzeichnest. <b>Wichtig:</b> Die Höhe steht immer senkrecht, also im 90°-Winkel, auf einer der Seiten. Wenn du das Dreieck verdoppelst und entlang der Höhe zerschneidest, dann bekommst du ein Rechteck heraus!
                 <Image src="/Prismen/DreieckFläche@2x.webp" width={2400} height={1200} alt="Ein Dreieck mit der Höhe h und der Grundseite g. Die Höhe zerteilt es in zwei weitere Dreiecke mit den Flächen A1 und A2." />
                 Den Flächeninhalt davon kannst du nun mit der Formel <InlineMath math="A_\text{Rechteck} = g \cdot h" /> berechnen. Da wir, um zum Rechteck zu gelangen, das Dreieck verdoppeln mussten, müssen wir den Flächeninhalt nun wieder halbieren, um zum Flächeninhalt vom Dreieck zu kommen, also:
                 <BlockMath math="A_\text{Dreieck} = \frac{1}{2}g\cdot h" />
