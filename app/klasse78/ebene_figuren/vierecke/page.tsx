@@ -17,8 +17,8 @@ export const metadata: Metadata = {
 export default function Vierecke() {
     return (
         <Fragment>
-            <CheckableHeading title="Vierecke" titleOrder={1}>
-                Die meisten Vierecke sind – obwohl sie eine Ecke mehr haben als Dreiecke – meistens einfacher zu handhaben. Sie kommen auch viel häufiger in unserem Alltag vor: Fenster sind meistens viereckig, Kartons haben eine viereckige Grundfläche, Postkarten, Schulhefte und -bücher sind rechteckig. Es wirkt, als wären Vierecke überall!
+            <CheckableHeading title="Das Viereck" titleOrder={1}>
+                Die meisten Vierecke sind – obwohl sie eine Ecke mehr haben als Dreiecke – meistens einfacher zu handhaben. Sie kommen auch viel häufiger in unserem Alltag vor: Fenster sind meistens viereckig, Kartons haben eine viereckige Grundfläche, Postkarten, Schulhefte und -bücher sind rechteckig. „Das“ Viereck gibt es so natürlich nicht, denn im Laufe dieser Seite wirst du viele verschiedene Arten von Vierecken kennenlernen und wiederentdecken!
                 <Image src="/Vierecke/schilder.webp" width={4462} height={3035} h={400} alt="Eine Sammlung von Schildern vor einer Wand." />
                 Wenn du ein Viereck aus dem Kopf zeichnen würdest, dann hätte es vermutlich eine dieser beiden Formen:
                 <Image src="/Vierecke/rechteck+quadrat.webp" width={1501} height={550} h={275} alt="Links ein Rechteck, rechts ein Quadrat." />
@@ -58,7 +58,7 @@ export default function Vierecke() {
                 </Hinweis>
                 <CheckableHeading title="Drachenviereck" titleOrder={2}>
                     Das <b>Drachenviereck</b> kennst du eventuell, wenn du schon einmal einen Drachen in der Luft steigen gelassen hast.
-                    <Image src="/Vierecke/drachensteigen.jpg" width={6000} height={4000} alt="Ein Drachen, der vor dem Himmel fliegt." />
+                    <Image src="/Vierecke/drachensteigen.webp" width={6000} height={4000} alt="Ein Drachen, der vor dem Himmel fliegt." />
                     Es sieht ähnlich aus wie eine Raute – hier sind jedoch nicht mehr alle Seiten gleich lang. Stattdessen hat es zwei Paare benachbarter Seiten, die gleich lang sind. Schau ins Bild unten, dann sollte es dir klar werden.
                     <Image src="/Vierecke/drachenviereck.webp" width={698} height={597} alt="Ein Drachenviereck." />
                 </CheckableHeading>

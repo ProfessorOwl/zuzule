@@ -68,7 +68,7 @@ export default function Pyramiden() {
                                 h<sub>Dreieck</sub>
                             </Mark>{" "}
                             zu berechnen.
-                            <MBlockMath desktop="\textcolor{#3012B8}{h_\text{Dreieck}} = \sqrt{1{,}5^2 + 3^2} = \sqrt{11{,}25} \approx 3,35" mobile="\textcolor{#3012B8}{h_\text{Dreieck}} &= \sqrt{1{,}5^2 + 3^2} \\ &= \sqrt{11{,}25} \\ &\approx 3,35" />
+                            <MBlockMath desktop="\textcolor{#3012B8}{h_\text{Dreieck}} = \sqrt{\textcolor{#B81E46}{1{,}5}^2 + \textcolor{#0D8762}{3}^2} = \sqrt{11{,}25} \approx 3,35" mobile="\textcolor{#3012B8}{h_\text{Dreieck}} &= \sqrt{1{,}5^2 + 3^2} \\ &= \sqrt{11{,}25} \\ &\approx 3,35" />
                             Damit unsere Pyramide also eine Höhe von 3{thinsp}
                             cm hat, muss die Höhe einer Dreieckswand ca. 3,35
                             {thinsp}
@@ -110,7 +110,7 @@ export default function Pyramiden() {
                     mL. Setzen wir das ins Verhältnis mit dem Würfel, so bekommen wir:
                     <MBlockMath desktop="\text{Anteil Pyramide} = \frac{27{,}57\,\text{cm}^3}{125\,\text{cm}^3} \approx 0,22 \approx \frac{1}{5}" mobile="\text{Anteil Pyramide} &= \frac{27{,}57\,\text{cm}^3}{125\,\text{cm}^3} \\ &\approx 0,22 \\ &\approx \frac{1}{5}" />
                     Wenn wir einen Quader mit der Formel <InlineMath math="V_\text{Quader} = G \cdot h" /> berechnen, so nimmt eine Pyramide laut unserem Experiment nur ein Fünftel des Volumens ein, also:
-                    <BlockMath math="V_\text{Pyramide} = \frac{1}{5}G\cdot h" />
+                    <BlockMath math="V_\text{Pyramide} = \frac{1}{5}G\cdot \textcolor{#0D8762}{h}" />
                     Aber stimmt das auch mit der theoretischen Herleitung überein? Mit ihr bekommen wir ein eindeutiges Ergebnis!
                 </CheckableBlockquote>
                 <CheckableHeading title="Theoretisch" titleOrder={2}>
@@ -143,30 +143,30 @@ export default function Pyramiden() {
                         <List type="ordered">
                             <ListItem>
                                 Nach Höhe umstellen und einsetzen:
-                                <MBlockMath desktop="V &= \frac{1}{3}Gh &&\lvert \cdot \frac{3}{G} \\ \frac{3V}{G} &= h \\ \Rightarrow h &= \frac{3 \cdot 32}{4 \cdot 4} = \frac{96}{16} = 6" mobile="V &= \frac{1}{3}Gh \\ &\Downarrow \scriptsize{\cdot \frac{3}{G}} \\ \frac{3V}{G} &= h \\ \Rightarrow h &= \frac{3 \cdot 32}{4 \cdot 4} = \frac{96}{16} = 6" />
+                                <MBlockMath desktop="V &= \frac{1}{3}G\textcolor{#0D8762}{h} &&\lvert \cdot \frac{3}{G} \\ \frac{3V}{G} &= \textcolor{#0D8762}{h} \\ \Rightarrow \textcolor{#0D8762}{h} &= \frac{3 \cdot 32}{4 \cdot 4} = \frac{96}{16} = 6" mobile="V &= \frac{1}{3}G\textcolor{#0D8762}{h} \\ &\Downarrow \scriptsize{\cdot \frac{3}{G}} \\ \frac{3V}{G} &= \textcolor{#0D8762}{h} \\ \Rightarrow \textcolor{#0D8762}{h} &= \frac{3 \cdot 32}{4 \cdot 4} = \frac{96}{16} = 6" />
                             </ListItem>
                             <ListItem>
                                 Nach Grundfläche umstellen und einsetzen:
-                                <MBlockMath desktop="V &= \frac{1}{3}Gh &&\lvert \cdot \frac{3}{h} \\ \frac{3V}{h} &= G \\ &\Rightarrow G = \frac{3 \cdot 18}{9} = \frac{54}{9} = 6" mobile="V &= \frac{1}{3}Gh \\ &\Downarrow \scriptsize{\cdot \frac{3}{h}} \\ \frac{3V}{h} &= G \\ &\Rightarrow G = \frac{3 \cdot 18}{9} = \frac{54}{9} = 6" />
+                                <MBlockMath desktop="V &= \frac{1}{3}\textcolor{#0D8762}{G}\textcolor{#B81E46}{g} &&\lvert \cdot \frac{3}{\textcolor{#B81E46}{h}} \\ \frac{3V}{\textcolor{#B81E46}{h}} &= \textcolor{#0D8762}{G} \\ &\Rightarrow \textcolor{#0D8762}{G} = \frac{3 \cdot 18}{\textcolor{#B81E46}{9}} = \frac{54}{\textcolor{#B81E46}{9}} = 6" mobile="V &= \frac{1}{3}\textcolor{#0D8762}{G}\textcolor{#B81E46}{h} \\ &\Downarrow \scriptsize{\cdot \frac{3}{\textcolor{#B81E46}{h}}} \\ \frac{3V}{\textcolor{#B81E46}{h}} &= \textcolor{#0D8762}{G} \\ &\Rightarrow \textcolor{#0D8762}{G} = \frac{3 \cdot 18}{\textcolor{#B81E46}{9}} = \frac{54}{\textcolor{#B81E46}{9}} = 6" />
                             </ListItem>
                             <ListItem>
                                 Zuerst nach Grundfläche umstellen:
-                                <MBlockMath mobile="V &= \frac{1}{3}Gh \\ &\Downarrow \scriptsize{\cdot \frac{3}{h}} \\ G &= \frac{3V}{h}\\ &\Rightarrow G = \frac{3\cdot 18\sqrt{3}}{6} = 9\sqrt{3}" desktop="V &= \frac{1}{3}Gh &&\lvert \cdot \frac{3}{h} \\ G &= \frac{3V}{h}\\ &\Rightarrow G = \frac{3\cdot 18\sqrt{3}}{6} = 9\sqrt{3}" />
-                                Formel für Dreiecksgrundfläche: <InlineMath math="G = \frac{1}{2}xh_\triangle" />
+                                <MBlockMath mobile="V &= \frac{1}{3}G\textcolor{#B81E46}{h} \\ &\Downarrow \scriptsize{\cdot \frac{3}{\textcolor{#B81E46}{h}}} \\ G &= \frac{3V}{\textcolor{#B81E46}{h}}\\ &\Rightarrow G = \frac{3\cdot 18\sqrt{3}}{\textcolor{#B81E46}{6}} = 9\sqrt{3}" desktop="V &= \frac{1}{3}G\textcolor{#B81E46}{h} &&\lvert \cdot \frac{3}{\textcolor{#B81E46}{h}} \\ G &= \frac{3V}{\textcolor{#B81E46}{h}}\\ &\Rightarrow G = \frac{3\cdot 18\sqrt{3}}{\textcolor{#B81E46}{6}} = 9\sqrt{3}" />
+                                Formel für Dreiecksgrundfläche: <InlineMath math="G = \frac{1}{2}\textcolor{#0D8762}{x}h_\triangle" />
                                 . Da es ein gleichseitiges Dreieck ist, gilt mit dem Satz des Pythagoras:
-                                <MBlockMath mobile="x^2 &= h_\triangle^2 + \left(\frac{1}{2}x^2\right)^2 \\ &\Downarrow \scriptsize{-\left(\frac{1}{2}x^2\right)^2} \\ x^2 - \left(\frac{1}{2}x^2\right)^2 &= h_\triangle^2 \\ &\Downarrow \scriptsize{\sqrt{}} \\ h_\triangle &= \sqrt{x^2 - \left(\frac{1}{2}x^2\right)^2} \\ &= \sqrt{x^2 - \frac{1}{4}x^2} \\ &= \sqrt{\frac{3}{4}x^2} \\ &= \frac{\sqrt{3}}{2}x" desktop="x^2 &= h_\triangle^2 + \left(\frac{1}{2}x^2\right)^2 &&\lvert -\left(\frac{1}{2}x^2\right)^2\\ x^2 - \left(\frac{1}{2}x^2\right)^2 &= h_\triangle^2 &&\lvert \sqrt{}\\ h_\triangle &= \sqrt{x^2 - \left(\frac{1}{2}x^2\right)^2} \\ &= \sqrt{x^2 - \frac{1}{4}x^2} \\ &= \sqrt{\frac{3}{4}x^2} \\ &= \frac{\sqrt{3}}{2}x" />
+                                <MBlockMath mobile="\textcolor{#0D8762}{x}^2 &= h_\triangle^2 + \left(\frac{1}{2}\textcolor{#0D8762}{x}^2\right)^2 \\ &\Downarrow \scriptsize{-\left(\frac{1}{2}\textcolor{#0D8762}{x}^2\right)^2} \\ \textcolor{#0D8762}{x}^2 - \left(\frac{1}{2}\textcolor{#0D8762}{x}^2\right)^2 &= h_\triangle^2 \\ &\Downarrow \scriptsize{\sqrt{}} \\ h_\triangle &= \sqrt{\textcolor{#0D8762}{x}^2 - \left(\frac{1}{2}\textcolor{#0D8762}{x}^2\right)^2} \\ &= \sqrt{\textcolor{#0D8762}{x}^2 - \frac{1}{4}\textcolor{#0D8762}{x}^2} \\ &= \sqrt{\frac{3}{4}\textcolor{#0D8762}{x}^2} \\ &= \frac{\sqrt{3}}{2}\textcolor{#0D8762}{x}" desktop="\textcolor{#0D8762}{x}^2 &= h_\triangle^2 + \left(\frac{1}{2}\textcolor{#0D8762}{x}^2\right)^2 &&\lvert -\left(\frac{1}{2}\textcolor{#0D8762}{x}^2\right)^2\\ \textcolor{#0D8762}{x}^2 - \left(\frac{1}{2}\textcolor{#0D8762}{x}^2\right)^2 &= h_\triangle^2 &&\lvert \sqrt{}\\ h_\triangle &= \sqrt{\textcolor{#0D8762}{x}^2 - \left(\frac{1}{2}\textcolor{#0D8762}{x}^2\right)^2} \\ &= \sqrt{\textcolor{#0D8762}{x}^2 - \frac{1}{4}\textcolor{#0D8762}{x}^2} \\ &= \sqrt{\frac{3}{4}\textcolor{#0D8762}{x}^2} \\ &= \frac{\sqrt{3}}{2}\textcolor{#0D8762}{x}" />
                                 Das können wir in die Formel für die Dreiecksfläche einsetzen und bekommen:
-                                <MBlockMath mobile="G &= \frac{1}{2}xh_\triangle \\ &= \frac{1}{2}x\cdot \frac{\sqrt{3}}{2}x \\ &= \frac{\sqrt{3}}{4}x^2 \\ &\Downarrow \scriptsize{\cdot \frac{4}{\sqrt{3}}} \\ \frac{4}{\sqrt{3}}G &= x^2 \\ &\Downarrow \scriptsize{\sqrt{}} \\ x &= \sqrt{\frac{4}{\sqrt{3}}G}" desktop="G &= \frac{1}{2}xh_\triangle \\ &= \frac{1}{2}x\cdot \frac{\sqrt{3}}{2}x \\ &= \frac{\sqrt{3}}{4}x^2 &&\lvert \cdot \frac{4}{\sqrt{3}} \\ \frac{4}{\sqrt{3}}G &= x^2 &&\lvert \sqrt{} \\ x &= \sqrt{\frac{4}{\sqrt{3}}G}" />
-                                Jetzt das Ergebnis für <InlineMath math="G" /> einsetzen, dann bekommen wir <InlineMath math="x" /> heraus:
-                                <BlockMath math="x &= \sqrt{\frac{4}{\sqrt{3}}G} \\ &= \sqrt{\frac{4}{\sqrt{3}}\cdot9\sqrt{3}} \\ &= \sqrt{4 \cdot 9} \\ &= 6" />
+                                <MBlockMath mobile="G &= \frac{1}{2}\textcolor{#0D8762}{x}h_\triangle \\ &= \frac{1}{2}\textcolor{#0D8762}{x}\cdot \frac{\sqrt{3}}{2}\textcolor{#0D8762}{x} \\ &= \frac{\sqrt{3}}{4}\textcolor{#0D8762}{x}^2 \\ &\Downarrow \scriptsize{\cdot \frac{4}{\sqrt{3}}} \\ \frac{4}{\sqrt{3}}G &= \textcolor{#0D8762}{x}^2 \\ &\Downarrow \scriptsize{\sqrt{}} \\ \textcolor{#0D8762}{x} &= \sqrt{\frac{4}{\sqrt{3}}G}" desktop="G &= \frac{1}{2}\textcolor{#0D8762}{x}h_\triangle \\ &= \frac{1}{2}\textcolor{#0D8762}{x}\cdot \frac{\sqrt{3}}{2}\textcolor{#0D8762}{x} \\ &= \frac{\sqrt{3}}{4}\textcolor{#0D8762}{x}^2 &&\lvert \cdot \frac{4}{\sqrt{3}} \\ \frac{4}{\sqrt{3}}G &= \textcolor{#0D8762}{x}^2 &&\lvert \sqrt{} \\ \textcolor{#0D8762}{x} &= \sqrt{\frac{4}{\sqrt{3}}G}" />
+                                Jetzt das Ergebnis für <InlineMath math="G" /> einsetzen, dann bekommen wir <InlineMath math="\textcolor{#0D8762}{x}" /> heraus:
+                                <BlockMath math="\textcolor{#0D8762}{x} &= \sqrt{\frac{4}{\sqrt{3}}G} \\ &= \sqrt{\frac{4}{\sqrt{3}}\cdot9\sqrt{3}} \\ &= \sqrt{4 \cdot 9} \\ &= 6" />
                             </ListItem>
 
                             <ListItem>
-                                Wieder erst nach Grundfläche umstellen, x als unbekannte Höhe bleibt vorhanden:
-                                <BlockMath math="V &= \frac{1}{3}Gx" />
-                                Die rechteckige Grundfläche berechnet sich nach <InlineMath math="G = 6 \cdot \frac{1}{2}x = 3x" />
+                                Wieder erst nach Grundfläche umstellen, <Mark c={"teal.9"}>x</Mark> als unbekannte Höhe bleibt vorhanden:
+                                <BlockMath math="V &= \frac{1}{3}G\textcolor{#0D8762}{x}" />
+                                Die rechteckige Grundfläche berechnet sich nach <InlineMath math="G = 6 \cdot \frac{1}{2}\textcolor{#0D8762}{x} = 3\textcolor{#0D8762}{x}" />
                                 , das wir einsetzen können:
-                                <MBlockMath mobile="V &= \frac{1}{3}Gx \\ &= \frac{1}{3}\cdot 3x \cdot x \\ &= x^2 \\ &\Downarrow \scriptsize{\sqrt{}} \\ x &= \sqrt{V} \\ &\Rightarrow x = \sqrt{25} = 5" desktop="V &= \frac{1}{3}Gx \\ &= \frac{1}{3}\cdot 3x \cdot x \\ &= x^2 &&\lvert \sqrt{} \\ x &= \sqrt{V} \\ &\Rightarrow x = \sqrt{25} = 5" />
+                                <MBlockMath mobile="V &= \frac{1}{3}G\textcolor{#0D8762}{x} \\ &= \frac{1}{3}\cdot 3\textcolor{#0D8762}{x} \cdot \textcolor{#0D8762}{x} \\ &= \textcolor{#0D8762}{x}^2 \\ &\Downarrow \scriptsize{\sqrt{}} \\ \textcolor{#0D8762}{x} &= \sqrt{V} \\ &\Rightarrow \textcolor{#0D8762}{x} = \sqrt{25} = 5" desktop="V &= \frac{1}{3}G\textcolor{#0D8762}{x} \\ &= \frac{1}{3}\cdot 3\textcolor{#0D8762}{x} \cdot \textcolor{#0D8762}{x} \\ &= \textcolor{#0D8762}{x}^2 &&\lvert \sqrt{} \\ \textcolor{#0D8762}{x} &= \sqrt{V} \\ &\Rightarrow \textcolor{#0D8762}{x} = \sqrt{25} = 5" />
                             </ListItem>
                         </List>
                     </Lösung>
@@ -181,22 +181,22 @@ export default function Pyramiden() {
                 <b>
                     Mantelfläche <InlineMath math="M" />
                 </b>
-                . Übrig bleibt nur die Grundfläche <InlineMath math="G" />
+                . Übrig bleibt nur die Grundfläche <InlineMath math="\textcolor{#0D8762}{G}" />
                 : Hier also das Dreieck oder das Viereck. Mathematisch können wir das so formulieren:
-                <BlockMath math="O = G + M" />
+                <BlockMath math="O = \textcolor{#0D8762}{G} + M" />
                 Für die dreieckige Pyramide gilt:
-                <BlockMath math="O = G + 3 \cdot A_\text{Dreieck}" />
+                <BlockMath math="O = \textcolor{#0D8762}{G} + 3 \cdot A_\text{Dreieck}" />
                 oder für die viereckige:
-                <BlockMath math="O = G + 4 \cdot A_\text{Dreieck}" />
+                <BlockMath math="O = \textcolor{#0D8762}{G} + 4 \cdot A_\text{Dreieck}" />
                 Die Höhe der Dreiecke kannst du meistens mit dem Satz des Pythagoras berechnen. Schau dir den Infokasten an, wenn du hier Hilfe brauchst oder gehe direkt zu den Aufgaben!
                 <CheckableBlockquote title="Wdh: Höhe der Dreieckswände" titleOrder={2} icon="aha">
                     <Lösung>
-                        Du kannst den Satz des Pythagoras verwenden, um die Pyramidenhöhe zu bestimmen. In dem Beispiel hier ist es eine quadratische Pyramide mit Seitenlänge 3 und Höhe 3. Wenn du die <Mark c={"desblue.9"}>Höhe</Mark> in einer der Wände einzeichnest, siehst du, dass sie zusammen mit der <Mark c={"green"}>Pyramidenhöhe</Mark> und der <Mark c={"desred.9"}>halben Seitenlänge</Mark> ein rechtwinkliges Dreieck bildet. Wir können also den <b>Satz des Pythagoras</b> verwenden, um die Länge von{" "}
+                        Du kannst den Satz des Pythagoras verwenden, um die Pyramidenhöhe zu bestimmen. In dem Beispiel hier ist es eine quadratische Pyramide mit Seitenlänge 3 und Höhe 3. Wenn du die <Mark c={"desblue.9"}>Höhe</Mark> in einer der Wände einzeichnest, siehst du, dass sie zusammen mit der <Mark c={"teal.9"}>Pyramidenhöhe</Mark> und der <Mark c={"desred.9"}>halben Seitenlänge</Mark> ein rechtwinkliges Dreieck bildet. Wir können also den <b>Satz des Pythagoras</b> verwenden, um die Länge von{" "}
                         <Mark c={"desblue.9"}>
                             h<sub>Dreieck</sub>
                         </Mark>{" "}
                         zu berechnen.
-                        <MBlockMath desktop="\textcolor{#3012B8}{h_\text{Dreieck}} = \sqrt{1{,}5^2 + 3^2} = \sqrt{11{,}25} \approx 3,35" mobile="\textcolor{#3012B8}{h_\text{Dreieck}} &= \sqrt{1{,}5^2 + 3^2} \\ &= \sqrt{11{,}25} \\ &\approx 3,35" />
+                        <MBlockMath desktop="\textcolor{#3012B8}{h_\text{Dreieck}} = \sqrt{\textcolor{#B81E46}{1{,}5}^2 + \textcolor{#0D8762}{3}^2} = \sqrt{11{,}25} \approx 3,35" mobile="\textcolor{#3012B8}{h_\text{Dreieck}} &= \sqrt{\textcolor{#B81E46}{1{,}5}^2 + \textcolor{#0D8762}{3}^2} \\ &= \sqrt{11{,}25} \\ &\approx 3,35" />
                         Damit unsere Pyramide also eine Höhe von 3{thinsp}
                         cm hat, muss die Höhe einer Dreieckswand ca. 3,35
                         {thinsp}

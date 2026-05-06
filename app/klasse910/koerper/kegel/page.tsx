@@ -47,7 +47,7 @@ export default function Kegel() {
                 meint dabei den Radius der Grundfläche. Durch das Abrollen des Kegels haben wir aber noch einen <b>Kreisausschnitt</b> bekommen! Wir markieren uns, wie weit der Kegel mit genau einer Umdrehung kommt. Genau diese Fläche entspricht der <b>Mantelfläche</b> des Kegels. Der Radius des „Abrollkreises“ entspricht der Höhe{" "}
                 <Mark c={"desblue.9"}>
                     <InlineMath math="h_\text{Wand}" />
-                </Mark>
+                </Mark>{" "}
                 unserer Kegelwand (aufpassen: <InlineMath math="\textcolor{#3012B8}{h_\text{Wand}} \mathrlap{/}{=} \textcolor{#0D8762}{h}" />
                 ). Hier nochmal ein Bild zur Illustration:
                 <Image src="/Kegel/Kegel.webp" width={1200} height={600} alt="Ein Kegel mit seiner Mantelfläche" />
@@ -156,7 +156,7 @@ export default function Kegel() {
                     <BlockMath math="V_\text{Quader} = 6 \cdot V_\text{Pyramide}" />
                     Kannst du daraus selber eine Formel für das Pyramidenvolumen herleiten? Denke dran: Der Quader ist doppelt so hoch wie eine der Pyramiden!
                     <CheckableBlockquote title="Herleitung" titleOrder={3} icon="frage">
-                        <Lösung>
+                        <Lösung id="lösung-herleitung">
                             Wir können also über die Volumenformel für einen Quader auf das Volumen einer Pyramide schließen! Für einen Quader gilt:
                             <BlockMath math="V_\text{Quader} = G \cdot h_\text{Quader}" />
                             mit der Grundfläche <InlineMath math="G" /> und der Höhe <InlineMath math="h_\text{Quader}" />
