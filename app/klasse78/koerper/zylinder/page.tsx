@@ -255,9 +255,7 @@ export default function Zylinder() {
                     <CheckableHeading title="Volumen eines Quaders" titleOrder={3}>
                         Ein Zylinder ist nicht so unterschiedlich von einem Quader: Zylinder haben einen Kreis als Grundfläche, Quader ein Rechteck. Ansonsten sind beides Körper, bei denen man die Grundfläche „in die Höhe gezogen“ hat. Erinnern wir uns also erstmal an das Volumen eines Quaders zurück! Das können wir mit <InlineMath math="A = a \cdot b" /> berechnen, wobei <InlineMath math="a" /> und <InlineMath math="b" /> die beiden Grundseiten bezeichnen.
                         <Image src="/Prismen/RechteckFläche.webp" width={698} height={450} alt="Ein Rechteck mit der Fläche A und den Seiten a und b." />
-                        Das Volumen eines Quaders ergibt sich also durch das <b>„hochziehen“</b> dieser Fläche in den Raum. Schau es dir mal an diesem Beispiel hier an, wo ein Quader eine Grundfläche von 3&nbsp;mal 2{thinsp}
-                        cm und eine Höhe von 2{thinsp}
-                        cm hat.
+                        Das Volumen eines Quaders ergibt sich also durch das <b>„hochziehen"</b> dieser Fläche in den Raum. Schau es dir mal an diesem Beispiel hier an, wo ein Quader eine Grundfläche von <InlineMath math="3" /> mal <InlineMath math="2\,\text{cm}" /> und eine Höhe von <InlineMath math="2\,\text{cm}" /> hat.
                         <GeoGebraAppletSlider
                             materialId="x5z6yk9z"
                             appName="3d"
@@ -295,21 +293,12 @@ export default function Zylinder() {
                                 },
                             ]}
                         />
-                        Füllen wir den Quader mit Würfeln aus, die ein Volumen von 1{thinsp}
-                        cm
-                        <sup>3</sup> haben, kann man gut nachvollziehen, dass das Volumen vom gesamten Quader 12
-                        {thinsp}
-                        cm
-                        <sup>3</sup> sein muss. 6 Würfel sind unten, weitere 6 sind oben. Das ergibt sich auch aus der Berechnung von Grundfläche mal Höhe:
+                        Füllen wir den Quader mit Würfeln aus, die ein Volumen von <InlineMath math="1\,\text{cm}^3" /> haben, kann man gut nachvollziehen, dass das Volumen vom gesamten Quader <InlineMath math="12\,\text{cm}^3" /> sein muss. <InlineMath math="6" /> Würfel sind unten, weitere <InlineMath math="6" /> sind oben. Das ergibt sich auch aus der Berechnung von Grundfläche mal Höhe:
                         <BlockMath math="\textcolor{blue}{A} &= 3 \, \text{cm} \cdot 2 \, \text{cm} \\ &= 6\, \text{cm}^2 \\ \textcolor{green}{V} &=\textcolor{blue}{A} \cdot h \\ &= 6 \, \text{cm}^2 \cdot 2\,\text{cm} \\ &= 12 \, \text{cm}^3" />
                         Können wir diese Formel eventuell auch bei Zylindern anwenden? Gilt <InlineMath math="V = A \cdot h" /> hier immer? Testen wir es mal!
                     </CheckableHeading>
                     <CheckableHeading title="Volumen eines Zylinders" titleOrder={3}>
-                        Wir verfahren nach dem gleichen Prinzip wie bei einem Quader. Wir berechnen zuerst den Flächeninhalt der Grundfläche und „ziehen“ ihn dann in die Höhe. Wir multiplizieren dazu den Flächeninhalt mit der Höhe. Als Objekt suchen wir uns eine beliebige Dose aus dem Vorratsschrank aus z.{thinsp}B. eine Dose Kokosmilch. Sie hat einen Durchmesser von 7,5
-                        {thinsp}
-                        cm und eine Höhe von 11
-                        {thinsp}
-                        cm.
+                        Wir verfahren nach dem gleichen Prinzip wie bei einem Quader. Wir berechnen zuerst den Flächeninhalt der Grundfläche und „ziehen" ihn dann in die Höhe. Wir multiplizieren dazu den Flächeninhalt mit der Höhe. Als Objekt suchen wir uns eine beliebige Dose aus dem Vorratsschrank aus z.{thinsp}B. eine Dose Kokosmilch. Sie hat einen Durchmesser von <InlineMath math="7{,}5\,\text{cm}" /> und eine Höhe von <InlineMath math="11\,\text{cm}" />.
                         <Flex>
                             <Image src="/Zylinder/doseKokosDurchmesser.webp" width={6000} height={4000} alt="Ein Lineal liegt unter einer Konservendose. Ablesbar ist ein Durchmesser von 7,5 cm." flex={"1 1 300px"} />
                             <Image src="/Zylinder/doseKokosHöhe.webp" width={6000} height={4000} alt="Ein Lineal wird neben eine Konservendose gehalten. Ablesbar ist eine Höhe von 11 cm." flex={"1 1 300px"} />
@@ -318,15 +307,9 @@ export default function Zylinder() {
                         <BlockMath math="A &= \pi \cdot r^2 \\ &= \pi \cdot \left(\frac{7{,}5\,\text{cm}}{2}\right)^2\\ &\approx 44{,}18\,\text{cm}^2" />
                         Das Volumen berechnen wir nun nach dem gleichen Prinzip wie beim Quader, also:
                         <BlockMath math="V &= A \cdot h \\ &= 44{,}18\,\text{cm}^2 \cdot 11\,\text{cm} \\ &\approx 485{,}97\,\text{cm}^3" />
-                        Das ist etwas mehr, als die 400
-                        {thinsp}
-                        mL, die eigentlich als Füllmenge auf der Dose stehen. Wir dürfen aber nicht vergessen, dass wir die Dose von außen gemessen haben und diese nie komplett ausgefüllt werden. In der Dose selbst ist also etwas weniger Platz, und es wird nur ca. 400
-                        {thinsp}
-                        mL Kokosmilch vorhanden sein.
+                        Das ist etwas mehr, als die <InlineMath math="400\,\text{mL}" />, die eigentlich als Füllmenge auf der Dose stehen. Wir dürfen aber nicht vergessen, dass wir die Dose von außen gemessen haben und diese nie komplett ausgefüllt werden. In der Dose selbst ist also etwas weniger Platz, und es wird nur ca. <InlineMath math="400\,\text{mL}" /> Kokosmilch vorhanden sein.
                         <CheckableBlockquote icon="frage" title="Aufgabe: Stimmt die Mengenangabe?">
-                            Ein Hersteller kann viel auf die Dose schreiben – ob es aber wirklich stimmt, ist eine andere Frage. Damit wir nicht um unser Geld gebracht werden, messen wir das mal nach. Bestimme die tatsächliche Füllmenge mittels der Formel <InlineMath math="V = A \cdot h" />. Versuche die Maße möglichst genau abzulesen! Als Füllmenge ist bei beiden Dosen 400
-                            {thinsp}
-                            mL angegeben.
+                            Ein Hersteller kann viel auf die Dose schreiben – ob es aber wirklich stimmt, ist eine andere Frage. Damit wir nicht um unser Geld gebracht werden, messen wir das mal nach. Bestimme die tatsächliche Füllmenge mittels der Formel <InlineMath math="V = A \cdot h" />. Versuche die Maße möglichst genau abzulesen! Als Füllmenge ist bei beiden Dosen <InlineMath math="400\,\text{mL}" /> angegeben.
                             <Space />
                             <List type="ordered">
                                 <ListItem>
@@ -336,11 +319,7 @@ export default function Zylinder() {
                                         <Image h={275} src="/Zylinder/füllstandKokos.webp" width={6000} height={4000} alt="Ein Stäbchen, das in die Kokosmilch getunkt wurde, liegt neben einem Lineal. Es wurde ca. 9,5 cm tief hineingetaucht." flex={"1 1 300px"} />
                                     </Flex>
                                     <Spoiler maxHeight={0} showLabel="Maße einblenden" hideLabel="Maße ausblenden">
-                                        Innerer Durchmesser: 7,3
-                                        {thinsp}
-                                        cm. Bedeckter Bereich auf Stäbchen: 9,5
-                                        {thinsp}
-                                        cm
+                                        Innerer Durchmesser: <InlineMath math="7{,}3\,\text{cm}" />. Bedeckter Bereich auf Stäbchen: <InlineMath math="9{,}5\,\text{cm}" />
                                     </Spoiler>
                                 </ListItem>
                                 <Space />
@@ -351,11 +330,7 @@ export default function Zylinder() {
                                         <Image h={275} src="/Zylinder/füllstandTomate.webp" width={6000} height={4000} alt="Ein Stäbchen, das in die gehackten Tomaten getunkt wurde, liegt neben einem Lineal. Es wurde ca. 9,7 cm tief hineingetaucht." flex={"1 1 300px"} />
                                     </Flex>
                                     <Spoiler maxHeight={0} showLabel="Maße einblenden" hideLabel="Maße ausblenden">
-                                        Innerer Durchmesser: 7,3
-                                        {thinsp}
-                                        cm. Bedeckter Bereich auf Stäbchen: 9,7
-                                        {thinsp}
-                                        cm
+                                        Innerer Durchmesser: <InlineMath math="7{,}3\,\text{cm}" />. Bedeckter Bereich auf Stäbchen: <InlineMath math="9{,}7\,\text{cm}" />
                                     </Spoiler>
                                 </ListItem>
                                 <Space />

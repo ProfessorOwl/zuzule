@@ -179,15 +179,12 @@ export default function Kegel() {
                         </Lösung>
                     </CheckableBlockquote>
                     <CheckableBlockquote title="Aufgabe: Ausbau eines Dachstuhls" icon="frage">
-                        Ein Hausbesitzer möchte seinen Dachstuhl renovieren. Der Turm hat einen Durchmesser von 6{thinsp}
-                        m, das Dach hat eine Höhe 5,5
-                        {thinsp}
-                        m.
+                        Ein Hausbesitzer möchte seinen Dachstuhl renovieren. Der Turm hat einen Durchmesser von <InlineMath math="6\,\text{m}" />, das Dach hat eine Höhe <InlineMath math="5{,}5\,\text{m}" />.
                         <Image src="/Kegel/DachKegel.webp" width={6000} height={4000} alt="Ein Bild von einem kegelförmigen Dach." />
                         <List type="ordered">
                             <ListItem>Beurteile anhand der Grundfläche und des Volumens, ob der Dachboden als Zimmer genutzt werden kann. Wenn ja, welches Zimmer kannst du dir dort vorstellen? Vergiss dabei nicht, dass das Dach auch gedämmt werden muss!</ListItem>
                             <ListItem>
-                                Nach einem schweren Unwetter muss das Dach neu gedeckt werden, da Feuchtigkeit eindringt. Dafür sollen Zinkbleche verwendet werden, die pro m<sup>2</sup> 65€ kosten. Der Dachdecker verlangt noch einmal 40€ pro m<sup>2</sup> an Arbeitskosten. Berechne die Gesamtkosten.
+                                Nach einem schweren Unwetter muss das Dach neu gedeckt werden, da Feuchtigkeit eindringt. Dafür sollen Zinkbleche verwendet werden, die pro m<sup>2</sup> <InlineMath math="65€" /> kosten. Der Dachdecker verlangt noch einmal <InlineMath math="40€" /> pro m<sup>2</sup> an Arbeitskosten. Berechne die Gesamtkosten.
                             </ListItem>
                         </List>
                         <Lösung title="Lösung" id="Lösung-Dachstuhl" titleOrder={3}>
@@ -216,8 +213,7 @@ export default function Kegel() {
                                         &= \frac{1}{3}\cdot 28{,}27\,\text{m}^2 \cdot 5{,}5\,\text{m} \\
                                         &\Rightarrow V = 51{,}84\,\text{m}^3"
                                     />
-                                    Zum Vergleich: Ein Zimmer mit einer Grundfläche von 3 mal 4{thinsp}m und einer Höhe von 2,5
-                                    {thinsp}m hat eine Fläche von <InlineMath math="3\,\text{m}\cdot 4\,\text{m} = 12\,\text{m}^2" />
+                                    Zum Vergleich: Ein Zimmer mit einer Grundfläche von <InlineMath math="3" /> mal <InlineMath math="4\,\text{m}" /> und einer Höhe von <InlineMath math="2{,}5\,\text{m}" /> hat eine Fläche von <InlineMath math="3\,\text{m}\cdot 4\,\text{m} = 12\,\text{m}^2" />
                                     und ein Volumen von <InlineMath math="12\,\text{m}^2 \cdot 2{,}5\,\text{m} = 30\,\text{m}^3" />. Der Dachstuhl kann also sicherlich noch als Zimmer verwendet werden, auch wenn die Dachschräge viel vom Stehplatz wegnimmt.
                                 </ListItem>
                                 <ListItem>
@@ -244,11 +240,10 @@ export default function Kegel() {
                                         &= \pi \cdot 3\,\text{m} \cdot 6{,}26\,\text{m} \\
                                         &\Rightarrow M \approx 59{,}00\,\text{m}^2"
                                     />
-                                    Die Dachfläche beträgt also 59,00m
-                                    <sup>2</sup>. Pro Quadratmeter muss 65€ für das Zinkblech und weitere 40€ für die Arbeit ausgegeben werden. Insgesamt also <InlineMath math="65€ + 40€= 105€" />
+                                    Die Dachfläche beträgt also <InlineMath math="59{,}00\,\text{m}^2" />. Pro Quadratmeter muss <InlineMath math="65\,€" /> für das Zinkblech und weitere <InlineMath math="40\,€" /> für die Arbeit ausgegeben werden. Insgesamt also <InlineMath math="65€ + 40€= 105€" />
                                     . Das bedeutet in unserem Fall:
                                     <BlockMath math="59\,\text{m}^2 \cdot 105\frac{€}{\text{m}^2} = 6195€" />
-                                    Es kostet also 6195€ um das Dach neuzudecken.
+                                    Es kostet also <InlineMath math="6195\,€" /> um das Dach neuzudecken.
                                 </ListItem>
                             </List>
                         </Lösung>

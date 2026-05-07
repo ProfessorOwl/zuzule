@@ -65,20 +65,22 @@ export default function Dreiecke() {
                         <Lösung title="Lösung" titleOrder={4} id="lösung-gleichseitigeDreiecke">
                             <List type="ordered">
                                 <ListItem>Schau dir die beiden Beispiele oben an.</ListItem>
-                                <ListItem>Wenn du mit einem Geodreieck die Winkel in deinen Dreiecken misst, solltest du bei jedem Winkel ungefähr 60° messen können.</ListItem>
+                                <ListItem>
+                                    Wenn du mit einem Geodreieck die Winkel in deinen Dreiecken misst, solltest du bei jedem Winkel ungefähr <InlineMath math="60°" /> messen können.
+                                </ListItem>
                                 <Flex>
                                     <ImageCaption src="/Dreiecke/dreieckestäbchen/gleichseitiglinks.webp" width={2573} height={2573} alt="Ein gleichseitiges Dreieck. an dem linken Winkel ist ein Geodreieck angelegt und zeigt 60° an.." flex={"1 1 300px"}>
-                                        Ein Winkel von ca. 60°
+                                        Ein Winkel von ca. <InlineMath math="60°" />
                                     </ImageCaption>
                                     <ImageCaption src="/Dreiecke/dreieckestäbchen/gleichseitigrechts.webp" width={2472} height={2472} alt="Ein gleichseitiges Dreieck. an dem rechten Winkel ist ein Geodreieck angelegt und zeigt." flex={"1 1 300px"}>
-                                        Ein Winkel von ca. 60°.
+                                        Ein Winkel von ca. <InlineMath math="60°" />.
                                     </ImageCaption>
                                     <ImageCaption src="/Dreiecke/dreieckestäbchen/gleichseitigoben.webp" width={2727} height={2728} alt="Ein gleichseitiges Dreieck. an dem oberen Winkel ist ein Geodreieck angelegt und zeigt." flex={"1 1 300px"}>
-                                        Ein Winkel von ca. 60°.
+                                        Ein Winkel von ca. <InlineMath math="60°" />.
                                     </ImageCaption>
                                 </Flex>
                                 <ListItem>
-                                    Ja, es gibt auch gleichwinklige Dreiecke. Tatsächlich ist jedes gleich<b>seitige</b> Dreieck auch gleich<b>winklig</b>, da dort jeder Winkel genau 60° beträgt. Umgekehrt ist jedes gleichwinklige Dreieck auch gleichseitig.
+                                    Ja, es gibt auch gleichwinklige Dreiecke. Tatsächlich ist jedes gleich<b>seitige</b> Dreieck auch gleich<b>winklig</b>, da dort jeder Winkel genau <InlineMath math="60°" /> beträgt. Umgekehrt ist jedes gleichwinklige Dreieck auch gleichseitig.
                                     <Divider />
                                     Mathematisch kann man dazu auch schreiben:
                                     <BlockMath math="\text{Ein Dreieck ist gleichwinklig} \Leftrightarrow \text{Ein Dreieck ist gleichseitig}"></BlockMath>
@@ -109,23 +111,23 @@ export default function Dreiecke() {
                                     Wenn du die Winkel misst, wirst du feststellen, dass zwei Winkel besonders sind: Die Winkel zwischen der Basisseite und den Schenkeln sind nämlich gleich groß. Das ändert sich auch nicht, wenn du die Längen veränderst.
                                     <Flex>
                                         <ImageCaption src="/Dreiecke/dreieckestäbchen/gleichschenkliglinks.webp" width={2757} height={2757} alt="Ein gleichseitiges Dreieck, an dem linken Winkel ist ein Geodreieck angelegt und zeigt." flex={"1 1 300px"}>
-                                            Ein Winkel von ca. 80°.
+                                            Ein Winkel von ca. <InlineMath math="80°" />.
                                         </ImageCaption>
                                         <ImageCaption src="/Dreiecke/dreieckestäbchen/gleichschenkligrechts.webp" width={3010} height={3010} alt="Ein gleichseitiges Dreieck, an dem rechten Winkel ist ein Geodreieck angelegt und zeigt." flex={"1 1 300px"}>
-                                            Ein Winkel von ca. 80°.
+                                            Ein Winkel von ca. <InlineMath math="80°" />.
                                         </ImageCaption>
                                         <ImageCaption src="/Dreiecke/dreieckestäbchen/gleichschenkligoben.webp" width={2850} height={2850} alt="Ein gleichseitiges Dreieck, an dem oberen Winkel ist ein Geodreieck angelegt und zeigt." flex={"1 1 300px"}>
-                                            Ein Winkel von ca. 25°.
+                                            Ein Winkel von ca. <InlineMath math="25°" />.
                                         </ImageCaption>
                                     </Flex>
-                                    In dem Beispiel hier beträgt der Winkel zwischen den Schenkeln ca. 25°, die beiden anderen Winkel betragen ca. 80°.
+                                    In dem Beispiel hier beträgt der Winkel zwischen den Schenkeln ca. <InlineMath math="25°" />, die beiden anderen Winkel betragen ca. <InlineMath math="80°" />.
                                 </ListItem>
                             </List>
                         </Lösung>
                     </CheckableBlockquote>
                 </CheckableHeading>
                 <CheckableHeading title="Rechtwinkliges Dreieck" titleOrder={2}>
-                    Vieleicht erinnerst du dich noch an den rechten Winkel, also einen Winkel mit 90°. Dreiecke, die einen rechten Winkel enthalten, haben einige besondere Eigenschaften, die du insbesondere in der 9. und 10. Klasse kennenlernen wirst (Satz des Pythagoras). Die Länge der Seiten ist dabei egal, entscheidend ist nur, dass ein rechter Winkel vorkommt.
+                    Vieleicht erinnerst du dich noch an den rechten Winkel, also einen Winkel mit <InlineMath math="90°" />. Dreiecke, die einen rechten Winkel enthalten, haben einige besondere Eigenschaften, die du insbesondere in der 9. und 10. Klasse kennenlernen wirst (Satz des Pythagoras). Die Länge der Seiten ist dabei egal, entscheidend ist nur, dass ein rechter Winkel vorkommt.
                     <Image src="/Dreiecke/rechtwinklig.webp" width={900} height={400} h={200} alt="Ein gleichseitiges Dreieck, an dem linken Winkel ist ein Geodreieck angelegt und zeigt." />
                 </CheckableHeading>
                 Du kennst nun also vier Arten von Dreiecken: Das allgemeine Dreieck, das gleichseitige, das gleichwinklige und das rechtwinklige. Ein Dreieck kann jedoch auch mehreren dieser Dreiecke entsprechen, also z.{thinsp}B. ein rechtwinkliges, gleichschenkliges Dreieck sein. Die Grafik unten zeigt, wie die Dreiecke zusammenhängen können.
@@ -150,10 +152,10 @@ export default function Dreiecke() {
                 <CheckableBlockquote title="Aha! Die Winkelsumme" icon="aha" titleOrder={2}>
                     Zeichne auf ein Blatt Papier ein beliebiges Dreieck. Schneide es aus und schneide dann jede Ecke so ab, dass sie möglichst groß ist. Lege die Ecken dann aneinander. Kannst du etwas feststellen?
                     <Lösung title="Lösung anzeigen" titleOrder={3} id="lösung-winkelsumme">
-                        Es ist egal, wie das Dreieck aussieht, dass du gezeichnet und ausgeschnitten hast! Die Ecken werden zusammen immer unten eine gerade Kante haben. Das bedeutet, dass der eingeschlossene Winkel 180° beträgt.
+                        Es ist egal, wie das Dreieck aussieht, dass du gezeichnet und ausgeschnitten hast! Die Ecken werden zusammen immer unten eine gerade Kante haben. Das bedeutet, dass der eingeschlossene Winkel <InlineMath math="180°" /> beträgt.
                         <Image src="/Dreiecke/Winkelsumme.webp" width={1250} height={600} alt="Die Spitzen eines Dreiecks werden abgeschnitten und zusammengelegt, sodass sich ein Winkel von 180° ergibt." />
-                        Das ganze gilt auch oben für die Beispiele des gleichseitigen und gleichschenkligen Dreiecks: In einem gleichseitigen Dreieck beträgt jeder Winkel 60°. Da es drei Winkel gibt, ist die Winkelsumme <InlineMath math="3\cdot80° = 180°" />. <br />
-                        Bei dem gleichschenkligen Dreieck oben sind zwei Winkel 80°, der andere 25° – selbst mit der Messungenauigkeit und den etwas ungeraden Spießen ergibt sich hier (fast) ein Gesamtwinkel von 180°.
+                        Das ganze gilt auch oben für die Beispiele des gleichseitigen und gleichschenkligen Dreiecks: In einem gleichseitigen Dreieck beträgt jeder Winkel <InlineMath math="60°" />. Da es drei Winkel gibt, ist die Winkelsumme <InlineMath math="3\cdot80° = 180°" />. <br />
+                        Bei dem gleichschenkligen Dreieck oben sind zwei Winkel <InlineMath math="80°" />, der andere <InlineMath math="25°" /> – selbst mit der Messungenauigkeit und den etwas ungeraden Spießen ergibt sich hier (fast) ein Gesamtwinkel von <InlineMath math="180°" />.
                     </Lösung>
                 </CheckableBlockquote>
             </CheckableHeading>

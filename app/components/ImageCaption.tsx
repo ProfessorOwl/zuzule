@@ -1,8 +1,9 @@
 import { Center, Flex, Stack, Text, ImageProps } from "@mantine/core";
 import Image, {BetterImageProps} from "./Image"; 
+import { ReactNode } from "react";
 
 interface ImageCaptionProps extends BetterImageProps {
-    children: string | string[];
+    children: ReactNode;
     fit?: "contain" | "cover";
     src: string;
     width: number;

@@ -73,7 +73,8 @@ export default function Vierecke() {
                         <Image src="/Vierecke/hdvleer.webp" width={1550} height={1992} h={1000} alt="Ein „Haus der Vierecke“ mit 5 Etagen. Auf der untersten ist ein allgemeines Viereck eingezeichnet, auf der vorletzten rechts ein Rechteck." />
                         <Lösung titleOrder={4} id="lösung-hdv">
                             Das <b>allgemeine Viereck</b> im untersten Stockwerk hat keinerlei Restriktion, außer, dass es vier Ecken haben muss. Nun gibt es zwei Definitionen, die etwas lockerer sind als diese: Das <b>Drachenviereck</b> mit zwei gleichlangen, benachbarten Seiten oder das <b>Trapez</b> mit mindestens zwei gegenüberliegend parallelen Seiten. <br />
-                            Das Dach kann auch bereits ausgefüllt werden mit einem <b>Quadrat</b>, da es keine engere Definition eines Vierecks gibt: Alle Seiten gleich lang und nur 90°-Winkel. <br />
+                            Das Dach kann auch bereits ausgefüllt werden mit einem <b>Quadrat</b>, da es keine engere Definition eines Vierecks gibt: Alle Seiten gleich lang und nur <InlineMath math="90°" />
+                            -Winkel. <br />
                             Übrig sind dann noch das Rechteck, die Raute und das Parallelogramm. Über dem Drachenviereck kann weder das Parallelogramm noch das Rechteck stehen, da beide keine gleich langen benachbarten Seiten haben müssen. Also wohnt im 4. Stock links die <b>Raute</b>, wo alle Seiten gleich lang sein müssen.
                             <br /> Daneben muss dann das <b>Rechteck</b> wohnen, da hier alle gegenüberliegenden Seiten gleich lang und parallel sein müssen und alle Winkel 90° sein müssen. Übrig bleibt in Etage 3 das <b>Parallelogramm</b> mit parallelen und gleich langen gegenüberliegenden Seiten.
                             <Image src="/Vierecke/hdv.webp" width={1550} height={1992} h={1000} alt="Ein „Haus der Vierecke“ mit 5 Etagen, das komplett ausgefüllt ist. Auf der untersten ist ein allgemeines Viereck eingezeichnet, links darüber ein Drachenviereck. Rechts über dem allgemeinen ist ein Trapez, darüber ein Parallelogramm. In der Etage darüber ist links eine Raute, rechts ein Rechteck. Das Dach bildet ein Quadrat." />
@@ -150,7 +151,8 @@ export default function Vierecke() {
                         <CheckableBlockquote icon="frage" title="Aufgabe: Symmetrien finden" titleOrder={4}>
                             Finde in den restlichen Vierecken Symmetrien und zeichne sie ein. Schreibe dabei auch den Winkel auf, um den es rotiert werden kann.
                             <Hinweis id="hinweis-symmetrien" titleOrder={5}>
-                                Denke daran, dass Eigenschaften vererbt werden. Wenn also z.{thinsp}B. beim Rechteck eine vertikale und horizontale Spiegelachse existiert und eine 180°-Drehung möglich ist, dann muss das bei allen untergeordneten Figuren auch so sein.
+                                Denke daran, dass Eigenschaften vererbt werden. Wenn also z.{thinsp}B. beim Rechteck eine vertikale und horizontale Spiegelachse existiert und eine <InlineMath math="180°" />
+                                -Drehung möglich ist, dann muss das bei allen untergeordneten Figuren auch so sein.
                             </Hinweis>
                             <Lösung titleOrder={5} id="lösung-symmetrien">
                                 <List>
@@ -161,13 +163,13 @@ export default function Vierecke() {
                                         Das <b>Drachenviereck</b> kann nur vertikal gespiegelt werden, die Spiegelachse geht also von oben nach unten.
                                     </ListItem>
                                     <ListItem>
-                                        Das <b>Parallelogramm</b> hat keine Spiegelachse. Wenn du es aber um 180° drehst, liegt es wieder in sich selber. Es hat also ein Drehzentrum.
+                                        Das <b>Parallelogramm</b> hat keine Spiegelachse. Wenn du es aber um <InlineMath math="180°" /> drehst, liegt es wieder in sich selber. Es hat also ein Drehzentrum.
                                     </ListItem>
                                     <ListItem>
                                         Die <b>Raute</b> und das <b>Rechteck</b> haben die gleichen Symmetrien: Sie haben beide eine horizontale und vertikale Spiegelachse und zusätzlich ein Drehzentrum mit 180°.
                                     </ListItem>
                                     <ListItem>
-                                        Das <b>Quadrat</b> hat die meisten Symmetrien. Es hat ganze 4 Spiegelachsen, da es auch diagonal gespiegelt werden kann! Außerdem genügt hier eine Drehung um 90°, um es wieder in sich selbst zu legen.
+                                        Das <b>Quadrat</b> hat die meisten Symmetrien. Es hat ganze <InlineMath math="4" /> Spiegelachsen, da es auch diagonal gespiegelt werden kann! Außerdem genügt hier eine Drehung um <InlineMath math="90°" />, um es wieder in sich selbst zu legen.
                                     </ListItem>
                                 </List>
                                 <Image src="/Vierecke/hdvsymmetrie.webp" width={1551} height={1992} h={1000} alt="Das Haus der Vierecke, in jedem Viereck sind die entsprechenden Symmetrien eingezeichnet." />
@@ -177,7 +179,7 @@ export default function Vierecke() {
                     <CheckableHeading title="Betrachtung über Winkel" titleOrder={3}>
                         Vierecke können zusätzlich noch über ihre Winkel definiert werden. Wenn wir zusätzlich die Diagonalen mancher Vierecke hinzunehmen, ist die Definition eindeutig. Vergleichen wir z.{thinsp}B. die Raute mit dem Paralleloramm, so unterscheiden sie sich durch ihre Diagonalen, die senkrecht aufeinander stehen:
                         <Image src="/Vierecke/rauteparallelogrammwinkel.webp" width={1526} height={550} h={275} alt="Ein Rechteck und eine Raute mit wichtigen Winkeln." />
-                        Bei beiden sind die gegenüberliegenden Winkel gleich groß, was hier durch die Farbe und deren bezeichnen gekennzeichnet wird. Bei der Raute stehen jedoch zusätzlich die Diagonalen senkrecht aufeinander, sie schließen also einen Winkel von 90° ein.
+                        Bei beiden sind die gegenüberliegenden Winkel gleich groß, was hier durch die Farbe und deren bezeichnen gekennzeichnet wird. Bei der Raute stehen jedoch zusätzlich die Diagonalen senkrecht aufeinander, sie schließen also einen Winkel von <InlineMath math="90°" /> ein.
                         <CheckableBlockquote title="Aufgabe: Winkel finden" titleOrder={4} icon="frage">
                             Finde in den restlichen Vierecken gleich große Winkel und zeichne sie ein. Beachte dabei auch die Diagonalen!
                             <Hinweis id="hinweis-winkel" titleOrder={5}>
@@ -199,10 +201,11 @@ export default function Vierecke() {
                                         In der <b>Raute</b> sind alle gegenüberliegenden Winkel gleich groß und die Diagonalen schneiden sich im rechten Winkel.
                                     </ListItem>
                                     <ListItem>
-                                        Im <b>Rechteck</b> sind alle Winkel gleich groß und 90°.
+                                        Im <b>Rechteck</b> sind alle Winkel gleich groß und <InlineMath math="90°" />.
                                     </ListItem>
                                     <ListItem>
-                                        Im <b>Quadrat</b> sind alle Winkel gleich groß und 90°, außerdem schneiden sich die Diagonalen im 90°-Winkel.
+                                        Im <b>Quadrat</b> sind alle Winkel gleich groß und <InlineMath math="90°" />, außerdem schneiden sich die Diagonalen im <InlineMath math="90°" />
+                                        -Winkel.
                                     </ListItem>
                                 </List>
                                 <Image src="/Vierecke/hdvwinkel.webp" width={1551} height={1992} h={1000} alt="Das Haus der Vierecke, in jedem Viereck sind gleich große Winkel eingezeichnet." />
@@ -244,13 +247,13 @@ export default function Vierecke() {
                             <Image src="/Vierecke/parallelogrammegezeichnet.webp" width={1401} height={750} h={375} alt="Drei Parallelogramme, die nach der Aufgabenbeschreibung gezeichnet wurden." />
                             <List type="ordered">
                                 <ListItem>
-                                    Die Höhe des Parallelogrammst ist ca. 1,1{thinsp}cm. Mit der Rechteckformel ergibt sich damit ein Flächeninhalt von: <BlockMath math="1{,}1\,\text{cm} \cdot 4\,\text{cm} = 4{,}4\,\text{cm}^2" />
+                                    Die Höhe des Parallelogrammst ist ca. <InlineMath math="1{,}1\,\text{cm}" />. Mit der Rechteckformel ergibt sich damit ein Flächeninhalt von: <BlockMath math="1{,}1\,\text{cm} \cdot 4\,\text{cm} = 4{,}4\,\text{cm}^2" />
                                 </ListItem>
                                 <ListItem>
-                                    Die Höhe des Parallelogrammst ist ca. 2,7{thinsp}cm. Damit ergibt sich ein Flächeninhalt von: <BlockMath math="2{,}7\,\text{cm} \cdot 7\,\text{cm} = 18{,}9\,\text{cm}^2" />
+                                    Die Höhe des Parallelogrammst ist ca. <InlineMath math="2{,}7\,\text{cm}" />. Damit ergibt sich ein Flächeninhalt von: <BlockMath math="2{,}7\,\text{cm} \cdot 7\,\text{cm} = 18{,}9\,\text{cm}^2" />
                                 </ListItem>
                                 <ListItem>
-                                    Die Höhe des Parallelogrammst ist ca. 2,3{thinsp}cm. Der Flächeninhalt ist hier: <BlockMath math="2{,}3\,\text{cm} \cdot 5{,}4\,\text{cm} = 12{,}4\,\text{cm}^2" />
+                                    Die Höhe des Parallelogrammst ist ca. <InlineMath math="2{,}3\,\text{cm}" />. Der Flächeninhalt ist hier: <BlockMath math="2{,}3\,\text{cm} \cdot 5{,}4\,\text{cm} = 12{,}4\,\text{cm}^2" />
                                 </ListItem>
                             </List>
                         </Lösung>
@@ -297,7 +300,7 @@ export default function Vierecke() {
                 </CheckableHeading>
             </CheckableHeading>
             <CheckableHeading title="Winkelsumme">
-                Vom Dreieck weißt du schon, dass die Winkelsumme insgesamt 180° beträgt. Außerdem weißt du, dass jedes Vieleck in Dreiecke unterteilbar ist. Diese zwei Dinge kannst du nun nutzen, um herauszufinden, wie groß die Winkelsumme in Vierecken sein muss!
+                Vom Dreieck weißt du schon, dass die Winkelsumme insgesamt <InlineMath math="180°" /> beträgt. Außerdem weißt du, dass jedes Vieleck in Dreiecke unterteilbar ist. Diese zwei Dinge kannst du nun nutzen, um herauszufinden, wie groß die Winkelsumme in Vierecken sein muss!
                 <CheckableBlockquote icon="aha" titleOrder={2} title="Aha! Die Winkelsumme">
                     Wie groß ist die Winkelsumme eines Vierecks? Zerteile dafür ein allgemeines Viereck so in zwei Dreiecke und nutze aus, dass deren Winkelsumme 180° beträgt.
                     <Lösung id="lösung-winkelsumme" titleOrder={3}>

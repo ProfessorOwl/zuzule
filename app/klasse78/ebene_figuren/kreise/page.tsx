@@ -30,7 +30,7 @@ export default function Kreise() {
                     <Image src={"/Kreise/tasse.webp"} width={6000} height={4000} h={400} alt="Ein Geodreieck auf einer Tasse." flex={"1 1 400px"} />
                     <Image src={"/Kreise/tasseumfang.webp"} width={6000} height={4000} h={400} alt="Ein Maßband um eine Tasse." flex={"1 1 400px"} />
                 </Flex>
-                Die Tasse hier hat einen Durchmesser von 9,8{thinsp}cm und einen Umfang von 31{thinsp}cm. Wir können davon das Verhältnis berechnen!
+                Die Tasse hier hat einen Durchmesser von <InlineMath math="9{,}8\,\text{cm}" /> und einen Umfang von <InlineMath math="31\,\text{cm}" />. Wir können davon das Verhältnis berechnen!
                 <BlockMath math="\frac{U}{d} = \frac{31\,\text{cm}}{9{,}8\,\text{cm}} \approx  3{,}16" />
                 <CheckableBlockquote title="Aufgabe: Verhältnis zwischen Durchmesser und Umfang" titleOrder={2} icon="frage">
                     Jetzt bist du dran. Suche dir 4 weitere Gegenstände aus deinem Haushalt und bestimme deren Umfang und Durchmesser. Wie ändert sich das Verhältnis? <br />
@@ -49,7 +49,8 @@ export default function Kreise() {
                     <a href="https://katiesteckles.co.uk/pisearch/" target="_blank">
                         dieser Seite
                     </a>{" "}
-                    vorbei, um z.{thinsp}B. nach deinem Geburtsdatum oder deinem Namen zu suchen. Der Name dieser Seite, „zuzuLe“, steht an der 86.591.418.847-ten Stelle, wenn A=1, B=2, … gewählt wird.
+                    vorbei, um z.{thinsp}B. nach deinem Geburtsdatum oder deinem Namen zu suchen. Der Name dieser Seite, „zuzuLe“, steht an der <InlineMath math="86.591.418.847" />
+                    -ten Stelle, wenn A=1, B=2, … gewählt wird.
                 </CheckableBlockquote>
                 Da das Verhältnis zwischen dem Umfang U und dem Durchmesser d der Zahl <InlineMath>\pi</InlineMath> entspricht, können wir das auch so festhalten:
                 <BlockMath math="\frac{U}{d} &= \pi &&\lvert \cdot d \\ U &= d \cdot \pi" />. Oft wird dabei statt dem Durchmesser auch der Radius r benutzt, der genau der Hälfte des Durchmessers entspricht. Dann lautet die Formel:

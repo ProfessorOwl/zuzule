@@ -28,11 +28,11 @@ export default function ZusammengesetzteKoerper() {
                             <MBlockMath
                                 desktop="U &= 2\pi r &&\lvert :2\pi \\
                         \frac{U}{2\pi} &= r \\
-                        &= \Rightarrow r &= \frac{11}{2\pi} &\approx 1{,}75"
+                        &\Rightarrow r &= \frac{11}{2\pi} &\approx 1{,}75"
                                 mobile="U &= 2\pi r \\
                         &\Downarrow \scriptsize{:2\pi} \\
                         \frac{U}{2\pi} &= r \\
-                        &= \Rightarrow r &= \frac{11}{2\pi} &\approx 1{,}75"
+                        &\Rightarrow r &= \frac{11}{2\pi} &\approx 1{,}75"
                             />
                             So ergibt sich das Volumen:
                             <BlockMath
@@ -200,14 +200,14 @@ export default function ZusammengesetzteKoerper() {
                 </Lösung>
             </CheckableBlockquote>
             <CheckableBlockquote title="Aufgabe: Würfelfabrik" titleOrder={1}>
-                Ein Brettspielverlag bestellt neue Spielwürfel für ihr neues Brettspiel. Diese sollen scharfe Kanten und für jede Zahl die entsprechende Anzahl an Einkerbungen auf der Seite haben. Die Firma möchte nun wissen, wie viel Holz und Farbe sie bestellen müssen, wenn sie 50.000 Würfel produzieren.
+                Ein Brettspielverlag bestellt neue Spielwürfel für ihr neues Brettspiel. Diese sollen scharfe Kanten und für jede Zahl die entsprechende Anzahl an Einkerbungen auf der Seite haben. Die Firma möchte nun wissen, wie viel Holz und Farbe sie bestellen müssen, wenn sie <InlineMath math="50.000" /> Würfel produzieren.
                 <Image src={"/ZusammengesetzteKoerper/würfel.webp"} width={1024} height={1024} alt="Ein Foto der Knickpyramide" />
                 <List type="ordered">
                     <ListItem>
-                        Die Würfel haben eine Kantenlänge von 16{thinsp}mm. Die Einkerbungen haben einen Radius von 1,5{thinsp}mm. Berechne das Volumen eines Würfels und daraus die Menge Holz, die bestellt werden muss.
+                        Die Würfel haben eine Kantenlänge von <InlineMath math="16\,\text{mm}" />. Die Einkerbungen haben einen Radius von <InlineMath math="1{,}5\,\text{mm}" />. Berechne das Volumen eines Würfels und daraus die Menge Holz, die bestellt werden muss.
                     </ListItem>
                     <ListItem>
-                        Berechne die Menge an weißer und schwarzer Farbe, die bestellt werden muss. 1{thinsp}L Farbe reicht für 5{thinsp}m<sup>2</sup> Oberfläche.
+                        Berechne die Menge an weißer und schwarzer Farbe, die bestellt werden muss. <InlineMath math="1\,\text{L}" /> Farbe reicht für <InlineMath math="5\,\text{m}^2" /> Oberfläche.
                     </ListItem>
                 </List>
                 <Lösung title="Lösung" titleOrder={2} id="Lösung-würfel">
@@ -220,7 +220,7 @@ export default function ZusammengesetzteKoerper() {
                                 &= 4096 \cdot (0,1\,\text{cm})^3 \\
                                 &\approx 4,1\,\text{cm}^3"
                             />
-                            Nun müssen wir die Einkerbungen zählen. Jede Zahl von 1 bis 6 ist einmal auf dem Würfel, also sind es <InlineMath math="1+2+3+4+5+6 = 21" /> Einkerbungen. Da das alles Halbkugeln sind, entspricht das 10,5 Vollkugeln. Deren Volumen ist:
+                            Nun müssen wir die Einkerbungen zählen. Jede Zahl von <InlineMath math="1" /> bis <InlineMath math="6" /> ist einmal auf dem Würfel, also sind es <InlineMath math="1+2+3+4+5+6 = 21" /> Einkerbungen. Da das alles Halbkugeln sind, entspricht das <InlineMath math="10{,}5" /> Vollkugeln. Deren Volumen ist:
                             <BlockMath
                                 math="V_\text{Einkerbungen} &= 10{,}5 \cdot \frac{4}{3}\pi r^3 \\
                                     &= 14 \cdot \pi \cdot (1{,}5\,\text{mm})^3 \\
@@ -240,7 +240,7 @@ export default function ZusammengesetzteKoerper() {
                                     &= 205.000 \cdot (0,01\,\text{m})^3 \\
                                     &= 0{,}205\,\text{m}^3"
                             />
-                            Insgesamt benötigen wir also nicht mal einen Kubikmeter Holz für 50.000 Würfel!
+                            Insgesamt benötigen wir also nicht mal einen Kubikmeter Holz für <InlineMath math="50.000" /> Würfel!
                         </ListItem>
                         <ListItem>
                             Für den Farbverbrauch müssen wir die einzelnen Oberflächen richtig miteinander verrechnen. Die weiße Farbe liegt nur auf dem Würfel, nicht in den Einkerbungen, also müssen wir von seiner Oberfläche die Grundflächen der Einkerbungen abziehen.
@@ -284,7 +284,7 @@ export default function ZusammengesetzteKoerper() {
                 </Lösung>
             </CheckableBlockquote>
             <CheckableBlockquote title="Aufgabe: Knickpyramide" titleOrder={1}>
-                Die Knickpyramide in Dashur ist 40{thinsp}km von Kairo entfernt und gehört zu den größten Pyramiden, die je gebaut wurden. Der Name stammt von ihrer eigenartigen Form, da der Bauwinkel ab der Hälfte der Höhe abgeflacht wurde. In dieser Aufgabe werden wir das Gewicht der quadratischen Pyramide berechnen.
+                Die Knickpyramide in Dashur ist <InlineMath math="40\,\text{km}" /> von Kairo entfernt und gehört zu den größten Pyramiden, die je gebaut wurden. Der Name stammt von ihrer eigenartigen Form, da der Bauwinkel ab der Hälfte der Höhe abgeflacht wurde. In dieser Aufgabe werden wir das Gewicht der quadratischen Pyramide berechnen.
                 <Flex>
                     <Image src={"/ZusammengesetzteKoerper/Knickpyramide.webp"} h={"auto"} width={1400} height={1050} alt="Ein Foto der Knickpyramide" flex={"0 0 400px"} my={0} />
                     <Image src={"/ZusammengesetzteKoerper/KnickpyramideSkizze.webp"} h={"auto"} width={1350} height={950} alt="Ein Foto der Knickpyramide" flex={"0 0 400px"} my={0} />
@@ -294,7 +294,9 @@ export default function ZusammengesetzteKoerper() {
                     <ListItem>Berechne das Volumen der oberen Pyramide.</ListItem>
                     <ListItem>Die untere Pyramide ist ein sogenannter Kegelstumpf. Um davon das Volumen zu berechnen, benötigen wir das Volumen ihres nicht gebauten Teils. Bestimme das Volumen des oberen Teils, wenn er die gleiche Steigung wie der untere hätte.</ListItem>
                     <ListItem>Berechne nun mithilfe des steileren oberen Teils das Volumen des unteren Teils.</ListItem>
-                    <ListItem>Füge nun beide Teile zusammen und berechne das Gesamtvolumen der Knickpyramide. Angenommen, die Pyramide wurde komplett aus Kalkstein gebaut und jeder Kubikmeter wiegt 2000{thinsp}kg – wie viele Tonnen Steine wurden für ihren Bau benötigt?</ListItem>
+                    <ListItem>
+                        Füge nun beide Teile zusammen und berechne das Gesamtvolumen der Knickpyramide. Angenommen, die Pyramide wurde komplett aus Kalkstein gebaut und jeder Kubikmeter wiegt <InlineMath math="2000\,\text{kg}" /> – wie viele Tonnen Steine wurden für ihren Bau benötigt?
+                    </ListItem>
                 </List>
                 <Lösung title="Lösung" titleOrder={2} id="Lösung-Knickpyramide">
                     <List type="ordered">
@@ -333,13 +335,13 @@ export default function ZusammengesetzteKoerper() {
                             &= 1.130.784\,\text{m}^3 + 293.579\,\text{m}^3 \\
                             &= 1.424.363\,\text{m}^3"
                             />
-                            Die Knickpyramide hat demnach ein Volumen von <InlineMath math="1.424.363\,\text{m}^3" />. Diese Zahl müssen wir nun mit dem Gewicht von 2.000{thinsp}lg pro m<sup>3</sup> Kalkstein multiplizieren.
+                            Die Knickpyramide hat demnach ein Volumen von <InlineMath math="1.424.363\,\text{m}^3" />. Diese Zahl müssen wir nun mit dem Gewicht von <InlineMath math="2.000\,\text{kg}" /> pro m<sup>3</sup> Kalkstein multiplizieren.
                             <BlockMath
                                 math="m &= 1.424.363\,\cancel{\text{m}^3} \cdot 2.000\,\frac{\text{kg}}{\cancel{\text{m}^3}} \\
                             &=2.848.726.000\,\text{kg} \\
                             &= 2.848.726\,\text{t}"
                             />
-                            Wenn wir annehmen, die Pyramide besteht komplett aus Kalkstein, dann mussten die Arbeiter insgesamt 2.848.726{thinsp}Tonnen Material befördern!
+                            Wenn wir annehmen, die Pyramide besteht komplett aus Kalkstein, dann mussten die Arbeiter insgesamt <InlineMath math="2.848.726\,\text{Tonnen}" /> Material befördern!
                         </ListItem>
                     </List>
                 </Lösung>

@@ -1,10 +1,10 @@
 import { CheckableBlockquote } from "@/components/CheckableBlockquote";
 import { CheckableHeading } from "@/components/CheckableHeading";
 import { BlockMath } from "@/components/CustomMath";
+import { Hinweis } from "@/components/Hinweis";
 import Image from "@/components/Image";
 import { Lösung } from "@/components/Lösung";
 import MBlockMath from "@/components/MBlockMath";
-import thinsp from "@/components/thinsp";
 import { List, ListItem } from "@mantine/core";
 import { InlineMath } from "react-katex";
 import { Fragment } from "react/jsx-runtime";
@@ -16,6 +16,9 @@ export default function ZusammengesetzteKoerper() {
             <CheckableBlockquote title="Aufgabe: Volumenübung" titleOrder={1}>
                 Bestimme das Volumen der folgenden Körper.
                 <Image src="/ZusammengesetzteKoerper/Zusammen78.webp" h={575} width={1350} height={1150} alt="Verschiedene zusammengesetzte Körper" />
+                <Hinweis titleOrder={2} id="hinweis-zusammen">
+                    Es gibt zwei Arten, and die Aufgabe heranzugehen: Zum einen kannst du zuerst die Grundfläche berechnen und davon ein mögliches Loch oder so abziehen. Zum andern kannst du aber auch das Volumen eines Lochs ausrechnen und vom lochlosen Körper abziehen. Beides kommt auf das gleiche raus!
+                </Hinweis>
                 <Lösung title="Lösung" titleOrder={2} id="Lösung-Zusammen">
                     <List type="ordered">
                         <ListItem>
@@ -94,17 +97,22 @@ export default function ZusammengesetzteKoerper() {
                 </Lösung>
             </CheckableBlockquote>
             <CheckableBlockquote title="Aufgabe: Flaschenfabrik" titleOrder={1}>
-                Die PET-Flasche einer Firma wiegt 30{thinsp}g. Die Firma möchte herausfinden, wie viel Material sie insgesamt benötigen, wenn sie 100.000 Flaschen inklusive der Deckel herstellen.
+                Die PET-Flasche einer Firma wiegt <InlineMath math="30\,\text{g}" />. Die Firma möchte herausfinden, wie viel Material sie insgesamt benötigen, wenn sie <InlineMath math="100.000" /> Flaschen inklusive der Deckel herstellen.
                 <List type="ordered">
                     <ListItem>
-                        Der Deckel hat einen Durchmesser von 2,8{thinsp}cm, eine Höhe von 2{thinsp}cm und eine Wandstärke von 0,1{thinsp}cm. Bestimme das benötigte Volumen pro Deckel.
+                        Der Deckel hat einen Durchmesser von <InlineMath math="2{,}8\,\text{cm}" />, eine Höhe von <InlineMath math="2\,\text{cm}" /> und eine Wandstärke von <InlineMath math="0{,}1\,\text{cm}" />. Bestimme das benötigte Volumen pro Deckel.
                     </ListItem>
                     <ListItem>
-                        Bestimme nun die Materialmenge, die für 100.000 Flaschen insgesamt benötigt wird. 1{thinsp}mL PET wiegt 1,4{thinsp}g. Berücksichtige auch den Flaschenkörper!
+                        Bestimme nun die Materialmenge, die für <InlineMath math="100.000" /> Flaschen insgesamt benötigt wird. <InlineMath math="1\,\text{mL}" /> PET wiegt <InlineMath math="1{,}4\,\text{g}" />. Berücksichtige auch den Flaschenkörper!
                     </ListItem>
-                    <ListItem>Seit 2024 müssen Deckel bei Plastikflaschen mit der Flasche verbunden sein. Wie viel Prozent Plastik wird seitdem mehr recycelt, wenn man davon ausgeht, dass tatsächlich jede Flasche recycelt wird?</ListItem>
+                    <ListItem>
+                        Seit <InlineMath math="2024" /> müssen Deckel bei Plastikflaschen mit der Flasche verbunden sein. Wie viel Prozent Plastik wird seitdem mehr recycelt, wenn man davon ausgeht, dass tatsächlich jede Flasche recycelt wird?
+                    </ListItem>
                 </List>
                 <Image src="/ZusammengesetzteKoerper/Flaschendeckel.webp" h={300} width={6000} height={4000} alt="Ein Flaschendeckel" />
+                <Hinweis title="Hinweis zu 3)" titleOrder={2} id="hinweis-c">
+                    Denke hierbei an deine Rechnung zu 2): Wie viel Prozent macht der Deckel einer Flasche aus?
+                </Hinweis>
                 <Lösung title="Lösung" titleOrder={2} id="Lösung-Flasche">
                     <List type="ordered">
                         <ListItem>
@@ -114,7 +122,7 @@ export default function ZusammengesetzteKoerper() {
                             &=\pi \cdot (1{,}4\,\text{cm})^2 \cdot 2\,\text{cm} \\
                             &= 12{,}32\,\text{cm}^3"
                             />
-                            Für den inneren Zylinder müssen wir die Wandstärke abziehen. Für jede Seite sind das 1{thinsp}mm, was einen inneren Radius von <InlineMath math="r_\text{innen} = 1{,}4\,\text{cm} - 2\cdot 0{,}1\,\text{cm} = 1{,}2\,\text{cm}" />. Von der Höhe müssen wir die Wandstärke lediglich einmal abziehen, da der Deckel auf einer Seite offen ist. Wir bekommen als innere Höhe somit <InlineMath math="1{,}9\,\text{cm}" />. Das Volumen des inneren Zylinders ist damit:
+                            Für den inneren Zylinder müssen wir die Wandstärke abziehen. Für jede Seite sind das <InlineMath math="1\,\text{mm}" />, was einen inneren Radius von <InlineMath math="r_\text{innen} = 1{,}4\,\text{cm} - 2\cdot 0{,}1\,\text{cm} = 1{,}2\,\text{cm}" />. Von der Höhe müssen wir die Wandstärke lediglich einmal abziehen, da der Deckel auf einer Seite offen ist. Wir bekommen als innere Höhe somit <InlineMath math="1{,}9\,\text{cm}" />. Das Volumen des inneren Zylinders ist damit:
                             <BlockMath
                                 math="V_\text{innen} &= \pi \cdot (1{,}2\,\text{cm})^2 \cdot 1{,}9\,\text{cm} \\
                             &= 8{,}60\,\text{cm}^3"
@@ -125,20 +133,20 @@ export default function ZusammengesetzteKoerper() {
                             &= 12{,}32\,\text{cm}^3 - 8{,}60\,\text{cm}^3 \\
                             &= 3{,}72\,\text{cm}^3"
                             />
-                            Für einen Deckel benötigen wir also ein Plastikvolumen von <InlineMath math="8{,}60\,\text{cm}^2" />.
+                            Für einen Deckel benötigen wir also ein Plastikvolumen von <InlineMath math="3{,}72\,\text{cm}^3" />.
                         </ListItem>
                         <ListItem>
-                            Da 1{thinsp}mL PET 1,4{thinsp}g wiegt, müssen wir das Volumen eines Deckels mit diesem Gewicht multiplizieren.
+                            Da <InlineMath math="1\,\text{mL}" /> PET <InlineMath math="1{,}4\,\text{g}" /> wiegt, müssen wir das Volumen eines Deckels mit diesem Gewicht multiplizieren.
                             <BlockMath
                                 math="m &= 3{,}72\,\text{cm}^3 \cdot 1{,}4\,\frac{\text{g}}{\text{cm}^3} \\
                             &\approx 5{,}2\,\text{g}"
                             />
-                            Das Gewicht müssen wir nun mit 100.000 multiplizieren, um das Gewicht von 100.000 Flaschen zu bekommen:
+                            Das Gewicht müssen wir nun mit <InlineMath math="100.000" /> multiplizieren, um das Gewicht von <InlineMath math="100.000" /> Flaschen zu bekommen:
                             <BlockMath
                                 math="5{,}2\,\text{g} \cdot 100.000 &= 520.000\,\text{g} \\
                             &= 520\,\text{kg}"
                             />
-                            Der Flaschenkörper wiegt 30{thinsp}g, das macht auf 100.000 Flaschen:
+                            Der Flaschenkörper wiegt <InlineMath math="30\,\text{g}" />, das macht auf <InlineMath math="100.000" /> Flaschen:
                             <BlockMath
                                 math="30\,\text{g} \cdot 100.000 &= 3.000.000\,\text{g} \\
                             &= 3.000\,\text{kg}"
@@ -146,7 +154,7 @@ export default function ZusammengesetzteKoerper() {
                             Somit sind wir insgesamt bei <InlineMath math="520\,\text{kg} + 3.000\,\text{kg} = 3.520\,\text{kg}" />.
                         </ListItem>
                         <ListItem>
-                            Wenn vorher 3.000{thinsp}kg Plastik recycled wurden, so sind es jetzt 3.520{thinsp}kg. Das ist eine Erhöhung um den Faktor <InlineMath math="\frac{3.520\,\text{kg}}{3.000\,\text{kg}} = 1{,}17" />. Werden also wirklich alle Flaschendeckel recycled, so entspricht das einer Zunahme von 17%.
+                            Wenn vorher <InlineMath math="3.000\,\text{kg}" /> Plastik recycled wurden, so sind es jetzt <InlineMath math="3.520\,\text{kg}" />. Das ist eine Erhöhung um den Faktor <InlineMath math="\frac{3.520\,\text{kg}}{3.000\,\text{kg}} = 1{,}17" />. Werden also wirklich alle Flaschendeckel recycled, so entspricht das einer Zunahme von <InlineMath math="17\,\%" />.
                         </ListItem>
                     </List>
                 </Lösung>

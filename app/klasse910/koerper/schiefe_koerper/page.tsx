@@ -18,7 +18,7 @@ export default function SchiefeKoerper() {
                 <CheckableBlockquote title="Das Prinzip des Cavalieri" titleOrder={2} icon="exkurs">
                     Das Prinzip besagt, dass zwei Körper das gleiche Volumen besitzen, wenn sie in jeder Höhe die gleiche Schnittfläche besitzen. Vergleichen wir z.{thinsp}B. einen geraden mit einem schiefen Quader, die beide die gleiche Grundflächen wie Höhen haben.
                     <Image width={6000} height={4000} src={"/SchiefeKoerper/Schachteile.webp"} alt="Ein gerader und ein schiefer Stapel aus quadratischen Teilen" />
-                    Beide Stapel bestehen aus 10 gleichgroßen Teilstücken. In dem Beispiel sind sie relativ groß, kann man die Scheiben noch gut voneinander unterscheiden. Aber stell dir vor, wir machen sie dünner:
+                    Beide Stapel bestehen aus <InlineMath math="10" /> gleichgroßen Teilstücken. In dem Beispiel sind sie relativ groß, kann man die Scheiben noch gut voneinander unterscheiden. Aber stell dir vor, wir machen sie dünner:
                     <Flex>
                         <ImageCaption h={250} src="/SchiefeKoerper/PapierstapelGerade.webp" width={6000} height={4000} alt="Ein gerader Stapel Papier">
                             Der Papierstapel ist gerade.
@@ -57,38 +57,54 @@ export default function SchiefeKoerper() {
                     <Lösung title="Lösung" titleOrder={3} id="Lösung-Preikestolen">
                         <List type="ordered">
                             <ListItem>
-                                Um das Volumen zu berechnen, benötigen wir neben der <Mark c={"teal.9"}>Höhe</Mark> von 12,6{thinsp}m noch die Länge und Breite der Pyramide. In der Draufsicht ist das obere Dreieck gegeben, dessen <Mark c={"desred.9"}>Grundseite</Mark> wir mit dem Satz des Pythagoras berechnen können.
+                                Um das Volumen zu berechnen, benötigen wir neben der <Mark c={"teal.9"}>Höhe</Mark> von{" "}
+                                <Mark c={"teal.9"}>
+                                    <InlineMath math="12{,}6\,\text{m}" />
+                                </Mark>{" "}
+                                noch die Länge und Breite der Pyramide. In der Draufsicht ist das obere Dreieck gegeben, dessen <Mark c={"desred.9"}>Grundseite</Mark> wir mit dem Satz des Pythagoras berechnen können.
                                 <MBlockMath
-                                    desktop="g^2 &= (2{,}8\,\text{m})^2 + (4{,}7\,\text{m})^2 &&\lvert \sqrt{} \\
-                            &= \sqrt{(2{,}8\,\text{m})^2 + (4{,}7\,\text{m})^2} \\
+                                    desktop="g^2 &= (\textcolor{#B81E46}{2{,}8\,\text{m}})^2 + (\textcolor{#B81E46}{4{,}7\,\text{m}})^2 &&\lvert \sqrt{} \\
+                            &= \sqrt{(\textcolor{#B81E46}{2{,}8\,\text{m}})^2 + (\textcolor{#B81E46}{4{,}7\,\text{m}})^2} \\
                             &\Rightarrow g \approx 5{,}52\,\text{m}"
-                                    mobile="g^2 &= (2{,}8\,\text{m})^2 + (4{,}7\,\text{m})^2 \\
+                                    mobile="g^2 &= (\textcolor{#B81E46}{2{,}8\,\text{m}})^2 + (\textcolor{#B81E46}{4{,}7\,\text{m}})^2 \\
                             &\Downarrow \scriptsize{\sqrt{}} \\
-                            &= \sqrt{(2{,}8\,\text{m})^2 + (4{,}7\,\text{m})^2} \\
+                            &= \sqrt{(\textcolor{#B81E46}{2{,}8\,\text{m}})^2 + (\textcolor{#B81E46}{4{,}7\,\text{m}})^2} \\
                             &\Rightarrow g \approx 5{,}5\,\text{m}"
                                 />
-                                Die rechteckige Grundfläche der Pyramide hat damit die Maße <Mark c={"teal.9"}>12,6{thinsp}m</Mark> mal <Mark c={"desred.9"}>5,5{thinsp}m</Mark>. Um die <Mark c={"desblue.9"}>Höhe</Mark> zu berechnen, die auf diesem Rechteck steht, müssen wir erneut die Draufsicht verwenden.
+                                Die rechteckige Grundfläche der Pyramide hat damit die Maße{" "}
+                                <Mark c={"teal.9"}>
+                                    <InlineMath math="12{,}6\,\text{m}" />
+                                </Mark>{" "}
+                                mal{" "}
+                                <Mark c={"desred.9"}>
+                                    <InlineMath math="5{,}5\,\text{m}" />
+                                </Mark>
+                                . Um die <Mark c={"desblue.9"}>Höhe</Mark> zu berechnen, die auf diesem Rechteck steht, müssen wir erneut die Draufsicht verwenden.
                                 <Space />
-                                Die Grundseite nimmt bis zur <Mark c={"desblue.9"}>Höhe</Mark> 77% Platz ein. Die Länge bekommen wir so:
+                                Die Grundseite nimmt bis zur <Mark c={"desblue.9"}>Höhe</Mark>{" "}
+                                <Mark c={"desred.9"}>
+                                    <InlineMath math="77\,\%" />
+                                </Mark>{" "}
+                                Platz ein. Die Länge bekommen wir so:
                                 <BlockMath math="0{,}77 \cdot 5{,}5\,\text{m} = 4,3\,\text{m}" />
                                 Wir verwenden erneut den Satz des Pythagoras:
                                 <MBlockMath
-                                    desktop="(4,3\,\text{m})^2 + h^2 &= 4,7\,\text{m}^2 &&\lvert -(4,3\,\text{m})^2 \\
-                            h^2 &= 4,7\,\text{m}^2 -4,3\,\text{m})^2 &&\lvert \sqrt{} \\
-                            h &= \sqrt{4,7\,\text{m}^2 -4,3\,\text{m})^2} \\
+                                    desktop="(4,3\,\text{m})^2 + h^2 &= \textcolor{#B81E46}{4,7\,\text{m}}^2 &&\lvert -(4,3\,\text{m})^2 \\
+                            h^2 &= \textcolor{#B81E46}{4,7\,\text{m}}^2 -4,3\,\text{m})^2 &&\lvert \sqrt{} \\
+                            h &= \sqrt{\textcolor{#B81E46}{4,7\,\text{m}}^2 -4,3\,\text{m})^2} \\
                             &\Rightarrow h \approx 1,9\,\text{m}"
-                                    mobile="(4,3\,\text{m})^2 + h^2 &= 4,7\,\text{m}^2 \\
+                                    mobile="(4,3\,\text{m})^2 + h^2 &= \textcolor{#B81E46}{4,7\,\text{m}}^2 \\
                             &\Downarrow \scriptsize{-(4,3\,\text{m})^2} \\
-                            h^2 &= 4,7\,\text{m}^2 -4,3\,\text{m})^2 \\
+                            h^2 &= \textcolor{#B81E46}{4,7\,\text{m}}^2 -4,3\,\text{m})^2 \\
                             &\Downarrow \scriptsize{\sqrt{}} \\
-                            h &= \sqrt{4,7\,\text{m}^2 -4,3\,\text{m})^2} \\
+                            h &= \sqrt{\textcolor{#B81E46}{4,7\,\text{m}}^2 -4,3\,\text{m})^2} \\
                             &\Rightarrow h \approx 1,9\,\text{m}"
                                 />
                                 Damit haben wir alle Maße, um das Pyramidenvolumen zu berechnen:
                                 <BlockMath
                                     math="V &= \frac{1}{3}Gh \\
                         &= \frac{1}{3} \cdot 12{,}6\,\text{m} \cdot 5{,}5\,\text{m}\cdot 1{,}9\,\text{m} \\
-                        &= \Rightarrow V \approx 43,89\,\text{m}^3"
+                        &\Rightarrow V \approx 43,89\,\text{m}^3"
                                 />
                             </ListItem>
                             <ListItem>
@@ -112,7 +128,7 @@ export default function SchiefeKoerper() {
                             &= 11.850,3\,\text{kg} \\
                             &\approx 11{,}85\,\text{t}"
                                 />
-                                Der Felsvorsprung wiegt also 11,85{thinsp}t!
+                                Der Felsvorsprung wiegt also <InlineMath math="11{,}85\,\text{t}" />!
                             </ListItem>
                             <ListItem>
                                 Der Felsen wiegt weniger als <InlineMath math="13\,\text{t}" /> und ist damit erst einmal sicher. Es werden noch <InlineMath math="13\,\text{t} - 11{,}85\,\text{t} = 1{,}15\,\text{t}" /> benötigt, damit er instabil wird. Um dieses Gewicht zu erreichen sind <InlineMath math="1150\,\text{kg} : 80\,\frac{\text{kg}}{\text{Person}} \approx 15\,\text{Personen}" /> notwendig, die gleichzeitig auf dem Felsen stehen.
@@ -133,39 +149,38 @@ export default function SchiefeKoerper() {
                 <Lösung title="Lösung" titleOrder={2} id="Lösung-FehlendesMaß">
                     <List type="ordered">
                         <ListItem>
-                            Volumenformel einer Pyramide: <InlineMath math="V = \frac{1}{3}Gh" />
-                            Umstellen nach <InlineMath math="h" /> und einsetzen liefert:
+                            Volumenformel einer Pyramide: <InlineMath math="V = \frac{1}{3}Gh" /> Umstellen nach <InlineMath math="h" /> und einsetzen liefert:
                             <MBlockMath
-                                desktop="V &= \frac{1}{3}Gh &&\lvert \cdot 3 \\
-                        3V &= Gh &&\lvert :G \\
-                        \frac{3V}{G} &= h \\
-                        &\Rightarrow h = \frac{3\cdot 84}{4\cdot 6} = 10{,}5"
-                                mobile="V &= \frac{1}{3}Gh \\
+                                desktop="V &= \frac{1}{3}G\textcolor{#0D8762}{h} &&\lvert \cdot 3 \\
+                        3V &= G\textcolor{#0D8762}{h} &&\lvert :G \\
+                        \frac{3V}{G} &= \textcolor{#0D8762}{h} \\
+                        &\Rightarrow \textcolor{#0D8762}{h} = \frac{3\cdot 84}{4\cdot 6} = 10{,}5"
+                                mobile="V &= \frac{1}{3}G\textcolor{#0D8762}{h} \\
                         &\Downarrow \scriptsize{\cdot 3} \\
-                        3V &= Gh && \\
+                        3V &= G\textcolor{#0D8762}{h} && \\
                         &\Downarrow \scriptsize{:G} \\
-                        \frac{3V}{G} &= h \\
-                        &\Rightarrow h = \frac{3\cdot 84}{4\cdot 6} = 10{,}5"
+                        \frac{3V}{G} &= \textcolor{#0D8762}{h} \\
+                        &\Rightarrow \textcolor{#0D8762}{h} = \frac{3\cdot 84}{4\cdot 6} = 10{,}5"
                             />
                         </ListItem>
                         <ListItem>
                             Volumenformel eines Zylinders ist identisch mit der von Pyramiden. Einsetzen liefert:
                             <BlockMath
-                                math="V &= \frac{1}{3}Gh \\
-                        &= \frac{1}{3} \cdot \pi \cdot 2{,}5^2 \cdot 6 \\
+                                math="\textcolor{#0D8762}{V} &= \frac{1}{3}Gh \\
+                        &= \frac{1}{3} \cdot \pi \cdot \textcolor{#B81E46}{2{,}5}^2 \cdot \textcolor{#B81E46}{6} \\
                         &\approx 39,27"
                             />
                         </ListItem>
                         <ListItem>
                             Auch wenn das schiefe Prisma eine unregelmäßige Form hat, hat es in jeder Höhe die gleiche Schnittfläche, denn alle vier Kanten verlaufen identisch in die Höhe. Wir können also den Satz des Cavalieri anwenden! Die Formel für ein Prisma lautet <InlineMath math="V = Gh" />. Umstellen und einsetzen liefert:
                             <MBlockMath
-                                desktop="V &= Gh &&\lvert :h \\
-                        \frac{V}{h} &= G \\
-                        &\Rightarrow G = \frac{90}{15} = 6"
-                                mobile="V &= Gh \\
+                                desktop="V &= \textcolor{#0D8762}{G}h &&\lvert :h \\
+                        \frac{V}{h} &= \textcolor{#0D8762}{G} \\
+                        &\Rightarrow \textcolor{#0D8762}{G} = \frac{90}{\textcolor{#B81E46}{15}} = 6"
+                                mobile="V &= \textcolor{#0D8762}{G}h \\
                         &\Downarrow \scriptsize{:h} \\
-                        \frac{V}{h} &= G \\
-                        &\Rightarrow G = \frac{90}{15} = 6"
+                        \frac{V}{h} &= \textcolor{#0D8762}{G} \\
+                        &\Rightarrow \textcolor{#0D8762}{G} = \frac{90}{\textcolor{#B81E46}{15}} = 6"
                             />
                         </ListItem>
                     </List>

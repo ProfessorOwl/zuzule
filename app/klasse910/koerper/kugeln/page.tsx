@@ -32,8 +32,7 @@ export default function Kugeln() {
                 <Video src={Lichtkugel} />
                 Zeichnet man die Lichtbahnen nach, so entsteht dabei dieses Bild:
                 <Image h={400} width={1920} height={1080} src={"/Kugeln/LichtKugel.webp"} alt="Eine Kugel, die aus Licht gezeichnet ist" />
-                Durch das Fixieren des Mittelpunktes auf dem Stativ und einem festen Radius haben wir damit eine Kugel mit einem Radius von 0,6
-                {thinsp}m gezeichnet.
+                Durch das Fixieren des Mittelpunktes auf dem Stativ und einem festen Radius haben wir damit eine Kugel mit einem Radius von <InlineMath math="0{,}6\,\text{m}" /> gezeichnet.
                 <CheckableBlockquote icon="aha" title="Probier es selbst aus!">
                     Man braucht keine professionelle Kamera für solche Langzeitbelichtungen. Schau mal in den Einstellungen deiner Handykamera und schaue, ob dort irgendwo das Wort „Langzeitbelichtung“ auftaucht – den Modus suchst du. Verdunkel dann den Raum und nimm eine schwache Lichtquelle, wie ein Feuerzeug, eine Wunderkerze oder ähnliches, und fahre damit Muster in den Raum. Schaffst du es auch, eine Kugel zu machen? Sind noch andere Formen möglich? Schau, was dabei herauskommt!
                 </CheckableBlockquote>
@@ -43,7 +42,7 @@ export default function Kugeln() {
                 <CheckableBlockquote title="Das Prinzip des Cavalieri" titleOrder={2} icon="exkurs">
                     Das Prinzip besagt, dass zwei Körper das gleiche Volumen besitzen, wenn sie in jeder Höhe die gleiche Schnittfläche besitzen. Vergleichen wir z.{thinsp}B. einen geraden mit einem schiefen Quader, die beide die gleiche Grundflächen wie Höhen haben.
                     <Image width={6000} height={4000} src={"/SchiefeKoerper/Schachteile.webp"} alt="Ein gerader und ein schiefer Stapel aus quadratischen Teilen" />
-                    Beide Stapel bestehen aus 10 gleichgroßen Teilstücken. In dem Beispiel sind sie relativ groß, kann man die Scheiben noch gut voneinander unterscheiden. Aber stell dir vor, wir machen sie dünner:
+                    Beide Stapel bestehen aus <InlineMath math="10" /> gleichgroßen Teilstücken. In dem Beispiel sind sie relativ groß, kann man die Scheiben noch gut voneinander unterscheiden. Aber stell dir vor, wir machen sie dünner:
                     <Flex>
                         <ImageCaption h={250} src="/SchiefeKoerper/PapierstapelGerade.webp" width={6000} height={4000} alt="Ein gerader Stapel Papier">
                             Der Papierstapel ist gerade.
@@ -242,48 +241,48 @@ export default function Kugeln() {
                     </Lösung>
                 </CheckableBlockquote>
                 <CheckableBlockquote title="Aufgabe: Lunge" titleOrder={2}>
-                    Damit unser Körper genug Sauerstoff bekommt ist unsere Lunge mit extrem vielen, kleinen Lungenbläschen versehen. Im Schnitt hat jeder Mensch 400 Millionen dieser Bläschen, die ca. einen Durchmesser von 0,2{thinsp}mm haben.
-                    <List>
+                    Damit unser Körper genug Sauerstoff bekommt ist unsere Lunge mit extrem vielen, kleinen Lungenbläschen versehen. Im Schnitt hat jeder Mensch <InlineMath math="400" /> Millionen dieser Bläschen, die ca. einen Durchmesser von <InlineMath math="0{,}2\,\text{mm}" /> haben.
+                    <List type="ordered">
                         <ListItem>Berechne die Gesamtoberfläche der Lunge.</ListItem>
                         <ListItem>Wie vielen Quadratmetern entspricht das? Berechne die Seitenlänge eines Quadrats mit identischem Flächeninhalt.</ListItem>
-                        <Lösung title="Lösung" titleOrder={3} id="Lösung-Lunge">
-                            <List>
-                                <ListItem>
-                                    Die Oberfläche eines Lungenbläschen berechnet sich mit der Formel <InlineMath math="O = 4\pi r^2" />. Da in der Aufgabe nur der Durchmesser gegeben ist, müssen wir den Radius daraus durch Halbieren herleiten.
-                                    <BlockMath
-                                        math="O_\text{Bläschen} &= 4 \pi \cdot (\frac{0{,}2}{2}\,\text{mm})^2 \\
+                    </List>
+                    <Lösung title="Lösung" titleOrder={3} id="Lösung-Lunge">
+                        <List type="ordered">
+                            <ListItem>
+                                Die Oberfläche eines Lungenbläschen berechnet sich mit der Formel <InlineMath math="O = 4\pi r^2" />. Da in der Aufgabe nur der Durchmesser gegeben ist, müssen wir den Radius daraus durch Halbieren herleiten.
+                                <BlockMath
+                                    math="O_\text{Bläschen} &= 4 \pi \cdot (\frac{0{,}2}{2}\,\text{mm})^2 \\
                                         &= 0{,}123\,\text{mm}^2"
-                                    />
-                                    Für das Gesamtvolumen der Lunge müssen wir diesen Wert mit 400.000.000 multiplizieren:
-                                    <BlockMath
-                                        math="O_\text{Lunge} &= 400.000.000 \cdot O_\text{Bläschen} \\
+                                />
+                                Für das Gesamtvolumen der Lunge müssen wir diesen Wert mit 400.000.000 multiplizieren:
+                                <BlockMath
+                                    math="O_\text{Lunge} &= 400.000.000 \cdot O_\text{Bläschen} \\
                                         &= 400.000.000 \cdot 0{,}123\,\text{mm}^2 \\
                                         &=50.400.000\,\text{mm}^2 "
-                                    />
-                                </ListItem>
-                                <ListItem>
-                                    Wir müssen zuerst den Wert von mm<sup>2</sup> in m<sup>2</sup> umrechnen:
-                                    <BlockMath
-                                        math="50.400.000\,\text{mm}^2 &= 50.400.000 \cdot \,(0{,}001\text{m})^2 \\
+                                />
+                            </ListItem>
+                            <ListItem>
+                                Wir müssen zuerst den Wert von mm<sup>2</sup> in m<sup>2</sup> umrechnen:
+                                <BlockMath
+                                    math="50.400.000\,\text{mm}^2 &= 50.400.000 \cdot \,(0{,}001\text{m})^2 \\
                                         &= 50{,}4\,\text{m}^2"
-                                    />
-                                    Das ist die Gesamtfläche der Lunge in m<sup>2</sup>. Um zu der Fläche eines Quadrates zu kommen, verwenden wir dessen Flächeformel und stellen nach der Seitenlänge um:
-                                    <MBlockMath
-                                        desktop="A &= a^2 &&\lvert \sqrt{} \\
+                                />
+                                Das ist die Gesamtfläche der Lunge in m<sup>2</sup>. Um zu der Fläche eines Quadrates zu kommen, verwenden wir dessen Flächeformel und stellen nach der Seitenlänge um:
+                                <MBlockMath
+                                    desktop="A &= a^2 &&\lvert \sqrt{} \\
                                     &\Rightarrow a = \sqrt{A}"
-                                        mobile="A &= a^2 \\ &\Downarrow \scriptsize{\sqrt{}} \\
+                                    mobile="A &= a^2 \\ &\Downarrow \scriptsize{\sqrt{}} \\
                                     &\Rightarrow a = \sqrt{A}"
-                                    />
-                                    Einsetzen der Lungenoberfläche gibt uns:
-                                    <BlockMath
-                                        math="A &= \sqrt{50{,}4\,\text{m}^2} \\
+                                />
+                                Einsetzen der Lungenoberfläche gibt uns:
+                                <BlockMath
+                                    math="A &= \sqrt{50{,}4\,\text{m}^2} \\
                                     &\approx 7,10\,\text{m}"
-                                    />
-                                    Die Gesamtoberfläche der Lunge ist demnach identisch mit dem Flächeninhalt eines quadratischen Zimmers, das eine Seitenlänge von ca. 7{thinsp}m hat! Ist dein Zimmer so groß?
-                                </ListItem>
-                            </List>
-                        </Lösung>
-                    </List>
+                                />
+                                Die Gesamtoberfläche der Lunge ist demnach identisch mit dem Flächeninhalt eines quadratischen Zimmers, das eine Seitenlänge von ca. <InlineMath math="7\,\text{m}" /> hat! Ist dein Zimmer so groß?
+                            </ListItem>
+                        </List>
+                    </Lösung>
                 </CheckableBlockquote>
             </CheckableHeading>
             <CheckableBlockquote icon="frage" title="Aufgabe: Planetenvergleich" titleOrder={1}>
@@ -322,7 +321,7 @@ export default function Kugeln() {
                             <BlockMath math="\frac{O_\text{Erde}}{O_\text{Mond}} = \frac{510.064.472\,\text{km}^2}{37.958.532\,\text{km}^2} \approx 13{,}44" />
                             Verhältnis Jupiter/Erde:
                             <BlockMath math="\frac{O_\text{Jupiter}}{O_\text{Erde}} = \frac{64.228.053.050\,\text{km}^2}{510.064.472\,\text{km}^2} \approx 125{,}92" />
-                            Die Oberfläche der Erde ist ca. 13 mal so groß wie die des Mondes, die Oberfläche von Jupiter ca. 126 mal so groß wie die Erde.
+                            Die Oberfläche der Erde ist ca. <InlineMath math="13" /> mal so groß wie die des Mondes, die Oberfläche von Jupiter ca. <InlineMath math="126" /> mal so groß wie die Erde.
                         </ListItem>
                         <ListItem>
                             Formel für Volumen: <InlineMath math="V = \frac{4}{3}\pi r^3" />
@@ -347,7 +346,7 @@ export default function Kugeln() {
                             <BlockMath math="\frac{V_\text{Erde}}{V_\text{Mond}} = \frac{1,08 \cdot 10^{12}\,\text{km}^3}{22,0 \cdot 10^9\,\text{km}^3} \approx 49{,}26" />
                             Verhältnis Jupiter/Erde:
                             <BlockMath math="\frac{V_\text{Jupiter}}{V_\text{Erde}} = \frac{1.53 \cdot 10^{15}\,\text{km}^2}{1,08 \cdot 10^{12}\,\text{km}^2} \approx 1413{,}02" />
-                            Der Mond passt demnach ca. 49 mal in die Erde, die Erde wiederum ca. 1413 mal in Jupiter.
+                            Der Mond passt demnach ca. <InlineMath math="49" /> mal in die Erde, die Erde wiederum ca. <InlineMath math="1413" /> mal in Jupiter.
                         </ListItem>
                         <ListItem>
                             Um das Gewicht <InlineMath math="m" /> aus dem Volumen <InlineMath math="V" /> und der Dichte <InlineMath math="\rho" /> zu berechnen, benutzt man folgende Formel:
@@ -373,7 +372,7 @@ export default function Kugeln() {
                             <BlockMath math="\frac{m_\text{Erde}}{m_\text{Mond}} = \frac{5{,}96 \cdot 10^{21}\,\text{t}}{7{,}48 \cdot 10^{19}\,\text{t}} \approx 79{,}68" />
                             Verhältnis Jupiter/Erde:
                             <BlockMath math="\frac{m_\text{Jupiter}}{m_\text{Erde}} = \frac{2{,}00 \cdot 10^{24}\,\text{t}}{5{,}96 \cdot 10^{21}\,\text{t}} \approx 335{,}57" />
-                            Die Erde ist also ca. 80 mal so schwer wie der Mond, und ca. 336 mal leichter als Jupiter. Die Zahlen unterscheiden sich stark von den Volumenverhältnisses! Denn die Erde ist fast doppelt so dicht wie der Mond und mehr als viermal so dicht wie Jupiter! Eine Erklärung für die Gewichtsunterschiede ist, dass die Erde einen großen Anteil Metall in ihrer Kruste hat, während der Mond vor allem aus Gestein besteht. Jupiter auf der anderen Seite besteht vornehmlich aus Gas, auch wenn er einen festen Kern hat.
+                            Die Erde ist also ca. <InlineMath math="80" /> mal so schwer wie der Mond, und ca. <InlineMath math="336" /> mal leichter als Jupiter. Die Zahlen unterscheiden sich stark von den Volumenverhältnisses! Denn die Erde ist fast doppelt so dicht wie der Mond und mehr als viermal so dicht wie Jupiter! Eine Erklärung für die Gewichtsunterschiede ist, dass die Erde einen großen Anteil Metall in ihrer Kruste hat, während der Mond vor allem aus Gestein besteht. Jupiter auf der anderen Seite besteht vornehmlich aus Gas, auch wenn er einen festen Kern hat.
                         </ListItem>
                     </List>
                 </Lösung>
