@@ -43,7 +43,7 @@ export default function Vierecke() {
                 <Hinweis title="Hinweis: Eigenschaften von Quadrat, Rechteck, Raute, Parallelogramm" id="hinweis-qrrp" titleOrder={2}>
                     <List type="ordered">
                         <ListItem>
-                            <b>Quadrat:</b> Alle vier Seiten sind gleich lang, wobei entgegengesetzte Seiten parallel zueinander sind und alle Winkel rechte Winkel sind.(
+                            <b>Quadrat:</b> Alle vier Seiten sind gleich lang, wobei entgegengesetzte Seiten parallel zueinander sind und alle Winkel rechte Winkel sind.
                         </ListItem>
                         <ListItem>
                             <b>Rechteck:</b> Entgegengesetzte Seiten sind gleich lang und parallel zueinander. Auch hier gibt es nur rechte Winkel

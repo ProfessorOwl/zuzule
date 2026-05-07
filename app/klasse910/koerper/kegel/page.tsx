@@ -110,9 +110,9 @@ export default function Kegel() {
                                 <BlockMath math="U &= 2\pi r_G \\ &= 2\pi \cdot 3\,\text{cm} \\ &\Rightarrow U \approx 18{,}85\,\text{cm}" />
                                 <BlockMath math="h_\text{Wand} &= \sqrt{r_G^2 + h^2} \\ &= \sqrt{(3\,\text{cm})^2 + (4\,\text{cm})^2} \\ &\Rightarrow h_\text{Wand} = 5\,\text{cm}" />
                                 Damit können wir die Mantelfläche <InlineMath math="M" /> berechnen:
-                                <BlockMath math="M &= \frac{U}{2} \cdot h_\text{Wand} \\ &= \frac{18{,}25\,\text{cm}}{2} \cdot 5\,\text{cm} \\ &\Rightarrow M = 45{,}63\,\text{cm}^2" />
+                                <BlockMath math="M &= \frac{U}{2} \cdot h_\text{Wand} \\ &= \frac{18{,}85\,\text{cm}}{2} \cdot 5\,\text{cm} \\ &\Rightarrow M \approx 47{,}13\,\text{cm}^2" />
                                 Insgesamt ergibt das eine Oberfläche von
-                                <BlockMath math="O = G + M = 28{,}27\,\text{cm}^2+ 45{,}63\,\text{cm}^2 = 73{,}9\,\text{cm}^2" />
+                                <BlockMath math="O = G + M = 28{,}27\,\text{cm}^2+ 47{,}13\,\text{cm}^2 = 75{,}4\,\text{cm}^2" />
                             </ListItem>
                             <ListItem>
                                 Grundfläche:

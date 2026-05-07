@@ -91,7 +91,7 @@ export default function Prismen() {
                             </ListItem>
                             <ListItem>
                                 Dreieckiges Prisma
-                                <BlockMath math="G &= \frac{1}{2} 12 \,\text{cm} \cdot \textcolor{#B81E46}{h} \\ &= \frac{1}{2} 12 \,\text{cm}\cdot 8 \,\text{cm}\\ &= 96 \,\text{cm}^2 \\ M &= 2 \cdot 10 \,\text{cm} \cdot 40 \,\text{cm} + 12 \,\text{cm} \cdot 40 \,\text{cm} \\ &= 800 \, \text{cm}^2 + 480 \, \text{cm}^2 \\ &= 1280 \, \text{cm}^2 \\ O &= 2 \cdot G + M \\ &= 2 \cdot 96 \,\text{cm}^2 + 1280 \, \text{cm}^2 \\ &= 1472 \, \text{cm}^2" />
+                                <BlockMath math="G &= \frac{1}{2} 12 \,\text{cm} \cdot \textcolor{#B81E46}{h} \\ &= \frac{1}{2} 12 \,\text{cm}\cdot 8 \,\text{cm}\\ &= 48 \,\text{cm}^2 \\ M &= 2 \cdot 10 \,\text{cm} \cdot 40 \,\text{cm} + 12 \,\text{cm} \cdot 40 \,\text{cm} \\ &= 800 \, \text{cm}^2 + 480 \, \text{cm}^2 \\ &= 1280 \, \text{cm}^2 \\ O &= 2 \cdot G + M \\ &= 2 \cdot 48 \,\text{cm}^2 + 1280 \, \text{cm}^2 \\ &= 1376 \, \text{cm}^2" />
                             </ListItem>
                             <ListItem>
                                 Fünfeckiges Prisma

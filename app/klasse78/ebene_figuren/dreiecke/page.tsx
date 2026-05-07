@@ -154,7 +154,7 @@ export default function Dreiecke() {
                     <Lösung title="Lösung anzeigen" titleOrder={3} id="lösung-winkelsumme">
                         Es ist egal, wie das Dreieck aussieht, dass du gezeichnet und ausgeschnitten hast! Die Ecken werden zusammen immer unten eine gerade Kante haben. Das bedeutet, dass der eingeschlossene Winkel <InlineMath math="180°" /> beträgt.
                         <Image src="/Dreiecke/Winkelsumme.webp" width={1250} height={600} alt="Die Spitzen eines Dreiecks werden abgeschnitten und zusammengelegt, sodass sich ein Winkel von 180° ergibt." />
-                        Das ganze gilt auch oben für die Beispiele des gleichseitigen und gleichschenkligen Dreiecks: In einem gleichseitigen Dreieck beträgt jeder Winkel <InlineMath math="60°" />. Da es drei Winkel gibt, ist die Winkelsumme <InlineMath math="3\cdot80° = 180°" />. <br />
+                        Das ganze gilt auch oben für die Beispiele des gleichseitigen und gleichschenkligen Dreiecks: In einem gleichseitigen Dreieck beträgt jeder Winkel <InlineMath math="60°" />. Da es drei Winkel gibt, ist die Winkelsumme <InlineMath math="3\cdot60° = 180°" />. <br />
                         Bei dem gleichschenkligen Dreieck oben sind zwei Winkel <InlineMath math="80°" />, der andere <InlineMath math="25°" /> – selbst mit der Messungenauigkeit und den etwas ungeraden Spießen ergibt sich hier (fast) ein Gesamtwinkel von <InlineMath math="180°" />.
                     </Lösung>
                 </CheckableBlockquote>
