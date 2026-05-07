@@ -46,7 +46,6 @@ function HeaderSimpleInner() {
                         {isKlasse78 || isKlasse910 ? (
                             <Button
                                 color={"desblue"}
-                                className={classes.releaseButton}
                                 onClick={() => {
                                     const params = new URLSearchParams(searchParams.toString());
                                     params.set("students", "true");

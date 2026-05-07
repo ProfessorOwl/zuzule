@@ -46,7 +46,7 @@ export const theme = createTheme({
         }),
         Button: Button.extend({
             defaultProps: {
-                bg: "teal.9"
+                color: "teal.9"
             }
         })
     },
