@@ -7,6 +7,19 @@ const nextConfig = {
         optimizePackageImports: ["@mantine/core", "@mantine/hooks"],
         optimizeCss: true,
     },
+    async headers() {
+        return [
+            {
+                source: "/(.*)",
+                headers: [
+                    {
+                        key: "Cross-Origin-Opener-Policy",
+                        value: "same-origin-allow-popups",
+                    },
+                ],
+            },
+        ];
+    },
     webpack(config) {
         // On some network/cloud filesystems (Synology Drive, iCloud, etc.)
         // webpack's filesystem cache can fail with low-level read errors.
