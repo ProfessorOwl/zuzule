@@ -21,6 +21,10 @@ function HeaderSimpleInner() {
 
     const isStudent = searchParams.get("students") === "true";
 
+    const studentParams = new URLSearchParams(searchParams.toString());
+    studentParams.set("students", "true");
+    const studentUrl = `${pathname}?${studentParams.toString()}`;
+
     return (
         <header className={classes.header} ref={clickOutside}>
             {isStudent ? (
@@ -44,15 +48,7 @@ function HeaderSimpleInner() {
                             Über das Projekt
                         </Link>
                         {isKlasse78 || isKlasse910 ? (
-                            <Button
-                                color={"desblue"}
-                                className={classes.releaseButton}
-                                onClick={() => {
-                                    const params = new URLSearchParams(searchParams.toString());
-                                    params.set("students", "true");
-                                    window.open(`${pathname}?${params.toString()}`, "_blank");
-                                }}
-                            >
+                            <Button color={"desblue"} component="a" href={studentUrl} target="_blank" rel="noopener noreferrer">
                                 Inhalt freigeben
                             </Button>
                         ) : (
@@ -82,12 +78,7 @@ function HeaderSimpleInner() {
                             Klassen 7+8
                         </Link>
                         {expandedClass === "78" && (
-                            <div
-                                style={{
-                                    paddingLeft: "16px",
-                                }}
-                                onClick={close}
-                            >
+                            <div style={{ paddingLeft: "16px" }} onClick={close}>
                                 {navData78.map((item) => renderNavItem(item, 0, pathname))}
                             </div>
                         )}
@@ -107,12 +98,7 @@ function HeaderSimpleInner() {
                             Klassen 9+10
                         </Link>
                         {expandedClass === "910" && (
-                            <div
-                                style={{
-                                    paddingLeft: "16px",
-                                }}
-                                onClick={close}
-                            >
+                            <div style={{ paddingLeft: "16px" }} onClick={close}>
                                 {navData910.map((item) => renderNavItem(item, 0, pathname))}
                             </div>
                         )}
@@ -121,15 +107,7 @@ function HeaderSimpleInner() {
                             Über das Projekt
                         </Link>
                         {isKlasse78 || isKlasse910 ? (
-                            <Button
-                                color={"desblue"}
-                                className={classes.releaseButton}
-                                onClick={() => {
-                                    const params = new URLSearchParams(searchParams.toString());
-                                    params.set("students", "true");
-                                    window.open(`${pathname}?${params.toString()}`, "_blank");
-                                }}
-                            >
+                            <Button color={"desblue"} className={classes.releaseButton} component="a" href={studentUrl} target="_blank" rel="noopener noreferrer">
                                 Inhalt freigeben
                             </Button>
                         ) : (

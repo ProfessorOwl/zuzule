@@ -15,7 +15,7 @@ function LayoutGridInner({ children }: { children: any }) {
     const showOutline = showSideview78 || showSideview910;
 
     return (
-        <Grid justify="space-between" gutter={0}>
+        <Grid justify="space-between" gap={0}>
             {showSideview78 && !isStudent && (
                 <GridCol
                     span={{

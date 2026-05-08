@@ -16,7 +16,7 @@ function CheckableHeadingInner({ children, title, id, titleOrder = 1 }: Checkabl
     const router = useRouter();
     const searchParams = useSearchParams();
     const CheckboxIcon: CheckboxProps["icon"] = ({ indeterminate, ...others }) => (indeterminate ? <IconDotsDiagonal2 {...others} /> : <IconDotsDiagonal2 {...others} />);
-    
+
     // Die Überschrift wird zum Link hinzugefügt
     const uniqueId = id || `${title?.toString().replace(/\s+/g, "-").toLowerCase()}`;
 
@@ -28,8 +28,8 @@ function CheckableHeadingInner({ children, title, id, titleOrder = 1 }: Checkabl
         const urlValue = searchParams.get(uniqueId);
         setChecked(urlValue === "true");
     }, [uniqueId, searchParams]);
-    
-    const isStudent = searchParams.get("students") === "true"
+
+    const isStudent = searchParams.get("students") === "true";
 
     // Hide component if students=true and this item is checked
     if (isStudent && checked) {
@@ -63,7 +63,7 @@ function CheckableHeadingInner({ children, title, id, titleOrder = 1 }: Checkabl
                     gap: "8px",
                 }}
             >
-                {!isStudent && <Checkbox checked={checked} onChange={(event) => handleChange(event.currentTarget.checked)} size="md" color="red" variant="outline" icon={CheckboxIcon}/>}
+                {!isStudent && <Checkbox checked={checked} onChange={(event) => handleChange(event.currentTarget.checked)} size="md" color="red" variant="outline" icon={CheckboxIcon} />}
                 <Title
                     order={titleOrder}
                     style={{
@@ -74,7 +74,7 @@ function CheckableHeadingInner({ children, title, id, titleOrder = 1 }: Checkabl
                     {title}
                 </Title>
             </div>
-            <Collapse in={!checked}>
+            <Collapse expanded={!checked}>
                 <Text component="div">{children}</Text>
             </Collapse>
         </Stack>

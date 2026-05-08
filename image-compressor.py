@@ -1,5 +1,6 @@
 from PIL import Image
 import os
+import json
 
 
 def get_size_format(b, factor=1024, suffix="B"):
@@ -85,5 +86,26 @@ def get_uncompressed_photos(
     return photos
 
 
+MTIME_CACHE = ".image-compressor-mtimes.json"
+
+
+def load_mtime_cache() -> dict[str, float]:
+    if os.path.isfile(MTIME_CACHE):
+        with open(MTIME_CACHE, "r") as fh:
+            return json.load(fh)
+    return {}
+
+
+def save_mtime_cache(cache: dict[str, float]) -> None:
+    with open(MTIME_CACHE, "w") as fh:
+        json.dump(cache, fh, indent=2)
+
+
+cache = load_mtime_cache()
 for f in get_uncompressed_photos("public"):
-    compress_img(f, width=1400)
+    key = f.replace(os.sep, "/")
+    mtime = os.path.getmtime(f)
+    if key not in cache or mtime > cache[key]:
+        compress_img(f, width=1400)
+        cache[key] = mtime
+save_mtime_cache(cache)

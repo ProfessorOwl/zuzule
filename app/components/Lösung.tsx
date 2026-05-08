@@ -6,7 +6,7 @@ interface LösungProps {
     id?: string;
     titleOrder?: 1 | 2 | 3 | 4 | 5 | 6;
 }
-export function Lösung({ children, title, id, titleOrder }: LösungProps) {
+export function Lösung({ children, title = "Lösung", id, titleOrder }: LösungProps) {
     const spoiler = (
         <Spoiler maxHeight={0} showLabel="Lösung anzeigen" hideLabel="Lösung verbergen">
             {children}

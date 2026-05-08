@@ -10,6 +10,7 @@ import thinsp from "@/components/thinsp";
 import Image from "@/components/Image";
 import { Fragment } from "react/jsx-runtime";
 import { Metadata } from "next";
+import { Hinweis } from "@/components/Hinweis";
 
 export const metadata: Metadata = {
     title: "Pyramiden – zuzule",
@@ -24,31 +25,24 @@ export default function Pyramiden() {
                     <Image src="/Pyramiden/pyramidemaya.webp" h={250} width={6000} height={3927} alt="Eine Pyramide der Maya" flex={"1 1 300px"} />
                 </Flex>
                 <CheckableHeading title="Definition" titleOrder={2}>
-                    Eine Pyramide hat eine eckige Grundfläche, z.B. ein Dreieck oder ein Quadrat. Allgemein nennt man eckige Flächen auch <b>n-Ecke</b>. Den Mittelpunkt dieser Fläche ziehen wir nach oben, sodass wir die Pyramidenspitze bekommen. Verbinden wir nun alle Eckpunkte unserer Grundfläche mit der Spitze, so erhalten wir eine <b>gerade Pyramide</b>!
+                    Eine Pyramide hat eine eckige Grundfläche, z.{thinsp}B. ein Dreieck oder ein Quadrat. Allgemein nennt man eckige Flächen auch <b>n-Ecke</b>. Den Mittelpunkt dieser Fläche ziehen wir nach oben, sodass wir die Pyramidenspitze bekommen. Verbinden wir nun alle Eckpunkte unserer Grundfläche mit der Spitze, so erhalten wir eine <b>gerade Pyramide</b>!
                 </CheckableHeading>
                 <CheckableBlockquote icon="frage" title="Aufgabe: Alles Pyramiden?">
-                    Welche der folgenden Abbildungen sind Pyramiden und welche nicht? Wenn ja, gib die Maße und Form der Grundfläche sowie die Höhe in cm an (2 Kästchen = 1{thinsp}
-                    cm).
+                    Welche der folgenden Abbildungen sind Pyramiden und welche nicht? Wenn ja, gib die Maße und Form der Grundfläche sowie die Höhe in cm an (<InlineMath math="2" /> Kästchen = <InlineMath math="1\,\text{cm}" />
+                    ).
                     <Image src="/Pyramiden/IstPyramide.webp" width={1000} height={1000} alt="Eine Pyramide der Maya" h={500} />
                     <Lösung title="Lösung" id="Lösung-AllesPyramide" titleOrder={3}>
                         <List type="ordered">
                             <ListItem>
-                                Ja, eine sechseckige, gerade Pyramide. Durchmesser = 3{thinsp}
-                                cm, Höhe = 3{thinsp}
-                                cm.
+                                Ja, eine sechseckige, gerade Pyramide. Durchmesser = <InlineMath math="3\,\text{cm}" />, Höhe = <InlineMath math="3\,\text{cm}" />.
                             </ListItem>
                             <ListItem>Nein, es hat eine runde Grundfläche, daher ist es ein Zylinder.</ListItem>
                             <ListItem>
-                                Ja, eine quadratische, gerade Pyramide. Kantenlänge = 2{thinsp}
-                                cm, Höhe = 2,5
-                                {thinsp}
-                                cm.{" "}
+                                Ja, eine quadratische, gerade Pyramide. Kantenlänge = <InlineMath math="2\,\text{cm}" />, Höhe = <InlineMath math="2{,}5\,\text{cm}" />.
                             </ListItem>
                             <ListItem>Nein, das ist keine normale geometrische Form.</ListItem>
                             <ListItem>
-                                Ja, das ist eine rechteckige, schiefe Pyramide. Kantenlängen = 2 und 3{thinsp}
-                                cm, Höhe = 4{thinsp}
-                                cm{" "}
+                                Ja, das ist eine rechteckige, schiefe Pyramide. Kantenlängen = <InlineMath math="2" /> und <InlineMath math="3\,\text{cm}" />, Höhe = <InlineMath math="4\,\text{cm}" />
                             </ListItem>
                         </List>
                     </Lösung>
@@ -57,22 +51,19 @@ export default function Pyramiden() {
             <CheckableHeading title="Volumenberechnung">
                 Das Volumen von einer quadratischen Pyramide lässt sich sowohl experimentell als auch mathematisch gut herleiten. Fangen wir erstmal experimentell an!
                 <CheckableHeading titleOrder={2} title="Experimentell">
-                    Für das Experiment falten wir eine quadratische Pyramide und füllen sie mit Zucker. Dadurch können wir wiegen, wie viel Zucker sie enthält. Ihre Höhe soll dabei ihrer Kantenlänge entsprechen. Dafür müssen wir zuerst das Netz aufzeichnen. Als Seitenlänge wählen wir z.B. 5{thinsp}
+                    Für das Experiment falten wir eine quadratische Pyramide und füllen sie mit Zucker. Dadurch können wir wiegen, wie viel Zucker sie enthält. Ihre Höhe soll dabei ihrer Kantenlänge entsprechen. Dafür müssen wir zuerst das Netz aufzeichnen. Als Seitenlänge wählen wir z.{thinsp}B. 5{thinsp}
                     cm.
                     <Image src="/Pyramiden/VolumenPyramide/PyramideNetz.webp" width={1200} height={600} alt="Das Netz einer Pyramide auf einem Din A4 Blatt" />
                     Das Netz einer quadratischen Pyramide sieht aus wie ein Quadrat mit einem Dreieck auf jeder Seite. Die Höhe der Dreiecke ist nicht gleich der Höhe der Pyramide! Überlege dir, wie man sie berechnen kann!
                     <CheckableBlockquote title="Höhe der Dreieckswände" titleOrder={3} icon="aha">
-                        <Lösung>
-                            Du kannst den Satz des Pythagoras verwenden, um die Pyramidenhöhe zu bestimmen. In dem Beispiel hier ist es eine quadratische Pyramide mit Seitenlänge 3 und Höhe 3. Wenn du die <Mark c={"desblue"}>Höhe</Mark> in einer der Wände einzeichnest, siehst du, dass sie zusammen mit der <Mark c={"teal"}>Pyramidenhöhe</Mark> und der <Mark c={"desred"}>halben Seitenlänge</Mark> ein rechtwinkliges Dreieck bildet. Wir können also den <b>Satz des Pythagoras</b> verwenden, um die Länge von{" "}
-                            <Mark c={"desblue"}>
+                        <Lösung titleOrder={4} id="lösung-höhedreieckswände">
+                            Du kannst den Satz des Pythagoras verwenden, um die Pyramidenhöhe zu bestimmen. In dem Beispiel hier ist es eine quadratische Pyramide mit Seitenlänge <InlineMath math="3" /> und Höhe <InlineMath math="3" />. Wenn du die <Mark c={"desblue.9"}>Höhe</Mark> in einer der Wände einzeichnest, siehst du, dass sie zusammen mit der <Mark c={"teal.9"}>Pyramidenhöhe</Mark> und der <Mark c={"desred.9"}>halben Seitenlänge</Mark> ein rechtwinkliges Dreieck bildet. Wir können also den <b>Satz des Pythagoras</b> verwenden, um die Länge von{" "}
+                            <Mark c={"desblue.9"}>
                                 h<sub>Dreieck</sub>
                             </Mark>{" "}
                             zu berechnen.
-                            <MBlockMath desktop="\textcolor{#3312B8}{h_\text{Dreieck}} = \sqrt{1{,}5^2 + 3^2} = \sqrt{11{,}25} \approx 3,35" mobile="\textcolor{#3312B8}{h_\text{Dreieck}} &= \sqrt{1{,}5^2 + 3^2} \\ &= \sqrt{11{,}25} \\ &\approx 3,35" />
-                            Damit unsere Pyramide also eine Höhe von 3{thinsp}
-                            cm hat, muss die Höhe einer Dreieckswand ca. 3,35
-                            {thinsp}
-                            cm betragen.
+                            <MBlockMath desktop="\textcolor{#3012B8}{h_\text{Dreieck}} = \sqrt{\textcolor{#B81E46}{1{,}5}^2 + \textcolor{#0D8762}{3}^2} = \sqrt{11{,}25} \approx 3,35" mobile="\textcolor{#3012B8}{h_\text{Dreieck}} &= \sqrt{1{,}5^2 + 3^2} \\ &= \sqrt{11{,}25} \\ &\approx 3,35" />
+                            Damit unsere Pyramide also eine Höhe von <InlineMath math="3\,\text{cm}" /> hat, muss die Höhe einer Dreieckswand ca. <InlineMath math="3{,}35\,\text{cm}" /> betragen.
                             <Image src="/Pyramiden/VolumenPyramide/PyramideHöhe.webp" width={6000} height={4000} alt="Das Netz einer Pyramide auf einem Din A4 Blatt" />
                         </Lösung>
                         <Space my="xs" />
@@ -85,32 +76,27 @@ export default function Pyramiden() {
                             Die Pyramide klebst du vorsichtig mit Klebeband zusammen, sodass alle Kanten dicht sind!
                         </ImageCaption>
                         <ImageCaption h={250} src="/Pyramiden/VolumenPyramide/PyramideWaageZubehör.webp" width={6000} height={4000} alt="Die Pyramide kopfüber in einem Glas auf einer Waage. Daneben ein Papiertrichter und ein Glas mit Zucker" flex={1}>
-                            Die Pyramide stellst du nun kopfüber in einem Glas auf eine Waage und tarierst sie auf 0{thinsp}
-                            g. Zum Einfüllen ist ein Trichter praktisch – wenn du keinen hast, kannst du dir einen aus Papier rollen.
+                            Die Pyramide stellst du nun kopfüber in einem Glas auf eine Waage und tarierst sie auf <InlineMath math="0\,\text{g}" />. Zum Einfüllen ist ein Trichter praktisch – wenn du keinen hast, kannst du dir einen aus Papier rollen.
                         </ImageCaption>
                         <ImageCaption h={250} src="/Pyramiden/VolumenPyramide/PyramideWaageVoll.webp" width={6000} height={4000} alt="Die nun gefüllte Pyramide im Glas auf der Waage. Die Waage zeigt 43 Gram an" flex={1}>
-                            Die Waage zeigt an, dass unsere Pyramide ca. 45
-                            {thinsp}g Zucker enthält.
+                            Die Waage zeigt an, dass unsere Pyramide ca. <InlineMath math="45\,\text{g}" /> Zucker enthält.
                         </ImageCaption>
                     </Flex>
                     Um nun von dem Gewicht auf das Volumen zu kommen, benötigen wir die Dichte des Zuckers. Für Glukose, also Haushaltszucker, beträgt sie <InlineMath math="1{,}56\,\tfrac{\text{g}}{\text{mL}}" />. Probiere selber, daraus das Volumen zu bekommen!
-                    <Lösung title="Lösung: Volumen übers Gewicht" titleOrder={3}>
+                    <Lösung title="Lösung: Volumen übers Gewicht" titleOrder={3} id="">
                         Die Dichte hat als Einheit <InlineMath math="\frac{\text{Gewicht}}{\text{Volumen}}" />, bzw. mathematisch: <InlineMath math="\rho = \frac{m}{V}" />, wobei <InlineMath math="\rho" /> die Dichte ist, <InlineMath math="m" /> die Masse und <InlineMath math="V" /> das Volumen. Wir kennen Dichte und Masse, also stellen wir nach <InlineMath math="V" /> um:
                         <MBlockMath mobile="\rho &= \frac{m}{V} \\ &\Downarrow \scriptsize{\cdot V} \\ \rho \cdot V &= m \\ &\Downarrow \scriptsize{: \rho} \\ V &= \frac{m}{\rho}" desktop="\rho &= \frac{m}{V} &&\lvert \cdot V \\ \rho \cdot V &= m &&\lvert \: \rho \\ V &= \frac{m}{\rho}" />
                         Setzen wir die Dichte von <InlineMath math="1{,}56\,\tfrac{\text{g}}{\text{mL}}" /> und die Masse von <InlineMath math="43\,\text{g}" /> ein, so erhalten wir:
                         <MBlockMath desktop="V = \frac{m}{\rho} = \frac{43\,\text{g}}{1{,}56\,\tfrac{\text{g}}{\text{mL}}} \approx 27,56\,\text{mL}" mobile="V &= \frac{m}{\rho} \\ &= \frac{43\,\text{g}}{1{,}56\,\tfrac{\text{g}}{\text{mL}}} \\ &\approx 27,56\,\text{mL}" />
                     </Lösung>
                 </CheckableHeading>
-                <CheckableBlockquote icon="aha" title="Volumenformel experimentell">
+                <CheckableBlockquote icon="aha" title="Aha! Volumenformel experimentell" titleOrder={3}>
                     Mit dem experimentell berechneten Volumen können wir eine Formel für Pyramiden aufstellen, sodass wir ohne Zuckerfüllung das Volumen berechnen können. Vergleichen wir sie dazu mit einem Würfel, der die Pyramide genau umschließt. Seine Seitenlängen entsprechen also der Höhe der Pyramide.
                     <Image h={375} src="/Pyramiden/VolumenPyramide/PyramideWürfel.webp" width={750} height={900} alt="Eine Pyramide in einem Quader" />
-                    Nehmen wir die Seitenlänge der Pyramide, die wir gebastelt haben, also 5{thinsp}
-                    cm. Dann hat der Würfel ein Volumen von <InlineMath math="a^3 = 5\,\text{cm}\cdot 5\,\text{cm}\cdot 5\,\text{cm} = 125\,\text{cm}^3" />. Für unsere Pyramide bekamen wir experimentell ein Volumen von 27,57
-                    {thinsp}
-                    mL. Setzen wir das ins Verhältnis mit dem Würfel, so bekommen wir:
+                    Nehmen wir die Seitenlänge der Pyramide, die wir gebastelt haben, also <InlineMath math="5\,\text{cm}" />. Dann hat der Würfel ein Volumen von <InlineMath math="a^3 = 5\,\text{cm}\cdot 5\,\text{cm}\cdot 5\,\text{cm} = 125\,\text{cm}^3" />. Für unsere Pyramide bekamen wir experimentell ein Volumen von <InlineMath math="27{,}57\,\text{mL}" />. Setzen wir das ins Verhältnis mit dem Würfel, so bekommen wir:
                     <MBlockMath desktop="\text{Anteil Pyramide} = \frac{27{,}57\,\text{cm}^3}{125\,\text{cm}^3} \approx 0,22 \approx \frac{1}{5}" mobile="\text{Anteil Pyramide} &= \frac{27{,}57\,\text{cm}^3}{125\,\text{cm}^3} \\ &\approx 0,22 \\ &\approx \frac{1}{5}" />
                     Wenn wir einen Quader mit der Formel <InlineMath math="V_\text{Quader} = G \cdot h" /> berechnen, so nimmt eine Pyramide laut unserem Experiment nur ein Fünftel des Volumens ein, also:
-                    <BlockMath math="V_\text{Pyramide} = \frac{1}{5}G\cdot h" />
+                    <BlockMath math="V_\text{Pyramide} = \frac{1}{5}G\cdot \textcolor{#0D8762}{h}" />
                     Aber stimmt das auch mit der theoretischen Herleitung überein? Mit ihr bekommen wir ein eindeutiges Ergebnis!
                 </CheckableBlockquote>
                 <CheckableHeading title="Theoretisch" titleOrder={2}>
@@ -125,7 +111,7 @@ export default function Pyramiden() {
                     <BlockMath math="V_\text{Quader} = 6 \cdot V_\text{Pyramide}" />
                     Kannst du daraus selber eine Formel für das Pyramidenvolumen herleiten? Denke dran: Der Quader ist doppelt so hoch wie eine der Pyramiden!
                     <CheckableBlockquote title="Herleitung" titleOrder={3} icon="frage">
-                        <Lösung>
+                        <Lösung titleOrder={3} id="lösung-theoretisch">
                             Wir können also über die Volumenformel für einen Quader auf das Volumen einer Pyramide schließen! Für einen Quader gilt:
                             <BlockMath math="V_\text{Quader} = G \cdot h_\text{Quader}" />
                             mit der Grundfläche <InlineMath math="G" /> und der Höhe <InlineMath math="h_\text{Quader}" />
@@ -139,41 +125,51 @@ export default function Pyramiden() {
                 <CheckableBlockquote title="Aufgabe: Pyramidenrätsel" icon="frage">
                     Es sind mehrere Pyramiden gegeben. Bestimme den Wert der Unbekannten!
                     <Image h={500} src="/Pyramiden/Pyramidenrätsel.webp" width={1400} height={1000} alt="Mehrere Pyramiden als Aufgabenstellungen" />
+                    <Hinweis title="Hinweis zu 3)" titleOrder={3} id="hinweis-pyramidenrätsel-3">
+                        Stelle zuerst die Volumenformel nach der Grundfläche um, um dafür einen Wert zu bekommen. Daraufhin kannst du die Flächenformel eines Dreiecks (<InlineMath math="G= \frac{1}{2}gh" />) und den Satz des Pythagoras verwenden, um nach{" "}
+                        <Mark c={"teal.9"}>
+                            <InlineMath>x</InlineMath>
+                        </Mark>{" "}
+                        umzustellen.
+                    </Hinweis>
+                    <Hinweis title="Hinweis zu 4)" titleOrder={3} id="hinweis-pyramidenrätsel-4">
+                        Benutze wieder die Volumenformel und stelle die Formel für die Grundfläche <InlineMath>G</InlineMath> mithilfe von <InlineMath math="\frac{1}{2}x" /> auf. Letztere kannst du nun vorne einsetzen!
+                    </Hinweis>
                     <Lösung title="Lösung" id="Lösung-Pyramidenrätsel" titleOrder={3}>
                         <List type="ordered">
                             <ListItem>
                                 Nach Höhe umstellen und einsetzen:
-                                <MBlockMath desktop="V &= \frac{1}{3}Gh &&\lvert \cdot \frac{3}{G} \\ \frac{3V}{G} &= h \\ \Rightarrow h &= \frac{3 \cdot 32}{4 \cdot 4} = \frac{96}{16} = 6" mobile="V &= \frac{1}{3}Gh \\ &\Downarrow \scriptsize{\cdot \frac{3}{G}} \\ \frac{3V}{G} &= h \\ \Rightarrow h &= \frac{3 \cdot 32}{4 \cdot 4} = \frac{96}{16} = 6" />
+                                <MBlockMath desktop="V &= \frac{1}{3}G\textcolor{#0D8762}{h} &&\lvert \cdot \frac{3}{G} \\ \frac{3V}{G} &= \textcolor{#0D8762}{h} \\ \Rightarrow \textcolor{#0D8762}{h} &= \frac{3 \cdot 32}{4 \cdot 4} = \frac{96}{16} = 6" mobile="V &= \frac{1}{3}G\textcolor{#0D8762}{h} \\ &\Downarrow \scriptsize{\cdot \frac{3}{G}} \\ \frac{3V}{G} &= \textcolor{#0D8762}{h} \\ \Rightarrow \textcolor{#0D8762}{h} &= \frac{3 \cdot 32}{4 \cdot 4} = \frac{96}{16} = 6" />
                             </ListItem>
                             <ListItem>
                                 Nach Grundfläche umstellen und einsetzen:
-                                <MBlockMath desktop="V &= \frac{1}{3}Gh &&\lvert \cdot \frac{3}{h} \\ \frac{3V}{h} &= G \\ &\Rightarrow G = \frac{3 \cdot 18}{9} = \frac{54}{9} = 6" mobile="V &= \frac{1}{3}Gh \\ &\Downarrow \scriptsize{\cdot \frac{3}{h}} \\ \frac{3V}{h} &= G \\ &\Rightarrow G = \frac{3 \cdot 18}{9} = \frac{54}{9} = 6" />
+                                <MBlockMath desktop="V &= \frac{1}{3}\textcolor{#0D8762}{G}\textcolor{#B81E46}{g} &&\lvert \cdot \frac{3}{\textcolor{#B81E46}{h}} \\ \frac{3V}{\textcolor{#B81E46}{h}} &= \textcolor{#0D8762}{G} \\ &\Rightarrow \textcolor{#0D8762}{G} = \frac{3 \cdot 18}{\textcolor{#B81E46}{9}} = \frac{54}{\textcolor{#B81E46}{9}} = 6" mobile="V &= \frac{1}{3}\textcolor{#0D8762}{G}\textcolor{#B81E46}{h} \\ &\Downarrow \scriptsize{\cdot \frac{3}{\textcolor{#B81E46}{h}}} \\ \frac{3V}{\textcolor{#B81E46}{h}} &= \textcolor{#0D8762}{G} \\ &\Rightarrow \textcolor{#0D8762}{G} = \frac{3 \cdot 18}{\textcolor{#B81E46}{9}} = \frac{54}{\textcolor{#B81E46}{9}} = 6" />
                             </ListItem>
                             <ListItem>
                                 Zuerst nach Grundfläche umstellen:
-                                <MBlockMath mobile="V &= \frac{1}{3}Gh \\ &\Downarrow \scriptsize{\cdot \frac{3}{h}} \\ G &= \frac{3V}{h}\\ &\Rightarrow G = \frac{3\cdot 18\sqrt{3}}{6} = 9\sqrt{3}" desktop="V &= \frac{1}{3}Gh &&\lvert \cdot \frac{3}{h} \\ G &= \frac{3V}{h}\\ &\Rightarrow G = \frac{3\cdot 18\sqrt{3}}{6} = 9\sqrt{3}" />
-                                Formel für Dreiecksgrundfläche: <InlineMath math="G = \frac{1}{2}xh_\triangle" />
+                                <MBlockMath mobile="V &= \frac{1}{3}G\textcolor{#B81E46}{h} \\ &\Downarrow \scriptsize{\cdot \frac{3}{\textcolor{#B81E46}{h}}} \\ G &= \frac{3V}{\textcolor{#B81E46}{h}}\\ &\Rightarrow G = \frac{3\cdot 18\sqrt{3}}{\textcolor{#B81E46}{6}} = 9\sqrt{3}" desktop="V &= \frac{1}{3}G\textcolor{#B81E46}{h} &&\lvert \cdot \frac{3}{\textcolor{#B81E46}{h}} \\ G &= \frac{3V}{\textcolor{#B81E46}{h}}\\ &\Rightarrow G = \frac{3\cdot 18\sqrt{3}}{\textcolor{#B81E46}{6}} = 9\sqrt{3}" />
+                                Formel für Dreiecksgrundfläche: <InlineMath math="G = \frac{1}{2}\textcolor{#0D8762}{x}h_\triangle" />
                                 . Da es ein gleichseitiges Dreieck ist, gilt mit dem Satz des Pythagoras:
-                                <MBlockMath mobile="x^2 &= h_\triangle^2 + \left(\frac{1}{2}x^2\right)^2 \\ &\Downarrow \scriptsize{-\left(\frac{1}{2}x^2\right)^2} \\ x^2 - \left(\frac{1}{2}x^2\right)^2 &= h_\triangle^2 \\ &\Downarrow \scriptsize{\sqrt{}} \\ h_\triangle &= \sqrt{x^2 - \left(\frac{1}{2}x^2\right)^2} \\ &= \sqrt{x^2 - \frac{1}{4}x^2} \\ &= \sqrt{\frac{3}{4}x^2} \\ &= \frac{\sqrt{3}}{2}x" desktop="x^2 &= h_\triangle^2 + \left(\frac{1}{2}x^2\right)^2 &&\lvert -\left(\frac{1}{2}x^2\right)^2\\ x^2 - \left(\frac{1}{2}x^2\right)^2 &= h_\triangle^2 &&\lvert \sqrt{}\\ h_\triangle &= \sqrt{x^2 - \left(\frac{1}{2}x^2\right)^2} \\ &= \sqrt{x^2 - \frac{1}{4}x^2} \\ &= \sqrt{\frac{3}{4}x^2} \\ &= \frac{\sqrt{3}}{2}x" />
+                                <MBlockMath mobile="\textcolor{#0D8762}{x}^2 &= h_\triangle^2 + \left(\frac{1}{2}\textcolor{#0D8762}{x}^2\right)^2 \\ &\Downarrow \scriptsize{-\left(\frac{1}{2}\textcolor{#0D8762}{x}^2\right)^2} \\ \textcolor{#0D8762}{x}^2 - \left(\frac{1}{2}\textcolor{#0D8762}{x}^2\right)^2 &= h_\triangle^2 \\ &\Downarrow \scriptsize{\sqrt{}} \\ h_\triangle &= \sqrt{\textcolor{#0D8762}{x}^2 - \left(\frac{1}{2}\textcolor{#0D8762}{x}^2\right)^2} \\ &= \sqrt{\textcolor{#0D8762}{x}^2 - \frac{1}{4}\textcolor{#0D8762}{x}^2} \\ &= \sqrt{\frac{3}{4}\textcolor{#0D8762}{x}^2} \\ &= \frac{\sqrt{3}}{2}\textcolor{#0D8762}{x}" desktop="\textcolor{#0D8762}{x}^2 &= h_\triangle^2 + \left(\frac{1}{2}\textcolor{#0D8762}{x}^2\right)^2 &&\lvert -\left(\frac{1}{2}\textcolor{#0D8762}{x}^2\right)^2\\ \textcolor{#0D8762}{x}^2 - \left(\frac{1}{2}\textcolor{#0D8762}{x}^2\right)^2 &= h_\triangle^2 &&\lvert \sqrt{}\\ h_\triangle &= \sqrt{\textcolor{#0D8762}{x}^2 - \left(\frac{1}{2}\textcolor{#0D8762}{x}^2\right)^2} \\ &= \sqrt{\textcolor{#0D8762}{x}^2 - \frac{1}{4}\textcolor{#0D8762}{x}^2} \\ &= \sqrt{\frac{3}{4}\textcolor{#0D8762}{x}^2} \\ &= \frac{\sqrt{3}}{2}\textcolor{#0D8762}{x}" />
                                 Das können wir in die Formel für die Dreiecksfläche einsetzen und bekommen:
-                                <MBlockMath mobile="G &= \frac{1}{2}xh_\triangle \\ &= \frac{1}{2}x\cdot \frac{\sqrt{3}}{2}x \\ &= \frac{\sqrt{3}}{4}x^2 \\ &\Downarrow \scriptsize{\cdot \frac{4}{\sqrt{3}}} \\ \frac{4}{\sqrt{3}}G &= x^2 \\ &\Downarrow \scriptsize{\sqrt{}} \\ x &= \sqrt{\frac{4}{\sqrt{3}}G}" desktop="G &= \frac{1}{2}xh_\triangle \\ &= \frac{1}{2}x\cdot \frac{\sqrt{3}}{2}x \\ &= \frac{\sqrt{3}}{4}x^2 &&\lvert \cdot \frac{4}{\sqrt{3}} \\ \frac{4}{\sqrt{3}}G &= x^2 &&\lvert \sqrt{} \\ x &= \sqrt{\frac{4}{\sqrt{3}}G}" />
-                                Jetzt das Ergebnis für <InlineMath math="G" /> einsetzen, dann bekommen wir <InlineMath math="x" /> heraus:
-                                <BlockMath math="x &= \sqrt{\frac{4}{\sqrt{3}}G} \\ &= \sqrt{\frac{4}{\sqrt{3}}\cdot9\sqrt{3}} \\ &= \sqrt{4 \cdot 9} \\ &= 6" />{" "}
+                                <MBlockMath mobile="G &= \frac{1}{2}\textcolor{#0D8762}{x}h_\triangle \\ &= \frac{1}{2}\textcolor{#0D8762}{x}\cdot \frac{\sqrt{3}}{2}\textcolor{#0D8762}{x} \\ &= \frac{\sqrt{3}}{4}\textcolor{#0D8762}{x}^2 \\ &\Downarrow \scriptsize{\cdot \frac{4}{\sqrt{3}}} \\ \frac{4}{\sqrt{3}}G &= \textcolor{#0D8762}{x}^2 \\ &\Downarrow \scriptsize{\sqrt{}} \\ \textcolor{#0D8762}{x} &= \sqrt{\frac{4}{\sqrt{3}}G}" desktop="G &= \frac{1}{2}\textcolor{#0D8762}{x}h_\triangle \\ &= \frac{1}{2}\textcolor{#0D8762}{x}\cdot \frac{\sqrt{3}}{2}\textcolor{#0D8762}{x} \\ &= \frac{\sqrt{3}}{4}\textcolor{#0D8762}{x}^2 &&\lvert \cdot \frac{4}{\sqrt{3}} \\ \frac{4}{\sqrt{3}}G &= \textcolor{#0D8762}{x}^2 &&\lvert \sqrt{} \\ \textcolor{#0D8762}{x} &= \sqrt{\frac{4}{\sqrt{3}}G}" />
+                                Jetzt das Ergebnis für <InlineMath math="G" /> einsetzen, dann bekommen wir <InlineMath math="\textcolor{#0D8762}{x}" /> heraus:
+                                <BlockMath math="\textcolor{#0D8762}{x} &= \sqrt{\frac{4}{\sqrt{3}}G} \\ &= \sqrt{\frac{4}{\sqrt{3}}\cdot9\sqrt{3}} \\ &= \sqrt{4 \cdot 9} \\ &= 6" />
                             </ListItem>
 
                             <ListItem>
-                                Wieder erst nach Grundfläche umstellen, x als unbekannte Höhe bleibt vorhanden:
-                                <BlockMath math="V &= \frac{1}{3}Gx" />
-                                Die rechteckige Grundfläche berechnet sich nach <InlineMath math="G = 6 \cdot \frac{1}{2}x = 3x" />
+                                Benutze wieder die Volumenformel, <Mark c={"teal.9"}>x</Mark> als unbekannte Höhe bleibt vorhanden:
+                                <BlockMath math="V &= \frac{1}{3}G\textcolor{#0D8762}{x}" />
+                                Die rechteckige Grundfläche berechnet sich nach <InlineMath math="G = 6 \cdot \frac{1}{2}\textcolor{#0D8762}{x} = 3\textcolor{#0D8762}{x}" />
                                 , das wir einsetzen können:
-                                <MBlockMath mobile="V &= \frac{1}{3}Gx \\ &= \frac{1}{3}\cdot 3x \cdot x \\ &= x^2 \\ &\Downarrow \scriptsize{\sqrt{}} \\ x &= \sqrt{V} \\ &\Rightarrow x = \sqrt{25} = 5" desktop="V &= \frac{1}{3}Gx \\ &= \frac{1}{3}\cdot 3x \cdot x \\ &= x^2 &&\lvert \sqrt{} \\ x &= \sqrt{V} \\ &\Rightarrow x = \sqrt{25} = 5" />
+                                <MBlockMath mobile="V &= \frac{1}{3}G\textcolor{#0D8762}{x} \\ &= \frac{1}{3}\cdot 3\textcolor{#0D8762}{x} \cdot \textcolor{#0D8762}{x} \\ &= \textcolor{#0D8762}{x}^2 \\ &\Downarrow \scriptsize{\sqrt{}} \\ \textcolor{#0D8762}{x} &= \sqrt{V} \\ &\Rightarrow \textcolor{#0D8762}{x} = \sqrt{25} = 5" desktop="V &= \frac{1}{3}G\textcolor{#0D8762}{x} \\ &= \frac{1}{3}\cdot 3\textcolor{#0D8762}{x} \cdot \textcolor{#0D8762}{x} \\ &= \textcolor{#0D8762}{x}^2 &&\lvert \sqrt{} \\ \textcolor{#0D8762}{x} &= \sqrt{V} \\ &\Rightarrow \textcolor{#0D8762}{x} = \sqrt{25} = 5" />
                             </ListItem>
                         </List>
                     </Lösung>
                 </CheckableBlockquote>
             </CheckableHeading>
             <CheckableHeading title="Oberflächeninhalt">
-                Neben dem Volumen ist auch die Oberfläche von Pyramiden wichtig, z.B. um die Menge an Ziegeln für ein Dach zu berechnen. Hier gibt es jedoch keine allgemeine Formel, denn die Oberfläche ist abhängig von der Anzahl der Seiten.
+                Neben dem Volumen ist auch die Oberfläche von Pyramiden wichtig, z.{thinsp}B. um die Menge an Ziegeln für ein Dach zu berechnen. Hier gibt es jedoch keine allgemeine Formel, denn die Oberfläche ist abhängig von der Anzahl der Seiten.
                 <Divider />
                 Vergleichen wir mal die Netze von einer dreieckigen und einer quadratischen Pyramide:
                 <Image h={500} src="/Pyramiden/PyramideOberfläche.webp" width={1400} height={1000} alt="Eine dreieckige und eine viereckige Pyramide mit den dazugehörigen Netzen" />
@@ -181,65 +177,61 @@ export default function Pyramiden() {
                 <b>
                     Mantelfläche <InlineMath math="M" />
                 </b>
-                . Übrig bleibt nur die Grundfläche <InlineMath math="G" />
+                . Übrig bleibt nur die Grundfläche <InlineMath math="\textcolor{#0D8762}{G}" />
                 : Hier also das Dreieck oder das Viereck. Mathematisch können wir das so formulieren:
-                <BlockMath math="O = G + M" />
+                <BlockMath math="O = \textcolor{#0D8762}{G} + M" />
                 Für die dreieckige Pyramide gilt:
-                <BlockMath math="O = G + 3 \cdot A_\text{Dreieck}" />
+                <BlockMath math="O = \textcolor{#0D8762}{G} + 3 \cdot A_\text{Dreieck}" />
                 oder für die viereckige:
-                <BlockMath math="O = G + 4 \cdot A_\text{Dreieck}" />
+                <BlockMath math="O = \textcolor{#0D8762}{G} + 4 \cdot A_\text{Dreieck}" />
                 Die Höhe der Dreiecke kannst du meistens mit dem Satz des Pythagoras berechnen. Schau dir den Infokasten an, wenn du hier Hilfe brauchst oder gehe direkt zu den Aufgaben!
                 <CheckableBlockquote title="Wdh: Höhe der Dreieckswände" titleOrder={2} icon="aha">
-                    <Lösung>
-                        Du kannst den Satz des Pythagoras verwenden, um die Pyramidenhöhe zu bestimmen. In dem Beispiel hier ist es eine quadratische Pyramide mit Seitenlänge 3 und Höhe 3. Wenn du die <Mark c={"desblue"}>Höhe</Mark> in einer der Wände einzeichnest, siehst du, dass sie zusammen mit der <Mark c={"green"}>Pyramidenhöhe</Mark> und der <Mark c={"desred"}>halben Seitenlänge</Mark> ein rechtwinkliges Dreieck bildet. Wir können also den <b>Satz des Pythagoras</b> verwenden, um die Länge von{" "}
-                        <Mark c={"desblue"}>
+                    <Lösung titleOrder={3} id="lösung-dreieckswände">
+                        Du kannst den Satz des Pythagoras verwenden, um die Pyramidenhöhe zu bestimmen. In dem Beispiel hier ist es eine quadratische Pyramide mit Seitenlänge <InlineMath math="3" /> und Höhe <InlineMath math="3" />. Wenn du die <Mark c={"desblue.9"}>Höhe</Mark> in einer der Wände einzeichnest, siehst du, dass sie zusammen mit der <Mark c={"teal.9"}>Pyramidenhöhe</Mark> und der <Mark c={"desred.9"}>halben Seitenlänge</Mark> ein rechtwinkliges Dreieck bildet. Wir können also den <b>Satz des Pythagoras</b> verwenden, um die Länge von{" "}
+                        <Mark c={"desblue.9"}>
                             h<sub>Dreieck</sub>
                         </Mark>{" "}
                         zu berechnen.
-                        <MBlockMath desktop="\textcolor{#3312B8}{h_\text{Dreieck}} = \sqrt{1{,}5^2 + 3^2} = \sqrt{11{,}25} \approx 3,35" mobile="\textcolor{#3312B8}{h_\text{Dreieck}} &= \sqrt{1{,}5^2 + 3^2} \\ &= \sqrt{11{,}25} \\ &\approx 3,35" />
-                        Damit unsere Pyramide also eine Höhe von 3{thinsp}
-                        cm hat, muss die Höhe einer Dreieckswand ca. 3,35
-                        {thinsp}
-                        cm betragen.
+                        <MBlockMath desktop="\textcolor{#3012B8}{h_\text{Dreieck}} = \sqrt{\textcolor{#B81E46}{1{,}5}^2 + \textcolor{#0D8762}{3}^2} = \sqrt{11{,}25} \approx 3,35" mobile="\textcolor{#3012B8}{h_\text{Dreieck}} &= \sqrt{\textcolor{#B81E46}{1{,}5}^2 + \textcolor{#0D8762}{3}^2} \\ &= \sqrt{11{,}25} \\ &\approx 3,35" />
+                        Damit unsere Pyramide also eine Höhe von <InlineMath math="3\,\text{cm}" /> hat, muss die Höhe einer Dreieckswand ca. <InlineMath math="3{,}35\,\text{cm}" /> betragen.
                         <Image src="/Pyramiden/VolumenPyramide/PyramideHöhe.webp" width={6000} height={4000} alt="Das Netz einer Pyramide auf einem Din A4 Blatt" />
                     </Lösung>
                     <Space my="xs" />
                 </CheckableBlockquote>
                 <CheckableBlockquote titleOrder={2} title="Aufgabe: Dachdecken" icon="frage">
-                    Die Dächer eines Schlosses sollen restauriert werden. Pro m<sup>2</sup> benötigt eine Dachdeckerfirma 30 Schieferplatten, die in 6er-Packungen gekauft werden. Eine Packung kostet 30€, zusätzlich wird eine Dachdeckerin oder ein Dachdecker für 50€ pro m<sup>2</sup> bezahlt. Bestimme den Gesamtpreis der Restauration und zeichne eine Skizze der Dächer.
+                    Die Dächer eines Schlosses sollen restauriert werden. Pro m<sup>2</sup> benötigt eine Dachdeckerfirma <InlineMath math="30" /> Schieferplatten, die in 6er-Packungen gekauft werden. Eine Packung kostet <InlineMath math="30€" />, zusätzlich wird eine Dachdeckerin oder ein Dachdecker für <InlineMath math="50€" /> pro m<sup>2</sup> bezahlt. Bestimme den Gesamtpreis der Restauration und zeichne eine Skizze der Dächer.
                     <List>
                         <ListItem>
                             <b>Dach 1</b>
                             <br />
-                            Grundseite: Rechteck 10
-                            {thinsp}m x 10
-                            {thinsp}m / Höhe: 16
-                            {thinsp}m
+                            Grundseite: Quadrat <InlineMath math="10\,\text{m}" /> x <InlineMath math="10\,\text{m}" /> / Höhe: <InlineMath math="16\,\text{m}" />
                         </ListItem>
                         <ListItem>
                             <b>Dächer 2-6</b> <br />
-                            Grundfläche: Achteck mit 19,3
-                            {thinsp}m<sup>2</sup> und einer Kantenlänge von 2{thinsp}m / Höhe: 5{thinsp}m
+                            Grundfläche: Achteck mit <InlineMath math="19{,}3\,\text{m}^2" /> und einer Kantenlänge von <InlineMath math="2\,\text{m}" /> / Höhe: <InlineMath math="5\,\text{m}" />
                         </ListItem>
                     </List>
                     <Image h={500} fit="contain" src="/Pyramiden/SchlossDächer.webp" width={6484} height={4323} alt="Ein Schloss mit vielen pyramidenförmigen Dächern" />
+                    <Hinweis title="Hinweis 1" titleOrder={3} id="hinweis-dachdecken-1">
+                        Du musst den Satz des Pythagoras benutzen, um die Höhe der Manteldreiecke berechnen zu können. Das ist unabhängig davon, ob die Grundfläche ein Viereck oder ein Achteck ist.
+                    </Hinweis>
+                    <Hinweis title="Hinweis 2: Achteck" titleOrder={3} id="hinweis-dachdecken-2">
+                        Um die Höhe der Manteldreiecke bestimmen zu können, brauchst du den Durchmesser des Achtecks. Mache dir eine Skizze vom Achteck und zeichne alle bekannten Maße ein. Kannst du dort eventuell den Satz des Pythagoras benutzen?
+                    </Hinweis>
                     <Lösung title="Lösung" titleOrder={3} id="Lösung-Dachdecken">
                         Skizze:
                         <ImageCaption fit="contain" src="/Pyramiden/DächerSkizze.webp" width={1200} height={600} alt="Eine Skizze der beiden Dachformen">
                             (Nicht maßstabsgetreu)
-                        </ImageCaption>{" "}
+                        </ImageCaption>
                         <List>
                             <ListItem>
                                 <b>Dach 1</b>
                                 <br />
                                 Die Grundfläche vom Rechteck interessiert uns nicht, da wir nur die Dachfläche benötigen. Dafür brauchen wir die Höhe der Manteldreiecke. Wir benutzen dazu den Satz des Pythagoras:
                                 <BlockMath math="h_\triangle &= \sqrt{\left(\frac{10\,\text{m}}{2}\right)^2+(16\,\text{m})^2} \\ &= \sqrt{(5\,\text{m})^2 + 256\,\text{m}^2} \\ &\approx 16{,}76\,\text{m}" />
-                                Die Breite entspricht der Kantenlänge unserer Grundfläche, also 10
-                                {thinsp}
-                                m. Damit können wir die Mantelfläche berechnen:
+                                Die Breite entspricht der Kantenlänge unserer Grundfläche, also <InlineMath math="10\,\text{m}" />. Damit können wir die Mantelfläche berechnen:
                                 <BlockMath math="M &= 4 \cdot \frac{1}{2}gh_\triangle \\ &= 4 \cdot \frac{1}{2}\cdot 10\,\text{m} \cdot 16{,}76\,\text{m} \\ &= 335{,}2\,\text{m}^2" />
-                                Unser erstes Dach hat also eine Fläche von 335,2
-                                {thinsp}m<sup>2</sup>.
+                                Unser erstes Dach hat also eine Fläche von <InlineMath math="335{,}2\,\text{m}^2" />.
                             </ListItem>
                             <ListItem>
                                 Auch hier interessiert uns die Grundfläche des Achtecks nicht. Um jedoch die Höhe der Manteldreiecke zu bestimmen, brauchen wir den Durchmesser des Achtecks. Schau dir das Bild unten zur Erklärung an.
@@ -251,17 +243,15 @@ export default function Pyramiden() {
                                 <BlockMath math="h_\triangle &= \sqrt{\left(\frac{4,83\,\text{m}}{2}\right)^2+(5\,\text{m})^2} \\ &\approx \sqrt{30{,}82} \\ &\approx 5{,}55\,\text{m}" />
                                 Damit ergibt sich als Mantelfläche:
                                 <BlockMath math="M &= 8 \cdot \frac{1}{2}gh_\triangle \\ &= 8 \cdot \frac{1}{2}\cdot 2\,\text{m} \cdot 5{,}55\,\text{m} \\ &= 44{,}4\,\text{m}^2" />
-                                Ein Dach hat also eine Fläche von 44,4
-                                {thinsp}m<sup>2</sup>. Da wir 5 dieser Dächer haben, ergibt das eine Gesamtfläche von 222
-                                {thinsp}m<sup>2</sup>.
+                                Ein Dach hat also eine Fläche von <InlineMath math="44{,}4\,\text{m}^2" />. Da wir <InlineMath math="5" /> dieser Dächer haben, ergibt das eine Gesamtfläche von <InlineMath math="222\,\text{m}^2" />.
                             </ListItem>
                             <ListItem>
                                 Kommen wir zum Gesamtpreis. Zusammengenommen haben die zu restaurierenden Dächer eine Fläche von <InlineMath math="335{,}2\,\text{m}^2 + 222\,\text{m}^2 = 557,2\,\text{m}^2" />
-                                . Pro Quadratmeter werden 30 Schindeln benötigt – da in einer Packung 6 Schindeln sind, benötigen wir 5 Packungen pro Quadratmeter. Für uns heißt das also:
+                                . Pro Quadratmeter werden <InlineMath math="30" /> Schindeln benötigt – da in einer Packung <InlineMath math="6" /> Schindeln sind, benötigen wir <InlineMath math="5" /> Packungen pro Quadratmeter. Für uns heißt das also:
                                 <MBlockMath desktop="557{,}2\,\text{m}^2 \cdot 5\,\frac{\text{Packungen}}{\text{m}^2}= 2786\,\text{Packungen}" mobile="&557{,}2\,\text{m}^2 \cdot 5\,\frac{\text{Packungen}}{\text{m}^2} \\ &= 2786\,\text{Packungen}" />
-                                Da jede Packung 30€ kostet, sind das insgesamt 83580€. Die Dachdecker selber kosten 50€ pro Quadratmeter, das sind nochmal zusätzliche Kosten von:
+                                Da jede Packung <InlineMath math="30€" /> kostet, sind das insgesamt <InlineMath math="83580€" />. Die Dachdecker selber kosten <InlineMath math="50€" /> pro Quadratmeter, das sind nochmal zusätzliche Kosten von:
                                 <MBlockMath desktop="557{,}2\,\text{m}^2 \cdot 50\frac{\text{€}\vphantom{U}}{\text{m}^2} = 27860\,\text{€}" mobile="&557{,}2\,\text{m}^2 \cdot 50\frac{\text{€}\vphantom{U}}{\text{m}^2} \\ &= 27860\,\text{€}" />
-                                Heißt: Die Restauration aller Dächer kostet insgesamt 111440€.
+                                Heißt: Die Restauration aller Dächer kostet insgesamt <InlineMath math="111440€" />.
                             </ListItem>
                         </List>
                     </Lösung>

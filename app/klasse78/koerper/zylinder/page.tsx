@@ -36,7 +36,7 @@ export default function Zylinder() {
 
             <CheckableHeading title="Schrägbilder">
                 Aus der Orientierungsstufe kennst du bereits das <b>Schrägbild</b> eines Quaders. Das sollte ungefähr so aussehen wie in dem Bild.
-                <Image src="/Prismen/QuaderSchrägbild@2x.webp" width={1802} height={1200} alt="Schrägbild eines Quaders auf kariertem Papier." />
+                <Image src="/Prismen/Quader.webp" width={901} height={600} alt="Schrägbild eines Quaders auf kariertem Papier." />
                 Verdeckte Kanten werden also mit einer gestrichelten Linie angedeutet, während sichtbare Kanten durchgezogen werden.
                 <Divider />
                 Versuchen wir uns mal an einem Schrägbild von einem Zylinder.
@@ -45,7 +45,7 @@ export default function Zylinder() {
                     <ListItem>Dann ziehen wir die äußersten Kanten nach oben, bis wir die gewünschte Höhe erreichen.</ListItem>
                     <ListItem>Darauf setzen wir nun die Oberseite.</ListItem>
                 </List>
-                <Image src="/Zylinder/ZylinderSchrägbildEntstehung@2x.webp" width={2402} height={1200} alt="Es wird gezeigt, wie das Schrägbild eines Zylinders Schritt für Schritt gezeichnet wird. Links wird mit einem Kreis angefangen. Auf dessen Außenseiten werden zwei senkrechte Striche gezeichnet, die alle die gleiche Höhe haben. Auf deren Enden wird dann ein identischer Kreis zu dem unten gezeichnet." />
+                <Image src="/Zylinder/ZylinderSchrägbildEntstehung.webp" width={1201} height={600} alt="Es wird gezeigt, wie das Schrägbild eines Zylinders Schritt für Schritt gezeichnet wird. Links wird mit einem Kreis angefangen. Auf dessen Außenseiten werden zwei senkrechte Striche gezeichnet, die alle die gleiche Höhe haben. Auf deren Enden wird dann ein identischer Kreis zu dem unten gezeichnet." />
                 <CheckableBlockquote icon="frage" title="Aufgabe: Schrägbilder">
                     Zeichne die Zylinder mit Radius <InlineMath math="r" /> und Höhe <InlineMath math="h" /> als Schrägbilder.
                     <List type="ordered">
@@ -69,7 +69,8 @@ export default function Zylinder() {
                         </ListItem>
                     </List>
                     <Lösung title="Lösung" id="Lösung-Schrägbilder" titleOrder={3}>
-                        <Image h={500} src="/Zylinder/ZylinderLösung@2x.webp" width={3600} height={2000} alt="Zylinder aus den Teilaufgaben 1 bis 6." />
+                        Deine gezeichneten Zylinder sollten ungefähr so aussehen:
+                        <Image h={500} src="/Zylinder/ZylinderLösung.webp" width={1800} height={1000} alt="Zylinder aus den Teilaufgaben 1 bis 6." />
                     </Lösung>
                 </CheckableBlockquote>
             </CheckableHeading>
@@ -80,8 +81,8 @@ export default function Zylinder() {
                 <CheckableHeading title="Bestimmen der Fläche eines Zylinders durch Abrollen" titleOrder={2}>
                     Da wir Zylinder abrollen können, lässt sich die Fläche eines Zylinders relativ einfach bestimmen. Wir legen ihn dazu auf eine Seite und schauen, wie weit wir ihn rollen müssen, bis wir wieder am Startpunkt angekommen sind! Bei Objekten, die aus Plastik sind, geht das ganz gut mit einem Blatt Papier als Unterlage und einem Filzstift oder Textmarker zum anmalen. Der geht danach nämlich wieder gut ab und wir sehen dadurch, wann wir genau eine Umdrehung haben. Schau es dir in dem Video unten an.
                     <Video src={UmfangZylinder} />
-                    Die abgerollte Mantelfläche bildet ein Rechteck, das in unserem Beispiel die Kantenlängen <InlineMath math="9{,}4\,\text{cm}" /> und <InlineMath math="4{,}7\,\text{cm}" /> hat. Der Flächeninhalt <InlineMath math="A" /> ergibt sich also wie folgt:
-                    <BlockMath math="A &= 9{,}4\,\text{cm} \cdot 4{,}7\,\text{cm} \\ &= 44{,}18\,\text{cm}^2" />
+                    Die abgerollte Mantelfläche bildet ein Rechteck, das in unserem Beispiel die Kantenlängen <InlineMath math="9{,}4\,\text{cm}" /> und <InlineMath math="4{,}7\,\text{cm}" /> hat. Der Flächeninhalt <InlineMath math="M" /> ergibt sich also wie folgt:
+                    <BlockMath math="M &= 9{,}4\,\text{cm} \cdot 4{,}7\,\text{cm} \\ &= 44{,}18\,\text{cm}^2" />
                     Das Problem ist nun aber, dass wir nicht unbedingt jeden Zylinder mit einem Filzstift anmalen wollen. Wie würden wir die Mantelfläche eines Autoreifens bestimmen? Dann bräuchten wir bereits einen Eimer Farbe – diese Kleckerei können wir uns mit etwas Mathematik sparen.
                 </CheckableHeading>
                 <CheckableHeading title="Bestimmen der Fläche eines Zylinders mit Formeln" titleOrder={2}>
@@ -99,8 +100,8 @@ export default function Zylinder() {
                     <BlockMath math="U &= 2 \cdot \pi \cdot r \\ &= 2 \cdot \pi \cdot 1{,}5\,\text{cm} \\ &\approx 9{,}4\,\text{cm}" />
                     Das ist genau die Länge, die wir auch durch das Abrollen der Dose bekommen. Nun benötigen wir noch die Höhe unseres Zylinders.
                     <Image src="/Zylinder/höheFluid.webp" width={6000} height={4000} alt="Ein Geodreieck wird an eine Flasche mit Korrekturfluid gehalten. Die Höhe beträgt 5 cm" />
-                    Die Höhe beträgt in unserem Fall also <InlineMath math="5\,\text{cm}" />. Um die Mantelfläche zu erstellen, „ziehen" wir diese nach oben. Mathematisch machen wir das, indem wir den Umfang <InlineMath math="U" /> mit der Höhe <InlineMath math="h" /> multiplizieren:
-                    <BlockMath math="A &= U \cdot h \\ &= 9{,}4\,\text{cm} \cdot 5\,\text{cm} \\ &= 47\,\text{cm}^2" />
+                    Die Höhe beträgt in unserem Fall also <InlineMath math="5\,\text{cm}" />. Um die Mantelfläche zu erstellen, „ziehen“ wir diese nach oben. Mathematisch machen wir das, indem wir den Umfang <InlineMath math="U" /> mit der Höhe <InlineMath math="h" /> multiplizieren:
+                    <BlockMath math="M &= U \cdot h \\ &= 9{,}4\,\text{cm} \cdot 5\,\text{cm} \\ &= 47\,\text{cm}^2" />
                     Das passt gut zu der Fläche, die man durch das Abrollen der Flasche bekommt. Dadurch erhalten wir nämlich ca. <InlineMath math="44\,\text{cm}^2" />.
                 </CheckableHeading>
                 <CheckableBlockquote icon="frage" title="Aufgabe: Mantelfläche">
@@ -126,6 +127,7 @@ export default function Zylinder() {
                         </ListItem>
                     </List>
                     <Lösung title="Lösung" id="Lösung-Mantelfläche" titleOrder={3}>
+                        Benutze die Formel von oben, also <InlineMath math="M = U \cdot h" /> und berechne den Umfang mit der Formel <InlineMath math="U = 2\pi r" />
                         <List type="ordered">
                             <ListItem>
                                 <InlineMath math="U = 4\pi\,\text{cm}\approx 12{,}57\,\text{cm}\quad A = 4\pi\,\text{cm}^2 \approx 12{,}57\,\text{cm}^2" />
@@ -155,7 +157,7 @@ export default function Zylinder() {
                 Die Ober- und Unterseite eines Zylinders ist ein Kreis. Deswegen können wir die Flächenformel eines Kreises verwenden!
                 <BlockMath math="A_\text{Kappe} = \pi \cdot r^2" />
                 Um nun die Gesamtoberfläche <InlineMath math="O" /> eines Zylinders zu bekommen, addieren wir die Ober- und Unterseite <InlineMath math="A_\text{Kappe}" /> sowie die Mantelfläche <InlineMath math="M" /> zusammen:
-                <BlockMath math="A = M + 2\cdot A_\text{Kappe}" />
+                <BlockMath math="O = M + 2\cdot A_\text{Kappe}" />
                 <CheckableBlockquote icon="frage" title="Aufgabe: Oberfläche">
                     Berechne die Gesamtoberfläche der Zylinder, welche Radius <InlineMath math="r" /> und Höhe <InlineMath math="h" /> haben.
                     <List type="ordered">
@@ -178,11 +180,8 @@ export default function Zylinder() {
                             <InlineMath math="r = 1{,}95\,\text{m} \quad h = 480\,\text{cm}" />
                         </ListItem>
                     </List>
-                    <Lösung
-                        title="Lösung" //
-                        id="Lösung-Oberfläche"
-                        titleOrder={3}
-                    >
+                    <Lösung title="Lösung" id="Lösung-Oberfläche" titleOrder={3}>
+                        Benutze dafür die Formel von oben, also <InlineMath math="M = U \cdot h" /> und die Formel für <InlineMath math="A_\text{Kappe}" />. Setze die Werte dann in die Formel <InlineMath math="O = M + 2\cdot A_\text{Kappe}" /> ein, um zum Ergebnis zu kommen.
                         <List type="ordered" visibleFrom="md">
                             <ListItem>
                                 <BlockMath math="&&M &= \tfrac{36}{5}\pi\,\text{cm}^2 \approx 22{,}62\,\text{cm}^2 \\ &&A_\text{Kappe} &= 9\pi\,\text{cm}^2 \approx 28{,}27\,\text{cm}^2 \\ &&O &= \tfrac{126}{5}\pi\,\text{cm}^2 \approx 79{,}17\,\text{cm}^2" />
@@ -246,7 +245,6 @@ export default function Zylinder() {
                         <Divider />
                         Das sind einige Gründe, die man mit den Augen sehen kann. Der wichtigste Grund ist jedoch der: Der Inhalt von Konservendosen wird bei der Produktion <b>in</b> der Dose aufgekocht – und das halten nur Zylinder (oder Kugeln) aus. Schau dir zur Erklärung mal dieses Video von der Sendung mit der Maus an:{" "}
                         <a target="_blank" href="https://www.wdrmaus.de/filme/sachgeschichten/konservendose.php5">
-                            {" "}
                             <Button mb={"0.2em"} rightSection={<IconExternalLink />}>
                                 Hier klicken!
                             </Button>
@@ -256,10 +254,8 @@ export default function Zylinder() {
                 <CheckableHeading title="Volumen mathematisch hergeleitet" titleOrder={2}>
                     <CheckableHeading title="Volumen eines Quaders" titleOrder={3}>
                         Ein Zylinder ist nicht so unterschiedlich von einem Quader: Zylinder haben einen Kreis als Grundfläche, Quader ein Rechteck. Ansonsten sind beides Körper, bei denen man die Grundfläche „in die Höhe gezogen“ hat. Erinnern wir uns also erstmal an das Volumen eines Quaders zurück! Das können wir mit <InlineMath math="A = a \cdot b" /> berechnen, wobei <InlineMath math="a" /> und <InlineMath math="b" /> die beiden Grundseiten bezeichnen.
-                        <Image src="/Prismen/RechteckFläche@2x.webp" width={1802} height={1200} alt="Ein Rechteck mit der Fläche A und den Seiten a und b." />
-                        Das Volumen eines Quaders ergibt sich also durch das <b>„hochziehen“</b> dieser Fläche in den Raum. Schau es dir mal an diesem Beispiel hier an, wo ein Quader eine Grundfläche von 3&nbsp;mal 2{thinsp}
-                        cm und eine Höhe von 2{thinsp}
-                        cm hat.
+                        <Image src="/Prismen/RechteckFläche.webp" width={698} height={450} alt="Ein Rechteck mit der Fläche A und den Seiten a und b." />
+                        Das Volumen eines Quaders ergibt sich also durch das <b>„hochziehen"</b> dieser Fläche in den Raum. Schau es dir mal an diesem Beispiel hier an, wo ein Quader eine Grundfläche von <InlineMath math="3" /> mal <InlineMath math="2\,\text{cm}" /> und eine Höhe von <InlineMath math="2\,\text{cm}" /> hat.
                         <GeoGebraAppletSlider
                             materialId="x5z6yk9z"
                             appName="3d"
@@ -297,21 +293,12 @@ export default function Zylinder() {
                                 },
                             ]}
                         />
-                        Füllen wir den Quader mit Würfeln aus, die ein Volumen von 1{thinsp}
-                        cm
-                        <sup>3</sup> haben, kann man gut nachvollziehen, dass das Volumen vom gesamten Quader 12
-                        {thinsp}
-                        cm
-                        <sup>3</sup> sein muss. 6 Würfel sind unten, weitere 6 sind oben. Das ergibt sich auch aus der Berechnung von Grundfläche mal Höhe:
+                        Füllen wir den Quader mit Würfeln aus, die ein Volumen von <InlineMath math="1\,\text{cm}^3" /> haben, kann man gut nachvollziehen, dass das Volumen vom gesamten Quader <InlineMath math="12\,\text{cm}^3" /> sein muss. <InlineMath math="6" /> Würfel sind unten, weitere <InlineMath math="6" /> sind oben. Das ergibt sich auch aus der Berechnung von Grundfläche mal Höhe:
                         <BlockMath math="\textcolor{blue}{A} &= 3 \, \text{cm} \cdot 2 \, \text{cm} \\ &= 6\, \text{cm}^2 \\ \textcolor{green}{V} &=\textcolor{blue}{A} \cdot h \\ &= 6 \, \text{cm}^2 \cdot 2\,\text{cm} \\ &= 12 \, \text{cm}^3" />
                         Können wir diese Formel eventuell auch bei Zylindern anwenden? Gilt <InlineMath math="V = A \cdot h" /> hier immer? Testen wir es mal!
                     </CheckableHeading>
                     <CheckableHeading title="Volumen eines Zylinders" titleOrder={3}>
-                        Wir verfahren nach dem gleichen Prinzip wie bei einem Quader. Wir berechnen zuerst den Flächeninhalt der Grundfläche und „ziehen“ ihn dann in die Höhe. Wir multiplizieren dazu den Flächeninhalt mit der Höhe. Als Objekt suchen wir uns eine beliebige Dose aus dem Vorratsschrank aus z.B. eine Dose Kokosmilch. Sie hat einen Durchmesser von 7,5
-                        {thinsp}
-                        cm und eine Höhe von 11
-                        {thinsp}
-                        cm.
+                        Wir verfahren nach dem gleichen Prinzip wie bei einem Quader. Wir berechnen zuerst den Flächeninhalt der Grundfläche und „ziehen" ihn dann in die Höhe. Wir multiplizieren dazu den Flächeninhalt mit der Höhe. Als Objekt suchen wir uns eine beliebige Dose aus dem Vorratsschrank aus z.{thinsp}B. eine Dose Kokosmilch. Sie hat einen Durchmesser von <InlineMath math="7{,}5\,\text{cm}" /> und eine Höhe von <InlineMath math="11\,\text{cm}" />.
                         <Flex>
                             <Image src="/Zylinder/doseKokosDurchmesser.webp" width={6000} height={4000} alt="Ein Lineal liegt unter einer Konservendose. Ablesbar ist ein Durchmesser von 7,5 cm." flex={"1 1 300px"} />
                             <Image src="/Zylinder/doseKokosHöhe.webp" width={6000} height={4000} alt="Ein Lineal wird neben eine Konservendose gehalten. Ablesbar ist eine Höhe von 11 cm." flex={"1 1 300px"} />
@@ -320,15 +307,9 @@ export default function Zylinder() {
                         <BlockMath math="A &= \pi \cdot r^2 \\ &= \pi \cdot \left(\frac{7{,}5\,\text{cm}}{2}\right)^2\\ &\approx 44{,}18\,\text{cm}^2" />
                         Das Volumen berechnen wir nun nach dem gleichen Prinzip wie beim Quader, also:
                         <BlockMath math="V &= A \cdot h \\ &= 44{,}18\,\text{cm}^2 \cdot 11\,\text{cm} \\ &\approx 485{,}97\,\text{cm}^3" />
-                        Das ist etwas mehr, als die 400
-                        {thinsp}
-                        mL, die eigentlich als Füllmenge auf der Dose stehen. Wir dürfen aber nicht vergessen, dass wir die Dose von außen gemessen haben und diese nie komplett ausgefüllt werden. In der Dose selbst ist also etwas weniger Platz, und es wird nur ca. 400
-                        {thinsp}
-                        mL Kokosmilch vorhanden sein.
+                        Das ist etwas mehr, als die <InlineMath math="400\,\text{mL}" />, die eigentlich als Füllmenge auf der Dose stehen. Wir dürfen aber nicht vergessen, dass wir die Dose von außen gemessen haben und diese nie komplett ausgefüllt werden. In der Dose selbst ist also etwas weniger Platz, und es wird nur ca. <InlineMath math="400\,\text{mL}" /> Kokosmilch vorhanden sein.
                         <CheckableBlockquote icon="frage" title="Aufgabe: Stimmt die Mengenangabe?">
-                            Ein Hersteller kann viel auf die Dose schreiben – ob es aber wirklich stimmt, ist eine andere Frage. Damit wir nicht um unser Geld gebracht werden, messen wir das mal nach. Bestimme die tatsächliche Füllmenge mittels der Formel <InlineMath math="V = A \cdot h" />. Versuche die Maße möglichst genau abzulesen! Als Füllmenge ist bei beiden Dosen 400
-                            {thinsp}
-                            mL angegeben.
+                            Ein Hersteller kann viel auf die Dose schreiben – ob es aber wirklich stimmt, ist eine andere Frage. Damit wir nicht um unser Geld gebracht werden, messen wir das mal nach. Bestimme die tatsächliche Füllmenge mittels der Formel <InlineMath math="V = A \cdot h" />. Versuche die Maße möglichst genau abzulesen! Als Füllmenge ist bei beiden Dosen <InlineMath math="400\,\text{mL}" /> angegeben.
                             <Space />
                             <List type="ordered">
                                 <ListItem>
@@ -338,11 +319,7 @@ export default function Zylinder() {
                                         <Image h={275} src="/Zylinder/füllstandKokos.webp" width={6000} height={4000} alt="Ein Stäbchen, das in die Kokosmilch getunkt wurde, liegt neben einem Lineal. Es wurde ca. 9,5 cm tief hineingetaucht." flex={"1 1 300px"} />
                                     </Flex>
                                     <Spoiler maxHeight={0} showLabel="Maße einblenden" hideLabel="Maße ausblenden">
-                                        Innerer Durchmesser: 7,3
-                                        {thinsp}
-                                        cm. Bedeckter Bereich auf Stäbchen: 9,5
-                                        {thinsp}
-                                        cm{" "}
+                                        Innerer Durchmesser: <InlineMath math="7{,}3\,\text{cm}" />. Bedeckter Bereich auf Stäbchen: <InlineMath math="9{,}5\,\text{cm}" />
                                     </Spoiler>
                                 </ListItem>
                                 <Space />
@@ -353,11 +330,7 @@ export default function Zylinder() {
                                         <Image h={275} src="/Zylinder/füllstandTomate.webp" width={6000} height={4000} alt="Ein Stäbchen, das in die gehackten Tomaten getunkt wurde, liegt neben einem Lineal. Es wurde ca. 9,7 cm tief hineingetaucht." flex={"1 1 300px"} />
                                     </Flex>
                                     <Spoiler maxHeight={0} showLabel="Maße einblenden" hideLabel="Maße ausblenden">
-                                        Innerer Durchmesser: 7,3
-                                        {thinsp}
-                                        cm. Bedeckter Bereich auf Stäbchen: 9,7
-                                        {thinsp}
-                                        cm{" "}
+                                        Innerer Durchmesser: <InlineMath math="7{,}3\,\text{cm}" />. Bedeckter Bereich auf Stäbchen: <InlineMath math="9{,}7\,\text{cm}" />
                                     </Spoiler>
                                 </ListItem>
                                 <Space />
@@ -369,7 +342,8 @@ export default function Zylinder() {
                                 <Space />
                                 <b>Dose mit gehackten Tomaten</b>
                                 <BlockMath math="A &= \pi \cdot r^2 \\ &= \pi \cdot \left(\frac{7{,}3\,\text{cm}}{2}\right)^2 \\ &\approx 41{,}85\,\text{cm}^2 \\ V &= A \cdot h \\ &= 42{,}31\,\text{cm}^2 \cdot 9,7\,\text{cm} \\ &\approx 405{,}98\,\text{cm}^3" />
-                                Gehen wir davon aus, dass wir richtig gemessen haben, so sind in der Kokosmilch <InlineMath math="400\,\text{mL} - 397{,}61\,\text{mL} = 2{,}39\,\text{mL}" /> zu wenig drin, während uns bei den gehackten Tomaten <InlineMath math="405{,}98\,\text{mL} - 400\,\text{mL} = 5{,}98\,\text{mL}" /> geschenkt werden. Ob das als Anlass genügt, um die Kokosmilch im Supermarkt zurückzugeben, muss jedoch jeder selber entscheiden…
+                                Gehen wir davon aus, dass wir richtig gemessen haben, so sind in der Kokosmilch <InlineMath math="400\,\text{mL} - 397{,}61\,\text{mL} = 2{,}39\,\text{mL}" /> zu wenig drin, während uns bei den gehackten Tomaten <InlineMath math="405{,}98\,\text{mL} - 400\,\text{mL} = 5{,}98\,\text{mL}" /> geschenkt werden. <br />
+                                Ob du die Kokosmilch mit der minimal geringeren Menge aus diesem Grund im Supermarkt zurückgeben würdest, musst du selbst entscheiden…
                             </Lösung>
                         </CheckableBlockquote>
                     </CheckableHeading>

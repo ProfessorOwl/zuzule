@@ -1,5 +1,5 @@
 import { Image as MantineImage, ImageProps } from "@mantine/core";
-import NextImage from "next/image"
+import NextImage from "next/image";
 
 export interface BetterImageProps extends ImageProps {
     h?: number | "auto";
@@ -9,21 +9,21 @@ export interface BetterImageProps extends ImageProps {
     alt: string;
 }
 
-export default function Image({h, fit = "contain", alt, width, height, ...others }: BetterImageProps) {
-    const aspectRatio = width/height
+export default function Image({ h, fit = "contain", alt, width, height, ...others }: BetterImageProps) {
+    const aspectRatio = width / height;
     return (
         <MantineImage
             fit={fit}
             alt={alt}
             width={width > 1400 ? 1400 : width}
-            height={width > 1400 ? width/aspectRatio : height}
+            height={width > 1400 ? width / aspectRatio : height}
             sizes={"(max-width: var(--mantine-breakpoint-md)) 80vw, 40vw"}
-            my= "md"
-            mx= "auto"
+            my="md"
+            mx="auto"
             component={NextImage}
             // w="100%"
-            h={ h ? {base: "auto", md: h} : {base: "auto", md: 300}}
-            maw= {{
+            h={h ? { base: "auto", md: h } : { base: "auto", md: 300 }}
+            maw={{
                 base: 300,
                 xs: 400,
                 sm: 500,
