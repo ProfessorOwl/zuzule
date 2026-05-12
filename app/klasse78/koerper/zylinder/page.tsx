@@ -37,11 +37,11 @@ export default function Zylinder() {
             <CheckableHeading title="Schrägbilder">
                 Aus der Orientierungsstufe kennst du bereits das <b>Schrägbild</b> eines Quaders. Das sollte ungefähr so aussehen wie in dem Bild.
                 <Image src="/Prismen/Quader.webp" width={901} height={600} alt="Schrägbild eines Quaders auf kariertem Papier." />
-                Verdeckte Kanten werden also mit einer gestrichelten Linie angedeutet, während sichtbare Kanten durchgezogen werden.
+                Verdeckte Kanten werden also mit einer gestrichelten Linie angedeutet, während sichtbare Kanten durchgezogen werden. Wegen der Perspektive werden die Linien, die nach hinten gehen, meist nur halb so lang gezeichnet, als sie in Realität eigentlich lang sind.
                 <Divider />
                 Versuchen wir uns mal an einem Schrägbild von einem Zylinder.
                 <List type="ordered">
-                    <ListItem>Zuerst zeichnen wir einen Kreis als Grundfläche. Dieser ist wegen der Perspektive etwas zusammengedrückt und nach hinten rechts verzerrt. Zwischen den äußersten Punkten links und rechts können wir den weiter hinten liegenden Teil gestrichelt zeichnen – das spart uns später Arbeit. Wenn du noch</ListItem>
+                    <ListItem>Zuerst zeichnen wir einen Kreis als Grundfläche. Dieser ist wegen der Perspektive etwas zusammengedrückt und nach hinten rechts verzerrt. Zwischen den äußersten Punkten links und rechts können wir den weiter hinten liegenden Teil gestrichelt zeichnen – das spart uns später Arbeit.</ListItem>
                     <ListItem>Dann ziehen wir die äußersten Kanten nach oben, bis wir die gewünschte Höhe erreichen.</ListItem>
                     <ListItem>Darauf setzen wir nun die Oberseite.</ListItem>
                 </List>
