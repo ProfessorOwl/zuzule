@@ -262,7 +262,7 @@ export default function Zylinder() {
                     <CheckableHeading title="Volumen eines Quaders" titleOrder={3}>
                         Ein Zylinder ist nicht so unterschiedlich von einem Quader: Zylinder haben einen Kreis als Grundfläche, Quader ein Rechteck. Ansonsten sind beides Körper, bei denen man die Grundfläche „in die Höhe gezogen“ hat. Erinnern wir uns also erstmal an die Fläche eines Rechtecks zurück! Die können wir mit <InlineMath math="A = a \cdot b" /> berechnen, wobei <InlineMath math="a" /> und <InlineMath math="b" /> die beiden Grundseiten bezeichnen.
                         <Image src="/Prismen/RechteckFläche.webp" width={698} height={450} alt="Ein Rechteck mit der Fläche A und den Seiten a und b." />
-                        Das Volumen eines Quaders ergibt sich also durch das <b>„hochziehen"</b> dieser Fläche in den Raum. Schau es dir mal an diesem Beispiel hier an, wo ein Quader eine Grundfläche von <InlineMath math="3" /> mal <InlineMath math="2\,\text{cm}" /> und eine Höhe von <InlineMath math="2\,\text{cm}" /> hat.
+                        Das Volumen eines Quaders ergibt sich also durch das <b>„Hochziehen"</b> dieser Fläche in den Raum. Schau es dir mal an diesem Beispiel hier an, wo ein Quader eine Grundfläche von <InlineMath math="3" /> mal <InlineMath math="2\,\text{cm}" /> und eine Höhe von <InlineMath math="2\,\text{cm}" /> hat.
                         <GeoGebraAppletSlider
                             materialId="x5z6yk9z"
                             appName="3d"
@@ -305,7 +305,7 @@ export default function Zylinder() {
                         Können wir diese Formel eventuell auch bei Zylindern anwenden? Gilt <InlineMath math="V = A \cdot h" /> hier immer? Testen wir es mal!
                     </CheckableHeading>
                     <CheckableHeading title="Volumen eines Zylinders" titleOrder={3}>
-                        Wir verfahren nach dem gleichen Prinzip wie bei einem Quader. Wir berechnen zuerst den Flächeninhalt der Grundfläche und „ziehen" ihn dann in die Höhe. Wir multiplizieren dazu den Flächeninhalt mit der Höhe. Als Objekt suchen wir uns eine beliebige Dose aus dem Vorratsschrank aus z.{thinsp}B. eine Dose Kokosmilch. Sie hat einen Durchmesser von <InlineMath math="7{,}5\,\text{cm}" /> und eine Höhe von <InlineMath math="11\,\text{cm}" />.
+                        Wir verfahren nach dem gleichen Prinzip wie bei einem Quader. Wir berechnen zuerst den Flächeninhalt der Grundfläche und „ziehen" ihn dann in die Höhe. Wir multiplizieren dazu den Flächeninhalt mit der Höhe. Als Objekt suchen wir uns eine beliebige Dose aus dem Vorratsschrank aus, z.{thinsp}B. eine Dose Kokosmilch. Sie hat einen Durchmesser von <InlineMath math="7{,}5\,\text{cm}" /> und eine Höhe von <InlineMath math="11\,\text{cm}" />.
                         <Flex>
                             <Image src="/Zylinder/doseKokosDurchmesser.webp" width={6000} height={4000} alt="Ein Lineal liegt unter einer Konservendose. Ablesbar ist ein Durchmesser von 7,5 cm." flex={"1 1 300px"} />
                             <Image src="/Zylinder/doseKokosHöhe.webp" width={6000} height={4000} alt="Ein Lineal wird neben eine Konservendose gehalten. Ablesbar ist eine Höhe von 11 cm." flex={"1 1 300px"} />
@@ -316,7 +316,7 @@ export default function Zylinder() {
                         <BlockMath math="V &= A \cdot h \\ &= 44{,}18\,\text{cm}^2 \cdot 11\,\text{cm} \\ &\approx 485{,}97\,\text{cm}^3" />
                         Das ist etwas mehr, als die <InlineMath math="400\,\text{mL}" />, die eigentlich als Füllmenge auf der Dose stehen. Wir dürfen aber nicht vergessen, dass wir die Dose von außen gemessen haben und diese nie komplett ausgefüllt werden. In der Dose selbst ist also etwas weniger Platz, und es wird nur ca. <InlineMath math="400\,\text{mL}" /> Kokosmilch vorhanden sein.
                         <CheckableBlockquote icon="frage" title="Aufgabe: Stimmt die Mengenangabe?">
-                            Ein Hersteller kann viel auf die Dose schreiben – ob es aber wirklich stimmt, ist eine andere Frage. Damit wir nicht um unser Geld gebracht werden, messen wir das mal nach. Bestimme die tatsächliche Füllmenge mittels der Formel <InlineMath math="V = A \cdot h" />. Versuche die Maße möglichst genau abzulesen! Als Füllmenge ist bei beiden Dosen <InlineMath math="400\,\text{mL}" /> angegeben.
+                            Ein Hersteller kann viel auf die Dose schreiben – ob es aber wirklich stimmt, ist eine andere Frage. Damit wir nicht zu viel bezahlen, messen wir das mal nach. Bestimme die tatsächliche Füllmenge mittels der Formel <InlineMath math="V = A \cdot h" />. Versuche die Maße möglichst genau abzulesen! Als Füllmenge ist bei beiden Dosen <InlineMath math="400\,\text{mL}" /> angegeben.
                             <Space />
                             <List type="ordered">
                                 <ListItem>
