@@ -54,7 +54,7 @@ export const theme = createTheme({
         teal: generateColors("#0D8762"),
         desblue: generateColors("#3012B8"),
         desred: generateColors("#B81E46"),
-        desyellow: generateColors("#A39215"),
+        desyellow: generateColors("#987000"),
     },
     headings: {
          sizes: {
@@ -71,7 +71,7 @@ export const theme = createTheme({
     fontSizes: {
         xs: "12pt",
         sm: "14pt",
-        md: "16pt",
+        md: "16.5pt",
         lg: "18pt",
         xl: "20pt",
     },

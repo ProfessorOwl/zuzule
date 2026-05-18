@@ -149,7 +149,7 @@ function GeoGebraAppletSliderinner({ materialId, width = 800, height = 600, appN
 export default function GeoGebraAppletSlider(props: GeoGebraProps) {
     return (
         <Suspense>
-            <ErrorBoundary errorMessage="Die GeoGebra-Komponente konnte nicht geladen werden. Bitte aktualisieren Sie die Seite.">
+            <ErrorBoundary errorMessage="Die GeoGebra-Komponente konnte nicht geladen werden. Bitte aktualisiere die Seite.">
                 <GeoGebraAppletSliderinner {...props} />
             </ErrorBoundary>
         </Suspense>
