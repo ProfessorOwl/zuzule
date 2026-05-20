@@ -18,7 +18,7 @@ export default function Vierecke() {
     return (
         <Fragment>
             <CheckableHeading title="Das Viereck" titleOrder={1}>
-                Die meisten Vierecke sind – obwohl sie eine Ecke mehr haben als Dreiecke – meistens einfacher zu handhaben. Sie kommen auch viel häufiger in unserem Alltag vor: Fenster sind meistens viereckig, Kartons haben eine viereckige Grundfläche, Postkarten, Schulhefte und -bücher sind rechteckig. „Das“ Viereck gibt es so natürlich nicht, denn im Laufe dieser Seite wirst du viele verschiedene Arten von Vierecken kennenlernen und wiederentdecken!
+                Die meisten Vierecke sind – obwohl sie eine Ecke mehr haben als Dreiecke – meistens mathematisch einfacher zu handhaben. Sie kommen auch viel häufiger in unserem Alltag vor: Fenster sind meistens viereckig, Kartons haben eine viereckige Grundfläche, Postkarten, Schulhefte und -bücher sind rechteckig. „Das“ Viereck gibt es so aber natürlich nicht, denn im Laufe dieser Seite wirst du viele verschiedene Arten von Vierecken kennenlernen und wiederentdecken!
                 <Image src="/Vierecke/schilder.webp" width={4462} height={3035} h={400} alt="Eine Sammlung von Schildern vor einer Wand." />
                 Wenn du ein Viereck aus dem Kopf zeichnen würdest, dann hätte es vermutlich eine dieser beiden Formen:
                 <Image src="/Vierecke/rechteck+quadrat.webp" width={1501} height={550} h={275} alt="Links ein Rechteck, rechts ein Quadrat." />
@@ -46,7 +46,7 @@ export default function Vierecke() {
                             <b>Quadrat:</b> Alle vier Seiten sind gleich lang, wobei entgegengesetzte Seiten parallel zueinander sind und alle Winkel rechte Winkel sind.
                         </ListItem>
                         <ListItem>
-                            <b>Rechteck:</b> Entgegengesetzte Seiten sind gleich lang und parallel zueinander. Auch hier gibt es nur rechte Winkel
+                            <b>Rechteck:</b> Entgegengesetzte Seiten sind gleich lang und parallel zueinander. Auch hier gibt es nur rechte Winkel.
                         </ListItem>
                         <ListItem>
                             <b>Raute:</b> Entgegengesetzte Seiten sind gleich lang und parallel zueinander.
@@ -67,9 +67,11 @@ export default function Vierecke() {
                     <Image src="/Vierecke/trapez.webp" width={698} height={597} alt="Ein Trapez." />
                 </CheckableHeading>
                 <CheckableHeading title="Haus der Vierecke" titleOrder={2}>
-                    Ein Viereck entspricht oft nicht nur einer einzigen Definition, sondern meist noch weiteren: Ein Parallelogramm ist z.{thinsp}B. auch ein Trapez, weil es gegenüberliegende, parallele Seiten hat. Und natürlich ist es auch ein allgemeines Viereck, da hier die einzige Bedingung ist, dass es vier Ecken hat.
+                    Ein Viereck entspricht meist nicht nur einer Art von Viereck, sondern mehreren gleichzeitig: Ein Parallelogramm ist z.{thinsp}B. auch ein Trapez, weil es gegenüberliegende, parallele Seiten hat. Und natürlich ist es auch ein allgemeines Viereck, da hier die einzige Bedingung ist, dass es vier Ecken hat.
                     <CheckableBlockquote title="Aufgabe: Haus der Vierecke" titleOrder={3} icon="frage">
-                        Sortiere die folgenden Figuren ins Haus der Vierecke ein. Zeichne es dafür in dein Heft ab. Unten ist die allgemeinste Figur, nämlich das allgemeine Viereck, mit jedem weiteren Stockwerk wird die Definition enger, also die Figur genauer beschrieben.
+                        Sortiere die folgenden Figuren ins Haus der Vierecke ein. Zeichne es dafür in dein Heft ab. Unten ist die allgemeinste Figur, nämlich das allgemeine Viereck. Mit jedem weiteren Stockwerk wird die Definition enger, also die Figur genauer beschrieben.
+                        <br />
+                        Drachenviereck, Trapez, Quadrat, Parallelogramm, Raute
                         <Image src="/Vierecke/hdvleer.webp" width={1550} height={1992} h={1000} alt="Ein „Haus der Vierecke“ mit 5 Etagen. Auf der untersten ist ein allgemeines Viereck eingezeichnet, auf der vorletzten rechts ein Rechteck." />
                         <Lösung titleOrder={4} id="lösung-hdv">
                             Das <b>allgemeine Viereck</b> im untersten Stockwerk hat keinerlei Restriktion, außer, dass es vier Ecken haben muss. Nun gibt es zwei Definitionen, die etwas lockerer sind als diese: Das <b>Drachenviereck</b> mit zwei gleichlangen, benachbarten Seiten oder das <b>Trapez</b> mit mindestens zwei gegenüberliegend parallelen Seiten. <br />
@@ -86,7 +88,7 @@ export default function Vierecke() {
                     <CheckableHeading title="Vererben von Eigenschaften" titleOrder={3}>
                         Eigenschaften werden im Haus der Vierecke von unten nach oben vererbt. Schauen wir uns das bei einem Parallelogramm an. Hier müssen gegenüberliegende Seiten parallel sein. Also müssen auch die Figuren darüber – nämlich die Raute, das Rechteck und das Quadrat – parallele, gegenüberliegende Seiten haben. Ein Blick ins Haus zeigt, dass das tatsächlich stimmt. Man sagt auch, dass Rauten, Rechtecke oder Quadrate eine <b>Teilmenge</b> der Parallelogramme sind.
                         <CheckableBlockquote title="Aufgabe: Vererbeketten" icon="frage" titleOrder={4}>
-                            Um ein Viereck zu beschreiben kann man eine Art „Vererbekette“ machen, aus der ersichtlich wird, welche Eigenschaften durch welche Form dazukommt. Ein Beispiel:
+                            Um ein Viereck zu beschreiben, kann man eine Art „Vererbekette“ machen, aus der ersichtlich wird, welche Eigenschaften durch welche Form dazukommen. Ein Beispiel:
                             <BlockMath
                                 center
                                 math="\text{allgemeines Viereck} \\
@@ -147,7 +149,7 @@ export default function Vierecke() {
                     <CheckableHeading title="Betrachtung über Symmetrien" titleOrder={3}>
                         Die Vierecke können auch über ihre Symmetrien definiert werden, auch wenn diese nicht ganz eindeutig sind. Hier schauen wir also darauf, ob die Figuren irgendwo punkt- oder achsensymmetrisch sind. Schau dir z.{thinsp}B. das Rechteck an:
                         <Image src="/Vierecke/rechtecksymmetrien.webp" width={751} height={550} h={275} alt="Ein Rechteck mit seiner horizontalen und vertikalen Spiegelachse, sowie dem Drehzentrum in der Mitte" />
-                        Ein Rechteck kann sowohl vertikal als auch horizontal gespiegelt werden. Zusätzlich hat es noch ein Drehzentrum in der Mitte, denn wenn es um 180° rotiert wird, liegt es wieder in sich selber.
+                        Ein Rechteck kann sowohl vertikal als auch horizontal gespiegelt werden. Zusätzlich hat es noch ein Drehzentrum in der Mitte, denn wenn es um 180° rotiert wird, liegt es wieder in sich selbst.
                         <CheckableBlockquote icon="frage" title="Aufgabe: Symmetrien finden" titleOrder={4}>
                             Finde in den restlichen Vierecken Symmetrien und zeichne sie ein. Schreibe dabei auch den Winkel auf, um den es rotiert werden kann.
                             <Hinweis id="hinweis-symmetrien" titleOrder={5}>
@@ -163,7 +165,7 @@ export default function Vierecke() {
                                         Das <b>Drachenviereck</b> kann nur vertikal gespiegelt werden, die Spiegelachse geht also von oben nach unten.
                                     </ListItem>
                                     <ListItem>
-                                        Das <b>Parallelogramm</b> hat keine Spiegelachse. Wenn du es aber um <InlineMath math="180°" /> drehst, liegt es wieder in sich selber. Es hat also ein Drehzentrum.
+                                        Das <b>Parallelogramm</b> hat keine Spiegelachse. Wenn du es aber um <InlineMath math="180°" /> drehst, liegt es wieder in sich selbst. Es hat also ein Drehzentrum.
                                     </ListItem>
                                     <ListItem>
                                         Die <b>Raute</b> und das <b>Rechteck</b> haben die gleichen Symmetrien: Sie haben beide eine horizontale und vertikale Spiegelachse und zusätzlich ein Drehzentrum mit 180°.
@@ -177,9 +179,9 @@ export default function Vierecke() {
                         </CheckableBlockquote>
                     </CheckableHeading>
                     <CheckableHeading title="Betrachtung über Winkel" titleOrder={3}>
-                        Vierecke können zusätzlich noch über ihre Winkel definiert werden. Wenn wir zusätzlich die Diagonalen mancher Vierecke hinzunehmen, ist die Definition eindeutig. Vergleichen wir z.{thinsp}B. die Raute mit dem Paralleloramm, so unterscheiden sie sich durch ihre Diagonalen, die senkrecht aufeinander stehen:
+                        Vierecke können zusätzlich noch über ihre Winkel definiert werden. Wenn wir zusätzlich die Diagonalen mancher Vierecke hinzunehmen, ist die Definition eindeutig. Vergleichen wir z.{thinsp}B. die Raute mit dem Parallelogramm, so unterscheiden sie sich durch ihre Diagonalen, die senkrecht aufeinander stehen:
                         <Image src="/Vierecke/rauteparallelogrammwinkel.webp" width={1526} height={550} h={275} alt="Ein Rechteck und eine Raute mit wichtigen Winkeln." />
-                        Bei beiden sind die gegenüberliegenden Winkel gleich groß, was hier durch die Farbe und deren bezeichnen gekennzeichnet wird. Bei der Raute stehen jedoch zusätzlich die Diagonalen senkrecht aufeinander, sie schließen also einen Winkel von <InlineMath math="90°" /> ein.
+                        Bei beiden sind die gegenüberliegenden Winkel gleich groß, was hier durch die Farbe und deren Bezeichnung gekennzeichnet wird. Bei der Raute stehen jedoch zusätzlich die Diagonalen senkrecht aufeinander, sie schließen also einen Winkel von <InlineMath math="90°" /> ein.
                         <CheckableBlockquote title="Aufgabe: Winkel finden" titleOrder={4} icon="frage">
                             Finde in den restlichen Vierecken gleich große Winkel und zeichne sie ein. Beachte dabei auch die Diagonalen!
                             <Hinweis id="hinweis-winkel" titleOrder={5}>
@@ -191,7 +193,7 @@ export default function Vierecke() {
                                         Das <b>allgemeine Viereck</b> und das <b>Trapez</b> haben keine Winkel, die gleich groß sind. Auch die Diagonalen schneiden sich nicht im rechten Winkel.
                                     </ListItem>
                                     <ListItem>
-                                        Im <b>Drachenviereck</b> muss zwei gegenüberliegende Winkel geben, die gleich groß sind. Außerdem schneiden sich die Diagonalen immer im rechten Winkel.
+                                        Im <b>Drachenviereck</b> muss es zwei gegenüberliegende Winkel geben, die gleich groß sind. Außerdem schneiden sich die Diagonalen immer im rechten Winkel.
                                     </ListItem>
                                     <ListItem>
                                         Im <b>Parallelogramm</b> sind alle gegenüberliegenden Winkel immer gleich groß.
@@ -201,10 +203,10 @@ export default function Vierecke() {
                                         In der <b>Raute</b> sind alle gegenüberliegenden Winkel gleich groß und die Diagonalen schneiden sich im rechten Winkel.
                                     </ListItem>
                                     <ListItem>
-                                        Im <b>Rechteck</b> sind alle Winkel gleich groß und <InlineMath math="90°" />.
+                                        Im <b>Rechteck</b> sind alle Winkel gleich groß und betragen <InlineMath math="90°" />.
                                     </ListItem>
                                     <ListItem>
-                                        Im <b>Quadrat</b> sind alle Winkel gleich groß und <InlineMath math="90°" />, außerdem schneiden sich die Diagonalen im <InlineMath math="90°" />
+                                        Im <b>Quadrat</b> sind alle Winkel gleich groß und betragen <InlineMath math="90°" />, außerdem schneiden sich die Diagonalen im <InlineMath math="90°" />
                                         -Winkel.
                                     </ListItem>
                                 </List>
@@ -219,11 +221,11 @@ export default function Vierecke() {
                 <Image src="/Prismen/RechteckFläche.webp" width={698} height={450} h={225} alt="Ein Rechteck mit der Fläche A und den Seiten a und b." />
                 Jetzt ist aber die Frage, wie sich die Flächeninhalte von etwas komplizierteren Rechtecken berechnen lassen, nämlich Trapezen oder Parallelogrammen?
                 <CheckableHeading title="Flächeninhalt eines Parallelogramms" titleOrder={2}>
-                    Die Fläche eines Parallelogramms ist nicht direkt anhand der Seitenlängen ersichtlich, da diese schief sind. Daher kannst du nicht die gleiche Formel wie bei einem Rechteck anwenden und die Seitenlängen miteinander multiplizieren. Es gibt aber eine praktische Möglichkeit, ein Parallelogramm in ein Rechteck umzuwandeln!
+                    Die Fläche eines Parallelogramms ist nicht direkt anhand der Seitenlängen ersichtlich, da die Seiten schief zueinander sind. Daher kannst du nicht die gleiche Formel wie bei einem Rechteck anwenden und die Seitenlängen miteinander multiplizieren. Es gibt aber eine praktische Möglichkeit, ein Parallelogramm in ein Rechteck umzuwandeln!
                     <CheckableBlockquote icon="frage" title="Aufgabe: Zerschneiden und Zusammenfügen" titleOrder={3}>
                         Wir können in ein Parallelogramm die Höhe einzeichnen:
                         <Image src="/Vierecke/parallelogrammhöhe.webp" width={651} height={350} h={175} alt="Ein Parallelogramm mit den Seitenlängen a und b und der Höhe h." />
-                        Zeichne das Parallelogramm auf ein Stück Papier und zerschneide es so, dass du ein Rechteck mit den Seitenlängen a und <Mark c={"teal.9"}>h</Mark> herausbekommst. Berechne die Fläche folgender Parallelogramme durch zeichnen und messen:
+                        Zeichne ein beliebiges Parallelogramm auf ein Stück Papier und zerschneide es so, dass du ein Rechteck mit den Seitenlängen a und <Mark c={"teal.9"}>h</Mark> herausbekommst. Berechne dann die Fläche folgender Parallelogramme durch Zeichnen und Messen:
                         <List type="ordered">
                             <ListItem>
                                 <InlineMath math="4\,\text{cm}, \quad b = 1{,}5\,\text{cm}, \quad \alpha = 135°" />{" "}
@@ -238,7 +240,7 @@ export default function Vierecke() {
                         <Lösung title="Teillösung: Zusammensetzen zum Rechteck" titleOrder={4}>
                             Du kannst das Parallelogramm entlang der Höhe zerschneiden.
                             <Image src="/Vierecke/parallelogrammverschiebung.webp" width={698} height={850} h={425} alt="Ein Parallelogramm wird entlang der Höhe zerschnitten und zu einem Rechteck zusammengesetzt." />
-                            Dadurch bekommst du ein Rechteck mit den Seitenlängen a und h heraus. Der Flächeninhalt davon ist bekannt!
+                            Dadurch bekommst du ein Rechteck mit den Seitenlängen a und h heraus. Der Flächeninhalt davon ist dir bekannt!
                         </Lösung>
                         <Lösung id="Teillösung: Flächeninhalte" titleOrder={4}>
                             Unten sind die optimalen Ergebnisse präsentiert. Wenn dein Ergebnis leicht davon abweicht, ist das kein Problem – wenn du etwas zeichnest und misst wird es immer etwas unterschiedlich sein zur Musterlösung.
@@ -272,13 +274,13 @@ export default function Vierecke() {
                             Aber Achtung: Das erhaltene Parallelogramm hat den doppelten Flächeninhalt, da es ja aus <b>zwei</b> der ursprünglichen Trapeze besteht.
                         </Lösung>
                         <Lösung title="Teillösung: Herleiten der Formel" titleOrder={4}>
-                            Für die Formel ziehst du die Flächenformel des Parallelogramms herbei, also <InlineMath math="A_\text{Parallelogramm}=\textcolor{#0D8762}{h} \cdot g" /> mit{" "}
+                            Für die Formel ziehst du die Flächenformel des Parallelogramms heran, also <InlineMath math="A_\text{Parallelogramm}=\textcolor{#0D8762}{h} \cdot g" /> mit{" "}
                             <Mark c={"teal.9"}>
                                 Höhe <InlineMath>h</InlineMath>
                             </Mark>{" "}
                             und Grundseite <InlineMath>g</InlineMath>.
                             <Image src="/Vierecke/trapezformel.webp" width={951} height={400} h={200} alt="Ein Parallelogramm bestehend aus zwei Trapezen. Die ursprünglichen Grundseiten der Trapeze sind eingetragen." />
-                            Da das Parallelogramm hier aus zwei Trapezen besteht, entspricht die Fläche eines Trapezes der Hälfte der Fläche des Parallelogrammes:
+                            Da das Parallelogramm hier aus zwei Trapezen besteht, entspricht die Fläche eines Trapezes der Hälfte der Fläche des Parallelogramms:
                             <BlockMath
                                 math="
                             A_\text{Trapez} = \frac{1}{2}A_\text{Parallelogramm}"

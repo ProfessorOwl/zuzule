@@ -57,7 +57,7 @@ export default function ZusammengesetzteKoerper() {
                         &= 9 + 12 \\
                         &= 21"
                             />
-                            Zum Volumen des Prismas gelangen wir nun mit der Formel <InlineMath math="V = Gh" />
+                            Zum Volumen des Prismas gelangen wir nun mit der Formel <InlineMath math="V = G \cdot h" />
                             <BlockMath
                                 math="V &= 21 \cdot 2{,}5 \\ 
                         &= 52{,}5"
@@ -65,7 +65,7 @@ export default function ZusammengesetzteKoerper() {
                             <b>Tipp:</b> Alternativ hätten wir die vordere Fläche als Trapez berechnen können, das wäre etwas kürzer gewesen. Kennst du davon noch die Formel?
                         </ListItem>
                         <ListItem>
-                            In der Mitte des Körpers ist ein Quader, außen zwei halbe Zylinder. Da beide Zylinderhälften identisch sind, entspricht das Gesamtvolumen dem des Quaders und eines ganzen Zylinders. Wir müssen zuerst den Radius des Zylinders bestimmen, um das Volumen des berechnen zu können.
+                            In der Mitte des Körpers ist ein Quader, außen zwei halbe Zylinder. Da beide Zylinderhälften identisch sind, entspricht das Gesamtvolumen dem des Quaders und eines ganzen Zylinders. Wir müssen zuerst den Radius des Zylinders bestimmen, um das Volumen berechnen zu können.
                             <MBlockMath
                                 desktop="U &= 2\pi r &&\lvert :2\pi \\
                         \frac{U}{2\pi} &= r \\
@@ -141,7 +141,7 @@ export default function ZusammengesetzteKoerper() {
                                 math="m &= 3{,}72\,\text{cm}^3 \cdot 1{,}4\,\frac{\text{g}}{\text{cm}^3} \\
                             &\approx 5{,}2\,\text{g}"
                             />
-                            Das Gewicht müssen wir nun mit <InlineMath math="100.000" /> multiplizieren, um das Gewicht von <InlineMath math="100.000" /> Flaschen zu bekommen:
+                            Das Gewicht müssen wir nun mit <InlineMath math="100.000" /> multiplizieren, um das Gewicht von <InlineMath math="100.000" /> Flaschendeckeln zu bekommen:
                             <BlockMath
                                 math="5{,}2\,\text{g} \cdot 100.000 &= 520.000\,\text{g} \\
                             &= 520\,\text{kg}"

@@ -22,15 +22,15 @@ export default function Prismen() {
     return (
         <Fragment>
             <CheckableHeading title="Das Prisma">
-                Prismen kennst du vielleicht schon aus dem Physikunterricht. Mit ihnen kann man zeigen, dass weißes Licht tatsächlich aus allen Farben des Regenbogens besteht – schau dir das Beispiel in dem Bild an! Solche Prismen sind aus Glas und meistens dreieckig.
+                Prismen kennst du vielleicht schon aus dem Physikunterricht. Mit ihnen kann man zeigen, dass weißes Licht tatsächlich aus allen Farben des Regenbogens besteht – schau dir das Beispiel in dem Bild unten an! Solche Prismen sind aus Glas und meistens dreieckig.
                 <Divider my={"md"} />
                 Das Wort „Prisma“ bezeichnet aber nicht nur solche Glasgeräte, sondern im allgemeinen alle Körper mit dieser Form. Mathematisch interessiert uns daher weniger die Lichtbrechung, sondern viel mehr, was die Form so besonders macht! Wie könnte man es aus Papier falten? Welches Volumen hat ein Prisma? Und sind Prismen überhaupt immer dreieckig?
                 <Image h={400} src="/Prismen/prisma1.webp" width={3499} height={3377} alt="Ein Prisma, an dem weißes Licht in einem Regenbogen gebrochen wird." />
                 <CheckableHeading title="Definition" titleOrder={2}>
-                    Wir nehmen eine Grundfläche mit beliebiger, aber eckiger Form: Ein sogenanntes <b>n-Eck</b>. Nehmen wir seine Fläche und ziehen sie in den Raum hinein, so entsteht ein Körper. Diesen nennen wir <b>Prisma</b>.
+                    Wir betrachten eine Grundfläche mit beliebiger, aber eckiger Form: Ein sogenanntes <b>n-Eck</b>. Nehmen wir diese Fläche und ziehen sie in den Raum hinein, so entsteht ein Körper. Diesen nennen wir <b>Prisma</b>.
                 </CheckableHeading>
                 <CheckableBlockquote icon="frage" title="Aufgabe: Prismen im Alltag">
-                    Suche in deinem Zimmer Objekte, die ein Prisma sind und bringe sie in den Unterricht mit. Was für eine Form hat die Grundfläche, aus der das Prisma „gezogen“ wird?
+                    Suche in deinem Zimmer Objekte, die ein Prisma sind und bringe sie in den Unterricht mit. Was für eine Form hat die Grundfläche, aus der deine Gegenstände „gezogen“ werden?
                 </CheckableBlockquote>
                 <CheckableBlockquote icon="aha" title="Aha! 1">
                     Ein Prisma hat also nicht immer eine dreieckige Grundseite, sondern kann jede eckige Form als Grundseite haben! Dementsprechend ist also auch ein <b>Würfel</b> oder ein <b>Quader</b> ein Prisma.
@@ -67,7 +67,7 @@ export default function Prismen() {
                     <Image src="/Prismen/NetzWürfel.webp" width={6000} height={4000} alt="Ein Würfelnetz, gezeichnet auf Papier." flex={"1 1 300px"} />
                     <Image src="/Prismen/WürfelPapier.webp" width={6000} height={4000} alt="Das Würfelnetz gefaltet und verklebt, sodass es einen 3D-Würfel ergibt." flex={"1 1 300px"} />
                 </Flex>
-                Auch Prismen kannst du in ein Netz zerlegen! Zeichne dafür zuerst die Grundfläche des Prismas auf, in dem Beispiel hier wäre das ein Dreieck. Dann ziehst du senkrecht von jeder Ecke Linien hoch. Diese bestimmen, wie hoch dein Körper am Ende wird. Auf eine dieser Seiten musst du dann die Seite zeichnen, die der Grundseite gegenüberliegt – hier also erneut ein Dreieck. Dann heißt es: Ausschneiden, Falten und mit Klebeband zusammenkleben!
+                Auch Prismen kannst du in ein Netz zerlegen! Zeichne dafür zuerst die Grundfläche des Prismas auf, in dem Beispiel hier wäre das ein Dreieck. Dann ziehst du senkrecht von jeder Ecke Linien hoch. Diese bestimmen, wie hoch dein Körper am Ende sein wird. Auf eine dieser Seiten musst du dann die Seite zeichnen, die der Grundseite gegenüberliegt – hier also erneut ein Dreieck. Dann heißt es: Ausschneiden, Falten und mit Klebeband zusammenkleben!
                 <Flex>
                     <Image src="/Prismen/NetzPrisma.webp" width={6000} height={4000} alt="Das Netz eines dreieckigen Prismas, gezeichnet auf Papier." flex={"1 1 300px"} />
                     <Image src="/Prismen/PrismaPapier.webp" width={6000} height={4000} alt="Das Netz des Prismas gefaltet und verklebt, sodass ein 3D-Prisma ergibt." flex={"1 1 300px"} />
@@ -75,7 +75,7 @@ export default function Prismen() {
             </CheckableHeading>
 
             <CheckableHeading title="Oberflächeninhalt">
-                Über das Netz eines Körpers lässt sich gut der Oberflächeninhalt berechnen, da hier nur noch einfache Formen vorkommen. Man unterscheidet hier zwischen <b>Mantelfläche</b> und <b>Grundfläche</b>. Die Grundfläche bezeichnet die Grundform des Prismas, also ob es z.{thinsp}B. drei- oder viereckig ist. Die Mantelfläche ist dann die Fläche, die durch die Höhe des Prismas dazukommt.
+                Über das Netz eines Körpers lässt sich gut der Oberflächeninhalt berechnen, da hier nur noch einfache Formen vorkommen. Man unterscheidet dabei zwischen der <b>Mantelfläche</b> und der <b>Grundfläche</b>. Die Grundfläche bezeichnet die Grundform des Prismas, also ob es z.{thinsp}B. drei- oder viereckig ist. Die Mantelfläche ist dann die Fläche, die durch die Höhe des Prismas dazukommt.
                 <Image h={500} src="/Prismen/PrismaNetzFläche.webp" width={1800} height={1000} alt="Ein Prisma mit seinem Netz." />
                 Der <b>Oberflächeninhalt</b> <InlineMath math="O" /> des Prismas lässt sich dann über die <b>Mantelfläche</b> <InlineMath math="M = \textcolor{#3012B8}{M_1} + \textcolor{#3012B8}{M_2} + \textcolor{#3012B8}{M_3}" /> und die <b>Grundfläche</b> <InlineMath math="\textcolor{#0D8762}{G}" /> berechnen:
                 <BlockMath math="O = M + 2\cdot \textcolor{#0D8762}{G} = \textcolor{#3012B8}{M_1} + \textcolor{#3012B8}{M_2} + \textcolor{#3012B8}{M_3} + 2\cdot \textcolor{#0D8762}{G}" />
@@ -113,7 +113,7 @@ export default function Prismen() {
                             Experimentell lässt sich das Volumen beliebiger Körper gut mit etwas Wasser und einem Messbecher testen. Testen wir das Volumen von diesem Stein.
                         </ImageCaption>
                         <ImageCaption h={250} src="/Prismen/VolumenWasser/VolumenWasser2.webp" width={6000} height={4000} alt="Der Füllstand des Messbechers ist sichtbar: 600 mL">
-                            Wir messen eine genaue Menge Wasser ab, z.{thinsp}B. <InlineMath math="600\,\text{mL}" />.
+                            Zuerst messen wir eine genaue Menge Wasser ab, z.{thinsp}B. <InlineMath math="600\,\text{mL}" />.
                         </ImageCaption>
                         <ImageCaption h={250} src="/Prismen/VolumenWasser/VolumenWasser3.webp" width={6000} height={4000} alt="Der Stein wird in den Messbecher gegeben.">
                             Dann geben wir den Stein in den Messbecher – er muss komplett bedeckt sein!
@@ -122,7 +122,7 @@ export default function Prismen() {
                             Der Stein ist dichter als Wasser und sinkt deshalb zu Boden.
                         </ImageCaption>
                         <ImageCaption h={250} src="/Prismen/VolumenWasser/VolumenWasser5.webp" width={6000} height={4000} alt="Das neue Volumen entspricht 720 mL.">
-                            Der vom Stein eingenommene Raum steigert die Füllhöhe in unserem Gefäß. Jetzt können wir das neue Volumen ablesen: Ca. <InlineMath math="720\,\text{mL}" />.
+                            Der vom Stein eingenommene Raum steigert die Füllhöhe in dem Gefäß. Jetzt können wir das neue Volumen ablesen: Ca. <InlineMath math="720\,\text{mL}" />.
                         </ImageCaption>
                     </Flex>
                     Das Volumen des Steins entspricht der Differenz der beiden abgelesenen Wassermengen: <InlineMath math="720\,\text{mL} - 600\,\text{mL} = 120\,\text{mL}" />. Mit der Methode lässt sich natürlich nicht nur das Volumen von Steinen bestimmen, sondern von allen möglichen Körpern und Formen. Voraussetzung ist nur, dass du ein Gefäß hast, bei dem du die Füllmenge ablesen kannst.
@@ -131,7 +131,7 @@ export default function Prismen() {
                     <CheckableHeading title="Volumen eines Quaders" titleOrder={3}>
                         Da ein Quader ein Spezialfall eines Prismas ist, können wir uns daran herleiten, wie wir das Volumen eines allgemeinen Prismas berechnen. Ein Quader hat eine rechteckige Grundfläche. Deren Inhalt können wir mit <InlineMath math="A = a \cdot b" /> berechnen, wobei <InlineMath math="a" /> und <InlineMath math="b" /> die beiden Grundseiten bezeichnen.
                         <Image src="/Prismen/RechteckFläche.webp" width={698} height={450} h={225} alt="Ein Rechteck mit der Fläche A und den Seiten a und b." />
-                        Das Volumen eines Quaders ergibt sich nun durch das <b>„hochziehen"</b> dieser Fläche in den Raum. Schau es dir mal an diesem Beispiel hier an, wo ein Quader eine Grundfläche von <InlineMath math="3" /> mal <InlineMath math="2\,\text{cm}" /> und eine Höhe von <InlineMath math="2\,\text{cm}" /> hat.
+                        Das Volumen eines Quaders ergibt sich nun durch das <b>„Hochziehen"</b> dieser Fläche in den Raum. Schau es dir mal an diesem Beispiel hier an, wo ein Quader eine Grundfläche von <InlineMath math="3" /> mal <InlineMath math="2\,\text{cm}" /> und eine Höhe von <InlineMath math="2\,\text{cm}" /> hat.
                         <GeoGebraAppletSlider
                             materialId="x5z6yk9z"
                             appName="3d"
@@ -173,7 +173,7 @@ export default function Prismen() {
                         Können wir diese Formel eventuell auch bei Prismen anwenden? Gilt <InlineMath math="\textcolor{#0D8762}{V} = \textcolor{#3012B8}{A} \cdot h" /> hier immer? Testen wir es mal!
                     </CheckableHeading>
                     <CheckableHeading title="Volumen eines Prismas" titleOrder={3}>
-                        Die Grundfläche eines Prismas ist immer eine beliebige, eckige Fläche, also ein <b>n-Eck</b>. Nehmen wir jedoch hier als Beispiel ein dreieckiges Prisma. Seine Grundfläche können wir mit der Formel <InlineMath math="A = \frac{1}{2} \textcolor{#3012B8}{g} \cdot \textcolor{#B81E46}{h}" /> berechnen. Im Bild unten findest du dazu nochmal eine Herleitung.
+                        Die Grundfläche eines Prismas ist immer eine beliebige, eckige Fläche, also ein <b>n-Eck</b>. Nehmen wir für dieses Beispiel ein dreieckiges Prisma. Seine Grundfläche können wir mit der Formel <InlineMath math="A = \frac{1}{2} \textcolor{#3012B8}{g} \cdot \textcolor{#B81E46}{h}" /> berechnen. Im Bild unten findest du dazu nochmal eine Herleitung.
                         <Image src="/Prismen/DreieckFläche.webp" width={1200} height={600} alt="Ein Dreieck mit der Höhe h und der Grundseite g. Die Höhe zerteilt es in zwei weitere Dreiecke mit den Flächen A1 und A2." />
                         Wir können aus jedem Dreieck also ein Rechteck mit doppelter Fläche machen. Das können wir auch für die Volumenberechnung ausnutzen, denn von einem Quader wissen wir, dass die Volumenformel <InlineMath math="V = A \cdot h" /> ist, also Grundfläche mal Höhe. Daraus können wir uns nun herleiten, dass auch das Volumen eines dreieckigen Prismas mit der Formel <InlineMath math="V = A \cdot h" /> berechenbar ist. Denn mit dem Verdoppeln des Flächeninhaltes verdoppeln wir auch das Volumen. Das Volumen ergibt sich also mit der Formel:
                         <BlockMath math="V_\text{viereckiges Prisma} &= A_\text{Viereck} \cdot \textcolor{#0D8762}{h_\text{Prisma}} \\ \frac{1}{2} V_\text{viereckiges Prisma} &= \frac{1}{2} A_\text{Viereck} \cdot \textcolor{#0D8762}{h_\text{Prisma}} \\ V_\text{dreieckiges Prisma} &= A_\text{Dreieck} \cdot \textcolor{#0D8762}{h_\text{Prisma}}" />
@@ -199,7 +199,7 @@ export default function Prismen() {
                                 />
                             </ListItem>
                             <ListItem>
-                                Hier ist die Grundfläche etwas komplizierte und besteht aus einem Dreieck und einem Rechteck.
+                                Hier ist die Grundfläche etwas komplizierter und besteht aus einem Dreieck und einem Rechteck.
                                 <BlockMath
                                     math="G_\text{Rechteck} &= 6\,\text{cm} \cdot 2\,\text{cm} \\ 
                             &= 12\,\text{cm}^2"
@@ -215,7 +215,7 @@ export default function Prismen() {
                                 />
                             </ListItem>
                             <ListItem>
-                                Diese Form ist komplett unbeständig. Da aber der Flächeninhalt mit der Höhe gegeben ist, lässt sich das Volumen dennoch einfach berechnen:
+                                Diese Form ist komplett unbeständig. Da aber der Flächeninhalt und die Höhe gegeben ist, lässt sich das Volumen dennoch einfach berechnen:
                                 <BlockMath
                                     math="\textcolor{#0D8762}{V} &= 14{,}9\,\text{cm}^2 \cdot 7\,\text{cm} \\
                             &= 104{,}3\,\text{cm}^3"

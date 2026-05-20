@@ -89,11 +89,11 @@ export default function Zylinder() {
                 <CheckableHeading title="Bestimmen der Mantelfläche eines Zylinders mit Formeln" titleOrder={2}>
                     Aus dem Unterricht sollte dir bereits bekannt sein, wie man den Umfang <InlineMath math="U" /> eines Kreises berechnet. Wir können dafür die Formel
                     <BlockMath math="U &= 2 \cdot \pi \cdot r \\ &= \pi \cdot d" />
-                    verwenden. <InlineMath math="r" /> ist hierbei der Radius, <InlineMath math="d" /> der Durchmesser. Falls dir nicht klar sein sollte, warum wir den Umfang auf diese zwei Arten berechnen können, zeichne dir einen Kreis mit Durchmesser und Radius auf – dann kommst du selber drauf!
+                    verwenden. <InlineMath math="r" /> ist hierbei der Radius, <InlineMath math="d" /> der Durchmesser. Falls dir nicht klar sein sollte, warum wir den Umfang auf diese zwei Arten berechnen können, zeichne dir einen Kreis mit Durchmesser und Radius auf – dann kommst du selbst drauf!
                     <CheckableBlockquote title="Exkurs: Die Kreiszahl π" icon="exkurs" titleOrder={3}>
-                        Die Zahl <InlineMath math="\pi \approx 3,1415 \dots" /> ist das Verhältnis zwischen dem Umfang <InlineMath math="U" /> eines Kreises und seinem Durchmesser <InlineMath math="d" />. Tatsächlich ist es egal, wie groß ein Kreis ist – dieses Verhältnis ist immer gleich <InlineMath math="\pi" />
+                        Die Zahl <InlineMath math="\pi \approx 3{,}1415 \dots" /> ist das Verhältnis zwischen dem Umfang <InlineMath math="U" /> eines Kreises und seinem Durchmesser <InlineMath math="d" />. Tatsächlich ist es egal, wie groß ein Kreis ist – dieses Verhältnis ist immer gleich <InlineMath math="\pi" />
                         . Auch in unserem Beispiel:
-                        <BlockMath math="\pi &= \frac{U}{d} \\ &= \frac{9{,}4\,\text{cm}}{3\,\text{cm}} \\ &\approx 3,13" />
+                        <BlockMath math="\pi &= \frac{U}{d} \\ &= \frac{9{,}4\,\text{cm}}{3\,\text{cm}} \\ &\approx 3{,}13" />
                     </CheckableBlockquote>
                     <Image src="/Zylinder/durchmesserFluid.webp" width={6000} height={4000} alt="Ein Geodreieck wird an eine Flasche mit Korrekturfluid gehalten. Der Durchmesser beträgt 3 cm" />
                     Der Radius beträgt in unserem Fall <InlineMath math="1{,}5\,\text{cm}" />
@@ -345,10 +345,10 @@ export default function Zylinder() {
                             </List>
                             <Lösung title="Lösung" titleOrder={3} id="lösung-mengenangabe">
                                 <b>Dose mit Kokosmilch</b>
-                                <BlockMath math="A &= \pi \cdot r^2 \\ &= \pi \cdot \left(\frac{7{,}3\,\text{cm}}{2}\right)^2 \\ &\approx 41{,}85\,\text{cm}^2 \\ V &= A \cdot h \\ &= 42{,}31\,\text{cm}^2 \cdot 9,5\,\text{cm} \\ &\approx 397{,}61\,\text{cm}^3" />
+                                <BlockMath math="A &= \pi \cdot r^2 \\ &= \pi \cdot \left(\frac{7{,}3\,\text{cm}}{2}\right)^2 \\ &\approx 41{,}85\,\text{cm}^2 \\ V &= A \cdot h \\ &= 42{,}31\,\text{cm}^2 \cdot 9{,}5\,\text{cm} \\ &\approx 397{,}61\,\text{cm}^3" />
                                 <Space />
                                 <b>Dose mit gehackten Tomaten</b>
-                                <BlockMath math="A &= \pi \cdot r^2 \\ &= \pi \cdot \left(\frac{7{,}3\,\text{cm}}{2}\right)^2 \\ &\approx 41{,}85\,\text{cm}^2 \\ V &= A \cdot h \\ &= 42{,}31\,\text{cm}^2 \cdot 9,7\,\text{cm} \\ &\approx 405{,}98\,\text{cm}^3" />
+                                <BlockMath math="A &= \pi \cdot r^2 \\ &= \pi \cdot \left(\frac{7{,}3\,\text{cm}}{2}\right)^2 \\ &\approx 41{,}85\,\text{cm}^2 \\ V &= A \cdot h \\ &= 42{,}31\,\text{cm}^2 \cdot 9{,}7\,\text{cm} \\ &\approx 405{,}98\,\text{cm}^3" />
                                 Gehen wir davon aus, dass wir richtig gemessen haben, so sind in der Kokosmilch <InlineMath math="400\,\text{mL} - 397{,}61\,\text{mL} = 2{,}39\,\text{mL}" /> zu wenig drin, während uns bei den gehackten Tomaten <InlineMath math="405{,}98\,\text{mL} - 400\,\text{mL} = 5{,}98\,\text{mL}" /> geschenkt werden. <br />
                                 Ob du die Kokosmilch mit der minimal geringeren Menge aus diesem Grund im Supermarkt zurückgeben würdest, musst du selbst entscheiden…
                             </Lösung>

@@ -46,7 +46,7 @@ export default function Dreiecke() {
             <CheckableHeading title="Besondere Dreiecke">
                 Wie bei allen geometrischen Formen gibt es auch bei den Dreiecken ein paar besondere Exemplare, die wir genauer unter die Lupe nehmen sollten.
                 <CheckableHeading title="Gleichseitiges Dreieck" titleOrder={2}>
-                    Hier handelt es sich um den einfachsten dieser Kandidaten. Wie der Name schon sagt, hat es <b>drei gleiche Seiten</b>.
+                    Hier handelt es sich um den einfachsten dieser Kandidaten. Wie der Name schon sagt, hat dieses Dreieck <b>drei gleiche Seiten</b>.
                     <Flex>
                         <Image src="/Dreiecke/dreieckestäbchen/dreieckGleichseitig1.webp" width={6000} height={4000} alt="Ein gleichseitiges Dreieck aus Stäbchen." flex={"1 1 300px"} />
                         <Image src="/Dreiecke/dreieckestäbchen/dreieckGleichseitig2.webp" width={6000} height={4000} alt="Ein gleichseitiges Dreieck aus Zahnstochern." flex={"1 1 300px"} />
@@ -130,7 +130,7 @@ export default function Dreiecke() {
                     Vieleicht erinnerst du dich noch an den rechten Winkel, also einen Winkel mit <InlineMath math="90°" />. Dreiecke, die einen rechten Winkel enthalten, haben einige besondere Eigenschaften, die du insbesondere in der 9. und 10. Klasse kennenlernen wirst (Satz des Pythagoras). Die Länge der Seiten ist dabei egal, entscheidend ist nur, dass ein rechter Winkel vorkommt.
                     <Image src="/Dreiecke/rechtwinklig.webp" width={900} height={400} h={200} alt="Ein gleichseitiges Dreieck, an dem linken Winkel ist ein Geodreieck angelegt und zeigt." />
                 </CheckableHeading>
-                Du kennst nun also vier Arten von Dreiecken: Das allgemeine Dreieck, das gleichseitige, das gleichwinklige und das rechtwinklige. Ein Dreieck kann jedoch auch mehreren dieser Dreiecke entsprechen, also z.{thinsp}B. ein rechtwinkliges, gleichschenkliges Dreieck sein. Die Grafik unten zeigt, wie die Dreiecke zusammenhängen können.
+                Du kennst nun also vier Arten von Dreiecken: Das allgemeine Dreieck, das gleichseitige, das gleichwinklige und das rechtwinklige. Ein Dreieck kann jedoch auch mehreren dieser Dreiecke entsprechen, also z.{thinsp}B. ein rechtwinkliges <b>und</b> gleichschenkliges Dreieck sein. Die Grafik unten zeigt, wie die verschiedenen Dreiecksformen zusammenhängen.
                 <Image src="/Dreiecke/Teilmengen.webp" width={1600} height={1000} h={500} alt="Ein Diagramm, welches zeigt, wie die verschiedenen Dreiecke zusammenhängen." />
                 <CheckableBlockquote icon="frage" title="Aufgabe: Was ist es?" titleOrder={2}>
                     Um was für eine Art von Dreieck handelt es sich? Schätze nach Augenmaß oder benutze ein Geodreieck am Bildschirm.
@@ -141,7 +141,7 @@ export default function Dreiecke() {
                             <ListItem>Das Dreieck hat oben rechts einen rechten Winkel, die Schenkel sind gleich lang. Daher ist es sowohl ein rechtwinkliges, als auch gleichschenkliges Dreieck.</ListItem>
                             <ListItem>Auch wenn es wie ein gleichschenkliges Dreieck aussieht, ist die linke Seite etwas länger als die rechte. Daher ist das hier ein allgemeines Dreieck.</ListItem>
                             <ListItem>Alle Seiten sind gleich lang und alle Winkel gleich groß. Das ist ein gleichseitiges Dreieck.</ListItem>
-                            <ListItem>Die beiden Schenkel, die den rechten Winkel einschließen, sind gleich lang. Daher ist es ein gleichschenkliges Dreieck.</ListItem>
+                            <ListItem>Die beiden Schenkel, die den Winkel der rechten Seite einschließen, sind gleich lang. Daher ist es ein gleichschenkliges Dreieck.</ListItem>
                             <ListItem>Das Dreieck ist so verzerrt, dass es offensichtlich kein besonderer Fall ist. Es ist ein allgemeines Dreieck.</ListItem>
                         </List>
                     </Lösung>
@@ -160,9 +160,9 @@ export default function Dreiecke() {
                 </CheckableBlockquote>
             </CheckableHeading>
             <CheckableHeading title="Dreiecksungleichung">
-                Vielleicht ist dir beim Konstruieren eines Dreiecks mit den Haushaltsgegenständen bereits aufgefallen, dass es dir nicht immer gelingt, aus drei gegebenen Seiten ein Dreieck zu machen. Das liegt nicht daran, dass du etwas falsch machst. Es gibt nämlich eine bestimmte Eigenschaft, die von einem Dreieck immer erfüllt sein muss: die <b>Dreiecksungleichung</b>! <br />
+                Vielleicht ist dir beim Konstruieren eines Dreiecks mit den Haushaltsgegenständen bereits aufgefallen, dass es dir nicht immer gelingt, aus drei Gegenständen mit verschiedenen Längen ein Dreieck zu legen. Das liegt nicht daran, dass du etwas falsch machst. Es gibt nämlich eine bestimmte Eigenschaft, die von einem Dreieck immer erfüllt sein muss: die <b>Dreiecksungleichung</b>! <br />
                 <CheckableBlockquote title="Aufgabe: Dreiecksungleichung" icon="frage" titleOrder={2}>
-                    Nehme dir ein paar Zahnstocher und eine Schere. Versuche nun, verschiedene Dreiecke zu legen, wobei du verschiedene Längen bei den Zahnstochern austestest. Erkennst du ein Muster?
+                    Nimm dir ein paar Zahnstocher und eine Schere. Versuche nun, verschiedene Dreiecke zu legen, wobei du die Zahnstocher in etwas verschiedene Längen schneidest. Erkennst du ein Muster?
                     <Lösung titleOrder={3} id="lösung-ungleichung">
                         Du wirst feststellen, dass sich manche Dreiecke legen lassen und andere nicht. Vielleicht ist dir aufgefallen, dass es nur funktioniert, ein Dreieck zu legen, wenn zwei der drei Seiten länger sind als die dritte.
                         <Flex>
@@ -176,13 +176,14 @@ export default function Dreiecke() {
                         <Divider />
                         Das können wir in einer Gleichung festhalten: Die Seiten <InlineMath>a</InlineMath>, <InlineMath>b</InlineMath> und <InlineMath>c</InlineMath> eines Dreiecks müssen die Dreiecksungleichung erfüllen. Es muss also gelten
                         <BlockMath math="a + b &> c \\ a + c &> b \\ b + c &> a" />
+                        Die Summe zweier Seiten muss also größer sein als die dritte Seite!
                     </Lösung>
                 </CheckableBlockquote>
             </CheckableHeading>
             <CheckableHeading title="Flächeninhalt" titleOrder={1}>
                 In vielen Fällen interessiert uns der Flächeninhalt von Dreiecken, insbesondere, da ein Dreieck eine sehr einfache Figur ist.
                 <CheckableBlockquote title="Aha! Vieleck in Dreiecke zerteilen" icon="aha" titleOrder={2}>
-                    Dreiecke sind so besonders, da sie die eine der einfachsten Formen sin. Ein Anwendungsgebiet von Dreiecken ist beim Modellieren an Computern: Hier werden beliebige Flächen oft in unzählige Dreiecke zerteilt. Der englische Begriff dazu ist <b>triangulate</b>.
+                    Dreiecke sind so besonders, da sie die eine der einfachsten Formen sind. Ein Anwendungsgebiet von Dreiecken findet sich beim Modellieren an Computern: Hier werden beliebige Flächen oft in unzählige Dreiecke zerteilt, um sie korrekt darzustellen.
                     <Flex>
                         <Image src="/Dreiecke/vieleckzudreieck.webp" width={1250} height={500} h={250} alt="Ein Vieleck wird in viele Dreiecke unterteilt" flex={"1 1 500px"} />
                         <Image src="/Dreiecke/triangulate.webp" width={1587} height={525} h={262} alt="Eine Kugel wird in viele Dreiecke unterteilt." flex={"1 1 500px"} />
@@ -192,7 +193,7 @@ export default function Dreiecke() {
                 <Image src="/Prismen/RechteckFläche.webp" width={698} height={450} h={225} alt="Ein Rechteck mit der Fläche A und den Seiten a und b." />
                 <Divider />
                 Die Formel für ein Rechteck können wir nun nutzen, um den Flächeninhalt von Dreiecken zu berechnen. <br />
-                Schau dir dazu das Bild unten an. Du nimmst ein beliebiges Dreieck mit und zerteilst es in der Mitte, indem du die Höhe <InlineMath>h</InlineMath> zu einer der Spitzen einzeichnest. <b>Wichtig:</b> Die Höhe steht immer senkrecht, also im 90°-Winkel, auf einer der Seiten. Wenn du das Dreieck verdoppelst und entlang der Höhe zerschneidest, dann bekommst du ein Rechteck heraus!
+                Schau dir dazu das Bild unten an. Du nimmst ein beliebiges Dreieck und zerteilst es in der Mitte, indem du die Höhe <InlineMath>h</InlineMath> bist zu einer der Spitzen einzeichnest. <b>Wichtig:</b> Die Höhe steht immer senkrecht, also im 90°-Winkel, auf einer der Seiten. Wenn du das Dreieck verdoppelst und entlang der Höhe zerschneidest, dann bekommst du ein Rechteck heraus!
                 <Image src="/Prismen/DreieckFläche.webp" width={1200} height={600} alt="Ein Dreieck mit der Höhe h und der Grundseite g. Die Höhe zerteilt es in zwei weitere Dreiecke mit den Flächen A1 und A2." />
                 Den Flächeninhalt davon kannst du nun mit der Formel <InlineMath math="A_\text{Rechteck} = \textcolor{#3012B8}{g} \cdot \textcolor{#B81E46}{h}" /> berechnen. Da wir, um zum Rechteck zu gelangen, das Dreieck verdoppeln mussten, müssen wir den Flächeninhalt nun wieder halbieren, um zum Flächeninhalt vom Dreieck zu kommen, also:
                 <BlockMath math="A_\text{Dreieck} = \frac{1}{2} \textcolor{#3012B8}{g}\cdot \textcolor{#B81E46}{h}" />
