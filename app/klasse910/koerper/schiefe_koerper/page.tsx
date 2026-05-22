@@ -16,7 +16,7 @@ export default function SchiefeKoerper() {
             <CheckableHeading title="Schiefe Körper">
                 Vielleicht weißt du schon, dass das Volumen von geraden und schiefen Prismen identisch ist – solange sie die gleiche Grundfläche und Höhe haben. Das folgt aus dem <b>Prinzip des Cavalieri</b>. Das Prinzip können wir auch auf weitere Körper erweitern, wie z.{thinsp}B. Pyramiden oder Kegel. Aber wie lässt sich dieses „intuitive“ Prinzip beweisen?
                 <CheckableBlockquote title="Das Prinzip des Cavalieri" titleOrder={2} icon="exkurs">
-                    Das Prinzip besagt, dass zwei Körper das gleiche Volumen besitzen, wenn sie in jeder Höhe die gleiche Schnittfläche besitzen. Vergleichen wir z.{thinsp}B. einen geraden mit einem schiefen Quader, die beide die gleiche Grundflächen wie Höhen haben.
+                    Das Prinzip besagt, dass zwei Körper das gleiche Volumen besitzen, wenn sie in jeder Höhe die gleiche Schnittfläche besitzen. Wir vergleichen z.{thinsp}B. einen geraden mit einem schiefen Quader, die beide die gleiche Grundflächen wie Höhen haben.
                     <Image width={6000} height={4000} src={"/SchiefeKoerper/Schachteile.webp"} alt="Ein gerader und ein schiefer Stapel aus quadratischen Teilen" />
                     Beide Stapel bestehen aus <InlineMath math="10" /> gleichgroßen Teilstücken. In dem Beispiel sind sie relativ groß, kann man die Scheiben noch gut voneinander unterscheiden. Aber stell dir vor, wir machen sie dünner:
                     <Flex>
@@ -86,38 +86,38 @@ export default function SchiefeKoerper() {
                                     <InlineMath math="77\,\%" />
                                 </Mark>{" "}
                                 Platz ein. Die Länge bekommen wir so:
-                                <BlockMath math="0{,}77 \cdot 5{,}5\,\text{m} = 4,3\,\text{m}" />
+                                <BlockMath math="0{,}77 \cdot 5{,}5\,\text{m} = 4{,}3\,\text{m}" />
                                 Wir verwenden erneut den Satz des Pythagoras:
                                 <MBlockMath
-                                    desktop="(4,3\,\text{m})^2 + h^2 &= \textcolor{#B81E46}{4,7\,\text{m}}^2 &&\lvert -(4,3\,\text{m})^2 \\
-                            h^2 &= \textcolor{#B81E46}{4,7\,\text{m}}^2 -4,3\,\text{m})^2 &&\lvert \sqrt{} \\
-                            h &= \sqrt{\textcolor{#B81E46}{4,7\,\text{m}}^2 -4,3\,\text{m})^2} \\
-                            &\Rightarrow h \approx 1,9\,\text{m}"
-                                    mobile="(4,3\,\text{m})^2 + h^2 &= \textcolor{#B81E46}{4,7\,\text{m}}^2 \\
-                            &\Downarrow \scriptsize{-(4,3\,\text{m})^2} \\
-                            h^2 &= \textcolor{#B81E46}{4,7\,\text{m}}^2 -4,3\,\text{m})^2 \\
+                                    desktop="(4{,}3\,\text{m})^2 + h^2 &= \textcolor{#B81E46}{4{,}7\,\text{m}}^2 &&\lvert -(4{,}3\,\text{m})^2 \\
+                            h^2 &= \textcolor{#B81E46}{4{,}7\,\text{m}}^2 -4{,}3\,\text{m})^2 &&\lvert \sqrt{} \\
+                            h &= \sqrt{\textcolor{#B81E46}{4{,}7\,\text{m}}^2 -4{,}3\,\text{m})^2} \\
+                            &\Rightarrow h \approx 1{,}9\,\text{m}"
+                                    mobile="(4{,}3\,\text{m})^2 + h^2 &= \textcolor{#B81E46}{4{,}7\,\text{m}}^2 \\
+                            &\Downarrow \scriptsize{-(4{,}3\,\text{m})^2} \\
+                            h^2 &= \textcolor{#B81E46}{4{,}7\,\text{m}}^2 -4{,}3\,\text{m})^2 \\
                             &\Downarrow \scriptsize{\sqrt{}} \\
-                            h &= \sqrt{\textcolor{#B81E46}{4,7\,\text{m}}^2 -4,3\,\text{m})^2} \\
-                            &\Rightarrow h \approx 1,9\,\text{m}"
+                            h &= \sqrt{\textcolor{#B81E46}{4{,}7\,\text{m}}^2 -4{,}3\,\text{m})^2} \\
+                            &\Rightarrow h \approx 1{,}9\,\text{m}"
                                 />
                                 Damit haben wir alle Maße, um das Pyramidenvolumen zu berechnen:
                                 <BlockMath
                                     math="V &= \frac{1}{3}Gh \\
                         &= \frac{1}{3} \cdot 12{,}6\,\text{m} \cdot 5{,}5\,\text{m}\cdot 1{,}9\,\text{m} \\
-                        &\Rightarrow V \approx 43,89\,\text{m}^3"
+                        &\Rightarrow V \approx 43{,}89\,\text{m}^3"
                                 />
                             </ListItem>
                             <ListItem>
                                 Um das Gewicht des Vorsprungs auszurechnen, müssen wir die der Dichte und des Volumen aneinander anpassen, sodass beides entweder cm<sup>3</sup> oder m<sup>3</sup> verwendet.
                                 <MBlockMath
-                                    desktop="V &= 43,89\,\text{m}^3 &&\lvert 1\,\text{m} = 100\,\text{cm} \\
-                            &= 43,89\cdot(100\,\text{cm})^3 \\
-                            &= 43,89 \cdot 1.000.000\,\text{cm}^3 \\
+                                    desktop="V &= 43{,}89\,\text{m}^3 &&\lvert 1\,\text{m} = 100\,\text{cm} \\
+                            &= 43{,}89\cdot(100\,\text{cm})^3 \\
+                            &= 43{,}89 \cdot 1.000.000\,\text{cm}^3 \\
                             &\Rightarrow V = 4.389.000\,\text{cm}^3"
-                                    mobile="V &= 43,89\,\text{m}^3 \\
+                                    mobile="V &= 43{,}89\,\text{m}^3 \\
                             &\Downarrow \scriptsize{1\,\text{m} = 100\,\text{cm}} \\
-                            &= 43,89\cdot(100\,\text{cm})^3 \\
-                            &= 43,89 \cdot 1.000.000\,\text{cm}^3 \\
+                            &= 43{,}89\cdot(100\,\text{cm})^3 \\
+                            &= 43{,}89 \cdot 1.000.000\,\text{cm}^3 \\
                             &\Rightarrow V = 4.389.000\,\text{cm}^3"
                                 />
                                 Die Masse bestimmen wir durch multiplizieren der Dichte mit dem Volumen:
@@ -125,7 +125,7 @@ export default function SchiefeKoerper() {
                                     math="m &= \rho \cdot V \\
                             &= 2{,}7\frac{\text{g}}{\cancel{\text{cm}^3}} \cdot 4.389.000\,\cancel{\text{cm}^3} \\
                             &= 11.850.300\,\text{g} \\
-                            &= 11.850,3\,\text{kg} \\
+                            &= 11.850{,}3\,\text{kg} \\
                             &\approx 11{,}85\,\text{t}"
                                 />
                                 Der Felsvorsprung wiegt also <InlineMath math="11{,}85\,\text{t}" />!
@@ -168,7 +168,7 @@ export default function SchiefeKoerper() {
                             <BlockMath
                                 math="\textcolor{#0D8762}{V} &= \frac{1}{3}Gh \\
                         &= \frac{1}{3} \cdot \pi \cdot \textcolor{#B81E46}{2{,}5}^2 \cdot \textcolor{#B81E46}{6} \\
-                        &\approx 39,27"
+                        &\approx 39{,}27"
                             />
                         </ListItem>
                         <ListItem>

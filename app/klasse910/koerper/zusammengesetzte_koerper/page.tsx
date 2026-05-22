@@ -50,7 +50,7 @@ export default function ZusammengesetzteKoerper() {
                             <BlockMath
                                 math="V_\text{gesamt} &= V_\text{Zylinder}-V_\text{Kegel} \\
                         &= 67{,}35 - 12{,}83 \\
-                        &= 54,52"
+                        &= 54{,}52"
                             />
                             <b>Oberflächeninhalt: </b> Der Zylinder ist oben geöffnet, daher entspricht die Gesamtoberfläche der Grundseite und der Mantelfläche des Zylinders plus der Mantelfläche des Kegels. Grundfläche des Zylinders:
                             <BlockMath
@@ -74,13 +74,13 @@ export default function ZusammengesetzteKoerper() {
                             <BlockMath
                                 math="M_\text{Kegel} &= \frac{U}{2} \cdot h_\text{Mantel} \\
                         &= \frac{11}{2}\cdot 4{,}37 \\
-                        &\approx 24,04"
+                        &\approx 24{,}04"
                             />
                             Für die Gesamtoberfläche können wir alles zusammenaddieren:
                             <BlockMath
                                 math="O_\text{gesamt} &= G_\text{Zylinder} + M_\text{Zylinder} + M_\text{Kegel} \\
-                        &= 9{,}62 + 77 + 24,04 \\
-                        &= 110,66"
+                        &= 9{,}62 + 77 + 24{,}04 \\
+                        &= 110{,}66"
                             />
                         </ListItem>
                         <ListItem>
@@ -200,7 +200,7 @@ export default function ZusammengesetzteKoerper() {
                 </Lösung>
             </CheckableBlockquote>
             <CheckableBlockquote title="Aufgabe: Würfelfabrik" titleOrder={1}>
-                Ein Brettspielverlag bestellt neue Spielwürfel für ihr neues Brettspiel. Diese sollen scharfe Kanten und für jede Zahl die entsprechende Anzahl an Einkerbungen auf der Seite haben. Die Firma möchte nun wissen, wie viel Holz und Farbe sie bestellen müssen, wenn sie <InlineMath math="50.000" /> Würfel produzieren.
+                Ein Brettspielverlag möchte neue Spielwürfel für ihr neues Brettspiel bestellen. Diese sollen scharfe Kanten und für jede Zahl die entsprechende Anzahl an Einkerbungen auf der Seite haben. Die Firma möchte nun wissen, wie viel Holz und Farbe sie bestellen müssen, wenn sie <InlineMath math="50.000" /> Würfel produzieren.
                 <Image src={"/ZusammengesetzteKoerper/würfel.webp"} width={1024} height={1024} alt="Ein Foto der Knickpyramide" />
                 <List type="ordered">
                     <ListItem>
@@ -217,8 +217,8 @@ export default function ZusammengesetzteKoerper() {
                             <BlockMath
                                 math="V_\text{Würfel, keine Einkerbungen} &= 16\,\text{mm}^3 \\
                                 &= 4096\,\text{mm}^3 \\
-                                &= 4096 \cdot (0,1\,\text{cm})^3 \\
-                                &\approx 4,1\,\text{cm}^3"
+                                &= 4096 \cdot (0{,}1\,\text{cm})^3 \\
+                                &\approx 4{,}1\,\text{cm}^3"
                             />
                             Nun müssen wir die Einkerbungen zählen. Jede Zahl von <InlineMath math="1" /> bis <InlineMath math="6" /> ist einmal auf dem Würfel, also sind es <InlineMath math="1+2+3+4+5+6 = 21" /> Einkerbungen. Da das alles Halbkugeln sind, entspricht das <InlineMath math="10{,}5" /> Vollkugeln. Deren Volumen ist:
                             <BlockMath
@@ -230,14 +230,14 @@ export default function ZusammengesetzteKoerper() {
                             Damit bekommen wir nun das Volumen des Würfels <b>mit</b> den Einkerbungen heraus:
                             <BlockMath
                                 math="V_\text{Würfel, mit Einkerbungen} &= V_\text{Würfel, keine Einkerbungen} - V_\text{Einkerbungen} \\
-                                    &= 4,1\,\text{cm}^3 - 0{,}148\,\text{cm}^3 \\
+                                    &= 4{,}1\,\text{cm}^3 - 0{,}148\,\text{cm}^3 \\
                                     &\approx 3{,}95\,\text{cm}^3"
                             />
-                            Um die Menge an verbrauchtem Holz für 50.000 Würfel zu berechnen, müssen wir uns jedoch an das Volumen <b>ohne</b> die Einkerbungen halten. Denn diese liegen ja im Würfel drin, daher „sparen“ wir dadurch kein Holz.
+                            Um die Menge an verbrauchtem Holz für <InlineMath>50.000</InlineMath> Würfel zu berechnen, müssen wir uns jedoch an das Volumen <b>ohne</b> die Einkerbungen halten. Denn diese liegen ja im Würfel drin, Holz kann aber nur gerade gesägt werden.
                             <BlockMath
-                                math="V_\text{Holz} &= 50.000 \cdot 4,1\,\text{cm}^3 \\
+                                math="V_\text{Holz} &= 50.000 \cdot 4{,}1\,\text{cm}^3 \\
                                     &= 205.000\,\text{cm}^3 \\
-                                    &= 205.000 \cdot (0,01\,\text{m})^3 \\
+                                    &= 205.000 \cdot (0{,}01\,\text{m})^3 \\
                                     &= 0{,}205\,\text{m}^3"
                             />
                             Insgesamt benötigen wir also nicht mal einen Kubikmeter Holz für <InlineMath math="50.000" /> Würfel!
@@ -251,7 +251,7 @@ export default function ZusammengesetzteKoerper() {
                             Die Grundflächen der Einkerbungen sind so zu berechnen:
                             <BlockMath
                                 math="G_\text{Einkerbungen} &= 21 \cdot \pi r^2 \\
-                                    &= 21 \cdot \pi \cdot (0,15\,\text{cm})^2 \\
+                                    &= 21 \cdot \pi \cdot (0{,}15\,\text{cm})^2 \\
                                     &\approx 1{,}48\,\text{cm}^2"
                             />
                             Damit bekommen wir die gesamte weiße Fläche heraus:
@@ -260,17 +260,17 @@ export default function ZusammengesetzteKoerper() {
                                     &= 15{,}36\,\text{cm}^2 - 1{,}48\,\text{cm}^2 \\
                                     &= 13{,}88\,\text{cm}^2"
                             />
-                            Die schwarze Farbe liegt nur in den Einkerbungen. Wir benötigen demnach ihre Mantelfläche – die entspricht 21 Halbkugeln bzw. 10,5 Vollkugeln:
+                            Die schwarze Farbe liegt nur in den Einkerbungen. Wir benötigen demnach ihre Mantelfläche – die entspricht <InlineMath>21</InlineMath> Halbkugeln bzw. <InlineMath math="10{,}5" /> Vollkugeln:
                             <BlockMath
                                 math="O_\text{schwarz} &= 10{,}5 \cdot 4 \cdot \pi r^2 \\
-                                    &= 42 \cdot \pi \cdot (0,15\,\text{cm})^2 \\
+                                    &= 42 \cdot \pi \cdot (0{,}15\,\text{cm})^2 \\
                                     &\approx 2{,}97\,\text{cm}^2"
                             />
-                            Das sind die Werte pro Würfel. Für die 50.000 Würfel werden insgesamt benötigt:
+                            Das sind die Werte pro Würfel. Für die <InlineMath>50.000</InlineMath> Würfel werden insgesamt benötigt:
                             <BlockMath
                                 math="O_\text{weiß, gesamt} &= 50.000 \cdot 13{,}88\,\text{cm}^2 \\
                                     &= 694.000\,\text{cm}^2 \\
-                                    &= 694.000 \cdot (0,01\,\text{m})^2 \\
+                                    &= 694.000 \cdot (0{,}01\,\text{m})^2 \\
                                     &= 69{,}4\,\text{m}^2"
                             />
                             <BlockMath

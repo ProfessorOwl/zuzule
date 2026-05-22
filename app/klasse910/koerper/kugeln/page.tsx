@@ -21,7 +21,7 @@ export default function Kugeln() {
     return (
         <Fragment>
             <CheckableHeading title="Die Kugel">
-                Fragt man mehrere Mathematikerinnen und Mathematiker nach ihrem Lieblingskörper, so werden viele von ihnen vermutlich antworten, dass die <b>Kugel</b> der beste Körper ist. Kugeln haben nämlich einige interessante Eigenschaften: Sie hat keinerlei Kanten oder Ecken, kann frei rollen, sieht immer gleich aus, egal von welchem Winkel man sie betrachtet… Die Liste könnte jetzt noch lange weitergehen! Einige weitere Eigenschaften werden wir auf dieser Seite erkunden.
+                Fragt man mehrere Mathematikerinnen und Mathematiker nach ihrem Lieblingskörper, so werden viele von ihnen vermutlich antworten, dass die <b>Kugel</b> der beste Körper ist. Kugeln haben nämlich einige interessante Eigenschaften: Sie haben keinerlei Kanten oder Ecken, können frei rollen, sehen immer gleich aus, egal von welchem Winkel man sie betrachtet… Die Liste könnte jetzt noch lange weitergehen! Einige weitere Eigenschaften werden wir auf dieser Seite erkunden.
                 <Flex>
                     <Image flex={"0 0 300px"} h={350} width={3375} height={5062} src={"/Kugeln/basketball.webp"} alt="Ein Basketball, der ins Netz fällt" />
                     <Image flex={"0 0 300px"} h={350} width={3375} height={5062} src={"/Kugeln/LasVegasSphere.webp"} alt="Ein Basketball, der ins Netz fällt" />
@@ -34,7 +34,7 @@ export default function Kugeln() {
                 <Image h={400} width={1920} height={1080} src={"/Kugeln/LichtKugel.webp"} alt="Eine Kugel, die aus Licht gezeichnet ist" />
                 Durch das Fixieren des Mittelpunktes auf dem Stativ und einem festen Radius haben wir damit eine Kugel mit einem Radius von <InlineMath math="0{,}6\,\text{m}" /> gezeichnet.
                 <CheckableBlockquote icon="aha" title="Probier es selbst aus!">
-                    Man braucht keine professionelle Kamera für solche Langzeitbelichtungen. Schau mal in den Einstellungen deiner Handykamera und schaue, ob dort irgendwo das Wort „Langzeitbelichtung“ auftaucht – den Modus suchst du. Verdunkel dann den Raum und nimm eine schwache Lichtquelle, wie ein Feuerzeug, eine Wunderkerze oder ähnliches, und fahre damit Muster in den Raum. Schaffst du es auch, eine Kugel zu machen? Sind noch andere Formen möglich? Schau, was dabei herauskommt!
+                    Man braucht keine professionelle Kamera für solche Langzeitbelichtungen. Schau mal in den Einstellungen deiner Handykamera und schaue, ob dort irgendwo das Wort „Langzeitbelichtung“ auftaucht – genau diesen Modus suchst du. Verdunkle dann den Raum und nimm eine schwache Lichtquelle, wie ein Feuerzeug, eine Wunderkerze oder ähnliches, und fahre damit Muster im Raum nach. Schaffst du es auch, eine Kugel zu machen? Sind noch andere Formen möglich? Schau, was dabei herauskommt!
                 </CheckableBlockquote>
             </CheckableHeading>
             <CheckableHeading title="Volumen">
@@ -42,7 +42,7 @@ export default function Kugeln() {
                 <CheckableBlockquote title="Das Prinzip des Cavalieri" titleOrder={2} icon="exkurs">
                     Das Prinzip besagt, dass zwei Körper das gleiche Volumen besitzen, wenn sie in jeder Höhe die gleiche Schnittfläche besitzen. Vergleichen wir z.{thinsp}B. einen geraden mit einem schiefen Quader, die beide die gleiche Grundflächen wie Höhen haben.
                     <Image width={6000} height={4000} src={"/SchiefeKoerper/Schachteile.webp"} alt="Ein gerader und ein schiefer Stapel aus quadratischen Teilen" />
-                    Beide Stapel bestehen aus <InlineMath math="10" /> gleichgroßen Teilstücken. In dem Beispiel sind sie relativ groß, kann man die Scheiben noch gut voneinander unterscheiden. Aber stell dir vor, wir machen sie dünner:
+                    Beide Stapel bestehen aus <InlineMath math="10" /> gleichgroßen Teilstücken. In dem Beispiel sind sie relativ groß, man kann die Scheiben noch gut voneinander unterscheiden. Aber stell dir vor, wir machen sie dünner:
                     <Flex>
                         <ImageCaption h={250} src="/SchiefeKoerper/PapierstapelGerade.webp" width={6000} height={4000} alt="Ein gerader Stapel Papier">
                             Der Papierstapel ist gerade.
@@ -54,17 +54,17 @@ export default function Kugeln() {
                     Die einzelnen Seiten sind nur schwer voneinander zu unterscheiden – aber beide Stapel haben exakt gleich viele Blätter. Es gilt also auch hier: Beide Stapel haben in der gleichen Höhe den gleichen Flächeninhalt, deshalb haben sie auch das gleiche Volumen.
                 </CheckableBlockquote>
                 <CheckableHeading title="Herleitung des Kugelvolumens" titleOrder={2}>
-                    Oft hat man das Prinzip des Cavalieri dann im Kopf, wenn zwei Körper sich schon relativ ähnlich sehen: gerade vs. schiefe Pyramide, gerade vs. schiefes Prisma, … Tatsächlich ist es aber egal, welche Form unser Körper und die Schnittfläche haben, solange der <b>Flächeninhalt gleich ist</b>. Das nutzen wir nun aus. Wir konstruieren eine Halbkugel mit Radius <InlineMath math="r" />. Daneben stellen wir einen Zylinder mit gleichem Radius <InlineMath math="r" />, der so hoch ist wie die Kugel, also <InlineMath math="r" />
+                    Oft hat man das Prinzip des Cavalieri dann im Kopf, wenn zwei Körper sich schon relativ ähnlich sehen: gerade vs. schiefe Pyramide, gerades vs. schiefes Prisma, … Tatsächlich ist es aber egal, welche Form unser Körper und die Schnittfläche haben, solange der <b>Flächeninhalt gleich ist</b>. Das nutzen wir nun aus. Wir konstruieren eine Halbkugel mit Radius <InlineMath math="r" />. Daneben stellen wir einen Zylinder mit gleichem Radius <InlineMath math="r" />, der so hoch ist wie die Kugel, also <InlineMath math="r" />
                     -hoch.
                     <Image h={400} width={1550} height={1000} src={"/Kugeln/KugelKegelHerleitung.webp"} alt="Links ein Zylinder, der einen Kegel enthält, rechts eine Halbkugel. Beide haben gleiche Höhe und Radius." />
-                    Um das Prinzip des Cavalieri anwenden zu können, müssen wir zeigen, dass auf gleiche Höhe gleich große Flächen existieren.
+                    Um das Prinzip des Cavalieri anwenden zu können, müssen wir zeigen, dass auf der gleichen Höhe gleich große Flächen existieren.
                     <List>
                         <ListItem>
                             <b>Kreisring im Zylinder:</b> Wir schauen uns den Kreisring an, der zwischen Zylinder und Kegel liegt. Seine Fläche können wir berechnen, indem wir die Fläche des kleinen Kreises im Kegel von der Fläche des Gesamtkreises des Zylinders abziehen.
                             <Divider />
                             Die gesamte Kreisfläche entspricht der Grundseite des Zylinders:
                             <BlockMath math="A_\text{voll} = \pi \textcolor{#0D8762}{r}^2" />
-                            Der Radius des Innenkreises im Kegel entspricht gerade unserer Höhe <InlineMath math="\textcolor{#3012B8}{x}" />, da der Kegel eine Neigung von 45° hat. Heißt: Für jedes <InlineMath math="\textcolor{#3012B8}{x}" /> das wir hoch gehen, müssen wir auch <InlineMath math="\textcolor{#3012B8}{x}" /> zur Seite gehen. Hier ergibt sich:
+                            Der Radius des Innenkreises im Kegel entspricht gerade unserer Höhe <InlineMath math="\textcolor{#3012B8}{x}" />, da der Kegel eine Neigung von 45° hat. Heißt: Für jedes <InlineMath math="\textcolor{#3012B8}{x}" />, das wir hoch gehen, müssen wir auch <InlineMath math="\textcolor{#3012B8}{x}" /> zur Seite gehen. Hier ergibt sich:
                             <BlockMath math="A_\text{innen} = \pi \textcolor{#3012B8}{x}^2" />
                             Damit können wir die Fläche vom Kreisring <InlineMath math="A_\text{Z}" /> berechnen.
                             <BlockMath math="A_\text{Z} &= A_\text{voll} - A_\text{innen} \\ &= \pi \textcolor{#0D8762}{r}^2 - \pi \textcolor{#3012B8}{x}^2" />
@@ -277,7 +277,7 @@ export default function Kugeln() {
                                 Einsetzen der Lungenoberfläche gibt uns:
                                 <BlockMath
                                     math="A &= \sqrt{50{,}4\,\text{m}^2} \\
-                                    &\approx 7,10\,\text{m}"
+                                    &\approx 7{,}10\,\text{m}"
                                 />
                                 Die Gesamtoberfläche der Lunge ist demnach identisch mit dem Flächeninhalt eines quadratischen Zimmers, das eine Seitenlänge von ca. <InlineMath math="7\,\text{m}" /> hat! Ist dein Zimmer so groß?
                             </ListItem>
@@ -304,7 +304,7 @@ export default function Kugeln() {
                     </ListItem>
                 </List>
                 <Divider />
-                <b>Hinweis:</b> Die Zahlen werden hier ziemlich groß. Verwende die wissenschaftliche Notation, um nicht alle Stellen ausschreiben zu müssen, z.{thinsp}B. <InlineMath math="150.000 = 150 \cdot 10^3" />, <InlineMath math="13.400.000.000.000 = 13,4 \cdot 10^{12}" />. Das fasst die vielen Nullen als Zehnerpotenz hinter der Zahl zusammen.
+                <b>Hinweis:</b> Die Zahlen werden hier ziemlich groß. Verwende die wissenschaftliche Notation, um nicht alle Stellen ausschreiben zu müssen, z.{thinsp}B. <InlineMath math="150.000 = 150 \cdot 10^3" />, <InlineMath math="13.400.000.000.000 = 13{,}4 \cdot 10^{12}" />. Das fasst die vielen Nullen als Zehnerpotenz hinter der Zahl zusammen.
                 <Lösung title="Lösung" id="Lösung-Planetenvergleich" titleOrder={2}>
                     <List type="ordered">
                         <ListItem>
@@ -336,16 +336,16 @@ export default function Kugeln() {
                             Die Zahlen können wir in wissenschaftliche Notation überführen, um sie besser lesbar zu machen.
                             <BlockMath
                                 math="V_\text{Erde} &= 1.083.206.917.000\,\text{km}^3 \\
-                            &= 1,08 \cdot 10^{12}\,\text{km}^3 \\ 
+                            &= 1{,}08 \cdot 10^{12}\,\text{km}^3 \\ 
                             V_\text{Mond} &= 21.990.642.870\,\text{km}^3 \\
-                            &= 22,0 \cdot 10^9\,\text{km}^3 \\
+                            &= 22{,}0 \cdot 10^9\,\text{km}^3 \\
                             V_\text{Jupiter} &= 1.530.597.323.000.000\,\text{km}^3 \\
                             &= 1.53 \cdot 10^{15}\,\text{km}^3"
                             />
                             Verhältnis Erde/Mond:
-                            <BlockMath math="\frac{V_\text{Erde}}{V_\text{Mond}} = \frac{1,08 \cdot 10^{12}\,\text{km}^3}{22,0 \cdot 10^9\,\text{km}^3} \approx 49{,}26" />
+                            <BlockMath math="\frac{V_\text{Erde}}{V_\text{Mond}} = \frac{1{,}08 \cdot 10^{12}\,\text{km}^3}{22{,}0 \cdot 10^9\,\text{km}^3} \approx 49{,}26" />
                             Verhältnis Jupiter/Erde:
-                            <BlockMath math="\frac{V_\text{Jupiter}}{V_\text{Erde}} = \frac{1.53 \cdot 10^{15}\,\text{km}^2}{1,08 \cdot 10^{12}\,\text{km}^2} \approx 1413{,}02" />
+                            <BlockMath math="\frac{V_\text{Jupiter}}{V_\text{Erde}} = \frac{1{,}53 \cdot 10^{15}\,\text{km}^2}{1{,}08 \cdot 10^{12}\,\text{km}^2} \approx 1413{,}02" />
                             Der Mond passt demnach ca. <InlineMath math="49" /> mal in die Erde, die Erde wiederum ca. <InlineMath math="1413" /> mal in Jupiter.
                         </ListItem>
                         <ListItem>
@@ -361,9 +361,9 @@ export default function Kugeln() {
                             />
                             Jetzt wird es Zeit, die Volumina mit den Dichten zu multiplizieren, um die Masse der Himmelskörper zu bekommen.
                             <BlockMath
-                                math="m_\text{Erde} &= 1,08 \cdot 10^{12}\,\text{km}^3 \cdot 5{,}5 \cdot  10^9\,\frac  {\text{t}}{\text{km}^3} \\
+                                math="m_\text{Erde} &= 1{,}08 \cdot 10^{12}\,\text{km}^3 \cdot 5{,}5 \cdot  10^9\,\frac  {\text{t}}{\text{km}^3} \\
                             &= 5{,}96 \cdot 10^{21}\,\text{t} \\
-                            m_\text{Mond} &= 22,0 \cdot 10^9\,\text{km}^3 \cdot 3{,}4 \cdot  10^9\,\frac  {\text{t}}{\text{km}^3} \\
+                            m_\text{Mond} &= 22{,}0 \cdot 10^9\,\text{km}^3 \cdot 3{,}4 \cdot  10^9\,\frac  {\text{t}}{\text{km}^3} \\
                             &= 7{,}48 \cdot 10^{19}\,\text{t} \\
                             m _\text{Jupiter} &= 1.53 \cdot 10^{15}\,\text{km}^3 \cdot 1{,}3 \cdot  10^9\,\frac  {\text{t}}{\text{km}^3} \\ 
                             &= 2{,}00 \cdot 10^{24}\,\text{t}"

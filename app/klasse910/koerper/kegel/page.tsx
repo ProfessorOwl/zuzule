@@ -22,9 +22,9 @@ export default function Kegel() {
             <CheckableHeading title="Der Kegel">
                 Kegel begegnen uns besonders im Sommer in Form von Eiswaffeln, ansonsten sieht man sie oft am Straßenrand in Form von Verkehrskegeln stehen oder im Meer als gewundene Muscheln.
                 <Flex>
-                    <Image src="/Kegel/Eiswaffel.webp" fit="cover" h={350} width={2700} height={3375} alt="Eine Eiswaffel" flex={"0 0 300px"} />
-                    <Image src="/Kegel/VerkehrskegelWellington.webp" fit="cover" h={350} width={1250} height={1590} alt="Sir Wellington mit einem Verkehrskegel auf dem Kopf" flex={"0 0 300px"} />
-                    <Image src="/Kegel/Muschel.webp" fit="cover" h={350} width={3321} height={4981} alt="Eine kegelförmige Muschel" flex={"0 0 300px"} />
+                    <Image src="/Kegel/Eiswaffel.webp" fit="cover" h={350} width={2700} height={3375} alt="Eine Eiswaffel" flex={"0 0 250px"} />
+                    <Image src="/Kegel/VerkehrskegelWellington.webp" fit="cover" h={350} width={1250} height={1590} alt="Sir Wellington mit einem Verkehrskegel auf dem Kopf" flex={"0 0 250px"} />
+                    <Image src="/Kegel/Muschel.webp" fit="cover" h={350} width={3321} height={4981} alt="Eine kegelförmige Muschel" flex={"0 0 250px"} />
                 </Flex>
                 Im Mathematikunterricht sind wir jedoch weniger am Vorkommen von Kegeln in unserer Umwelt interessiert, als vielmehr an der mathematischen Beschreibung: Was ist überhaupt ein Kegel und wie können wir das Volumen oder den Oberflächeninhalt von ihnen berechnen?
                 <CheckableHeading title="Definition" titleOrder={2}>
@@ -154,10 +154,10 @@ export default function Kegel() {
                     <Image h={825} src="/Pyramiden/VolumenPyramide/PyramideinWürfelExplosion.webp" width={1650} height={1700} alt="Eine Pyramide in einem Quader" />
                     Mathematisch können wir das so formulieren:
                     <BlockMath math="V_\text{Quader} = 6 \cdot V_\text{Pyramide}" />
-                    Kannst du daraus selber eine Formel für das Pyramidenvolumen herleiten? Denke dran: Der Quader ist doppelt so hoch wie eine der Pyramiden!
+                    Kannst du daraus selbst eine Formel für das Pyramidenvolumen herleiten? Denke dran: Der Quader ist doppelt so hoch wie eine der Pyramiden!
                     <CheckableBlockquote title="Herleitung" titleOrder={3} icon="frage">
                         <Lösung id="lösung-herleitung">
-                            Wir können also über die Volumenformel für einen Quader auf das Volumen einer Pyramide schließen! Für einen Quader gilt:
+                            Wir können über die Volumenformel eines Quader auf das Volumen einer Pyramide schließen! Für einen Quader gilt:
                             <BlockMath math="V_\text{Quader} = G \cdot h_\text{Quader}" />
                             mit der Grundfläche <InlineMath math="G" /> und der Höhe <InlineMath math="h_\text{Quader}" />
                             . Das können wir in die vorige Gleichung einsetzen, also bekommen wir:
